@@ -228,11 +228,11 @@ pub struct RegisterBlock {
     #[doc = "0x178 - ICACHE_SYNC_INT interrupt configuration register"]
     pub pro_icache_sync_int_map: crate::Reg<pro_icache_sync_int_map::PRO_ICACHE_SYNC_INT_MAP_SPEC>,
     #[doc = "0x17c - Interrupt status register 0"]
-    pub pro_intr_status_reg_0: crate::Reg<pro_intr_status_reg_0::PRO_INTR_STATUS_REG_0_SPEC>,
+    pub pro_intr_status_0: crate::Reg<pro_intr_status_0::PRO_INTR_STATUS_0_SPEC>,
     #[doc = "0x180 - Interrupt status register 1"]
-    pub pro_intr_status_reg_1: crate::Reg<pro_intr_status_reg_1::PRO_INTR_STATUS_REG_1_SPEC>,
+    pub pro_intr_status_1: crate::Reg<pro_intr_status_1::PRO_INTR_STATUS_1_SPEC>,
     #[doc = "0x184 - Interrupt status register 2"]
-    pub pro_intr_status_reg_2: crate::Reg<pro_intr_status_reg_2::PRO_INTR_STATUS_REG_2_SPEC>,
+    pub pro_intr_status_2: crate::Reg<pro_intr_status_2::PRO_INTR_STATUS_2_SPEC>,
     #[doc = "0x188 - NMI interrupt signals mask register"]
     pub clock_gate: crate::Reg<clock_gate::CLOCK_GATE_SPEC>,
     _reserved99: [u8; 0x0e70],
@@ -662,18 +662,18 @@ pub type PRO_ICACHE_SYNC_INT_MAP =
     crate::Reg<pro_icache_sync_int_map::PRO_ICACHE_SYNC_INT_MAP_SPEC>;
 #[doc = "ICACHE_SYNC_INT interrupt configuration register"]
 pub mod pro_icache_sync_int_map;
-#[doc = "PRO_INTR_STATUS_REG_0 register accessor: an alias for `Reg<PRO_INTR_STATUS_REG_0_SPEC>`"]
-pub type PRO_INTR_STATUS_REG_0 = crate::Reg<pro_intr_status_reg_0::PRO_INTR_STATUS_REG_0_SPEC>;
+#[doc = "PRO_INTR_STATUS_0 register accessor: an alias for `Reg<PRO_INTR_STATUS_0_SPEC>`"]
+pub type PRO_INTR_STATUS_0 = crate::Reg<pro_intr_status_0::PRO_INTR_STATUS_0_SPEC>;
 #[doc = "Interrupt status register 0"]
-pub mod pro_intr_status_reg_0;
-#[doc = "PRO_INTR_STATUS_REG_1 register accessor: an alias for `Reg<PRO_INTR_STATUS_REG_1_SPEC>`"]
-pub type PRO_INTR_STATUS_REG_1 = crate::Reg<pro_intr_status_reg_1::PRO_INTR_STATUS_REG_1_SPEC>;
+pub mod pro_intr_status_0;
+#[doc = "PRO_INTR_STATUS_1 register accessor: an alias for `Reg<PRO_INTR_STATUS_1_SPEC>`"]
+pub type PRO_INTR_STATUS_1 = crate::Reg<pro_intr_status_1::PRO_INTR_STATUS_1_SPEC>;
 #[doc = "Interrupt status register 1"]
-pub mod pro_intr_status_reg_1;
-#[doc = "PRO_INTR_STATUS_REG_2 register accessor: an alias for `Reg<PRO_INTR_STATUS_REG_2_SPEC>`"]
-pub type PRO_INTR_STATUS_REG_2 = crate::Reg<pro_intr_status_reg_2::PRO_INTR_STATUS_REG_2_SPEC>;
+pub mod pro_intr_status_1;
+#[doc = "PRO_INTR_STATUS_2 register accessor: an alias for `Reg<PRO_INTR_STATUS_2_SPEC>`"]
+pub type PRO_INTR_STATUS_2 = crate::Reg<pro_intr_status_2::PRO_INTR_STATUS_2_SPEC>;
 #[doc = "Interrupt status register 2"]
-pub mod pro_intr_status_reg_2;
+pub mod pro_intr_status_2;
 #[doc = "CLOCK_GATE register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "NMI interrupt signals mask register"]

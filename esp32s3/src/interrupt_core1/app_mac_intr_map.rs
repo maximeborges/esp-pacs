@@ -1,22 +1,22 @@
-#[doc = "Register `MAC_INTR_MAP` reader"]
-pub struct R(crate::R<MAC_INTR_MAP_SPEC>);
+#[doc = "Register `APP_MAC_INTR_MAP` reader"]
+pub struct R(crate::R<APP_MAC_INTR_MAP_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<MAC_INTR_MAP_SPEC>;
+    type Target = crate::R<APP_MAC_INTR_MAP_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<MAC_INTR_MAP_SPEC>> for R {
+impl From<crate::R<APP_MAC_INTR_MAP_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<MAC_INTR_MAP_SPEC>) -> Self {
+    fn from(reader: crate::R<APP_MAC_INTR_MAP_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `MAC_INTR_MAP` writer"]
-pub struct W(crate::W<MAC_INTR_MAP_SPEC>);
+#[doc = "Register `APP_MAC_INTR_MAP` writer"]
+pub struct W(crate::W<APP_MAC_INTR_MAP_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<MAC_INTR_MAP_SPEC>;
+    type Target = crate::W<APP_MAC_INTR_MAP_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,13 +28,13 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<MAC_INTR_MAP_SPEC>> for W {
+impl From<crate::W<APP_MAC_INTR_MAP_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<MAC_INTR_MAP_SPEC>) -> Self {
+    fn from(writer: crate::W<APP_MAC_INTR_MAP_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `MAC_INTR_MAP` reader - this register used to map mac interrupt to one of core0's external interrupt"]
+#[doc = "Field `MAC_INTR_MAP` reader - this register used to map mac interrupt to one of core1's external interrupt"]
 pub struct MAC_INTR_MAP_R(crate::FieldReader<u8, u8>);
 impl MAC_INTR_MAP_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for MAC_INTR_MAP_R {
         &self.0
     }
 }
-#[doc = "Field `MAC_INTR_MAP` writer - this register used to map mac interrupt to one of core0's external interrupt"]
+#[doc = "Field `MAC_INTR_MAP` writer - this register used to map mac interrupt to one of core1's external interrupt"]
 pub struct MAC_INTR_MAP_W<'a> {
     w: &'a mut W,
 }
@@ -62,14 +62,14 @@ impl<'a> MAC_INTR_MAP_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:4 - this register used to map mac interrupt to one of core0's external interrupt"]
+    #[doc = "Bits 0:4 - this register used to map mac interrupt to one of core1's external interrupt"]
     #[inline(always)]
     pub fn mac_intr_map(&self) -> MAC_INTR_MAP_R {
         MAC_INTR_MAP_R::new((self.bits & 0x1f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - this register used to map mac interrupt to one of core0's external interrupt"]
+    #[doc = "Bits 0:4 - this register used to map mac interrupt to one of core1's external interrupt"]
     #[inline(always)]
     pub fn mac_intr_map(&mut self) -> MAC_INTR_MAP_W {
         MAC_INTR_MAP_W { w: self }
@@ -87,24 +87,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mac_intr_map]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_mac_intr_map]
 (index.html) module"]
-pub struct MAC_INTR_MAP_SPEC;
-impl crate::RegisterSpec for MAC_INTR_MAP_SPEC {
+pub struct APP_MAC_INTR_MAP_SPEC;
+impl crate::RegisterSpec for APP_MAC_INTR_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mac_intr_map::R]
+#[doc = "`read()` method returns [app_mac_intr_map::R]
 (R) reader structure"]
-impl crate::Readable for MAC_INTR_MAP_SPEC {
+impl crate::Readable for APP_MAC_INTR_MAP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mac_intr_map::W]
+#[doc = "`write(|w| ..)` method takes [app_mac_intr_map::W]
 (W) writer structure"]
-impl crate::Writable for MAC_INTR_MAP_SPEC {
+impl crate::Writable for APP_MAC_INTR_MAP_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets MAC_INTR_MAP to value 0x10"]
-impl crate::Resettable for MAC_INTR_MAP_SPEC {
+#[doc = "`reset()` method sets APP_MAC_INTR_MAP to value 0x10"]
+impl crate::Resettable for APP_MAC_INTR_MAP_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0x10
