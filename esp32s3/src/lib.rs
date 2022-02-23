@@ -33,16 +33,8 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn UHCI0();
     fn UHCI1();
-    fn TG0_T0_LEVEL();
-    fn TG0_T1_LEVEL();
-    fn TG0_WDT_LEVEL();
-    fn TG0_LACT_LEVEL();
-    fn TG1_T0_LEVEL();
-    fn TG1_T1_LEVEL();
-    fn TG1_WDT_LEVEL();
-    fn TG1_LACT_LEVEL();
+    fn UHCI0();
     fn GPIO();
     fn GPIO_NMI();
     fn SPI0();
@@ -60,16 +52,16 @@ extern "C" {
     fn PCNT();
     fn I2C_EXT0();
     fn I2C_EXT1();
-    fn RSA();
     fn SPI1_DMA();
-    fn TG0_T0_EDGE();
-    fn TG0_T1_EDGE();
+    fn TG0_T0_LEVEL();
+    fn TG0_T1_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_T1_LEVEL();
+    fn TG1_WDT_LEVEL();
     fn TG0_WDT_EDGE();
-    fn TG0_LACT_EDGE();
-    fn TG1_T0_EDGE();
-    fn TG1_T1_EDGE();
     fn TG1_WDT_EDGE();
-    fn TG1_LACT_EDGE();
+    fn RSA();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -78,7 +70,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-pub static __INTERRUPTS: [Vector; 66] = [
+pub static __INTERRUPTS: [Vector; 77] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -90,9 +82,45 @@ pub static __INTERRUPTS: [Vector; 66] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: UHCI1 },
     Vector { _reserved: 0 },
     Vector { _handler: UHCI0 },
-    Vector { _handler: UHCI1 },
+    Vector { _handler: GPIO },
+    Vector { _handler: GPIO_NMI },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: SPI0 },
+    Vector { _handler: SPI1 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: I2S0 },
+    Vector { _handler: I2S1 },
+    Vector { _handler: UART0 },
+    Vector { _handler: UART1 },
+    Vector { _handler: UART2 },
+    Vector { _reserved: 0 },
+    Vector { _handler: PWM0 },
+    Vector { _handler: PWM1 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: LEDC },
+    Vector { _handler: EFUSE },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: RTC_CORE },
+    Vector { _reserved: 0 },
+    Vector { _handler: PCNT },
+    Vector { _handler: I2C_EXT0 },
+    Vector { _handler: I2C_EXT1 },
+    Vector { _handler: SPI1_DMA },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -103,9 +131,6 @@ pub static __INTERRUPTS: [Vector; 66] = [
         _handler: TG0_WDT_LEVEL,
     },
     Vector {
-        _handler: TG0_LACT_LEVEL,
-    },
-    Vector {
         _handler: TG1_T0_LEVEL,
     },
     Vector {
@@ -114,148 +139,94 @@ pub static __INTERRUPTS: [Vector; 66] = [
     Vector {
         _handler: TG1_WDT_LEVEL,
     },
-    Vector {
-        _handler: TG1_LACT_LEVEL,
-    },
-    Vector { _handler: GPIO },
-    Vector { _handler: GPIO_NMI },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: SPI0 },
-    Vector { _handler: SPI1 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: I2S0 },
-    Vector { _handler: I2S1 },
-    Vector { _handler: UART0 },
-    Vector { _handler: UART1 },
-    Vector { _handler: UART2 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: PWM0 },
-    Vector { _handler: PWM1 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: LEDC },
-    Vector { _handler: EFUSE },
-    Vector { _reserved: 0 },
-    Vector { _handler: RTC_CORE },
-    Vector { _reserved: 0 },
-    Vector { _handler: PCNT },
-    Vector { _handler: I2C_EXT0 },
-    Vector { _handler: I2C_EXT1 },
-    Vector { _handler: RSA },
-    Vector { _handler: SPI1_DMA },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector {
-        _handler: TG0_T0_EDGE,
-    },
-    Vector {
-        _handler: TG0_T1_EDGE,
-    },
     Vector {
         _handler: TG0_WDT_EDGE,
     },
-    Vector {
-        _handler: TG0_LACT_EDGE,
-    },
-    Vector {
-        _handler: TG1_T0_EDGE,
-    },
-    Vector {
-        _handler: TG1_T1_EDGE,
-    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector {
         _handler: TG1_WDT_EDGE,
     },
-    Vector {
-        _handler: TG1_LACT_EDGE,
-    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: RSA },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = "12 - UHCI0"]
-    UHCI0 = 12,
     #[doc = "13 - UHCI1"]
     UHCI1 = 13,
-    #[doc = "14 - TG0_T0_LEVEL"]
-    TG0_T0_LEVEL = 14,
-    #[doc = "15 - TG0_T1_LEVEL"]
-    TG0_T1_LEVEL = 15,
-    #[doc = "16 - TG0_WDT_LEVEL"]
-    TG0_WDT_LEVEL = 16,
-    #[doc = "17 - TG0_LACT_LEVEL"]
-    TG0_LACT_LEVEL = 17,
-    #[doc = "18 - TG1_T0_LEVEL"]
-    TG1_T0_LEVEL = 18,
-    #[doc = "19 - TG1_T1_LEVEL"]
-    TG1_T1_LEVEL = 19,
-    #[doc = "20 - TG1_WDT_LEVEL"]
-    TG1_WDT_LEVEL = 20,
-    #[doc = "21 - TG1_LACT_LEVEL"]
-    TG1_LACT_LEVEL = 21,
-    #[doc = "22 - GPIO"]
-    GPIO = 22,
-    #[doc = "23 - GPIO_NMI"]
-    GPIO_NMI = 23,
-    #[doc = "28 - SPI0"]
-    SPI0 = 28,
-    #[doc = "29 - SPI1"]
-    SPI1 = 29,
-    #[doc = "32 - I2S0"]
-    I2S0 = 32,
-    #[doc = "33 - I2S1"]
-    I2S1 = 33,
-    #[doc = "34 - UART0"]
-    UART0 = 34,
-    #[doc = "35 - UART1"]
-    UART1 = 35,
-    #[doc = "36 - UART2"]
-    UART2 = 36,
-    #[doc = "39 - PWM0"]
-    PWM0 = 39,
-    #[doc = "40 - PWM1"]
-    PWM1 = 40,
-    #[doc = "43 - LEDC"]
-    LEDC = 43,
-    #[doc = "44 - EFUSE"]
-    EFUSE = 44,
-    #[doc = "46 - RTC_CORE"]
-    RTC_CORE = 46,
-    #[doc = "48 - PCNT"]
-    PCNT = 48,
-    #[doc = "49 - I2C_EXT0"]
-    I2C_EXT0 = 49,
-    #[doc = "50 - I2C_EXT1"]
-    I2C_EXT1 = 50,
-    #[doc = "51 - RSA"]
-    RSA = 51,
-    #[doc = "52 - SPI1_DMA"]
-    SPI1_DMA = 52,
-    #[doc = "58 - TG0_T0_EDGE"]
-    TG0_T0_EDGE = 58,
-    #[doc = "59 - TG0_T1_EDGE"]
-    TG0_T1_EDGE = 59,
+    #[doc = "15 - UHCI0"]
+    UHCI0 = 15,
+    #[doc = "16 - GPIO"]
+    GPIO = 16,
+    #[doc = "17 - GPIO_NMI"]
+    GPIO_NMI = 17,
+    #[doc = "20 - SPI0"]
+    SPI0 = 20,
+    #[doc = "21 - SPI1"]
+    SPI1 = 21,
+    #[doc = "25 - I2S0"]
+    I2S0 = 25,
+    #[doc = "26 - I2S1"]
+    I2S1 = 26,
+    #[doc = "27 - UART0"]
+    UART0 = 27,
+    #[doc = "28 - UART1"]
+    UART1 = 28,
+    #[doc = "29 - UART2"]
+    UART2 = 29,
+    #[doc = "31 - PWM0"]
+    PWM0 = 31,
+    #[doc = "32 - PWM1"]
+    PWM1 = 32,
+    #[doc = "35 - LEDC"]
+    LEDC = 35,
+    #[doc = "36 - EFUSE"]
+    EFUSE = 36,
+    #[doc = "39 - RTC_CORE"]
+    RTC_CORE = 39,
+    #[doc = "41 - PCNT"]
+    PCNT = 41,
+    #[doc = "42 - I2C_EXT0"]
+    I2C_EXT0 = 42,
+    #[doc = "43 - I2C_EXT1"]
+    I2C_EXT1 = 43,
+    #[doc = "44 - SPI1_DMA"]
+    SPI1_DMA = 44,
+    #[doc = "50 - TG0_T0_LEVEL"]
+    TG0_T0_LEVEL = 50,
+    #[doc = "51 - TG0_T1_LEVEL"]
+    TG0_T1_LEVEL = 51,
+    #[doc = "52 - TG0_WDT_LEVEL"]
+    TG0_WDT_LEVEL = 52,
+    #[doc = "53 - TG1_T0_LEVEL"]
+    TG1_T0_LEVEL = 53,
+    #[doc = "54 - TG1_T1_LEVEL"]
+    TG1_T1_LEVEL = 54,
+    #[doc = "55 - TG1_WDT_LEVEL"]
+    TG1_WDT_LEVEL = 55,
     #[doc = "60 - TG0_WDT_EDGE"]
     TG0_WDT_EDGE = 60,
-    #[doc = "61 - TG0_LACT_EDGE"]
-    TG0_LACT_EDGE = 61,
-    #[doc = "62 - TG1_T0_EDGE"]
-    TG1_T0_EDGE = 62,
-    #[doc = "63 - TG1_T1_EDGE"]
-    TG1_T1_EDGE = 63,
     #[doc = "64 - TG1_WDT_EDGE"]
     TG1_WDT_EDGE = 64,
-    #[doc = "65 - TG1_LACT_EDGE"]
-    TG1_LACT_EDGE = 65,
+    #[doc = "76 - RSA"]
+    RSA = 76,
 }
 unsafe impl xtensa_lx::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
@@ -271,43 +242,35 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u16) -> Result<Self, TryFromInterruptError> {
         match value {
-            12 => Ok(Interrupt::UHCI0),
             13 => Ok(Interrupt::UHCI1),
-            14 => Ok(Interrupt::TG0_T0_LEVEL),
-            15 => Ok(Interrupt::TG0_T1_LEVEL),
-            16 => Ok(Interrupt::TG0_WDT_LEVEL),
-            17 => Ok(Interrupt::TG0_LACT_LEVEL),
-            18 => Ok(Interrupt::TG1_T0_LEVEL),
-            19 => Ok(Interrupt::TG1_T1_LEVEL),
-            20 => Ok(Interrupt::TG1_WDT_LEVEL),
-            21 => Ok(Interrupt::TG1_LACT_LEVEL),
-            22 => Ok(Interrupt::GPIO),
-            23 => Ok(Interrupt::GPIO_NMI),
-            28 => Ok(Interrupt::SPI0),
-            29 => Ok(Interrupt::SPI1),
-            32 => Ok(Interrupt::I2S0),
-            33 => Ok(Interrupt::I2S1),
-            34 => Ok(Interrupt::UART0),
-            35 => Ok(Interrupt::UART1),
-            36 => Ok(Interrupt::UART2),
-            39 => Ok(Interrupt::PWM0),
-            40 => Ok(Interrupt::PWM1),
-            43 => Ok(Interrupt::LEDC),
-            44 => Ok(Interrupt::EFUSE),
-            46 => Ok(Interrupt::RTC_CORE),
-            48 => Ok(Interrupt::PCNT),
-            49 => Ok(Interrupt::I2C_EXT0),
-            50 => Ok(Interrupt::I2C_EXT1),
-            51 => Ok(Interrupt::RSA),
-            52 => Ok(Interrupt::SPI1_DMA),
-            58 => Ok(Interrupt::TG0_T0_EDGE),
-            59 => Ok(Interrupt::TG0_T1_EDGE),
+            15 => Ok(Interrupt::UHCI0),
+            16 => Ok(Interrupt::GPIO),
+            17 => Ok(Interrupt::GPIO_NMI),
+            20 => Ok(Interrupt::SPI0),
+            21 => Ok(Interrupt::SPI1),
+            25 => Ok(Interrupt::I2S0),
+            26 => Ok(Interrupt::I2S1),
+            27 => Ok(Interrupt::UART0),
+            28 => Ok(Interrupt::UART1),
+            29 => Ok(Interrupt::UART2),
+            31 => Ok(Interrupt::PWM0),
+            32 => Ok(Interrupt::PWM1),
+            35 => Ok(Interrupt::LEDC),
+            36 => Ok(Interrupt::EFUSE),
+            39 => Ok(Interrupt::RTC_CORE),
+            41 => Ok(Interrupt::PCNT),
+            42 => Ok(Interrupt::I2C_EXT0),
+            43 => Ok(Interrupt::I2C_EXT1),
+            44 => Ok(Interrupt::SPI1_DMA),
+            50 => Ok(Interrupt::TG0_T0_LEVEL),
+            51 => Ok(Interrupt::TG0_T1_LEVEL),
+            52 => Ok(Interrupt::TG0_WDT_LEVEL),
+            53 => Ok(Interrupt::TG1_T0_LEVEL),
+            54 => Ok(Interrupt::TG1_T1_LEVEL),
+            55 => Ok(Interrupt::TG1_WDT_LEVEL),
             60 => Ok(Interrupt::TG0_WDT_EDGE),
-            61 => Ok(Interrupt::TG0_LACT_EDGE),
-            62 => Ok(Interrupt::TG1_T0_EDGE),
-            63 => Ok(Interrupt::TG1_T1_EDGE),
             64 => Ok(Interrupt::TG1_WDT_EDGE),
-            65 => Ok(Interrupt::TG1_LACT_EDGE),
+            76 => Ok(Interrupt::RSA),
             _ => Err(TryFromInterruptError(())),
         }
     }
@@ -788,6 +751,34 @@ impl core::fmt::Debug for INTERRUPT_CORE1 {
 }
 #[doc = "Interrupt Core"]
 pub mod interrupt_core1;
+#[doc = "Input/Output Multiplexer"]
+pub struct IO_MUX {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for IO_MUX {}
+impl IO_MUX {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const io_mux::RegisterBlock = 0x6000_9000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const io_mux::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for IO_MUX {
+    type Target = io_mux::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for IO_MUX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IO_MUX").finish()
+    }
+}
+#[doc = "Input/Output Multiplexer"]
+pub mod io_mux;
 #[doc = "Peripheral LCD_CAM"]
 pub struct LCD_CAM {
     _marker: PhantomData<*const ()>,
@@ -1555,6 +1546,8 @@ pub struct Peripherals {
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTERRUPT_CORE1"]
     pub INTERRUPT_CORE1: INTERRUPT_CORE1,
+    #[doc = "IO_MUX"]
+    pub IO_MUX: IO_MUX,
     #[doc = "LCD_CAM"]
     pub LCD_CAM: LCD_CAM,
     #[doc = "LEDC"]
@@ -1674,6 +1667,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             INTERRUPT_CORE1: INTERRUPT_CORE1 {
+                _marker: PhantomData,
+            },
+            IO_MUX: IO_MUX {
                 _marker: PhantomData,
             },
             LCD_CAM: LCD_CAM {
