@@ -2,37 +2,37 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - rtc configure register"]
-    pub rtc_options0: crate::Reg<rtc_options0::RTC_OPTIONS0_SPEC>,
+    pub options0: crate::Reg<options0::OPTIONS0_SPEC>,
     #[doc = "0x04 - rtc configure register"]
-    pub rtc_slp_timer0: crate::Reg<rtc_slp_timer0::RTC_SLP_TIMER0_SPEC>,
+    pub slp_timer0: crate::Reg<slp_timer0::SLP_TIMER0_SPEC>,
     #[doc = "0x08 - rtc configure register"]
-    pub rtc_slp_timer1: crate::Reg<rtc_slp_timer1::RTC_SLP_TIMER1_SPEC>,
+    pub slp_timer1: crate::Reg<slp_timer1::SLP_TIMER1_SPEC>,
     #[doc = "0x0c - rtc configure register"]
-    pub rtc_time_update: crate::Reg<rtc_time_update::RTC_TIME_UPDATE_SPEC>,
+    pub time_update: crate::Reg<time_update::TIME_UPDATE_SPEC>,
     #[doc = "0x10 - rtc configure register"]
-    pub rtc_time_low0: crate::Reg<rtc_time_low0::RTC_TIME_LOW0_SPEC>,
+    pub time_low0: crate::Reg<time_low0::TIME_LOW0_SPEC>,
     #[doc = "0x14 - rtc configure register"]
-    pub rtc_time_high0: crate::Reg<rtc_time_high0::RTC_TIME_HIGH0_SPEC>,
+    pub time_high0: crate::Reg<time_high0::TIME_HIGH0_SPEC>,
     #[doc = "0x18 - rtc configure register"]
-    pub rtc_state0: crate::Reg<rtc_state0::RTC_STATE0_SPEC>,
+    pub state0: crate::Reg<state0::STATE0_SPEC>,
     #[doc = "0x1c - rtc configure register"]
-    pub rtc_timer1: crate::Reg<rtc_timer1::RTC_TIMER1_SPEC>,
+    pub timer1: crate::Reg<timer1::TIMER1_SPEC>,
     #[doc = "0x20 - rtc configure register"]
-    pub rtc_timer2: crate::Reg<rtc_timer2::RTC_TIMER2_SPEC>,
+    pub timer2: crate::Reg<timer2::TIMER2_SPEC>,
     #[doc = "0x24 - rtc configure register"]
-    pub rtc_timer3: crate::Reg<rtc_timer3::RTC_TIMER3_SPEC>,
+    pub timer3: crate::Reg<timer3::TIMER3_SPEC>,
     #[doc = "0x28 - rtc configure register"]
-    pub rtc_timer4: crate::Reg<rtc_timer4::RTC_TIMER4_SPEC>,
+    pub timer4: crate::Reg<timer4::TIMER4_SPEC>,
     #[doc = "0x2c - rtc configure register"]
-    pub rtc_timer5: crate::Reg<rtc_timer5::RTC_TIMER5_SPEC>,
+    pub timer5: crate::Reg<timer5::TIMER5_SPEC>,
     #[doc = "0x30 - rtc configure register"]
-    pub rtc_timer6: crate::Reg<rtc_timer6::RTC_TIMER6_SPEC>,
+    pub timer6: crate::Reg<timer6::TIMER6_SPEC>,
     #[doc = "0x34 - rtc configure register"]
-    pub rtc_ana_conf: crate::Reg<rtc_ana_conf::RTC_ANA_CONF_SPEC>,
+    pub ana_conf: crate::Reg<ana_conf::ANA_CONF_SPEC>,
     #[doc = "0x38 - rtc configure register"]
-    pub rtc_reset_state: crate::Reg<rtc_reset_state::RTC_RESET_STATE_SPEC>,
+    pub reset_state: crate::Reg<reset_state::RESET_STATE_SPEC>,
     #[doc = "0x3c - rtc configure register"]
-    pub rtc_wakeup_state: crate::Reg<rtc_wakeup_state::RTC_WAKEUP_STATE_SPEC>,
+    pub wakeup_state: crate::Reg<wakeup_state::WAKEUP_STATE_SPEC>,
     #[doc = "0x40 - rtc configure register"]
     pub int_ena_rtc: crate::Reg<int_ena_rtc::INT_ENA_RTC_SPEC>,
     #[doc = "0x44 - rtc configure register"]
@@ -42,181 +42,181 @@ pub struct RegisterBlock {
     #[doc = "0x4c - rtc configure register"]
     pub int_clr_rtc: crate::Reg<int_clr_rtc::INT_CLR_RTC_SPEC>,
     #[doc = "0x50 - rtc configure register"]
-    pub rtc_store0: crate::Reg<rtc_store0::RTC_STORE0_SPEC>,
+    pub store0: crate::Reg<store0::STORE0_SPEC>,
     #[doc = "0x54 - rtc configure register"]
-    pub rtc_store1: crate::Reg<rtc_store1::RTC_STORE1_SPEC>,
+    pub store1: crate::Reg<store1::STORE1_SPEC>,
     #[doc = "0x58 - rtc configure register"]
-    pub rtc_store2: crate::Reg<rtc_store2::RTC_STORE2_SPEC>,
+    pub store2: crate::Reg<store2::STORE2_SPEC>,
     #[doc = "0x5c - rtc configure register"]
-    pub rtc_store3: crate::Reg<rtc_store3::RTC_STORE3_SPEC>,
+    pub store3: crate::Reg<store3::STORE3_SPEC>,
     #[doc = "0x60 - rtc configure register"]
-    pub rtc_ext_xtl_conf: crate::Reg<rtc_ext_xtl_conf::RTC_EXT_XTL_CONF_SPEC>,
+    pub ext_xtl_conf: crate::Reg<ext_xtl_conf::EXT_XTL_CONF_SPEC>,
     #[doc = "0x64 - rtc configure register"]
-    pub rtc_ext_wakeup_conf: crate::Reg<rtc_ext_wakeup_conf::RTC_EXT_WAKEUP_CONF_SPEC>,
+    pub ext_wakeup_conf: crate::Reg<ext_wakeup_conf::EXT_WAKEUP_CONF_SPEC>,
     #[doc = "0x68 - rtc configure register"]
-    pub rtc_slp_reject_conf: crate::Reg<rtc_slp_reject_conf::RTC_SLP_REJECT_CONF_SPEC>,
+    pub slp_reject_conf: crate::Reg<slp_reject_conf::SLP_REJECT_CONF_SPEC>,
     #[doc = "0x6c - rtc configure register"]
-    pub rtc_cpu_period_conf: crate::Reg<rtc_cpu_period_conf::RTC_CPU_PERIOD_CONF_SPEC>,
+    pub cpu_period_conf: crate::Reg<cpu_period_conf::CPU_PERIOD_CONF_SPEC>,
     #[doc = "0x70 - rtc configure register"]
-    pub rtc_clk_conf: crate::Reg<rtc_clk_conf::RTC_CLK_CONF_SPEC>,
+    pub clk_conf: crate::Reg<clk_conf::CLK_CONF_SPEC>,
     #[doc = "0x74 - rtc configure register"]
-    pub rtc_slow_clk_conf: crate::Reg<rtc_slow_clk_conf::RTC_SLOW_CLK_CONF_SPEC>,
+    pub slow_clk_conf: crate::Reg<slow_clk_conf::SLOW_CLK_CONF_SPEC>,
     #[doc = "0x78 - rtc configure register"]
-    pub rtc_sdio_conf: crate::Reg<rtc_sdio_conf::RTC_SDIO_CONF_SPEC>,
+    pub sdio_conf: crate::Reg<sdio_conf::SDIO_CONF_SPEC>,
     #[doc = "0x7c - rtc configure register"]
-    pub rtc_bias_conf: crate::Reg<rtc_bias_conf::RTC_BIAS_CONF_SPEC>,
+    pub bias_conf: crate::Reg<bias_conf::BIAS_CONF_SPEC>,
     #[doc = "0x80 - rtc configure register"]
     pub rtc: crate::Reg<rtc::RTC_SPEC>,
     #[doc = "0x84 - rtc configure register"]
-    pub rtc_pwc: crate::Reg<rtc_pwc::RTC_PWC_SPEC>,
+    pub pwc: crate::Reg<pwc::PWC_SPEC>,
     #[doc = "0x88 - rtc configure register"]
     pub dig_pwc: crate::Reg<dig_pwc::DIG_PWC_SPEC>,
     #[doc = "0x8c - rtc configure register"]
     pub dig_iso: crate::Reg<dig_iso::DIG_ISO_SPEC>,
     #[doc = "0x90 - rtc configure register"]
-    pub rtc_wdtconfig0: crate::Reg<rtc_wdtconfig0::RTC_WDTCONFIG0_SPEC>,
+    pub wdtconfig0: crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>,
     #[doc = "0x94 - rtc configure register"]
-    pub rtc_wdtconfig1: crate::Reg<rtc_wdtconfig1::RTC_WDTCONFIG1_SPEC>,
+    pub wdtconfig1: crate::Reg<wdtconfig1::WDTCONFIG1_SPEC>,
     #[doc = "0x98 - rtc configure register"]
-    pub rtc_wdtconfig2: crate::Reg<rtc_wdtconfig2::RTC_WDTCONFIG2_SPEC>,
+    pub wdtconfig2: crate::Reg<wdtconfig2::WDTCONFIG2_SPEC>,
     #[doc = "0x9c - rtc configure register"]
-    pub rtc_wdtconfig3: crate::Reg<rtc_wdtconfig3::RTC_WDTCONFIG3_SPEC>,
+    pub wdtconfig3: crate::Reg<wdtconfig3::WDTCONFIG3_SPEC>,
     #[doc = "0xa0 - rtc configure register"]
-    pub rtc_wdtconfig4: crate::Reg<rtc_wdtconfig4::RTC_WDTCONFIG4_SPEC>,
+    pub wdtconfig4: crate::Reg<wdtconfig4::WDTCONFIG4_SPEC>,
     #[doc = "0xa4 - rtc configure register"]
-    pub rtc_wdtfeed: crate::Reg<rtc_wdtfeed::RTC_WDTFEED_SPEC>,
+    pub wdtfeed: crate::Reg<wdtfeed::WDTFEED_SPEC>,
     #[doc = "0xa8 - rtc configure register"]
-    pub rtc_wdtwprotect: crate::Reg<rtc_wdtwprotect::RTC_WDTWPROTECT_SPEC>,
+    pub wdtwprotect: crate::Reg<wdtwprotect::WDTWPROTECT_SPEC>,
     #[doc = "0xac - rtc configure register"]
-    pub rtc_swd_conf: crate::Reg<rtc_swd_conf::RTC_SWD_CONF_SPEC>,
+    pub swd_conf: crate::Reg<swd_conf::SWD_CONF_SPEC>,
     #[doc = "0xb0 - rtc configure register"]
-    pub rtc_swd_wprotect: crate::Reg<rtc_swd_wprotect::RTC_SWD_WPROTECT_SPEC>,
+    pub swd_wprotect: crate::Reg<swd_wprotect::SWD_WPROTECT_SPEC>,
     #[doc = "0xb4 - rtc configure register"]
-    pub rtc_sw_cpu_stall: crate::Reg<rtc_sw_cpu_stall::RTC_SW_CPU_STALL_SPEC>,
+    pub sw_cpu_stall: crate::Reg<sw_cpu_stall::SW_CPU_STALL_SPEC>,
     #[doc = "0xb8 - rtc configure register"]
-    pub rtc_store4: crate::Reg<rtc_store4::RTC_STORE4_SPEC>,
+    pub store4: crate::Reg<store4::STORE4_SPEC>,
     #[doc = "0xbc - rtc configure register"]
-    pub rtc_store5: crate::Reg<rtc_store5::RTC_STORE5_SPEC>,
+    pub store5: crate::Reg<store5::STORE5_SPEC>,
     #[doc = "0xc0 - rtc configure register"]
-    pub rtc_store6: crate::Reg<rtc_store6::RTC_STORE6_SPEC>,
+    pub store6: crate::Reg<store6::STORE6_SPEC>,
     #[doc = "0xc4 - rtc configure register"]
-    pub rtc_store7: crate::Reg<rtc_store7::RTC_STORE7_SPEC>,
+    pub store7: crate::Reg<store7::STORE7_SPEC>,
     #[doc = "0xc8 - rtc configure register"]
-    pub rtc_low_power_st: crate::Reg<rtc_low_power_st::RTC_LOW_POWER_ST_SPEC>,
+    pub low_power_st: crate::Reg<low_power_st::LOW_POWER_ST_SPEC>,
     #[doc = "0xcc - rtc configure register"]
-    pub rtc_diag0: crate::Reg<rtc_diag0::RTC_DIAG0_SPEC>,
+    pub diag0: crate::Reg<diag0::DIAG0_SPEC>,
     #[doc = "0xd0 - rtc configure register"]
-    pub rtc_pad_hold: crate::Reg<rtc_pad_hold::RTC_PAD_HOLD_SPEC>,
+    pub pad_hold: crate::Reg<pad_hold::PAD_HOLD_SPEC>,
     #[doc = "0xd4 - rtc configure register"]
     pub dig_pad_hold: crate::Reg<dig_pad_hold::DIG_PAD_HOLD_SPEC>,
     #[doc = "0xd8 - rtc configure register"]
-    pub rtc_brown_out: crate::Reg<rtc_brown_out::RTC_BROWN_OUT_SPEC>,
+    pub brown_out: crate::Reg<brown_out::BROWN_OUT_SPEC>,
     #[doc = "0xdc - rtc configure register"]
-    pub rtc_time_low1: crate::Reg<rtc_time_low1::RTC_TIME_LOW1_SPEC>,
+    pub time_low1: crate::Reg<time_low1::TIME_LOW1_SPEC>,
     #[doc = "0xe0 - rtc configure register"]
-    pub rtc_time_high1: crate::Reg<rtc_time_high1::RTC_TIME_HIGH1_SPEC>,
+    pub time_high1: crate::Reg<time_high1::TIME_HIGH1_SPEC>,
     #[doc = "0xe4 - rtc configure register"]
-    pub rtc_xtal32k_clk_factor: crate::Reg<rtc_xtal32k_clk_factor::RTC_XTAL32K_CLK_FACTOR_SPEC>,
+    pub xtal32k_clk_factor: crate::Reg<xtal32k_clk_factor::XTAL32K_CLK_FACTOR_SPEC>,
     #[doc = "0xe8 - rtc configure register"]
-    pub rtc_xtal32k_conf: crate::Reg<rtc_xtal32k_conf::RTC_XTAL32K_CONF_SPEC>,
+    pub xtal32k_conf: crate::Reg<xtal32k_conf::XTAL32K_CONF_SPEC>,
     #[doc = "0xec - rtc configure register"]
-    pub rtc_usb_conf: crate::Reg<rtc_usb_conf::RTC_USB_CONF_SPEC>,
+    pub usb_conf: crate::Reg<usb_conf::USB_CONF_SPEC>,
     #[doc = "0xf0 - RTC_CNTL_RTC_SLP_REJECT_CAUSE_REG"]
-    pub rtc_slp_reject_cause: crate::Reg<rtc_slp_reject_cause::RTC_SLP_REJECT_CAUSE_SPEC>,
+    pub slp_reject_cause: crate::Reg<slp_reject_cause::SLP_REJECT_CAUSE_SPEC>,
     #[doc = "0xf4 - rtc configure register"]
-    pub rtc_option1: crate::Reg<rtc_option1::RTC_OPTION1_SPEC>,
+    pub option1: crate::Reg<option1::OPTION1_SPEC>,
     #[doc = "0xf8 - RTC_CNTL_RTC_SLP_WAKEUP_CAUSE_REG"]
-    pub rtc_slp_wakeup_cause: crate::Reg<rtc_slp_wakeup_cause::RTC_SLP_WAKEUP_CAUSE_SPEC>,
+    pub slp_wakeup_cause: crate::Reg<slp_wakeup_cause::SLP_WAKEUP_CAUSE_SPEC>,
     #[doc = "0xfc - rtc configure register"]
-    pub rtc_ulp_cp_timer_1: crate::Reg<rtc_ulp_cp_timer_1::RTC_ULP_CP_TIMER_1_SPEC>,
+    pub ulp_cp_timer_1: crate::Reg<ulp_cp_timer_1::ULP_CP_TIMER_1_SPEC>,
     #[doc = "0x100 - rtc configure register"]
     pub int_ena_rtc_w1ts: crate::Reg<int_ena_rtc_w1ts::INT_ENA_RTC_W1TS_SPEC>,
     #[doc = "0x104 - rtc configure register"]
     pub int_ena_rtc_w1tc: crate::Reg<int_ena_rtc_w1tc::INT_ENA_RTC_W1TC_SPEC>,
     #[doc = "0x108 - rtc configure register"]
-    pub rtc_cntl_retention_ctrl: crate::Reg<rtc_cntl_retention_ctrl::RTC_CNTL_RETENTION_CTRL_SPEC>,
+    pub cntl_retention_ctrl: crate::Reg<cntl_retention_ctrl::CNTL_RETENTION_CTRL_SPEC>,
     #[doc = "0x10c - rtc configure register"]
-    pub rtc_fib_sel: crate::Reg<rtc_fib_sel::RTC_FIB_SEL_SPEC>,
+    pub fib_sel: crate::Reg<fib_sel::FIB_SEL_SPEC>,
     #[doc = "0x110 - rtc configure register"]
-    pub rtc_cntl_gpio_wakeup: crate::Reg<rtc_cntl_gpio_wakeup::RTC_CNTL_GPIO_WAKEUP_SPEC>,
+    pub cntl_gpio_wakeup: crate::Reg<cntl_gpio_wakeup::CNTL_GPIO_WAKEUP_SPEC>,
     #[doc = "0x114 - rtc configure register"]
-    pub rtc_cntl_dbg_sel: crate::Reg<rtc_cntl_dbg_sel::RTC_CNTL_DBG_SEL_SPEC>,
+    pub cntl_dbg_sel: crate::Reg<cntl_dbg_sel::CNTL_DBG_SEL_SPEC>,
     #[doc = "0x118 - rtc configure register"]
-    pub rtc_cntl_dbg_map: crate::Reg<rtc_cntl_dbg_map::RTC_CNTL_DBG_MAP_SPEC>,
+    pub cntl_dbg_map: crate::Reg<cntl_dbg_map::CNTL_DBG_MAP_SPEC>,
     #[doc = "0x11c - rtc configure register"]
-    pub rtc_cntl_sensor_ctrl: crate::Reg<rtc_cntl_sensor_ctrl::RTC_CNTL_SENSOR_CTRL_SPEC>,
+    pub cntl_sensor_ctrl: crate::Reg<cntl_sensor_ctrl::CNTL_SENSOR_CTRL_SPEC>,
     #[doc = "0x120 - rtc configure register"]
-    pub rtc_cntl_dbg_sar_sel: crate::Reg<rtc_cntl_dbg_sar_sel::RTC_CNTL_DBG_SAR_SEL_SPEC>,
+    pub cntl_dbg_sar_sel: crate::Reg<cntl_dbg_sar_sel::CNTL_DBG_SAR_SEL_SPEC>,
     #[doc = "0x124 - rtc configure register"]
-    pub rtc_cntl_pg_ctrl: crate::Reg<rtc_cntl_pg_ctrl::RTC_CNTL_PG_CTRL_SPEC>,
+    pub cntl_pg_ctrl: crate::Reg<cntl_pg_ctrl::CNTL_PG_CTRL_SPEC>,
     _reserved74: [u8; 0xd4],
     #[doc = "0x1fc - rtc configure register"]
     pub date: crate::Reg<date::DATE_SPEC>,
 }
-#[doc = "RTC_OPTIONS0 register accessor: an alias for `Reg<RTC_OPTIONS0_SPEC>`"]
-pub type RTC_OPTIONS0 = crate::Reg<rtc_options0::RTC_OPTIONS0_SPEC>;
+#[doc = "OPTIONS0 register accessor: an alias for `Reg<OPTIONS0_SPEC>`"]
+pub type OPTIONS0 = crate::Reg<options0::OPTIONS0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_options0;
-#[doc = "RTC_SLP_TIMER0 register accessor: an alias for `Reg<RTC_SLP_TIMER0_SPEC>`"]
-pub type RTC_SLP_TIMER0 = crate::Reg<rtc_slp_timer0::RTC_SLP_TIMER0_SPEC>;
+pub mod options0;
+#[doc = "SLP_TIMER0 register accessor: an alias for `Reg<SLP_TIMER0_SPEC>`"]
+pub type SLP_TIMER0 = crate::Reg<slp_timer0::SLP_TIMER0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_slp_timer0;
-#[doc = "RTC_SLP_TIMER1 register accessor: an alias for `Reg<RTC_SLP_TIMER1_SPEC>`"]
-pub type RTC_SLP_TIMER1 = crate::Reg<rtc_slp_timer1::RTC_SLP_TIMER1_SPEC>;
+pub mod slp_timer0;
+#[doc = "SLP_TIMER1 register accessor: an alias for `Reg<SLP_TIMER1_SPEC>`"]
+pub type SLP_TIMER1 = crate::Reg<slp_timer1::SLP_TIMER1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_slp_timer1;
-#[doc = "RTC_TIME_UPDATE register accessor: an alias for `Reg<RTC_TIME_UPDATE_SPEC>`"]
-pub type RTC_TIME_UPDATE = crate::Reg<rtc_time_update::RTC_TIME_UPDATE_SPEC>;
+pub mod slp_timer1;
+#[doc = "TIME_UPDATE register accessor: an alias for `Reg<TIME_UPDATE_SPEC>`"]
+pub type TIME_UPDATE = crate::Reg<time_update::TIME_UPDATE_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_time_update;
-#[doc = "RTC_TIME_LOW0 register accessor: an alias for `Reg<RTC_TIME_LOW0_SPEC>`"]
-pub type RTC_TIME_LOW0 = crate::Reg<rtc_time_low0::RTC_TIME_LOW0_SPEC>;
+pub mod time_update;
+#[doc = "TIME_LOW0 register accessor: an alias for `Reg<TIME_LOW0_SPEC>`"]
+pub type TIME_LOW0 = crate::Reg<time_low0::TIME_LOW0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_time_low0;
-#[doc = "RTC_TIME_HIGH0 register accessor: an alias for `Reg<RTC_TIME_HIGH0_SPEC>`"]
-pub type RTC_TIME_HIGH0 = crate::Reg<rtc_time_high0::RTC_TIME_HIGH0_SPEC>;
+pub mod time_low0;
+#[doc = "TIME_HIGH0 register accessor: an alias for `Reg<TIME_HIGH0_SPEC>`"]
+pub type TIME_HIGH0 = crate::Reg<time_high0::TIME_HIGH0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_time_high0;
-#[doc = "RTC_STATE0 register accessor: an alias for `Reg<RTC_STATE0_SPEC>`"]
-pub type RTC_STATE0 = crate::Reg<rtc_state0::RTC_STATE0_SPEC>;
+pub mod time_high0;
+#[doc = "STATE0 register accessor: an alias for `Reg<STATE0_SPEC>`"]
+pub type STATE0 = crate::Reg<state0::STATE0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_state0;
-#[doc = "RTC_TIMER1 register accessor: an alias for `Reg<RTC_TIMER1_SPEC>`"]
-pub type RTC_TIMER1 = crate::Reg<rtc_timer1::RTC_TIMER1_SPEC>;
+pub mod state0;
+#[doc = "TIMER1 register accessor: an alias for `Reg<TIMER1_SPEC>`"]
+pub type TIMER1 = crate::Reg<timer1::TIMER1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer1;
-#[doc = "RTC_TIMER2 register accessor: an alias for `Reg<RTC_TIMER2_SPEC>`"]
-pub type RTC_TIMER2 = crate::Reg<rtc_timer2::RTC_TIMER2_SPEC>;
+pub mod timer1;
+#[doc = "TIMER2 register accessor: an alias for `Reg<TIMER2_SPEC>`"]
+pub type TIMER2 = crate::Reg<timer2::TIMER2_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer2;
-#[doc = "RTC_TIMER3 register accessor: an alias for `Reg<RTC_TIMER3_SPEC>`"]
-pub type RTC_TIMER3 = crate::Reg<rtc_timer3::RTC_TIMER3_SPEC>;
+pub mod timer2;
+#[doc = "TIMER3 register accessor: an alias for `Reg<TIMER3_SPEC>`"]
+pub type TIMER3 = crate::Reg<timer3::TIMER3_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer3;
-#[doc = "RTC_TIMER4 register accessor: an alias for `Reg<RTC_TIMER4_SPEC>`"]
-pub type RTC_TIMER4 = crate::Reg<rtc_timer4::RTC_TIMER4_SPEC>;
+pub mod timer3;
+#[doc = "TIMER4 register accessor: an alias for `Reg<TIMER4_SPEC>`"]
+pub type TIMER4 = crate::Reg<timer4::TIMER4_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer4;
-#[doc = "RTC_TIMER5 register accessor: an alias for `Reg<RTC_TIMER5_SPEC>`"]
-pub type RTC_TIMER5 = crate::Reg<rtc_timer5::RTC_TIMER5_SPEC>;
+pub mod timer4;
+#[doc = "TIMER5 register accessor: an alias for `Reg<TIMER5_SPEC>`"]
+pub type TIMER5 = crate::Reg<timer5::TIMER5_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer5;
-#[doc = "RTC_TIMER6 register accessor: an alias for `Reg<RTC_TIMER6_SPEC>`"]
-pub type RTC_TIMER6 = crate::Reg<rtc_timer6::RTC_TIMER6_SPEC>;
+pub mod timer5;
+#[doc = "TIMER6 register accessor: an alias for `Reg<TIMER6_SPEC>`"]
+pub type TIMER6 = crate::Reg<timer6::TIMER6_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_timer6;
-#[doc = "RTC_ANA_CONF register accessor: an alias for `Reg<RTC_ANA_CONF_SPEC>`"]
-pub type RTC_ANA_CONF = crate::Reg<rtc_ana_conf::RTC_ANA_CONF_SPEC>;
+pub mod timer6;
+#[doc = "ANA_CONF register accessor: an alias for `Reg<ANA_CONF_SPEC>`"]
+pub type ANA_CONF = crate::Reg<ana_conf::ANA_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_ana_conf;
-#[doc = "RTC_RESET_STATE register accessor: an alias for `Reg<RTC_RESET_STATE_SPEC>`"]
-pub type RTC_RESET_STATE = crate::Reg<rtc_reset_state::RTC_RESET_STATE_SPEC>;
+pub mod ana_conf;
+#[doc = "RESET_STATE register accessor: an alias for `Reg<RESET_STATE_SPEC>`"]
+pub type RESET_STATE = crate::Reg<reset_state::RESET_STATE_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_reset_state;
-#[doc = "RTC_WAKEUP_STATE register accessor: an alias for `Reg<RTC_WAKEUP_STATE_SPEC>`"]
-pub type RTC_WAKEUP_STATE = crate::Reg<rtc_wakeup_state::RTC_WAKEUP_STATE_SPEC>;
+pub mod reset_state;
+#[doc = "WAKEUP_STATE register accessor: an alias for `Reg<WAKEUP_STATE_SPEC>`"]
+pub type WAKEUP_STATE = crate::Reg<wakeup_state::WAKEUP_STATE_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wakeup_state;
+pub mod wakeup_state;
 #[doc = "INT_ENA_RTC register accessor: an alias for `Reg<INT_ENA_RTC_SPEC>`"]
 pub type INT_ENA_RTC = crate::Reg<int_ena_rtc::INT_ENA_RTC_SPEC>;
 #[doc = "rtc configure register"]
@@ -233,62 +233,62 @@ pub mod int_st_rtc;
 pub type INT_CLR_RTC = crate::Reg<int_clr_rtc::INT_CLR_RTC_SPEC>;
 #[doc = "rtc configure register"]
 pub mod int_clr_rtc;
-#[doc = "RTC_STORE0 register accessor: an alias for `Reg<RTC_STORE0_SPEC>`"]
-pub type RTC_STORE0 = crate::Reg<rtc_store0::RTC_STORE0_SPEC>;
+#[doc = "STORE0 register accessor: an alias for `Reg<STORE0_SPEC>`"]
+pub type STORE0 = crate::Reg<store0::STORE0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store0;
-#[doc = "RTC_STORE1 register accessor: an alias for `Reg<RTC_STORE1_SPEC>`"]
-pub type RTC_STORE1 = crate::Reg<rtc_store1::RTC_STORE1_SPEC>;
+pub mod store0;
+#[doc = "STORE1 register accessor: an alias for `Reg<STORE1_SPEC>`"]
+pub type STORE1 = crate::Reg<store1::STORE1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store1;
-#[doc = "RTC_STORE2 register accessor: an alias for `Reg<RTC_STORE2_SPEC>`"]
-pub type RTC_STORE2 = crate::Reg<rtc_store2::RTC_STORE2_SPEC>;
+pub mod store1;
+#[doc = "STORE2 register accessor: an alias for `Reg<STORE2_SPEC>`"]
+pub type STORE2 = crate::Reg<store2::STORE2_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store2;
-#[doc = "RTC_STORE3 register accessor: an alias for `Reg<RTC_STORE3_SPEC>`"]
-pub type RTC_STORE3 = crate::Reg<rtc_store3::RTC_STORE3_SPEC>;
+pub mod store2;
+#[doc = "STORE3 register accessor: an alias for `Reg<STORE3_SPEC>`"]
+pub type STORE3 = crate::Reg<store3::STORE3_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store3;
-#[doc = "RTC_EXT_XTL_CONF register accessor: an alias for `Reg<RTC_EXT_XTL_CONF_SPEC>`"]
-pub type RTC_EXT_XTL_CONF = crate::Reg<rtc_ext_xtl_conf::RTC_EXT_XTL_CONF_SPEC>;
+pub mod store3;
+#[doc = "EXT_XTL_CONF register accessor: an alias for `Reg<EXT_XTL_CONF_SPEC>`"]
+pub type EXT_XTL_CONF = crate::Reg<ext_xtl_conf::EXT_XTL_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_ext_xtl_conf;
-#[doc = "RTC_EXT_WAKEUP_CONF register accessor: an alias for `Reg<RTC_EXT_WAKEUP_CONF_SPEC>`"]
-pub type RTC_EXT_WAKEUP_CONF = crate::Reg<rtc_ext_wakeup_conf::RTC_EXT_WAKEUP_CONF_SPEC>;
+pub mod ext_xtl_conf;
+#[doc = "EXT_WAKEUP_CONF register accessor: an alias for `Reg<EXT_WAKEUP_CONF_SPEC>`"]
+pub type EXT_WAKEUP_CONF = crate::Reg<ext_wakeup_conf::EXT_WAKEUP_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_ext_wakeup_conf;
-#[doc = "RTC_SLP_REJECT_CONF register accessor: an alias for `Reg<RTC_SLP_REJECT_CONF_SPEC>`"]
-pub type RTC_SLP_REJECT_CONF = crate::Reg<rtc_slp_reject_conf::RTC_SLP_REJECT_CONF_SPEC>;
+pub mod ext_wakeup_conf;
+#[doc = "SLP_REJECT_CONF register accessor: an alias for `Reg<SLP_REJECT_CONF_SPEC>`"]
+pub type SLP_REJECT_CONF = crate::Reg<slp_reject_conf::SLP_REJECT_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_slp_reject_conf;
-#[doc = "RTC_CPU_PERIOD_CONF register accessor: an alias for `Reg<RTC_CPU_PERIOD_CONF_SPEC>`"]
-pub type RTC_CPU_PERIOD_CONF = crate::Reg<rtc_cpu_period_conf::RTC_CPU_PERIOD_CONF_SPEC>;
+pub mod slp_reject_conf;
+#[doc = "CPU_PERIOD_CONF register accessor: an alias for `Reg<CPU_PERIOD_CONF_SPEC>`"]
+pub type CPU_PERIOD_CONF = crate::Reg<cpu_period_conf::CPU_PERIOD_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cpu_period_conf;
-#[doc = "RTC_CLK_CONF register accessor: an alias for `Reg<RTC_CLK_CONF_SPEC>`"]
-pub type RTC_CLK_CONF = crate::Reg<rtc_clk_conf::RTC_CLK_CONF_SPEC>;
+pub mod cpu_period_conf;
+#[doc = "CLK_CONF register accessor: an alias for `Reg<CLK_CONF_SPEC>`"]
+pub type CLK_CONF = crate::Reg<clk_conf::CLK_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_clk_conf;
-#[doc = "RTC_SLOW_CLK_CONF register accessor: an alias for `Reg<RTC_SLOW_CLK_CONF_SPEC>`"]
-pub type RTC_SLOW_CLK_CONF = crate::Reg<rtc_slow_clk_conf::RTC_SLOW_CLK_CONF_SPEC>;
+pub mod clk_conf;
+#[doc = "SLOW_CLK_CONF register accessor: an alias for `Reg<SLOW_CLK_CONF_SPEC>`"]
+pub type SLOW_CLK_CONF = crate::Reg<slow_clk_conf::SLOW_CLK_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_slow_clk_conf;
-#[doc = "RTC_SDIO_CONF register accessor: an alias for `Reg<RTC_SDIO_CONF_SPEC>`"]
-pub type RTC_SDIO_CONF = crate::Reg<rtc_sdio_conf::RTC_SDIO_CONF_SPEC>;
+pub mod slow_clk_conf;
+#[doc = "SDIO_CONF register accessor: an alias for `Reg<SDIO_CONF_SPEC>`"]
+pub type SDIO_CONF = crate::Reg<sdio_conf::SDIO_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_sdio_conf;
-#[doc = "RTC_BIAS_CONF register accessor: an alias for `Reg<RTC_BIAS_CONF_SPEC>`"]
-pub type RTC_BIAS_CONF = crate::Reg<rtc_bias_conf::RTC_BIAS_CONF_SPEC>;
+pub mod sdio_conf;
+#[doc = "BIAS_CONF register accessor: an alias for `Reg<BIAS_CONF_SPEC>`"]
+pub type BIAS_CONF = crate::Reg<bias_conf::BIAS_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_bias_conf;
+pub mod bias_conf;
 #[doc = "RTC register accessor: an alias for `Reg<RTC_SPEC>`"]
 pub type RTC = crate::Reg<rtc::RTC_SPEC>;
 #[doc = "rtc configure register"]
 pub mod rtc;
-#[doc = "RTC_PWC register accessor: an alias for `Reg<RTC_PWC_SPEC>`"]
-pub type RTC_PWC = crate::Reg<rtc_pwc::RTC_PWC_SPEC>;
+#[doc = "PWC register accessor: an alias for `Reg<PWC_SPEC>`"]
+pub type PWC = crate::Reg<pwc::PWC_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_pwc;
+pub mod pwc;
 #[doc = "DIG_PWC register accessor: an alias for `Reg<DIG_PWC_SPEC>`"]
 pub type DIG_PWC = crate::Reg<dig_pwc::DIG_PWC_SPEC>;
 #[doc = "rtc configure register"]
@@ -297,118 +297,118 @@ pub mod dig_pwc;
 pub type DIG_ISO = crate::Reg<dig_iso::DIG_ISO_SPEC>;
 #[doc = "rtc configure register"]
 pub mod dig_iso;
-#[doc = "RTC_WDTCONFIG0 register accessor: an alias for `Reg<RTC_WDTCONFIG0_SPEC>`"]
-pub type RTC_WDTCONFIG0 = crate::Reg<rtc_wdtconfig0::RTC_WDTCONFIG0_SPEC>;
+#[doc = "WDTCONFIG0 register accessor: an alias for `Reg<WDTCONFIG0_SPEC>`"]
+pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtconfig0;
-#[doc = "RTC_WDTCONFIG1 register accessor: an alias for `Reg<RTC_WDTCONFIG1_SPEC>`"]
-pub type RTC_WDTCONFIG1 = crate::Reg<rtc_wdtconfig1::RTC_WDTCONFIG1_SPEC>;
+pub mod wdtconfig0;
+#[doc = "WDTCONFIG1 register accessor: an alias for `Reg<WDTCONFIG1_SPEC>`"]
+pub type WDTCONFIG1 = crate::Reg<wdtconfig1::WDTCONFIG1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtconfig1;
-#[doc = "RTC_WDTCONFIG2 register accessor: an alias for `Reg<RTC_WDTCONFIG2_SPEC>`"]
-pub type RTC_WDTCONFIG2 = crate::Reg<rtc_wdtconfig2::RTC_WDTCONFIG2_SPEC>;
+pub mod wdtconfig1;
+#[doc = "WDTCONFIG2 register accessor: an alias for `Reg<WDTCONFIG2_SPEC>`"]
+pub type WDTCONFIG2 = crate::Reg<wdtconfig2::WDTCONFIG2_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtconfig2;
-#[doc = "RTC_WDTCONFIG3 register accessor: an alias for `Reg<RTC_WDTCONFIG3_SPEC>`"]
-pub type RTC_WDTCONFIG3 = crate::Reg<rtc_wdtconfig3::RTC_WDTCONFIG3_SPEC>;
+pub mod wdtconfig2;
+#[doc = "WDTCONFIG3 register accessor: an alias for `Reg<WDTCONFIG3_SPEC>`"]
+pub type WDTCONFIG3 = crate::Reg<wdtconfig3::WDTCONFIG3_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtconfig3;
-#[doc = "RTC_WDTCONFIG4 register accessor: an alias for `Reg<RTC_WDTCONFIG4_SPEC>`"]
-pub type RTC_WDTCONFIG4 = crate::Reg<rtc_wdtconfig4::RTC_WDTCONFIG4_SPEC>;
+pub mod wdtconfig3;
+#[doc = "WDTCONFIG4 register accessor: an alias for `Reg<WDTCONFIG4_SPEC>`"]
+pub type WDTCONFIG4 = crate::Reg<wdtconfig4::WDTCONFIG4_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtconfig4;
-#[doc = "RTC_WDTFEED register accessor: an alias for `Reg<RTC_WDTFEED_SPEC>`"]
-pub type RTC_WDTFEED = crate::Reg<rtc_wdtfeed::RTC_WDTFEED_SPEC>;
+pub mod wdtconfig4;
+#[doc = "WDTFEED register accessor: an alias for `Reg<WDTFEED_SPEC>`"]
+pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtfeed;
-#[doc = "RTC_WDTWPROTECT register accessor: an alias for `Reg<RTC_WDTWPROTECT_SPEC>`"]
-pub type RTC_WDTWPROTECT = crate::Reg<rtc_wdtwprotect::RTC_WDTWPROTECT_SPEC>;
+pub mod wdtfeed;
+#[doc = "WDTWPROTECT register accessor: an alias for `Reg<WDTWPROTECT_SPEC>`"]
+pub type WDTWPROTECT = crate::Reg<wdtwprotect::WDTWPROTECT_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_wdtwprotect;
-#[doc = "RTC_SWD_CONF register accessor: an alias for `Reg<RTC_SWD_CONF_SPEC>`"]
-pub type RTC_SWD_CONF = crate::Reg<rtc_swd_conf::RTC_SWD_CONF_SPEC>;
+pub mod wdtwprotect;
+#[doc = "SWD_CONF register accessor: an alias for `Reg<SWD_CONF_SPEC>`"]
+pub type SWD_CONF = crate::Reg<swd_conf::SWD_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_swd_conf;
-#[doc = "RTC_SWD_WPROTECT register accessor: an alias for `Reg<RTC_SWD_WPROTECT_SPEC>`"]
-pub type RTC_SWD_WPROTECT = crate::Reg<rtc_swd_wprotect::RTC_SWD_WPROTECT_SPEC>;
+pub mod swd_conf;
+#[doc = "SWD_WPROTECT register accessor: an alias for `Reg<SWD_WPROTECT_SPEC>`"]
+pub type SWD_WPROTECT = crate::Reg<swd_wprotect::SWD_WPROTECT_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_swd_wprotect;
-#[doc = "RTC_SW_CPU_STALL register accessor: an alias for `Reg<RTC_SW_CPU_STALL_SPEC>`"]
-pub type RTC_SW_CPU_STALL = crate::Reg<rtc_sw_cpu_stall::RTC_SW_CPU_STALL_SPEC>;
+pub mod swd_wprotect;
+#[doc = "SW_CPU_STALL register accessor: an alias for `Reg<SW_CPU_STALL_SPEC>`"]
+pub type SW_CPU_STALL = crate::Reg<sw_cpu_stall::SW_CPU_STALL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_sw_cpu_stall;
-#[doc = "RTC_STORE4 register accessor: an alias for `Reg<RTC_STORE4_SPEC>`"]
-pub type RTC_STORE4 = crate::Reg<rtc_store4::RTC_STORE4_SPEC>;
+pub mod sw_cpu_stall;
+#[doc = "STORE4 register accessor: an alias for `Reg<STORE4_SPEC>`"]
+pub type STORE4 = crate::Reg<store4::STORE4_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store4;
-#[doc = "RTC_STORE5 register accessor: an alias for `Reg<RTC_STORE5_SPEC>`"]
-pub type RTC_STORE5 = crate::Reg<rtc_store5::RTC_STORE5_SPEC>;
+pub mod store4;
+#[doc = "STORE5 register accessor: an alias for `Reg<STORE5_SPEC>`"]
+pub type STORE5 = crate::Reg<store5::STORE5_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store5;
-#[doc = "RTC_STORE6 register accessor: an alias for `Reg<RTC_STORE6_SPEC>`"]
-pub type RTC_STORE6 = crate::Reg<rtc_store6::RTC_STORE6_SPEC>;
+pub mod store5;
+#[doc = "STORE6 register accessor: an alias for `Reg<STORE6_SPEC>`"]
+pub type STORE6 = crate::Reg<store6::STORE6_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store6;
-#[doc = "RTC_STORE7 register accessor: an alias for `Reg<RTC_STORE7_SPEC>`"]
-pub type RTC_STORE7 = crate::Reg<rtc_store7::RTC_STORE7_SPEC>;
+pub mod store6;
+#[doc = "STORE7 register accessor: an alias for `Reg<STORE7_SPEC>`"]
+pub type STORE7 = crate::Reg<store7::STORE7_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_store7;
-#[doc = "RTC_LOW_POWER_ST register accessor: an alias for `Reg<RTC_LOW_POWER_ST_SPEC>`"]
-pub type RTC_LOW_POWER_ST = crate::Reg<rtc_low_power_st::RTC_LOW_POWER_ST_SPEC>;
+pub mod store7;
+#[doc = "LOW_POWER_ST register accessor: an alias for `Reg<LOW_POWER_ST_SPEC>`"]
+pub type LOW_POWER_ST = crate::Reg<low_power_st::LOW_POWER_ST_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_low_power_st;
-#[doc = "RTC_DIAG0 register accessor: an alias for `Reg<RTC_DIAG0_SPEC>`"]
-pub type RTC_DIAG0 = crate::Reg<rtc_diag0::RTC_DIAG0_SPEC>;
+pub mod low_power_st;
+#[doc = "DIAG0 register accessor: an alias for `Reg<DIAG0_SPEC>`"]
+pub type DIAG0 = crate::Reg<diag0::DIAG0_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_diag0;
-#[doc = "RTC_PAD_HOLD register accessor: an alias for `Reg<RTC_PAD_HOLD_SPEC>`"]
-pub type RTC_PAD_HOLD = crate::Reg<rtc_pad_hold::RTC_PAD_HOLD_SPEC>;
+pub mod diag0;
+#[doc = "PAD_HOLD register accessor: an alias for `Reg<PAD_HOLD_SPEC>`"]
+pub type PAD_HOLD = crate::Reg<pad_hold::PAD_HOLD_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_pad_hold;
+pub mod pad_hold;
 #[doc = "DIG_PAD_HOLD register accessor: an alias for `Reg<DIG_PAD_HOLD_SPEC>`"]
 pub type DIG_PAD_HOLD = crate::Reg<dig_pad_hold::DIG_PAD_HOLD_SPEC>;
 #[doc = "rtc configure register"]
 pub mod dig_pad_hold;
-#[doc = "RTC_BROWN_OUT register accessor: an alias for `Reg<RTC_BROWN_OUT_SPEC>`"]
-pub type RTC_BROWN_OUT = crate::Reg<rtc_brown_out::RTC_BROWN_OUT_SPEC>;
+#[doc = "BROWN_OUT register accessor: an alias for `Reg<BROWN_OUT_SPEC>`"]
+pub type BROWN_OUT = crate::Reg<brown_out::BROWN_OUT_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_brown_out;
-#[doc = "RTC_TIME_LOW1 register accessor: an alias for `Reg<RTC_TIME_LOW1_SPEC>`"]
-pub type RTC_TIME_LOW1 = crate::Reg<rtc_time_low1::RTC_TIME_LOW1_SPEC>;
+pub mod brown_out;
+#[doc = "TIME_LOW1 register accessor: an alias for `Reg<TIME_LOW1_SPEC>`"]
+pub type TIME_LOW1 = crate::Reg<time_low1::TIME_LOW1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_time_low1;
-#[doc = "RTC_TIME_HIGH1 register accessor: an alias for `Reg<RTC_TIME_HIGH1_SPEC>`"]
-pub type RTC_TIME_HIGH1 = crate::Reg<rtc_time_high1::RTC_TIME_HIGH1_SPEC>;
+pub mod time_low1;
+#[doc = "TIME_HIGH1 register accessor: an alias for `Reg<TIME_HIGH1_SPEC>`"]
+pub type TIME_HIGH1 = crate::Reg<time_high1::TIME_HIGH1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_time_high1;
-#[doc = "RTC_XTAL32K_CLK_FACTOR register accessor: an alias for `Reg<RTC_XTAL32K_CLK_FACTOR_SPEC>`"]
-pub type RTC_XTAL32K_CLK_FACTOR = crate::Reg<rtc_xtal32k_clk_factor::RTC_XTAL32K_CLK_FACTOR_SPEC>;
+pub mod time_high1;
+#[doc = "XTAL32K_CLK_FACTOR register accessor: an alias for `Reg<XTAL32K_CLK_FACTOR_SPEC>`"]
+pub type XTAL32K_CLK_FACTOR = crate::Reg<xtal32k_clk_factor::XTAL32K_CLK_FACTOR_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_xtal32k_clk_factor;
-#[doc = "RTC_XTAL32K_CONF register accessor: an alias for `Reg<RTC_XTAL32K_CONF_SPEC>`"]
-pub type RTC_XTAL32K_CONF = crate::Reg<rtc_xtal32k_conf::RTC_XTAL32K_CONF_SPEC>;
+pub mod xtal32k_clk_factor;
+#[doc = "XTAL32K_CONF register accessor: an alias for `Reg<XTAL32K_CONF_SPEC>`"]
+pub type XTAL32K_CONF = crate::Reg<xtal32k_conf::XTAL32K_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_xtal32k_conf;
-#[doc = "RTC_USB_CONF register accessor: an alias for `Reg<RTC_USB_CONF_SPEC>`"]
-pub type RTC_USB_CONF = crate::Reg<rtc_usb_conf::RTC_USB_CONF_SPEC>;
+pub mod xtal32k_conf;
+#[doc = "USB_CONF register accessor: an alias for `Reg<USB_CONF_SPEC>`"]
+pub type USB_CONF = crate::Reg<usb_conf::USB_CONF_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_usb_conf;
-#[doc = "RTC_SLP_REJECT_CAUSE register accessor: an alias for `Reg<RTC_SLP_REJECT_CAUSE_SPEC>`"]
-pub type RTC_SLP_REJECT_CAUSE = crate::Reg<rtc_slp_reject_cause::RTC_SLP_REJECT_CAUSE_SPEC>;
+pub mod usb_conf;
+#[doc = "SLP_REJECT_CAUSE register accessor: an alias for `Reg<SLP_REJECT_CAUSE_SPEC>`"]
+pub type SLP_REJECT_CAUSE = crate::Reg<slp_reject_cause::SLP_REJECT_CAUSE_SPEC>;
 #[doc = "RTC_CNTL_RTC_SLP_REJECT_CAUSE_REG"]
-pub mod rtc_slp_reject_cause;
-#[doc = "RTC_OPTION1 register accessor: an alias for `Reg<RTC_OPTION1_SPEC>`"]
-pub type RTC_OPTION1 = crate::Reg<rtc_option1::RTC_OPTION1_SPEC>;
+pub mod slp_reject_cause;
+#[doc = "OPTION1 register accessor: an alias for `Reg<OPTION1_SPEC>`"]
+pub type OPTION1 = crate::Reg<option1::OPTION1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_option1;
-#[doc = "RTC_SLP_WAKEUP_CAUSE register accessor: an alias for `Reg<RTC_SLP_WAKEUP_CAUSE_SPEC>`"]
-pub type RTC_SLP_WAKEUP_CAUSE = crate::Reg<rtc_slp_wakeup_cause::RTC_SLP_WAKEUP_CAUSE_SPEC>;
+pub mod option1;
+#[doc = "SLP_WAKEUP_CAUSE register accessor: an alias for `Reg<SLP_WAKEUP_CAUSE_SPEC>`"]
+pub type SLP_WAKEUP_CAUSE = crate::Reg<slp_wakeup_cause::SLP_WAKEUP_CAUSE_SPEC>;
 #[doc = "RTC_CNTL_RTC_SLP_WAKEUP_CAUSE_REG"]
-pub mod rtc_slp_wakeup_cause;
-#[doc = "RTC_ULP_CP_TIMER_1 register accessor: an alias for `Reg<RTC_ULP_CP_TIMER_1_SPEC>`"]
-pub type RTC_ULP_CP_TIMER_1 = crate::Reg<rtc_ulp_cp_timer_1::RTC_ULP_CP_TIMER_1_SPEC>;
+pub mod slp_wakeup_cause;
+#[doc = "ULP_CP_TIMER_1 register accessor: an alias for `Reg<ULP_CP_TIMER_1_SPEC>`"]
+pub type ULP_CP_TIMER_1 = crate::Reg<ulp_cp_timer_1::ULP_CP_TIMER_1_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_ulp_cp_timer_1;
+pub mod ulp_cp_timer_1;
 #[doc = "INT_ENA_RTC_W1TS register accessor: an alias for `Reg<INT_ENA_RTC_W1TS_SPEC>`"]
 pub type INT_ENA_RTC_W1TS = crate::Reg<int_ena_rtc_w1ts::INT_ENA_RTC_W1TS_SPEC>;
 #[doc = "rtc configure register"]
@@ -417,39 +417,38 @@ pub mod int_ena_rtc_w1ts;
 pub type INT_ENA_RTC_W1TC = crate::Reg<int_ena_rtc_w1tc::INT_ENA_RTC_W1TC_SPEC>;
 #[doc = "rtc configure register"]
 pub mod int_ena_rtc_w1tc;
-#[doc = "RTC_CNTL_RETENTION_CTRL register accessor: an alias for `Reg<RTC_CNTL_RETENTION_CTRL_SPEC>`"]
-pub type RTC_CNTL_RETENTION_CTRL =
-    crate::Reg<rtc_cntl_retention_ctrl::RTC_CNTL_RETENTION_CTRL_SPEC>;
+#[doc = "CNTL_RETENTION_CTRL register accessor: an alias for `Reg<CNTL_RETENTION_CTRL_SPEC>`"]
+pub type CNTL_RETENTION_CTRL = crate::Reg<cntl_retention_ctrl::CNTL_RETENTION_CTRL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_retention_ctrl;
-#[doc = "RTC_FIB_SEL register accessor: an alias for `Reg<RTC_FIB_SEL_SPEC>`"]
-pub type RTC_FIB_SEL = crate::Reg<rtc_fib_sel::RTC_FIB_SEL_SPEC>;
+pub mod cntl_retention_ctrl;
+#[doc = "FIB_SEL register accessor: an alias for `Reg<FIB_SEL_SPEC>`"]
+pub type FIB_SEL = crate::Reg<fib_sel::FIB_SEL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_fib_sel;
-#[doc = "RTC_CNTL_GPIO_WAKEUP register accessor: an alias for `Reg<RTC_CNTL_GPIO_WAKEUP_SPEC>`"]
-pub type RTC_CNTL_GPIO_WAKEUP = crate::Reg<rtc_cntl_gpio_wakeup::RTC_CNTL_GPIO_WAKEUP_SPEC>;
+pub mod fib_sel;
+#[doc = "CNTL_GPIO_WAKEUP register accessor: an alias for `Reg<CNTL_GPIO_WAKEUP_SPEC>`"]
+pub type CNTL_GPIO_WAKEUP = crate::Reg<cntl_gpio_wakeup::CNTL_GPIO_WAKEUP_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_gpio_wakeup;
-#[doc = "RTC_CNTL_DBG_SEL register accessor: an alias for `Reg<RTC_CNTL_DBG_SEL_SPEC>`"]
-pub type RTC_CNTL_DBG_SEL = crate::Reg<rtc_cntl_dbg_sel::RTC_CNTL_DBG_SEL_SPEC>;
+pub mod cntl_gpio_wakeup;
+#[doc = "CNTL_DBG_SEL register accessor: an alias for `Reg<CNTL_DBG_SEL_SPEC>`"]
+pub type CNTL_DBG_SEL = crate::Reg<cntl_dbg_sel::CNTL_DBG_SEL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_dbg_sel;
-#[doc = "RTC_CNTL_DBG_MAP register accessor: an alias for `Reg<RTC_CNTL_DBG_MAP_SPEC>`"]
-pub type RTC_CNTL_DBG_MAP = crate::Reg<rtc_cntl_dbg_map::RTC_CNTL_DBG_MAP_SPEC>;
+pub mod cntl_dbg_sel;
+#[doc = "CNTL_DBG_MAP register accessor: an alias for `Reg<CNTL_DBG_MAP_SPEC>`"]
+pub type CNTL_DBG_MAP = crate::Reg<cntl_dbg_map::CNTL_DBG_MAP_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_dbg_map;
-#[doc = "RTC_CNTL_SENSOR_CTRL register accessor: an alias for `Reg<RTC_CNTL_SENSOR_CTRL_SPEC>`"]
-pub type RTC_CNTL_SENSOR_CTRL = crate::Reg<rtc_cntl_sensor_ctrl::RTC_CNTL_SENSOR_CTRL_SPEC>;
+pub mod cntl_dbg_map;
+#[doc = "CNTL_SENSOR_CTRL register accessor: an alias for `Reg<CNTL_SENSOR_CTRL_SPEC>`"]
+pub type CNTL_SENSOR_CTRL = crate::Reg<cntl_sensor_ctrl::CNTL_SENSOR_CTRL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_sensor_ctrl;
-#[doc = "RTC_CNTL_DBG_SAR_SEL register accessor: an alias for `Reg<RTC_CNTL_DBG_SAR_SEL_SPEC>`"]
-pub type RTC_CNTL_DBG_SAR_SEL = crate::Reg<rtc_cntl_dbg_sar_sel::RTC_CNTL_DBG_SAR_SEL_SPEC>;
+pub mod cntl_sensor_ctrl;
+#[doc = "CNTL_DBG_SAR_SEL register accessor: an alias for `Reg<CNTL_DBG_SAR_SEL_SPEC>`"]
+pub type CNTL_DBG_SAR_SEL = crate::Reg<cntl_dbg_sar_sel::CNTL_DBG_SAR_SEL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_dbg_sar_sel;
-#[doc = "RTC_CNTL_PG_CTRL register accessor: an alias for `Reg<RTC_CNTL_PG_CTRL_SPEC>`"]
-pub type RTC_CNTL_PG_CTRL = crate::Reg<rtc_cntl_pg_ctrl::RTC_CNTL_PG_CTRL_SPEC>;
+pub mod cntl_dbg_sar_sel;
+#[doc = "CNTL_PG_CTRL register accessor: an alias for `Reg<CNTL_PG_CTRL_SPEC>`"]
+pub type CNTL_PG_CTRL = crate::Reg<cntl_pg_ctrl::CNTL_PG_CTRL_SPEC>;
 #[doc = "rtc configure register"]
-pub mod rtc_cntl_pg_ctrl;
+pub mod cntl_pg_ctrl;
 #[doc = "DATE register accessor: an alias for `Reg<DATE_SPEC>`"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "rtc configure register"]

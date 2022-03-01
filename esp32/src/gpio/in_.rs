@@ -34,7 +34,7 @@ impl From<crate::W<IN_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `data_next` reader - GPIO0~31 input value"]
+#[doc = "Field `DATA_NEXT` reader - GPIO0~31 input value"]
 pub struct DATA_NEXT_R(crate::FieldReader<u32, u32>);
 impl DATA_NEXT_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for DATA_NEXT_R {
         &self.0
     }
 }
-#[doc = "Field `data_next` writer - GPIO0~31 input value"]
+#[doc = "Field `DATA_NEXT` writer - GPIO0~31 input value"]
 pub struct DATA_NEXT_W<'a> {
     w: &'a mut W,
 }

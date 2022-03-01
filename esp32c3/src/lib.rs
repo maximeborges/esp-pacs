@@ -33,14 +33,11 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn I2C_MASTER();
-    fn APB_CTRL();
     fn UHCI0();
     fn GPIO();
     fn GPIO_NMI();
-    fn SPI1();
     fn SPI2();
-    fn I2S1();
+    fn I2S();
     fn UART0();
     fn UART1();
     fn LEDC();
@@ -49,16 +46,13 @@ extern "C" {
     fn RTC_CORE();
     fn RMT();
     fn I2C_EXT0();
-    fn TIMER1();
-    fn TIMER2();
     fn TG0_T0_LEVEL();
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
     fn TG1_WDT_LEVEL();
-    fn SYSTIMER_TARGET0_EDGE();
-    fn SYSTIMER_TARGET1_EDGE();
-    fn SYSTIMER_TARGET2_EDGE();
-    fn SPI_MEM_REJECT_CACHE();
+    fn SYSTIMER_TARGET0();
+    fn SYSTIMER_TARGET1();
+    fn SYSTIMER_TARGET2();
     fn APB_ADC();
     fn DMA_CH0();
     fn DMA_CH1();
@@ -67,11 +61,6 @@ extern "C" {
     fn AES();
     fn SHA();
     fn ASSIST_DEBUG();
-    fn DMA_APBPERI_PMS();
-    fn CORE0_IRAM0_PMS();
-    fn CORE0_DRAM0_PMS();
-    fn CORE0_PIF_PMS();
-    fn CORE0_PIF_PMS_SIZE();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -81,7 +70,7 @@ pub union Vector {
 #[cfg(feature = "rt")]
 #[doc(hidden)]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 60] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -93,18 +82,16 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 60] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector {
-        _handler: I2C_MASTER,
-    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: APB_CTRL },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector { _handler: UHCI0 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _handler: SPI1 },
+    Vector { _reserved: 0 },
     Vector { _handler: SPI2 },
-    Vector { _handler: I2S1 },
+    Vector { _handler: I2S },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: LEDC },
@@ -116,8 +103,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 60] = [
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
-    Vector { _handler: TIMER1 },
-    Vector { _handler: TIMER2 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -132,17 +119,15 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 60] = [
     },
     Vector { _reserved: 0 },
     Vector {
-        _handler: SYSTIMER_TARGET0_EDGE,
+        _handler: SYSTIMER_TARGET0,
     },
     Vector {
-        _handler: SYSTIMER_TARGET1_EDGE,
+        _handler: SYSTIMER_TARGET1,
     },
     Vector {
-        _handler: SYSTIMER_TARGET2_EDGE,
+        _handler: SYSTIMER_TARGET2,
     },
-    Vector {
-        _handler: SPI_MEM_REJECT_CACHE,
-    },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: APB_ADC },
@@ -158,21 +143,6 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 60] = [
     Vector { _reserved: 0 },
     Vector {
         _handler: ASSIST_DEBUG,
-    },
-    Vector {
-        _handler: DMA_APBPERI_PMS,
-    },
-    Vector {
-        _handler: CORE0_IRAM0_PMS,
-    },
-    Vector {
-        _handler: CORE0_DRAM0_PMS,
-    },
-    Vector {
-        _handler: CORE0_PIF_PMS,
-    },
-    Vector {
-        _handler: CORE0_PIF_PMS_SIZE,
     },
 ];
 #[doc(hidden)]

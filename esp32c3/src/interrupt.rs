@@ -2,22 +2,16 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = "11 - I2C_MASTER"]
-    I2C_MASTER = 11,
-    #[doc = "14 - APB_CTRL"]
-    APB_CTRL = 14,
     #[doc = "15 - UHCI0"]
     UHCI0 = 15,
     #[doc = "16 - GPIO"]
     GPIO = 16,
     #[doc = "17 - GPIO_NMI"]
     GPIO_NMI = 17,
-    #[doc = "18 - SPI1"]
-    SPI1 = 18,
     #[doc = "19 - SPI2"]
     SPI2 = 19,
-    #[doc = "20 - I2S1"]
-    I2S1 = 20,
+    #[doc = "20 - I2S"]
+    I2S = 20,
     #[doc = "21 - UART0"]
     UART0 = 21,
     #[doc = "22 - UART1"]
@@ -34,10 +28,6 @@ pub enum Interrupt {
     RMT = 28,
     #[doc = "29 - I2C_EXT0"]
     I2C_EXT0 = 29,
-    #[doc = "30 - TIMER1"]
-    TIMER1 = 30,
-    #[doc = "31 - TIMER2"]
-    TIMER2 = 31,
     #[doc = "32 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 32,
     #[doc = "33 - TG0_WDT_LEVEL"]
@@ -46,14 +36,12 @@ pub enum Interrupt {
     TG1_T0_LEVEL = 34,
     #[doc = "35 - TG1_WDT_LEVEL"]
     TG1_WDT_LEVEL = 35,
-    #[doc = "37 - SYSTIMER_TARGET0_EDGE"]
-    SYSTIMER_TARGET0_EDGE = 37,
-    #[doc = "38 - SYSTIMER_TARGET1_EDGE"]
-    SYSTIMER_TARGET1_EDGE = 38,
-    #[doc = "39 - SYSTIMER_TARGET2_EDGE"]
-    SYSTIMER_TARGET2_EDGE = 39,
-    #[doc = "40 - SPI_MEM_REJECT_CACHE"]
-    SPI_MEM_REJECT_CACHE = 40,
+    #[doc = "37 - SYSTIMER_TARGET0"]
+    SYSTIMER_TARGET0 = 37,
+    #[doc = "38 - SYSTIMER_TARGET1"]
+    SYSTIMER_TARGET1 = 38,
+    #[doc = "39 - SYSTIMER_TARGET2"]
+    SYSTIMER_TARGET2 = 39,
     #[doc = "43 - APB_ADC"]
     APB_ADC = 43,
     #[doc = "44 - DMA_CH0"]
@@ -70,16 +58,6 @@ pub enum Interrupt {
     SHA = 49,
     #[doc = "54 - ASSIST_DEBUG"]
     ASSIST_DEBUG = 54,
-    #[doc = "55 - DMA_APBPERI_PMS"]
-    DMA_APBPERI_PMS = 55,
-    #[doc = "56 - CORE0_IRAM0_PMS"]
-    CORE0_IRAM0_PMS = 56,
-    #[doc = "57 - CORE0_DRAM0_PMS"]
-    CORE0_DRAM0_PMS = 57,
-    #[doc = "58 - CORE0_PIF_PMS"]
-    CORE0_PIF_PMS = 58,
-    #[doc = "59 - CORE0_PIF_PMS_SIZE"]
-    CORE0_PIF_PMS_SIZE = 59,
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
@@ -89,14 +67,11 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
-            11 => Ok(Interrupt::I2C_MASTER),
-            14 => Ok(Interrupt::APB_CTRL),
             15 => Ok(Interrupt::UHCI0),
             16 => Ok(Interrupt::GPIO),
             17 => Ok(Interrupt::GPIO_NMI),
-            18 => Ok(Interrupt::SPI1),
             19 => Ok(Interrupt::SPI2),
-            20 => Ok(Interrupt::I2S1),
+            20 => Ok(Interrupt::I2S),
             21 => Ok(Interrupt::UART0),
             22 => Ok(Interrupt::UART1),
             23 => Ok(Interrupt::LEDC),
@@ -105,16 +80,13 @@ impl Interrupt {
             27 => Ok(Interrupt::RTC_CORE),
             28 => Ok(Interrupt::RMT),
             29 => Ok(Interrupt::I2C_EXT0),
-            30 => Ok(Interrupt::TIMER1),
-            31 => Ok(Interrupt::TIMER2),
             32 => Ok(Interrupt::TG0_T0_LEVEL),
             33 => Ok(Interrupt::TG0_WDT_LEVEL),
             34 => Ok(Interrupt::TG1_T0_LEVEL),
             35 => Ok(Interrupt::TG1_WDT_LEVEL),
-            37 => Ok(Interrupt::SYSTIMER_TARGET0_EDGE),
-            38 => Ok(Interrupt::SYSTIMER_TARGET1_EDGE),
-            39 => Ok(Interrupt::SYSTIMER_TARGET2_EDGE),
-            40 => Ok(Interrupt::SPI_MEM_REJECT_CACHE),
+            37 => Ok(Interrupt::SYSTIMER_TARGET0),
+            38 => Ok(Interrupt::SYSTIMER_TARGET1),
+            39 => Ok(Interrupt::SYSTIMER_TARGET2),
             43 => Ok(Interrupt::APB_ADC),
             44 => Ok(Interrupt::DMA_CH0),
             45 => Ok(Interrupt::DMA_CH1),
@@ -123,11 +95,6 @@ impl Interrupt {
             48 => Ok(Interrupt::AES),
             49 => Ok(Interrupt::SHA),
             54 => Ok(Interrupt::ASSIST_DEBUG),
-            55 => Ok(Interrupt::DMA_APBPERI_PMS),
-            56 => Ok(Interrupt::CORE0_IRAM0_PMS),
-            57 => Ok(Interrupt::CORE0_DRAM0_PMS),
-            58 => Ok(Interrupt::CORE0_PIF_PMS),
-            59 => Ok(Interrupt::CORE0_PIF_PMS_SIZE),
             _ => Err(TryFromInterruptError(())),
         }
     }

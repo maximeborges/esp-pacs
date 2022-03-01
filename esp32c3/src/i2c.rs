@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     #[doc = "0x18 - I2C_FIFO_CONF_REG"]
     pub fifo_conf: crate::Reg<fifo_conf::FIFO_CONF_SPEC>,
     #[doc = "0x1c - I2C_FIFO_DATA_REG"]
-    pub fifo_data: crate::Reg<fifo_data::FIFO_DATA_SPEC>,
+    pub data: crate::Reg<data::DATA_SPEC>,
     #[doc = "0x20 - I2C_INT_RAW_REG"]
     pub int_raw: crate::Reg<int_raw::INT_RAW_SPEC>,
     #[doc = "0x24 - I2C_INT_CLR_REG"]
@@ -92,10 +92,10 @@ pub mod fifo_st;
 pub type FIFO_CONF = crate::Reg<fifo_conf::FIFO_CONF_SPEC>;
 #[doc = "I2C_FIFO_CONF_REG"]
 pub mod fifo_conf;
-#[doc = "FIFO_DATA register accessor: an alias for `Reg<FIFO_DATA_SPEC>`"]
-pub type FIFO_DATA = crate::Reg<fifo_data::FIFO_DATA_SPEC>;
+#[doc = "DATA register accessor: an alias for `Reg<DATA_SPEC>`"]
+pub type DATA = crate::Reg<data::DATA_SPEC>;
 #[doc = "I2C_FIFO_DATA_REG"]
-pub mod fifo_data;
+pub mod data;
 #[doc = "INT_RAW register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "I2C_INT_RAW_REG"]

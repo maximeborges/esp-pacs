@@ -33,12 +33,10 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn UHCI1();
+    fn I2C_MST();
     fn UHCI0();
     fn GPIO();
     fn GPIO_NMI();
-    fn SPI0();
-    fn SPI1();
     fn I2S0();
     fn I2S1();
     fn UART0();
@@ -52,16 +50,41 @@ extern "C" {
     fn PCNT();
     fn I2C_EXT0();
     fn I2C_EXT1();
-    fn SPI1_DMA();
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
     fn TG1_T1_LEVEL();
     fn TG1_WDT_LEVEL();
-    fn TG0_WDT_EDGE();
-    fn TG1_WDT_EDGE();
+    fn APB_ADC();
+    fn DMA_IN_CH0();
+    fn DMA_IN_CH1();
+    fn DMA_IN_CH2();
+    fn DMA_IN_CH3();
+    fn DMA_IN_CH4();
+    fn DMA_OUT_CH0();
+    fn DMA_OUT_CH1();
+    fn DMA_OUT_CH2();
+    fn DMA_OUT_CH3();
+    fn DMA_OUT_CH4();
     fn RSA();
+    fn AES();
+    fn SHA();
+    fn ASSIST_DEBUG();
+    fn APB_PMS_MONITOR_VIOLATE();
+    fn CORE_0_IRAM0_PMS_MONITOR_VIOLATE();
+    fn CORE_0_DRAM0_PMS_MONITOR_VIOLATE();
+    fn CORE_0_PIF_PMS_MONITOR_VIOLATE();
+    fn CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE();
+    fn CORE_1_IRAM0_PMS_MONITOR_VIOLATE();
+    fn CORE_1_DRAM0_PMS_MONITOR_VIOLATE();
+    fn CORE_1_PIF_PMS_MONITOR_VIOLATE();
+    fn CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE();
+    fn CACHE_CORE0_ACS();
+    fn CACHE_CORE1_ACS();
+    fn USB_DEVICE();
+    fn PERI_BACKUP();
+    fn DMA_EXTMEM_REJECT();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -70,7 +93,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-pub static __INTERRUPTS: [Vector; 77] = [
+pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -82,17 +105,17 @@ pub static __INTERRUPTS: [Vector; 77] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
+    Vector { _handler: I2C_MST },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: UHCI1 },
     Vector { _reserved: 0 },
     Vector { _handler: UHCI0 },
+    Vector { _reserved: 0 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: SPI0 },
-    Vector { _handler: SPI1 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -115,7 +138,7 @@ pub static __INTERRUPTS: [Vector; 77] = [
     Vector { _handler: PCNT },
     Vector { _handler: I2C_EXT0 },
     Vector { _handler: I2C_EXT1 },
-    Vector { _handler: SPI1_DMA },
+    Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -143,44 +166,108 @@ pub static __INTERRUPTS: [Vector; 77] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: APB_ADC },
     Vector {
-        _handler: TG0_WDT_EDGE,
+        _handler: DMA_IN_CH0,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
     Vector {
-        _handler: TG1_WDT_EDGE,
+        _handler: DMA_IN_CH1,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: DMA_IN_CH2,
+    },
+    Vector {
+        _handler: DMA_IN_CH3,
+    },
+    Vector {
+        _handler: DMA_IN_CH4,
+    },
+    Vector {
+        _handler: DMA_OUT_CH0,
+    },
+    Vector {
+        _handler: DMA_OUT_CH1,
+    },
+    Vector {
+        _handler: DMA_OUT_CH2,
+    },
+    Vector {
+        _handler: DMA_OUT_CH3,
+    },
+    Vector {
+        _handler: DMA_OUT_CH4,
+    },
     Vector { _handler: RSA },
+    Vector { _handler: AES },
+    Vector { _handler: SHA },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: ASSIST_DEBUG,
+    },
+    Vector {
+        _handler: APB_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_0_IRAM0_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_0_DRAM0_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_0_PIF_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE,
+    },
+    Vector {
+        _handler: CORE_1_IRAM0_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_1_DRAM0_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_1_PIF_PMS_MONITOR_VIOLATE,
+    },
+    Vector {
+        _handler: CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE,
+    },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: CACHE_CORE0_ACS,
+    },
+    Vector {
+        _handler: CACHE_CORE1_ACS,
+    },
+    Vector {
+        _handler: USB_DEVICE,
+    },
+    Vector {
+        _handler: PERI_BACKUP,
+    },
+    Vector {
+        _handler: DMA_EXTMEM_REJECT,
+    },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = "13 - UHCI1"]
-    UHCI1 = 13,
-    #[doc = "15 - UHCI0"]
-    UHCI0 = 15,
+    #[doc = "11 - I2C_MST"]
+    I2C_MST = 11,
+    #[doc = "14 - UHCI0"]
+    UHCI0 = 14,
     #[doc = "16 - GPIO"]
     GPIO = 16,
     #[doc = "17 - GPIO_NMI"]
     GPIO_NMI = 17,
-    #[doc = "20 - SPI0"]
-    SPI0 = 20,
-    #[doc = "21 - SPI1"]
-    SPI1 = 21,
     #[doc = "25 - I2S0"]
     I2S0 = 25,
     #[doc = "26 - I2S1"]
@@ -207,8 +294,6 @@ pub enum Interrupt {
     I2C_EXT0 = 42,
     #[doc = "43 - I2C_EXT1"]
     I2C_EXT1 = 43,
-    #[doc = "44 - SPI1_DMA"]
-    SPI1_DMA = 44,
     #[doc = "50 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 50,
     #[doc = "51 - TG0_T1_LEVEL"]
@@ -221,12 +306,64 @@ pub enum Interrupt {
     TG1_T1_LEVEL = 54,
     #[doc = "55 - TG1_WDT_LEVEL"]
     TG1_WDT_LEVEL = 55,
-    #[doc = "60 - TG0_WDT_EDGE"]
-    TG0_WDT_EDGE = 60,
-    #[doc = "64 - TG1_WDT_EDGE"]
-    TG1_WDT_EDGE = 64,
+    #[doc = "65 - APB_ADC"]
+    APB_ADC = 65,
+    #[doc = "66 - DMA_IN_CH0"]
+    DMA_IN_CH0 = 66,
+    #[doc = "67 - DMA_IN_CH1"]
+    DMA_IN_CH1 = 67,
+    #[doc = "68 - DMA_IN_CH2"]
+    DMA_IN_CH2 = 68,
+    #[doc = "69 - DMA_IN_CH3"]
+    DMA_IN_CH3 = 69,
+    #[doc = "70 - DMA_IN_CH4"]
+    DMA_IN_CH4 = 70,
+    #[doc = "71 - DMA_OUT_CH0"]
+    DMA_OUT_CH0 = 71,
+    #[doc = "72 - DMA_OUT_CH1"]
+    DMA_OUT_CH1 = 72,
+    #[doc = "73 - DMA_OUT_CH2"]
+    DMA_OUT_CH2 = 73,
+    #[doc = "74 - DMA_OUT_CH3"]
+    DMA_OUT_CH3 = 74,
+    #[doc = "75 - DMA_OUT_CH4"]
+    DMA_OUT_CH4 = 75,
     #[doc = "76 - RSA"]
     RSA = 76,
+    #[doc = "77 - AES"]
+    AES = 77,
+    #[doc = "78 - SHA"]
+    SHA = 78,
+    #[doc = "83 - ASSIST_DEBUG"]
+    ASSIST_DEBUG = 83,
+    #[doc = "84 - APB_PMS_MONITOR_VIOLATE"]
+    APB_PMS_MONITOR_VIOLATE = 84,
+    #[doc = "85 - CORE_0_IRAM0_PMS_MONITOR_VIOLATE"]
+    CORE_0_IRAM0_PMS_MONITOR_VIOLATE = 85,
+    #[doc = "86 - CORE_0_DRAM0_PMS_MONITOR_VIOLATE"]
+    CORE_0_DRAM0_PMS_MONITOR_VIOLATE = 86,
+    #[doc = "87 - CORE_0_PIF_PMS_MONITOR_VIOLATE"]
+    CORE_0_PIF_PMS_MONITOR_VIOLATE = 87,
+    #[doc = "88 - CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE"]
+    CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE = 88,
+    #[doc = "89 - CORE_1_IRAM0_PMS_MONITOR_VIOLATE"]
+    CORE_1_IRAM0_PMS_MONITOR_VIOLATE = 89,
+    #[doc = "90 - CORE_1_DRAM0_PMS_MONITOR_VIOLATE"]
+    CORE_1_DRAM0_PMS_MONITOR_VIOLATE = 90,
+    #[doc = "91 - CORE_1_PIF_PMS_MONITOR_VIOLATE"]
+    CORE_1_PIF_PMS_MONITOR_VIOLATE = 91,
+    #[doc = "92 - CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE"]
+    CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE = 92,
+    #[doc = "94 - CACHE_CORE0_ACS"]
+    CACHE_CORE0_ACS = 94,
+    #[doc = "95 - CACHE_CORE1_ACS"]
+    CACHE_CORE1_ACS = 95,
+    #[doc = "96 - USB_DEVICE"]
+    USB_DEVICE = 96,
+    #[doc = "97 - PERI_BACKUP"]
+    PERI_BACKUP = 97,
+    #[doc = "98 - DMA_EXTMEM_REJECT"]
+    DMA_EXTMEM_REJECT = 98,
 }
 unsafe impl xtensa_lx::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
@@ -242,12 +379,10 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u16) -> Result<Self, TryFromInterruptError> {
         match value {
-            13 => Ok(Interrupt::UHCI1),
-            15 => Ok(Interrupt::UHCI0),
+            11 => Ok(Interrupt::I2C_MST),
+            14 => Ok(Interrupt::UHCI0),
             16 => Ok(Interrupt::GPIO),
             17 => Ok(Interrupt::GPIO_NMI),
-            20 => Ok(Interrupt::SPI0),
-            21 => Ok(Interrupt::SPI1),
             25 => Ok(Interrupt::I2S0),
             26 => Ok(Interrupt::I2S1),
             27 => Ok(Interrupt::UART0),
@@ -261,16 +396,41 @@ impl Interrupt {
             41 => Ok(Interrupt::PCNT),
             42 => Ok(Interrupt::I2C_EXT0),
             43 => Ok(Interrupt::I2C_EXT1),
-            44 => Ok(Interrupt::SPI1_DMA),
             50 => Ok(Interrupt::TG0_T0_LEVEL),
             51 => Ok(Interrupt::TG0_T1_LEVEL),
             52 => Ok(Interrupt::TG0_WDT_LEVEL),
             53 => Ok(Interrupt::TG1_T0_LEVEL),
             54 => Ok(Interrupt::TG1_T1_LEVEL),
             55 => Ok(Interrupt::TG1_WDT_LEVEL),
-            60 => Ok(Interrupt::TG0_WDT_EDGE),
-            64 => Ok(Interrupt::TG1_WDT_EDGE),
+            65 => Ok(Interrupt::APB_ADC),
+            66 => Ok(Interrupt::DMA_IN_CH0),
+            67 => Ok(Interrupt::DMA_IN_CH1),
+            68 => Ok(Interrupt::DMA_IN_CH2),
+            69 => Ok(Interrupt::DMA_IN_CH3),
+            70 => Ok(Interrupt::DMA_IN_CH4),
+            71 => Ok(Interrupt::DMA_OUT_CH0),
+            72 => Ok(Interrupt::DMA_OUT_CH1),
+            73 => Ok(Interrupt::DMA_OUT_CH2),
+            74 => Ok(Interrupt::DMA_OUT_CH3),
+            75 => Ok(Interrupt::DMA_OUT_CH4),
             76 => Ok(Interrupt::RSA),
+            77 => Ok(Interrupt::AES),
+            78 => Ok(Interrupt::SHA),
+            83 => Ok(Interrupt::ASSIST_DEBUG),
+            84 => Ok(Interrupt::APB_PMS_MONITOR_VIOLATE),
+            85 => Ok(Interrupt::CORE_0_IRAM0_PMS_MONITOR_VIOLATE),
+            86 => Ok(Interrupt::CORE_0_DRAM0_PMS_MONITOR_VIOLATE),
+            87 => Ok(Interrupt::CORE_0_PIF_PMS_MONITOR_VIOLATE),
+            88 => Ok(Interrupt::CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE),
+            89 => Ok(Interrupt::CORE_1_IRAM0_PMS_MONITOR_VIOLATE),
+            90 => Ok(Interrupt::CORE_1_DRAM0_PMS_MONITOR_VIOLATE),
+            91 => Ok(Interrupt::CORE_1_PIF_PMS_MONITOR_VIOLATE),
+            92 => Ok(Interrupt::CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE),
+            94 => Ok(Interrupt::CACHE_CORE0_ACS),
+            95 => Ok(Interrupt::CACHE_CORE1_ACS),
+            96 => Ok(Interrupt::USB_DEVICE),
+            97 => Ok(Interrupt::PERI_BACKUP),
+            98 => Ok(Interrupt::DMA_EXTMEM_REJECT),
             _ => Err(TryFromInterruptError(())),
         }
     }

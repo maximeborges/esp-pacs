@@ -293,26 +293,26 @@ impl<'a> SPI2_CLK_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `EXT0_CLK_EN` reader - reg_ext0_clk_en"]
-pub struct EXT0_CLK_EN_R(crate::FieldReader<bool, bool>);
-impl EXT0_CLK_EN_R {
+#[doc = "Field `I2C_EXT0_CLK_EN` reader - reg_ext0_clk_en"]
+pub struct I2C_EXT0_CLK_EN_R(crate::FieldReader<bool, bool>);
+impl I2C_EXT0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        EXT0_CLK_EN_R(crate::FieldReader::new(bits))
+        I2C_EXT0_CLK_EN_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for EXT0_CLK_EN_R {
+impl core::ops::Deref for I2C_EXT0_CLK_EN_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `EXT0_CLK_EN` writer - reg_ext0_clk_en"]
-pub struct EXT0_CLK_EN_W<'a> {
+#[doc = "Field `I2C_EXT0_CLK_EN` writer - reg_ext0_clk_en"]
+pub struct I2C_EXT0_CLK_EN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> EXT0_CLK_EN_W<'a> {
+impl<'a> I2C_EXT0_CLK_EN_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -1256,8 +1256,8 @@ impl R {
     }
     #[doc = "Bit 7 - reg_ext0_clk_en"]
     #[inline(always)]
-    pub fn ext0_clk_en(&self) -> EXT0_CLK_EN_R {
-        EXT0_CLK_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+    pub fn i2c_ext0_clk_en(&self) -> I2C_EXT0_CLK_EN_R {
+        I2C_EXT0_CLK_EN_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 8 - reg_uhci0_clk_en"]
     #[inline(always)]
@@ -1418,8 +1418,8 @@ impl W {
     }
     #[doc = "Bit 7 - reg_ext0_clk_en"]
     #[inline(always)]
-    pub fn ext0_clk_en(&mut self) -> EXT0_CLK_EN_W {
-        EXT0_CLK_EN_W { w: self }
+    pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W {
+        I2C_EXT0_CLK_EN_W { w: self }
     }
     #[doc = "Bit 8 - reg_uhci0_clk_en"]
     #[inline(always)]
