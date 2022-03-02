@@ -457,33 +457,33 @@ impl core::fmt::Debug for HMAC {
 #[doc = "HMAC (Hash-based Message Authentication Code) Accelerator"]
 pub mod hmac;
 #[doc = "I2C (Inter-Integrated Circuit) Controller"]
-pub struct I2C {
+pub struct I2C0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for I2C {}
-impl I2C {
+unsafe impl Send for I2C0 {}
+impl I2C0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i2c::RegisterBlock = 0x6001_3000 as *const _;
+    pub const PTR: *const i2c0::RegisterBlock = 0x6001_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i2c::RegisterBlock {
+    pub const fn ptr() -> *const i2c0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for I2C {
-    type Target = i2c::RegisterBlock;
+impl Deref for I2C0 {
+    type Target = i2c0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for I2C {
+impl core::fmt::Debug for I2C0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C").finish()
+        f.debug_struct("I2C0").finish()
     }
 }
 #[doc = "I2C (Inter-Integrated Circuit) Controller"]
-pub mod i2c;
+pub mod i2c0;
 #[doc = "I2S (Inter-IC Sound) Controller"]
 pub struct I2S {
     _marker: PhantomData<*const ()>,
@@ -1127,8 +1127,8 @@ pub struct Peripherals {
     pub GPIOSD: GPIOSD,
     #[doc = "HMAC"]
     pub HMAC: HMAC,
-    #[doc = "I2C"]
-    pub I2C: I2C,
+    #[doc = "I2C0"]
+    pub I2C0: I2C0,
     #[doc = "I2S"]
     pub I2S: I2S,
     #[doc = "INTERRUPT_CORE0"]
@@ -1224,7 +1224,7 @@ impl Peripherals {
             HMAC: HMAC {
                 _marker: PhantomData,
             },
-            I2C: I2C {
+            I2C0: I2C0 {
                 _marker: PhantomData,
             },
             I2S: I2S {
