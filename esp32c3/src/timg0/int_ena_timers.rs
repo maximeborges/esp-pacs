@@ -1,22 +1,22 @@
-#[doc = "Register `INT_ENA_TIMG` reader"]
-pub struct R(crate::R<INT_ENA_TIMG_SPEC>);
+#[doc = "Register `INT_ENA_TIMERS` reader"]
+pub struct R(crate::R<INT_ENA_TIMERS_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<INT_ENA_TIMG_SPEC>;
+    type Target = crate::R<INT_ENA_TIMERS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<INT_ENA_TIMG_SPEC>> for R {
+impl From<crate::R<INT_ENA_TIMERS_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<INT_ENA_TIMG_SPEC>) -> Self {
+    fn from(reader: crate::R<INT_ENA_TIMERS_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `INT_ENA_TIMG` writer"]
-pub struct W(crate::W<INT_ENA_TIMG_SPEC>);
+#[doc = "Register `INT_ENA_TIMERS` writer"]
+pub struct W(crate::W<INT_ENA_TIMERS_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<INT_ENA_TIMG_SPEC>;
+    type Target = crate::W<INT_ENA_TIMERS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<INT_ENA_TIMG_SPEC>> for W {
+impl From<crate::W<INT_ENA_TIMERS_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<INT_ENA_TIMG_SPEC>) -> Self {
+    fn from(writer: crate::W<INT_ENA_TIMERS_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -144,24 +144,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_timg]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_timers]
 (index.html) module"]
-pub struct INT_ENA_TIMG_SPEC;
-impl crate::RegisterSpec for INT_ENA_TIMG_SPEC {
+pub struct INT_ENA_TIMERS_SPEC;
+impl crate::RegisterSpec for INT_ENA_TIMERS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena_timg::R]
+#[doc = "`read()` method returns [int_ena_timers::R]
 (R) reader structure"]
-impl crate::Readable for INT_ENA_TIMG_SPEC {
+impl crate::Readable for INT_ENA_TIMERS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena_timg::W]
+#[doc = "`write(|w| ..)` method takes [int_ena_timers::W]
 (W) writer structure"]
-impl crate::Writable for INT_ENA_TIMG_SPEC {
+impl crate::Writable for INT_ENA_TIMERS_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets INT_ENA_TIMG to value 0"]
-impl crate::Resettable for INT_ENA_TIMG_SPEC {
+#[doc = "`reset()` method sets INT_ENA_TIMERS to value 0"]
+impl crate::Resettable for INT_ENA_TIMERS_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

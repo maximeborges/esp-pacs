@@ -41,11 +41,11 @@ pub struct RegisterBlock {
     #[doc = "0x6c - TIMG_RTCCALICFG1_REG."]
     pub rtccalicfg1: crate::Reg<rtccalicfg1::RTCCALICFG1_SPEC>,
     #[doc = "0x70 - INT_ENA_TIMG_REG"]
-    pub int_ena_timg: crate::Reg<int_ena_timg::INT_ENA_TIMG_SPEC>,
+    pub int_ena_timers: crate::Reg<int_ena_timers::INT_ENA_TIMERS_SPEC>,
     #[doc = "0x74 - INT_RAW_TIMG_REG"]
     pub int_raw_timers: crate::Reg<int_raw_timers::INT_RAW_TIMERS_SPEC>,
     #[doc = "0x78 - INT_ST_TIMG_REG"]
-    pub int_st_timg: crate::Reg<int_st_timg::INT_ST_TIMG_SPEC>,
+    pub int_st_timers: crate::Reg<int_st_timers::INT_ST_TIMERS_SPEC>,
     #[doc = "0x7c - INT_CLR_TIMG_REG"]
     pub int_clr_timers: crate::Reg<int_clr_timers::INT_CLR_TIMERS_SPEC>,
     #[doc = "0x80 - TIMG_RTCCALICFG2_REG."]
@@ -132,18 +132,18 @@ pub mod rtccalicfg;
 pub type RTCCALICFG1 = crate::Reg<rtccalicfg1::RTCCALICFG1_SPEC>;
 #[doc = "TIMG_RTCCALICFG1_REG."]
 pub mod rtccalicfg1;
-#[doc = "INT_ENA_TIMG register accessor: an alias for `Reg<INT_ENA_TIMG_SPEC>`"]
-pub type INT_ENA_TIMG = crate::Reg<int_ena_timg::INT_ENA_TIMG_SPEC>;
+#[doc = "INT_ENA_TIMERS register accessor: an alias for `Reg<INT_ENA_TIMERS_SPEC>`"]
+pub type INT_ENA_TIMERS = crate::Reg<int_ena_timers::INT_ENA_TIMERS_SPEC>;
 #[doc = "INT_ENA_TIMG_REG"]
-pub mod int_ena_timg;
+pub mod int_ena_timers;
 #[doc = "INT_RAW_TIMERS register accessor: an alias for `Reg<INT_RAW_TIMERS_SPEC>`"]
 pub type INT_RAW_TIMERS = crate::Reg<int_raw_timers::INT_RAW_TIMERS_SPEC>;
 #[doc = "INT_RAW_TIMG_REG"]
 pub mod int_raw_timers;
-#[doc = "INT_ST_TIMG register accessor: an alias for `Reg<INT_ST_TIMG_SPEC>`"]
-pub type INT_ST_TIMG = crate::Reg<int_st_timg::INT_ST_TIMG_SPEC>;
+#[doc = "INT_ST_TIMERS register accessor: an alias for `Reg<INT_ST_TIMERS_SPEC>`"]
+pub type INT_ST_TIMERS = crate::Reg<int_st_timers::INT_ST_TIMERS_SPEC>;
 #[doc = "INT_ST_TIMG_REG"]
-pub mod int_st_timg;
+pub mod int_st_timers;
 #[doc = "INT_CLR_TIMERS register accessor: an alias for `Reg<INT_CLR_TIMERS_SPEC>`"]
 pub type INT_CLR_TIMERS = crate::Reg<int_clr_timers::INT_CLR_TIMERS_SPEC>;
 #[doc = "INT_CLR_TIMG_REG"]
