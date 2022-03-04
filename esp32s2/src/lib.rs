@@ -1436,6 +1436,34 @@ impl core::fmt::Debug for XTS_AES {
 }
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub mod xts_aes;
+#[doc = "Hardware random number generator"]
+pub struct RNG {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for RNG {}
+impl RNG {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const rng::RegisterBlock = 0x6003_5000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const rng::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for RNG {
+    type Target = rng::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for RNG {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RNG").finish()
+    }
+}
+#[doc = "Hardware random number generator"]
+pub mod rng;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1517,6 +1545,8 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "XTS_AES"]
     pub XTS_AES: XTS_AES,
+    #[doc = "RNG"]
+    pub RNG: RNG,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -1647,6 +1677,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             XTS_AES: XTS_AES {
+                _marker: PhantomData,
+            },
+            RNG: RNG {
                 _marker: PhantomData,
             },
         }

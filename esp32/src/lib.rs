@@ -1488,34 +1488,34 @@ impl core::fmt::Debug for UHCI1 {
 }
 #[doc = "Universal Host Controller Interface"]
 pub use uhci0 as uhci1;
-#[doc = "Peripheral WDEV"]
-pub struct WDEV {
+#[doc = "Hardware random number generator"]
+pub struct RNG {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for WDEV {}
-impl WDEV {
+unsafe impl Send for RNG {}
+impl RNG {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const wdev::RegisterBlock = 0x6003_5144 as *const _;
+    pub const PTR: *const rng::RegisterBlock = 0x6003_5000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const wdev::RegisterBlock {
+    pub const fn ptr() -> *const rng::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for WDEV {
-    type Target = wdev::RegisterBlock;
+impl Deref for RNG {
+    type Target = rng::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for WDEV {
+impl core::fmt::Debug for RNG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("WDEV").finish()
+        f.debug_struct("RNG").finish()
     }
 }
-#[doc = "Peripheral WDEV"]
-pub mod wdev;
+#[doc = "Hardware random number generator"]
+pub mod rng;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1603,8 +1603,8 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "UHCI1"]
     pub UHCI1: UHCI1,
-    #[doc = "WDEV"]
-    pub WDEV: WDEV,
+    #[doc = "RNG"]
+    pub RNG: RNG,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -1746,7 +1746,7 @@ impl Peripherals {
             UHCI1: UHCI1 {
                 _marker: PhantomData,
             },
-            WDEV: WDEV {
+            RNG: RNG {
                 _marker: PhantomData,
             },
         }
