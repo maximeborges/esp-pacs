@@ -1,20 +1,16 @@
 _svd: ../esp32s3.base.svd
 
-RTC_CNTL:
-  _strip:
-    - "RTC_"
+SPI1:
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
 
-_add:
-  RNG:
-    name: RNG
-    groupName: RNG
-    description: Hardware random number generator
-    baseAddress: 0x60034F6C
+SPI2:
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
 
-RNG:
-  _add:
-    DATA:
-      description: Random number data
-      access: read-only
-      addressOffset: 0x110
-      size: 0x20
+_derive:
+    SPI3: SPI2
