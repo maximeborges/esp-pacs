@@ -61,32 +61,40 @@ impl<'a> CLK_MODE_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or * 256) SPI_CLK cycles."]
-pub struct CS_HOLD_DLY_RES_R(crate::FieldReader<u16, u16>);
-impl CS_HOLD_DLY_RES_R {
+#[doc = "Field `RXFIFO_RST` reader - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
+pub struct RXFIFO_RST_R(crate::FieldReader<bool, bool>);
+impl RXFIFO_RST_R {
     #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CS_HOLD_DLY_RES_R(crate::FieldReader::new(bits))
+    pub(crate) fn new(bits: bool) -> Self {
+        RXFIFO_RST_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for CS_HOLD_DLY_RES_R {
-    type Target = crate::FieldReader<u16, u16>;
+impl core::ops::Deref for RXFIFO_RST_R {
+    type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or * 256) SPI_CLK cycles."]
-pub struct CS_HOLD_DLY_RES_W<'a> {
+#[doc = "Field `RXFIFO_RST` writer - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
+pub struct RXFIFO_RST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> CS_HOLD_DLY_RES_W<'a> {
+impl<'a> RXFIFO_RST_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 2)) | ((value as u32 & 0x03ff) << 2);
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
@@ -96,11 +104,10 @@ impl R {
     pub fn clk_mode(&self) -> CLK_MODE_R {
         CLK_MODE_R::new((self.bits & 0x03) as u8)
     }
-    #[doc = "Bits 2:11 - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or * 256) SPI_CLK cycles."]
+    #[doc = "Bit 30 - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
     #[inline(always)]
-    pub fn cs_hold_dly_res(&self) -> CS_HOLD_DLY_RES_R {
-        CS_HOLD_DLY_RES_R::new(((self.bits >> 2) & 0x03ff) as u16)
+    pub fn rxfifo_rst(&self) -> RXFIFO_RST_R {
+        RXFIFO_RST_R::new(((self.bits >> 30) & 0x01) != 0)
     }
 }
 impl W {
@@ -109,11 +116,10 @@ impl W {
     pub fn clk_mode(&mut self) -> CLK_MODE_W {
         CLK_MODE_W { w: self }
     }
-    #[doc = "Bits 2:11 - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or * 256) SPI_CLK cycles."]
+    #[doc = "Bit 30 - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
     #[inline(always)]
-    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W {
-        CS_HOLD_DLY_RES_W { w: self }
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W {
+        RXFIFO_RST_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -122,7 +128,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 control1 register\n\nThis register you can [`read`]
+#[doc = "SPI0 control 1 register.\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]
@@ -144,10 +150,10 @@ impl crate::Readable for CTRL1_SPEC {
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CTRL1 to value 0x0ffc"]
+#[doc = "`reset()` method sets CTRL1 to value 0"]
 impl crate::Resettable for CTRL1_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x0ffc
+        0
     }
 }

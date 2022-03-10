@@ -34,26 +34,26 @@ impl From<crate::W<BROWN_OUT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `BROWN_OUT_INT_WAIT` reader - brown out interrupt wait cycles"]
-pub struct BROWN_OUT_INT_WAIT_R(crate::FieldReader<u16, u16>);
-impl BROWN_OUT_INT_WAIT_R {
+#[doc = "Field `INT_WAIT` reader - brown out interrupt wait cycles"]
+pub struct INT_WAIT_R(crate::FieldReader<u16, u16>);
+impl INT_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
-        BROWN_OUT_INT_WAIT_R(crate::FieldReader::new(bits))
+        INT_WAIT_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_INT_WAIT_R {
+impl core::ops::Deref for INT_WAIT_R {
     type Target = crate::FieldReader<u16, u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_INT_WAIT` writer - brown out interrupt wait cycles"]
-pub struct BROWN_OUT_INT_WAIT_W<'a> {
+#[doc = "Field `INT_WAIT` writer - brown out interrupt wait cycles"]
+pub struct INT_WAIT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_INT_WAIT_W<'a> {
+impl<'a> INT_WAIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
@@ -61,26 +61,26 @@ impl<'a> BROWN_OUT_INT_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
-pub struct BROWN_OUT_CLOSE_FLASH_ENA_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_CLOSE_FLASH_ENA_R {
+#[doc = "Field `CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
+pub struct CLOSE_FLASH_ENA_R(crate::FieldReader<bool, bool>);
+impl CLOSE_FLASH_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_CLOSE_FLASH_ENA_R(crate::FieldReader::new(bits))
+        CLOSE_FLASH_ENA_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_CLOSE_FLASH_ENA_R {
+impl core::ops::Deref for CLOSE_FLASH_ENA_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
-pub struct BROWN_OUT_CLOSE_FLASH_ENA_W<'a> {
+#[doc = "Field `CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
+pub struct CLOSE_FLASH_ENA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_CLOSE_FLASH_ENA_W<'a> {
+impl<'a> CLOSE_FLASH_ENA_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -98,26 +98,26 @@ impl<'a> BROWN_OUT_CLOSE_FLASH_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_PD_RF_ENA` reader - enable power down RF when brown out happens"]
-pub struct BROWN_OUT_PD_RF_ENA_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_PD_RF_ENA_R {
+#[doc = "Field `PD_RF_ENA` reader - enable power down RF when brown out happens"]
+pub struct PD_RF_ENA_R(crate::FieldReader<bool, bool>);
+impl PD_RF_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_PD_RF_ENA_R(crate::FieldReader::new(bits))
+        PD_RF_ENA_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_PD_RF_ENA_R {
+impl core::ops::Deref for PD_RF_ENA_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_PD_RF_ENA` writer - enable power down RF when brown out happens"]
-pub struct BROWN_OUT_PD_RF_ENA_W<'a> {
+#[doc = "Field `PD_RF_ENA` writer - enable power down RF when brown out happens"]
+pub struct PD_RF_ENA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_PD_RF_ENA_W<'a> {
+impl<'a> PD_RF_ENA_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -135,26 +135,26 @@ impl<'a> BROWN_OUT_PD_RF_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_RST_WAIT` reader - brown out reset wait cycles"]
-pub struct BROWN_OUT_RST_WAIT_R(crate::FieldReader<u16, u16>);
-impl BROWN_OUT_RST_WAIT_R {
+#[doc = "Field `RST_WAIT` reader - brown out reset wait cycles"]
+pub struct RST_WAIT_R(crate::FieldReader<u16, u16>);
+impl RST_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
-        BROWN_OUT_RST_WAIT_R(crate::FieldReader::new(bits))
+        RST_WAIT_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_RST_WAIT_R {
+impl core::ops::Deref for RST_WAIT_R {
     type Target = crate::FieldReader<u16, u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_RST_WAIT` writer - brown out reset wait cycles"]
-pub struct BROWN_OUT_RST_WAIT_W<'a> {
+#[doc = "Field `RST_WAIT` writer - brown out reset wait cycles"]
+pub struct RST_WAIT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_RST_WAIT_W<'a> {
+impl<'a> RST_WAIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
@@ -162,26 +162,26 @@ impl<'a> BROWN_OUT_RST_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_RST_ENA` reader - enable brown out reset"]
-pub struct BROWN_OUT_RST_ENA_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_RST_ENA_R {
+#[doc = "Field `RST_ENA` reader - enable brown out reset"]
+pub struct RST_ENA_R(crate::FieldReader<bool, bool>);
+impl RST_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_RST_ENA_R(crate::FieldReader::new(bits))
+        RST_ENA_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_RST_ENA_R {
+impl core::ops::Deref for RST_ENA_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_RST_ENA` writer - enable brown out reset"]
-pub struct BROWN_OUT_RST_ENA_W<'a> {
+#[doc = "Field `RST_ENA` writer - enable brown out reset"]
+pub struct RST_ENA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_RST_ENA_W<'a> {
+impl<'a> RST_ENA_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -199,26 +199,26 @@ impl<'a> BROWN_OUT_RST_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_RST_SEL` reader - 1: 4-pos reset, 0: sys_reset"]
-pub struct BROWN_OUT_RST_SEL_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_RST_SEL_R {
+#[doc = "Field `RST_SEL` reader - 1: 4-pos reset, 0: sys_reset"]
+pub struct RST_SEL_R(crate::FieldReader<bool, bool>);
+impl RST_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_RST_SEL_R(crate::FieldReader::new(bits))
+        RST_SEL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_RST_SEL_R {
+impl core::ops::Deref for RST_SEL_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_RST_SEL` writer - 1: 4-pos reset, 0: sys_reset"]
-pub struct BROWN_OUT_RST_SEL_W<'a> {
+#[doc = "Field `RST_SEL` writer - 1: 4-pos reset, 0: sys_reset"]
+pub struct RST_SEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_RST_SEL_W<'a> {
+impl<'a> RST_SEL_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -236,26 +236,26 @@ impl<'a> BROWN_OUT_RST_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_ANA_RST_EN` reader - enable brown out reset en"]
-pub struct BROWN_OUT_ANA_RST_EN_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_ANA_RST_EN_R {
+#[doc = "Field `ANA_RST_EN` reader - enable brown out reset en"]
+pub struct ANA_RST_EN_R(crate::FieldReader<bool, bool>);
+impl ANA_RST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_ANA_RST_EN_R(crate::FieldReader::new(bits))
+        ANA_RST_EN_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_ANA_RST_EN_R {
+impl core::ops::Deref for ANA_RST_EN_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_ANA_RST_EN` writer - enable brown out reset en"]
-pub struct BROWN_OUT_ANA_RST_EN_W<'a> {
+#[doc = "Field `ANA_RST_EN` writer - enable brown out reset en"]
+pub struct ANA_RST_EN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_ANA_RST_EN_W<'a> {
+impl<'a> ANA_RST_EN_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -273,11 +273,11 @@ impl<'a> BROWN_OUT_ANA_RST_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_CNT_CLR` writer - clear brown out counter"]
-pub struct BROWN_OUT_CNT_CLR_W<'a> {
+#[doc = "Field `CNT_CLR` writer - clear brown out counter"]
+pub struct CNT_CLR_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_CNT_CLR_W<'a> {
+impl<'a> CNT_CLR_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -295,26 +295,26 @@ impl<'a> BROWN_OUT_CNT_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_ENA` reader - enable brown out"]
-pub struct BROWN_OUT_ENA_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_ENA_R {
+#[doc = "Field `ENA` reader - enable brown out"]
+pub struct ENA_R(crate::FieldReader<bool, bool>);
+impl ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_ENA_R(crate::FieldReader::new(bits))
+        ENA_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_ENA_R {
+impl core::ops::Deref for ENA_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_ENA` writer - enable brown out"]
-pub struct BROWN_OUT_ENA_W<'a> {
+#[doc = "Field `ENA` writer - enable brown out"]
+pub struct ENA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_ENA_W<'a> {
+impl<'a> ENA_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -332,15 +332,15 @@ impl<'a> BROWN_OUT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DET` reader - get brown out detect"]
-pub struct DET_R(crate::FieldReader<bool, bool>);
-impl DET_R {
+#[doc = "Field `RTC_BROWN_OUT_DET` reader - get brown out detect"]
+pub struct RTC_BROWN_OUT_DET_R(crate::FieldReader<bool, bool>);
+impl RTC_BROWN_OUT_DET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        DET_R(crate::FieldReader::new(bits))
+        RTC_BROWN_OUT_DET_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for DET_R {
+impl core::ops::Deref for RTC_BROWN_OUT_DET_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
@@ -350,95 +350,95 @@ impl core::ops::Deref for DET_R {
 impl R {
     #[doc = "Bits 4:13 - brown out interrupt wait cycles"]
     #[inline(always)]
-    pub fn brown_out_int_wait(&self) -> BROWN_OUT_INT_WAIT_R {
-        BROWN_OUT_INT_WAIT_R::new(((self.bits >> 4) & 0x03ff) as u16)
+    pub fn int_wait(&self) -> INT_WAIT_R {
+        INT_WAIT_R::new(((self.bits >> 4) & 0x03ff) as u16)
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
-    pub fn brown_out_close_flash_ena(&self) -> BROWN_OUT_CLOSE_FLASH_ENA_R {
-        BROWN_OUT_CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+    pub fn close_flash_ena(&self) -> CLOSE_FLASH_ENA_R {
+        CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
-    pub fn brown_out_pd_rf_ena(&self) -> BROWN_OUT_PD_RF_ENA_R {
-        BROWN_OUT_PD_RF_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+    pub fn pd_rf_ena(&self) -> PD_RF_ENA_R {
+        PD_RF_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
-    pub fn brown_out_rst_wait(&self) -> BROWN_OUT_RST_WAIT_R {
-        BROWN_OUT_RST_WAIT_R::new(((self.bits >> 16) & 0x03ff) as u16)
+    pub fn rst_wait(&self) -> RST_WAIT_R {
+        RST_WAIT_R::new(((self.bits >> 16) & 0x03ff) as u16)
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
-    pub fn brown_out_rst_ena(&self) -> BROWN_OUT_RST_ENA_R {
-        BROWN_OUT_RST_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
+    pub fn rst_ena(&self) -> RST_ENA_R {
+        RST_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
     }
     #[doc = "Bit 27 - 1: 4-pos reset, 0: sys_reset"]
     #[inline(always)]
-    pub fn brown_out_rst_sel(&self) -> BROWN_OUT_RST_SEL_R {
-        BROWN_OUT_RST_SEL_R::new(((self.bits >> 27) & 0x01) != 0)
+    pub fn rst_sel(&self) -> RST_SEL_R {
+        RST_SEL_R::new(((self.bits >> 27) & 0x01) != 0)
     }
     #[doc = "Bit 28 - enable brown out reset en"]
     #[inline(always)]
-    pub fn brown_out_ana_rst_en(&self) -> BROWN_OUT_ANA_RST_EN_R {
-        BROWN_OUT_ANA_RST_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+    pub fn ana_rst_en(&self) -> ANA_RST_EN_R {
+        ANA_RST_EN_R::new(((self.bits >> 28) & 0x01) != 0)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
-    pub fn brown_out_ena(&self) -> BROWN_OUT_ENA_R {
-        BROWN_OUT_ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+    pub fn ena(&self) -> ENA_R {
+        ENA_R::new(((self.bits >> 30) & 0x01) != 0)
     }
     #[doc = "Bit 31 - get brown out detect"]
     #[inline(always)]
-    pub fn det(&self) -> DET_R {
-        DET_R::new(((self.bits >> 31) & 0x01) != 0)
+    pub fn rtc_brown_out_det(&self) -> RTC_BROWN_OUT_DET_R {
+        RTC_BROWN_OUT_DET_R::new(((self.bits >> 31) & 0x01) != 0)
     }
 }
 impl W {
     #[doc = "Bits 4:13 - brown out interrupt wait cycles"]
     #[inline(always)]
-    pub fn brown_out_int_wait(&mut self) -> BROWN_OUT_INT_WAIT_W {
-        BROWN_OUT_INT_WAIT_W { w: self }
+    pub fn int_wait(&mut self) -> INT_WAIT_W {
+        INT_WAIT_W { w: self }
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
-    pub fn brown_out_close_flash_ena(&mut self) -> BROWN_OUT_CLOSE_FLASH_ENA_W {
-        BROWN_OUT_CLOSE_FLASH_ENA_W { w: self }
+    pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W {
+        CLOSE_FLASH_ENA_W { w: self }
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
-    pub fn brown_out_pd_rf_ena(&mut self) -> BROWN_OUT_PD_RF_ENA_W {
-        BROWN_OUT_PD_RF_ENA_W { w: self }
+    pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W {
+        PD_RF_ENA_W { w: self }
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
-    pub fn brown_out_rst_wait(&mut self) -> BROWN_OUT_RST_WAIT_W {
-        BROWN_OUT_RST_WAIT_W { w: self }
+    pub fn rst_wait(&mut self) -> RST_WAIT_W {
+        RST_WAIT_W { w: self }
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
-    pub fn brown_out_rst_ena(&mut self) -> BROWN_OUT_RST_ENA_W {
-        BROWN_OUT_RST_ENA_W { w: self }
+    pub fn rst_ena(&mut self) -> RST_ENA_W {
+        RST_ENA_W { w: self }
     }
     #[doc = "Bit 27 - 1: 4-pos reset, 0: sys_reset"]
     #[inline(always)]
-    pub fn brown_out_rst_sel(&mut self) -> BROWN_OUT_RST_SEL_W {
-        BROWN_OUT_RST_SEL_W { w: self }
+    pub fn rst_sel(&mut self) -> RST_SEL_W {
+        RST_SEL_W { w: self }
     }
     #[doc = "Bit 28 - enable brown out reset en"]
     #[inline(always)]
-    pub fn brown_out_ana_rst_en(&mut self) -> BROWN_OUT_ANA_RST_EN_W {
-        BROWN_OUT_ANA_RST_EN_W { w: self }
+    pub fn ana_rst_en(&mut self) -> ANA_RST_EN_W {
+        ANA_RST_EN_W { w: self }
     }
     #[doc = "Bit 29 - clear brown out counter"]
     #[inline(always)]
-    pub fn brown_out_cnt_clr(&mut self) -> BROWN_OUT_CNT_CLR_W {
-        BROWN_OUT_CNT_CLR_W { w: self }
+    pub fn cnt_clr(&mut self) -> CNT_CLR_W {
+        CNT_CLR_W { w: self }
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
-    pub fn brown_out_ena(&mut self) -> BROWN_OUT_ENA_W {
-        BROWN_OUT_ENA_W { w: self }
+    pub fn ena(&mut self) -> ENA_W {
+        ENA_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

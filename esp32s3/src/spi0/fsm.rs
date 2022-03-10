@@ -13,7 +13,7 @@ impl From<crate::R<FSM_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `ST` reader - The status of SPI1 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
+#[doc = "Field `ST` reader - The status of SPI0 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
 pub struct ST_R(crate::FieldReader<u8, u8>);
 impl ST_R {
     #[inline(always)]
@@ -29,13 +29,13 @@ impl core::ops::Deref for ST_R {
     }
 }
 impl R {
-    #[doc = "Bits 0:2 - The status of SPI1 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
+    #[doc = "Bits 0:2 - The status of SPI0 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
         ST_R::new((self.bits & 0x07) as u8)
     }
 }
-#[doc = "SPI1 state machine(FSM) status register.\n\nThis register you can [`read`]
+#[doc = "SPI0 state machine(FSM) status register.\n\nThis register you can [`read`]
 (crate::generic::Reg::read). See [API]
 (https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fsm]
 (index.html) module"]

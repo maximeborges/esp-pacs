@@ -34,6 +34,43 @@ impl From<crate::W<TIMING_CALI_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `TIMING_CLK_ENA` reader - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
+pub struct TIMING_CLK_ENA_R(crate::FieldReader<bool, bool>);
+impl TIMING_CLK_ENA_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        TIMING_CLK_ENA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TIMING_CLK_ENA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TIMING_CLK_ENA` writer - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
+pub struct TIMING_CLK_ENA_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> TIMING_CLK_ENA_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w
+    }
+}
 #[doc = "Field `TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
 pub struct TIMING_CALI_R(crate::FieldReader<bool, bool>);
 impl TIMING_CALI_R {
@@ -71,7 +108,7 @@ impl<'a> TIMING_CALI_W<'a> {
         self.w
     }
 }
-#[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
+#[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
 pub struct EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader<u8, u8>);
 impl EXTRA_DUMMY_CYCLELEN_R {
     #[inline(always)]
@@ -86,7 +123,7 @@ impl core::ops::Deref for EXTRA_DUMMY_CYCLELEN_R {
         &self.0
     }
 }
-#[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
+#[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
 pub struct EXTRA_DUMMY_CYCLELEN_W<'a> {
     w: &'a mut W,
 }
@@ -99,24 +136,34 @@ impl<'a> EXTRA_DUMMY_CYCLELEN_W<'a> {
     }
 }
 impl R {
+    #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
+    #[inline(always)]
+    pub fn timing_clk_ena(&self) -> TIMING_CLK_ENA_R {
+        TIMING_CLK_ENA_R::new((self.bits & 0x01) != 0)
+    }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
     pub fn timing_cali(&self) -> TIMING_CALI_R {
         TIMING_CALI_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
+    #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&self) -> EXTRA_DUMMY_CYCLELEN_R {
         EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 0x07) as u8)
     }
 }
 impl W {
+    #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
+    #[inline(always)]
+    pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W {
+        TIMING_CLK_ENA_W { w: self }
+    }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W {
         TIMING_CALI_W { w: self }
     }
-    #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
+    #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W {
         EXTRA_DUMMY_CYCLELEN_W { w: self }
@@ -128,7 +175,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 timing compensation register when accesses to flash or Ext_RAM.\n\nThis register you can [`read`]
+#[doc = "SPI0 timing compensation register when accesses to flash.\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]

@@ -37,6 +37,9 @@ extern "C" {
     fn UHCI0();
     fn GPIO();
     fn GPIO_NMI();
+    fn SPI1();
+    fn SPI2();
+    fn SPI3();
     fn I2S0();
     fn I2S1();
     fn UART0();
@@ -56,6 +59,7 @@ extern "C" {
     fn TG1_T0_LEVEL();
     fn TG1_T1_LEVEL();
     fn TG1_WDT_LEVEL();
+    fn SPI_MEM_REJECT();
     fn APB_ADC();
     fn DMA_IN_CH0();
     fn DMA_IN_CH1();
@@ -114,9 +118,9 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: GPIO_NMI },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SPI1 },
+    Vector { _handler: SPI2 },
+    Vector { _handler: SPI3 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: I2S0 },
@@ -166,7 +170,9 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SPI_MEM_REJECT,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -268,6 +274,12 @@ pub enum Interrupt {
     GPIO = 16,
     #[doc = "17 - GPIO_NMI"]
     GPIO_NMI = 17,
+    #[doc = "20 - SPI1"]
+    SPI1 = 20,
+    #[doc = "21 - SPI2"]
+    SPI2 = 21,
+    #[doc = "22 - SPI3"]
+    SPI3 = 22,
     #[doc = "25 - I2S0"]
     I2S0 = 25,
     #[doc = "26 - I2S1"]
@@ -306,6 +318,8 @@ pub enum Interrupt {
     TG1_T1_LEVEL = 54,
     #[doc = "55 - TG1_WDT_LEVEL"]
     TG1_WDT_LEVEL = 55,
+    #[doc = "60 - SPI_MEM_REJECT"]
+    SPI_MEM_REJECT = 60,
     #[doc = "65 - APB_ADC"]
     APB_ADC = 65,
     #[doc = "66 - DMA_IN_CH0"]
@@ -383,6 +397,9 @@ impl Interrupt {
             14 => Ok(Interrupt::UHCI0),
             16 => Ok(Interrupt::GPIO),
             17 => Ok(Interrupt::GPIO_NMI),
+            20 => Ok(Interrupt::SPI1),
+            21 => Ok(Interrupt::SPI2),
+            22 => Ok(Interrupt::SPI3),
             25 => Ok(Interrupt::I2S0),
             26 => Ok(Interrupt::I2S1),
             27 => Ok(Interrupt::UART0),
@@ -402,6 +419,7 @@ impl Interrupt {
             53 => Ok(Interrupt::TG1_T0_LEVEL),
             54 => Ok(Interrupt::TG1_T1_LEVEL),
             55 => Ok(Interrupt::TG1_WDT_LEVEL),
+            60 => Ok(Interrupt::SPI_MEM_REJECT),
             65 => Ok(Interrupt::APB_ADC),
             66 => Ok(Interrupt::DMA_IN_CH0),
             67 => Ok(Interrupt::DMA_IN_CH1),
@@ -1107,6 +1125,34 @@ impl core::fmt::Debug for PWM1 {
 }
 #[doc = "Peripheral PWM0"]
 pub use pwm0 as pwm1;
+#[doc = "Hardware random number generator"]
+pub struct RNG {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for RNG {}
+impl RNG {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const rng::RegisterBlock = 0x6003_4f6c as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const rng::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for RNG {
+    type Target = rng::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for RNG {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RNG").finish()
+    }
+}
+#[doc = "Hardware random number generator"]
+pub mod rng;
 #[doc = "RSA (Rivest Shamir Adleman) Accelerator"]
 pub struct RSA {
     _marker: PhantomData<*const ()>,
@@ -1310,15 +1356,15 @@ pub struct SPI1 {
 unsafe impl Send for SPI1 {}
 impl SPI1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const spi0::RegisterBlock = 0x6000_2000 as *const _;
+    pub const PTR: *const spi1::RegisterBlock = 0x6000_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const spi0::RegisterBlock {
+    pub const fn ptr() -> *const spi1::RegisterBlock {
         Self::PTR
     }
 }
 impl Deref for SPI1 {
-    type Target = spi0::RegisterBlock;
+    type Target = spi1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1330,7 +1376,63 @@ impl core::fmt::Debug for SPI1 {
     }
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller"]
-pub use spi0 as spi1;
+pub mod spi1;
+#[doc = "SPI (Serial Peripheral Interface) Controller"]
+pub struct SPI2 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SPI2 {}
+impl SPI2 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const spi2::RegisterBlock = 0x6002_4000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const spi2::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for SPI2 {
+    type Target = spi2::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for SPI2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI2").finish()
+    }
+}
+#[doc = "SPI (Serial Peripheral Interface) Controller"]
+pub mod spi2;
+#[doc = "SPI (Serial Peripheral Interface) Controller"]
+pub struct SPI3 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SPI3 {}
+impl SPI3 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const spi2::RegisterBlock = 0x6002_5000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const spi2::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for SPI3 {
+    type Target = spi2::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for SPI3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI3").finish()
+    }
+}
+#[doc = "SPI (Serial Peripheral Interface) Controller"]
+pub use spi2 as spi3;
 #[doc = "System"]
 pub struct SYSTEM {
     _marker: PhantomData<*const ()>,
@@ -1667,34 +1769,6 @@ impl core::fmt::Debug for XTS_AES {
 }
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub mod xts_aes;
-#[doc = "Hardware random number generator"]
-pub struct RNG {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for RNG {}
-impl RNG {
-    #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rng::RegisterBlock = 0x6003_4f6c as *const _;
-    #[doc = r"Return the pointer to the register block"]
-    #[inline(always)]
-    pub const fn ptr() -> *const rng::RegisterBlock {
-        Self::PTR
-    }
-}
-impl Deref for RNG {
-    type Target = rng::RegisterBlock;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        unsafe { &*Self::PTR }
-    }
-}
-impl core::fmt::Debug for RNG {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RNG").finish()
-    }
-}
-#[doc = "Hardware random number generator"]
-pub mod rng;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1748,6 +1822,8 @@ pub struct Peripherals {
     pub PWM0: PWM0,
     #[doc = "PWM1"]
     pub PWM1: PWM1,
+    #[doc = "RNG"]
+    pub RNG: RNG,
     #[doc = "RSA"]
     pub RSA: RSA,
     #[doc = "RTC_CNTL"]
@@ -1764,6 +1840,10 @@ pub struct Peripherals {
     pub SPI0: SPI0,
     #[doc = "SPI1"]
     pub SPI1: SPI1,
+    #[doc = "SPI2"]
+    pub SPI2: SPI2,
+    #[doc = "SPI3"]
+    pub SPI3: SPI3,
     #[doc = "SYSTEM"]
     pub SYSTEM: SYSTEM,
     #[doc = "TIMG0"]
@@ -1788,8 +1868,6 @@ pub struct Peripherals {
     pub WCL: WCL,
     #[doc = "XTS_AES"]
     pub XTS_AES: XTS_AES,
-    #[doc = "RNG"]
-    pub RNG: RNG,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -1880,6 +1958,9 @@ impl Peripherals {
             PWM1: PWM1 {
                 _marker: PhantomData,
             },
+            RNG: RNG {
+                _marker: PhantomData,
+            },
             RSA: RSA {
                 _marker: PhantomData,
             },
@@ -1902,6 +1983,12 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             SPI1: SPI1 {
+                _marker: PhantomData,
+            },
+            SPI2: SPI2 {
+                _marker: PhantomData,
+            },
+            SPI3: SPI3 {
                 _marker: PhantomData,
             },
             SYSTEM: SYSTEM {
@@ -1938,9 +2025,6 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             XTS_AES: XTS_AES {
-                _marker: PhantomData,
-            },
-            RNG: RNG {
                 _marker: PhantomData,
             },
         }

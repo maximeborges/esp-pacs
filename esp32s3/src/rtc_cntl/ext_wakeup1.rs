@@ -34,26 +34,26 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `EXT_WAKEUP1_SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
-pub struct EXT_WAKEUP1_SEL_R(crate::FieldReader<u32, u32>);
-impl EXT_WAKEUP1_SEL_R {
+#[doc = "Field `SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
+pub struct SEL_R(crate::FieldReader<u32, u32>);
+impl SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        EXT_WAKEUP1_SEL_R(crate::FieldReader::new(bits))
+        SEL_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for EXT_WAKEUP1_SEL_R {
+impl core::ops::Deref for SEL_R {
     type Target = crate::FieldReader<u32, u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `EXT_WAKEUP1_SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
-pub struct EXT_WAKEUP1_SEL_W<'a> {
+#[doc = "Field `SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
+pub struct SEL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> EXT_WAKEUP1_SEL_W<'a> {
+impl<'a> SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -61,11 +61,11 @@ impl<'a> EXT_WAKEUP1_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `EXT_WAKEUP1_STATUS_CLR` writer - clear ext wakeup1 status"]
-pub struct EXT_WAKEUP1_STATUS_CLR_W<'a> {
+#[doc = "Field `STATUS_CLR` writer - clear ext wakeup1 status"]
+pub struct STATUS_CLR_W<'a> {
     w: &'a mut W,
 }
-impl<'a> EXT_WAKEUP1_STATUS_CLR_W<'a> {
+impl<'a> STATUS_CLR_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -86,20 +86,20 @@ impl<'a> EXT_WAKEUP1_STATUS_CLR_W<'a> {
 impl R {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn ext_wakeup1_sel(&self) -> EXT_WAKEUP1_SEL_R {
-        EXT_WAKEUP1_SEL_R::new((self.bits & 0x003f_ffff) as u32)
+    pub fn sel(&self) -> SEL_R {
+        SEL_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W {
-        EXT_WAKEUP1_SEL_W { w: self }
+    pub fn sel(&mut self) -> SEL_W {
+        SEL_W { w: self }
     }
     #[doc = "Bit 22 - clear ext wakeup1 status"]
     #[inline(always)]
-    pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W {
-        EXT_WAKEUP1_STATUS_CLR_W { w: self }
+    pub fn status_clr(&mut self) -> STATUS_CLR_W {
+        STATUS_CLR_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

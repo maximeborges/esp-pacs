@@ -19,50 +19,6 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PER_END_INT_CLR` writer - The clear bit for SPI_MEM_PER_END_INT interrupt."]
-pub struct PER_END_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PER_END_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-#[doc = "Field `PES_END_INT_CLR` writer - The clear bit for SPI_MEM_PES_END_INT interrupt."]
-pub struct PES_END_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PES_END_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `TOTAL_TRANS_END_INT_CLR` writer - The clear bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
 pub struct TOTAL_TRANS_END_INT_CLR_W<'a> {
     w: &'a mut W,
@@ -85,11 +41,11 @@ impl<'a> TOTAL_TRANS_END_INT_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_INT_CLR` writer - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub struct BROWN_OUT_INT_CLR_W<'a> {
+#[doc = "Field `ECC_ERR_INT_CLR` writer - The clear bit for SPI_MEM_ECC_ERR_INT interrupt. SPI_MEM_ECC_ERR_ADDR and SPI_MEM_ECC_ERR_CNT will be cleared by the pulse of this bit."]
+pub struct ECC_ERR_INT_CLR_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_INT_CLR_W<'a> {
+impl<'a> ECC_ERR_INT_CLR_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -103,30 +59,20 @@ impl<'a> BROWN_OUT_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
 impl W {
-    #[doc = "Bit 0 - The clear bit for SPI_MEM_PER_END_INT interrupt."]
-    #[inline(always)]
-    pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W {
-        PER_END_INT_CLR_W { w: self }
-    }
-    #[doc = "Bit 1 - The clear bit for SPI_MEM_PES_END_INT interrupt."]
-    #[inline(always)]
-    pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W {
-        PES_END_INT_CLR_W { w: self }
-    }
     #[doc = "Bit 2 - The clear bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_clr(&mut self) -> TOTAL_TRANS_END_INT_CLR_W {
         TOTAL_TRANS_END_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 3 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
+    #[doc = "Bit 4 - The clear bit for SPI_MEM_ECC_ERR_INT interrupt. SPI_MEM_ECC_ERR_ADDR and SPI_MEM_ECC_ERR_CNT will be cleared by the pulse of this bit."]
     #[inline(always)]
-    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W {
-        BROWN_OUT_INT_CLR_W { w: self }
+    pub fn ecc_err_int_clr(&mut self) -> ECC_ERR_INT_CLR_W {
+        ECC_ERR_INT_CLR_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

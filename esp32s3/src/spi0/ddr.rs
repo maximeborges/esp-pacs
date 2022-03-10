@@ -34,7 +34,7 @@ impl From<crate::W<DDR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_EN` reader - 1: in DDR mode, 0: in SDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_EN` reader - 1: in ddr mode, 0 in sdr mode"]
 pub struct SPI_FMEM_DDR_EN_R(crate::FieldReader<bool, bool>);
 impl SPI_FMEM_DDR_EN_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for SPI_FMEM_DDR_EN_R {
         &self.0
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_EN` writer - 1: in DDR mode, 0: in SDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_EN` writer - 1: in ddr mode, 0 in sdr mode"]
 pub struct SPI_FMEM_DDR_EN_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> SPI_FMEM_DDR_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SPI_FMEM_VAR_DUMMY` reader - Set the bit to enable variable dummy cycle in DDRmode."]
+#[doc = "Field `SPI_FMEM_VAR_DUMMY` reader - Set the bit to enable variable dummy cycle in DDR mode."]
 pub struct SPI_FMEM_VAR_DUMMY_R(crate::FieldReader<bool, bool>);
 impl SPI_FMEM_VAR_DUMMY_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for SPI_FMEM_VAR_DUMMY_R {
         &self.0
     }
 }
-#[doc = "Field `SPI_FMEM_VAR_DUMMY` writer - Set the bit to enable variable dummy cycle in DDRmode."]
+#[doc = "Field `SPI_FMEM_VAR_DUMMY` writer - Set the bit to enable variable dummy cycle in DDR mode."]
 pub struct SPI_FMEM_VAR_DUMMY_W<'a> {
     w: &'a mut W,
 }
@@ -145,7 +145,7 @@ impl<'a> SPI_FMEM_DDR_RDAT_SWP_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_WDAT_SWP` reader - Set the bit to reorder TX data of the word in DDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_WDAT_SWP` reader - Set the bit to swap TX data of a word in DDR mode."]
 pub struct SPI_FMEM_DDR_WDAT_SWP_R(crate::FieldReader<bool, bool>);
 impl SPI_FMEM_DDR_WDAT_SWP_R {
     #[inline(always)]
@@ -160,7 +160,7 @@ impl core::ops::Deref for SPI_FMEM_DDR_WDAT_SWP_R {
         &self.0
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_WDAT_SWP` writer - Set the bit to reorder TX data of the word in DDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_WDAT_SWP` writer - Set the bit to swap TX data of a word in DDR mode."]
 pub struct SPI_FMEM_DDR_WDAT_SWP_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +182,7 @@ impl<'a> SPI_FMEM_DDR_WDAT_SWP_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_CMD_DIS` reader - the bit is used to disable dual edge in command phase when DDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_CMD_DIS` reader - the bit is used to disable dual edge in CMD phase when ddr mode."]
 pub struct SPI_FMEM_DDR_CMD_DIS_R(crate::FieldReader<bool, bool>);
 impl SPI_FMEM_DDR_CMD_DIS_R {
     #[inline(always)]
@@ -197,7 +197,7 @@ impl core::ops::Deref for SPI_FMEM_DDR_CMD_DIS_R {
         &self.0
     }
 }
-#[doc = "Field `SPI_FMEM_DDR_CMD_DIS` writer - the bit is used to disable dual edge in command phase when DDR mode."]
+#[doc = "Field `SPI_FMEM_DDR_CMD_DIS` writer - the bit is used to disable dual edge in CMD phase when ddr mode."]
 pub struct SPI_FMEM_DDR_CMD_DIS_W<'a> {
     w: &'a mut W,
 }
@@ -243,6 +243,80 @@ impl<'a> SPI_FMEM_OUTMINBYTELEN_W<'a> {
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x7f << 5)) | ((value as u32 & 0x7f) << 5);
+        self.w
+    }
+}
+#[doc = "Field `SPI_FMEM_TX_DDR_MSK_EN` reader - Set this bit to mask the first or the last byte in MSPI ECC DDR write mode, when accesses to flash."]
+pub struct SPI_FMEM_TX_DDR_MSK_EN_R(crate::FieldReader<bool, bool>);
+impl SPI_FMEM_TX_DDR_MSK_EN_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SPI_FMEM_TX_DDR_MSK_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SPI_FMEM_TX_DDR_MSK_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SPI_FMEM_TX_DDR_MSK_EN` writer - Set this bit to mask the first or the last byte in MSPI ECC DDR write mode, when accesses to flash."]
+pub struct SPI_FMEM_TX_DDR_MSK_EN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> SPI_FMEM_TX_DDR_MSK_EN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w
+    }
+}
+#[doc = "Field `SPI_FMEM_RX_DDR_MSK_EN` reader - Set this bit to mask the first or the last byte in MSPI ECC DDR read mode, when accesses to flash."]
+pub struct SPI_FMEM_RX_DDR_MSK_EN_R(crate::FieldReader<bool, bool>);
+impl SPI_FMEM_RX_DDR_MSK_EN_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SPI_FMEM_RX_DDR_MSK_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SPI_FMEM_RX_DDR_MSK_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SPI_FMEM_RX_DDR_MSK_EN` writer - Set this bit to mask the first or the last byte in MSPI ECC DDR read mode, when accesses to flash."]
+pub struct SPI_FMEM_RX_DDR_MSK_EN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> SPI_FMEM_RX_DDR_MSK_EN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
@@ -458,7 +532,7 @@ impl<'a> SPI_FMEM_DQS_CA_IN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SPI_FMEM_HYPERBUS_DUMMY_2X` reader - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
+#[doc = "Field `SPI_FMEM_HYPERBUS_DUMMY_2X` reader - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses to flash or SPI1 accesses flash or sram."]
 pub struct SPI_FMEM_HYPERBUS_DUMMY_2X_R(crate::FieldReader<bool, bool>);
 impl SPI_FMEM_HYPERBUS_DUMMY_2X_R {
     #[inline(always)]
@@ -473,7 +547,7 @@ impl core::ops::Deref for SPI_FMEM_HYPERBUS_DUMMY_2X_R {
         &self.0
     }
 }
-#[doc = "Field `SPI_FMEM_HYPERBUS_DUMMY_2X` writer - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
+#[doc = "Field `SPI_FMEM_HYPERBUS_DUMMY_2X` writer - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses to flash or SPI1 accesses flash or sram."]
 pub struct SPI_FMEM_HYPERBUS_DUMMY_2X_W<'a> {
     w: &'a mut W,
 }
@@ -619,12 +693,12 @@ impl<'a> SPI_FMEM_HYPERBUS_CA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - 1: in DDR mode, 0: in SDR mode."]
+    #[doc = "Bit 0 - 1: in ddr mode, 0 in sdr mode"]
     #[inline(always)]
     pub fn spi_fmem_ddr_en(&self) -> SPI_FMEM_DDR_EN_R {
         SPI_FMEM_DDR_EN_R::new((self.bits & 0x01) != 0)
     }
-    #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in DDRmode."]
+    #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in DDR mode."]
     #[inline(always)]
     pub fn spi_fmem_var_dummy(&self) -> SPI_FMEM_VAR_DUMMY_R {
         SPI_FMEM_VAR_DUMMY_R::new(((self.bits >> 1) & 0x01) != 0)
@@ -634,12 +708,12 @@ impl R {
     pub fn spi_fmem_ddr_rdat_swp(&self) -> SPI_FMEM_DDR_RDAT_SWP_R {
         SPI_FMEM_DDR_RDAT_SWP_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - Set the bit to reorder TX data of the word in DDR mode."]
+    #[doc = "Bit 3 - Set the bit to swap TX data of a word in DDR mode."]
     #[inline(always)]
     pub fn spi_fmem_ddr_wdat_swp(&self) -> SPI_FMEM_DDR_WDAT_SWP_R {
         SPI_FMEM_DDR_WDAT_SWP_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 4 - the bit is used to disable dual edge in command phase when DDR mode."]
+    #[doc = "Bit 4 - the bit is used to disable dual edge in CMD phase when ddr mode."]
     #[inline(always)]
     pub fn spi_fmem_ddr_cmd_dis(&self) -> SPI_FMEM_DDR_CMD_DIS_R {
         SPI_FMEM_DDR_CMD_DIS_R::new(((self.bits >> 4) & 0x01) != 0)
@@ -648,6 +722,16 @@ impl R {
     #[inline(always)]
     pub fn spi_fmem_outminbytelen(&self) -> SPI_FMEM_OUTMINBYTELEN_R {
         SPI_FMEM_OUTMINBYTELEN_R::new(((self.bits >> 5) & 0x7f) as u8)
+    }
+    #[doc = "Bit 12 - Set this bit to mask the first or the last byte in MSPI ECC DDR write mode, when accesses to flash."]
+    #[inline(always)]
+    pub fn spi_fmem_tx_ddr_msk_en(&self) -> SPI_FMEM_TX_DDR_MSK_EN_R {
+        SPI_FMEM_TX_DDR_MSK_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+    }
+    #[doc = "Bit 13 - Set this bit to mask the first or the last byte in MSPI ECC DDR read mode, when accesses to flash."]
+    #[inline(always)]
+    pub fn spi_fmem_rx_ddr_msk_en(&self) -> SPI_FMEM_RX_DDR_MSK_EN_R {
+        SPI_FMEM_RX_DDR_MSK_EN_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bits 14:20 - The delay number of data strobe which from memory based on SPI_CLK."]
     #[inline(always)]
@@ -679,7 +763,7 @@ impl R {
     pub fn spi_fmem_dqs_ca_in(&self) -> SPI_FMEM_DQS_CA_IN_R {
         SPI_FMEM_DQS_CA_IN_R::new(((self.bits >> 26) & 0x01) != 0)
     }
-    #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
+    #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses to flash or SPI1 accesses flash or sram."]
     #[inline(always)]
     pub fn spi_fmem_hyperbus_dummy_2x(&self) -> SPI_FMEM_HYPERBUS_DUMMY_2X_R {
         SPI_FMEM_HYPERBUS_DUMMY_2X_R::new(((self.bits >> 27) & 0x01) != 0)
@@ -707,12 +791,12 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - 1: in DDR mode, 0: in SDR mode."]
+    #[doc = "Bit 0 - 1: in ddr mode, 0 in sdr mode"]
     #[inline(always)]
     pub fn spi_fmem_ddr_en(&mut self) -> SPI_FMEM_DDR_EN_W {
         SPI_FMEM_DDR_EN_W { w: self }
     }
-    #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in DDRmode."]
+    #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in DDR mode."]
     #[inline(always)]
     pub fn spi_fmem_var_dummy(&mut self) -> SPI_FMEM_VAR_DUMMY_W {
         SPI_FMEM_VAR_DUMMY_W { w: self }
@@ -722,12 +806,12 @@ impl W {
     pub fn spi_fmem_ddr_rdat_swp(&mut self) -> SPI_FMEM_DDR_RDAT_SWP_W {
         SPI_FMEM_DDR_RDAT_SWP_W { w: self }
     }
-    #[doc = "Bit 3 - Set the bit to reorder TX data of the word in DDR mode."]
+    #[doc = "Bit 3 - Set the bit to swap TX data of a word in DDR mode."]
     #[inline(always)]
     pub fn spi_fmem_ddr_wdat_swp(&mut self) -> SPI_FMEM_DDR_WDAT_SWP_W {
         SPI_FMEM_DDR_WDAT_SWP_W { w: self }
     }
-    #[doc = "Bit 4 - the bit is used to disable dual edge in command phase when DDR mode."]
+    #[doc = "Bit 4 - the bit is used to disable dual edge in CMD phase when ddr mode."]
     #[inline(always)]
     pub fn spi_fmem_ddr_cmd_dis(&mut self) -> SPI_FMEM_DDR_CMD_DIS_W {
         SPI_FMEM_DDR_CMD_DIS_W { w: self }
@@ -736,6 +820,16 @@ impl W {
     #[inline(always)]
     pub fn spi_fmem_outminbytelen(&mut self) -> SPI_FMEM_OUTMINBYTELEN_W {
         SPI_FMEM_OUTMINBYTELEN_W { w: self }
+    }
+    #[doc = "Bit 12 - Set this bit to mask the first or the last byte in MSPI ECC DDR write mode, when accesses to flash."]
+    #[inline(always)]
+    pub fn spi_fmem_tx_ddr_msk_en(&mut self) -> SPI_FMEM_TX_DDR_MSK_EN_W {
+        SPI_FMEM_TX_DDR_MSK_EN_W { w: self }
+    }
+    #[doc = "Bit 13 - Set this bit to mask the first or the last byte in MSPI ECC DDR read mode, when accesses to flash."]
+    #[inline(always)]
+    pub fn spi_fmem_rx_ddr_msk_en(&mut self) -> SPI_FMEM_RX_DDR_MSK_EN_W {
+        SPI_FMEM_RX_DDR_MSK_EN_W { w: self }
     }
     #[doc = "Bits 14:20 - The delay number of data strobe which from memory based on SPI_CLK."]
     #[inline(always)]
@@ -767,7 +861,7 @@ impl W {
     pub fn spi_fmem_dqs_ca_in(&mut self) -> SPI_FMEM_DQS_CA_IN_W {
         SPI_FMEM_DQS_CA_IN_W { w: self }
     }
-    #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
+    #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses to flash or SPI1 accesses flash or sram."]
     #[inline(always)]
     pub fn spi_fmem_hyperbus_dummy_2x(&mut self) -> SPI_FMEM_HYPERBUS_DUMMY_2X_W {
         SPI_FMEM_HYPERBUS_DUMMY_2X_W { w: self }
@@ -800,7 +894,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 DDR control register\n\nThis register you can [`read`]
+#[doc = "SPI0 flash DDR mode control register\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]
@@ -822,10 +916,10 @@ impl crate::Readable for DDR_SPEC {
 impl crate::Writable for DDR_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets DDR to value 0x20"]
+#[doc = "`reset()` method sets DDR to value 0x3020"]
 impl crate::Resettable for DDR_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x20
+        0x3020
     }
 }

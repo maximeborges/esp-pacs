@@ -56,26 +56,26 @@ impl<'a> TOUCH_SLP_CHANNEL_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_APPROACH_MEAS_TIME` reader - approach pads total meas times"]
-pub struct TOUCH_APPROACH_MEAS_TIME_R(crate::FieldReader<u8, u8>);
-impl TOUCH_APPROACH_MEAS_TIME_R {
+#[doc = "Field `MEAS_TIME` reader - approach pads total meas times"]
+pub struct MEAS_TIME_R(crate::FieldReader<u8, u8>);
+impl MEAS_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_APPROACH_MEAS_TIME_R(crate::FieldReader::new(bits))
+        MEAS_TIME_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for TOUCH_APPROACH_MEAS_TIME_R {
+impl core::ops::Deref for MEAS_TIME_R {
     type Target = crate::FieldReader<u8, u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_APPROACH_MEAS_TIME` writer - approach pads total meas times"]
-pub struct TOUCH_APPROACH_MEAS_TIME_W<'a> {
+#[doc = "Field `MEAS_TIME` writer - approach pads total meas times"]
+pub struct MEAS_TIME_W<'a> {
     w: &'a mut W,
 }
-impl<'a> TOUCH_APPROACH_MEAS_TIME_W<'a> {
+impl<'a> MEAS_TIME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -86,8 +86,8 @@ impl<'a> TOUCH_APPROACH_MEAS_TIME_W<'a> {
 impl R {
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
-    pub fn touch_approach_meas_time(&self) -> TOUCH_APPROACH_MEAS_TIME_R {
-        TOUCH_APPROACH_MEAS_TIME_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn meas_time(&self) -> MEAS_TIME_R {
+        MEAS_TIME_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
@@ -98,8 +98,8 @@ impl W {
     }
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
-    pub fn touch_approach_meas_time(&mut self) -> TOUCH_APPROACH_MEAS_TIME_W {
-        TOUCH_APPROACH_MEAS_TIME_W { w: self }
+    pub fn meas_time(&mut self) -> MEAS_TIME_W {
+        MEAS_TIME_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

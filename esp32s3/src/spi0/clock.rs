@@ -88,7 +88,7 @@ impl<'a> CLKCNT_H_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CLKCNT_N` reader - When SPI1 accesses to flash or Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
+#[doc = "Field `CLKCNT_N` reader - When SPI0 accesses flash, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
 pub struct CLKCNT_N_R(crate::FieldReader<u8, u8>);
 impl CLKCNT_N_R {
     #[inline(always)]
@@ -103,7 +103,7 @@ impl core::ops::Deref for CLKCNT_N_R {
         &self.0
     }
 }
-#[doc = "Field `CLKCNT_N` writer - When SPI1 accesses to flash or Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
+#[doc = "Field `CLKCNT_N` writer - When SPI0 accesses flash, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
 pub struct CLKCNT_N_W<'a> {
     w: &'a mut W,
 }
@@ -115,7 +115,7 @@ impl<'a> CLKCNT_N_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CLK_EQU_SYSCLK` reader - When SPI1 access to flash or Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
+#[doc = "Field `CLK_EQU_SYSCLK` reader - When SPI0 accesses flash, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
 pub struct CLK_EQU_SYSCLK_R(crate::FieldReader<bool, bool>);
 impl CLK_EQU_SYSCLK_R {
     #[inline(always)]
@@ -130,7 +130,7 @@ impl core::ops::Deref for CLK_EQU_SYSCLK_R {
         &self.0
     }
 }
-#[doc = "Field `CLK_EQU_SYSCLK` writer - When SPI1 access to flash or Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
+#[doc = "Field `CLK_EQU_SYSCLK` writer - When SPI0 accesses flash, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
 pub struct CLK_EQU_SYSCLK_W<'a> {
     w: &'a mut W,
 }
@@ -163,12 +163,12 @@ impl R {
     pub fn clkcnt_h(&self) -> CLKCNT_H_R {
         CLKCNT_H_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 16:23 - When SPI1 accesses to flash or Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
+    #[doc = "Bits 16:23 - When SPI0 accesses flash, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
     #[inline(always)]
     pub fn clkcnt_n(&self) -> CLKCNT_N_R {
         CLKCNT_N_R::new(((self.bits >> 16) & 0xff) as u8)
     }
-    #[doc = "Bit 31 - When SPI1 access to flash or Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
+    #[doc = "Bit 31 - When SPI0 accesses flash, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
     pub fn clk_equ_sysclk(&self) -> CLK_EQU_SYSCLK_R {
         CLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 0x01) != 0)
@@ -185,12 +185,12 @@ impl W {
     pub fn clkcnt_h(&mut self) -> CLKCNT_H_W {
         CLKCNT_H_W { w: self }
     }
-    #[doc = "Bits 16:23 - When SPI1 accesses to flash or Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
+    #[doc = "Bits 16:23 - When SPI0 accesses flash, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
     #[inline(always)]
     pub fn clkcnt_n(&mut self) -> CLKCNT_N_W {
         CLKCNT_N_W { w: self }
     }
-    #[doc = "Bit 31 - When SPI1 access to flash or Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
+    #[doc = "Bit 31 - When SPI0 accesses flash, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
     pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W {
         CLK_EQU_SYSCLK_W { w: self }
@@ -202,7 +202,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI_CLK clock division register when SPI1 accesses to flash or Ext_RAM.\n\nThis register you can [`read`]
+#[doc = "SPI_CLK clock division register when SPI0 accesses to flash.\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]

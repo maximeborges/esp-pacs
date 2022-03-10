@@ -34,80 +34,6 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PER_END_INT_ENA` reader - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-pub struct PER_END_INT_ENA_R(crate::FieldReader<bool, bool>);
-impl PER_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PER_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PER_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PER_END_INT_ENA` writer - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-pub struct PER_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PER_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-#[doc = "Field `PES_END_INT_ENA` reader - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-pub struct PES_END_INT_ENA_R(crate::FieldReader<bool, bool>);
-impl PES_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PES_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PES_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PES_END_INT_ENA` writer - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-pub struct PES_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PES_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `TOTAL_TRANS_END_INT_ENA` reader - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
 pub struct TOTAL_TRANS_END_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOTAL_TRANS_END_INT_ENA_R {
@@ -145,26 +71,26 @@ impl<'a> TOTAL_TRANS_END_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_INT_ENA` reader - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub struct BROWN_OUT_INT_ENA_R(crate::FieldReader<bool, bool>);
-impl BROWN_OUT_INT_ENA_R {
+#[doc = "Field `ECC_ERR_INT_ENA` reader - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
+pub struct ECC_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+impl ECC_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_INT_ENA_R(crate::FieldReader::new(bits))
+        ECC_ERR_INT_ENA_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for BROWN_OUT_INT_ENA_R {
+impl core::ops::Deref for ECC_ERR_INT_ENA_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_INT_ENA` writer - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub struct BROWN_OUT_INT_ENA_W<'a> {
+#[doc = "Field `ECC_ERR_INT_ENA` writer - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
+pub struct ECC_ERR_INT_ENA_W<'a> {
     w: &'a mut W,
 }
-impl<'a> BROWN_OUT_INT_ENA_W<'a> {
+impl<'a> ECC_ERR_INT_ENA_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -178,52 +104,32 @@ impl<'a> BROWN_OUT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
 impl R {
-    #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-    #[inline(always)]
-    pub fn per_end_int_ena(&self) -> PER_END_INT_ENA_R {
-        PER_END_INT_ENA_R::new((self.bits & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-    #[inline(always)]
-    pub fn pes_end_int_ena(&self) -> PES_END_INT_ENA_R {
-        PES_END_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_ena(&self) -> TOTAL_TRANS_END_INT_ENA_R {
         TOTAL_TRANS_END_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
+    #[doc = "Bit 4 - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn brown_out_int_ena(&self) -> BROWN_OUT_INT_ENA_R {
-        BROWN_OUT_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn ecc_err_int_ena(&self) -> ECC_ERR_INT_ENA_R {
+        ECC_ERR_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
-    #[inline(always)]
-    pub fn per_end_int_ena(&mut self) -> PER_END_INT_ENA_W {
-        PER_END_INT_ENA_W { w: self }
-    }
-    #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
-    #[inline(always)]
-    pub fn pes_end_int_ena(&mut self) -> PES_END_INT_ENA_W {
-        PES_END_INT_ENA_W { w: self }
-    }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_ena(&mut self) -> TOTAL_TRANS_END_INT_ENA_W {
         TOTAL_TRANS_END_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 3 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
+    #[doc = "Bit 4 - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W {
-        BROWN_OUT_INT_ENA_W { w: self }
+    pub fn ecc_err_int_ena(&mut self) -> ECC_ERR_INT_ENA_W {
+        ECC_ERR_INT_ENA_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

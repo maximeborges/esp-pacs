@@ -34,33 +34,6 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `STATUS` reader - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
-pub struct STATUS_R(crate::FieldReader<u16, u16>);
-impl STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `STATUS` writer - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
-pub struct STATUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
 pub struct WB_MODE_R(crate::FieldReader<u8, u8>);
 impl WB_MODE_R {
@@ -89,11 +62,6 @@ impl<'a> WB_MODE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
-    #[inline(always)]
-    pub fn status(&self) -> STATUS_R {
-        STATUS_R::new((self.bits & 0xffff) as u16)
-    }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
     #[inline(always)]
     pub fn wb_mode(&self) -> WB_MODE_R {
@@ -101,11 +69,6 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
-    #[inline(always)]
-    pub fn status(&mut self) -> STATUS_W {
-        STATUS_W { w: self }
-    }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
     #[inline(always)]
     pub fn wb_mode(&mut self) -> WB_MODE_W {
@@ -118,7 +81,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 read control register.\n\nThis register you can [`read`]
+#[doc = "SPI0 read control register.\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]

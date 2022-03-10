@@ -118,7 +118,7 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 user2 register.\n\nThis register you can [`read`]
+#[doc = "SPI0 user2 register.\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]

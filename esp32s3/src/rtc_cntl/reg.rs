@@ -1,22 +1,22 @@
-#[doc = "Register `RTC` reader"]
-pub struct R(crate::R<RTC_SPEC>);
+#[doc = "Register `REG` reader"]
+pub struct R(crate::R<REG_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<RTC_SPEC>;
+    type Target = crate::R<REG_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<RTC_SPEC>> for R {
+impl From<crate::R<REG_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<RTC_SPEC>) -> Self {
+    fn from(reader: crate::R<REG_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `RTC` writer"]
-pub struct W(crate::W<RTC_SPEC>);
+#[doc = "Register `REG` writer"]
+pub struct W(crate::W<REG_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<RTC_SPEC>;
+    type Target = crate::W<REG_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<RTC_SPEC>> for W {
+impl From<crate::W<REG_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<RTC_SPEC>) -> Self {
+    fn from(writer: crate::W<REG_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -98,26 +98,26 @@ impl<'a> SCK_DCAP_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
-pub struct DBOOST_FORCE_PD_R(crate::FieldReader<bool, bool>);
-impl DBOOST_FORCE_PD_R {
+#[doc = "Field `RTC_DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
+pub struct RTC_DBOOST_FORCE_PD_R(crate::FieldReader<bool, bool>);
+impl RTC_DBOOST_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        DBOOST_FORCE_PD_R(crate::FieldReader::new(bits))
+        RTC_DBOOST_FORCE_PD_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for DBOOST_FORCE_PD_R {
+impl core::ops::Deref for RTC_DBOOST_FORCE_PD_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub struct DBOOST_FORCE_PD_W<'a> {
+#[doc = "Field `RTC_DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
+pub struct RTC_DBOOST_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> DBOOST_FORCE_PD_W<'a> {
+impl<'a> RTC_DBOOST_FORCE_PD_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -135,26 +135,26 @@ impl<'a> DBOOST_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
-pub struct DBOOST_FORCE_PU_R(crate::FieldReader<bool, bool>);
-impl DBOOST_FORCE_PU_R {
+#[doc = "Field `RTC_DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
+pub struct RTC_DBOOST_FORCE_PU_R(crate::FieldReader<bool, bool>);
+impl RTC_DBOOST_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        DBOOST_FORCE_PU_R(crate::FieldReader::new(bits))
+        RTC_DBOOST_FORCE_PU_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for DBOOST_FORCE_PU_R {
+impl core::ops::Deref for RTC_DBOOST_FORCE_PU_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub struct DBOOST_FORCE_PU_W<'a> {
+#[doc = "Field `RTC_DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
+pub struct RTC_DBOOST_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
-impl<'a> DBOOST_FORCE_PU_W<'a> {
+impl<'a> RTC_DBOOST_FORCE_PU_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -172,26 +172,26 @@ impl<'a> DBOOST_FORCE_PU_W<'a> {
         self.w
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub struct REGULATOR_FORCE_PD_R(crate::FieldReader<bool, bool>);
-impl REGULATOR_FORCE_PD_R {
+#[doc = "Field `RTC_REGULATOR_FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
+pub struct RTC_REGULATOR_FORCE_PD_R(crate::FieldReader<bool, bool>);
+impl RTC_REGULATOR_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        REGULATOR_FORCE_PD_R(crate::FieldReader::new(bits))
+        RTC_REGULATOR_FORCE_PD_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REGULATOR_FORCE_PD_R {
+impl core::ops::Deref for RTC_REGULATOR_FORCE_PD_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PD` writer - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub struct REGULATOR_FORCE_PD_W<'a> {
+#[doc = "Field `RTC_REGULATOR_FORCE_PD` writer - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
+pub struct RTC_REGULATOR_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REGULATOR_FORCE_PD_W<'a> {
+impl<'a> RTC_REGULATOR_FORCE_PD_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -209,26 +209,26 @@ impl<'a> REGULATOR_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PU` reader - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub struct REGULATOR_FORCE_PU_R(crate::FieldReader<bool, bool>);
-impl REGULATOR_FORCE_PU_R {
+#[doc = "Field `RTC_REGULATOR_FORCE_PU` reader - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
+pub struct RTC_REGULATOR_FORCE_PU_R(crate::FieldReader<bool, bool>);
+impl RTC_REGULATOR_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        REGULATOR_FORCE_PU_R(crate::FieldReader::new(bits))
+        RTC_REGULATOR_FORCE_PU_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for REGULATOR_FORCE_PU_R {
+impl core::ops::Deref for RTC_REGULATOR_FORCE_PU_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PU` writer - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub struct REGULATOR_FORCE_PU_W<'a> {
+#[doc = "Field `RTC_REGULATOR_FORCE_PU` writer - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
+pub struct RTC_REGULATOR_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
-impl<'a> REGULATOR_FORCE_PU_W<'a> {
+impl<'a> RTC_REGULATOR_FORCE_PU_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -259,23 +259,23 @@ impl R {
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
-    pub fn dboost_force_pd(&self) -> DBOOST_FORCE_PD_R {
-        DBOOST_FORCE_PD_R::new(((self.bits >> 28) & 0x01) != 0)
+    pub fn rtc_dboost_force_pd(&self) -> RTC_DBOOST_FORCE_PD_R {
+        RTC_DBOOST_FORCE_PD_R::new(((self.bits >> 28) & 0x01) != 0)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
-    pub fn dboost_force_pu(&self) -> DBOOST_FORCE_PU_R {
-        DBOOST_FORCE_PU_R::new(((self.bits >> 29) & 0x01) != 0)
+    pub fn rtc_dboost_force_pu(&self) -> RTC_DBOOST_FORCE_PU_R {
+        RTC_DBOOST_FORCE_PU_R::new(((self.bits >> 29) & 0x01) != 0)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    pub fn regulator_force_pd(&self) -> REGULATOR_FORCE_PD_R {
-        REGULATOR_FORCE_PD_R::new(((self.bits >> 30) & 0x01) != 0)
+    pub fn rtc_regulator_force_pd(&self) -> RTC_REGULATOR_FORCE_PD_R {
+        RTC_REGULATOR_FORCE_PD_R::new(((self.bits >> 30) & 0x01) != 0)
     }
     #[doc = "Bit 31 - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    pub fn regulator_force_pu(&self) -> REGULATOR_FORCE_PU_R {
-        REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 0x01) != 0)
+    pub fn rtc_regulator_force_pu(&self) -> RTC_REGULATOR_FORCE_PU_R {
+        RTC_REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 0x01) != 0)
     }
 }
 impl W {
@@ -291,23 +291,23 @@ impl W {
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
-    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W {
-        DBOOST_FORCE_PD_W { w: self }
+    pub fn rtc_dboost_force_pd(&mut self) -> RTC_DBOOST_FORCE_PD_W {
+        RTC_DBOOST_FORCE_PD_W { w: self }
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
-    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W {
-        DBOOST_FORCE_PU_W { w: self }
+    pub fn rtc_dboost_force_pu(&mut self) -> RTC_DBOOST_FORCE_PU_W {
+        RTC_DBOOST_FORCE_PU_W { w: self }
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W {
-        REGULATOR_FORCE_PD_W { w: self }
+    pub fn rtc_regulator_force_pd(&mut self) -> RTC_REGULATOR_FORCE_PD_W {
+        RTC_REGULATOR_FORCE_PD_W { w: self }
     }
     #[doc = "Bit 31 - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W {
-        REGULATOR_FORCE_PU_W { w: self }
+    pub fn rtc_regulator_force_pu(&mut self) -> RTC_REGULATOR_FORCE_PU_W {
+        RTC_REGULATOR_FORCE_PU_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -322,24 +322,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg]
 (index.html) module"]
-pub struct RTC_SPEC;
-impl crate::RegisterSpec for RTC_SPEC {
+pub struct REG_SPEC;
+impl crate::RegisterSpec for REG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc::R]
+#[doc = "`read()` method returns [reg::R]
 (R) reader structure"]
-impl crate::Readable for RTC_SPEC {
+impl crate::Readable for REG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc::W]
+#[doc = "`write(|w| ..)` method takes [reg::W]
 (W) writer structure"]
-impl crate::Writable for RTC_SPEC {
+impl crate::Writable for REG_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets RTC to value 0xa000_0000"]
-impl crate::Resettable for RTC_SPEC {
+#[doc = "`reset()` method sets REG to value 0xa000_0000"]
+impl crate::Resettable for REG_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0xa000_0000
