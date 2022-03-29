@@ -34,16 +34,66 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024.\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum CK8M_DIV_A {
+    #[doc = "0: `0`"]
+    DIV128 = 0,
+    #[doc = "1: `1`"]
+    DIV256 = 1,
+    #[doc = "2: `10`"]
+    DIV512 = 2,
+    #[doc = "3: `11`"]
+    DIV1024 = 3,
+}
+impl From<CK8M_DIV_A> for u8 {
+    #[inline(always)]
+    fn from(variant: CK8M_DIV_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub struct CK8M_DIV_R(crate::FieldReader<u8, u8>);
+pub struct CK8M_DIV_R(crate::FieldReader<u8, CK8M_DIV_A>);
 impl CK8M_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CK8M_DIV_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CK8M_DIV_A {
+        match self.bits {
+            0 => CK8M_DIV_A::DIV128,
+            1 => CK8M_DIV_A::DIV256,
+            2 => CK8M_DIV_A::DIV512,
+            3 => CK8M_DIV_A::DIV1024,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `DIV128`"]
+    #[inline(always)]
+    pub fn is_div128(&self) -> bool {
+        **self == CK8M_DIV_A::DIV128
+    }
+    #[doc = "Checks if the value of the field is `DIV256`"]
+    #[inline(always)]
+    pub fn is_div256(&self) -> bool {
+        **self == CK8M_DIV_A::DIV256
+    }
+    #[doc = "Checks if the value of the field is `DIV512`"]
+    #[inline(always)]
+    pub fn is_div512(&self) -> bool {
+        **self == CK8M_DIV_A::DIV512
+    }
+    #[doc = "Checks if the value of the field is `DIV1024`"]
+    #[inline(always)]
+    pub fn is_div1024(&self) -> bool {
+        **self == CK8M_DIV_A::DIV1024
+    }
 }
 impl core::ops::Deref for CK8M_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, CK8M_DIV_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -54,9 +104,34 @@ pub struct CK8M_DIV_W<'a> {
     w: &'a mut W,
 }
 impl<'a> CK8M_DIV_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: CK8M_DIV_A) -> &'a mut W {
+        self.bits(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn div128(self) -> &'a mut W {
+        self.variant(CK8M_DIV_A::DIV128)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn div256(self) -> &'a mut W {
+        self.variant(CK8M_DIV_A::DIV256)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn div512(self) -> &'a mut W {
+        self.variant(CK8M_DIV_A::DIV512)
+    }
+    #[doc = "`11`"]
+    #[inline(always)]
+    pub fn div1024(self) -> &'a mut W {
+        self.variant(CK8M_DIV_A::DIV1024)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
         self.w
     }
@@ -98,16 +173,48 @@ impl<'a> ENB_CK8M_W<'a> {
         self.w
     }
 }
+#[doc = "1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ENB_CK8M_DIV_A {
+    #[doc = "0: `0`"]
+    CK8M_DIV_256 = 0,
+    #[doc = "1: `1`"]
+    CK8M = 1,
+}
+impl From<ENB_CK8M_DIV_A> for bool {
+    #[inline(always)]
+    fn from(variant: ENB_CK8M_DIV_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ENB_CK8M_DIV` reader - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
-pub struct ENB_CK8M_DIV_R(crate::FieldReader<bool, bool>);
+pub struct ENB_CK8M_DIV_R(crate::FieldReader<bool, ENB_CK8M_DIV_A>);
 impl ENB_CK8M_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENB_CK8M_DIV_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ENB_CK8M_DIV_A {
+        match self.bits {
+            false => ENB_CK8M_DIV_A::CK8M_DIV_256,
+            true => ENB_CK8M_DIV_A::CK8M,
+        }
+    }
+    #[doc = "Checks if the value of the field is `CK8M_DIV_256`"]
+    #[inline(always)]
+    pub fn is_ck8m_div_256(&self) -> bool {
+        **self == ENB_CK8M_DIV_A::CK8M_DIV_256
+    }
+    #[doc = "Checks if the value of the field is `CK8M`"]
+    #[inline(always)]
+    pub fn is_ck8m(&self) -> bool {
+        **self == ENB_CK8M_DIV_A::CK8M
+    }
 }
 impl core::ops::Deref for ENB_CK8M_DIV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, ENB_CK8M_DIV_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,6 +225,21 @@ pub struct ENB_CK8M_DIV_W<'a> {
     w: &'a mut W,
 }
 impl<'a> ENB_CK8M_DIV_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: ENB_CK8M_DIV_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn ck8m_div_256(self) -> &'a mut W {
+        self.variant(ENB_CK8M_DIV_A::CK8M_DIV_256)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn ck8m(self) -> &'a mut W {
+        self.variant(ENB_CK8M_DIV_A::CK8M)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -485,16 +607,66 @@ impl<'a> CK8M_FORCE_PU_W<'a> {
         self.w
     }
 }
+#[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum SOC_CLK_SEL_A {
+    #[doc = "0: `0`"]
+    XTAL = 0,
+    #[doc = "1: `1`"]
+    PLL = 1,
+    #[doc = "2: `10`"]
+    CK8M = 2,
+    #[doc = "3: `11`"]
+    APLL = 3,
+}
+impl From<SOC_CLK_SEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SOC_CLK_SEL_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `SOC_CLK_SEL` reader - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub struct SOC_CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SOC_CLK_SEL_R(crate::FieldReader<u8, SOC_CLK_SEL_A>);
 impl SOC_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SOC_CLK_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SOC_CLK_SEL_A {
+        match self.bits {
+            0 => SOC_CLK_SEL_A::XTAL,
+            1 => SOC_CLK_SEL_A::PLL,
+            2 => SOC_CLK_SEL_A::CK8M,
+            3 => SOC_CLK_SEL_A::APLL,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `XTAL`"]
+    #[inline(always)]
+    pub fn is_xtal(&self) -> bool {
+        **self == SOC_CLK_SEL_A::XTAL
+    }
+    #[doc = "Checks if the value of the field is `PLL`"]
+    #[inline(always)]
+    pub fn is_pll(&self) -> bool {
+        **self == SOC_CLK_SEL_A::PLL
+    }
+    #[doc = "Checks if the value of the field is `CK8M`"]
+    #[inline(always)]
+    pub fn is_ck8m(&self) -> bool {
+        **self == SOC_CLK_SEL_A::CK8M
+    }
+    #[doc = "Checks if the value of the field is `APLL`"]
+    #[inline(always)]
+    pub fn is_apll(&self) -> bool {
+        **self == SOC_CLK_SEL_A::APLL
+    }
 }
 impl core::ops::Deref for SOC_CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, SOC_CLK_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -505,23 +677,80 @@ pub struct SOC_CLK_SEL_W<'a> {
     w: &'a mut W,
 }
 impl<'a> SOC_CLK_SEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: SOC_CLK_SEL_A) -> &'a mut W {
+        self.bits(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn xtal(self) -> &'a mut W {
+        self.variant(SOC_CLK_SEL_A::XTAL)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn pll(self) -> &'a mut W {
+        self.variant(SOC_CLK_SEL_A::PLL)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn ck8m(self) -> &'a mut W {
+        self.variant(SOC_CLK_SEL_A::CK8M)
+    }
+    #[doc = "`11`"]
+    #[inline(always)]
+    pub fn apll(self) -> &'a mut W {
+        self.variant(SOC_CLK_SEL_A::APLL)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+    pub fn bits(self, value: u8) -> &'a mut W {
         self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
         self.w
     }
 }
+#[doc = "fast_clk_rtc sel. 0: XTAL div 4 1: CK8M\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum FAST_CLK_RTC_SEL_A {
+    #[doc = "0: `0`"]
+    XTAL_DIV_4 = 0,
+    #[doc = "1: `1`"]
+    CK8M = 1,
+}
+impl From<FAST_CLK_RTC_SEL_A> for bool {
+    #[inline(always)]
+    fn from(variant: FAST_CLK_RTC_SEL_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
-pub struct FAST_CLK_RTC_SEL_R(crate::FieldReader<bool, bool>);
+pub struct FAST_CLK_RTC_SEL_R(crate::FieldReader<bool, FAST_CLK_RTC_SEL_A>);
 impl FAST_CLK_RTC_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FAST_CLK_RTC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> FAST_CLK_RTC_SEL_A {
+        match self.bits {
+            false => FAST_CLK_RTC_SEL_A::XTAL_DIV_4,
+            true => FAST_CLK_RTC_SEL_A::CK8M,
+        }
+    }
+    #[doc = "Checks if the value of the field is `XTAL_DIV_4`"]
+    #[inline(always)]
+    pub fn is_xtal_div_4(&self) -> bool {
+        **self == FAST_CLK_RTC_SEL_A::XTAL_DIV_4
+    }
+    #[doc = "Checks if the value of the field is `CK8M`"]
+    #[inline(always)]
+    pub fn is_ck8m(&self) -> bool {
+        **self == FAST_CLK_RTC_SEL_A::CK8M
+    }
 }
 impl core::ops::Deref for FAST_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool, FAST_CLK_RTC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -532,6 +761,21 @@ pub struct FAST_CLK_RTC_SEL_W<'a> {
     w: &'a mut W,
 }
 impl<'a> FAST_CLK_RTC_SEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: FAST_CLK_RTC_SEL_A) -> &'a mut W {
+        self.bit(variant.into())
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn xtal_div_4(self) -> &'a mut W {
+        self.variant(FAST_CLK_RTC_SEL_A::XTAL_DIV_4)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn ck8m(self) -> &'a mut W {
+        self.variant(FAST_CLK_RTC_SEL_A::CK8M)
+    }
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -549,16 +793,58 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
         self.w
     }
 }
+#[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum ANA_CLK_RTC_SEL_A {
+    #[doc = "0: `0`"]
+    SLOW_CK = 0,
+    #[doc = "1: `1`"]
+    CK_XTAL_32K = 1,
+    #[doc = "2: `10`"]
+    CK8M_D256_OUT = 2,
+}
+impl From<ANA_CLK_RTC_SEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: ANA_CLK_RTC_SEL_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8, u8>);
+pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8, ANA_CLK_RTC_SEL_A>);
 impl ANA_CLK_RTC_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ANA_CLK_RTC_SEL_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<ANA_CLK_RTC_SEL_A> {
+        match self.bits {
+            0 => Some(ANA_CLK_RTC_SEL_A::SLOW_CK),
+            1 => Some(ANA_CLK_RTC_SEL_A::CK_XTAL_32K),
+            2 => Some(ANA_CLK_RTC_SEL_A::CK8M_D256_OUT),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `SLOW_CK`"]
+    #[inline(always)]
+    pub fn is_slow_ck(&self) -> bool {
+        **self == ANA_CLK_RTC_SEL_A::SLOW_CK
+    }
+    #[doc = "Checks if the value of the field is `CK_XTAL_32K`"]
+    #[inline(always)]
+    pub fn is_ck_xtal_32k(&self) -> bool {
+        **self == ANA_CLK_RTC_SEL_A::CK_XTAL_32K
+    }
+    #[doc = "Checks if the value of the field is `CK8M_D256_OUT`"]
+    #[inline(always)]
+    pub fn is_ck8m_d256_out(&self) -> bool {
+        **self == ANA_CLK_RTC_SEL_A::CK8M_D256_OUT
+    }
 }
 impl core::ops::Deref for ANA_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, ANA_CLK_RTC_SEL_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -569,6 +855,26 @@ pub struct ANA_CLK_RTC_SEL_W<'a> {
     w: &'a mut W,
 }
 impl<'a> ANA_CLK_RTC_SEL_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: ANA_CLK_RTC_SEL_A) -> &'a mut W {
+        unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn slow_ck(self) -> &'a mut W {
+        self.variant(ANA_CLK_RTC_SEL_A::SLOW_CK)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn ck_xtal_32k(self) -> &'a mut W {
+        self.variant(ANA_CLK_RTC_SEL_A::CK_XTAL_32K)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn ck8m_d256_out(self) -> &'a mut W {
+        self.variant(ANA_CLK_RTC_SEL_A::CK8M_D256_OUT)
+    }
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {

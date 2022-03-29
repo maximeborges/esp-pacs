@@ -35,7 +35,7 @@ impl R {
         TIMER_VALUE0_LOW_R::new(self.bits)
     }
 }
-#[doc = "Stores the lower 32 bits of RTC timer 0\n\nThis register you can [`read`]
+#[doc = "Stores the lower 32 bits of RTC timer 0.\n\nThis register you can [`read`]
 (crate::generic::Reg::read). See [API]
 (https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_low0]
 (index.html) module"]

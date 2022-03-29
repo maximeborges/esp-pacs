@@ -34,7 +34,7 @@ impl From<crate::W<SLOW_CLK_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ANA_CLK_DIV_VLD` reader - Synchronizes the reg_rtc_ana_clk_div. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+#[doc = "Field `ANA_CLK_DIV_VLD` reader - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
 pub struct ANA_CLK_DIV_VLD_R(crate::FieldReader<bool, bool>);
 impl ANA_CLK_DIV_VLD_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for ANA_CLK_DIV_VLD_R {
         &self.0
     }
 }
-#[doc = "Field `ANA_CLK_DIV_VLD` writer - Synchronizes the reg_rtc_ana_clk_div. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+#[doc = "Field `ANA_CLK_DIV_VLD` writer - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
 pub struct ANA_CLK_DIV_VLD_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> ANA_CLK_DIV_VLD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `ANA_CLK_DIV` reader - Set the divider for the RTC clock."]
+#[doc = "Field `ANA_CLK_DIV` reader - Set the rtc_clk divider."]
 pub struct ANA_CLK_DIV_R(crate::FieldReader<u8, u8>);
 impl ANA_CLK_DIV_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for ANA_CLK_DIV_R {
         &self.0
     }
 }
-#[doc = "Field `ANA_CLK_DIV` writer - Set the divider for the RTC clock."]
+#[doc = "Field `ANA_CLK_DIV` writer - Set the rtc_clk divider."]
 pub struct ANA_CLK_DIV_W<'a> {
     w: &'a mut W,
 }
@@ -136,12 +136,12 @@ impl<'a> SLOW_CLK_NEXT_EDGE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 22 - Synchronizes the reg_rtc_ana_clk_div. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+    #[doc = "Bit 22 - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
     pub fn ana_clk_div_vld(&self) -> ANA_CLK_DIV_VLD_R {
         ANA_CLK_DIV_VLD_R::new(((self.bits >> 22) & 0x01) != 0)
     }
-    #[doc = "Bits 23:30 - Set the divider for the RTC clock."]
+    #[doc = "Bits 23:30 - Set the rtc_clk divider."]
     #[inline(always)]
     pub fn ana_clk_div(&self) -> ANA_CLK_DIV_R {
         ANA_CLK_DIV_R::new(((self.bits >> 23) & 0xff) as u8)
@@ -153,12 +153,12 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 22 - Synchronizes the reg_rtc_ana_clk_div. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+    #[doc = "Bit 22 - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
     pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W {
         ANA_CLK_DIV_VLD_W { w: self }
     }
-    #[doc = "Bits 23:30 - Set the divider for the RTC clock."]
+    #[doc = "Bits 23:30 - Set the rtc_clk divider."]
     #[inline(always)]
     pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W {
         ANA_CLK_DIV_W { w: self }

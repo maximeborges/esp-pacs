@@ -85,7 +85,7 @@ impl<'a> SDIO_IDLE_INT_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WDT_INT_CLR` writer - Clears the RTC watchdog interrupt."]
+#[doc = "Field `WDT_INT_CLR` writer - Enables the RTC watchdog interrupt."]
 pub struct WDT_INT_CLR_W<'a> {
     w: &'a mut W,
 }
@@ -129,7 +129,7 @@ impl<'a> TOUCH_SCAN_DONE_INT_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `ULP_CP_INT_CLR` writer - Clears the ULP co-processor interrupt."]
+#[doc = "Field `ULP_CP_INT_CLR` writer - Enables the ULP co-processor interrupt."]
 pub struct ULP_CP_INT_CLR_W<'a> {
     w: &'a mut W,
 }
@@ -283,7 +283,7 @@ impl<'a> SARADC1_INT_CLR_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TSENS_INT_CLR` writer - Clears the temperature sensor interrupt."]
+#[doc = "Field `TSENS_INT_CLR` writer - Clears the touch sensor interrupt."]
 pub struct TSENS_INT_CLR_W<'a> {
     w: &'a mut W,
 }
@@ -475,7 +475,7 @@ impl W {
     pub fn sdio_idle_int_clr(&mut self) -> SDIO_IDLE_INT_CLR_W {
         SDIO_IDLE_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 3 - Clears the RTC watchdog interrupt."]
+    #[doc = "Bit 3 - Enables the RTC watchdog interrupt."]
     #[inline(always)]
     pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W {
         WDT_INT_CLR_W { w: self }
@@ -485,7 +485,7 @@ impl W {
     pub fn touch_scan_done_int_clr(&mut self) -> TOUCH_SCAN_DONE_INT_CLR_W {
         TOUCH_SCAN_DONE_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 5 - Clears the ULP co-processor interrupt."]
+    #[doc = "Bit 5 - Enables the ULP co-processor interrupt."]
     #[inline(always)]
     pub fn ulp_cp_int_clr(&mut self) -> ULP_CP_INT_CLR_W {
         ULP_CP_INT_CLR_W { w: self }
@@ -520,7 +520,7 @@ impl W {
     pub fn saradc1_int_clr(&mut self) -> SARADC1_INT_CLR_W {
         SARADC1_INT_CLR_W { w: self }
     }
-    #[doc = "Bit 12 - Clears the temperature sensor interrupt."]
+    #[doc = "Bit 12 - Clears the touch sensor interrupt."]
     #[inline(always)]
     pub fn tsens_int_clr(&mut self) -> TSENS_INT_CLR_W {
         TSENS_INT_CLR_W { w: self }

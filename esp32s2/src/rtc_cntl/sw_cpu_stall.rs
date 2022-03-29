@@ -34,7 +34,9 @@ impl From<crate::W<SW_CPU_STALL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C1` reader - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\]
+ reg_sw_stall_appcpu_c0\\[1:0\\]
+} == 0x86 will stall APP CPU"]
 pub struct SW_STALL_APPCPU_C1_R(crate::FieldReader<u8, u8>);
 impl SW_STALL_APPCPU_C1_R {
     #[inline(always)]
@@ -49,7 +51,9 @@ impl core::ops::Deref for SW_STALL_APPCPU_C1_R {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C1` writer - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\]
+ reg_sw_stall_appcpu_c0\\[1:0\\]
+} == 0x86 will stall APP CPU"]
 pub struct SW_STALL_APPCPU_C1_W<'a> {
     w: &'a mut W,
 }
@@ -61,7 +65,7 @@ impl<'a> SW_STALL_APPCPU_C1_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C1` reader - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_PROCPU_C1` reader - Set this bit to allow the SW to be able to send the CPU into stalling."]
 pub struct SW_STALL_PROCPU_C1_R(crate::FieldReader<u8, u8>);
 impl SW_STALL_PROCPU_C1_R {
     #[inline(always)]
@@ -76,7 +80,7 @@ impl core::ops::Deref for SW_STALL_PROCPU_C1_R {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C1` writer - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_PROCPU_C1` writer - Set this bit to allow the SW to be able to send the CPU into stalling."]
 pub struct SW_STALL_PROCPU_C1_W<'a> {
     w: &'a mut W,
 }
@@ -89,24 +93,28 @@ impl<'a> SW_STALL_PROCPU_C1_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 20:25 - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
+ reg_sw_stall_appcpu_c0\\[1:0\\]
+} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&self) -> SW_STALL_APPCPU_C1_R {
         SW_STALL_APPCPU_C1_R::new(((self.bits >> 20) & 0x3f) as u8)
     }
-    #[doc = "Bits 26:31 - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+    #[doc = "Bits 26:31 - Set this bit to allow the SW to be able to send the CPU into stalling."]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&self) -> SW_STALL_PROCPU_C1_R {
         SW_STALL_PROCPU_C1_R::new(((self.bits >> 26) & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 20:25 - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
+ reg_sw_stall_appcpu_c0\\[1:0\\]
+} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W {
         SW_STALL_APPCPU_C1_W { w: self }
     }
-    #[doc = "Bits 26:31 - When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW."]
+    #[doc = "Bits 26:31 - Set this bit to allow the SW to be able to send the CPU into stalling."]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W {
         SW_STALL_PROCPU_C1_W { w: self }

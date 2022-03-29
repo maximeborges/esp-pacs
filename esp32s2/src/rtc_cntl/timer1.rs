@@ -34,7 +34,7 @@ impl From<crate::W<TIMER1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CPU_STALL_EN` reader - Enables the CPU stalling."]
+#[doc = "Field `CPU_STALL_EN` reader - Enables CPU stalling."]
 pub struct CPU_STALL_EN_R(crate::FieldReader<bool, bool>);
 impl CPU_STALL_EN_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for CPU_STALL_EN_R {
         &self.0
     }
 }
-#[doc = "Field `CPU_STALL_EN` writer - Enables the CPU stalling."]
+#[doc = "Field `CPU_STALL_EN` writer - Enables CPU stalling."]
 pub struct CPU_STALL_EN_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> CPU_STALL_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CPU_STALL_WAIT` reader - Sets the CPU stall waiting cycles (using the RTC fast clock)."]
+#[doc = "Field `CPU_STALL_WAIT` reader - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
 pub struct CPU_STALL_WAIT_R(crate::FieldReader<u8, u8>);
 impl CPU_STALL_WAIT_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for CPU_STALL_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `CPU_STALL_WAIT` writer - Sets the CPU stall waiting cycles (using the RTC fast clock)."]
+#[doc = "Field `CPU_STALL_WAIT` writer - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
 pub struct CPU_STALL_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -98,7 +98,7 @@ impl<'a> CPU_STALL_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CK8M_WAIT` reader - Sets the 8 MHz clock waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `CK8M_WAIT` reader - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
 pub struct CK8M_WAIT_R(crate::FieldReader<u8, u8>);
 impl CK8M_WAIT_R {
     #[inline(always)]
@@ -113,7 +113,7 @@ impl core::ops::Deref for CK8M_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `CK8M_WAIT` writer - Sets the 8 MHz clock waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `CK8M_WAIT` writer - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
 pub struct CK8M_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -125,7 +125,7 @@ impl<'a> CK8M_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTL_BUF_WAIT` reader - Sets the XTAL waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `XTL_BUF_WAIT` reader - Sets the XTAL waiting cycle (using the RTC slow clock)."]
 pub struct XTL_BUF_WAIT_R(crate::FieldReader<u16, u16>);
 impl XTL_BUF_WAIT_R {
     #[inline(always)]
@@ -140,7 +140,7 @@ impl core::ops::Deref for XTL_BUF_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `XTL_BUF_WAIT` writer - Sets the XTAL waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `XTL_BUF_WAIT` writer - Sets the XTAL waiting cycle (using the RTC slow clock)."]
 pub struct XTL_BUF_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -152,7 +152,7 @@ impl<'a> XTL_BUF_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `PLL_BUF_WAIT` reader - Sets the PLL waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `PLL_BUF_WAIT` reader - Sets the PLL waiting cycle (using the RTC slow clock)."]
 pub struct PLL_BUF_WAIT_R(crate::FieldReader<u8, u8>);
 impl PLL_BUF_WAIT_R {
     #[inline(always)]
@@ -167,7 +167,7 @@ impl core::ops::Deref for PLL_BUF_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `PLL_BUF_WAIT` writer - Sets the PLL waiting cycles (using the RTC slow clock)."]
+#[doc = "Field `PLL_BUF_WAIT` writer - Sets the PLL waiting cycle (using the RTC slow clock)."]
 pub struct PLL_BUF_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -180,54 +180,54 @@ impl<'a> PLL_BUF_WAIT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Enables the CPU stalling."]
+    #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
     pub fn cpu_stall_en(&self) -> CPU_STALL_EN_R {
         CPU_STALL_EN_R::new((self.bits & 0x01) != 0)
     }
-    #[doc = "Bits 1:5 - Sets the CPU stall waiting cycles (using the RTC fast clock)."]
+    #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
     pub fn cpu_stall_wait(&self) -> CPU_STALL_WAIT_R {
         CPU_STALL_WAIT_R::new(((self.bits >> 1) & 0x1f) as u8)
     }
-    #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
     pub fn ck8m_wait(&self) -> CK8M_WAIT_R {
         CK8M_WAIT_R::new(((self.bits >> 6) & 0xff) as u8)
     }
-    #[doc = "Bits 14:23 - Sets the XTAL waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn xtl_buf_wait(&self) -> XTL_BUF_WAIT_R {
         XTL_BUF_WAIT_R::new(((self.bits >> 14) & 0x03ff) as u16)
     }
-    #[doc = "Bits 24:31 - Sets the PLL waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn pll_buf_wait(&self) -> PLL_BUF_WAIT_R {
         PLL_BUF_WAIT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Enables the CPU stalling."]
+    #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
     pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W {
         CPU_STALL_EN_W { w: self }
     }
-    #[doc = "Bits 1:5 - Sets the CPU stall waiting cycles (using the RTC fast clock)."]
+    #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
     pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W {
         CPU_STALL_WAIT_W { w: self }
     }
-    #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
     pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W {
         CK8M_WAIT_W { w: self }
     }
-    #[doc = "Bits 14:23 - Sets the XTAL waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W {
         XTL_BUF_WAIT_W { w: self }
     }
-    #[doc = "Bits 24:31 - Sets the PLL waiting cycles (using the RTC slow clock)."]
+    #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W {
         PLL_BUF_WAIT_W { w: self }

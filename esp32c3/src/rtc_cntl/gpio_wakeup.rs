@@ -1,22 +1,22 @@
-#[doc = "Register `CNTL_GPIO_WAKEUP` reader"]
-pub struct R(crate::R<CNTL_GPIO_WAKEUP_SPEC>);
+#[doc = "Register `GPIO_WAKEUP` reader"]
+pub struct R(crate::R<GPIO_WAKEUP_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CNTL_GPIO_WAKEUP_SPEC>;
+    type Target = crate::R<GPIO_WAKEUP_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CNTL_GPIO_WAKEUP_SPEC>> for R {
+impl From<crate::R<GPIO_WAKEUP_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CNTL_GPIO_WAKEUP_SPEC>) -> Self {
+    fn from(reader: crate::R<GPIO_WAKEUP_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CNTL_GPIO_WAKEUP` writer"]
-pub struct W(crate::W<CNTL_GPIO_WAKEUP_SPEC>);
+#[doc = "Register `GPIO_WAKEUP` writer"]
+pub struct W(crate::W<GPIO_WAKEUP_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CNTL_GPIO_WAKEUP_SPEC>;
+    type Target = crate::W<GPIO_WAKEUP_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CNTL_GPIO_WAKEUP_SPEC>> for W {
+impl From<crate::W<GPIO_WAKEUP_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CNTL_GPIO_WAKEUP_SPEC>) -> Self {
+    fn from(writer: crate::W<GPIO_WAKEUP_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -668,24 +668,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl_gpio_wakeup]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_wakeup]
 (index.html) module"]
-pub struct CNTL_GPIO_WAKEUP_SPEC;
-impl crate::RegisterSpec for CNTL_GPIO_WAKEUP_SPEC {
+pub struct GPIO_WAKEUP_SPEC;
+impl crate::RegisterSpec for GPIO_WAKEUP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl_gpio_wakeup::R]
+#[doc = "`read()` method returns [gpio_wakeup::R]
 (R) reader structure"]
-impl crate::Readable for CNTL_GPIO_WAKEUP_SPEC {
+impl crate::Readable for GPIO_WAKEUP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cntl_gpio_wakeup::W]
+#[doc = "`write(|w| ..)` method takes [gpio_wakeup::W]
 (W) writer structure"]
-impl crate::Writable for CNTL_GPIO_WAKEUP_SPEC {
+impl crate::Writable for GPIO_WAKEUP_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CNTL_GPIO_WAKEUP to value 0"]
-impl crate::Resettable for CNTL_GPIO_WAKEUP_SPEC {
+#[doc = "`reset()` method sets GPIO_WAKEUP to value 0"]
+impl crate::Resettable for GPIO_WAKEUP_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

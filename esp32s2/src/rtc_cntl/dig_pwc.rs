@@ -552,7 +552,7 @@ impl<'a> INTER_RAM4_FORCE_PU_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WIFI_FORCE_PD` reader - Set this bit to FPD the Wi-Fi digital circuit in the digital system."]
+#[doc = "Field `WIFI_FORCE_PD` reader - Set this bit to FPD the Wi-Fi circuit."]
 pub struct WIFI_FORCE_PD_R(crate::FieldReader<bool, bool>);
 impl WIFI_FORCE_PD_R {
     #[inline(always)]
@@ -567,7 +567,7 @@ impl core::ops::Deref for WIFI_FORCE_PD_R {
         &self.0
     }
 }
-#[doc = "Field `WIFI_FORCE_PD` writer - Set this bit to FPD the Wi-Fi digital circuit in the digital system."]
+#[doc = "Field `WIFI_FORCE_PD` writer - Set this bit to FPD the Wi-Fi circuit."]
 pub struct WIFI_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
@@ -589,7 +589,7 @@ impl<'a> WIFI_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WIFI_FORCE_PU` reader - Set this bit to FPU the Wi-Fi digital circuit in the digital system."]
+#[doc = "Field `WIFI_FORCE_PU` reader - Set this bit to FPU the Wi-Fi circuit."]
 pub struct WIFI_FORCE_PU_R(crate::FieldReader<bool, bool>);
 impl WIFI_FORCE_PU_R {
     #[inline(always)]
@@ -604,7 +604,7 @@ impl core::ops::Deref for WIFI_FORCE_PU_R {
         &self.0
     }
 }
-#[doc = "Field `WIFI_FORCE_PU` writer - Set this bit to FPU the Wi-Fi digital circuit in the digital system."]
+#[doc = "Field `WIFI_FORCE_PU` writer - Set this bit to FPU the Wi-Fi circuit."]
 pub struct WIFI_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
@@ -663,7 +663,7 @@ impl<'a> DG_WRAP_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DG_WRAP_FORCE_PU` reader - Set this bit to FPU the digital system"]
+#[doc = "Field `DG_WRAP_FORCE_PU` reader - Set this bit to FPD the DC-DC convertor in the digital system."]
 pub struct DG_WRAP_FORCE_PU_R(crate::FieldReader<bool, bool>);
 impl DG_WRAP_FORCE_PU_R {
     #[inline(always)]
@@ -678,7 +678,7 @@ impl core::ops::Deref for DG_WRAP_FORCE_PU_R {
         &self.0
     }
 }
-#[doc = "Field `DG_WRAP_FORCE_PU` writer - Set this bit to FPU the digital system"]
+#[doc = "Field `DG_WRAP_FORCE_PU` writer - Set this bit to FPD the DC-DC convertor in the digital system."]
 pub struct DG_WRAP_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
@@ -1033,7 +1033,7 @@ impl<'a> INTER_RAM4_PD_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WIFI_PD_EN` reader - Set this bit to enable PD for the Wi-Fi digital circuit in sleep."]
+#[doc = "Field `WIFI_PD_EN` reader - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
 pub struct WIFI_PD_EN_R(crate::FieldReader<bool, bool>);
 impl WIFI_PD_EN_R {
     #[inline(always)]
@@ -1048,7 +1048,7 @@ impl core::ops::Deref for WIFI_PD_EN_R {
         &self.0
     }
 }
-#[doc = "Field `WIFI_PD_EN` writer - Set this bit to enable PD for the Wi-Fi digital circuit in sleep."]
+#[doc = "Field `WIFI_PD_EN` writer - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
 pub struct WIFI_PD_EN_W<'a> {
     w: &'a mut W,
 }
@@ -1178,12 +1178,12 @@ impl R {
     pub fn inter_ram4_force_pu(&self) -> INTER_RAM4_FORCE_PU_R {
         INTER_RAM4_FORCE_PU_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 17 - Set this bit to FPD the Wi-Fi digital circuit in the digital system."]
+    #[doc = "Bit 17 - Set this bit to FPD the Wi-Fi circuit."]
     #[inline(always)]
     pub fn wifi_force_pd(&self) -> WIFI_FORCE_PD_R {
         WIFI_FORCE_PD_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bit 18 - Set this bit to FPU the Wi-Fi digital circuit in the digital system."]
+    #[doc = "Bit 18 - Set this bit to FPU the Wi-Fi circuit."]
     #[inline(always)]
     pub fn wifi_force_pu(&self) -> WIFI_FORCE_PU_R {
         WIFI_FORCE_PU_R::new(((self.bits >> 18) & 0x01) != 0)
@@ -1193,7 +1193,7 @@ impl R {
     pub fn dg_wrap_force_pd(&self) -> DG_WRAP_FORCE_PD_R {
         DG_WRAP_FORCE_PD_R::new(((self.bits >> 19) & 0x01) != 0)
     }
-    #[doc = "Bit 20 - Set this bit to FPU the digital system"]
+    #[doc = "Bit 20 - Set this bit to FPD the DC-DC convertor in the digital system."]
     #[inline(always)]
     pub fn dg_wrap_force_pu(&self) -> DG_WRAP_FORCE_PU_R {
         DG_WRAP_FORCE_PU_R::new(((self.bits >> 20) & 0x01) != 0)
@@ -1243,7 +1243,7 @@ impl R {
     pub fn inter_ram4_pd_en(&self) -> INTER_RAM4_PD_EN_R {
         INTER_RAM4_PD_EN_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - Set this bit to enable PD for the Wi-Fi digital circuit in sleep."]
+    #[doc = "Bit 30 - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
     #[inline(always)]
     pub fn wifi_pd_en(&self) -> WIFI_PD_EN_R {
         WIFI_PD_EN_R::new(((self.bits >> 30) & 0x01) != 0)
@@ -1325,12 +1325,12 @@ impl W {
     pub fn inter_ram4_force_pu(&mut self) -> INTER_RAM4_FORCE_PU_W {
         INTER_RAM4_FORCE_PU_W { w: self }
     }
-    #[doc = "Bit 17 - Set this bit to FPD the Wi-Fi digital circuit in the digital system."]
+    #[doc = "Bit 17 - Set this bit to FPD the Wi-Fi circuit."]
     #[inline(always)]
     pub fn wifi_force_pd(&mut self) -> WIFI_FORCE_PD_W {
         WIFI_FORCE_PD_W { w: self }
     }
-    #[doc = "Bit 18 - Set this bit to FPU the Wi-Fi digital circuit in the digital system."]
+    #[doc = "Bit 18 - Set this bit to FPU the Wi-Fi circuit."]
     #[inline(always)]
     pub fn wifi_force_pu(&mut self) -> WIFI_FORCE_PU_W {
         WIFI_FORCE_PU_W { w: self }
@@ -1340,7 +1340,7 @@ impl W {
     pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W {
         DG_WRAP_FORCE_PD_W { w: self }
     }
-    #[doc = "Bit 20 - Set this bit to FPU the digital system"]
+    #[doc = "Bit 20 - Set this bit to FPD the DC-DC convertor in the digital system."]
     #[inline(always)]
     pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W {
         DG_WRAP_FORCE_PU_W { w: self }
@@ -1390,7 +1390,7 @@ impl W {
     pub fn inter_ram4_pd_en(&mut self) -> INTER_RAM4_PD_EN_W {
         INTER_RAM4_PD_EN_W { w: self }
     }
-    #[doc = "Bit 30 - Set this bit to enable PD for the Wi-Fi digital circuit in sleep."]
+    #[doc = "Bit 30 - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
     #[inline(always)]
     pub fn wifi_pd_en(&mut self) -> WIFI_PD_EN_W {
         WIFI_PD_EN_W { w: self }
@@ -1407,7 +1407,7 @@ impl W {
         self
     }
 }
-#[doc = "Digital system power configuration register\n\nThis register you can [`read`]
+#[doc = "Digital system power configuraiton register\n\nThis register you can [`read`]
 (crate::generic::Reg::read), [`write_with_zero`]
 (crate::generic::Reg::write_with_zero), [`reset`]
 (crate::generic::Reg::reset), [`write`]

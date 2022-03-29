@@ -34,7 +34,7 @@ impl From<crate::W<DIG_PAD_HOLD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DIG_PAD_HOLD` reader - Set GPIO 21 to GPIO 45 to the holding state. (See bitmap to locate any GPIO)."]
+#[doc = "Field `DIG_PAD_HOLD` reader - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
 pub struct DIG_PAD_HOLD_R(crate::FieldReader<u32, u32>);
 impl DIG_PAD_HOLD_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for DIG_PAD_HOLD_R {
         &self.0
     }
 }
-#[doc = "Field `DIG_PAD_HOLD` writer - Set GPIO 21 to GPIO 45 to the holding state. (See bitmap to locate any GPIO)."]
+#[doc = "Field `DIG_PAD_HOLD` writer - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
 pub struct DIG_PAD_HOLD_W<'a> {
     w: &'a mut W,
 }
@@ -62,14 +62,14 @@ impl<'a> DIG_PAD_HOLD_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to the holding state. (See bitmap to locate any GPIO)."]
+    #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
     #[inline(always)]
     pub fn dig_pad_hold(&self) -> DIG_PAD_HOLD_R {
         DIG_PAD_HOLD_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to the holding state. (See bitmap to locate any GPIO)."]
+    #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
     #[inline(always)]
     pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W {
         DIG_PAD_HOLD_W { w: self }

@@ -71,7 +71,7 @@ impl<'a> GPIO_WAKEUP_FILTER_W<'a> {
         self.w
     }
 }
-#[doc = "Field `EXT_WAKEUP0_LV` reader - 0: EXT0 at low level, 1: EXT0 at high level."]
+#[doc = "Field `EXT_WAKEUP0_LV` reader - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
 pub struct EXT_WAKEUP0_LV_R(crate::FieldReader<bool, bool>);
 impl EXT_WAKEUP0_LV_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for EXT_WAKEUP0_LV_R {
         &self.0
     }
 }
-#[doc = "Field `EXT_WAKEUP0_LV` writer - 0: EXT0 at low level, 1: EXT0 at high level."]
+#[doc = "Field `EXT_WAKEUP0_LV` writer - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
 pub struct EXT_WAKEUP0_LV_W<'a> {
     w: &'a mut W,
 }
@@ -108,7 +108,7 @@ impl<'a> EXT_WAKEUP0_LV_W<'a> {
         self.w
     }
 }
-#[doc = "Field `EXT_WAKEUP1_LV` reader - 0: EXT1 at low level, 1: EXT1 at high level."]
+#[doc = "Field `EXT_WAKEUP1_LV` reader - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
 pub struct EXT_WAKEUP1_LV_R(crate::FieldReader<bool, bool>);
 impl EXT_WAKEUP1_LV_R {
     #[inline(always)]
@@ -123,7 +123,7 @@ impl core::ops::Deref for EXT_WAKEUP1_LV_R {
         &self.0
     }
 }
-#[doc = "Field `EXT_WAKEUP1_LV` writer - 0: EXT1 at low level, 1: EXT1 at high level."]
+#[doc = "Field `EXT_WAKEUP1_LV` writer - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
 pub struct EXT_WAKEUP1_LV_W<'a> {
     w: &'a mut W,
 }
@@ -151,12 +151,12 @@ impl R {
     pub fn gpio_wakeup_filter(&self) -> GPIO_WAKEUP_FILTER_R {
         GPIO_WAKEUP_FILTER_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - 0: EXT0 at low level, 1: EXT0 at high level."]
+    #[doc = "Bit 30 - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
     #[inline(always)]
     pub fn ext_wakeup0_lv(&self) -> EXT_WAKEUP0_LV_R {
         EXT_WAKEUP0_LV_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bit 31 - 0: EXT1 at low level, 1: EXT1 at high level."]
+    #[doc = "Bit 31 - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
     #[inline(always)]
     pub fn ext_wakeup1_lv(&self) -> EXT_WAKEUP1_LV_R {
         EXT_WAKEUP1_LV_R::new(((self.bits >> 31) & 0x01) != 0)
@@ -168,12 +168,12 @@ impl W {
     pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W {
         GPIO_WAKEUP_FILTER_W { w: self }
     }
-    #[doc = "Bit 30 - 0: EXT0 at low level, 1: EXT0 at high level."]
+    #[doc = "Bit 30 - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
     #[inline(always)]
     pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W {
         EXT_WAKEUP0_LV_W { w: self }
     }
-    #[doc = "Bit 31 - 0: EXT1 at low level, 1: EXT1 at high level."]
+    #[doc = "Bit 31 - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
     #[inline(always)]
     pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W {
         EXT_WAKEUP1_LV_W { w: self }

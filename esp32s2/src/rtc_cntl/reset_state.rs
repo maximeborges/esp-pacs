@@ -101,7 +101,7 @@ impl<'a> APPCPU_STAT_VECTOR_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `PROCPU_STAT_VECTOR_SEL` reader - Selects the CPU static vector."]
+#[doc = "Field `PROCPU_STAT_VECTOR_SEL` reader - Selects the CPU state vector."]
 pub struct PROCPU_STAT_VECTOR_SEL_R(crate::FieldReader<bool, bool>);
 impl PROCPU_STAT_VECTOR_SEL_R {
     #[inline(always)]
@@ -116,7 +116,7 @@ impl core::ops::Deref for PROCPU_STAT_VECTOR_SEL_R {
         &self.0
     }
 }
-#[doc = "Field `PROCPU_STAT_VECTOR_SEL` writer - Selects the CPU static vector."]
+#[doc = "Field `PROCPU_STAT_VECTOR_SEL` writer - Selects the CPU state vector."]
 pub struct PROCPU_STAT_VECTOR_SEL_W<'a> {
     w: &'a mut W,
 }
@@ -154,7 +154,7 @@ impl R {
     pub fn appcpu_stat_vector_sel(&self) -> APPCPU_STAT_VECTOR_SEL_R {
         APPCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 13 - Selects the CPU static vector."]
+    #[doc = "Bit 13 - Selects the CPU state vector."]
     #[inline(always)]
     pub fn procpu_stat_vector_sel(&self) -> PROCPU_STAT_VECTOR_SEL_R {
         PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 0x01) != 0)
@@ -166,7 +166,7 @@ impl W {
     pub fn appcpu_stat_vector_sel(&mut self) -> APPCPU_STAT_VECTOR_SEL_W {
         APPCPU_STAT_VECTOR_SEL_W { w: self }
     }
-    #[doc = "Bit 13 - Selects the CPU static vector."]
+    #[doc = "Bit 13 - Selects the CPU state vector."]
     #[inline(always)]
     pub fn procpu_stat_vector_sel(&mut self) -> PROCPU_STAT_VECTOR_SEL_W {
         PROCPU_STAT_VECTOR_SEL_W { w: self }

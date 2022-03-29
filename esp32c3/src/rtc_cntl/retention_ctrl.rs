@@ -1,22 +1,22 @@
-#[doc = "Register `CNTL_RETENTION_CTRL` reader"]
-pub struct R(crate::R<CNTL_RETENTION_CTRL_SPEC>);
+#[doc = "Register `RETENTION_CTRL` reader"]
+pub struct R(crate::R<RETENTION_CTRL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CNTL_RETENTION_CTRL_SPEC>;
+    type Target = crate::R<RETENTION_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CNTL_RETENTION_CTRL_SPEC>> for R {
+impl From<crate::R<RETENTION_CTRL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CNTL_RETENTION_CTRL_SPEC>) -> Self {
+    fn from(reader: crate::R<RETENTION_CTRL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CNTL_RETENTION_CTRL` writer"]
-pub struct W(crate::W<CNTL_RETENTION_CTRL_SPEC>);
+#[doc = "Register `RETENTION_CTRL` writer"]
+pub struct W(crate::W<RETENTION_CTRL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CNTL_RETENTION_CTRL_SPEC>;
+    type Target = crate::W<RETENTION_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CNTL_RETENTION_CTRL_SPEC>> for W {
+impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CNTL_RETENTION_CTRL_SPEC>) -> Self {
+    fn from(writer: crate::W<RETENTION_CTRL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -255,24 +255,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl_retention_ctrl]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl]
 (index.html) module"]
-pub struct CNTL_RETENTION_CTRL_SPEC;
-impl crate::RegisterSpec for CNTL_RETENTION_CTRL_SPEC {
+pub struct RETENTION_CTRL_SPEC;
+impl crate::RegisterSpec for RETENTION_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl_retention_ctrl::R]
+#[doc = "`read()` method returns [retention_ctrl::R]
 (R) reader structure"]
-impl crate::Readable for CNTL_RETENTION_CTRL_SPEC {
+impl crate::Readable for RETENTION_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cntl_retention_ctrl::W]
+#[doc = "`write(|w| ..)` method takes [retention_ctrl::W]
 (W) writer structure"]
-impl crate::Writable for CNTL_RETENTION_CTRL_SPEC {
+impl crate::Writable for RETENTION_CTRL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CNTL_RETENTION_CTRL to value 0xa0d0_0000"]
-impl crate::Resettable for CNTL_RETENTION_CTRL_SPEC {
+#[doc = "`reset()` method sets RETENTION_CTRL to value 0xa0d0_0000"]
+impl crate::Resettable for RETENTION_CTRL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0xa0d0_0000

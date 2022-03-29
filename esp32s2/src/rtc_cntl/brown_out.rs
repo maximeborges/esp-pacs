@@ -71,7 +71,7 @@ impl<'a> BROWN_OUT2_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `INT_WAIT` reader - Configures the waiting cycles before sending an interrupt."]
+#[doc = "Field `INT_WAIT` reader - Configures the waiting cycle before sending an interrupt."]
 pub struct INT_WAIT_R(crate::FieldReader<u16, u16>);
 impl INT_WAIT_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for INT_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `INT_WAIT` writer - Configures the waiting cycles before sending an interrupt."]
+#[doc = "Field `INT_WAIT` writer - Configures the waiting cycle before sending an interrupt."]
 pub struct INT_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -172,7 +172,7 @@ impl<'a> PD_RF_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `RST_WAIT` reader - Configures the waiting cycles before the reset after a brown-out."]
+#[doc = "Field `RST_WAIT` reader - Configures the waiting cycle before the reset after a brown-out."]
 pub struct RST_WAIT_R(crate::FieldReader<u16, u16>);
 impl RST_WAIT_R {
     #[inline(always)]
@@ -187,7 +187,7 @@ impl core::ops::Deref for RST_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `RST_WAIT` writer - Configures the waiting cycles before the reset after a brown-out."]
+#[doc = "Field `RST_WAIT` writer - Configures the waiting cycle before the reset after a brown-out."]
 pub struct RST_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -236,7 +236,7 @@ impl<'a> RST_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `RST_SEL` reader - Selects the reset type when a brown-out happens. 1: chip reset, 0: system reset."]
+#[doc = "Field `RST_SEL` reader - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
 pub struct RST_SEL_R(crate::FieldReader<bool, bool>);
 impl RST_SEL_R {
     #[inline(always)]
@@ -251,7 +251,7 @@ impl core::ops::Deref for RST_SEL_R {
         &self.0
     }
 }
-#[doc = "Field `RST_SEL` writer - Selects the reset type when a brown-out happens. 1: chip reset, 0: system reset."]
+#[doc = "Field `RST_SEL` writer - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
 pub struct RST_SEL_W<'a> {
     w: &'a mut W,
 }
@@ -353,7 +353,7 @@ impl R {
     pub fn brown_out2_ena(&self) -> BROWN_OUT2_ENA_R {
         BROWN_OUT2_ENA_R::new((self.bits & 0x01) != 0)
     }
-    #[doc = "Bits 4:13 - Configures the waiting cycles before sending an interrupt."]
+    #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
     pub fn int_wait(&self) -> INT_WAIT_R {
         INT_WAIT_R::new(((self.bits >> 4) & 0x03ff) as u16)
@@ -368,7 +368,7 @@ impl R {
     pub fn pd_rf_ena(&self) -> PD_RF_ENA_R {
         PD_RF_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
     }
-    #[doc = "Bits 16:25 - Configures the waiting cycles before the reset after a brown-out."]
+    #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
     pub fn rst_wait(&self) -> RST_WAIT_R {
         RST_WAIT_R::new(((self.bits >> 16) & 0x03ff) as u16)
@@ -378,7 +378,7 @@ impl R {
     pub fn rst_ena(&self) -> RST_ENA_R {
         RST_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
     }
-    #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset, 0: system reset."]
+    #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
     pub fn rst_sel(&self) -> RST_SEL_R {
         RST_SEL_R::new(((self.bits >> 27) & 0x01) != 0)
@@ -400,7 +400,7 @@ impl W {
     pub fn brown_out2_ena(&mut self) -> BROWN_OUT2_ENA_W {
         BROWN_OUT2_ENA_W { w: self }
     }
-    #[doc = "Bits 4:13 - Configures the waiting cycles before sending an interrupt."]
+    #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
     pub fn int_wait(&mut self) -> INT_WAIT_W {
         INT_WAIT_W { w: self }
@@ -415,7 +415,7 @@ impl W {
     pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W {
         PD_RF_ENA_W { w: self }
     }
-    #[doc = "Bits 16:25 - Configures the waiting cycles before the reset after a brown-out."]
+    #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
     pub fn rst_wait(&mut self) -> RST_WAIT_W {
         RST_WAIT_W { w: self }
@@ -425,7 +425,7 @@ impl W {
     pub fn rst_ena(&mut self) -> RST_ENA_W {
         RST_ENA_W { w: self }
     }
-    #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset, 0: system reset."]
+    #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
     pub fn rst_sel(&mut self) -> RST_SEL_W {
         RST_SEL_W { w: self }

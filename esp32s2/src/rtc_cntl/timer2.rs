@@ -34,7 +34,7 @@ impl From<crate::W<TIMER2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ULPCP_TOUCH_START_WAIT` reader - Sets the waiting cycles (using the RTC slow clock) before the ULP co-processor or touch controller starts to work."]
+#[doc = "Field `ULPCP_TOUCH_START_WAIT` reader - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
 pub struct ULPCP_TOUCH_START_WAIT_R(crate::FieldReader<u16, u16>);
 impl ULPCP_TOUCH_START_WAIT_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for ULPCP_TOUCH_START_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `ULPCP_TOUCH_START_WAIT` writer - Sets the waiting cycles (using the RTC slow clock) before the ULP co-processor or touch controller starts to work."]
+#[doc = "Field `ULPCP_TOUCH_START_WAIT` writer - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
 pub struct ULPCP_TOUCH_START_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -61,7 +61,7 @@ impl<'a> ULPCP_TOUCH_START_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `MIN_TIME_CK8M_OFF` reader - Sets the minimal cycles for 8 MHz clock (using the RTC slow clock) when powered down."]
+#[doc = "Field `MIN_TIME_CK8M_OFF` reader - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
 pub struct MIN_TIME_CK8M_OFF_R(crate::FieldReader<u8, u8>);
 impl MIN_TIME_CK8M_OFF_R {
     #[inline(always)]
@@ -76,7 +76,7 @@ impl core::ops::Deref for MIN_TIME_CK8M_OFF_R {
         &self.0
     }
 }
-#[doc = "Field `MIN_TIME_CK8M_OFF` writer - Sets the minimal cycles for 8 MHz clock (using the RTC slow clock) when powered down."]
+#[doc = "Field `MIN_TIME_CK8M_OFF` writer - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
 pub struct MIN_TIME_CK8M_OFF_W<'a> {
     w: &'a mut W,
 }
@@ -89,24 +89,24 @@ impl<'a> MIN_TIME_CK8M_OFF_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 15:23 - Sets the waiting cycles (using the RTC slow clock) before the ULP co-processor or touch controller starts to work."]
+    #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
     pub fn ulpcp_touch_start_wait(&self) -> ULPCP_TOUCH_START_WAIT_R {
         ULPCP_TOUCH_START_WAIT_R::new(((self.bits >> 15) & 0x01ff) as u16)
     }
-    #[doc = "Bits 24:31 - Sets the minimal cycles for 8 MHz clock (using the RTC slow clock) when powered down."]
+    #[doc = "Bits 24:31 - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
     #[inline(always)]
     pub fn min_time_ck8m_off(&self) -> MIN_TIME_CK8M_OFF_R {
         MIN_TIME_CK8M_OFF_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 15:23 - Sets the waiting cycles (using the RTC slow clock) before the ULP co-processor or touch controller starts to work."]
+    #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
     pub fn ulpcp_touch_start_wait(&mut self) -> ULPCP_TOUCH_START_WAIT_W {
         ULPCP_TOUCH_START_WAIT_W { w: self }
     }
-    #[doc = "Bits 24:31 - Sets the minimal cycles for 8 MHz clock (using the RTC slow clock) when powered down."]
+    #[doc = "Bits 24:31 - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
     #[inline(always)]
     pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W {
         MIN_TIME_CK8M_OFF_W { w: self }

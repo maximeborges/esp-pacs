@@ -34,7 +34,7 @@ impl From<crate::W<PWC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `FASTMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation of the RTC fast memory."]
+#[doc = "Field `FASTMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC fast memory."]
 pub struct FASTMEM_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
 impl FASTMEM_FORCE_NOISO_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for FASTMEM_FORCE_NOISO_R {
         &self.0
     }
 }
-#[doc = "Field `FASTMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation of the RTC fast memory."]
+#[doc = "Field `FASTMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC fast memory."]
 pub struct FASTMEM_FORCE_NOISO_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> FASTMEM_FORCE_NOISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FASTMEM_FORCE_ISO` reader - Set this bit to force isolation of the RTC fast memory."]
+#[doc = "Field `FASTMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC fast memory."]
 pub struct FASTMEM_FORCE_ISO_R(crate::FieldReader<bool, bool>);
 impl FASTMEM_FORCE_ISO_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for FASTMEM_FORCE_ISO_R {
         &self.0
     }
 }
-#[doc = "Field `FASTMEM_FORCE_ISO` writer - Set this bit to force isolation of the RTC fast memory."]
+#[doc = "Field `FASTMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC fast memory."]
 pub struct FASTMEM_FORCE_ISO_W<'a> {
     w: &'a mut W,
 }
@@ -108,7 +108,7 @@ impl<'a> FASTMEM_FORCE_ISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SLOWMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation of the RTC slow memory."]
+#[doc = "Field `SLOWMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC slow memory."]
 pub struct SLOWMEM_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
 impl SLOWMEM_FORCE_NOISO_R {
     #[inline(always)]
@@ -123,7 +123,7 @@ impl core::ops::Deref for SLOWMEM_FORCE_NOISO_R {
         &self.0
     }
 }
-#[doc = "Field `SLOWMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation of the RTC slow memory."]
+#[doc = "Field `SLOWMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC slow memory."]
 pub struct SLOWMEM_FORCE_NOISO_W<'a> {
     w: &'a mut W,
 }
@@ -145,7 +145,7 @@ impl<'a> SLOWMEM_FORCE_NOISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SLOWMEM_FORCE_ISO` reader - Set this bit to force isolation of the RTC slow memory."]
+#[doc = "Field `SLOWMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC slow memory."]
 pub struct SLOWMEM_FORCE_ISO_R(crate::FieldReader<bool, bool>);
 impl SLOWMEM_FORCE_ISO_R {
     #[inline(always)]
@@ -160,7 +160,7 @@ impl core::ops::Deref for SLOWMEM_FORCE_ISO_R {
         &self.0
     }
 }
-#[doc = "Field `SLOWMEM_FORCE_ISO` writer - Set this bit to force isolation of the RTC slow memory."]
+#[doc = "Field `SLOWMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC slow memory."]
 pub struct SLOWMEM_FORCE_ISO_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +182,7 @@ impl<'a> SLOWMEM_FORCE_ISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FORCE_ISO` reader - Set this bit to force isolation of the RTC peripherals."]
+#[doc = "Field `FORCE_ISO` reader - Set this bit to force isolate the RTC peripherals."]
 pub struct FORCE_ISO_R(crate::FieldReader<bool, bool>);
 impl FORCE_ISO_R {
     #[inline(always)]
@@ -197,7 +197,7 @@ impl core::ops::Deref for FORCE_ISO_R {
         &self.0
     }
 }
-#[doc = "Field `FORCE_ISO` writer - Set this bit to force isolation of the RTC peripherals."]
+#[doc = "Field `FORCE_ISO` writer - Set this bit to force isolate the RTC peripherals."]
 pub struct FORCE_ISO_W<'a> {
     w: &'a mut W,
 }
@@ -219,7 +219,7 @@ impl<'a> FORCE_ISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FORCE_NOISO` reader - Set this bit to disable the force isolation of the RTC peripherals."]
+#[doc = "Field `FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC peripherals."]
 pub struct FORCE_NOISO_R(crate::FieldReader<bool, bool>);
 impl FORCE_NOISO_R {
     #[inline(always)]
@@ -234,7 +234,7 @@ impl core::ops::Deref for FORCE_NOISO_R {
         &self.0
     }
 }
-#[doc = "Field `FORCE_NOISO` writer - Set this bit to disable the force isolation of the RTC peripherals."]
+#[doc = "Field `FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC peripherals."]
 pub struct FORCE_NOISO_W<'a> {
     w: &'a mut W,
 }
@@ -256,7 +256,7 @@ impl<'a> FORCE_NOISO_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FASTMEM_FOLW_CPU` reader - Set this bit to FPD the RTC fast memory when the CPU is powered down. Reset this bit to FPD the RTC fast memory when the RTC main state machine is powered down."]
+#[doc = "Field `FASTMEM_FOLW_CPU` reader - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
 pub struct FASTMEM_FOLW_CPU_R(crate::FieldReader<bool, bool>);
 impl FASTMEM_FOLW_CPU_R {
     #[inline(always)]
@@ -271,7 +271,7 @@ impl core::ops::Deref for FASTMEM_FOLW_CPU_R {
         &self.0
     }
 }
-#[doc = "Field `FASTMEM_FOLW_CPU` writer - Set this bit to FPD the RTC fast memory when the CPU is powered down. Reset this bit to FPD the RTC fast memory when the RTC main state machine is powered down."]
+#[doc = "Field `FASTMEM_FOLW_CPU` writer - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
 pub struct FASTMEM_FOLW_CPU_W<'a> {
     w: &'a mut W,
 }
@@ -367,7 +367,7 @@ impl<'a> FASTMEM_FORCE_LPU_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SLOWMEM_FOLW_CPU` reader - Set this bit to FPD the RTC slow memory when the CPU is powered down. Reset this bit to FPD the RTC slow memory when the RTC main state machine is powered down."]
+#[doc = "Field `SLOWMEM_FOLW_CPU` reader - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
 pub struct SLOWMEM_FOLW_CPU_R(crate::FieldReader<bool, bool>);
 impl SLOWMEM_FOLW_CPU_R {
     #[inline(always)]
@@ -382,7 +382,7 @@ impl core::ops::Deref for SLOWMEM_FOLW_CPU_R {
         &self.0
     }
 }
-#[doc = "Field `SLOWMEM_FOLW_CPU` writer - Set this bit to FPD the RTC slow memory when the CPU is powered down. Reset this bit to FPD the RTC slow memory when the RTC main state machine is powered down."]
+#[doc = "Field `SLOWMEM_FOLW_CPU` writer - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
 pub struct SLOWMEM_FOLW_CPU_W<'a> {
     w: &'a mut W,
 }
@@ -849,37 +849,37 @@ impl<'a> PAD_FORCE_HOLD_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Set this bit to disable the force isolation of the RTC fast memory."]
+    #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_noiso(&self) -> FASTMEM_FORCE_NOISO_R {
         FASTMEM_FORCE_NOISO_R::new((self.bits & 0x01) != 0)
     }
-    #[doc = "Bit 1 - Set this bit to force isolation of the RTC fast memory."]
+    #[doc = "Bit 1 - Set this bit to force isolate the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_iso(&self) -> FASTMEM_FORCE_ISO_R {
         FASTMEM_FORCE_ISO_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - Set this bit to disable the force isolation of the RTC slow memory."]
+    #[doc = "Bit 2 - Set this bit to disable the force isolation to the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_noiso(&self) -> SLOWMEM_FORCE_NOISO_R {
         SLOWMEM_FORCE_NOISO_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - Set this bit to force isolation of the RTC slow memory."]
+    #[doc = "Bit 3 - Set this bit to force isolate the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_iso(&self) -> SLOWMEM_FORCE_ISO_R {
         SLOWMEM_FORCE_ISO_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 4 - Set this bit to force isolation of the RTC peripherals."]
+    #[doc = "Bit 4 - Set this bit to force isolate the RTC peripherals."]
     #[inline(always)]
     pub fn force_iso(&self) -> FORCE_ISO_R {
         FORCE_ISO_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bit 5 - Set this bit to disable the force isolation of the RTC peripherals."]
+    #[doc = "Bit 5 - Set this bit to disable the force isolation to the RTC peripherals."]
     #[inline(always)]
     pub fn force_noiso(&self) -> FORCE_NOISO_R {
         FORCE_NOISO_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - Set this bit to FPD the RTC fast memory when the CPU is powered down. Reset this bit to FPD the RTC fast memory when the RTC main state machine is powered down."]
+    #[doc = "Bit 6 - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn fastmem_folw_cpu(&self) -> FASTMEM_FOLW_CPU_R {
         FASTMEM_FOLW_CPU_R::new(((self.bits >> 6) & 0x01) != 0)
@@ -894,7 +894,7 @@ impl R {
     pub fn fastmem_force_lpu(&self) -> FASTMEM_FORCE_LPU_R {
         FASTMEM_FORCE_LPU_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - Set this bit to FPD the RTC slow memory when the CPU is powered down. Reset this bit to FPD the RTC slow memory when the RTC main state machine is powered down."]
+    #[doc = "Bit 9 - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn slowmem_folw_cpu(&self) -> SLOWMEM_FOLW_CPU_R {
         SLOWMEM_FOLW_CPU_R::new(((self.bits >> 9) & 0x01) != 0)
@@ -961,37 +961,37 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to disable the force isolation of the RTC fast memory."]
+    #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W {
         FASTMEM_FORCE_NOISO_W { w: self }
     }
-    #[doc = "Bit 1 - Set this bit to force isolation of the RTC fast memory."]
+    #[doc = "Bit 1 - Set this bit to force isolate the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W {
         FASTMEM_FORCE_ISO_W { w: self }
     }
-    #[doc = "Bit 2 - Set this bit to disable the force isolation of the RTC slow memory."]
+    #[doc = "Bit 2 - Set this bit to disable the force isolation to the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W {
         SLOWMEM_FORCE_NOISO_W { w: self }
     }
-    #[doc = "Bit 3 - Set this bit to force isolation of the RTC slow memory."]
+    #[doc = "Bit 3 - Set this bit to force isolate the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W {
         SLOWMEM_FORCE_ISO_W { w: self }
     }
-    #[doc = "Bit 4 - Set this bit to force isolation of the RTC peripherals."]
+    #[doc = "Bit 4 - Set this bit to force isolate the RTC peripherals."]
     #[inline(always)]
     pub fn force_iso(&mut self) -> FORCE_ISO_W {
         FORCE_ISO_W { w: self }
     }
-    #[doc = "Bit 5 - Set this bit to disable the force isolation of the RTC peripherals."]
+    #[doc = "Bit 5 - Set this bit to disable the force isolation to the RTC peripherals."]
     #[inline(always)]
     pub fn force_noiso(&mut self) -> FORCE_NOISO_W {
         FORCE_NOISO_W { w: self }
     }
-    #[doc = "Bit 6 - Set this bit to FPD the RTC fast memory when the CPU is powered down. Reset this bit to FPD the RTC fast memory when the RTC main state machine is powered down."]
+    #[doc = "Bit 6 - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W {
         FASTMEM_FOLW_CPU_W { w: self }
@@ -1006,7 +1006,7 @@ impl W {
     pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W {
         FASTMEM_FORCE_LPU_W { w: self }
     }
-    #[doc = "Bit 9 - Set this bit to FPD the RTC slow memory when the CPU is powered down. Reset this bit to FPD the RTC slow memory when the RTC main state machine is powered down."]
+    #[doc = "Bit 9 - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W {
         SLOWMEM_FOLW_CPU_W { w: self }

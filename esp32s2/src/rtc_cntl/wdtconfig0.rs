@@ -300,7 +300,7 @@ impl<'a> WDT_CPU_RESET_LENGTH_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WDT_STG3` reader - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG3` reader - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG3_R(crate::FieldReader<u8, u8>);
 impl WDT_STG3_R {
     #[inline(always)]
@@ -315,7 +315,7 @@ impl core::ops::Deref for WDT_STG3_R {
         &self.0
     }
 }
-#[doc = "Field `WDT_STG3` writer - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG3` writer - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG3_W<'a> {
     w: &'a mut W,
 }
@@ -327,7 +327,7 @@ impl<'a> WDT_STG3_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WDT_STG2` reader - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG2` reader - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG2_R(crate::FieldReader<u8, u8>);
 impl WDT_STG2_R {
     #[inline(always)]
@@ -342,7 +342,7 @@ impl core::ops::Deref for WDT_STG2_R {
         &self.0
     }
 }
-#[doc = "Field `WDT_STG2` writer - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG2` writer - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG2_W<'a> {
     w: &'a mut W,
 }
@@ -354,7 +354,7 @@ impl<'a> WDT_STG2_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WDT_STG1` reader - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG1` reader - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG1_R(crate::FieldReader<u8, u8>);
 impl WDT_STG1_R {
     #[inline(always)]
@@ -369,7 +369,7 @@ impl core::ops::Deref for WDT_STG1_R {
         &self.0
     }
 }
-#[doc = "Field `WDT_STG1` writer - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG1` writer - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG1_W<'a> {
     w: &'a mut W,
 }
@@ -381,7 +381,7 @@ impl<'a> WDT_STG1_W<'a> {
         self.w
     }
 }
-#[doc = "Field `WDT_STG0` reader - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG0` reader - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG0_R(crate::FieldReader<u8, u8>);
 impl WDT_STG0_R {
     #[inline(always)]
@@ -396,7 +396,7 @@ impl core::ops::Deref for WDT_STG0_R {
         &self.0
     }
 }
-#[doc = "Field `WDT_STG0` writer - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+#[doc = "Field `WDT_STG0` writer - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
 pub struct WDT_STG0_W<'a> {
     w: &'a mut W,
 }
@@ -486,22 +486,22 @@ impl R {
     pub fn wdt_cpu_reset_length(&self) -> WDT_CPU_RESET_LENGTH_R {
         WDT_CPU_RESET_LENGTH_R::new(((self.bits >> 16) & 0x07) as u8)
     }
-    #[doc = "Bits 19:21 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 19:21 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg3(&self) -> WDT_STG3_R {
         WDT_STG3_R::new(((self.bits >> 19) & 0x07) as u8)
     }
-    #[doc = "Bits 22:24 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 22:24 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg2(&self) -> WDT_STG2_R {
         WDT_STG2_R::new(((self.bits >> 22) & 0x07) as u8)
     }
-    #[doc = "Bits 25:27 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 25:27 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg1(&self) -> WDT_STG1_R {
         WDT_STG1_R::new(((self.bits >> 25) & 0x07) as u8)
     }
-    #[doc = "Bits 28:30 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 28:30 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg0(&self) -> WDT_STG0_R {
         WDT_STG0_R::new(((self.bits >> 28) & 0x07) as u8)
@@ -553,22 +553,22 @@ impl W {
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W {
         WDT_CPU_RESET_LENGTH_W { w: self }
     }
-    #[doc = "Bits 19:21 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 19:21 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W {
         WDT_STG3_W { w: self }
     }
-    #[doc = "Bits 22:24 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 22:24 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W {
         WDT_STG2_W { w: self }
     }
-    #[doc = "Bits 25:27 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 25:27 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W {
         WDT_STG1_W { w: self }
     }
-    #[doc = "Bits 28:30 - 1: enable at the interrupt stage, 2: enable at the CPU stage, 3: enable at the system stage, 4: enable at the system and RTC stage."]
+    #[doc = "Bits 28:30 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W {
         WDT_STG0_W { w: self }

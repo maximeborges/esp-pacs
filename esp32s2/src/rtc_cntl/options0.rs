@@ -65,7 +65,7 @@ impl<'a> SW_STALL_APPCPU_C0_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C0` reader - When RTC_CNTL_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_PROCPU_C0` reader - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
 pub struct SW_STALL_PROCPU_C0_R(crate::FieldReader<u8, u8>);
 impl SW_STALL_PROCPU_C0_R {
     #[inline(always)]
@@ -80,7 +80,7 @@ impl core::ops::Deref for SW_STALL_PROCPU_C0_R {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C0` writer - When RTC_CNTL_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
+#[doc = "Field `SW_STALL_PROCPU_C0` writer - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
 pub struct SW_STALL_PROCPU_C0_W<'a> {
     w: &'a mut W,
 }
@@ -758,7 +758,7 @@ impl R {
     pub fn sw_stall_appcpu_c0(&self) -> SW_STALL_APPCPU_C0_R {
         SW_STALL_APPCPU_C0_R::new((self.bits & 0x03) as u8)
     }
-    #[doc = "Bits 2:3 - When RTC_CNTL_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
+    #[doc = "Bits 2:3 - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
     #[inline(always)]
     pub fn sw_stall_procpu_c0(&self) -> SW_STALL_PROCPU_C0_R {
         SW_STALL_PROCPU_C0_R::new(((self.bits >> 2) & 0x03) as u8)
@@ -852,7 +852,7 @@ impl W {
     pub fn sw_stall_appcpu_c0(&mut self) -> SW_STALL_APPCPU_C0_W {
         SW_STALL_APPCPU_C0_W { w: self }
     }
-    #[doc = "Bits 2:3 - When RTC_CNTL_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
+    #[doc = "Bits 2:3 - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
     #[inline(always)]
     pub fn sw_stall_procpu_c0(&mut self) -> SW_STALL_PROCPU_C0_W {
         SW_STALL_PROCPU_C0_W { w: self }

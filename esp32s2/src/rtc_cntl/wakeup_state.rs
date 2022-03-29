@@ -34,7 +34,7 @@ impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WAKEUP_ENA` reader - Selects the wakeup source."]
+#[doc = "Field `WAKEUP_ENA` reader - Enables the wakeup bitmap."]
 pub struct WAKEUP_ENA_R(crate::FieldReader<u32, u32>);
 impl WAKEUP_ENA_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for WAKEUP_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `WAKEUP_ENA` writer - Selects the wakeup source."]
+#[doc = "Field `WAKEUP_ENA` writer - Enables the wakeup bitmap."]
 pub struct WAKEUP_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -62,14 +62,14 @@ impl<'a> WAKEUP_ENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 15:31 - Selects the wakeup source."]
+    #[doc = "Bits 15:31 - Enables the wakeup bitmap."]
     #[inline(always)]
     pub fn wakeup_ena(&self) -> WAKEUP_ENA_R {
         WAKEUP_ENA_R::new(((self.bits >> 15) & 0x0001_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 15:31 - Selects the wakeup source."]
+    #[doc = "Bits 15:31 - Enables the wakeup bitmap."]
     #[inline(always)]
     pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W {
         WAKEUP_ENA_W { w: self }

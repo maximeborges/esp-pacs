@@ -1,22 +1,22 @@
-#[doc = "Register `CNTL_DBG_SEL` reader"]
-pub struct R(crate::R<CNTL_DBG_SEL_SPEC>);
+#[doc = "Register `DBG_SEL` reader"]
+pub struct R(crate::R<DBG_SEL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CNTL_DBG_SEL_SPEC>;
+    type Target = crate::R<DBG_SEL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CNTL_DBG_SEL_SPEC>> for R {
+impl From<crate::R<DBG_SEL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CNTL_DBG_SEL_SPEC>) -> Self {
+    fn from(reader: crate::R<DBG_SEL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CNTL_DBG_SEL` writer"]
-pub struct W(crate::W<CNTL_DBG_SEL_SPEC>);
+#[doc = "Register `DBG_SEL` writer"]
+pub struct W(crate::W<DBG_SEL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CNTL_DBG_SEL_SPEC>;
+    type Target = crate::W<DBG_SEL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CNTL_DBG_SEL_SPEC>> for W {
+impl From<crate::W<DBG_SEL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CNTL_DBG_SEL_SPEC>) -> Self {
+    fn from(writer: crate::W<DBG_SEL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -319,24 +319,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl_dbg_sel]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbg_sel]
 (index.html) module"]
-pub struct CNTL_DBG_SEL_SPEC;
-impl crate::RegisterSpec for CNTL_DBG_SEL_SPEC {
+pub struct DBG_SEL_SPEC;
+impl crate::RegisterSpec for DBG_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl_dbg_sel::R]
+#[doc = "`read()` method returns [dbg_sel::R]
 (R) reader structure"]
-impl crate::Readable for CNTL_DBG_SEL_SPEC {
+impl crate::Readable for DBG_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cntl_dbg_sel::W]
+#[doc = "`write(|w| ..)` method takes [dbg_sel::W]
 (W) writer structure"]
-impl crate::Writable for CNTL_DBG_SEL_SPEC {
+impl crate::Writable for DBG_SEL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CNTL_DBG_SEL to value 0"]
-impl crate::Resettable for CNTL_DBG_SEL_SPEC {
+#[doc = "`reset()` method sets DBG_SEL to value 0"]
+impl crate::Resettable for DBG_SEL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

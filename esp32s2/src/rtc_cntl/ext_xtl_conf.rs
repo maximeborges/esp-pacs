@@ -293,7 +293,7 @@ impl<'a> XTAL32K_AUTO_RETURN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL32K_XPD_FORCE` reader - Set this bit to allow the software to FPD the 32 kHz crystal; Reset this bit to allow the FSM to FPD the 32 kHz crystal."]
+#[doc = "Field `XTAL32K_XPD_FORCE` reader - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
 pub struct XTAL32K_XPD_FORCE_R(crate::FieldReader<bool, bool>);
 impl XTAL32K_XPD_FORCE_R {
     #[inline(always)]
@@ -308,7 +308,7 @@ impl core::ops::Deref for XTAL32K_XPD_FORCE_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_XPD_FORCE` writer - Set this bit to allow the software to FPD the 32 kHz crystal; Reset this bit to allow the FSM to FPD the 32 kHz crystal."]
+#[doc = "Field `XTAL32K_XPD_FORCE` writer - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
 pub struct XTAL32K_XPD_FORCE_W<'a> {
     w: &'a mut W,
 }
@@ -330,7 +330,7 @@ impl<'a> XTAL32K_XPD_FORCE_W<'a> {
         self.w
     }
 }
-#[doc = "Field `ENCKINIT_XTAL_32K` reader - Set this bit to apply an internal clock to help the 32 kHz crystal to start."]
+#[doc = "Field `ENCKINIT_XTAL_32K` reader - Applies an internal clock to help the 32 kHz crystal to start."]
 pub struct ENCKINIT_XTAL_32K_R(crate::FieldReader<bool, bool>);
 impl ENCKINIT_XTAL_32K_R {
     #[inline(always)]
@@ -345,7 +345,7 @@ impl core::ops::Deref for ENCKINIT_XTAL_32K_R {
         &self.0
     }
 }
-#[doc = "Field `ENCKINIT_XTAL_32K` writer - Set this bit to apply an internal clock to help the 32 kHz crystal to start."]
+#[doc = "Field `ENCKINIT_XTAL_32K` writer - Applies an internal clock to help the 32 kHz crystal to start."]
 pub struct ENCKINIT_XTAL_32K_W<'a> {
     w: &'a mut W,
 }
@@ -537,7 +537,7 @@ impl core::ops::Deref for WDT_STATE_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_GPIO_SEL` reader - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock; 1: selects clock from the RTC GPIO X32P_C."]
+#[doc = "Field `XTAL32K_GPIO_SEL` reader - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
 pub struct XTAL32K_GPIO_SEL_R(crate::FieldReader<bool, bool>);
 impl XTAL32K_GPIO_SEL_R {
     #[inline(always)]
@@ -552,7 +552,7 @@ impl core::ops::Deref for XTAL32K_GPIO_SEL_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_GPIO_SEL` writer - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock; 1: selects clock from the RTC GPIO X32P_C."]
+#[doc = "Field `XTAL32K_GPIO_SEL` writer - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
 pub struct XTAL32K_GPIO_SEL_W<'a> {
     w: &'a mut W,
 }
@@ -574,7 +574,7 @@ impl<'a> XTAL32K_GPIO_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTL_EXT_CTR_LV` reader - 0: powers down XTAL at high level; 1: powers down XTAL at low level."]
+#[doc = "Field `XTL_EXT_CTR_LV` reader - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
 pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool, bool>);
 impl XTL_EXT_CTR_LV_R {
     #[inline(always)]
@@ -589,7 +589,7 @@ impl core::ops::Deref for XTL_EXT_CTR_LV_R {
         &self.0
     }
 }
-#[doc = "Field `XTL_EXT_CTR_LV` writer - 0: powers down XTAL at high level; 1: powers down XTAL at low level."]
+#[doc = "Field `XTL_EXT_CTR_LV` writer - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
 pub struct XTL_EXT_CTR_LV_W<'a> {
     w: &'a mut W,
 }
@@ -684,12 +684,12 @@ impl R {
     pub fn xtal32k_auto_return(&self) -> XTAL32K_AUTO_RETURN_R {
         XTAL32K_AUTO_RETURN_R::new(((self.bits >> 6) & 0x01) != 0)
     }
-    #[doc = "Bit 7 - Set this bit to allow the software to FPD the 32 kHz crystal; Reset this bit to allow the FSM to FPD the 32 kHz crystal."]
+    #[doc = "Bit 7 - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
     #[inline(always)]
     pub fn xtal32k_xpd_force(&self) -> XTAL32K_XPD_FORCE_R {
         XTAL32K_XPD_FORCE_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - Set this bit to apply an internal clock to help the 32 kHz crystal to start."]
+    #[doc = "Bit 8 - Applies an internal clock to help the 32 kHz crystal to start."]
     #[inline(always)]
     pub fn enckinit_xtal_32k(&self) -> ENCKINIT_XTAL_32K_R {
         ENCKINIT_XTAL_32K_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -724,12 +724,12 @@ impl R {
     pub fn wdt_state(&self) -> WDT_STATE_R {
         WDT_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
     }
-    #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock; 1: selects clock from the RTC GPIO X32P_C."]
+    #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
     #[inline(always)]
     pub fn xtal32k_gpio_sel(&self) -> XTAL32K_GPIO_SEL_R {
         XTAL32K_GPIO_SEL_R::new(((self.bits >> 23) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - 0: powers down XTAL at high level; 1: powers down XTAL at low level."]
+    #[doc = "Bit 30 - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
     #[inline(always)]
     pub fn xtl_ext_ctr_lv(&self) -> XTL_EXT_CTR_LV_R {
         XTL_EXT_CTR_LV_R::new(((self.bits >> 30) & 0x01) != 0)
@@ -776,12 +776,12 @@ impl W {
     pub fn xtal32k_auto_return(&mut self) -> XTAL32K_AUTO_RETURN_W {
         XTAL32K_AUTO_RETURN_W { w: self }
     }
-    #[doc = "Bit 7 - Set this bit to allow the software to FPD the 32 kHz crystal; Reset this bit to allow the FSM to FPD the 32 kHz crystal."]
+    #[doc = "Bit 7 - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
     #[inline(always)]
     pub fn xtal32k_xpd_force(&mut self) -> XTAL32K_XPD_FORCE_W {
         XTAL32K_XPD_FORCE_W { w: self }
     }
-    #[doc = "Bit 8 - Set this bit to apply an internal clock to help the 32 kHz crystal to start."]
+    #[doc = "Bit 8 - Applies an internal clock to help the 32 kHz crystal to start."]
     #[inline(always)]
     pub fn enckinit_xtal_32k(&mut self) -> ENCKINIT_XTAL_32K_W {
         ENCKINIT_XTAL_32K_W { w: self }
@@ -811,12 +811,12 @@ impl W {
     pub fn dac_xtal_32k(&mut self) -> DAC_XTAL_32K_W {
         DAC_XTAL_32K_W { w: self }
     }
-    #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock; 1: selects clock from the RTC GPIO X32P_C."]
+    #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
     #[inline(always)]
     pub fn xtal32k_gpio_sel(&mut self) -> XTAL32K_GPIO_SEL_W {
         XTAL32K_GPIO_SEL_W { w: self }
     }
-    #[doc = "Bit 30 - 0: powers down XTAL at high level; 1: powers down XTAL at low level."]
+    #[doc = "Bit 30 - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
     #[inline(always)]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W {
         XTL_EXT_CTR_LV_W { w: self }

@@ -19,7 +19,7 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WDT_FEED` writer - Set this bit to feed the RTC watchdog."]
+#[doc = "Field `WDT_FEED` writer - Set 1 to feed the RTC watchdog."]
 pub struct WDT_FEED_W<'a> {
     w: &'a mut W,
 }
@@ -42,7 +42,7 @@ impl<'a> WDT_FEED_W<'a> {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Set this bit to feed the RTC watchdog."]
+    #[doc = "Bit 31 - Set 1 to feed the RTC watchdog."]
     #[inline(always)]
     pub fn wdt_feed(&mut self) -> WDT_FEED_W {
         WDT_FEED_W { w: self }

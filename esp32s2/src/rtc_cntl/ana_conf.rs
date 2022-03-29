@@ -145,7 +145,7 @@ impl<'a> GLITCH_RST_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SAR_I2C_FORCE_PD` reader - Set this bit to FPD the SAR_I2C."]
+#[doc = "Field `SAR_I2C_FORCE_PD` reader - Sets this bit to FPD the SAR_I2C."]
 pub struct SAR_I2C_FORCE_PD_R(crate::FieldReader<bool, bool>);
 impl SAR_I2C_FORCE_PD_R {
     #[inline(always)]
@@ -160,7 +160,7 @@ impl core::ops::Deref for SAR_I2C_FORCE_PD_R {
         &self.0
     }
 }
-#[doc = "Field `SAR_I2C_FORCE_PD` writer - Set this bit to FPD the SAR_I2C."]
+#[doc = "Field `SAR_I2C_FORCE_PD` writer - Sets this bit to FPD the SAR_I2C."]
 pub struct SAR_I2C_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +182,7 @@ impl<'a> SAR_I2C_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SAR_I2C_FORCE_PU` reader - Set this bit to FPU the SAR_I2C."]
+#[doc = "Field `SAR_I2C_FORCE_PU` reader - Sets this bit to FPU the SAR_I2C."]
 pub struct SAR_I2C_FORCE_PU_R(crate::FieldReader<bool, bool>);
 impl SAR_I2C_FORCE_PU_R {
     #[inline(always)]
@@ -197,7 +197,7 @@ impl core::ops::Deref for SAR_I2C_FORCE_PU_R {
         &self.0
     }
 }
-#[doc = "Field `SAR_I2C_FORCE_PU` writer - Set this bit to FPU the SAR_I2C."]
+#[doc = "Field `SAR_I2C_FORCE_PU` writer - Sets this bit to FPU the SAR_I2C."]
 pub struct SAR_I2C_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
@@ -219,7 +219,7 @@ impl<'a> SAR_I2C_FORCE_PU_W<'a> {
         self.w
     }
 }
-#[doc = "Field `PLLA_FORCE_PD` reader - Set this bit to FPD the PLLA."]
+#[doc = "Field `PLLA_FORCE_PD` reader - Sets this bit to FPD the PLLA."]
 pub struct PLLA_FORCE_PD_R(crate::FieldReader<bool, bool>);
 impl PLLA_FORCE_PD_R {
     #[inline(always)]
@@ -234,7 +234,7 @@ impl core::ops::Deref for PLLA_FORCE_PD_R {
         &self.0
     }
 }
-#[doc = "Field `PLLA_FORCE_PD` writer - Set this bit to FPD the PLLA."]
+#[doc = "Field `PLLA_FORCE_PD` writer - Sets this bit to FPD the PLLA."]
 pub struct PLLA_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
@@ -256,7 +256,7 @@ impl<'a> PLLA_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `PLLA_FORCE_PU` reader - Set this bit to FPU the PLLA."]
+#[doc = "Field `PLLA_FORCE_PU` reader - Sets this bit to FPU the PLLA."]
 pub struct PLLA_FORCE_PU_R(crate::FieldReader<bool, bool>);
 impl PLLA_FORCE_PU_R {
     #[inline(always)]
@@ -271,7 +271,7 @@ impl core::ops::Deref for PLLA_FORCE_PU_R {
         &self.0
     }
 }
-#[doc = "Field `PLLA_FORCE_PU` writer - Set this bit to FPU the PLLA."]
+#[doc = "Field `PLLA_FORCE_PU` writer - Sets this bit to FPU the PLLA."]
 pub struct PLLA_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
@@ -531,22 +531,22 @@ impl R {
     pub fn glitch_rst_en(&self) -> GLITCH_RST_EN_R {
         GLITCH_RST_EN_R::new(((self.bits >> 20) & 0x01) != 0)
     }
-    #[doc = "Bit 21 - Set this bit to FPD the SAR_I2C."]
+    #[doc = "Bit 21 - Sets this bit to FPD the SAR_I2C."]
     #[inline(always)]
     pub fn sar_i2c_force_pd(&self) -> SAR_I2C_FORCE_PD_R {
         SAR_I2C_FORCE_PD_R::new(((self.bits >> 21) & 0x01) != 0)
     }
-    #[doc = "Bit 22 - Set this bit to FPU the SAR_I2C."]
+    #[doc = "Bit 22 - Sets this bit to FPU the SAR_I2C."]
     #[inline(always)]
     pub fn sar_i2c_force_pu(&self) -> SAR_I2C_FORCE_PU_R {
         SAR_I2C_FORCE_PU_R::new(((self.bits >> 22) & 0x01) != 0)
     }
-    #[doc = "Bit 23 - Set this bit to FPD the PLLA."]
+    #[doc = "Bit 23 - Sets this bit to FPD the PLLA."]
     #[inline(always)]
     pub fn plla_force_pd(&self) -> PLLA_FORCE_PD_R {
         PLLA_FORCE_PD_R::new(((self.bits >> 23) & 0x01) != 0)
     }
-    #[doc = "Bit 24 - Set this bit to FPU the PLLA."]
+    #[doc = "Bit 24 - Sets this bit to FPU the PLLA."]
     #[inline(always)]
     pub fn plla_force_pu(&self) -> PLLA_FORCE_PU_R {
         PLLA_FORCE_PU_R::new(((self.bits >> 24) & 0x01) != 0)
@@ -598,22 +598,22 @@ impl W {
     pub fn glitch_rst_en(&mut self) -> GLITCH_RST_EN_W {
         GLITCH_RST_EN_W { w: self }
     }
-    #[doc = "Bit 21 - Set this bit to FPD the SAR_I2C."]
+    #[doc = "Bit 21 - Sets this bit to FPD the SAR_I2C."]
     #[inline(always)]
     pub fn sar_i2c_force_pd(&mut self) -> SAR_I2C_FORCE_PD_W {
         SAR_I2C_FORCE_PD_W { w: self }
     }
-    #[doc = "Bit 22 - Set this bit to FPU the SAR_I2C."]
+    #[doc = "Bit 22 - Sets this bit to FPU the SAR_I2C."]
     #[inline(always)]
     pub fn sar_i2c_force_pu(&mut self) -> SAR_I2C_FORCE_PU_W {
         SAR_I2C_FORCE_PU_W { w: self }
     }
-    #[doc = "Bit 23 - Set this bit to FPD the PLLA."]
+    #[doc = "Bit 23 - Sets this bit to FPD the PLLA."]
     #[inline(always)]
     pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W {
         PLLA_FORCE_PD_W { w: self }
     }
-    #[doc = "Bit 24 - Set this bit to FPU the PLLA."]
+    #[doc = "Bit 24 - Sets this bit to FPU the PLLA."]
     #[inline(always)]
     pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W {
         PLLA_FORCE_PU_W { w: self }

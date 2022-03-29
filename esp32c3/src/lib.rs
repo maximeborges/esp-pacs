@@ -624,6 +624,34 @@ impl core::fmt::Debug for RMT {
 }
 #[doc = "Remote Control Peripheral"]
 pub mod rmt;
+#[doc = "Hardware random number generator"]
+pub struct RNG {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for RNG {}
+impl RNG {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const rng::RegisterBlock = 0x6002_6000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const rng::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for RNG {
+    type Target = rng::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for RNG {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RNG").finish()
+    }
+}
+#[doc = "Hardware random number generator"]
+pub mod rng;
 #[doc = "RSA (Rivest Shamir Adleman) Accelerator"]
 pub struct RSA {
     _marker: PhantomData<*const ()>,
@@ -1100,34 +1128,6 @@ impl core::fmt::Debug for XTS_AES {
 }
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub mod xts_aes;
-#[doc = "Hardware random number generator"]
-pub struct RNG {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for RNG {}
-impl RNG {
-    #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rng::RegisterBlock = 0x6002_6000 as *const _;
-    #[doc = r"Return the pointer to the register block"]
-    #[inline(always)]
-    pub const fn ptr() -> *const rng::RegisterBlock {
-        Self::PTR
-    }
-}
-impl Deref for RNG {
-    type Target = rng::RegisterBlock;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        unsafe { &*Self::PTR }
-    }
-}
-impl core::fmt::Debug for RNG {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RNG").finish()
-    }
-}
-#[doc = "Hardware random number generator"]
-pub mod rng;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
@@ -1167,6 +1167,8 @@ pub struct Peripherals {
     pub LEDC: LEDC,
     #[doc = "RMT"]
     pub RMT: RMT,
+    #[doc = "RNG"]
+    pub RNG: RNG,
     #[doc = "RSA"]
     pub RSA: RSA,
     #[doc = "RTC_CNTL"]
@@ -1201,8 +1203,6 @@ pub struct Peripherals {
     pub USB_DEVICE: USB_DEVICE,
     #[doc = "XTS_AES"]
     pub XTS_AES: XTS_AES,
-    #[doc = "RNG"]
-    pub RNG: RNG,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
@@ -1272,6 +1272,9 @@ impl Peripherals {
             RMT: RMT {
                 _marker: PhantomData,
             },
+            RNG: RNG {
+                _marker: PhantomData,
+            },
             RSA: RSA {
                 _marker: PhantomData,
             },
@@ -1321,9 +1324,6 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             XTS_AES: XTS_AES {
-                _marker: PhantomData,
-            },
-            RNG: RNG {
                 _marker: PhantomData,
             },
         }

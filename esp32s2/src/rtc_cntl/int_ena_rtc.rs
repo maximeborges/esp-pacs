@@ -34,7 +34,7 @@ impl From<crate::W<INT_ENA_RTC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SLP_WAKEUP_INT_ENA` reader - Enables interrupts when the chip wakes up from sleep."]
+#[doc = "Field `SLP_WAKEUP_INT_ENA` reader - Enables interruption when the chip wakes up from sleep."]
 pub struct SLP_WAKEUP_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl SLP_WAKEUP_INT_ENA_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for SLP_WAKEUP_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `SLP_WAKEUP_INT_ENA` writer - Enables interrupts when the chip wakes up from sleep."]
+#[doc = "Field `SLP_WAKEUP_INT_ENA` writer - Enables interruption when the chip wakes up from sleep."]
 pub struct SLP_WAKEUP_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> SLP_WAKEUP_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SLP_REJECT_INT_ENA` reader - Enables interrupts when the chip rejects to go to sleep."]
+#[doc = "Field `SLP_REJECT_INT_ENA` reader - Enables interruption when the chip rejects to go to sleep."]
 pub struct SLP_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl SLP_REJECT_INT_ENA_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for SLP_REJECT_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `SLP_REJECT_INT_ENA` writer - Enables interrupts when the chip rejects to go to sleep."]
+#[doc = "Field `SLP_REJECT_INT_ENA` writer - Enables interruption when the chip rejects to go to sleep."]
 pub struct SLP_REJECT_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -108,7 +108,7 @@ impl<'a> SLP_REJECT_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SDIO_IDLE_INT_ENA` reader - Enables interrupts when the SDIO idles."]
+#[doc = "Field `SDIO_IDLE_INT_ENA` reader - Enables interruption when the SDIO idles."]
 pub struct SDIO_IDLE_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl SDIO_IDLE_INT_ENA_R {
     #[inline(always)]
@@ -123,7 +123,7 @@ impl core::ops::Deref for SDIO_IDLE_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `SDIO_IDLE_INT_ENA` writer - Enables interrupts when the SDIO idles."]
+#[doc = "Field `SDIO_IDLE_INT_ENA` writer - Enables interruption when the SDIO idles."]
 pub struct SDIO_IDLE_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +182,7 @@ impl<'a> WDT_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` reader - Enables interrupts upon the completion of a touch scanning."]
+#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` reader - Enables interruption upon the completion of a touch scanning."]
 pub struct TOUCH_SCAN_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOUCH_SCAN_DONE_INT_ENA_R {
     #[inline(always)]
@@ -197,7 +197,7 @@ impl core::ops::Deref for TOUCH_SCAN_DONE_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` writer - Enables interrupts upon the completion of a touch scanning."]
+#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` writer - Enables interruption upon the completion of a touch scanning."]
 pub struct TOUCH_SCAN_DONE_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -256,7 +256,7 @@ impl<'a> ULP_CP_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_DONE_INT_ENA` reader - Enables interrupts upon the completion of a single touch."]
+#[doc = "Field `TOUCH_DONE_INT_ENA` reader - Enables interruption upon the completion of a single touch."]
 pub struct TOUCH_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOUCH_DONE_INT_ENA_R {
     #[inline(always)]
@@ -271,7 +271,7 @@ impl core::ops::Deref for TOUCH_DONE_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_DONE_INT_ENA` writer - Enables interrupts upon the completion of a single touch."]
+#[doc = "Field `TOUCH_DONE_INT_ENA` writer - Enables interruption upon the completion of a single touch."]
 pub struct TOUCH_DONE_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -293,7 +293,7 @@ impl<'a> TOUCH_DONE_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_ACTIVE_INT_ENA` reader - Enables interrupts when a touch is detected."]
+#[doc = "Field `TOUCH_ACTIVE_INT_ENA` reader - Enables interruption when a touch is detected."]
 pub struct TOUCH_ACTIVE_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOUCH_ACTIVE_INT_ENA_R {
     #[inline(always)]
@@ -308,7 +308,7 @@ impl core::ops::Deref for TOUCH_ACTIVE_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_ACTIVE_INT_ENA` writer - Enables interrupts when a touch is detected."]
+#[doc = "Field `TOUCH_ACTIVE_INT_ENA` writer - Enables interruption when a touch is detected."]
 pub struct TOUCH_ACTIVE_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -330,7 +330,7 @@ impl<'a> TOUCH_ACTIVE_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_INACTIVE_INT_ENA` reader - Enables interrupts when a touch is released."]
+#[doc = "Field `TOUCH_INACTIVE_INT_ENA` reader - Enables interruption when a touch is released."]
 pub struct TOUCH_INACTIVE_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOUCH_INACTIVE_INT_ENA_R {
     #[inline(always)]
@@ -345,7 +345,7 @@ impl core::ops::Deref for TOUCH_INACTIVE_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_INACTIVE_INT_ENA` writer - Enables interrupts when a touch is released."]
+#[doc = "Field `TOUCH_INACTIVE_INT_ENA` writer - Enables interruption when a touch is released."]
 pub struct TOUCH_INACTIVE_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -367,7 +367,7 @@ impl<'a> TOUCH_INACTIVE_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BROWN_OUT_INT_ENA` reader - Enables the brownout interrupt."]
+#[doc = "Field `BROWN_OUT_INT_ENA` reader - Enables the brown out interrupt."]
 pub struct BROWN_OUT_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl BROWN_OUT_INT_ENA_R {
     #[inline(always)]
@@ -382,7 +382,7 @@ impl core::ops::Deref for BROWN_OUT_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `BROWN_OUT_INT_ENA` writer - Enables the brownout interrupt."]
+#[doc = "Field `BROWN_OUT_INT_ENA` writer - Enables the brown out interrupt."]
 pub struct BROWN_OUT_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -478,7 +478,7 @@ impl<'a> SARADC1_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TSENS_INT_ENA` reader - Enables the temperature sensor interrupt."]
+#[doc = "Field `TSENS_INT_ENA` reader - Enables the touch sensor interrupt."]
 pub struct TSENS_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TSENS_INT_ENA_R {
     #[inline(always)]
@@ -493,7 +493,7 @@ impl core::ops::Deref for TSENS_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TSENS_INT_ENA` writer - Enables the temperature sensor interrupt."]
+#[doc = "Field `TSENS_INT_ENA` writer - Enables the touch sensor interrupt."]
 pub struct TSENS_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -626,7 +626,7 @@ impl<'a> SWD_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL32K_DEAD_INT_ENA` reader - Enables interrupts when the 32 kHz crystal is dead."]
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` reader - Enables interruption when the 32 kHz crystal is dead."]
 pub struct XTAL32K_DEAD_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl XTAL32K_DEAD_INT_ENA_R {
     #[inline(always)]
@@ -641,7 +641,7 @@ impl core::ops::Deref for XTAL32K_DEAD_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_DEAD_INT_ENA` writer - Enables interrupts when the 32 kHz crystal is dead."]
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` writer - Enables interruption when the 32 kHz crystal is dead."]
 pub struct XTAL32K_DEAD_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -663,7 +663,7 @@ impl<'a> XTAL32K_DEAD_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `COCPU_TRAP_INT_ENA` reader - Enables interrupts when the ULP-RISCV is trapped."]
+#[doc = "Field `COCPU_TRAP_INT_ENA` reader - Enables interruption when the ULP-RISCV is trapped."]
 pub struct COCPU_TRAP_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl COCPU_TRAP_INT_ENA_R {
     #[inline(always)]
@@ -678,7 +678,7 @@ impl core::ops::Deref for COCPU_TRAP_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `COCPU_TRAP_INT_ENA` writer - Enables interrupts when the ULP-RISCV is trapped."]
+#[doc = "Field `COCPU_TRAP_INT_ENA` writer - Enables interruption when the ULP-RISCV is trapped."]
 pub struct COCPU_TRAP_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -700,7 +700,7 @@ impl<'a> COCPU_TRAP_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` reader - Enables interrupts when touch sensor times out."]
+#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` reader - Enables interruption when touch sensor times out."]
 pub struct TOUCH_TIMEOUT_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl TOUCH_TIMEOUT_INT_ENA_R {
     #[inline(always)]
@@ -715,7 +715,7 @@ impl core::ops::Deref for TOUCH_TIMEOUT_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` writer - Enables interrupts when touch sensor times out."]
+#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` writer - Enables interruption when touch sensor times out."]
 pub struct TOUCH_TIMEOUT_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -737,7 +737,7 @@ impl<'a> TOUCH_TIMEOUT_INT_ENA_W<'a> {
         self.w
     }
 }
-#[doc = "Field `GLITCH_DET_INT_ENA` reader - Enables interrupts when a glitch is detected."]
+#[doc = "Field `GLITCH_DET_INT_ENA` reader - Enables interruption when a glitch is detected."]
 pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool, bool>);
 impl GLITCH_DET_INT_ENA_R {
     #[inline(always)]
@@ -752,7 +752,7 @@ impl core::ops::Deref for GLITCH_DET_INT_ENA_R {
         &self.0
     }
 }
-#[doc = "Field `GLITCH_DET_INT_ENA` writer - Enables interrupts when a glitch is detected."]
+#[doc = "Field `GLITCH_DET_INT_ENA` writer - Enables interruption when a glitch is detected."]
 pub struct GLITCH_DET_INT_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -775,17 +775,17 @@ impl<'a> GLITCH_DET_INT_ENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Enables interrupts when the chip wakes up from sleep."]
+    #[doc = "Bit 0 - Enables interruption when the chip wakes up from sleep."]
     #[inline(always)]
     pub fn slp_wakeup_int_ena(&self) -> SLP_WAKEUP_INT_ENA_R {
         SLP_WAKEUP_INT_ENA_R::new((self.bits & 0x01) != 0)
     }
-    #[doc = "Bit 1 - Enables interrupts when the chip rejects to go to sleep."]
+    #[doc = "Bit 1 - Enables interruption when the chip rejects to go to sleep."]
     #[inline(always)]
     pub fn slp_reject_int_ena(&self) -> SLP_REJECT_INT_ENA_R {
         SLP_REJECT_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - Enables interrupts when the SDIO idles."]
+    #[doc = "Bit 2 - Enables interruption when the SDIO idles."]
     #[inline(always)]
     pub fn sdio_idle_int_ena(&self) -> SDIO_IDLE_INT_ENA_R {
         SDIO_IDLE_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
@@ -795,7 +795,7 @@ impl R {
     pub fn wdt_int_ena(&self) -> WDT_INT_ENA_R {
         WDT_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 4 - Enables interrupts upon the completion of a touch scanning."]
+    #[doc = "Bit 4 - Enables interruption upon the completion of a touch scanning."]
     #[inline(always)]
     pub fn touch_scan_done_int_ena(&self) -> TOUCH_SCAN_DONE_INT_ENA_R {
         TOUCH_SCAN_DONE_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
@@ -805,22 +805,22 @@ impl R {
     pub fn ulp_cp_int_ena(&self) -> ULP_CP_INT_ENA_R {
         ULP_CP_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - Enables interrupts upon the completion of a single touch."]
+    #[doc = "Bit 6 - Enables interruption upon the completion of a single touch."]
     #[inline(always)]
     pub fn touch_done_int_ena(&self) -> TOUCH_DONE_INT_ENA_R {
         TOUCH_DONE_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
     }
-    #[doc = "Bit 7 - Enables interrupts when a touch is detected."]
+    #[doc = "Bit 7 - Enables interruption when a touch is detected."]
     #[inline(always)]
     pub fn touch_active_int_ena(&self) -> TOUCH_ACTIVE_INT_ENA_R {
         TOUCH_ACTIVE_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - Enables interrupts when a touch is released."]
+    #[doc = "Bit 8 - Enables interruption when a touch is released."]
     #[inline(always)]
     pub fn touch_inactive_int_ena(&self) -> TOUCH_INACTIVE_INT_ENA_R {
         TOUCH_INACTIVE_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - Enables the brownout interrupt."]
+    #[doc = "Bit 9 - Enables the brown out interrupt."]
     #[inline(always)]
     pub fn brown_out_int_ena(&self) -> BROWN_OUT_INT_ENA_R {
         BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
@@ -835,7 +835,7 @@ impl R {
     pub fn saradc1_int_ena(&self) -> SARADC1_INT_ENA_R {
         SARADC1_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 12 - Enables the temperature sensor interrupt."]
+    #[doc = "Bit 12 - Enables the touch sensor interrupt."]
     #[inline(always)]
     pub fn tsens_int_ena(&self) -> TSENS_INT_ENA_R {
         TSENS_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
@@ -855,39 +855,39 @@ impl R {
     pub fn swd_int_ena(&self) -> SWD_INT_ENA_R {
         SWD_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
     }
-    #[doc = "Bit 16 - Enables interrupts when the 32 kHz crystal is dead."]
+    #[doc = "Bit 16 - Enables interruption when the 32 kHz crystal is dead."]
     #[inline(always)]
     pub fn xtal32k_dead_int_ena(&self) -> XTAL32K_DEAD_INT_ENA_R {
         XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 17 - Enables interrupts when the ULP-RISCV is trapped."]
+    #[doc = "Bit 17 - Enables interruption when the ULP-RISCV is trapped."]
     #[inline(always)]
     pub fn cocpu_trap_int_ena(&self) -> COCPU_TRAP_INT_ENA_R {
         COCPU_TRAP_INT_ENA_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bit 18 - Enables interrupts when touch sensor times out."]
+    #[doc = "Bit 18 - Enables interruption when touch sensor times out."]
     #[inline(always)]
     pub fn touch_timeout_int_ena(&self) -> TOUCH_TIMEOUT_INT_ENA_R {
         TOUCH_TIMEOUT_INT_ENA_R::new(((self.bits >> 18) & 0x01) != 0)
     }
-    #[doc = "Bit 19 - Enables interrupts when a glitch is detected."]
+    #[doc = "Bit 19 - Enables interruption when a glitch is detected."]
     #[inline(always)]
     pub fn glitch_det_int_ena(&self) -> GLITCH_DET_INT_ENA_R {
         GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Enables interrupts when the chip wakes up from sleep."]
+    #[doc = "Bit 0 - Enables interruption when the chip wakes up from sleep."]
     #[inline(always)]
     pub fn slp_wakeup_int_ena(&mut self) -> SLP_WAKEUP_INT_ENA_W {
         SLP_WAKEUP_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 1 - Enables interrupts when the chip rejects to go to sleep."]
+    #[doc = "Bit 1 - Enables interruption when the chip rejects to go to sleep."]
     #[inline(always)]
     pub fn slp_reject_int_ena(&mut self) -> SLP_REJECT_INT_ENA_W {
         SLP_REJECT_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 2 - Enables interrupts when the SDIO idles."]
+    #[doc = "Bit 2 - Enables interruption when the SDIO idles."]
     #[inline(always)]
     pub fn sdio_idle_int_ena(&mut self) -> SDIO_IDLE_INT_ENA_W {
         SDIO_IDLE_INT_ENA_W { w: self }
@@ -897,7 +897,7 @@ impl W {
     pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W {
         WDT_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 4 - Enables interrupts upon the completion of a touch scanning."]
+    #[doc = "Bit 4 - Enables interruption upon the completion of a touch scanning."]
     #[inline(always)]
     pub fn touch_scan_done_int_ena(&mut self) -> TOUCH_SCAN_DONE_INT_ENA_W {
         TOUCH_SCAN_DONE_INT_ENA_W { w: self }
@@ -907,22 +907,22 @@ impl W {
     pub fn ulp_cp_int_ena(&mut self) -> ULP_CP_INT_ENA_W {
         ULP_CP_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 6 - Enables interrupts upon the completion of a single touch."]
+    #[doc = "Bit 6 - Enables interruption upon the completion of a single touch."]
     #[inline(always)]
     pub fn touch_done_int_ena(&mut self) -> TOUCH_DONE_INT_ENA_W {
         TOUCH_DONE_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 7 - Enables interrupts when a touch is detected."]
+    #[doc = "Bit 7 - Enables interruption when a touch is detected."]
     #[inline(always)]
     pub fn touch_active_int_ena(&mut self) -> TOUCH_ACTIVE_INT_ENA_W {
         TOUCH_ACTIVE_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 8 - Enables interrupts when a touch is released."]
+    #[doc = "Bit 8 - Enables interruption when a touch is released."]
     #[inline(always)]
     pub fn touch_inactive_int_ena(&mut self) -> TOUCH_INACTIVE_INT_ENA_W {
         TOUCH_INACTIVE_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 9 - Enables the brownout interrupt."]
+    #[doc = "Bit 9 - Enables the brown out interrupt."]
     #[inline(always)]
     pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W {
         BROWN_OUT_INT_ENA_W { w: self }
@@ -937,7 +937,7 @@ impl W {
     pub fn saradc1_int_ena(&mut self) -> SARADC1_INT_ENA_W {
         SARADC1_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 12 - Enables the temperature sensor interrupt."]
+    #[doc = "Bit 12 - Enables the touch sensor interrupt."]
     #[inline(always)]
     pub fn tsens_int_ena(&mut self) -> TSENS_INT_ENA_W {
         TSENS_INT_ENA_W { w: self }
@@ -957,22 +957,22 @@ impl W {
     pub fn swd_int_ena(&mut self) -> SWD_INT_ENA_W {
         SWD_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 16 - Enables interrupts when the 32 kHz crystal is dead."]
+    #[doc = "Bit 16 - Enables interruption when the 32 kHz crystal is dead."]
     #[inline(always)]
     pub fn xtal32k_dead_int_ena(&mut self) -> XTAL32K_DEAD_INT_ENA_W {
         XTAL32K_DEAD_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 17 - Enables interrupts when the ULP-RISCV is trapped."]
+    #[doc = "Bit 17 - Enables interruption when the ULP-RISCV is trapped."]
     #[inline(always)]
     pub fn cocpu_trap_int_ena(&mut self) -> COCPU_TRAP_INT_ENA_W {
         COCPU_TRAP_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 18 - Enables interrupts when touch sensor times out."]
+    #[doc = "Bit 18 - Enables interruption when touch sensor times out."]
     #[inline(always)]
     pub fn touch_timeout_int_ena(&mut self) -> TOUCH_TIMEOUT_INT_ENA_W {
         TOUCH_TIMEOUT_INT_ENA_W { w: self }
     }
-    #[doc = "Bit 19 - Enables interrupts when a glitch is detected."]
+    #[doc = "Bit 19 - Enables interruption when a glitch is detected."]
     #[inline(always)]
     pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W {
         GLITCH_DET_INT_ENA_W { w: self }

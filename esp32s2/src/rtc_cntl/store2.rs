@@ -34,7 +34,7 @@ impl From<crate::W<STORE2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SCRATCH2` reader - Reservation register 2."]
+#[doc = "Field `SCRATCH2` reader - Reservation register 2"]
 pub struct SCRATCH2_R(crate::FieldReader<u32, u32>);
 impl SCRATCH2_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for SCRATCH2_R {
         &self.0
     }
 }
-#[doc = "Field `SCRATCH2` writer - Reservation register 2."]
+#[doc = "Field `SCRATCH2` writer - Reservation register 2"]
 pub struct SCRATCH2_W<'a> {
     w: &'a mut W,
 }
@@ -62,14 +62,14 @@ impl<'a> SCRATCH2_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Reservation register 2."]
+    #[doc = "Bits 0:31 - Reservation register 2"]
     #[inline(always)]
     pub fn scratch2(&self) -> SCRATCH2_R {
         SCRATCH2_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Reservation register 2."]
+    #[doc = "Bits 0:31 - Reservation register 2"]
     #[inline(always)]
     pub fn scratch2(&mut self) -> SCRATCH2_W {
         SCRATCH2_W { w: self }

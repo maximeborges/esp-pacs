@@ -61,7 +61,7 @@ impl<'a> XTAL32K_RETURN_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL32K_RESTART_WAIT` reader - Defines the waiting cycles before restarting the 32 kHz crystal oscillator."]
+#[doc = "Field `XTAL32K_RESTART_WAIT` reader - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
 pub struct XTAL32K_RESTART_WAIT_R(crate::FieldReader<u16, u16>);
 impl XTAL32K_RESTART_WAIT_R {
     #[inline(always)]
@@ -76,7 +76,7 @@ impl core::ops::Deref for XTAL32K_RESTART_WAIT_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_RESTART_WAIT` writer - Defines the waiting cycles before restarting the 32 kHz crystal oscillator."]
+#[doc = "Field `XTAL32K_RESTART_WAIT` writer - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
 pub struct XTAL32K_RESTART_WAIT_W<'a> {
     w: &'a mut W,
 }
@@ -88,7 +88,7 @@ impl<'a> XTAL32K_RESTART_WAIT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL32K_WDT_TIMEOUT` reader - Defines the waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
+#[doc = "Field `XTAL32K_WDT_TIMEOUT` reader - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
 pub struct XTAL32K_WDT_TIMEOUT_R(crate::FieldReader<u8, u8>);
 impl XTAL32K_WDT_TIMEOUT_R {
     #[inline(always)]
@@ -103,7 +103,7 @@ impl core::ops::Deref for XTAL32K_WDT_TIMEOUT_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_WDT_TIMEOUT` writer - Defines the waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
+#[doc = "Field `XTAL32K_WDT_TIMEOUT` writer - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
 pub struct XTAL32K_WDT_TIMEOUT_W<'a> {
     w: &'a mut W,
 }
@@ -115,7 +115,7 @@ impl<'a> XTAL32K_WDT_TIMEOUT_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL32K_STABLE_THRES` reader - Defines the allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
+#[doc = "Field `XTAL32K_STABLE_THRES` reader - Defines the maximum allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
 pub struct XTAL32K_STABLE_THRES_R(crate::FieldReader<u8, u8>);
 impl XTAL32K_STABLE_THRES_R {
     #[inline(always)]
@@ -130,7 +130,7 @@ impl core::ops::Deref for XTAL32K_STABLE_THRES_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL32K_STABLE_THRES` writer - Defines the allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
+#[doc = "Field `XTAL32K_STABLE_THRES` writer - Defines the maximum allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
 pub struct XTAL32K_STABLE_THRES_W<'a> {
     w: &'a mut W,
 }
@@ -148,17 +148,17 @@ impl R {
     pub fn xtal32k_return_wait(&self) -> XTAL32K_RETURN_WAIT_R {
         XTAL32K_RETURN_WAIT_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 4:19 - Defines the waiting cycles before restarting the 32 kHz crystal oscillator."]
+    #[doc = "Bits 4:19 - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
     #[inline(always)]
     pub fn xtal32k_restart_wait(&self) -> XTAL32K_RESTART_WAIT_R {
         XTAL32K_RESTART_WAIT_R::new(((self.bits >> 4) & 0xffff) as u16)
     }
-    #[doc = "Bits 20:27 - Defines the waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
+    #[doc = "Bits 20:27 - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
     #[inline(always)]
     pub fn xtal32k_wdt_timeout(&self) -> XTAL32K_WDT_TIMEOUT_R {
         XTAL32K_WDT_TIMEOUT_R::new(((self.bits >> 20) & 0xff) as u8)
     }
-    #[doc = "Bits 28:31 - Defines the allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
+    #[doc = "Bits 28:31 - Defines the maximum allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
     #[inline(always)]
     pub fn xtal32k_stable_thres(&self) -> XTAL32K_STABLE_THRES_R {
         XTAL32K_STABLE_THRES_R::new(((self.bits >> 28) & 0x0f) as u8)
@@ -170,17 +170,17 @@ impl W {
     pub fn xtal32k_return_wait(&mut self) -> XTAL32K_RETURN_WAIT_W {
         XTAL32K_RETURN_WAIT_W { w: self }
     }
-    #[doc = "Bits 4:19 - Defines the waiting cycles before restarting the 32 kHz crystal oscillator."]
+    #[doc = "Bits 4:19 - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
     #[inline(always)]
     pub fn xtal32k_restart_wait(&mut self) -> XTAL32K_RESTART_WAIT_W {
         XTAL32K_RESTART_WAIT_W { w: self }
     }
-    #[doc = "Bits 20:27 - Defines the waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
+    #[doc = "Bits 20:27 - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
     #[inline(always)]
     pub fn xtal32k_wdt_timeout(&mut self) -> XTAL32K_WDT_TIMEOUT_W {
         XTAL32K_WDT_TIMEOUT_W { w: self }
     }
-    #[doc = "Bits 28:31 - Defines the allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
+    #[doc = "Bits 28:31 - Defines the maximum allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable."]
     #[inline(always)]
     pub fn xtal32k_stable_thres(&mut self) -> XTAL32K_STABLE_THRES_W {
         XTAL32K_STABLE_THRES_W { w: self }

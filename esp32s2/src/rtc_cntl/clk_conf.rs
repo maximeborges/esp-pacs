@@ -34,7 +34,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CK8M_DIV_SEL_VLD` reader - Synchronizes the reg_ck8m_div_sel. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+#[doc = "Field `CK8M_DIV_SEL_VLD` reader - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
 pub struct CK8M_DIV_SEL_VLD_R(crate::FieldReader<bool, bool>);
 impl CK8M_DIV_SEL_VLD_R {
     #[inline(always)]
@@ -49,7 +49,7 @@ impl core::ops::Deref for CK8M_DIV_SEL_VLD_R {
         &self.0
     }
 }
-#[doc = "Field `CK8M_DIV_SEL_VLD` writer - Synchronizes the reg_ck8m_div_sel. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+#[doc = "Field `CK8M_DIV_SEL_VLD` writer - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
 pub struct CK8M_DIV_SEL_VLD_W<'a> {
     w: &'a mut W,
 }
@@ -71,7 +71,7 @@ impl<'a> CK8M_DIV_SEL_VLD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CK8M_DIV` reader - Set the CK8M_D256_OUT divider. 00: divided by 128, 01: divided by 256, 10: divided by 512, 11: divided by 1024."]
+#[doc = "Field `CK8M_DIV` reader - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
 pub struct CK8M_DIV_R(crate::FieldReader<u8, u8>);
 impl CK8M_DIV_R {
     #[inline(always)]
@@ -86,7 +86,7 @@ impl core::ops::Deref for CK8M_DIV_R {
         &self.0
     }
 }
-#[doc = "Field `CK8M_DIV` writer - Set the CK8M_D256_OUT divider. 00: divided by 128, 01: divided by 256, 10: divided by 512, 11: divided by 1024."]
+#[doc = "Field `CK8M_DIV` writer - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
 pub struct CK8M_DIV_W<'a> {
     w: &'a mut W,
 }
@@ -283,7 +283,7 @@ impl<'a> DIG_CLK8M_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CK8M_DIV_SEL` reader - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1."]
+#[doc = "Field `CK8M_DIV_SEL` reader - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
 pub struct CK8M_DIV_SEL_R(crate::FieldReader<u8, u8>);
 impl CK8M_DIV_SEL_R {
     #[inline(always)]
@@ -298,7 +298,7 @@ impl core::ops::Deref for CK8M_DIV_SEL_R {
         &self.0
     }
 }
-#[doc = "Field `CK8M_DIV_SEL` writer - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1."]
+#[doc = "Field `CK8M_DIV_SEL` writer - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
 pub struct CK8M_DIV_SEL_W<'a> {
     w: &'a mut W,
 }
@@ -310,7 +310,7 @@ impl<'a> CK8M_DIV_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `XTAL_FORCE_NOGATING` reader - Set this bit to force no gating to crystal during sleep."]
+#[doc = "Field `XTAL_FORCE_NOGATING` reader - Set this bit to force no gating to crystal during sleep"]
 pub struct XTAL_FORCE_NOGATING_R(crate::FieldReader<bool, bool>);
 impl XTAL_FORCE_NOGATING_R {
     #[inline(always)]
@@ -325,7 +325,7 @@ impl core::ops::Deref for XTAL_FORCE_NOGATING_R {
         &self.0
     }
 }
-#[doc = "Field `XTAL_FORCE_NOGATING` writer - Set this bit to force no gating to crystal during sleep."]
+#[doc = "Field `XTAL_FORCE_NOGATING` writer - Set this bit to force no gating to crystal during sleep"]
 pub struct XTAL_FORCE_NOGATING_W<'a> {
     w: &'a mut W,
 }
@@ -522,7 +522,7 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `ANA_CLK_RTC_SEL` reader - Set this bit to select the RTC slow clock. 0: 90K rtc\\_clk, 1: 32k XTAL, 2: 8md256."]
+#[doc = "Field `ANA_CLK_RTC_SEL` reader - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
 pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8, u8>);
 impl ANA_CLK_RTC_SEL_R {
     #[inline(always)]
@@ -537,7 +537,7 @@ impl core::ops::Deref for ANA_CLK_RTC_SEL_R {
         &self.0
     }
 }
-#[doc = "Field `ANA_CLK_RTC_SEL` writer - Set this bit to select the RTC slow clock. 0: 90K rtc\\_clk, 1: 32k XTAL, 2: 8md256."]
+#[doc = "Field `ANA_CLK_RTC_SEL` writer - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
 pub struct ANA_CLK_RTC_SEL_W<'a> {
     w: &'a mut W,
 }
@@ -550,12 +550,12 @@ impl<'a> ANA_CLK_RTC_SEL_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+    #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
     pub fn ck8m_div_sel_vld(&self) -> CK8M_DIV_SEL_VLD_R {
         CK8M_DIV_SEL_VLD_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128, 01: divided by 256, 10: divided by 512, 11: divided by 1024."]
+    #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
     #[inline(always)]
     pub fn ck8m_div(&self) -> CK8M_DIV_R {
         CK8M_DIV_R::new(((self.bits >> 4) & 0x03) as u8)
@@ -585,12 +585,12 @@ impl R {
     pub fn dig_clk8m_en(&self) -> DIG_CLK8M_EN_R {
         DIG_CLK8M_EN_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1."]
+    #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
     #[inline(always)]
     pub fn ck8m_div_sel(&self) -> CK8M_DIV_SEL_R {
         CK8M_DIV_SEL_R::new(((self.bits >> 12) & 0x07) as u8)
     }
-    #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep."]
+    #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep"]
     #[inline(always)]
     pub fn xtal_force_nogating(&self) -> XTAL_FORCE_NOGATING_R {
         XTAL_FORCE_NOGATING_R::new(((self.bits >> 15) & 0x01) != 0)
@@ -620,19 +620,19 @@ impl R {
     pub fn fast_clk_rtc_sel(&self) -> FAST_CLK_RTC_SEL_R {
         FAST_CLK_RTC_SEL_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc\\_clk, 1: 32k XTAL, 2: 8md256."]
+    #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
     #[inline(always)]
     pub fn ana_clk_rtc_sel(&self) -> ANA_CLK_RTC_SEL_R {
         ANA_CLK_RTC_SEL_R::new(((self.bits >> 30) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock."]
+    #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
     pub fn ck8m_div_sel_vld(&mut self) -> CK8M_DIV_SEL_VLD_W {
         CK8M_DIV_SEL_VLD_W { w: self }
     }
-    #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128, 01: divided by 256, 10: divided by 512, 11: divided by 1024."]
+    #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
     #[inline(always)]
     pub fn ck8m_div(&mut self) -> CK8M_DIV_W {
         CK8M_DIV_W { w: self }
@@ -662,12 +662,12 @@ impl W {
     pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W {
         DIG_CLK8M_EN_W { w: self }
     }
-    #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1."]
+    #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
     #[inline(always)]
     pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W {
         CK8M_DIV_SEL_W { w: self }
     }
-    #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep."]
+    #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep"]
     #[inline(always)]
     pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W {
         XTAL_FORCE_NOGATING_W { w: self }
@@ -697,7 +697,7 @@ impl W {
     pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W {
         FAST_CLK_RTC_SEL_W { w: self }
     }
-    #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc\\_clk, 1: 32k XTAL, 2: 8md256."]
+    #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
     #[inline(always)]
     pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W {
         ANA_CLK_RTC_SEL_W { w: self }

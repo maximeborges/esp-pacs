@@ -1,22 +1,22 @@
-#[doc = "Register `CNTL_SENSOR_CTRL` reader"]
-pub struct R(crate::R<CNTL_SENSOR_CTRL_SPEC>);
+#[doc = "Register `SENSOR_CTRL` reader"]
+pub struct R(crate::R<SENSOR_CTRL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CNTL_SENSOR_CTRL_SPEC>;
+    type Target = crate::R<SENSOR_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CNTL_SENSOR_CTRL_SPEC>> for R {
+impl From<crate::R<SENSOR_CTRL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CNTL_SENSOR_CTRL_SPEC>) -> Self {
+    fn from(reader: crate::R<SENSOR_CTRL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CNTL_SENSOR_CTRL` writer"]
-pub struct W(crate::W<CNTL_SENSOR_CTRL_SPEC>);
+#[doc = "Register `SENSOR_CTRL` writer"]
+pub struct W(crate::W<SENSOR_CTRL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CNTL_SENSOR_CTRL_SPEC>;
+    type Target = crate::W<SENSOR_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CNTL_SENSOR_CTRL_SPEC>> for W {
+impl From<crate::W<SENSOR_CTRL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CNTL_SENSOR_CTRL_SPEC>) -> Self {
+    fn from(writer: crate::W<SENSOR_CTRL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -124,24 +124,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntl_sensor_ctrl]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sensor_ctrl]
 (index.html) module"]
-pub struct CNTL_SENSOR_CTRL_SPEC;
-impl crate::RegisterSpec for CNTL_SENSOR_CTRL_SPEC {
+pub struct SENSOR_CTRL_SPEC;
+impl crate::RegisterSpec for SENSOR_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntl_sensor_ctrl::R]
+#[doc = "`read()` method returns [sensor_ctrl::R]
 (R) reader structure"]
-impl crate::Readable for CNTL_SENSOR_CTRL_SPEC {
+impl crate::Readable for SENSOR_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cntl_sensor_ctrl::W]
+#[doc = "`write(|w| ..)` method takes [sensor_ctrl::W]
 (W) writer structure"]
-impl crate::Writable for CNTL_SENSOR_CTRL_SPEC {
+impl crate::Writable for SENSOR_CTRL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CNTL_SENSOR_CTRL to value 0"]
-impl crate::Resettable for CNTL_SENSOR_CTRL_SPEC {
+#[doc = "`reset()` method sets SENSOR_CTRL to value 0"]
+impl crate::Resettable for SENSOR_CTRL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

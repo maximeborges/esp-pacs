@@ -73,16 +73,16 @@ impl core::ops::Deref for RD_SPI_PAD_CONFIG_CS0_R {
         &self.0
     }
 }
-#[doc = "Field `RD_INST_CONFIG` reader - "]
-pub struct RD_INST_CONFIG_R(crate::FieldReader<u8, u8>);
-impl RD_INST_CONFIG_R {
+#[doc = "Field `RD_CHIP_VER_REV2` reader - "]
+pub struct RD_CHIP_VER_REV2_R(crate::FieldReader<bool, bool>);
+impl RD_CHIP_VER_REV2_R {
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_INST_CONFIG_R(crate::FieldReader::new(bits))
+    pub(crate) fn new(bits: bool) -> Self {
+        RD_CHIP_VER_REV2_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for RD_INST_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+impl core::ops::Deref for RD_CHIP_VER_REV2_R {
+    type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -154,10 +154,10 @@ impl R {
     pub fn rd_spi_pad_config_cs0(&self) -> RD_SPI_PAD_CONFIG_CS0_R {
         RD_SPI_PAD_CONFIG_CS0_R::new(((self.bits >> 15) & 0x1f) as u8)
     }
-    #[doc = "Bits 20:27"]
+    #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn rd_inst_config(&self) -> RD_INST_CONFIG_R {
-        RD_INST_CONFIG_R::new(((self.bits >> 20) & 0xff) as u8)
+    pub fn rd_chip_ver_rev2(&self) -> RD_CHIP_VER_REV2_R {
+        RD_CHIP_VER_REV2_R::new(((self.bits >> 20) & 0x01) != 0)
     }
     #[doc = "Bits 22:23 - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (RO)"]
     #[inline(always)]

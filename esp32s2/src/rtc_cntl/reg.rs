@@ -34,26 +34,26 @@ impl From<crate::W<REG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DIG_DBIAS_SLP` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep state."]
-pub struct DIG_DBIAS_SLP_R(crate::FieldReader<u8, u8>);
-impl DIG_DBIAS_SLP_R {
+#[doc = "Field `DIG_REG_DBIAS_SLP` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
+pub struct DIG_REG_DBIAS_SLP_R(crate::FieldReader<u8, u8>);
+impl DIG_REG_DBIAS_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
-        DIG_DBIAS_SLP_R(crate::FieldReader::new(bits))
+        DIG_REG_DBIAS_SLP_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for DIG_DBIAS_SLP_R {
+impl core::ops::Deref for DIG_REG_DBIAS_SLP_R {
     type Target = crate::FieldReader<u8, u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DIG_DBIAS_SLP` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep state."]
-pub struct DIG_DBIAS_SLP_W<'a> {
+#[doc = "Field `DIG_REG_DBIAS_SLP` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
+pub struct DIG_REG_DBIAS_SLP_W<'a> {
     w: &'a mut W,
 }
-impl<'a> DIG_DBIAS_SLP_W<'a> {
+impl<'a> DIG_REG_DBIAS_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -61,26 +61,26 @@ impl<'a> DIG_DBIAS_SLP_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DIG_DBIAS_WAK` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub struct DIG_DBIAS_WAK_R(crate::FieldReader<u8, u8>);
-impl DIG_DBIAS_WAK_R {
+#[doc = "Field `DIG_REG_DBIAS_WAK` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
+pub struct DIG_REG_DBIAS_WAK_R(crate::FieldReader<u8, u8>);
+impl DIG_REG_DBIAS_WAK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
-        DIG_DBIAS_WAK_R(crate::FieldReader::new(bits))
+        DIG_REG_DBIAS_WAK_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for DIG_DBIAS_WAK_R {
+impl core::ops::Deref for DIG_REG_DBIAS_WAK_R {
     type Target = crate::FieldReader<u8, u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DIG_DBIAS_WAK` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub struct DIG_DBIAS_WAK_W<'a> {
+#[doc = "Field `DIG_REG_DBIAS_WAK` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
+pub struct DIG_REG_DBIAS_WAK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> DIG_DBIAS_WAK_W<'a> {
+impl<'a> DIG_REG_DBIAS_WAK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -243,7 +243,7 @@ impl<'a> DBOOST_FORCE_PU_W<'a> {
         self.w
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PD` reader - Set this bit to FPD the low-power voltage regulator, which means decreasing its voltage to 0.8 V or lower."]
+#[doc = "Field `REGULATOR_FORCE_PD` reader - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
 pub struct REGULATOR_FORCE_PD_R(crate::FieldReader<bool, bool>);
 impl REGULATOR_FORCE_PD_R {
     #[inline(always)]
@@ -258,7 +258,7 @@ impl core::ops::Deref for REGULATOR_FORCE_PD_R {
         &self.0
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PD` writer - Set this bit to FPD the low-power voltage regulator, which means decreasing its voltage to 0.8 V or lower."]
+#[doc = "Field `REGULATOR_FORCE_PD` writer - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
 pub struct REGULATOR_FORCE_PD_W<'a> {
     w: &'a mut W,
 }
@@ -280,7 +280,7 @@ impl<'a> REGULATOR_FORCE_PD_W<'a> {
         self.w
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PU` reader - Set this bit to FPU the low-power voltage regulator, which means increasing its voltage to higher than 0.8 V."]
+#[doc = "Field `REGULATOR_FORCE_PU` reader - Set this bit to FPU the RTC_REG."]
 pub struct REGULATOR_FORCE_PU_R(crate::FieldReader<bool, bool>);
 impl REGULATOR_FORCE_PU_R {
     #[inline(always)]
@@ -295,7 +295,7 @@ impl core::ops::Deref for REGULATOR_FORCE_PU_R {
         &self.0
     }
 }
-#[doc = "Field `REGULATOR_FORCE_PU` writer - Set this bit to FPU the low-power voltage regulator, which means increasing its voltage to higher than 0.8 V."]
+#[doc = "Field `REGULATOR_FORCE_PU` writer - Set this bit to FPU the RTC_REG."]
 pub struct REGULATOR_FORCE_PU_W<'a> {
     w: &'a mut W,
 }
@@ -318,15 +318,15 @@ impl<'a> REGULATOR_FORCE_PU_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep state."]
+    #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
-    pub fn dig_dbias_slp(&self) -> DIG_DBIAS_SLP_R {
-        DIG_DBIAS_SLP_R::new(((self.bits >> 8) & 0x07) as u8)
+    pub fn dig_reg_dbias_slp(&self) -> DIG_REG_DBIAS_SLP_R {
+        DIG_REG_DBIAS_SLP_R::new(((self.bits >> 8) & 0x07) as u8)
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
-    pub fn dig_dbias_wak(&self) -> DIG_DBIAS_WAK_R {
-        DIG_DBIAS_WAK_R::new(((self.bits >> 11) & 0x07) as u8)
+    pub fn dig_reg_dbias_wak(&self) -> DIG_REG_DBIAS_WAK_R {
+        DIG_REG_DBIAS_WAK_R::new(((self.bits >> 11) & 0x07) as u8)
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
@@ -353,27 +353,27 @@ impl R {
     pub fn dboost_force_pu(&self) -> DBOOST_FORCE_PU_R {
         DBOOST_FORCE_PU_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - Set this bit to FPD the low-power voltage regulator, which means decreasing its voltage to 0.8 V or lower."]
+    #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
     pub fn regulator_force_pd(&self) -> REGULATOR_FORCE_PD_R {
         REGULATOR_FORCE_PD_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bit 31 - Set this bit to FPU the low-power voltage regulator, which means increasing its voltage to higher than 0.8 V."]
+    #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
     pub fn regulator_force_pu(&self) -> REGULATOR_FORCE_PU_R {
         REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep state."]
+    #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
-    pub fn dig_dbias_slp(&mut self) -> DIG_DBIAS_SLP_W {
-        DIG_DBIAS_SLP_W { w: self }
+    pub fn dig_reg_dbias_slp(&mut self) -> DIG_REG_DBIAS_SLP_W {
+        DIG_REG_DBIAS_SLP_W { w: self }
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
-    pub fn dig_dbias_wak(&mut self) -> DIG_DBIAS_WAK_W {
-        DIG_DBIAS_WAK_W { w: self }
+    pub fn dig_reg_dbias_wak(&mut self) -> DIG_REG_DBIAS_WAK_W {
+        DIG_REG_DBIAS_WAK_W { w: self }
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
@@ -400,12 +400,12 @@ impl W {
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W {
         DBOOST_FORCE_PU_W { w: self }
     }
-    #[doc = "Bit 30 - Set this bit to FPD the low-power voltage regulator, which means decreasing its voltage to 0.8 V or lower."]
+    #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
     pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W {
         REGULATOR_FORCE_PD_W { w: self }
     }
-    #[doc = "Bit 31 - Set this bit to FPU the low-power voltage regulator, which means increasing its voltage to higher than 0.8 V."]
+    #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
     pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W {
         REGULATOR_FORCE_PU_W { w: self }

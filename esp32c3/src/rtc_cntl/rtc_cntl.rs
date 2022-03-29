@@ -1,22 +1,22 @@
-#[doc = "Register `RTC` reader"]
-pub struct R(crate::R<RTC_SPEC>);
+#[doc = "Register `RTC_CNTL` reader"]
+pub struct R(crate::R<RTC_CNTL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<RTC_SPEC>;
+    type Target = crate::R<RTC_CNTL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<RTC_SPEC>> for R {
+impl From<crate::R<RTC_CNTL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<RTC_SPEC>) -> Self {
+    fn from(reader: crate::R<RTC_CNTL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `RTC` writer"]
-pub struct W(crate::W<RTC_SPEC>);
+#[doc = "Register `RTC_CNTL` writer"]
+pub struct W(crate::W<RTC_CNTL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<RTC_SPEC>;
+    type Target = crate::W<RTC_CNTL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<RTC_SPEC>> for W {
+impl From<crate::W<RTC_CNTL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<RTC_SPEC>) -> Self {
+    fn from(writer: crate::W<RTC_CNTL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -322,24 +322,24 @@ impl W {
 (crate::generic::Reg::reset), [`write`]
 (crate::generic::Reg::write), [`modify`]
 (crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc]
+(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_cntl]
 (index.html) module"]
-pub struct RTC_SPEC;
-impl crate::RegisterSpec for RTC_SPEC {
+pub struct RTC_CNTL_SPEC;
+impl crate::RegisterSpec for RTC_CNTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc::R]
+#[doc = "`read()` method returns [rtc_cntl::R]
 (R) reader structure"]
-impl crate::Readable for RTC_SPEC {
+impl crate::Readable for RTC_CNTL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc::W]
+#[doc = "`write(|w| ..)` method takes [rtc_cntl::W]
 (W) writer structure"]
-impl crate::Writable for RTC_SPEC {
+impl crate::Writable for RTC_CNTL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets RTC to value 0xa000_0000"]
-impl crate::Resettable for RTC_SPEC {
+#[doc = "`reset()` method sets RTC_CNTL to value 0xa000_0000"]
+impl crate::Resettable for RTC_CNTL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0xa000_0000

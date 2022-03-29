@@ -219,26 +219,26 @@ impl<'a> SPI2_RST_W<'a> {
         self.w
     }
 }
-#[doc = "Field `I2C_EXT0_RST` reader - I2C0 module."]
-pub struct I2C_EXT0_RST_R(crate::FieldReader<bool, bool>);
-impl I2C_EXT0_RST_R {
+#[doc = "Field `I2C0_EXT0_RST` reader - I2C0 module."]
+pub struct I2C0_EXT0_RST_R(crate::FieldReader<bool, bool>);
+impl I2C0_EXT0_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
-        I2C_EXT0_RST_R(crate::FieldReader::new(bits))
+        I2C0_EXT0_RST_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for I2C_EXT0_RST_R {
+impl core::ops::Deref for I2C0_EXT0_RST_R {
     type Target = crate::FieldReader<bool, bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `I2C_EXT0_RST` writer - I2C0 module."]
-pub struct I2C_EXT0_RST_W<'a> {
+#[doc = "Field `I2C0_EXT0_RST` writer - I2C0 module."]
+pub struct I2C0_EXT0_RST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> I2C_EXT0_RST_W<'a> {
+impl<'a> I2C0_EXT0_RST_W<'a> {
     #[doc = r"Sets the field bit"]
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
@@ -885,43 +885,6 @@ impl<'a> UART_MEM_RST_W<'a> {
         self.w
     }
 }
-#[doc = "Field `I2C0_EXT0_RST` reader - Reset Bit I2C0 Peripheral"]
-pub struct I2C0_EXT0_RST_R(crate::FieldReader<bool, bool>);
-impl I2C0_EXT0_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C0_EXT0_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C0_EXT0_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `I2C0_EXT0_RST` writer - Reset Bit I2C0 Peripheral"]
-pub struct I2C0_EXT0_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C0_EXT0_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
 impl R {
     #[doc = "Bit 1 - SPI0 and SPI1 module."]
     #[inline(always)]
@@ -950,8 +913,8 @@ impl R {
     }
     #[doc = "Bit 7 - I2C0 module."]
     #[inline(always)]
-    pub fn i2c_ext0_rst(&self) -> I2C_EXT0_RST_R {
-        I2C_EXT0_RST_R::new(((self.bits >> 7) & 0x01) != 0)
+    pub fn i2c0_ext0_rst(&self) -> I2C0_EXT0_RST_R {
+        I2C0_EXT0_RST_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 8 - UDMA0 module."]
     #[inline(always)]
@@ -1038,11 +1001,6 @@ impl R {
     pub fn uart_mem_rst(&self) -> UART_MEM_RST_R {
         UART_MEM_RST_R::new(((self.bits >> 24) & 0x01) != 0)
     }
-    #[doc = "Bit 7 - Reset Bit I2C0 Peripheral"]
-    #[inline(always)]
-    pub fn i2c0_ext0_rst(&self) -> I2C0_EXT0_RST_R {
-        I2C0_EXT0_RST_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
 }
 impl W {
     #[doc = "Bit 1 - SPI0 and SPI1 module."]
@@ -1072,8 +1030,8 @@ impl W {
     }
     #[doc = "Bit 7 - I2C0 module."]
     #[inline(always)]
-    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W {
-        I2C_EXT0_RST_W { w: self }
+    pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W {
+        I2C0_EXT0_RST_W { w: self }
     }
     #[doc = "Bit 8 - UDMA0 module."]
     #[inline(always)]
@@ -1159,11 +1117,6 @@ impl W {
     #[inline(always)]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W {
         UART_MEM_RST_W { w: self }
-    }
-    #[doc = "Bit 7 - Reset Bit I2C0 Peripheral"]
-    #[inline(always)]
-    pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W {
-        I2C0_EXT0_RST_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

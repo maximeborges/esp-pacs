@@ -193,7 +193,7 @@ impl core::ops::Deref for SARADC1_INT_ST_R {
         &self.0
     }
 }
-#[doc = "Field `TSENS_INT_ST` reader - Stores the status of the temperature sensor interrupt."]
+#[doc = "Field `TSENS_INT_ST` reader - Stores the status of the touch sensor interrupt."]
 pub struct TSENS_INT_ST_R(crate::FieldReader<bool, bool>);
 impl TSENS_INT_ST_R {
     #[inline(always)]
@@ -374,7 +374,7 @@ impl R {
     pub fn saradc1_int_st(&self) -> SARADC1_INT_ST_R {
         SARADC1_INT_ST_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 12 - Stores the status of the temperature sensor interrupt."]
+    #[doc = "Bit 12 - Stores the status of the touch sensor interrupt."]
     #[inline(always)]
     pub fn tsens_int_st(&self) -> TSENS_INT_ST_R {
         TSENS_INT_ST_R::new(((self.bits >> 12) & 0x01) != 0)
