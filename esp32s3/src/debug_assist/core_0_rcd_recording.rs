@@ -67,7 +67,7 @@ impl<'a> CORE_0_RCD_RECORDING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
     #[inline(always)]
     pub fn core_0_rcd_recording(&self) -> CORE_0_RCD_RECORDING_R {
-        CORE_0_RCD_RECORDING_R::new((self.bits & 0x01) != 0)
+        CORE_0_RCD_RECORDING_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

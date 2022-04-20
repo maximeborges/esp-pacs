@@ -94,7 +94,7 @@ impl<'a> HOST_SLC_APBWIN_WR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> HOST_SLC_APBWIN_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn host_slc_apbwin_wr(&self) -> HOST_SLC_APBWIN_WR_R {
-        HOST_SLC_APBWIN_WR_R::new(((self.bits >> 28) & 0x01) != 0)
+        HOST_SLC_APBWIN_WR_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn host_slc_apbwin_start(&self) -> HOST_SLC_APBWIN_START_R {
-        HOST_SLC_APBWIN_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        HOST_SLC_APBWIN_START_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

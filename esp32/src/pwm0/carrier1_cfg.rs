@@ -67,7 +67,7 @@ impl<'a> CARRIER1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> CARRIER1_DUTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> CARRIER1_OUT_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> CARRIER1_IN_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -230,7 +230,7 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn carrier1_en(&self) -> CARRIER1_EN_R {
-        CARRIER1_EN_R::new((self.bits & 0x01) != 0)
+        CARRIER1_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
@@ -240,7 +240,7 @@ impl R {
     #[doc = "Bits 5:7"]
     #[inline(always)]
     pub fn carrier1_duty(&self) -> CARRIER1_DUTY_R {
-        CARRIER1_DUTY_R::new(((self.bits >> 5) & 0x07) as u8)
+        CARRIER1_DUTY_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
@@ -250,12 +250,12 @@ impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn carrier1_out_invert(&self) -> CARRIER1_OUT_INVERT_R {
-        CARRIER1_OUT_INVERT_R::new(((self.bits >> 12) & 0x01) != 0)
+        CARRIER1_OUT_INVERT_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn carrier1_in_invert(&self) -> CARRIER1_IN_INVERT_R {
-        CARRIER1_IN_INVERT_R::new(((self.bits >> 13) & 0x01) != 0)
+        CARRIER1_IN_INVERT_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

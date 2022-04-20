@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - spi dma read data status bit."]
     #[inline(always)]
     pub fn dma_rx_en(&self) -> DMA_RX_EN_R {
-        DMA_RX_EN_R::new((self.bits & 0x01) != 0)
+        DMA_RX_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - spi dma write data status bit."]
     #[inline(always)]
     pub fn dma_tx_en(&self) -> DMA_TX_EN_R {
-        DMA_TX_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        DMA_TX_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

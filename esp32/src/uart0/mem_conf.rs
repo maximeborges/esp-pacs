@@ -67,7 +67,7 @@ impl<'a> MEM_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> RX_FLOW_THRHD_H3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 15)) | ((value as u32 & 0x07) << 15);
+        self.w.bits = (self.w.bits & !(7 << 15)) | ((value as u32 & 7) << 15);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> RX_TOUT_THRHD_H3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 18)) | ((value as u32 & 0x07) << 18);
+        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
         self.w
     }
 }
@@ -202,7 +202,7 @@ impl<'a> XON_THRESHOLD_H2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 21)) | ((value as u32 & 0x03) << 21);
+        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
         self.w
     }
 }
@@ -229,7 +229,7 @@ impl<'a> XOFF_THRESHOLD_H2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 23)) | ((value as u32 & 0x03) << 23);
+        self.w.bits = (self.w.bits & !(3 << 23)) | ((value as u32 & 3) << 23);
         self.w
     }
 }
@@ -256,7 +256,7 @@ impl<'a> RX_MEM_FULL_THRHD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -283,7 +283,7 @@ impl<'a> TX_MEM_EMPTY_THRHD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -291,7 +291,7 @@ impl R {
     #[doc = "Bit 0 - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
     #[inline(always)]
     pub fn mem_pd(&self) -> MEM_PD_R {
-        MEM_PD_R::new((self.bits & 0x01) != 0)
+        MEM_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 3:6 - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
     #[inline(always)]
@@ -306,32 +306,32 @@ impl R {
     #[doc = "Bits 15:17 - refer to the rx_flow_thrhd's describtion."]
     #[inline(always)]
     pub fn rx_flow_thrhd_h3(&self) -> RX_FLOW_THRHD_H3_R {
-        RX_FLOW_THRHD_H3_R::new(((self.bits >> 15) & 0x07) as u8)
+        RX_FLOW_THRHD_H3_R::new(((self.bits >> 15) & 7) as u8)
     }
     #[doc = "Bits 18:20 - refer to the rx_tout_thrhd's describtion."]
     #[inline(always)]
     pub fn rx_tout_thrhd_h3(&self) -> RX_TOUT_THRHD_H3_R {
-        RX_TOUT_THRHD_H3_R::new(((self.bits >> 18) & 0x07) as u8)
+        RX_TOUT_THRHD_H3_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:22 - refer to the uart_xon_threshold's describtion."]
     #[inline(always)]
     pub fn xon_threshold_h2(&self) -> XON_THRESHOLD_H2_R {
-        XON_THRESHOLD_H2_R::new(((self.bits >> 21) & 0x03) as u8)
+        XON_THRESHOLD_H2_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - refer to the uart_xoff_threshold's describtion."]
     #[inline(always)]
     pub fn xoff_threshold_h2(&self) -> XOFF_THRESHOLD_H2_R {
-        XOFF_THRESHOLD_H2_R::new(((self.bits >> 23) & 0x03) as u8)
+        XOFF_THRESHOLD_H2_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:27 - refer to the rxfifo_full_thrhd's describtion."]
     #[inline(always)]
     pub fn rx_mem_full_thrhd(&self) -> RX_MEM_FULL_THRHD_R {
-        RX_MEM_FULL_THRHD_R::new(((self.bits >> 25) & 0x07) as u8)
+        RX_MEM_FULL_THRHD_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bits 28:30 - refer to txfifo_empty_thrhd 's describtion."]
     #[inline(always)]
     pub fn tx_mem_empty_thrhd(&self) -> TX_MEM_EMPTY_THRHD_R {
-        TX_MEM_EMPTY_THRHD_R::new(((self.bits >> 28) & 0x07) as u8)
+        TX_MEM_EMPTY_THRHD_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 impl W {

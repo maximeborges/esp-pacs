@@ -67,7 +67,7 @@ impl<'a> DMA_SLV_SEG_TRANS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLV_RX_SEG_TRANS_CLR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLV_TX_SEG_TRANS_CLR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -180,7 +180,7 @@ impl<'a> RX_EOF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -217,7 +217,7 @@ impl<'a> DMA_RX_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -254,7 +254,7 @@ impl<'a> DMA_TX_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -276,7 +276,7 @@ impl<'a> RX_AFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -298,7 +298,7 @@ impl<'a> BUF_AFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -320,7 +320,7 @@ impl<'a> DMA_AFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -328,33 +328,33 @@ impl R {
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
     pub fn dma_slv_seg_trans_en(&self) -> DMA_SLV_SEG_TRANS_EN_R {
-        DMA_SLV_SEG_TRANS_EN_R::new(((self.bits >> 18) & 0x01) != 0)
+        DMA_SLV_SEG_TRANS_EN_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
     #[inline(always)]
     pub fn slv_rx_seg_trans_clr_en(&self) -> SLV_RX_SEG_TRANS_CLR_EN_R {
-        SLV_RX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        SLV_RX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
     #[inline(always)]
     pub fn slv_tx_seg_trans_clr_en(&self) -> SLV_TX_SEG_TRANS_CLR_EN_R {
-        SLV_TX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLV_TX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\]
  in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
     #[inline(always)]
     pub fn rx_eof_en(&self) -> RX_EOF_EN_R {
-        RX_EOF_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        RX_EOF_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 27 - Set this bit to enable SPI DMA controlled receive data mode."]
     #[inline(always)]
     pub fn dma_rx_ena(&self) -> DMA_RX_ENA_R {
-        DMA_RX_ENA_R::new(((self.bits >> 27) & 0x01) != 0)
+        DMA_RX_ENA_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Set this bit to enable SPI DMA controlled send data mode."]
     #[inline(always)]
     pub fn dma_tx_ena(&self) -> DMA_TX_ENA_R {
-        DMA_TX_ENA_R::new(((self.bits >> 28) & 0x01) != 0)
+        DMA_TX_ENA_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

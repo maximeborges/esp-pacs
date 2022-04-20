@@ -67,7 +67,7 @@ impl<'a> SLAVE_SPI_MASK_PRO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLAVE_SPI_MASK_APP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SPI_ENCRYPT_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SPI_DECRYPT_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slave_spi_mask_pro(&self) -> SLAVE_SPI_MASK_PRO_R {
-        SLAVE_SPI_MASK_PRO_R::new((self.bits & 0x01) != 0)
+        SLAVE_SPI_MASK_PRO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slave_spi_mask_app(&self) -> SLAVE_SPI_MASK_APP_R {
-        SLAVE_SPI_MASK_APP_R::new(((self.bits >> 4) & 0x01) != 0)
+        SLAVE_SPI_MASK_APP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn spi_encrypt_enable(&self) -> SPI_ENCRYPT_ENABLE_R {
-        SPI_ENCRYPT_ENABLE_R::new(((self.bits >> 8) & 0x01) != 0)
+        SPI_ENCRYPT_ENABLE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn spi_decrypt_enable(&self) -> SPI_DECRYPT_ENABLE_R {
-        SPI_DECRYPT_ENABLE_R::new(((self.bits >> 12) & 0x01) != 0)
+        SPI_DECRYPT_ENABLE_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {

@@ -109,7 +109,7 @@ impl<'a> SWD_RST_FLAG_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SWD_FEED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SWD_DISABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> SWD_AUTO_FEED_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -213,12 +213,12 @@ impl R {
     #[doc = "Bit 0 - Indicates the super watchdog reset flag."]
     #[inline(always)]
     pub fn swd_reset_flag(&self) -> SWD_RESET_FLAG_R {
-        SWD_RESET_FLAG_R::new((self.bits & 0x01) != 0)
+        SWD_RESET_FLAG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Receiving this interrupt leads to feeding the super watchdog via SW."]
     #[inline(always)]
     pub fn swd_feed_int(&self) -> SWD_FEED_INT_R {
-        SWD_FEED_INT_R::new(((self.bits >> 1) & 0x01) != 0)
+        SWD_FEED_INT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 18:27 - Adjusts the signal width sent to the super watchdog."]
     #[inline(always)]
@@ -228,12 +228,12 @@ impl R {
     #[doc = "Bit 30 - Set this bit to disable super watchdog."]
     #[inline(always)]
     pub fn swd_disable(&self) -> SWD_DISABLE_R {
-        SWD_DISABLE_R::new(((self.bits >> 30) & 0x01) != 0)
+        SWD_DISABLE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to enable automatic watchdog feeding upon interrupts."]
     #[inline(always)]
     pub fn swd_auto_feed_en(&self) -> SWD_AUTO_FEED_EN_R {
-        SWD_AUTO_FEED_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        SWD_AUTO_FEED_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

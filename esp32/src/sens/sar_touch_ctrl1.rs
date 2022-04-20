@@ -121,7 +121,7 @@ impl<'a> TOUCH_OUT_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> TOUCH_OUT_1EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> XPD_HALL_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> HALL_PHASE_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -250,22 +250,22 @@ impl R {
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
     pub fn touch_out_sel(&self) -> TOUCH_OUT_SEL_R {
-        TOUCH_OUT_SEL_R::new(((self.bits >> 24) & 0x01) != 0)
+        TOUCH_OUT_SEL_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
     #[inline(always)]
     pub fn touch_out_1en(&self) -> TOUCH_OUT_1EN_R {
-        TOUCH_OUT_1EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        TOUCH_OUT_1EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn xpd_hall_force(&self) -> XPD_HALL_FORCE_R {
-        XPD_HALL_FORCE_R::new(((self.bits >> 26) & 0x01) != 0)
+        XPD_HALL_FORCE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn hall_phase_force(&self) -> HALL_PHASE_FORCE_R {
-        HALL_PHASE_FORCE_R::new(((self.bits >> 27) & 0x01) != 0)
+        HALL_PHASE_FORCE_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

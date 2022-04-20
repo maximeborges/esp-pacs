@@ -67,7 +67,7 @@ impl<'a> WDT_CLK_IS_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TIMER_CLK_IS_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 29 - reg_wdt_clk_is_active."]
     #[inline(always)]
     pub fn wdt_clk_is_active(&self) -> WDT_CLK_IS_ACTIVE_R {
-        WDT_CLK_IS_ACTIVE_R::new(((self.bits >> 29) & 0x01) != 0)
+        WDT_CLK_IS_ACTIVE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - reg_timer_clk_is_active."]
     #[inline(always)]
     pub fn timer_clk_is_active(&self) -> TIMER_CLK_IS_ACTIVE_R {
-        TIMER_CLK_IS_ACTIVE_R::new(((self.bits >> 30) & 0x01) != 0)
+        TIMER_CLK_IS_ACTIVE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

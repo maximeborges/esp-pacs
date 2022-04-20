@@ -67,7 +67,7 @@ impl<'a> RTC_SARADC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RTC_SARADC_CLKGATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> FORCE_XPD_AMP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> AMP_RST_FB_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> AMP_SHORT_REF_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> AMP_SHORT_REF_GND_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -220,32 +220,32 @@ impl R {
     #[doc = "Bit 22 - SAR ADC software reset."]
     #[inline(always)]
     pub fn rtc_saradc_reset(&self) -> RTC_SARADC_RESET_R {
-        RTC_SARADC_RESET_R::new(((self.bits >> 22) & 0x01) != 0)
+        RTC_SARADC_RESET_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Enable bit of SAR ADC clock gate."]
     #[inline(always)]
     pub fn rtc_saradc_clkgate_en(&self) -> RTC_SARADC_CLKGATE_EN_R {
-        RTC_SARADC_CLKGATE_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        RTC_SARADC_CLKGATE_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
     pub fn force_xpd_amp(&self) -> FORCE_XPD_AMP_R {
-        FORCE_XPD_AMP_R::new(((self.bits >> 24) & 0x03) as u8)
+        FORCE_XPD_AMP_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
     pub fn amp_rst_fb_force(&self) -> AMP_RST_FB_FORCE_R {
-        AMP_RST_FB_FORCE_R::new(((self.bits >> 26) & 0x03) as u8)
+        AMP_RST_FB_FORCE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
     pub fn amp_short_ref_force(&self) -> AMP_SHORT_REF_FORCE_R {
-        AMP_SHORT_REF_FORCE_R::new(((self.bits >> 28) & 0x03) as u8)
+        AMP_SHORT_REF_FORCE_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31"]
     #[inline(always)]
     pub fn amp_short_ref_gnd_force(&self) -> AMP_SHORT_REF_GND_FORCE_R {
-        AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 30) & 0x03) as u8)
+        AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

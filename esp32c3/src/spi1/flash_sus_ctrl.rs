@@ -67,7 +67,7 @@ impl<'a> FLASH_PER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FLASH_PES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -143,7 +143,7 @@ impl<'a> FLASH_PER_WAIT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -182,7 +182,7 @@ impl<'a> FLASH_PES_WAIT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> PES_PER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -256,7 +256,7 @@ impl<'a> FLASH_PES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -330,7 +330,7 @@ impl<'a> RD_SUS_2B_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -367,7 +367,7 @@ impl<'a> PER_END_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -404,7 +404,7 @@ impl<'a> PES_END_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -441,34 +441,34 @@ impl R {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_per(&self) -> FLASH_PER_R {
-        FLASH_PER_R::new((self.bits & 0x01) != 0)
+        FLASH_PER_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_pes(&self) -> FLASH_PES_R {
-        FLASH_PES_R::new(((self.bits >> 1) & 0x01) != 0)
+        FLASH_PES_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
     #[inline(always)]
     pub fn flash_per_wait_en(&self) -> FLASH_PER_WAIT_EN_R {
-        FLASH_PER_WAIT_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        FLASH_PER_WAIT_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
     #[inline(always)]
     pub fn flash_pes_wait_en(&self) -> FLASH_PES_WAIT_EN_R {
-        FLASH_PES_WAIT_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        FLASH_PES_WAIT_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to enable PES end triggers PER transfer option. If this bit is 0, application should send PER after PES is done."]
     #[inline(always)]
     pub fn pes_per_en(&self) -> PES_PER_EN_R {
-        PES_PER_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        PES_PER_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to enable Auto-suspending function."]
     #[inline(always)]
     pub fn flash_pes_en(&self) -> FLASH_PES_EN_R {
-        FLASH_PES_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        FLASH_PES_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\]
 (only status_in\\[7:0\\]
@@ -483,17 +483,17 @@ impl R {
     #[doc = "Bit 22 - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
     #[inline(always)]
     pub fn rd_sus_2b(&self) -> RD_SUS_2B_R {
-        RD_SUS_2B_R::new(((self.bits >> 22) & 0x01) != 0)
+        RD_SUS_2B_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]
     pub fn per_end_en(&self) -> PER_END_EN_R {
-        PER_END_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        PER_END_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the suspend status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]
     pub fn pes_end_en(&self) -> PES_END_EN_R {
-        PES_END_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        PES_END_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\]
  times, it will be treated as check pass."]

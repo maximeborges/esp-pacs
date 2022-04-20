@@ -57,7 +57,7 @@ impl<'a> ROM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> ROM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
     pub fn rom_force_pd(&self) -> ROM_FORCE_PD_R {
-        ROM_FORCE_PD_R::new((self.bits & 0x03) as u8)
+        ROM_FORCE_PD_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - This field is used to power up internal ROM."]
     #[inline(always)]
     pub fn rom_force_pu(&self) -> ROM_FORCE_PU_R {
-        ROM_FORCE_PU_R::new(((self.bits >> 2) & 0x03) as u8)
+        ROM_FORCE_PU_R::new(((self.bits >> 2) & 3) as u8)
     }
 }
 impl W {

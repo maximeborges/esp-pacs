@@ -67,7 +67,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ADC2_THRES_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ADC1_THRES_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> ADC2_THRES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> ADC1_THRES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -277,17 +277,17 @@ impl R {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new((self.bits & 0x01) != 0)
+        CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc2_thres_mode(&self) -> ADC2_THRES_MODE_R {
-        ADC2_THRES_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        ADC2_THRES_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc1_thres_mode(&self) -> ADC1_THRES_MODE_R {
-        ADC1_THRES_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        ADC1_THRES_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
@@ -302,12 +302,12 @@ impl R {
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
     pub fn adc2_thres_en(&self) -> ADC2_THRES_EN_R {
-        ADC2_THRES_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        ADC2_THRES_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
     pub fn adc1_thres_en(&self) -> ADC1_THRES_EN_R {
-        ADC1_THRES_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        ADC1_THRES_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

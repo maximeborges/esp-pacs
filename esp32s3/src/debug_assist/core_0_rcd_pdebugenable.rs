@@ -67,7 +67,7 @@ impl<'a> CORE_0_RCD_PDEBUGENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
     #[inline(always)]
     pub fn core_0_rcd_pdebugenable(&self) -> CORE_0_RCD_PDEBUGENABLE_R {
-        CORE_0_RCD_PDEBUGENABLE_R::new((self.bits & 0x01) != 0)
+        CORE_0_RCD_PDEBUGENABLE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

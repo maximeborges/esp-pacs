@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:1 - Those bits shows XTS-AES status. 0=IDLE, 1=WORK, 2=RELEASE, 3=USE. IDLE means that XTS-AES is idle. WORK means that XTS-AES is busy with calculation. RELEASE means the encrypted result is generated but not visible to mspi. USE means that the encrypted result is visible to mspi."]
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
-        STATE_R::new((self.bits & 0x03) as u8)
+        STATE_R::new((self.bits & 3) as u8)
     }
 }
 #[doc = "XTS-AES status register\n\nThis register you can [`read`]

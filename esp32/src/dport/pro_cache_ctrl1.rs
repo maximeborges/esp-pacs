@@ -67,7 +67,7 @@ impl<'a> PRO_CACHE_MASK_IRAM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_CACHE_MASK_IRAM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_CACHE_MASK_IROM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRO_CACHE_MASK_DRAM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PRO_CACHE_MASK_DROM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PRO_CACHE_MASK_OPSDRAM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> PRO_CMMU_SRAM_PAGE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> PRO_CMMU_FLASH_PAGE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u32 & 0x03) << 9);
+        self.w.bits = (self.w.bits & !(3 << 9)) | ((value as u32 & 3) << 9);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> PRO_CMMU_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> PRO_CMMU_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> PRO_CACHE_MMU_IA_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -425,57 +425,57 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_cache_mask_iram0(&self) -> PRO_CACHE_MASK_IRAM0_R {
-        PRO_CACHE_MASK_IRAM0_R::new((self.bits & 0x01) != 0)
+        PRO_CACHE_MASK_IRAM0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pro_cache_mask_iram1(&self) -> PRO_CACHE_MASK_IRAM1_R {
-        PRO_CACHE_MASK_IRAM1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_CACHE_MASK_IRAM1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn pro_cache_mask_irom0(&self) -> PRO_CACHE_MASK_IROM0_R {
-        PRO_CACHE_MASK_IROM0_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_CACHE_MASK_IROM0_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn pro_cache_mask_dram1(&self) -> PRO_CACHE_MASK_DRAM1_R {
-        PRO_CACHE_MASK_DRAM1_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_CACHE_MASK_DRAM1_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn pro_cache_mask_drom0(&self) -> PRO_CACHE_MASK_DROM0_R {
-        PRO_CACHE_MASK_DROM0_R::new(((self.bits >> 4) & 0x01) != 0)
+        PRO_CACHE_MASK_DROM0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn pro_cache_mask_opsdram(&self) -> PRO_CACHE_MASK_OPSDRAM_R {
-        PRO_CACHE_MASK_OPSDRAM_R::new(((self.bits >> 5) & 0x01) != 0)
+        PRO_CACHE_MASK_OPSDRAM_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
     pub fn pro_cmmu_sram_page_mode(&self) -> PRO_CMMU_SRAM_PAGE_MODE_R {
-        PRO_CMMU_SRAM_PAGE_MODE_R::new(((self.bits >> 6) & 0x07) as u8)
+        PRO_CMMU_SRAM_PAGE_MODE_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
     pub fn pro_cmmu_flash_page_mode(&self) -> PRO_CMMU_FLASH_PAGE_MODE_R {
-        PRO_CMMU_FLASH_PAGE_MODE_R::new(((self.bits >> 9) & 0x03) as u8)
+        PRO_CMMU_FLASH_PAGE_MODE_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn pro_cmmu_force_on(&self) -> PRO_CMMU_FORCE_ON_R {
-        PRO_CMMU_FORCE_ON_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_CMMU_FORCE_ON_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn pro_cmmu_pd(&self) -> PRO_CMMU_PD_R {
-        PRO_CMMU_PD_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_CMMU_PD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn pro_cache_mmu_ia_clr(&self) -> PRO_CACHE_MMU_IA_CLR_R {
-        PRO_CACHE_MMU_IA_CLR_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_CACHE_MMU_IA_CLR_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

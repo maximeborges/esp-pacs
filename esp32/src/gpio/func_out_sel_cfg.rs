@@ -94,7 +94,7 @@ impl<'a> INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> OEN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> OEN_INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -181,17 +181,17 @@ impl R {
     #[doc = "Bit 9 - invert the output value if you want to revert the output value setting the value to 1"]
     #[inline(always)]
     pub fn inv_sel(&self) -> INV_SEL_R {
-        INV_SEL_R::new(((self.bits >> 9) & 0x01) != 0)
+        INV_SEL_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - weather using the logical oen signal or not using the value setting by the register"]
     #[inline(always)]
     pub fn oen_sel(&self) -> OEN_SEL_R {
-        OEN_SEL_R::new(((self.bits >> 10) & 0x01) != 0)
+        OEN_SEL_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - invert the output enable value if you want to revert the output enable value setting the value to 1"]
     #[inline(always)]
     pub fn oen_inv_sel(&self) -> OEN_INV_SEL_R {
-        OEN_INV_SEL_R::new(((self.bits >> 11) & 0x01) != 0)
+        OEN_INV_SEL_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

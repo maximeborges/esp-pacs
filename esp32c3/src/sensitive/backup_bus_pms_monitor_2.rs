@@ -77,28 +77,28 @@ impl R {
     #[doc = "Bit 0 - backup_bus_pms_monitor_violate_intr"]
     #[inline(always)]
     pub fn backup_bus_pms_monitor_violate_intr(&self) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - backup_bus_pms_monitor_violate_status_htrans"]
     #[inline(always)]
     pub fn backup_bus_pms_monitor_violate_status_htrans(
         &self,
     ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R::new(((self.bits >> 1) & 0x03) as u8)
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:5 - backup_bus_pms_monitor_violate_status_hsize"]
     #[inline(always)]
     pub fn backup_bus_pms_monitor_violate_status_hsize(
         &self,
     ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 3) & 0x07) as u8)
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bit 6 - backup_bus_pms_monitor_violate_status_hwrite"]
     #[inline(always)]
     pub fn backup_bus_pms_monitor_violate_status_hwrite(
         &self,
     ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R::new(((self.bits >> 6) & 0x01) != 0)
+        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_2_REG\n\nThis register you can [`read`]

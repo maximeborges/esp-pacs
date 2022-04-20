@@ -67,7 +67,7 @@ impl<'a> IN_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> OUT_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> AHBM_FIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> AHBM_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> OUT_LOOP_TEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> IN_LOOP_TEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> OUT_AUTO_WRBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> OUT_NO_RESTART_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> OUT_EOF_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> OUTDSCR_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> INDSCR_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> OUT_DATA_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> CHECK_OWNER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> MEM_TRANS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -575,7 +575,7 @@ impl<'a> EXT_MEM_BK_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -583,77 +583,77 @@ impl R {
     #[doc = "Bit 0 - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
     pub fn in_rst(&self) -> IN_RST_R {
-        IN_RST_R::new((self.bits & 0x01) != 0)
+        IN_RST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to reset out-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
     pub fn out_rst(&self) -> OUT_RST_R {
-        OUT_RST_R::new(((self.bits >> 1) & 0x01) != 0)
+        OUT_RST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to reset AHB interface cmdFIFO of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
     pub fn ahbm_fifo_rst(&self) -> AHBM_FIFO_RST_R {
-        AHBM_FIFO_RST_R::new(((self.bits >> 2) & 0x01) != 0)
+        AHBM_FIFO_RST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to reset AHB interface of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
     pub fn ahbm_rst(&self) -> AHBM_RST_R {
-        AHBM_RST_R::new(((self.bits >> 3) & 0x01) != 0)
+        AHBM_RST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to loop test inlink."]
     #[inline(always)]
     pub fn out_loop_test(&self) -> OUT_LOOP_TEST_R {
-        OUT_LOOP_TEST_R::new(((self.bits >> 4) & 0x01) != 0)
+        OUT_LOOP_TEST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to loop test outlink."]
     #[inline(always)]
     pub fn in_loop_test(&self) -> IN_LOOP_TEST_R {
-        IN_LOOP_TEST_R::new(((self.bits >> 5) & 0x01) != 0)
+        IN_LOOP_TEST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to enable outlink-written-back automatically when out buffer is transmitted done."]
     #[inline(always)]
     pub fn out_auto_wrback(&self) -> OUT_AUTO_WRBACK_R {
-        OUT_AUTO_WRBACK_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUT_AUTO_WRBACK_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
     pub fn out_no_restart_clr(&self) -> OUT_NO_RESTART_CLR_R {
-        OUT_NO_RESTART_CLR_R::new(((self.bits >> 7) & 0x01) != 0)
+        OUT_NO_RESTART_CLR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - DMA out EOF flag generation mode. 1: When DMA has popped all data from the FIFO. 0: When AHB has pushed all data to the FIFO."]
     #[inline(always)]
     pub fn out_eof_mode(&self) -> OUT_EOF_MODE_R {
-        OUT_EOF_MODE_R::new(((self.bits >> 8) & 0x01) != 0)
+        OUT_EOF_MODE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - DMA outlink descriptor transfer mode configuration bit. 1: Prepare outlink descriptor with burst mode. 0: Prepare outlink descriptor with byte mode."]
     #[inline(always)]
     pub fn outdscr_burst_en(&self) -> OUTDSCR_BURST_EN_R {
-        OUTDSCR_BURST_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        OUTDSCR_BURST_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - DMA inlink descriptor transfer mode configuration bit. 1: Prepare inlink descriptor with burst mode. 0: Prepare inlink descriptor with byte mode."]
     #[inline(always)]
     pub fn indscr_burst_en(&self) -> INDSCR_BURST_EN_R {
-        INDSCR_BURST_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        INDSCR_BURST_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Transmitter data transfer mode configuration bit. 1: Prepare out data with burst mode. 0: Prepare out data with byte mode."]
     #[inline(always)]
     pub fn out_data_burst_en(&self) -> OUT_DATA_BURST_EN_R {
-        OUT_DATA_BURST_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        OUT_DATA_BURST_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to enable check owner bit by hardware."]
     #[inline(always)]
     pub fn check_owner(&self) -> CHECK_OWNER_R {
-        CHECK_OWNER_R::new(((self.bits >> 12) & 0x01) != 0)
+        CHECK_OWNER_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Reserved."]
     #[inline(always)]
     pub fn mem_trans_en(&self) -> MEM_TRANS_EN_R {
-        MEM_TRANS_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        MEM_TRANS_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15 - DMA access external memory block size. 0: 16 bytes. 1: 32 bytes. 2: 64 bytes. 3: reserved."]
     #[inline(always)]
     pub fn ext_mem_bk_size(&self) -> EXT_MEM_BK_SIZE_R {
-        EXT_MEM_BK_SIZE_R::new(((self.bits >> 14) & 0x03) as u8)
+        EXT_MEM_BK_SIZE_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {

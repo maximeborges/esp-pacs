@@ -57,7 +57,7 @@ impl<'a> CODING_SCHEME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> CONSOLE_DEBUG_DISABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> DISABLE_SDIO_HOST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> ABS_DONE_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> ABS_DONE_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> DISABLE_JTAG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> DISABLE_DL_ENCRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> DISABLE_DL_DECRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> DISABLE_DL_CACHE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> KEY_STATUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -398,52 +398,52 @@ impl R {
     #[doc = "Bits 0:1 - program for coding_scheme"]
     #[inline(always)]
     pub fn coding_scheme(&self) -> CODING_SCHEME_R {
-        CODING_SCHEME_R::new((self.bits & 0x03) as u8)
+        CODING_SCHEME_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - program for console_debug_disable"]
     #[inline(always)]
     pub fn console_debug_disable(&self) -> CONSOLE_DEBUG_DISABLE_R {
-        CONSOLE_DEBUG_DISABLE_R::new(((self.bits >> 2) & 0x01) != 0)
+        CONSOLE_DEBUG_DISABLE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn disable_sdio_host(&self) -> DISABLE_SDIO_HOST_R {
-        DISABLE_SDIO_HOST_R::new(((self.bits >> 3) & 0x01) != 0)
+        DISABLE_SDIO_HOST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - program for abstract_done_0"]
     #[inline(always)]
     pub fn abs_done_0(&self) -> ABS_DONE_0_R {
-        ABS_DONE_0_R::new(((self.bits >> 4) & 0x01) != 0)
+        ABS_DONE_0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - program for abstract_done_1"]
     #[inline(always)]
     pub fn abs_done_1(&self) -> ABS_DONE_1_R {
-        ABS_DONE_1_R::new(((self.bits >> 5) & 0x01) != 0)
+        ABS_DONE_1_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - program for JTAG_disable"]
     #[inline(always)]
     pub fn disable_jtag(&self) -> DISABLE_JTAG_R {
-        DISABLE_JTAG_R::new(((self.bits >> 6) & 0x01) != 0)
+        DISABLE_JTAG_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - program for download_dis_encrypt"]
     #[inline(always)]
     pub fn disable_dl_encrypt(&self) -> DISABLE_DL_ENCRYPT_R {
-        DISABLE_DL_ENCRYPT_R::new(((self.bits >> 7) & 0x01) != 0)
+        DISABLE_DL_ENCRYPT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - program for download_dis_decrypt"]
     #[inline(always)]
     pub fn disable_dl_decrypt(&self) -> DISABLE_DL_DECRYPT_R {
-        DISABLE_DL_DECRYPT_R::new(((self.bits >> 8) & 0x01) != 0)
+        DISABLE_DL_DECRYPT_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - program for download_dis_cache"]
     #[inline(always)]
     pub fn disable_dl_cache(&self) -> DISABLE_DL_CACHE_R {
-        DISABLE_DL_CACHE_R::new(((self.bits >> 9) & 0x01) != 0)
+        DISABLE_DL_CACHE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - program for key_status"]
     #[inline(always)]
     pub fn key_status(&self) -> KEY_STATUS_R {
-        KEY_STATUS_R::new(((self.bits >> 10) & 0x01) != 0)
+        KEY_STATUS_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

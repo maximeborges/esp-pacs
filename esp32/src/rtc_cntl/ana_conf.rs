@@ -67,7 +67,7 @@ impl<'a> PLLA_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PLLA_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BBPLL_CAL_SLP_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PVTMON_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TXRF_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RFRX_PBUS_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CKGEN_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> PLL_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -334,42 +334,42 @@ impl R {
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
     pub fn plla_force_pd(&self) -> PLLA_FORCE_PD_R {
-        PLLA_FORCE_PD_R::new(((self.bits >> 23) & 0x01) != 0)
+        PLLA_FORCE_PD_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
     pub fn plla_force_pu(&self) -> PLLA_FORCE_PU_R {
-        PLLA_FORCE_PU_R::new(((self.bits >> 24) & 0x01) != 0)
+        PLLA_FORCE_PU_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
     pub fn bbpll_cal_slp_start(&self) -> BBPLL_CAL_SLP_START_R {
-        BBPLL_CAL_SLP_START_R::new(((self.bits >> 25) & 0x01) != 0)
+        BBPLL_CAL_SLP_START_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: PVTMON power up otherwise power down"]
     #[inline(always)]
     pub fn pvtmon_pu(&self) -> PVTMON_PU_R {
-        PVTMON_PU_R::new(((self.bits >> 26) & 0x01) != 0)
+        PVTMON_PU_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up otherwise power down"]
     #[inline(always)]
     pub fn txrf_i2c_pu(&self) -> TXRF_I2C_PU_R {
-        TXRF_I2C_PU_R::new(((self.bits >> 27) & 0x01) != 0)
+        TXRF_I2C_PU_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up otherwise power down"]
     #[inline(always)]
     pub fn rfrx_pbus_pu(&self) -> RFRX_PBUS_PU_R {
-        RFRX_PBUS_PU_R::new(((self.bits >> 28) & 0x01) != 0)
+        RFRX_PBUS_PU_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up otherwise power down"]
     #[inline(always)]
     pub fn ckgen_i2c_pu(&self) -> CKGEN_I2C_PU_R {
-        CKGEN_I2C_PU_R::new(((self.bits >> 30) & 0x01) != 0)
+        CKGEN_I2C_PU_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: PLL_I2C power up otherwise power down"]
     #[inline(always)]
     pub fn pll_i2c_pu(&self) -> PLL_I2C_PU_R {
-        PLL_I2C_PU_R::new(((self.bits >> 31) & 0x01) != 0)
+        PLL_I2C_PU_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

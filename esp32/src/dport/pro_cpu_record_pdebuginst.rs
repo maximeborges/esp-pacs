@@ -99,7 +99,7 @@ impl<'a> RECORD_PDEBUGINST_ISRC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -144,7 +144,7 @@ impl R {
     #[doc = "Bits 12:14"]
     #[inline(always)]
     pub fn record_pdebuginst_isrc(&self) -> RECORD_PDEBUGINST_ISRC_R {
-        RECORD_PDEBUGINST_ISRC_R::new(((self.bits >> 12) & 0x07) as u8)
+        RECORD_PDEBUGINST_ISRC_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]

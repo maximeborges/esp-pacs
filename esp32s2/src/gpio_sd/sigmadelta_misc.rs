@@ -67,7 +67,7 @@ impl<'a> FUNCTION_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPI_SWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
     pub fn function_clk_en(&self) -> FUNCTION_CLK_EN_R {
-        FUNCTION_CLK_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        FUNCTION_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
     pub fn spi_swap(&self) -> SPI_SWAP_R {
-        SPI_SWAP_R::new(((self.bits >> 31) & 0x01) != 0)
+        SPI_SWAP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

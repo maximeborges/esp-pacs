@@ -57,7 +57,7 @@ impl<'a> TIMER2_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TIMER2_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 0:2 - PWM timer2 start and stop control. 0: if PWM timer2 starts, then stops at TEZ, 1: if timer2 starts, then stops at TEP, 2: PWM timer2 starts and runs on, 3: timer2 starts and stops at the next TEZ, 4: timer2 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
     pub fn timer2_start(&self) -> TIMER2_START_R {
-        TIMER2_START_R::new((self.bits & 0x07) as u8)
+        TIMER2_START_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:4 - PWM timer2 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
     #[inline(always)]
     pub fn timer2_mod(&self) -> TIMER2_MOD_R {
-        TIMER2_MOD_R::new(((self.bits >> 3) & 0x03) as u8)
+        TIMER2_MOD_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
 impl W {

@@ -79,7 +79,7 @@ impl<'a> TOUCH_STATUS_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl<'a> TOUCH_DATA_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -230,17 +230,17 @@ impl R {
     #[doc = "Bits 16:17 - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
     #[inline(always)]
     pub fn touch_data_sel(&self) -> TOUCH_DATA_SEL_R {
-        TOUCH_DATA_SEL_R::new(((self.bits >> 16) & 0x03) as u8)
+        TOUCH_DATA_SEL_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 18 - Touch denoise done."]
     #[inline(always)]
     pub fn touch_denoise_end(&self) -> TOUCH_DENOISE_END_R {
-        TOUCH_DENOISE_END_R::new(((self.bits >> 18) & 0x01) != 0)
+        TOUCH_DENOISE_END_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Indicate the completion of sampling."]
     #[inline(always)]
     pub fn touch_unit_end(&self) -> TOUCH_UNIT_END_R {
-        TOUCH_UNIT_END_R::new(((self.bits >> 19) & 0x01) != 0)
+        TOUCH_UNIT_END_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bits 20:23 - Indicate which pad is selected as proximity pad2"]
     #[inline(always)]

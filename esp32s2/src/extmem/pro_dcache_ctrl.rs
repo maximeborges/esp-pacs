@@ -67,7 +67,7 @@ impl<'a> PRO_DCACHE_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_DCACHE_SETSIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_DCACHE_BLOCKSIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRO_DCACHE_INVALIDATE_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -230,7 +230,7 @@ impl<'a> PRO_DCACHE_FLUSH_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> PRO_DCACHE_CLEAN_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -334,7 +334,7 @@ impl<'a> PRO_DCACHE_LOCK0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -371,7 +371,7 @@ impl<'a> PRO_DCACHE_LOCK1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -408,7 +408,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -460,7 +460,7 @@ impl<'a> PRO_DCACHE_PRELOAD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -512,7 +512,7 @@ impl<'a> PRO_DCACHE_UNLOCK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -564,7 +564,7 @@ impl<'a> PRO_DCACHE_LOCK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -587,97 +587,97 @@ impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn pro_dcache_enable(&self) -> PRO_DCACHE_ENABLE_R {
-        PRO_DCACHE_ENABLE_R::new((self.bits & 0x01) != 0)
+        PRO_DCACHE_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
     #[inline(always)]
     pub fn pro_dcache_setsize_mode(&self) -> PRO_DCACHE_SETSIZE_MODE_R {
-        PRO_DCACHE_SETSIZE_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_DCACHE_SETSIZE_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
     pub fn pro_dcache_blocksize_mode(&self) -> PRO_DCACHE_BLOCKSIZE_MODE_R {
-        PRO_DCACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_DCACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 8 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
     pub fn pro_dcache_invalidate_ena(&self) -> PRO_DCACHE_INVALIDATE_ENA_R {
-        PRO_DCACHE_INVALIDATE_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        PRO_DCACHE_INVALIDATE_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bit is used to indicate invalidate operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_invalidate_done(&self) -> PRO_DCACHE_INVALIDATE_DONE_R {
-        PRO_DCACHE_INVALIDATE_DONE_R::new(((self.bits >> 9) & 0x01) != 0)
+        PRO_DCACHE_INVALIDATE_DONE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
     #[inline(always)]
     pub fn pro_dcache_flush_ena(&self) -> PRO_DCACHE_FLUSH_ENA_R {
-        PRO_DCACHE_FLUSH_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        PRO_DCACHE_FLUSH_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The bit is used to indicate flush operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_flush_done(&self) -> PRO_DCACHE_FLUSH_DONE_R {
-        PRO_DCACHE_FLUSH_DONE_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_DCACHE_FLUSH_DONE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
     pub fn pro_dcache_clean_ena(&self) -> PRO_DCACHE_CLEAN_ENA_R {
-        PRO_DCACHE_CLEAN_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_DCACHE_CLEAN_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The bit is used to indicate clean operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_clean_done(&self) -> PRO_DCACHE_CLEAN_DONE_R {
-        PRO_DCACHE_CLEAN_DONE_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_DCACHE_CLEAN_DONE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
     #[inline(always)]
     pub fn pro_dcache_lock0_en(&self) -> PRO_DCACHE_LOCK0_EN_R {
-        PRO_DCACHE_LOCK0_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        PRO_DCACHE_LOCK0_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
     #[inline(always)]
     pub fn pro_dcache_lock1_en(&self) -> PRO_DCACHE_LOCK1_EN_R {
-        PRO_DCACHE_LOCK1_EN_R::new(((self.bits >> 15) & 0x01) != 0)
+        PRO_DCACHE_LOCK1_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 18 - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     pub fn pro_dcache_autoload_ena(&self) -> PRO_DCACHE_AUTOLOAD_ENA_R {
-        PRO_DCACHE_AUTOLOAD_ENA_R::new(((self.bits >> 18) & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - The bit is used to indicate conditional-preload operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_autoload_done(&self) -> PRO_DCACHE_AUTOLOAD_DONE_R {
-        PRO_DCACHE_AUTOLOAD_DONE_R::new(((self.bits >> 19) & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_DONE_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
     pub fn pro_dcache_preload_ena(&self) -> PRO_DCACHE_PRELOAD_ENA_R {
-        PRO_DCACHE_PRELOAD_ENA_R::new(((self.bits >> 20) & 0x01) != 0)
+        PRO_DCACHE_PRELOAD_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - The bit is used to indicate preload operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_preload_done(&self) -> PRO_DCACHE_PRELOAD_DONE_R {
-        PRO_DCACHE_PRELOAD_DONE_R::new(((self.bits >> 21) & 0x01) != 0)
+        PRO_DCACHE_PRELOAD_DONE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
     pub fn pro_dcache_unlock_ena(&self) -> PRO_DCACHE_UNLOCK_ENA_R {
-        PRO_DCACHE_UNLOCK_ENA_R::new(((self.bits >> 22) & 0x01) != 0)
+        PRO_DCACHE_UNLOCK_ENA_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - The bit is used to indicate unlock operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_unlock_done(&self) -> PRO_DCACHE_UNLOCK_DONE_R {
-        PRO_DCACHE_UNLOCK_DONE_R::new(((self.bits >> 23) & 0x01) != 0)
+        PRO_DCACHE_UNLOCK_DONE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
     pub fn pro_dcache_lock_ena(&self) -> PRO_DCACHE_LOCK_ENA_R {
-        PRO_DCACHE_LOCK_ENA_R::new(((self.bits >> 24) & 0x01) != 0)
+        PRO_DCACHE_LOCK_ENA_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - The bit is used to indicate lock operation is finished."]
     #[inline(always)]
     pub fn pro_dcache_lock_done(&self) -> PRO_DCACHE_LOCK_DONE_R {
-        PRO_DCACHE_LOCK_DONE_R::new(((self.bits >> 25) & 0x01) != 0)
+        PRO_DCACHE_LOCK_DONE_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

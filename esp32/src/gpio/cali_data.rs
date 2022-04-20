@@ -67,12 +67,12 @@ impl R {
     #[doc = "Bit 30"]
     #[inline(always)]
     pub fn cali_rdy_real(&self) -> CALI_RDY_REAL_R {
-        CALI_RDY_REAL_R::new(((self.bits >> 30) & 0x01) != 0)
+        CALI_RDY_REAL_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn cali_rdy_sync2(&self) -> CALI_RDY_SYNC2_R {
-        CALI_RDY_SYNC2_R::new(((self.bits >> 31) & 0x01) != 0)
+        CALI_RDY_SYNC2_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> RTC_CALI_START_CYCLING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> RTC_CALI_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -173,7 +173,7 @@ impl<'a> RTC_CALI_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -181,17 +181,17 @@ impl R {
     #[doc = "Bit 12 - When set, periodic calibration is enabled."]
     #[inline(always)]
     pub fn rtc_cali_start_cycling(&self) -> RTC_CALI_START_CYCLING_R {
-        RTC_CALI_START_CYCLING_R::new(((self.bits >> 12) & 0x01) != 0)
+        RTC_CALI_START_CYCLING_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:14 - Used to select the clock to be calibrated. 0: RTC_CLK. 1: RTC20M_D256_CLK. 2: XTAL32K_CLK."]
     #[inline(always)]
     pub fn rtc_cali_clk_sel(&self) -> RTC_CALI_CLK_SEL_R {
-        RTC_CALI_CLK_SEL_R::new(((self.bits >> 13) & 0x03) as u8)
+        RTC_CALI_CLK_SEL_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - Set this bit to mark the completion of calibration."]
     #[inline(always)]
     pub fn rtc_cali_rdy(&self) -> RTC_CALI_RDY_R {
-        RTC_CALI_RDY_R::new(((self.bits >> 15) & 0x01) != 0)
+        RTC_CALI_RDY_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:30 - Calibration time, in cycles of the clock to be calibrated."]
     #[inline(always)]
@@ -201,7 +201,7 @@ impl R {
     #[doc = "Bit 31 - Set this bit to starts calibration."]
     #[inline(always)]
     pub fn rtc_cali_start(&self) -> RTC_CALI_START_R {
-        RTC_CALI_START_R::new(((self.bits >> 31) & 0x01) != 0)
+        RTC_CALI_START_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

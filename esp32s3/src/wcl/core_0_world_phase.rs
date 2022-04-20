@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - This bit indicates whether is preparing to switch to WORLD1, 1 means value."]
     #[inline(always)]
     pub fn core_0_world_phase(&self) -> CORE_0_WORLD_PHASE_R {
-        CORE_0_WORLD_PHASE_R::new((self.bits & 0x01) != 0)
+        CORE_0_WORLD_PHASE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Core_0 world status register\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> FDUMMY_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FDOUT_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FDIN_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FADDR_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FCMD_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FCMD_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FCMD_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FASTRD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> FREAD_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> Q_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> D_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> FREAD_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> WP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> FREAD_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> FREAD_QIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -593,77 +593,77 @@ impl R {
     #[doc = "Bit 3 - In the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
     pub fn fdummy_out(&self) -> FDUMMY_OUT_R {
-        FDUMMY_OUT_R::new(((self.bits >> 3) & 0x01) != 0)
+        FDUMMY_OUT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to enable 8-bit-mode(8-bm) in DOUT phase."]
     #[inline(always)]
     pub fn fdout_oct(&self) -> FDOUT_OCT_R {
-        FDOUT_OCT_R::new(((self.bits >> 4) & 0x01) != 0)
+        FDOUT_OCT_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to enable 8-bit-mode(8-bm) in DIN phase."]
     #[inline(always)]
     pub fn fdin_oct(&self) -> FDIN_OCT_R {
-        FDIN_OCT_R::new(((self.bits >> 5) & 0x01) != 0)
+        FDIN_OCT_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to enable 8-bit-mode(8-bm) in ADDR phase."]
     #[inline(always)]
     pub fn faddr_oct(&self) -> FADDR_OCT_R {
-        FADDR_OCT_R::new(((self.bits >> 6) & 0x01) != 0)
+        FADDR_OCT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to enable 2-bit-mode(2-bm) in CMD phase."]
     #[inline(always)]
     pub fn fcmd_dual(&self) -> FCMD_DUAL_R {
-        FCMD_DUAL_R::new(((self.bits >> 7) & 0x01) != 0)
+        FCMD_DUAL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to enable 4-bit-mode(4-bm) in CMD phase."]
     #[inline(always)]
     pub fn fcmd_quad(&self) -> FCMD_QUAD_R {
-        FCMD_QUAD_R::new(((self.bits >> 8) & 0x01) != 0)
+        FCMD_QUAD_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to enable 8-bit-mode(8-bm) in CMD phase."]
     #[inline(always)]
     pub fn fcmd_oct(&self) -> FCMD_OCT_R {
-        FCMD_OCT_R::new(((self.bits >> 9) & 0x01) != 0)
+        FCMD_OCT_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 13 - This bit should be set when SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD or SPI_MEM_FREAD_DUAL is set."]
     #[inline(always)]
     pub fn fastrd_mode(&self) -> FASTRD_MODE_R {
-        FASTRD_MODE_R::new(((self.bits >> 13) & 0x01) != 0)
+        FASTRD_MODE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - In hardware 0x3B read operation, DIN phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_dual(&self) -> FREAD_DUAL_R {
-        FREAD_DUAL_R::new(((self.bits >> 14) & 0x01) != 0)
+        FREAD_DUAL_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
     pub fn q_pol(&self) -> Q_POL_R {
-        Q_POL_R::new(((self.bits >> 18) & 0x01) != 0)
+        Q_POL_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low"]
     #[inline(always)]
     pub fn d_pol(&self) -> D_POL_R {
-        D_POL_R::new(((self.bits >> 19) & 0x01) != 0)
+        D_POL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - In hardware 0x6B read operation, DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_quad(&self) -> FREAD_QUAD_R {
-        FREAD_QUAD_R::new(((self.bits >> 20) & 0x01) != 0)
+        FREAD_QUAD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
     #[inline(always)]
     pub fn wp(&self) -> WP_R {
-        WP_R::new(((self.bits >> 21) & 0x01) != 0)
+        WP_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 23 - In hardware 0xBB read operation, ADDR phase and DIN phase apply 2 signals(2-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_dio(&self) -> FREAD_DIO_R {
-        FREAD_DIO_R::new(((self.bits >> 23) & 0x01) != 0)
+        FREAD_DIO_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - In hardware 0xEB read operation, ADDR phase and DIN phase apply 4 signals(4-bit-mode). 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_qio(&self) -> FREAD_QIO_R {
-        FREAD_QIO_R::new(((self.bits >> 24) & 0x01) != 0)
+        FREAD_QIO_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

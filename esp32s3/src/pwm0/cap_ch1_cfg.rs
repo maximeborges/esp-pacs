@@ -67,7 +67,7 @@ impl<'a> CAP1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> CAP1_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> CAP1_IN_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -180,7 +180,7 @@ impl<'a> CAP1_SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -188,12 +188,12 @@ impl R {
     #[doc = "Bit 0 - When set, capture on channel 2 is enabled"]
     #[inline(always)]
     pub fn cap1_en(&self) -> CAP1_EN_R {
-        CAP1_EN_R::new((self.bits & 0x01) != 0)
+        CAP1_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - Edge of capture on channel 1 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
     #[inline(always)]
     pub fn cap1_mode(&self) -> CAP1_MODE_R {
-        CAP1_MODE_R::new(((self.bits >> 1) & 0x03) as u8)
+        CAP1_MODE_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:10 - Value of prescaling on possitive edge of CAP1. Prescale value = PWM_CAP1_PRESCALE + 1"]
     #[inline(always)]
@@ -203,7 +203,7 @@ impl R {
     #[doc = "Bit 11 - when set, CAP1 form GPIO matrix is inverted before prescale"]
     #[inline(always)]
     pub fn cap1_in_invert(&self) -> CAP1_IN_INVERT_R {
-        CAP1_IN_INVERT_R::new(((self.bits >> 11) & 0x01) != 0)
+        CAP1_IN_INVERT_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

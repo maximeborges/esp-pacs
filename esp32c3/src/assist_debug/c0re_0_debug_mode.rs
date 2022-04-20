@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - reg_core_0_debug_mode"]
     #[inline(always)]
     pub fn core_0_debug_mode(&self) -> CORE_0_DEBUG_MODE_R {
-        CORE_0_DEBUG_MODE_R::new((self.bits & 0x01) != 0)
+        CORE_0_DEBUG_MODE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_core_0_debug_module_active"]
     #[inline(always)]
     pub fn core_0_debug_module_active(&self) -> CORE_0_DEBUG_MODULE_ACTIVE_R {
-        CORE_0_DEBUG_MODULE_ACTIVE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_DEBUG_MODULE_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "ASSIST_DEBUG_C0RE_0_DEBUG_MODE\n\nThis register you can [`read`]

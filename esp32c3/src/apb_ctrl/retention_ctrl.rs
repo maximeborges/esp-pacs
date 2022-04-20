@@ -94,7 +94,7 @@ impl<'a> NOBYPASS_CPU_ISO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 27 - reg_nobypass_cpu_iso_rst"]
     #[inline(always)]
     pub fn nobypass_cpu_iso_rst(&self) -> NOBYPASS_CPU_ISO_RST_R {
-        NOBYPASS_CPU_ISO_RST_R::new(((self.bits >> 27) & 0x01) != 0)
+        NOBYPASS_CPU_ISO_RST_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

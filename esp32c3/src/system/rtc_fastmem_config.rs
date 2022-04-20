@@ -67,7 +67,7 @@ impl<'a> RTC_MEM_CRC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -144,7 +144,7 @@ impl R {
     #[doc = "Bit 8 - reg_rtc_mem_crc_start"]
     #[inline(always)]
     pub fn rtc_mem_crc_start(&self) -> RTC_MEM_CRC_START_R {
-        RTC_MEM_CRC_START_R::new(((self.bits >> 8) & 0x01) != 0)
+        RTC_MEM_CRC_START_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:19 - reg_rtc_mem_crc_addr"]
     #[inline(always)]
@@ -159,7 +159,7 @@ impl R {
     #[doc = "Bit 31 - reg_rtc_mem_crc_finish"]
     #[inline(always)]
     pub fn rtc_mem_crc_finish(&self) -> RTC_MEM_CRC_FINISH_R {
-        RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 0x01) != 0)
+        RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

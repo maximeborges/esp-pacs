@@ -97,12 +97,12 @@ impl R {
     #[doc = "Bits 18:19 - Reserved."]
     #[inline(always)]
     pub fn out_dscr_state(&self) -> OUT_DSCR_STATE_R {
-        OUT_DSCR_STATE_R::new(((self.bits >> 18) & 0x03) as u8)
+        OUT_DSCR_STATE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - Reserved."]
     #[inline(always)]
     pub fn out_state(&self) -> OUT_STATE_R {
-        OUT_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
+        OUT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:27 - This register stores the number of data bytes in TX FIFO."]
     #[inline(always)]
@@ -112,7 +112,7 @@ impl R {
     #[doc = "Bits 28:30 - UHCI encoder status."]
     #[inline(always)]
     pub fn encode_state(&self) -> ENCODE_STATE_R {
-        ENCODE_STATE_R::new(((self.bits >> 28) & 0x07) as u8)
+        ENCODE_STATE_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 #[doc = "UHCI encoder status register\n\nThis register you can [`read`]

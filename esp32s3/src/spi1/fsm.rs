@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:2 - The status of SPI1 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
-        ST_R::new((self.bits & 0x07) as u8)
+        ST_R::new((self.bits & 7) as u8)
     }
 }
 #[doc = "SPI1 state machine(FSM) status register.\n\nThis register you can [`read`]

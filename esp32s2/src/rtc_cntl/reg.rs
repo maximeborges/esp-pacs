@@ -57,7 +57,7 @@ impl<'a> DIG_REG_DBIAS_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
+        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> DIG_REG_DBIAS_WAK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DBIAS_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 22)) | ((value as u32 & 0x07) << 22);
+        self.w.bits = (self.w.bits & !(7 << 22)) | ((value as u32 & 7) << 22);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DBIAS_WAK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -202,7 +202,7 @@ impl<'a> DBOOST_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> DBOOST_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -276,7 +276,7 @@ impl<'a> REGULATOR_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -313,7 +313,7 @@ impl<'a> REGULATOR_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -321,12 +321,12 @@ impl R {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
     pub fn dig_reg_dbias_slp(&self) -> DIG_REG_DBIAS_SLP_R {
-        DIG_REG_DBIAS_SLP_R::new(((self.bits >> 8) & 0x07) as u8)
+        DIG_REG_DBIAS_SLP_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
     pub fn dig_reg_dbias_wak(&self) -> DIG_REG_DBIAS_WAK_R {
-        DIG_REG_DBIAS_WAK_R::new(((self.bits >> 11) & 0x07) as u8)
+        DIG_REG_DBIAS_WAK_R::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
@@ -336,32 +336,32 @@ impl R {
     #[doc = "Bits 22:24 - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
     pub fn dbias_slp(&self) -> DBIAS_SLP_R {
-        DBIAS_SLP_R::new(((self.bits >> 22) & 0x07) as u8)
+        DBIAS_SLP_R::new(((self.bits >> 22) & 7) as u8)
     }
     #[doc = "Bits 25:27 - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
     #[inline(always)]
     pub fn dbias_wak(&self) -> DBIAS_WAK_R {
-        DBIAS_WAK_R::new(((self.bits >> 25) & 0x07) as u8)
+        DBIAS_WAK_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
     pub fn dboost_force_pd(&self) -> DBOOST_FORCE_PD_R {
-        DBOOST_FORCE_PD_R::new(((self.bits >> 28) & 0x01) != 0)
+        DBOOST_FORCE_PD_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
     pub fn dboost_force_pu(&self) -> DBOOST_FORCE_PU_R {
-        DBOOST_FORCE_PU_R::new(((self.bits >> 29) & 0x01) != 0)
+        DBOOST_FORCE_PU_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
     pub fn regulator_force_pd(&self) -> REGULATOR_FORCE_PD_R {
-        REGULATOR_FORCE_PD_R::new(((self.bits >> 30) & 0x01) != 0)
+        REGULATOR_FORCE_PD_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
     pub fn regulator_force_pu(&self) -> REGULATOR_FORCE_PU_R {
-        REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 0x01) != 0)
+        REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

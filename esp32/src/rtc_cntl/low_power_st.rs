@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bit 19 - 1 if RTC controller is ready to execute WAKE instruction, 0 otherwise"]
     #[inline(always)]
     pub fn rdy_for_wakeup(&self) -> RDY_FOR_WAKEUP_R {
-        RDY_FOR_WAKEUP_R::new(((self.bits >> 19) & 0x01) != 0)
+        RDY_FOR_WAKEUP_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

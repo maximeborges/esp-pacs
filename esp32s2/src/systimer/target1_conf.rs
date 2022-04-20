@@ -94,7 +94,7 @@ impl<'a> TARGET1_PERIOD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TARGET1_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 30 - Set work mode for system timer target 1. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
     #[inline(always)]
     pub fn target1_period_mode(&self) -> TARGET1_PERIOD_MODE_R {
-        TARGET1_PERIOD_MODE_R::new(((self.bits >> 30) & 0x01) != 0)
+        TARGET1_PERIOD_MODE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - System timer target 1 work enable."]
     #[inline(always)]
     pub fn target1_work_en(&self) -> TARGET1_WORK_EN_R {
-        TARGET1_WORK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        TARGET1_WORK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

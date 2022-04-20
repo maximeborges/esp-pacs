@@ -67,7 +67,7 @@ impl<'a> DMA_RAM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DMA_RAM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DMA_RAM_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 4 - Set this bit to force power down DMA internal memory."]
     #[inline(always)]
     pub fn dma_ram_force_pd(&self) -> DMA_RAM_FORCE_PD_R {
-        DMA_RAM_FORCE_PD_R::new(((self.bits >> 4) & 0x01) != 0)
+        DMA_RAM_FORCE_PD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to force power up DMA internal memory"]
     #[inline(always)]
     pub fn dma_ram_force_pu(&self) -> DMA_RAM_FORCE_PU_R {
-        DMA_RAM_FORCE_PU_R::new(((self.bits >> 5) & 0x01) != 0)
+        DMA_RAM_FORCE_PU_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
     pub fn dma_ram_clk_fo(&self) -> DMA_RAM_CLK_FO_R {
-        DMA_RAM_CLK_FO_R::new(((self.bits >> 6) & 0x01) != 0)
+        DMA_RAM_CLK_FO_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

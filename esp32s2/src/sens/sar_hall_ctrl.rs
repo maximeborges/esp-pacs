@@ -67,7 +67,7 @@ impl<'a> XPD_HALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> XPD_HALL_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> HALL_PHASE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> HALL_PHASE_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
     pub fn xpd_hall(&self) -> XPD_HALL_R {
-        XPD_HALL_R::new(((self.bits >> 28) & 0x01) != 0)
+        XPD_HALL_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn xpd_hall_force(&self) -> XPD_HALL_FORCE_R {
-        XPD_HALL_FORCE_R::new(((self.bits >> 29) & 0x01) != 0)
+        XPD_HALL_FORCE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
     pub fn hall_phase(&self) -> HALL_PHASE_R {
-        HALL_PHASE_R::new(((self.bits >> 30) & 0x01) != 0)
+        HALL_PHASE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn hall_phase_force(&self) -> HALL_PHASE_FORCE_R {
-        HALL_PHASE_FORCE_R::new(((self.bits >> 31) & 0x01) != 0)
+        HALL_PHASE_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

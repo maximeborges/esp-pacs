@@ -78,21 +78,21 @@ impl R {
     #[doc = "Bit 0 - recorded core0 dram0 permission monitor interrupt status."]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_intr(&self) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - recorded core0 dram0 lock status, 1 means s32c1i access."]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_status_lock(
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - recorded core0 dram0 world status, 0x1 means world0, 0x2 means world1."]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_status_world(
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:25 - recorded core0 dram0 address\\[25:4\\]
  status when core0 dram0 violated permission,the real address is 0x3c000000+addr*16"]

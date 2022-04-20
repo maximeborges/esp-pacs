@@ -67,7 +67,7 @@ impl<'a> CK_OUT_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FWRITE_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FWRITE_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FWRITE_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FWRITE_QIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> USR_MISO_HIGHPART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> USR_MOSI_HIGHPART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> USR_DUMMY_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> USR_MOSI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> USR_MISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> USR_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> USR_ADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> USR_COMMAND_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -519,67 +519,67 @@ impl R {
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
     pub fn ck_out_edge(&self) -> CK_OUT_EDGE_R {
-        CK_OUT_EDGE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CK_OUT_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 12 - In the write operations read-data phase apply 2 signals"]
     #[inline(always)]
     pub fn fwrite_dual(&self) -> FWRITE_DUAL_R {
-        FWRITE_DUAL_R::new(((self.bits >> 12) & 0x01) != 0)
+        FWRITE_DUAL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - In the write operations read-data phase apply 4 signals"]
     #[inline(always)]
     pub fn fwrite_quad(&self) -> FWRITE_QUAD_R {
-        FWRITE_QUAD_R::new(((self.bits >> 13) & 0x01) != 0)
+        FWRITE_QUAD_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - In the write operations address phase and read-data phase apply 2 signals."]
     #[inline(always)]
     pub fn fwrite_dio(&self) -> FWRITE_DIO_R {
-        FWRITE_DIO_R::new(((self.bits >> 14) & 0x01) != 0)
+        FWRITE_DIO_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - In the write operations address phase and read-data phase apply 4 signals."]
     #[inline(always)]
     pub fn fwrite_qio(&self) -> FWRITE_QIO_R {
-        FWRITE_QIO_R::new(((self.bits >> 15) & 0x01) != 0)
+        FWRITE_QIO_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
     #[inline(always)]
     pub fn usr_miso_highpart(&self) -> USR_MISO_HIGHPART_R {
-        USR_MISO_HIGHPART_R::new(((self.bits >> 24) & 0x01) != 0)
+        USR_MISO_HIGHPART_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
     #[inline(always)]
     pub fn usr_mosi_highpart(&self) -> USR_MOSI_HIGHPART_R {
-        USR_MOSI_HIGHPART_R::new(((self.bits >> 25) & 0x01) != 0)
+        USR_MOSI_HIGHPART_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - SPI clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     pub fn usr_dummy_idle(&self) -> USR_DUMMY_IDLE_R {
-        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 0x01) != 0)
+        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation."]
     #[inline(always)]
     pub fn usr_mosi(&self) -> USR_MOSI_R {
-        USR_MOSI_R::new(((self.bits >> 27) & 0x01) != 0)
+        USR_MOSI_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation."]
     #[inline(always)]
     pub fn usr_miso(&self) -> USR_MISO_R {
-        USR_MISO_R::new(((self.bits >> 28) & 0x01) != 0)
+        USR_MISO_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
-        USR_DUMMY_R::new(((self.bits >> 29) & 0x01) != 0)
+        USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation."]
     #[inline(always)]
     pub fn usr_addr(&self) -> USR_ADDR_R {
-        USR_ADDR_R::new(((self.bits >> 30) & 0x01) != 0)
+        USR_ADDR_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation."]
     #[inline(always)]
     pub fn usr_command(&self) -> USR_COMMAND_R {
-        USR_COMMAND_R::new(((self.bits >> 31) & 0x01) != 0)
+        USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

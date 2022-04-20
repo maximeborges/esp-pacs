@@ -67,7 +67,7 @@ impl<'a> SLAVE_TRAN_COMP_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ARBITRATION_LOST_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MASTER_TRAN_COMP_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TRANS_COMPLETE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TIME_OUT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> ACK_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RX_DATA_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> TX_DATA_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> DETECT_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - enable slave transit complete interrupt"]
     #[inline(always)]
     pub fn slave_tran_comp_int_ena(&self) -> SLAVE_TRAN_COMP_INT_ENA_R {
-        SLAVE_TRAN_COMP_INT_ENA_R::new((self.bits & 0x01) != 0)
+        SLAVE_TRAN_COMP_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - enable arbitration lost interrupt"]
     #[inline(always)]
     pub fn arbitration_lost_int_ena(&self) -> ARBITRATION_LOST_INT_ENA_R {
-        ARBITRATION_LOST_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        ARBITRATION_LOST_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - enable master transit complete interrupt"]
     #[inline(always)]
     pub fn master_tran_comp_int_ena(&self) -> MASTER_TRAN_COMP_INT_ENA_R {
-        MASTER_TRAN_COMP_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        MASTER_TRAN_COMP_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - enable transit complete interrupt"]
     #[inline(always)]
     pub fn trans_complete_int_ena(&self) -> TRANS_COMPLETE_INT_ENA_R {
-        TRANS_COMPLETE_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRANS_COMPLETE_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - enable time out interrupt"]
     #[inline(always)]
     pub fn time_out_int_ena(&self) -> TIME_OUT_INT_ENA_R {
-        TIME_OUT_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        TIME_OUT_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - enable eack error interrupt"]
     #[inline(always)]
     pub fn ack_err_int_ena(&self) -> ACK_ERR_INT_ENA_R {
-        ACK_ERR_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        ACK_ERR_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - enable receive data interrupt"]
     #[inline(always)]
     pub fn rx_data_int_ena(&self) -> RX_DATA_INT_ENA_R {
-        RX_DATA_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_DATA_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - enable transit data interrupt"]
     #[inline(always)]
     pub fn tx_data_int_ena(&self) -> TX_DATA_INT_ENA_R {
-        TX_DATA_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        TX_DATA_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - enable detect start interrupt"]
     #[inline(always)]
     pub fn detect_start_int_ena(&self) -> DETECT_START_INT_ENA_R {
-        DETECT_START_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        DETECT_START_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

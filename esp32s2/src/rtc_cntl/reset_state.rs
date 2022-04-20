@@ -97,7 +97,7 @@ impl<'a> APPCPU_STAT_VECTOR_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> PROCPU_STAT_VECTOR_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -152,12 +152,12 @@ impl R {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
     pub fn appcpu_stat_vector_sel(&self) -> APPCPU_STAT_VECTOR_SEL_R {
-        APPCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 12) & 0x01) != 0)
+        APPCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Selects the CPU state vector."]
     #[inline(always)]
     pub fn procpu_stat_vector_sel(&self) -> PROCPU_STAT_VECTOR_SEL_R {
-        PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 0x01) != 0)
+        PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

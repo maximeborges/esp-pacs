@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - This is the masked interrupt bit for UHCI_RX_START_INT interrupt when UHCI_RX_START_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn rx_start_int_st(&self) -> RX_START_INT_ST_R {
-        RX_START_INT_ST_R::new((self.bits & 0x01) != 0)
+        RX_START_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This is the masked interrupt bit for UHCI_TX_START_INT interrupt when UHCI_TX_START_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn tx_start_int_st(&self) -> TX_START_INT_ST_R {
-        TX_START_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_START_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This is the masked interrupt bit for UHCI_RX_HUNG_INT interrupt when UHCI_RX_HUNG_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn rx_hung_int_st(&self) -> RX_HUNG_INT_ST_R {
-        RX_HUNG_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_HUNG_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This is the masked interrupt bit for UHCI_TX_HUNG_INT interrupt when UHCI_TX_HUNG_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn tx_hung_int_st(&self) -> TX_HUNG_INT_ST_R {
-        TX_HUNG_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_HUNG_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This is the masked interrupt bit for UHCI_SEND_S_REQ_Q_INT interrupt when UHCI_SEND_S_REQ_Q_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn send_s_reg_q_int_st(&self) -> SEND_S_REG_Q_INT_ST_R {
-        SEND_S_REG_Q_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        SEND_S_REG_Q_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This is the masked interrupt bit for UHCI_SEND_A_REQ_Q_INT interrupt when UHCI_SEND_A_REQ_Q_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn send_a_reg_q_int_st(&self) -> SEND_A_REG_Q_INT_ST_R {
-        SEND_A_REG_Q_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        SEND_A_REG_Q_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This is the masked interrupt bit for UHCI_OUTLINK_EOF_ERR_INT interrupt when UHCI_OUTLINK_EOF_ERR_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn outlink_eof_err_int_st(&self) -> OUTLINK_EOF_ERR_INT_ST_R {
-        OUTLINK_EOF_ERR_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUTLINK_EOF_ERR_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This is the masked interrupt bit for UHCI_APP_CTRL0_INT interrupt when UHCI_APP_CTRL0_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn app_ctrl0_int_st(&self) -> APP_CTRL0_INT_ST_R {
-        APP_CTRL0_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        APP_CTRL0_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - This is the masked interrupt bit for UHCI_APP_CTRL1_INT interrupt when UHCI_APP_CTRL1_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn app_ctrl1_int_st(&self) -> APP_CTRL1_INT_ST_R {
-        APP_CTRL1_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        APP_CTRL1_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`]

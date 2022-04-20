@@ -94,7 +94,7 @@ impl<'a> FILTER_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> THR_ZERO_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> THR_H_LIM_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> THR_L_LIM_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> THR_THRES0_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> THR_THRES1_EN_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> CH0_NEG_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -333,7 +333,7 @@ impl<'a> CH0_POS_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> CH0_HCTRL_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -387,7 +387,7 @@ impl<'a> CH0_LCTRL_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -414,7 +414,7 @@ impl<'a> CH1_NEG_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -441,7 +441,7 @@ impl<'a> CH1_POS_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -468,7 +468,7 @@ impl<'a> CH1_HCTRL_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -495,7 +495,7 @@ impl<'a> CH1_LCTRL_MODE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -508,72 +508,72 @@ impl R {
     #[doc = "Bit 10 - This is the enable bit for filtering input signals for unit3."]
     #[inline(always)]
     pub fn filter_en_u3(&self) -> FILTER_EN_U3_R {
-        FILTER_EN_U3_R::new(((self.bits >> 10) & 0x01) != 0)
+        FILTER_EN_U3_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - This is the enable bit for comparing unit3's count with 0 value."]
     #[inline(always)]
     pub fn thr_zero_en_u3(&self) -> THR_ZERO_EN_U3_R {
-        THR_ZERO_EN_U3_R::new(((self.bits >> 11) & 0x01) != 0)
+        THR_ZERO_EN_U3_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - This is the enable bit for comparing unit3's count with thr_h_lim value."]
     #[inline(always)]
     pub fn thr_h_lim_en_u3(&self) -> THR_H_LIM_EN_U3_R {
-        THR_H_LIM_EN_U3_R::new(((self.bits >> 12) & 0x01) != 0)
+        THR_H_LIM_EN_U3_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - This is the enable bit for comparing unit3's count with thr_l_lim value."]
     #[inline(always)]
     pub fn thr_l_lim_en_u3(&self) -> THR_L_LIM_EN_U3_R {
-        THR_L_LIM_EN_U3_R::new(((self.bits >> 13) & 0x01) != 0)
+        THR_L_LIM_EN_U3_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - This is the enable bit for comparing unit3's count with thres0 value."]
     #[inline(always)]
     pub fn thr_thres0_en_u3(&self) -> THR_THRES0_EN_U3_R {
-        THR_THRES0_EN_U3_R::new(((self.bits >> 14) & 0x01) != 0)
+        THR_THRES0_EN_U3_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - This is the enable bit for comparing unit3's count with thres1 value ."]
     #[inline(always)]
     pub fn thr_thres1_en_u3(&self) -> THR_THRES1_EN_U3_R {
-        THR_THRES1_EN_U3_R::new(((self.bits >> 15) & 0x01) != 0)
+        THR_THRES1_EN_U3_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:17 - This register is used to control the mode of channel0's input negedge signal for unit3. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
     #[inline(always)]
     pub fn ch0_neg_mode_u3(&self) -> CH0_NEG_MODE_U3_R {
-        CH0_NEG_MODE_U3_R::new(((self.bits >> 16) & 0x03) as u8)
+        CH0_NEG_MODE_U3_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - This register is used to control the mode of channel0's input posedge signal for unit3. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
     #[inline(always)]
     pub fn ch0_pos_mode_u3(&self) -> CH0_POS_MODE_U3_R {
-        CH0_POS_MODE_U3_R::new(((self.bits >> 18) & 0x03) as u8)
+        CH0_POS_MODE_U3_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - This register is used to control the mode of channel0's high control signal for unit3. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
     pub fn ch0_hctrl_mode_u3(&self) -> CH0_HCTRL_MODE_U3_R {
-        CH0_HCTRL_MODE_U3_R::new(((self.bits >> 20) & 0x03) as u8)
+        CH0_HCTRL_MODE_U3_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - This register is used to control the mode of channel0's low control signal for unit3. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
     pub fn ch0_lctrl_mode_u3(&self) -> CH0_LCTRL_MODE_U3_R {
-        CH0_LCTRL_MODE_U3_R::new(((self.bits >> 22) & 0x03) as u8)
+        CH0_LCTRL_MODE_U3_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - This register is used to control the mode of channel1's input negedge signal for unit3. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
     #[inline(always)]
     pub fn ch1_neg_mode_u3(&self) -> CH1_NEG_MODE_U3_R {
-        CH1_NEG_MODE_U3_R::new(((self.bits >> 24) & 0x03) as u8)
+        CH1_NEG_MODE_U3_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - This register is used to control the mode of channel1's input posedge signal for unit3. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
     #[inline(always)]
     pub fn ch1_pos_mode_u3(&self) -> CH1_POS_MODE_U3_R {
-        CH1_POS_MODE_U3_R::new(((self.bits >> 26) & 0x03) as u8)
+        CH1_POS_MODE_U3_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - This register is used to control the mode of channel1's high control signal for unit3. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
     pub fn ch1_hctrl_mode_u3(&self) -> CH1_HCTRL_MODE_U3_R {
-        CH1_HCTRL_MODE_U3_R::new(((self.bits >> 28) & 0x03) as u8)
+        CH1_HCTRL_MODE_U3_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - This register is used to control the mode of channel1's low control signal for unit3. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
     pub fn ch1_lctrl_mode_u3(&self) -> CH1_LCTRL_MODE_U3_R {
-        CH1_LCTRL_MODE_U3_R::new(((self.bits >> 30) & 0x03) as u8)
+        CH1_LCTRL_MODE_U3_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

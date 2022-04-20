@@ -132,7 +132,7 @@ impl<'a> RD_CHIP_VER_PKG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -169,7 +169,7 @@ impl<'a> RD_CHIP_CPU_FREQ_LOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -206,7 +206,7 @@ impl<'a> RD_CHIP_CPU_FREQ_RATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -245,7 +245,7 @@ impl<'a> RD_BLK3_PART_RESERVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> RD_CHIP_VER_REV1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -290,22 +290,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn rd_chip_ver_dis_app_cpu(&self) -> RD_CHIP_VER_DIS_APP_CPU_R {
-        RD_CHIP_VER_DIS_APP_CPU_R::new((self.bits & 0x01) != 0)
+        RD_CHIP_VER_DIS_APP_CPU_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn rd_chip_ver_dis_bt(&self) -> RD_CHIP_VER_DIS_BT_R {
-        RD_CHIP_VER_DIS_BT_R::new(((self.bits >> 1) & 0x01) != 0)
+        RD_CHIP_VER_DIS_BT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - most significant bit of chip package"]
     #[inline(always)]
     pub fn rd_chip_ver_pkg_4bit(&self) -> RD_CHIP_VER_PKG_4BIT_R {
-        RD_CHIP_VER_PKG_4BIT_R::new(((self.bits >> 2) & 0x01) != 0)
+        RD_CHIP_VER_PKG_4BIT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn rd_chip_ver_dis_cache(&self) -> RD_CHIP_VER_DIS_CACHE_R {
-        RD_CHIP_VER_DIS_CACHE_R::new(((self.bits >> 3) & 0x01) != 0)
+        RD_CHIP_VER_DIS_CACHE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:8 - read for SPI_pad_config_hd"]
     #[inline(always)]
@@ -315,28 +315,28 @@ impl R {
     #[doc = "Bits 9:11 - least significant bits of chip package"]
     #[inline(always)]
     pub fn rd_chip_ver_pkg(&self) -> RD_CHIP_VER_PKG_R {
-        RD_CHIP_VER_PKG_R::new(((self.bits >> 9) & 0x07) as u8)
+        RD_CHIP_VER_PKG_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bit 12 - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
     #[inline(always)]
     pub fn rd_chip_cpu_freq_low(&self) -> RD_CHIP_CPU_FREQ_LOW_R {
-        RD_CHIP_CPU_FREQ_LOW_R::new(((self.bits >> 12) & 0x01) != 0)
+        RD_CHIP_CPU_FREQ_LOW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - If set, the ESP32's maximum CPU frequency has been rated"]
     #[inline(always)]
     pub fn rd_chip_cpu_freq_rated(&self) -> RD_CHIP_CPU_FREQ_RATED_R {
-        RD_CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 0x01) != 0)
+        RD_CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
  is reserved for internal use"]
     #[inline(always)]
     pub fn rd_blk3_part_reserve(&self) -> RD_BLK3_PART_RESERVE_R {
-        RD_BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 0x01) != 0)
+        RD_BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - bit is set to 1 for rev1 silicon"]
     #[inline(always)]
     pub fn rd_chip_ver_rev1(&self) -> RD_CHIP_VER_REV1_R {
-        RD_CHIP_VER_REV1_R::new(((self.bits >> 15) & 0x01) != 0)
+        RD_CHIP_VER_REV1_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

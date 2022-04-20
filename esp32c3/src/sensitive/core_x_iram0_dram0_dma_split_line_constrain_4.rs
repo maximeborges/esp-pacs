@@ -57,7 +57,7 @@ impl<'a> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -148,21 +148,21 @@ impl R {
     pub fn core_x_dram0_dma_sram_line_0_category_0(
         &self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_R {
-        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_R::new((self.bits & 0x03) as u8)
+        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - core_x_dram0_dma_sram_line_0_category_1"]
     #[inline(always)]
     pub fn core_x_dram0_dma_sram_line_0_category_1(
         &self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_R {
-        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - core_x_dram0_dma_sram_line_0_category_2"]
     #[inline(always)]
     pub fn core_x_dram0_dma_sram_line_0_category_2(
         &self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_R {
-        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_R::new(((self.bits >> 4) & 0x03) as u8)
+        CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 14:21 - core_x_dram0_dma_sram_line_0_splitaddr"]
     #[inline(always)]

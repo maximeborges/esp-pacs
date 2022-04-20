@@ -52,7 +52,7 @@ impl<'a> COCPU_DBG_TRIGGER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -135,27 +135,27 @@ impl R {
     #[doc = "Bit 26 - Check ULP-RISCV whether clk on"]
     #[inline(always)]
     pub fn cocpu_clk_en(&self) -> COCPU_CLK_EN_R {
-        COCPU_CLK_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        COCPU_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Check ULP-RISCV whether in reset state"]
     #[inline(always)]
     pub fn cocpu_reset_n(&self) -> COCPU_RESET_N_R {
-        COCPU_RESET_N_R::new(((self.bits >> 27) & 0x01) != 0)
+        COCPU_RESET_N_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Check ULP-RISCV whether in interrupt state"]
     #[inline(always)]
     pub fn cocpu_eoi(&self) -> COCPU_EOI_R {
-        COCPU_EOI_R::new(((self.bits >> 28) & 0x01) != 0)
+        COCPU_EOI_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Check ULP-RISCV whether in trap state"]
     #[inline(always)]
     pub fn cocpu_trap(&self) -> COCPU_TRAP_R {
-        COCPU_TRAP_R::new(((self.bits >> 29) & 0x01) != 0)
+        COCPU_TRAP_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Check ULP-RISCV whether in ebreak"]
     #[inline(always)]
     pub fn cocpu_ebreak(&self) -> COCPU_EBREAK_R {
-        COCPU_EBREAK_R::new(((self.bits >> 30) & 0x01) != 0)
+        COCPU_EBREAK_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

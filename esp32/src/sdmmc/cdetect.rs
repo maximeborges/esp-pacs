@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:1 - Value on sdhost_card_detect_n input ports (1 bit per card), read-only bits. 0 represents presence of card. Only NUM_CARDS number of bits are implemented."]
     #[inline(always)]
     pub fn card_detect_n(&self) -> CARD_DETECT_N_R {
-        CARD_DETECT_N_R::new((self.bits & 0x03) as u8)
+        CARD_DETECT_N_R::new((self.bits & 3) as u8)
     }
 }
 #[doc = "Card detect register\n\nThis register you can [`read`]

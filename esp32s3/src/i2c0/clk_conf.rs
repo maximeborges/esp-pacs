@@ -148,7 +148,7 @@ impl<'a> SCLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> SCLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -208,12 +208,12 @@ impl R {
     #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL;1-CLK_8MHz."]
     #[inline(always)]
     pub fn sclk_sel(&self) -> SCLK_SEL_R {
-        SCLK_SEL_R::new(((self.bits >> 20) & 0x01) != 0)
+        SCLK_SEL_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - The clock switch for i2c module"]
     #[inline(always)]
     pub fn sclk_active(&self) -> SCLK_ACTIVE_R {
-        SCLK_ACTIVE_R::new(((self.bits >> 21) & 0x01) != 0)
+        SCLK_ACTIVE_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

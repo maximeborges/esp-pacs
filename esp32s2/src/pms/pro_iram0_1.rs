@@ -67,7 +67,7 @@ impl<'a> PRO_IRAM0_SRAM_0_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_IRAM0_SRAM_0_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_IRAM0_SRAM_0_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRO_IRAM0_SRAM_1_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PRO_IRAM0_SRAM_1_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PRO_IRAM0_SRAM_1_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> PRO_IRAM0_SRAM_2_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> PRO_IRAM0_SRAM_2_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> PRO_IRAM0_SRAM_2_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> PRO_IRAM0_SRAM_3_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> PRO_IRAM0_SRAM_3_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> PRO_IRAM0_SRAM_3_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -482,62 +482,62 @@ impl R {
     #[doc = "Bit 0 - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
     #[inline(always)]
     pub fn pro_iram0_sram_0_f(&self) -> PRO_IRAM0_SRAM_0_F_R {
-        PRO_IRAM0_SRAM_0_F_R::new((self.bits & 0x01) != 0)
+        PRO_IRAM0_SRAM_0_F_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Setting to 1 grants IBUS permission to read SRAM Block 0."]
     #[inline(always)]
     pub fn pro_iram0_sram_0_r(&self) -> PRO_IRAM0_SRAM_0_R_R {
-        PRO_IRAM0_SRAM_0_R_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_IRAM0_SRAM_0_R_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Setting to 1 grants IBUS permission to write SRAM Block 0."]
     #[inline(always)]
     pub fn pro_iram0_sram_0_w(&self) -> PRO_IRAM0_SRAM_0_W_R {
-        PRO_IRAM0_SRAM_0_W_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_IRAM0_SRAM_0_W_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Setting to 1 grants IBUS permission to fetch SRAM Block 1."]
     #[inline(always)]
     pub fn pro_iram0_sram_1_f(&self) -> PRO_IRAM0_SRAM_1_F_R {
-        PRO_IRAM0_SRAM_1_F_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_IRAM0_SRAM_1_F_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Setting to 1 grants IBUS permission to read SRAM Block 1."]
     #[inline(always)]
     pub fn pro_iram0_sram_1_r(&self) -> PRO_IRAM0_SRAM_1_R_R {
-        PRO_IRAM0_SRAM_1_R_R::new(((self.bits >> 4) & 0x01) != 0)
+        PRO_IRAM0_SRAM_1_R_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Setting to 1 grants IBUS permission to write SRAM Block 1."]
     #[inline(always)]
     pub fn pro_iram0_sram_1_w(&self) -> PRO_IRAM0_SRAM_1_W_R {
-        PRO_IRAM0_SRAM_1_W_R::new(((self.bits >> 5) & 0x01) != 0)
+        PRO_IRAM0_SRAM_1_W_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Setting to 1 grants IBUS permission to fetch SRAM Block 2."]
     #[inline(always)]
     pub fn pro_iram0_sram_2_f(&self) -> PRO_IRAM0_SRAM_2_F_R {
-        PRO_IRAM0_SRAM_2_F_R::new(((self.bits >> 6) & 0x01) != 0)
+        PRO_IRAM0_SRAM_2_F_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Setting to 1 grants IBUS permission to read SRAM Block 2."]
     #[inline(always)]
     pub fn pro_iram0_sram_2_r(&self) -> PRO_IRAM0_SRAM_2_R_R {
-        PRO_IRAM0_SRAM_2_R_R::new(((self.bits >> 7) & 0x01) != 0)
+        PRO_IRAM0_SRAM_2_R_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Setting to 1 grants IBUS permission to write SRAM Block 2."]
     #[inline(always)]
     pub fn pro_iram0_sram_2_w(&self) -> PRO_IRAM0_SRAM_2_W_R {
-        PRO_IRAM0_SRAM_2_W_R::new(((self.bits >> 8) & 0x01) != 0)
+        PRO_IRAM0_SRAM_2_W_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Setting to 1 grants IBUS permission to fetch SRAM Block 3."]
     #[inline(always)]
     pub fn pro_iram0_sram_3_f(&self) -> PRO_IRAM0_SRAM_3_F_R {
-        PRO_IRAM0_SRAM_3_F_R::new(((self.bits >> 9) & 0x01) != 0)
+        PRO_IRAM0_SRAM_3_F_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Setting to 1 grants IBUS permission to read SRAM Block 3."]
     #[inline(always)]
     pub fn pro_iram0_sram_3_r(&self) -> PRO_IRAM0_SRAM_3_R_R {
-        PRO_IRAM0_SRAM_3_R_R::new(((self.bits >> 10) & 0x01) != 0)
+        PRO_IRAM0_SRAM_3_R_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Setting to 1 grants IBUS permission to write SRAM Block 3."]
     #[inline(always)]
     pub fn pro_iram0_sram_3_w(&self) -> PRO_IRAM0_SRAM_3_W_R {
-        PRO_IRAM0_SRAM_3_W_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_IRAM0_SRAM_3_W_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

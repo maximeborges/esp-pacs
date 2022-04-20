@@ -137,42 +137,42 @@ impl R {
     #[doc = "Bit 0 - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio0_int_st(&self) -> GPIO0_INT_ST_R {
-        GPIO0_INT_ST_R::new((self.bits & 0x01) != 0)
+        GPIO0_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This is the status bit for DEDIC_GPIO1_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio1_int_st(&self) -> GPIO1_INT_ST_R {
-        GPIO1_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        GPIO1_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This is the status bit for DEDIC_GPIO2_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio2_int_st(&self) -> GPIO2_INT_ST_R {
-        GPIO2_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        GPIO2_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This is the status bit for DEDIC_GPIO3_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio3_int_st(&self) -> GPIO3_INT_ST_R {
-        GPIO3_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        GPIO3_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This is the status bit for DEDIC_GPIO4_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio4_int_st(&self) -> GPIO4_INT_ST_R {
-        GPIO4_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        GPIO4_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This is the status bit for DEDIC_GPIO5_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio5_int_st(&self) -> GPIO5_INT_ST_R {
-        GPIO5_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        GPIO5_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This is the status bit for DEDIC_GPIO6_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio6_int_st(&self) -> GPIO6_INT_ST_R {
-        GPIO6_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        GPIO6_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This is the status bit for DEDIC_GPIO7_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
     pub fn gpio7_int_st(&self) -> GPIO7_INT_ST_R {
-        GPIO7_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        GPIO7_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`]

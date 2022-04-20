@@ -67,7 +67,7 @@ impl<'a> TARGET0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TARGET1_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TARGET2_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - interupt0 enable"]
     #[inline(always)]
     pub fn target0_int_ena(&self) -> TARGET0_INT_ENA_R {
-        TARGET0_INT_ENA_R::new((self.bits & 0x01) != 0)
+        TARGET0_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - interupt1 enable"]
     #[inline(always)]
     pub fn target1_int_ena(&self) -> TARGET1_INT_ENA_R {
-        TARGET1_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        TARGET1_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - interupt2 enable"]
     #[inline(always)]
     pub fn target2_int_ena(&self) -> TARGET2_INT_ENA_R {
-        TARGET2_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        TARGET2_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

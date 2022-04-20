@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:2 - The status of spi state machine ."]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
-        ST_R::new((self.bits & 0x07) as u8)
+        ST_R::new((self.bits & 7) as u8)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

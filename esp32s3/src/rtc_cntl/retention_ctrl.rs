@@ -84,7 +84,7 @@ impl<'a> RETENTION_TARGET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> RETENTION_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> RETENTION_DONE_WAIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 17)) | ((value as u32 & 0x07) << 17);
+        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> RETENTION_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -252,17 +252,17 @@ impl R {
     #[doc = "Bits 14:15 - congfigure retention target cpu and/or tag"]
     #[inline(always)]
     pub fn retention_target(&self) -> RETENTION_TARGET_R {
-        RETENTION_TARGET_R::new(((self.bits >> 14) & 0x03) as u8)
+        RETENTION_TARGET_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bit 16 - No public"]
     #[inline(always)]
     pub fn retention_clk_sel(&self) -> RETENTION_CLK_SEL_R {
-        RETENTION_CLK_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        RETENTION_CLK_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:19 - wait retention done cycle"]
     #[inline(always)]
     pub fn retention_done_wait(&self) -> RETENTION_DONE_WAIT_R {
-        RETENTION_DONE_WAIT_R::new(((self.bits >> 17) & 0x07) as u8)
+        RETENTION_DONE_WAIT_R::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:23 - wait clk off cycle"]
     #[inline(always)]
@@ -272,7 +272,7 @@ impl R {
     #[doc = "Bit 24 - enable retention"]
     #[inline(always)]
     pub fn retention_en(&self) -> RETENTION_EN_R {
-        RETENTION_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        RETENTION_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:31 - wait cycles for rention operation"]
     #[inline(always)]

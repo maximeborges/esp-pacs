@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn tx_idle(&self) -> TX_IDLE_R {
-        TX_IDLE_R::new((self.bits & 0x01) != 0)
+        TX_IDLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn tx_fifo_reset_back(&self) -> TX_FIFO_RESET_BACK_R {
-        TX_FIFO_RESET_BACK_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_FIFO_RESET_BACK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn rx_fifo_reset_back(&self) -> RX_FIFO_RESET_BACK_R {
-        RX_FIFO_RESET_BACK_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_FIFO_RESET_BACK_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

@@ -57,7 +57,7 @@ impl<'a> CACHE_TAG_WAY_OBJECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
     #[inline(always)]
     pub fn cache_tag_way_object(&self) -> CACHE_TAG_WAY_OBJECT_R {
-        CACHE_TAG_WAY_OBJECT_R::new((self.bits & 0x07) as u8)
+        CACHE_TAG_WAY_OBJECT_R::new((self.bits & 7) as u8)
     }
 }
 impl W {

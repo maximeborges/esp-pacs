@@ -167,52 +167,52 @@ impl R {
     #[doc = "Bits 0:1 - read for coding_scheme"]
     #[inline(always)]
     pub fn rd_coding_scheme(&self) -> RD_CODING_SCHEME_R {
-        RD_CODING_SCHEME_R::new((self.bits & 0x03) as u8)
+        RD_CODING_SCHEME_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - read for console_debug_disable"]
     #[inline(always)]
     pub fn rd_console_debug_disable(&self) -> RD_CONSOLE_DEBUG_DISABLE_R {
-        RD_CONSOLE_DEBUG_DISABLE_R::new(((self.bits >> 2) & 0x01) != 0)
+        RD_CONSOLE_DEBUG_DISABLE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn rd_disable_sdio_host(&self) -> RD_DISABLE_SDIO_HOST_R {
-        RD_DISABLE_SDIO_HOST_R::new(((self.bits >> 3) & 0x01) != 0)
+        RD_DISABLE_SDIO_HOST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - read for abstract_done_0"]
     #[inline(always)]
     pub fn rd_abs_done_0(&self) -> RD_ABS_DONE_0_R {
-        RD_ABS_DONE_0_R::new(((self.bits >> 4) & 0x01) != 0)
+        RD_ABS_DONE_0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - read for abstract_done_1"]
     #[inline(always)]
     pub fn rd_abs_done_1(&self) -> RD_ABS_DONE_1_R {
-        RD_ABS_DONE_1_R::new(((self.bits >> 5) & 0x01) != 0)
+        RD_ABS_DONE_1_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - read for JTAG_disable"]
     #[inline(always)]
     pub fn rd_disable_jtag(&self) -> RD_DISABLE_JTAG_R {
-        RD_DISABLE_JTAG_R::new(((self.bits >> 6) & 0x01) != 0)
+        RD_DISABLE_JTAG_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - read for download_dis_encrypt"]
     #[inline(always)]
     pub fn rd_disable_dl_encrypt(&self) -> RD_DISABLE_DL_ENCRYPT_R {
-        RD_DISABLE_DL_ENCRYPT_R::new(((self.bits >> 7) & 0x01) != 0)
+        RD_DISABLE_DL_ENCRYPT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - read for download_dis_decrypt"]
     #[inline(always)]
     pub fn rd_disable_dl_decrypt(&self) -> RD_DISABLE_DL_DECRYPT_R {
-        RD_DISABLE_DL_DECRYPT_R::new(((self.bits >> 8) & 0x01) != 0)
+        RD_DISABLE_DL_DECRYPT_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - read for download_dis_cache"]
     #[inline(always)]
     pub fn rd_disable_dl_cache(&self) -> RD_DISABLE_DL_CACHE_R {
-        RD_DISABLE_DL_CACHE_R::new(((self.bits >> 9) & 0x01) != 0)
+        RD_DISABLE_DL_CACHE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - read for key_status"]
     #[inline(always)]
     pub fn rd_key_status(&self) -> RD_KEY_STATUS_R {
-        RD_KEY_STATUS_R::new(((self.bits >> 10) & 0x01) != 0)
+        RD_KEY_STATUS_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

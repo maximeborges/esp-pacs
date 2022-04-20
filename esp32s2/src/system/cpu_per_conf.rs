@@ -57,7 +57,7 @@ impl<'a> CPUPERIOD_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> PLL_FREQ_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> CPU_WAIT_MODE_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -166,17 +166,17 @@ impl R {
     #[doc = "Bits 0:1 - This field is used to select the clock frequency of CPU or CPU period."]
     #[inline(always)]
     pub fn cpuperiod_sel(&self) -> CPUPERIOD_SEL_R {
-        CPUPERIOD_SEL_R::new((self.bits & 0x03) as u8)
+        CPUPERIOD_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - This field is used to select the PLL clock frequency based on CPU period."]
     #[inline(always)]
     pub fn pll_freq_sel(&self) -> PLL_FREQ_SEL_R {
-        PLL_FREQ_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        PLL_FREQ_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to force on CPU wait mode. In this mode, the clock gate of CPU is turned off until any interrupts happen. This mode could also be force on via WAITI instruction."]
     #[inline(always)]
     pub fn cpu_wait_mode_force_on(&self) -> CPU_WAIT_MODE_FORCE_ON_R {
-        CPU_WAIT_MODE_FORCE_ON_R::new(((self.bits >> 3) & 0x01) != 0)
+        CPU_WAIT_MODE_FORCE_ON_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:7 - Sets the number of delay cycles to enter CPU wait mode after a WAITI instruction."]
     #[inline(always)]

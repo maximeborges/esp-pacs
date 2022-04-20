@@ -64,7 +64,7 @@ impl<'a> SLC0_LEN_WR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -86,7 +86,7 @@ impl<'a> SLC0_LEN_INC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -108,7 +108,7 @@ impl<'a> SLC0_LEN_INC_MORE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -145,7 +145,7 @@ impl<'a> SLC0_RX_PACKET_LOAD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -182,7 +182,7 @@ impl<'a> SLC0_TX_PACKET_LOAD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -204,7 +204,7 @@ impl<'a> SLC0_RX_GET_USED_DSCR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -226,7 +226,7 @@ impl<'a> SLC0_TX_GET_USED_DSCR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -264,22 +264,22 @@ impl R {
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn slc0_rx_packet_load_en(&self) -> SLC0_RX_PACKET_LOAD_EN_R {
-        SLC0_RX_PACKET_LOAD_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        SLC0_RX_PACKET_LOAD_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn slc0_tx_packet_load_en(&self) -> SLC0_TX_PACKET_LOAD_EN_R {
-        SLC0_TX_PACKET_LOAD_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        SLC0_TX_PACKET_LOAD_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     pub fn slc0_rx_new_pkt_ind(&self) -> SLC0_RX_NEW_PKT_IND_R {
-        SLC0_RX_NEW_PKT_IND_R::new(((self.bits >> 27) & 0x01) != 0)
+        SLC0_RX_NEW_PKT_IND_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn slc0_tx_new_pkt_ind(&self) -> SLC0_TX_NEW_PKT_IND_R {
-        SLC0_TX_NEW_PKT_IND_R::new(((self.bits >> 28) & 0x01) != 0)
+        SLC0_TX_NEW_PKT_IND_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

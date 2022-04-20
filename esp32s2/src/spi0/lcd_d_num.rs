@@ -57,7 +57,7 @@ impl<'a> D_DQS_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> D_CD_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> D_DE_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> D_HSYNC_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> D_VSYNC_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -173,27 +173,27 @@ impl R {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_dqs_num(&self) -> D_DQS_NUM_R {
-        D_DQS_NUM_R::new((self.bits & 0x03) as u8)
+        D_DQS_NUM_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_cd_num(&self) -> D_CD_NUM_R {
-        D_CD_NUM_R::new(((self.bits >> 2) & 0x03) as u8)
+        D_CD_NUM_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_de_num(&self) -> D_DE_NUM_R {
-        D_DE_NUM_R::new(((self.bits >> 4) & 0x03) as u8)
+        D_DE_NUM_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_hsync_num(&self) -> D_HSYNC_NUM_R {
-        D_HSYNC_NUM_R::new(((self.bits >> 6) & 0x03) as u8)
+        D_HSYNC_NUM_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_vsync_num(&self) -> D_VSYNC_NUM_R {
-        D_VSYNC_NUM_R::new(((self.bits >> 8) & 0x03) as u8)
+        D_VSYNC_NUM_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
 impl W {

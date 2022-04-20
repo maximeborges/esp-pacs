@@ -57,7 +57,7 @@ impl<'a> FORCE_XPD_SAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> SARCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 29:30"]
     #[inline(always)]
     pub fn force_xpd_sar(&self) -> FORCE_XPD_SAR_R {
-        FORCE_XPD_SAR_R::new(((self.bits >> 29) & 0x03) as u8)
+        FORCE_XPD_SAR_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn sarclk_en(&self) -> SARCLK_EN_R {
-        SARCLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        SARCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

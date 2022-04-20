@@ -113,7 +113,7 @@ impl<'a> TX_IIR_HP_MULT12_5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
+        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
         self.w
     }
 }
@@ -142,7 +142,7 @@ impl<'a> TX_IIR_HP_MULT12_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -161,13 +161,13 @@ impl R {
 )"]
     #[inline(always)]
     pub fn tx_iir_hp_mult12_5(&self) -> TX_IIR_HP_MULT12_5_R {
-        TX_IIR_HP_MULT12_5_R::new(((self.bits >> 20) & 0x07) as u8)
+        TX_IIR_HP_MULT12_5_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:25 - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\]
 )"]
     #[inline(always)]
     pub fn tx_iir_hp_mult12_0(&self) -> TX_IIR_HP_MULT12_0_R {
-        TX_IIR_HP_MULT12_0_R::new(((self.bits >> 23) & 0x07) as u8)
+        TX_IIR_HP_MULT12_0_R::new(((self.bits >> 23) & 7) as u8)
     }
 }
 impl W {

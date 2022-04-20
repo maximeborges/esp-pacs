@@ -94,7 +94,7 @@ impl<'a> LCD_VSYNC_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> LCD_DE_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> LCD_HS_BLANK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> LCD_HSYNC_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -272,17 +272,17 @@ impl R {
     #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
     #[inline(always)]
     pub fn lcd_vsync_idle_pol(&self) -> LCD_VSYNC_IDLE_POL_R {
-        LCD_VSYNC_IDLE_POL_R::new(((self.bits >> 7) & 0x01) != 0)
+        LCD_VSYNC_IDLE_POL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - It is the idle value of LCD_DE."]
     #[inline(always)]
     pub fn lcd_de_idle_pol(&self) -> LCD_DE_IDLE_POL_R {
-        LCD_DE_IDLE_POL_R::new(((self.bits >> 8) & 0x01) != 0)
+        LCD_DE_IDLE_POL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
     #[inline(always)]
     pub fn lcd_hs_blank_en(&self) -> LCD_HS_BLANK_EN_R {
-        LCD_HS_BLANK_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        LCD_HS_BLANK_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
@@ -292,7 +292,7 @@ impl R {
     #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
     #[inline(always)]
     pub fn lcd_hsync_idle_pol(&self) -> LCD_HSYNC_IDLE_POL_R {
-        LCD_HSYNC_IDLE_POL_R::new(((self.bits >> 23) & 0x01) != 0)
+        LCD_HSYNC_IDLE_POL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]

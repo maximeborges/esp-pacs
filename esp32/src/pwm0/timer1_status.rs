@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn timer1_direction(&self) -> TIMER1_DIRECTION_R {
-        TIMER1_DIRECTION_R::new(((self.bits >> 16) & 0x01) != 0)
+        TIMER1_DIRECTION_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

@@ -67,12 +67,12 @@ impl R {
     #[doc = "Bits 18:19 - reserved"]
     #[inline(always)]
     pub fn out_dscr_state_ch0(&self) -> OUT_DSCR_STATE_CH0_R {
-        OUT_DSCR_STATE_CH0_R::new(((self.bits >> 18) & 0x03) as u8)
+        OUT_DSCR_STATE_CH0_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - reserved"]
     #[inline(always)]
     pub fn out_state_ch0(&self) -> OUT_STATE_CH0_R {
-        OUT_STATE_CH0_R::new(((self.bits >> 20) & 0x07) as u8)
+        OUT_STATE_CH0_R::new(((self.bits >> 20) & 7) as u8)
     }
 }
 #[doc = "DMA_OUT_STATE_CH0_REG.\n\nThis register you can [`read`]

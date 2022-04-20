@@ -67,7 +67,7 @@ impl<'a> FLASH_SUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -108,7 +108,7 @@ impl<'a> FLASH_HPM_DLY_256_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,7 +149,7 @@ impl<'a> FLASH_RES_DLY_256_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -190,7 +190,7 @@ impl<'a> FLASH_DP_DLY_256_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -231,7 +231,7 @@ impl<'a> FLASH_PER_DLY_256_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -272,7 +272,7 @@ impl<'a> FLASH_PES_DLY_256_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -280,42 +280,42 @@ impl R {
     #[doc = "Bit 0 - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
     #[inline(always)]
     pub fn flash_sus(&self) -> FLASH_SUS_R {
-        FLASH_SUS_R::new((self.bits & 0x01) != 0)
+        FLASH_SUS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4) SPI_CLK cycles after HPM command is sent."]
     #[inline(always)]
     pub fn flash_hpm_dly_256(&self) -> FLASH_HPM_DLY_256_R {
-        FLASH_HPM_DLY_256_R::new(((self.bits >> 2) & 0x01) != 0)
+        FLASH_HPM_DLY_256_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4) SPI_CLK cycles after RES command is sent."]
     #[inline(always)]
     pub fn flash_res_dly_256(&self) -> FLASH_RES_DLY_256_R {
-        FLASH_RES_DLY_256_R::new(((self.bits >> 3) & 0x01) != 0)
+        FLASH_RES_DLY_256_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4) SPI_CLK cycles after DP command is sent."]
     #[inline(always)]
     pub fn flash_dp_dly_256(&self) -> FLASH_DP_DLY_256_R {
-        FLASH_DP_DLY_256_R::new(((self.bits >> 4) & 0x01) != 0)
+        FLASH_DP_DLY_256_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4) SPI_CLK cycles after PER command is sent."]
     #[inline(always)]
     pub fn flash_per_dly_256(&self) -> FLASH_PER_DLY_256_R {
-        FLASH_PER_DLY_256_R::new(((self.bits >> 5) & 0x01) != 0)
+        FLASH_PER_DLY_256_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
  * 4) SPI_CLK cycles after PES command is sent."]
     #[inline(always)]
     pub fn flash_pes_dly_256(&self) -> FLASH_PES_DLY_256_R {
-        FLASH_PES_DLY_256_R::new(((self.bits >> 6) & 0x01) != 0)
+        FLASH_PES_DLY_256_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

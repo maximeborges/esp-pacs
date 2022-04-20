@@ -57,7 +57,7 @@ impl<'a> CLK_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> RXFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
     pub fn clk_mode(&self) -> CLK_MODE_R {
-        CLK_MODE_R::new((self.bits & 0x03) as u8)
+        CLK_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 30 - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
     #[inline(always)]
     pub fn rxfifo_rst(&self) -> RXFIFO_RST_R {
-        RXFIFO_RST_R::new(((self.bits >> 30) & 0x01) != 0)
+        RXFIFO_RST_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

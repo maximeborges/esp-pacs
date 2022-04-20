@@ -67,7 +67,7 @@ impl<'a> LSTIMER0_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LSTIMER1_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> LSTIMER2_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> LSTIMER3_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DUTY_CHNG_END_LSCH0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> DUTY_CHNG_END_LSCH1_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> DUTY_CHNG_END_LSCH2_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> DUTY_CHNG_END_LSCH3_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> DUTY_CHNG_END_LSCH4_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> DUTY_CHNG_END_LSCH5_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> OVF_CNT_LSCH0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> OVF_CNT_LSCH1_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> OVF_CNT_LSCH2_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> OVF_CNT_LSCH3_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> OVF_CNT_LSCH4_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> OVF_CNT_LSCH5_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -630,82 +630,82 @@ impl R {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_ena."]
     #[inline(always)]
     pub fn lstimer0_ovf_int_ena(&self) -> LSTIMER0_OVF_INT_ENA_R {
-        LSTIMER0_OVF_INT_ENA_R::new((self.bits & 0x01) != 0)
+        LSTIMER0_OVF_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_lstimer1_ovf_int_ena."]
     #[inline(always)]
     pub fn lstimer1_ovf_int_ena(&self) -> LSTIMER1_OVF_INT_ENA_R {
-        LSTIMER1_OVF_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        LSTIMER1_OVF_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_lstimer2_ovf_int_ena."]
     #[inline(always)]
     pub fn lstimer2_ovf_int_ena(&self) -> LSTIMER2_OVF_INT_ENA_R {
-        LSTIMER2_OVF_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        LSTIMER2_OVF_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_lstimer3_ovf_int_ena."]
     #[inline(always)]
     pub fn lstimer3_ovf_int_ena(&self) -> LSTIMER3_OVF_INT_ENA_R {
-        LSTIMER3_OVF_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        LSTIMER3_OVF_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_duty_chng_end_lsch0_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch0_int_ena(&self) -> DUTY_CHNG_END_LSCH0_INT_ENA_R {
-        DUTY_CHNG_END_LSCH0_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH0_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_duty_chng_end_lsch1_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch1_int_ena(&self) -> DUTY_CHNG_END_LSCH1_INT_ENA_R {
-        DUTY_CHNG_END_LSCH1_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH1_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_duty_chng_end_lsch2_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch2_int_ena(&self) -> DUTY_CHNG_END_LSCH2_INT_ENA_R {
-        DUTY_CHNG_END_LSCH2_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH2_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_duty_chng_end_lsch3_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch3_int_ena(&self) -> DUTY_CHNG_END_LSCH3_INT_ENA_R {
-        DUTY_CHNG_END_LSCH3_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH3_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_duty_chng_end_lsch4_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch4_int_ena(&self) -> DUTY_CHNG_END_LSCH4_INT_ENA_R {
-        DUTY_CHNG_END_LSCH4_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH4_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_duty_chng_end_lsch5_int_ena."]
     #[inline(always)]
     pub fn duty_chng_end_lsch5_int_ena(&self) -> DUTY_CHNG_END_LSCH5_INT_ENA_R {
-        DUTY_CHNG_END_LSCH5_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        DUTY_CHNG_END_LSCH5_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_ovf_cnt_lsch0_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch0_int_ena(&self) -> OVF_CNT_LSCH0_INT_ENA_R {
-        OVF_CNT_LSCH0_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        OVF_CNT_LSCH0_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_ovf_cnt_lsch1_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch1_int_ena(&self) -> OVF_CNT_LSCH1_INT_ENA_R {
-        OVF_CNT_LSCH1_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        OVF_CNT_LSCH1_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_ovf_cnt_lsch2_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch2_int_ena(&self) -> OVF_CNT_LSCH2_INT_ENA_R {
-        OVF_CNT_LSCH2_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        OVF_CNT_LSCH2_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_ovf_cnt_lsch3_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch3_int_ena(&self) -> OVF_CNT_LSCH3_INT_ENA_R {
-        OVF_CNT_LSCH3_INT_ENA_R::new(((self.bits >> 13) & 0x01) != 0)
+        OVF_CNT_LSCH3_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_ovf_cnt_lsch4_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch4_int_ena(&self) -> OVF_CNT_LSCH4_INT_ENA_R {
-        OVF_CNT_LSCH4_INT_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        OVF_CNT_LSCH4_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - reg_ovf_cnt_lsch5_int_ena."]
     #[inline(always)]
     pub fn ovf_cnt_lsch5_int_ena(&self) -> OVF_CNT_LSCH5_INT_ENA_R {
-        OVF_CNT_LSCH5_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        OVF_CNT_LSCH5_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

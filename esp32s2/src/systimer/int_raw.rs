@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - Interrupt raw bit of system timer target 0."]
     #[inline(always)]
     pub fn int0_raw(&self) -> INT0_RAW_R {
-        INT0_RAW_R::new((self.bits & 0x01) != 0)
+        INT0_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt raw bit of system timer target 1."]
     #[inline(always)]
     pub fn int1_raw(&self) -> INT1_RAW_R {
-        INT1_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        INT1_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt raw bit of system timer target 2."]
     #[inline(always)]
     pub fn int2_raw(&self) -> INT2_RAW_R {
-        INT2_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        INT2_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "System timer interrupt raw\n\nThis register you can [`read`]

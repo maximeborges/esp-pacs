@@ -57,7 +57,7 @@ impl<'a> MODEXP_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:1 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
     pub fn modexp_mode(&self) -> MODEXP_MODE_R {
-        MODEXP_MODE_R::new((self.bits & 0x03) as u8)
+        MODEXP_MODE_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

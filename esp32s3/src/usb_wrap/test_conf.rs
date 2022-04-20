@@ -67,7 +67,7 @@ impl<'a> TEST_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TEST_USB_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TEST_TX_DP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TEST_TX_DM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -231,37 +231,37 @@ impl R {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
     pub fn test_enable(&self) -> TEST_ENABLE_R {
-        TEST_ENABLE_R::new((self.bits & 0x01) != 0)
+        TEST_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
     pub fn test_usb_oe(&self) -> TEST_USB_OE_R {
-        TEST_USB_OE_R::new(((self.bits >> 1) & 0x01) != 0)
+        TEST_USB_OE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
     pub fn test_tx_dp(&self) -> TEST_TX_DP_R {
-        TEST_TX_DP_R::new(((self.bits >> 2) & 0x01) != 0)
+        TEST_TX_DP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
     pub fn test_tx_dm(&self) -> TEST_TX_DM_R {
-        TEST_TX_DM_R::new(((self.bits >> 3) & 0x01) != 0)
+        TEST_TX_DM_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - USB differential rx value in test"]
     #[inline(always)]
     pub fn test_rx_rcv(&self) -> TEST_RX_RCV_R {
-        TEST_RX_RCV_R::new(((self.bits >> 4) & 0x01) != 0)
+        TEST_RX_RCV_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - USB D+ rx value in test"]
     #[inline(always)]
     pub fn test_rx_dp(&self) -> TEST_RX_DP_R {
-        TEST_RX_DP_R::new(((self.bits >> 5) & 0x01) != 0)
+        TEST_RX_DP_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - USB D- rx value in test"]
     #[inline(always)]
     pub fn test_rx_dm(&self) -> TEST_RX_DM_R {
-        TEST_RX_DM_R::new(((self.bits >> 6) & 0x01) != 0)
+        TEST_RX_DM_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

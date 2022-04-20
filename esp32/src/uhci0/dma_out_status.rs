@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - 1:DMA out link descriptor's fifo is full."]
     #[inline(always)]
     pub fn out_full(&self) -> OUT_FULL_R {
-        OUT_FULL_R::new((self.bits & 0x01) != 0)
+        OUT_FULL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1:DMA in link descriptor's fifo is empty."]
     #[inline(always)]
     pub fn out_empty(&self) -> OUT_EMPTY_R {
-        OUT_EMPTY_R::new(((self.bits >> 1) & 0x01) != 0)
+        OUT_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

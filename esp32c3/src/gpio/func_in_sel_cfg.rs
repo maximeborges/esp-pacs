@@ -96,7 +96,7 @@ impl<'a> IN_INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -133,7 +133,7 @@ impl<'a> SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -147,12 +147,12 @@ impl R {
     #[doc = "Bit 5 - set this bit to invert input signal. 1:invert. :not invert."]
     #[inline(always)]
     pub fn in_inv_sel(&self) -> IN_INV_SEL_R {
-        IN_INV_SEL_R::new(((self.bits >> 5) & 0x01) != 0)
+        IN_INV_SEL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO."]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
-        SEL_R::new(((self.bits >> 6) & 0x01) != 0)
+        SEL_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

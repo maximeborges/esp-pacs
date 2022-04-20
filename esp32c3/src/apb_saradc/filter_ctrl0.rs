@@ -121,7 +121,7 @@ impl<'a> APB_SARADC_FILTER_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl R {
     #[doc = "Bit 31 - enable apb_adc1_filter"]
     #[inline(always)]
     pub fn apb_saradc_filter_reset(&self) -> APB_SARADC_FILTER_RESET_R {
-        APB_SARADC_FILTER_RESET_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_SARADC_FILTER_RESET_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

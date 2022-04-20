@@ -47,7 +47,7 @@ impl R {
     #[doc = "Bit 0 - Periodic calibration valid signal."]
     #[inline(always)]
     pub fn rtc_cali_cycling_data_vld(&self) -> RTC_CALI_CYCLING_DATA_VLD_R {
-        RTC_CALI_CYCLING_DATA_VLD_R::new((self.bits & 0x01) != 0)
+        RTC_CALI_CYCLING_DATA_VLD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 7:31 - Calibration value when cycles of clock to be calibrated reach TIMG_RTC_CALI_MAX, in unit of XTAL_CLK clock cycles."]
     #[inline(always)]

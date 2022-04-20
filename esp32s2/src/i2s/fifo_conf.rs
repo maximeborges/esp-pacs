@@ -125,7 +125,7 @@ impl<'a> DSCR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -152,7 +152,7 @@ impl<'a> TX_FIFO_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u32 & 0x07) << 13);
+        self.w.bits = (self.w.bits & !(7 << 13)) | ((value as u32 & 7) << 13);
         self.w
     }
 }
@@ -179,7 +179,7 @@ impl<'a> RX_FIFO_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
         self.w
     }
 }
@@ -216,7 +216,7 @@ impl<'a> TX_FIFO_MOD_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -253,7 +253,7 @@ impl<'a> RX_FIFO_MOD_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -290,7 +290,7 @@ impl<'a> RX_FIFO_SYNC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -327,7 +327,7 @@ impl<'a> RX_24MSB_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -364,7 +364,7 @@ impl<'a> TX_24MSB_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -384,42 +384,42 @@ impl R {
     #[doc = "Bit 12 - Set this bit to enable I2S DMA mode."]
     #[inline(always)]
     pub fn dscr_en(&self) -> DSCR_EN_R {
-        DSCR_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        DSCR_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:15 - Transmitter FIFO mode configuration bits"]
     #[inline(always)]
     pub fn tx_fifo_mod(&self) -> TX_FIFO_MOD_R {
-        TX_FIFO_MOD_R::new(((self.bits >> 13) & 0x07) as u8)
+        TX_FIFO_MOD_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bits 16:18 - Receiver FIFO mode configuration bits"]
     #[inline(always)]
     pub fn rx_fifo_mod(&self) -> RX_FIFO_MOD_R {
-        RX_FIFO_MOD_R::new(((self.bits >> 16) & 0x07) as u8)
+        RX_FIFO_MOD_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19 - The bit should always be set to 1"]
     #[inline(always)]
     pub fn tx_fifo_mod_force_en(&self) -> TX_FIFO_MOD_FORCE_EN_R {
-        TX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        TX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - The bit should always be set to 1"]
     #[inline(always)]
     pub fn rx_fifo_mod_force_en(&self) -> RX_FIFO_MOD_FORCE_EN_R {
-        RX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        RX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - force write back rx data to memory"]
     #[inline(always)]
     pub fn rx_fifo_sync(&self) -> RX_FIFO_SYNC_R {
-        RX_FIFO_SYNC_R::new(((self.bits >> 21) & 0x01) != 0)
+        RX_FIFO_SYNC_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Only useful in rx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
     #[inline(always)]
     pub fn rx_24msb_en(&self) -> RX_24MSB_EN_R {
-        RX_24MSB_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        RX_24MSB_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Only useful in tx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
     #[inline(always)]
     pub fn tx_24msb_en(&self) -> TX_24MSB_EN_R {
-        TX_24MSB_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        TX_24MSB_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {

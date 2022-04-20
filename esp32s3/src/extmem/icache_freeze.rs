@@ -67,7 +67,7 @@ impl<'a> ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -127,17 +127,17 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable icache freeze mode"]
     #[inline(always)]
     pub fn ena(&self) -> ENA_R {
-        ENA_R::new((self.bits & 0x01) != 0)
+        ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new(((self.bits >> 1) & 0x01) != 0)
+        MODE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to indicate icache freeze success"]
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
-        DONE_R::new(((self.bits >> 2) & 0x01) != 0)
+        DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

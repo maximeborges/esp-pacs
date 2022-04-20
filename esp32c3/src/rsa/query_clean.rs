@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - query clean"]
     #[inline(always)]
     pub fn query_clean(&self) -> QUERY_CLEAN_R {
-        QUERY_CLEAN_R::new((self.bits & 0x01) != 0)
+        QUERY_CLEAN_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RSA query clean register\n\nThis register you can [`read`]

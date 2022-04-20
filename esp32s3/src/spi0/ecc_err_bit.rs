@@ -82,12 +82,12 @@ impl R {
     #[doc = "Bits 13:15 - When SPI_MEM_ECC_BYTE_ERR is set, these bits show the error bit number of ECC byte."]
     #[inline(always)]
     pub fn ecc_chk_err_bit(&self) -> ECC_CHK_ERR_BIT_R {
-        ECC_CHK_ERR_BIT_R::new(((self.bits >> 13) & 0x07) as u8)
+        ECC_CHK_ERR_BIT_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bit 16 - It records the first ECC byte error when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM. It is cleared by SPI_MEM_ECC_ERR_INT_CLR bit."]
     #[inline(always)]
     pub fn ecc_byte_err(&self) -> ECC_BYTE_ERR_R {
-        ECC_BYTE_ERR_R::new(((self.bits >> 16) & 0x01) != 0)
+        ECC_BYTE_ERR_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:24 - This bits show the error times of MSPI ECC read, including ECC byte error and data byte error. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
     #[inline(always)]

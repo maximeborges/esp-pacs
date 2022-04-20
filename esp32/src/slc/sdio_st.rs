@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn cmd_st(&self) -> CMD_ST_R {
-        CMD_ST_R::new((self.bits & 0x07) as u8)
+        CMD_ST_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
@@ -117,12 +117,12 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn sdio_wakeup(&self) -> SDIO_WAKEUP_R {
-        SDIO_WAKEUP_R::new(((self.bits >> 8) & 0x01) != 0)
+        SDIO_WAKEUP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
     pub fn bus_st(&self) -> BUS_ST_R {
-        BUS_ST_R::new(((self.bits >> 12) & 0x07) as u8)
+        BUS_ST_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]

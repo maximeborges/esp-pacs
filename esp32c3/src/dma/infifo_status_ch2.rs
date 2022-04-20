@@ -137,12 +137,12 @@ impl R {
     #[doc = "Bit 0 - L1 Rx FIFO full signal for Rx channel 2."]
     #[inline(always)]
     pub fn infifo_full_ch2(&self) -> INFIFO_FULL_CH2_R {
-        INFIFO_FULL_CH2_R::new((self.bits & 0x01) != 0)
+        INFIFO_FULL_CH2_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - L1 Rx FIFO empty signal for Rx channel 2."]
     #[inline(always)]
     pub fn infifo_empty_ch2(&self) -> INFIFO_EMPTY_CH2_R {
-        INFIFO_EMPTY_CH2_R::new(((self.bits >> 1) & 0x01) != 0)
+        INFIFO_EMPTY_CH2_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:7 - The register stores the byte number of the data in L1 Rx FIFO for Rx channel 2."]
     #[inline(always)]
@@ -152,27 +152,27 @@ impl R {
     #[doc = "Bit 23 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_1b_ch2(&self) -> IN_REMAIN_UNDER_1B_CH2_R {
-        IN_REMAIN_UNDER_1B_CH2_R::new(((self.bits >> 23) & 0x01) != 0)
+        IN_REMAIN_UNDER_1B_CH2_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_2b_ch2(&self) -> IN_REMAIN_UNDER_2B_CH2_R {
-        IN_REMAIN_UNDER_2B_CH2_R::new(((self.bits >> 24) & 0x01) != 0)
+        IN_REMAIN_UNDER_2B_CH2_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_3b_ch2(&self) -> IN_REMAIN_UNDER_3B_CH2_R {
-        IN_REMAIN_UNDER_3B_CH2_R::new(((self.bits >> 25) & 0x01) != 0)
+        IN_REMAIN_UNDER_3B_CH2_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_4b_ch2(&self) -> IN_REMAIN_UNDER_4B_CH2_R {
-        IN_REMAIN_UNDER_4B_CH2_R::new(((self.bits >> 26) & 0x01) != 0)
+        IN_REMAIN_UNDER_4B_CH2_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - reserved"]
     #[inline(always)]
     pub fn in_buf_hungry_ch2(&self) -> IN_BUF_HUNGRY_CH2_R {
-        IN_BUF_HUNGRY_CH2_R::new(((self.bits >> 27) & 0x01) != 0)
+        IN_BUF_HUNGRY_CH2_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 #[doc = "DMA_INFIFO_STATUS_CH2_REG.\n\nThis register you can [`read`]

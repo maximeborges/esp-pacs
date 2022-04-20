@@ -94,7 +94,7 @@ impl<'a> INLINK_AUTO_RET_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> INLINK_STOP_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> INLINK_START_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> INLINK_RESTART_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -233,27 +233,27 @@ impl R {
     #[doc = "Bit 20 - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
     #[inline(always)]
     pub fn inlink_auto_ret_ch1(&self) -> INLINK_AUTO_RET_CH1_R {
-        INLINK_AUTO_RET_CH1_R::new(((self.bits >> 20) & 0x01) != 0)
+        INLINK_AUTO_RET_CH1_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to stop dealing with the inlink descriptors."]
     #[inline(always)]
     pub fn inlink_stop_ch1(&self) -> INLINK_STOP_CH1_R {
-        INLINK_STOP_CH1_R::new(((self.bits >> 21) & 0x01) != 0)
+        INLINK_STOP_CH1_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to start dealing with the inlink descriptors."]
     #[inline(always)]
     pub fn inlink_start_ch1(&self) -> INLINK_START_CH1_R {
-        INLINK_START_CH1_R::new(((self.bits >> 22) & 0x01) != 0)
+        INLINK_START_CH1_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Set this bit to mount a new inlink descriptor."]
     #[inline(always)]
     pub fn inlink_restart_ch1(&self) -> INLINK_RESTART_CH1_R {
-        INLINK_RESTART_CH1_R::new(((self.bits >> 23) & 0x01) != 0)
+        INLINK_RESTART_CH1_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: the inlink descriptor's FSM is in idle state. 0: the inlink descriptor's FSM is working."]
     #[inline(always)]
     pub fn inlink_park_ch1(&self) -> INLINK_PARK_CH1_R {
-        INLINK_PARK_CH1_R::new(((self.bits >> 24) & 0x01) != 0)
+        INLINK_PARK_CH1_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

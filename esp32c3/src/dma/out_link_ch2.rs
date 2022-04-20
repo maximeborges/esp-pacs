@@ -94,7 +94,7 @@ impl<'a> OUTLINK_STOP_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> OUTLINK_START_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> OUTLINK_RESTART_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -196,22 +196,22 @@ impl R {
     #[doc = "Bit 20 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
     pub fn outlink_stop_ch2(&self) -> OUTLINK_STOP_CH2_R {
-        OUTLINK_STOP_CH2_R::new(((self.bits >> 20) & 0x01) != 0)
+        OUTLINK_STOP_CH2_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to start dealing with the outlink descriptors."]
     #[inline(always)]
     pub fn outlink_start_ch2(&self) -> OUTLINK_START_CH2_R {
-        OUTLINK_START_CH2_R::new(((self.bits >> 21) & 0x01) != 0)
+        OUTLINK_START_CH2_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
     pub fn outlink_restart_ch2(&self) -> OUTLINK_RESTART_CH2_R {
-        OUTLINK_RESTART_CH2_R::new(((self.bits >> 22) & 0x01) != 0)
+        OUTLINK_RESTART_CH2_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: the outlink descriptor's FSM is in idle state. 0: the outlink descriptor's FSM is working."]
     #[inline(always)]
     pub fn outlink_park_ch2(&self) -> OUTLINK_PARK_CH2_R {
-        OUTLINK_PARK_CH2_R::new(((self.bits >> 23) & 0x01) != 0)
+        OUTLINK_PARK_CH2_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> RSA_MEM_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RSA_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RSA_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Set 1 to power down RSA memory. This bit has the lowest priority.When Digital Signature occupies the RSA, this bit is invalid."]
     #[inline(always)]
     pub fn rsa_mem_pd(&self) -> RSA_MEM_PD_R {
-        RSA_MEM_PD_R::new((self.bits & 0x01) != 0)
+        RSA_MEM_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set 1 to force power up RSA memory, this bit has the second highest priority."]
     #[inline(always)]
     pub fn rsa_mem_force_pu(&self) -> RSA_MEM_FORCE_PU_R {
-        RSA_MEM_FORCE_PU_R::new(((self.bits >> 1) & 0x01) != 0)
+        RSA_MEM_FORCE_PU_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set 1 to force power down RSA memory,this bit has the highest priority."]
     #[inline(always)]
     pub fn rsa_mem_force_pd(&self) -> RSA_MEM_FORCE_PD_R {
-        RSA_MEM_FORCE_PD_R::new(((self.bits >> 2) & 0x01) != 0)
+        RSA_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

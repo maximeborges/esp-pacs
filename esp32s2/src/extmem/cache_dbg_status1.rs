@@ -407,132 +407,132 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
     pub fn dbus0_acs_msk_dcache_st(&self) -> DBUS0_ACS_MSK_DCACHE_ST_R {
-        DBUS0_ACS_MSK_DCACHE_ST_R::new((self.bits & 0x01) != 0)
+        DBUS0_ACS_MSK_DCACHE_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate interrupt by cpu access dcache while the dbus1 is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
     pub fn dbus1_acs_msk_dcache_st(&self) -> DBUS1_ACS_MSK_DCACHE_ST_R {
-        DBUS1_ACS_MSK_DCACHE_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        DBUS1_ACS_MSK_DCACHE_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to indicate interrupt by cpu access dcache while the dbus2 is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
     pub fn dbus2_acs_msk_dcache_st(&self) -> DBUS2_ACS_MSK_DCACHE_ST_R {
-        DBUS2_ACS_MSK_DCACHE_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        DBUS2_ACS_MSK_DCACHE_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to indicate interrupt by dbus0 counter overflow."]
     #[inline(always)]
     pub fn dbus0_acs_cnt_ovf_st(&self) -> DBUS0_ACS_CNT_OVF_ST_R {
-        DBUS0_ACS_CNT_OVF_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        DBUS0_ACS_CNT_OVF_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to indicate interrupt by dbus1 counter overflow."]
     #[inline(always)]
     pub fn dbus1_acs_cnt_ovf_st(&self) -> DBUS1_ACS_CNT_OVF_ST_R {
-        DBUS1_ACS_CNT_OVF_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        DBUS1_ACS_CNT_OVF_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The bit is used to indicate interrupt by dbus2 counter overflow."]
     #[inline(always)]
     pub fn dbus2_acs_cnt_ovf_st(&self) -> DBUS2_ACS_CNT_OVF_ST_R {
-        DBUS2_ACS_CNT_OVF_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        DBUS2_ACS_CNT_OVF_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 8 - The bit is used to indicate interrupt by dbus0 miss counter overflow."]
     #[inline(always)]
     pub fn dbus0_acs_miss_cnt_ovf_st(&self) -> DBUS0_ACS_MISS_CNT_OVF_ST_R {
-        DBUS0_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        DBUS0_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bit is used to indicate interrupt by dbus1 miss counter overflow."]
     #[inline(always)]
     pub fn dbus1_acs_miss_cnt_ovf_st(&self) -> DBUS1_ACS_MISS_CNT_OVF_ST_R {
-        DBUS1_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        DBUS1_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The bit is used to indicate interrupt by dbus2 miss counter overflow."]
     #[inline(always)]
     pub fn dbus2_acs_miss_cnt_ovf_st(&self) -> DBUS2_ACS_MISS_CNT_OVF_ST_R {
-        DBUS2_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        DBUS2_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - The bit is used to indicate interrupt by dbus0 eviction counter overflow."]
     #[inline(always)]
     pub fn dbus0_acs_wb_cnt_ovf_st(&self) -> DBUS0_ACS_WB_CNT_OVF_ST_R {
-        DBUS0_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 12) & 0x01) != 0)
+        DBUS0_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The bit is used to indicate interrupt by dbus1 eviction counter overflow."]
     #[inline(always)]
     pub fn dbus1_acs_wb_cnt_ovf_st(&self) -> DBUS1_ACS_WB_CNT_OVF_ST_R {
-        DBUS1_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 13) & 0x01) != 0)
+        DBUS1_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The bit is used to indicate interrupt by dbus2 eviction counter overflow."]
     #[inline(always)]
     pub fn dbus2_acs_wb_cnt_ovf_st(&self) -> DBUS2_ACS_WB_CNT_OVF_ST_R {
-        DBUS2_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 14) & 0x01) != 0)
+        DBUS2_ACS_WB_CNT_OVF_ST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 16 - The bit is used to indicate interrupt by dbus0 abandon counter overflow."]
     #[inline(always)]
     pub fn dbus0_abandon_cnt_ovf_st(&self) -> DBUS0_ABANDON_CNT_OVF_ST_R {
-        DBUS0_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 16) & 0x01) != 0)
+        DBUS0_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - The bit is used to indicate interrupt by dbus1 abandon counter overflow."]
     #[inline(always)]
     pub fn dbus1_abandon_cnt_ovf_st(&self) -> DBUS1_ABANDON_CNT_OVF_ST_R {
-        DBUS1_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 17) & 0x01) != 0)
+        DBUS1_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - The bit is used to indicate interrupt by dbus2 abandon counter overflow."]
     #[inline(always)]
     pub fn dbus2_abandon_cnt_ovf_st(&self) -> DBUS2_ABANDON_CNT_OVF_ST_R {
-        DBUS2_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 18) & 0x01) != 0)
+        DBUS2_ABANDON_CNT_OVF_ST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 20 - The bit is used to indicate interrupt by pre-load miss counter overflow."]
     #[inline(always)]
     pub fn dc_preload_miss_cnt_ovf_st(&self) -> DC_PRELOAD_MISS_CNT_OVF_ST_R {
-        DC_PRELOAD_MISS_CNT_OVF_ST_R::new(((self.bits >> 20) & 0x01) != 0)
+        DC_PRELOAD_MISS_CNT_OVF_ST_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - The bit is used to indicate interrupt by pre-load eviction counter overflow."]
     #[inline(always)]
     pub fn dc_preload_evict_cnt_ovf_st(&self) -> DC_PRELOAD_EVICT_CNT_OVF_ST_R {
-        DC_PRELOAD_EVICT_CNT_OVF_ST_R::new(((self.bits >> 21) & 0x01) != 0)
+        DC_PRELOAD_EVICT_CNT_OVF_ST_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - The bit is used to indicate interrupt by pre-load counter overflow."]
     #[inline(always)]
     pub fn dc_preload_cnt_ovf_st(&self) -> DC_PRELOAD_CNT_OVF_ST_R {
-        DC_PRELOAD_CNT_OVF_ST_R::new(((self.bits >> 22) & 0x01) != 0)
+        DC_PRELOAD_CNT_OVF_ST_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - The bit is used to indicate interrupt by manual sync configurations fault."]
     #[inline(always)]
     pub fn dc_sync_size_fault_st(&self) -> DC_SYNC_SIZE_FAULT_ST_R {
-        DC_SYNC_SIZE_FAULT_ST_R::new(((self.bits >> 23) & 0x01) != 0)
+        DC_SYNC_SIZE_FAULT_ST_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - The bit is used to indicate interrupt by manual pre-load configurations fault."]
     #[inline(always)]
     pub fn dc_preload_size_fault_st(&self) -> DC_PRELOAD_SIZE_FAULT_ST_R {
-        DC_PRELOAD_SIZE_FAULT_ST_R::new(((self.bits >> 24) & 0x01) != 0)
+        DC_PRELOAD_SIZE_FAULT_ST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - The bit is used to indicate interrupt by dcache trying to write flash."]
     #[inline(always)]
     pub fn dcache_write_flash_st(&self) -> DCACHE_WRITE_FLASH_ST_R {
-        DCACHE_WRITE_FLASH_ST_R::new(((self.bits >> 25) & 0x01) != 0)
+        DCACHE_WRITE_FLASH_ST_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - The bit is used to indicate interrupt by authentication fail."]
     #[inline(always)]
     pub fn dcache_reject_st(&self) -> DCACHE_REJECT_ST_R {
-        DCACHE_REJECT_ST_R::new(((self.bits >> 26) & 0x01) != 0)
+        DCACHE_REJECT_ST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - The bit is used to indicate interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_preload_ilg_st(&self) -> DCACHE_SET_PRELOAD_ILG_ST_R {
-        DCACHE_SET_PRELOAD_ILG_ST_R::new(((self.bits >> 27) & 0x01) != 0)
+        DCACHE_SET_PRELOAD_ILG_ST_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - The bit is used to indicate interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_sync_ilg_st(&self) -> DCACHE_SET_SYNC_ILG_ST_R {
-        DCACHE_SET_SYNC_ILG_ST_R::new(((self.bits >> 28) & 0x01) != 0)
+        DCACHE_SET_SYNC_ILG_ST_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - The bit is used to indicate interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_lock_ilg_st(&self) -> DCACHE_SET_LOCK_ILG_ST_R {
-        DCACHE_SET_LOCK_ILG_ST_R::new(((self.bits >> 29) & 0x01) != 0)
+        DCACHE_SET_LOCK_ILG_ST_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - The bit is used to indicate interrupt by mmu entry fault."]
     #[inline(always)]
     pub fn mmu_entry_fault_st(&self) -> MMU_ENTRY_FAULT_ST_R {
-        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 30) & 0x01) != 0)
+        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`]

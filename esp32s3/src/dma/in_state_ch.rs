@@ -67,12 +67,12 @@ impl R {
     #[doc = "Bits 18:19 - reserved"]
     #[inline(always)]
     pub fn in_dscr_state_ch(&self) -> IN_DSCR_STATE_CH_R {
-        IN_DSCR_STATE_CH_R::new(((self.bits >> 18) & 0x03) as u8)
+        IN_DSCR_STATE_CH_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - reserved"]
     #[inline(always)]
     pub fn in_state_ch(&self) -> IN_STATE_CH_R {
-        IN_STATE_CH_R::new(((self.bits >> 20) & 0x07) as u8)
+        IN_STATE_CH_R::new(((self.bits >> 20) & 7) as u8)
     }
 }
 #[doc = "Receive status of Rx channel 0\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> APB_FIFO_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MEM_TX_WRAP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MEM_CLK_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
     pub fn apb_fifo_mask(&self) -> APB_FIFO_MASK_R {
-        APB_FIFO_MASK_R::new((self.bits & 0x01) != 0)
+        APB_FIFO_MASK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
     pub fn mem_tx_wrap_en(&self) -> MEM_TX_WRAP_EN_R {
-        MEM_TX_WRAP_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        MEM_TX_WRAP_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
     pub fn mem_clk_force_on(&self) -> MEM_CLK_FORCE_ON_R {
-        MEM_CLK_FORCE_ON_R::new(((self.bits >> 2) & 0x01) != 0)
+        MEM_CLK_FORCE_ON_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to power down RMT memory."]
     #[inline(always)]
     pub fn mem_force_pd(&self) -> MEM_FORCE_PD_R {
-        MEM_FORCE_PD_R::new(((self.bits >> 3) & 0x01) != 0)
+        MEM_FORCE_PD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
     pub fn mem_force_pu(&self) -> MEM_FORCE_PU_R {
-        MEM_FORCE_PU_R::new(((self.bits >> 4) & 0x01) != 0)
+        MEM_FORCE_PU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

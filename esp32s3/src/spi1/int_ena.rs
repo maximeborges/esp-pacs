@@ -67,7 +67,7 @@ impl<'a> PER_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PES_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TOTAL_TRANS_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BROWN_OUT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     pub fn per_end_int_ena(&self) -> PER_END_INT_ENA_R {
-        PER_END_INT_ENA_R::new((self.bits & 0x01) != 0)
+        PER_END_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     pub fn pes_end_int_ena(&self) -> PES_END_INT_ENA_R {
-        PES_END_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        PES_END_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_ena(&self) -> TOTAL_TRANS_END_INT_ENA_R {
-        TOTAL_TRANS_END_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOTAL_TRANS_END_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
     pub fn brown_out_int_ena(&self) -> BROWN_OUT_INT_ENA_R {
-        BROWN_OUT_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        BROWN_OUT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

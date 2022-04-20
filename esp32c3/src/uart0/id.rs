@@ -94,7 +94,7 @@ impl<'a> HIGH_SPEED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> REG_UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 30 - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
     #[inline(always)]
     pub fn high_speed(&self) -> HIGH_SPEED_R {
-        HIGH_SPEED_R::new(((self.bits >> 30) & 0x01) != 0)
+        HIGH_SPEED_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
     pub fn reg_update(&self) -> REG_UPDATE_R {
-        REG_UPDATE_R::new(((self.bits >> 31) & 0x01) != 0)
+        REG_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

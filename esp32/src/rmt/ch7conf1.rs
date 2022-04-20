@@ -67,7 +67,7 @@ impl<'a> TX_START_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_EN_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MEM_WR_RST_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> MEM_RD_RST_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> APB_MEM_RST_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> MEM_OWNER_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> TX_CONTI_MODE_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_FILTER_EN_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> REF_CNT_RST_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> REF_ALWAYS_ON_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -464,7 +464,7 @@ impl<'a> IDLE_OUT_LV_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -501,7 +501,7 @@ impl<'a> IDLE_OUT_EN_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -509,42 +509,42 @@ impl R {
     #[doc = "Bit 0 - Set this bit to start sending data for channel7."]
     #[inline(always)]
     pub fn tx_start_ch7(&self) -> TX_START_CH7_R {
-        TX_START_CH7_R::new((self.bits & 0x01) != 0)
+        TX_START_CH7_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enbale receving data for channel7."]
     #[inline(always)]
     pub fn rx_en_ch7(&self) -> RX_EN_CH7_R {
-        RX_EN_CH7_R::new(((self.bits >> 1) & 0x01) != 0)
+        RX_EN_CH7_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to reset write ram address for channel7 by receiver access."]
     #[inline(always)]
     pub fn mem_wr_rst_ch7(&self) -> MEM_WR_RST_CH7_R {
-        MEM_WR_RST_CH7_R::new(((self.bits >> 2) & 0x01) != 0)
+        MEM_WR_RST_CH7_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to reset read ram address for channel7 by transmitter access."]
     #[inline(always)]
     pub fn mem_rd_rst_ch7(&self) -> MEM_RD_RST_CH7_R {
-        MEM_RD_RST_CH7_R::new(((self.bits >> 3) & 0x01) != 0)
+        MEM_RD_RST_CH7_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to reset W/R ram address for channel7 by apb fifo access"]
     #[inline(always)]
     pub fn apb_mem_rst_ch7(&self) -> APB_MEM_RST_CH7_R {
-        APB_MEM_RST_CH7_R::new(((self.bits >> 4) & 0x01) != 0)
+        APB_MEM_RST_CH7_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This is the mark of channel7's ram usage right.1'b1：receiver uses the ram 0：transmitter uses the ram"]
     #[inline(always)]
     pub fn mem_owner_ch7(&self) -> MEM_OWNER_CH7_R {
-        MEM_OWNER_CH7_R::new(((self.bits >> 5) & 0x01) != 0)
+        MEM_OWNER_CH7_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to continue sending from the first data to the last data in channel7."]
     #[inline(always)]
     pub fn tx_conti_mode_ch7(&self) -> TX_CONTI_MODE_CH7_R {
-        TX_CONTI_MODE_CH7_R::new(((self.bits >> 6) & 0x01) != 0)
+        TX_CONTI_MODE_CH7_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This is the receive filter enable bit for channel7."]
     #[inline(always)]
     pub fn rx_filter_en_ch7(&self) -> RX_FILTER_EN_CH7_R {
-        RX_FILTER_EN_CH7_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_FILTER_EN_CH7_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:15 - in receive mode channel7 ignore input pulse when the pulse width is smaller then this value."]
     #[inline(always)]
@@ -554,22 +554,22 @@ impl R {
     #[doc = "Bit 16 - This bit is used to reset divider in channel7."]
     #[inline(always)]
     pub fn ref_cnt_rst_ch7(&self) -> REF_CNT_RST_CH7_R {
-        REF_CNT_RST_CH7_R::new(((self.bits >> 16) & 0x01) != 0)
+        REF_CNT_RST_CH7_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - This bit is used to select base clock. 1'b1:clk_apb 1'b0:clk_ref"]
     #[inline(always)]
     pub fn ref_always_on_ch7(&self) -> REF_ALWAYS_ON_CH7_R {
-        REF_ALWAYS_ON_CH7_R::new(((self.bits >> 17) & 0x01) != 0)
+        REF_ALWAYS_ON_CH7_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - This bit configures the output signal's level for channel7 in IDLE state."]
     #[inline(always)]
     pub fn idle_out_lv_ch7(&self) -> IDLE_OUT_LV_CH7_R {
-        IDLE_OUT_LV_CH7_R::new(((self.bits >> 18) & 0x01) != 0)
+        IDLE_OUT_LV_CH7_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - This is the output enable control bit for channel6 in IDLE state."]
     #[inline(always)]
     pub fn idle_out_en_ch7(&self) -> IDLE_OUT_EN_CH7_R {
-        IDLE_OUT_EN_CH7_R::new(((self.bits >> 19) & 0x01) != 0)
+        IDLE_OUT_EN_CH7_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 impl W {

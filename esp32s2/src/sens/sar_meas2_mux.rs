@@ -57,7 +57,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> SAR2_RTC_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&self) -> SAR2_PWDET_CCT_R {
-        SAR2_PWDET_CCT_R::new(((self.bits >> 28) & 0x07) as u8)
+        SAR2_PWDET_CCT_R::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31 - In sleep, force to use RTC to control ADC."]
     #[inline(always)]
     pub fn sar2_rtc_force(&self) -> SAR2_RTC_FORCE_R {
-        SAR2_RTC_FORCE_R::new(((self.bits >> 31) & 0x01) != 0)
+        SAR2_RTC_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

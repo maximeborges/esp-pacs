@@ -62,14 +62,14 @@ impl R {
     #[doc = "Bit 0 - dma_apbperi_pms_monitor_violate_intr"]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_intr(&self) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - dma_apbperi_pms_monitor_violate_status_world"]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_status_world(
         &self,
     ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 1) & 0x03) as u8)
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:26 - dma_apbperi_pms_monitor_violate_status_addr"]
     #[inline(always)]

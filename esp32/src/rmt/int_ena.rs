@@ -67,7 +67,7 @@ impl<'a> CH0_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CH0_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CH0_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CH1_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CH1_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CH1_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CH2_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> CH2_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CH2_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CH3_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CH3_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> CH3_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> CH4_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> CH4_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> CH4_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> CH5_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> CH5_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> CH5_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> CH6_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> CH6_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> CH6_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> CH7_TX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> CH7_RX_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> CH7_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> CH0_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -992,7 +992,7 @@ impl<'a> CH1_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -1029,7 +1029,7 @@ impl<'a> CH2_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -1066,7 +1066,7 @@ impl<'a> CH3_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1103,7 +1103,7 @@ impl<'a> CH4_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1140,7 +1140,7 @@ impl<'a> CH5_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -1177,7 +1177,7 @@ impl<'a> CH6_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -1214,7 +1214,7 @@ impl<'a> CH7_TX_THR_EVENT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -1222,162 +1222,162 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable rmt_ch0_tx_end_int_st."]
     #[inline(always)]
     pub fn ch0_tx_end_int_ena(&self) -> CH0_TX_END_INT_ENA_R {
-        CH0_TX_END_INT_ENA_R::new((self.bits & 0x01) != 0)
+        CH0_TX_END_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enable rmt_ch0_rx_end_int_st."]
     #[inline(always)]
     pub fn ch0_rx_end_int_ena(&self) -> CH0_RX_END_INT_ENA_R {
-        CH0_RX_END_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        CH0_RX_END_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to enable rmt_ch0_err_int_st."]
     #[inline(always)]
     pub fn ch0_err_int_ena(&self) -> CH0_ERR_INT_ENA_R {
-        CH0_ERR_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        CH0_ERR_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to enable rmt_ch1_tx_end_int_st."]
     #[inline(always)]
     pub fn ch1_tx_end_int_ena(&self) -> CH1_TX_END_INT_ENA_R {
-        CH1_TX_END_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        CH1_TX_END_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to enable rmt_ch1_rx_end_int_st."]
     #[inline(always)]
     pub fn ch1_rx_end_int_ena(&self) -> CH1_RX_END_INT_ENA_R {
-        CH1_RX_END_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        CH1_RX_END_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to enable rmt_ch1_err_int_st."]
     #[inline(always)]
     pub fn ch1_err_int_ena(&self) -> CH1_ERR_INT_ENA_R {
-        CH1_ERR_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        CH1_ERR_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to enable rmt_ch2_tx_end_int_st."]
     #[inline(always)]
     pub fn ch2_tx_end_int_ena(&self) -> CH2_TX_END_INT_ENA_R {
-        CH2_TX_END_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        CH2_TX_END_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to enable rmt_ch2_rx_end_int_st."]
     #[inline(always)]
     pub fn ch2_rx_end_int_ena(&self) -> CH2_RX_END_INT_ENA_R {
-        CH2_RX_END_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        CH2_RX_END_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to enable rmt_ch2_err_int_st."]
     #[inline(always)]
     pub fn ch2_err_int_ena(&self) -> CH2_ERR_INT_ENA_R {
-        CH2_ERR_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        CH2_ERR_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to enable rmt_ch3_tx_end_int_st."]
     #[inline(always)]
     pub fn ch3_tx_end_int_ena(&self) -> CH3_TX_END_INT_ENA_R {
-        CH3_TX_END_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        CH3_TX_END_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set this bit to enable rmt_ch3_rx_end_int_st."]
     #[inline(always)]
     pub fn ch3_rx_end_int_ena(&self) -> CH3_RX_END_INT_ENA_R {
-        CH3_RX_END_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        CH3_RX_END_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Set this bit to enable rmt_ch3_err_int_st."]
     #[inline(always)]
     pub fn ch3_err_int_ena(&self) -> CH3_ERR_INT_ENA_R {
-        CH3_ERR_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        CH3_ERR_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to enable rmt_ch4_tx_end_int_st."]
     #[inline(always)]
     pub fn ch4_tx_end_int_ena(&self) -> CH4_TX_END_INT_ENA_R {
-        CH4_TX_END_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        CH4_TX_END_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to enable rmt_ch4_rx_end_int_st."]
     #[inline(always)]
     pub fn ch4_rx_end_int_ena(&self) -> CH4_RX_END_INT_ENA_R {
-        CH4_RX_END_INT_ENA_R::new(((self.bits >> 13) & 0x01) != 0)
+        CH4_RX_END_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to enable rmt_ch4_err_int_st."]
     #[inline(always)]
     pub fn ch4_err_int_ena(&self) -> CH4_ERR_INT_ENA_R {
-        CH4_ERR_INT_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        CH4_ERR_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Set this bit to enable rmt_ch5_tx_end_int_st."]
     #[inline(always)]
     pub fn ch5_tx_end_int_ena(&self) -> CH5_TX_END_INT_ENA_R {
-        CH5_TX_END_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        CH5_TX_END_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Set this bit to enable rmt_ch5_rx_end_int_st."]
     #[inline(always)]
     pub fn ch5_rx_end_int_ena(&self) -> CH5_RX_END_INT_ENA_R {
-        CH5_RX_END_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
+        CH5_RX_END_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Set this bit to enable rmt_ch5_err_int_st."]
     #[inline(always)]
     pub fn ch5_err_int_ena(&self) -> CH5_ERR_INT_ENA_R {
-        CH5_ERR_INT_ENA_R::new(((self.bits >> 17) & 0x01) != 0)
+        CH5_ERR_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Set this bit to enable rmt_ch6_tx_end_int_st."]
     #[inline(always)]
     pub fn ch6_tx_end_int_ena(&self) -> CH6_TX_END_INT_ENA_R {
-        CH6_TX_END_INT_ENA_R::new(((self.bits >> 18) & 0x01) != 0)
+        CH6_TX_END_INT_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Set this bit to enable rmt_ch6_rx_end_int_st."]
     #[inline(always)]
     pub fn ch6_rx_end_int_ena(&self) -> CH6_RX_END_INT_ENA_R {
-        CH6_RX_END_INT_ENA_R::new(((self.bits >> 19) & 0x01) != 0)
+        CH6_RX_END_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set this bit to enable rmt_ch6_err_int_st."]
     #[inline(always)]
     pub fn ch6_err_int_ena(&self) -> CH6_ERR_INT_ENA_R {
-        CH6_ERR_INT_ENA_R::new(((self.bits >> 20) & 0x01) != 0)
+        CH6_ERR_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to enable rmt_ch7_tx_end_int_st."]
     #[inline(always)]
     pub fn ch7_tx_end_int_ena(&self) -> CH7_TX_END_INT_ENA_R {
-        CH7_TX_END_INT_ENA_R::new(((self.bits >> 21) & 0x01) != 0)
+        CH7_TX_END_INT_ENA_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to enable rmt_ch7_rx_end_int_st."]
     #[inline(always)]
     pub fn ch7_rx_end_int_ena(&self) -> CH7_RX_END_INT_ENA_R {
-        CH7_RX_END_INT_ENA_R::new(((self.bits >> 22) & 0x01) != 0)
+        CH7_RX_END_INT_ENA_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Set this bit to enable rmt_ch7_err_int_st."]
     #[inline(always)]
     pub fn ch7_err_int_ena(&self) -> CH7_ERR_INT_ENA_R {
-        CH7_ERR_INT_ENA_R::new(((self.bits >> 23) & 0x01) != 0)
+        CH7_ERR_INT_ENA_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to enable rmt_ch0_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch0_tx_thr_event_int_ena(&self) -> CH0_TX_THR_EVENT_INT_ENA_R {
-        CH0_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 24) & 0x01) != 0)
+        CH0_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Set this bit to enable rmt_ch1_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch1_tx_thr_event_int_ena(&self) -> CH1_TX_THR_EVENT_INT_ENA_R {
-        CH1_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 25) & 0x01) != 0)
+        CH1_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Set this bit to enable rmt_ch2_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch2_tx_thr_event_int_ena(&self) -> CH2_TX_THR_EVENT_INT_ENA_R {
-        CH2_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
+        CH2_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Set this bit to enable rmt_ch3_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch3_tx_thr_event_int_ena(&self) -> CH3_TX_THR_EVENT_INT_ENA_R {
-        CH3_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 27) & 0x01) != 0)
+        CH3_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Set this bit to enable rmt_ch4_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch4_tx_thr_event_int_ena(&self) -> CH4_TX_THR_EVENT_INT_ENA_R {
-        CH4_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 28) & 0x01) != 0)
+        CH4_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set this bit to enable rmt_ch5_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch5_tx_thr_event_int_ena(&self) -> CH5_TX_THR_EVENT_INT_ENA_R {
-        CH5_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 29) & 0x01) != 0)
+        CH5_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to enable rmt_ch6_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch6_tx_thr_event_int_ena(&self) -> CH6_TX_THR_EVENT_INT_ENA_R {
-        CH6_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+        CH6_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to enable rmt_ch7_tx_thr_event_int_st."]
     #[inline(always)]
     pub fn ch7_tx_thr_event_int_ena(&self) -> CH7_TX_THR_EVENT_INT_ENA_R {
-        CH7_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 31) & 0x01) != 0)
+        CH7_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

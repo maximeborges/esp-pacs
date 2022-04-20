@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
     pub fn t0_int_st(&self) -> T0_INT_ST_R {
-        T0_INT_ST_R::new((self.bits & 0x01) != 0)
+        T0_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
     pub fn t1_int_st(&self) -> T1_INT_ST_R {
-        T1_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        T1_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
     pub fn wdt_int_st(&self) -> WDT_INT_ST_R {
-        WDT_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        WDT_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`]

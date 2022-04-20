@@ -111,7 +111,7 @@ impl<'a> INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -156,12 +156,12 @@ impl R {
     #[doc = "Bits 14:15 - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
     #[inline(always)]
     pub fn internal_sram_core0_trace_alloc(&self) -> INTERNAL_SRAM_CORE0_TRACE_ALLOC_R {
-        INTERNAL_SRAM_CORE0_TRACE_ALLOC_R::new(((self.bits >> 14) & 0x03) as u8)
+        INTERNAL_SRAM_CORE0_TRACE_ALLOC_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
     #[inline(always)]
     pub fn internal_sram_core1_trace_alloc(&self) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_R {
-        INTERNAL_SRAM_CORE1_TRACE_ALLOC_R::new(((self.bits >> 16) & 0x03) as u8)
+        INTERNAL_SRAM_CORE1_TRACE_ALLOC_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

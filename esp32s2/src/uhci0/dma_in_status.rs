@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - Data-input FIFO full signal."]
     #[inline(always)]
     pub fn in_full(&self) -> IN_FULL_R {
-        IN_FULL_R::new((self.bits & 0x01) != 0)
+        IN_FULL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Data-input FIFO empty signal."]
     #[inline(always)]
     pub fn in_empty(&self) -> IN_EMPTY_R {
-        IN_EMPTY_R::new(((self.bits >> 1) & 0x01) != 0)
+        IN_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 4:6 - This register indicates the error type when DMA has received a packet with error. 3'b001: Checksum error in the HCI packet; 3'b010: Sequence number error in the HCI packet; 3'b011: CRC bit error in the HCI packet; 3'b100: 0xC0 is found but the received HCI packet is not end; 3'b101: 0xC0 is not found when the HCI packet has been received; 3'b110: CRC check error."]
     #[inline(always)]
     pub fn rx_err_cause(&self) -> RX_ERR_CAUSE_R {
-        RX_ERR_CAUSE_R::new(((self.bits >> 4) & 0x07) as u8)
+        RX_ERR_CAUSE_R::new(((self.bits >> 4) & 7) as u8)
     }
 }
 #[doc = "UHCI data-input status register\n\nThis register you can [`read`]

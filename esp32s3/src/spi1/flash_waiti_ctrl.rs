@@ -67,7 +67,7 @@ impl<'a> WAITI_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> WAITI_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -166,12 +166,12 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
     #[inline(always)]
     pub fn waiti_en(&self) -> WAITI_EN_R {
-        WAITI_EN_R::new((self.bits & 0x01) != 0)
+        WAITI_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
     pub fn waiti_dummy(&self) -> WAITI_DUMMY_R {
-        WAITI_DUMMY_R::new(((self.bits >> 1) & 0x01) != 0)
+        WAITI_DUMMY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:9 - The command value of auto wait flash idle transfer(RDSR)."]
     #[inline(always)]

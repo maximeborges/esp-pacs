@@ -322,97 +322,97 @@ impl R {
     #[doc = "Bit 7 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_rtc_ram_boot_err(&self) -> DIS_RTC_RAM_BOOT_ERR_R {
-        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 0x01) != 0)
+        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_icache_err(&self) -> DIS_ICACHE_ERR_R {
-        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_dcache_err(&self) -> DIS_DCACHE_ERR_R {
-        DIS_DCACHE_ERR_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIS_DCACHE_ERR_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_download_icache_err(&self) -> DIS_DOWNLOAD_ICACHE_ERR_R {
-        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_download_dcache_err(&self) -> DIS_DOWNLOAD_DCACHE_ERR_R {
-        DIS_DOWNLOAD_DCACHE_ERR_R::new(((self.bits >> 11) & 0x01) != 0)
+        DIS_DOWNLOAD_DCACHE_ERR_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_force_download_err(&self) -> DIS_FORCE_DOWNLOAD_ERR_R {
-        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 0x01) != 0)
+        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_usb_err(&self) -> DIS_USB_ERR_R {
-        DIS_USB_ERR_R::new(((self.bits >> 13) & 0x01) != 0)
+        DIS_USB_ERR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_can_err(&self) -> DIS_CAN_ERR_R {
-        DIS_CAN_ERR_R::new(((self.bits >> 14) & 0x01) != 0)
+        DIS_CAN_ERR_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_app_cpu_err(&self) -> DIS_APP_CPU_ERR_R {
-        DIS_APP_CPU_ERR_R::new(((self.bits >> 15) & 0x01) != 0)
+        DIS_APP_CPU_ERR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:18 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn soft_dis_jtag_err(&self) -> SOFT_DIS_JTAG_ERR_R {
-        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 16) & 0x07) as u8)
+        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_pad_jtag_err(&self) -> DIS_PAD_JTAG_ERR_R {
-        DIS_PAD_JTAG_ERR_R::new(((self.bits >> 19) & 0x01) != 0)
+        DIS_PAD_JTAG_ERR_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_download_manual_encrypt_err(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 20) & 0x01) != 0)
+        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_drefh_err(&self) -> USB_DREFH_ERR_R {
-        USB_DREFH_ERR_R::new(((self.bits >> 21) & 0x03) as u8)
+        USB_DREFH_ERR_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_drefl_err(&self) -> USB_DREFL_ERR_R {
-        USB_DREFL_ERR_R::new(((self.bits >> 23) & 0x03) as u8)
+        USB_DREFL_ERR_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bit 25 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_exchg_pins_err(&self) -> USB_EXCHG_PINS_ERR_R {
-        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 25) & 0x01) != 0)
+        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn ext_phy_enable_err(&self) -> EXT_PHY_ENABLE_ERR_R {
-        EXT_PHY_ENABLE_ERR_R::new(((self.bits >> 26) & 0x01) != 0)
+        EXT_PHY_ENABLE_ERR_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn btlc_gpio_enable_err(&self) -> BTLC_GPIO_ENABLE_ERR_R {
-        BTLC_GPIO_ENABLE_ERR_R::new(((self.bits >> 27) & 0x03) as u8)
+        BTLC_GPIO_ENABLE_ERR_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_modecurlim_err(&self) -> VDD_SPI_MODECURLIM_ERR_R {
-        VDD_SPI_MODECURLIM_ERR_R::new(((self.bits >> 29) & 0x01) != 0)
+        VDD_SPI_MODECURLIM_ERR_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_drefh_err(&self) -> VDD_SPI_DREFH_ERR_R {
-        VDD_SPI_DREFH_ERR_R::new(((self.bits >> 30) & 0x03) as u8)
+        VDD_SPI_DREFH_ERR_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`]

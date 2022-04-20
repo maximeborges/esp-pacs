@@ -61,7 +61,7 @@ impl<'a> SW_STALL_APPCPU_C0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -88,7 +88,7 @@ impl<'a> SW_STALL_PROCPU_C0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -110,7 +110,7 @@ impl<'a> SW_APPCPU_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -132,7 +132,7 @@ impl<'a> SW_PROCPU_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -169,7 +169,7 @@ impl<'a> BB_I2C_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -206,7 +206,7 @@ impl<'a> BB_I2C_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -243,7 +243,7 @@ impl<'a> BBPLL_I2C_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -280,7 +280,7 @@ impl<'a> BBPLL_I2C_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -317,7 +317,7 @@ impl<'a> BBPLL_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -354,7 +354,7 @@ impl<'a> BBPLL_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -391,7 +391,7 @@ impl<'a> XTL_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -428,7 +428,7 @@ impl<'a> XTL_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -465,7 +465,7 @@ impl<'a> XTL_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -502,7 +502,7 @@ impl<'a> PLL_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -539,7 +539,7 @@ impl<'a> ANALOG_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -576,7 +576,7 @@ impl<'a> XTL_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -613,7 +613,7 @@ impl<'a> PLL_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -650,7 +650,7 @@ impl<'a> ANALOG_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -687,7 +687,7 @@ impl<'a> DG_WRAP_FORCE_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -724,7 +724,7 @@ impl<'a> DG_WRAP_FORCE_NORST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -746,7 +746,7 @@ impl<'a> SW_SYS_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -756,92 +756,92 @@ impl R {
 } == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c0(&self) -> SW_STALL_APPCPU_C0_R {
-        SW_STALL_APPCPU_C0_R::new((self.bits & 0x03) as u8)
+        SW_STALL_APPCPU_C0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
     #[inline(always)]
     pub fn sw_stall_procpu_c0(&self) -> SW_STALL_PROCPU_C0_R {
-        SW_STALL_PROCPU_C0_R::new(((self.bits >> 2) & 0x03) as u8)
+        SW_STALL_PROCPU_C0_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 6 - Set this bit to FPD BB_I2C."]
     #[inline(always)]
     pub fn bb_i2c_force_pd(&self) -> BB_I2C_FORCE_PD_R {
-        BB_I2C_FORCE_PD_R::new(((self.bits >> 6) & 0x01) != 0)
+        BB_I2C_FORCE_PD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to FPU BB_I2C."]
     #[inline(always)]
     pub fn bb_i2c_force_pu(&self) -> BB_I2C_FORCE_PU_R {
-        BB_I2C_FORCE_PU_R::new(((self.bits >> 7) & 0x01) != 0)
+        BB_I2C_FORCE_PU_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to FPD BB_PLL _I2C."]
     #[inline(always)]
     pub fn bbpll_i2c_force_pd(&self) -> BBPLL_I2C_FORCE_PD_R {
-        BBPLL_I2C_FORCE_PD_R::new(((self.bits >> 8) & 0x01) != 0)
+        BBPLL_I2C_FORCE_PD_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to FPU BB_PLL _I2C."]
     #[inline(always)]
     pub fn bbpll_i2c_force_pu(&self) -> BBPLL_I2C_FORCE_PU_R {
-        BBPLL_I2C_FORCE_PU_R::new(((self.bits >> 9) & 0x01) != 0)
+        BBPLL_I2C_FORCE_PU_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set this bit to FPD BB_PLL."]
     #[inline(always)]
     pub fn bbpll_force_pd(&self) -> BBPLL_FORCE_PD_R {
-        BBPLL_FORCE_PD_R::new(((self.bits >> 10) & 0x01) != 0)
+        BBPLL_FORCE_PD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Set this bit to FPU BB_PLL."]
     #[inline(always)]
     pub fn bbpll_force_pu(&self) -> BBPLL_FORCE_PU_R {
-        BBPLL_FORCE_PU_R::new(((self.bits >> 11) & 0x01) != 0)
+        BBPLL_FORCE_PU_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to FPD the crystal oscillator."]
     #[inline(always)]
     pub fn xtl_force_pd(&self) -> XTL_FORCE_PD_R {
-        XTL_FORCE_PD_R::new(((self.bits >> 12) & 0x01) != 0)
+        XTL_FORCE_PD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to FPU the crystal oscillator."]
     #[inline(always)]
     pub fn xtl_force_pu(&self) -> XTL_FORCE_PU_R {
-        XTL_FORCE_PU_R::new(((self.bits >> 13) & 0x01) != 0)
+        XTL_FORCE_PU_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn xtl_force_iso(&self) -> XTL_FORCE_ISO_R {
-        XTL_FORCE_ISO_R::new(((self.bits >> 23) & 0x01) != 0)
+        XTL_FORCE_ISO_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn pll_force_iso(&self) -> PLL_FORCE_ISO_R {
-        PLL_FORCE_ISO_R::new(((self.bits >> 24) & 0x01) != 0)
+        PLL_FORCE_ISO_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn analog_force_iso(&self) -> ANALOG_FORCE_ISO_R {
-        ANALOG_FORCE_ISO_R::new(((self.bits >> 25) & 0x01) != 0)
+        ANALOG_FORCE_ISO_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     pub fn xtl_force_noiso(&self) -> XTL_FORCE_NOISO_R {
-        XTL_FORCE_NOISO_R::new(((self.bits >> 26) & 0x01) != 0)
+        XTL_FORCE_NOISO_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     pub fn pll_force_noiso(&self) -> PLL_FORCE_NOISO_R {
-        PLL_FORCE_NOISO_R::new(((self.bits >> 27) & 0x01) != 0)
+        PLL_FORCE_NOISO_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn analog_force_noiso(&self) -> ANALOG_FORCE_NOISO_R {
-        ANALOG_FORCE_NOISO_R::new(((self.bits >> 28) & 0x01) != 0)
+        ANALOG_FORCE_NOISO_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set this bit to force reset the digital system in deep-sleep."]
     #[inline(always)]
     pub fn dg_wrap_force_rst(&self) -> DG_WRAP_FORCE_RST_R {
-        DG_WRAP_FORCE_RST_R::new(((self.bits >> 29) & 0x01) != 0)
+        DG_WRAP_FORCE_RST_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to disable force reset to digital system in deep-sleep."]
     #[inline(always)]
     pub fn dg_wrap_force_norst(&self) -> DG_WRAP_FORCE_NORST_R {
-        DG_WRAP_FORCE_NORST_R::new(((self.bits >> 30) & 0x01) != 0)
+        DG_WRAP_FORCE_NORST_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

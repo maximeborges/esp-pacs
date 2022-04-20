@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - MD checkout result. 1'b0: MD check pass, 1'b1: MD check fail"]
     #[inline(always)]
     pub fn md_error(&self) -> MD_ERROR_R {
-        MD_ERROR_R::new((self.bits & 0x01) != 0)
+        MD_ERROR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - padding checkout result. 1'b0: a good padding, 1'b1: a bad padding"]
     #[inline(always)]
     pub fn padding_bad(&self) -> PADDING_BAD_R {
-        PADDING_BAD_R::new(((self.bits >> 1) & 0x01) != 0)
+        PADDING_BAD_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "DS query check result register\n\nThis register you can [`read`]

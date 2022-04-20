@@ -67,7 +67,7 @@ impl<'a> TOUCH_WAKEUP_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ULP_CP_WAKEUP_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> APB2RTC_BRIDGE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TOUCH_SLP_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> ULP_CP_SLP_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -267,7 +267,7 @@ impl<'a> SLP_WAKEUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -304,7 +304,7 @@ impl<'a> SLP_REJECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -341,7 +341,7 @@ impl<'a> SLEEP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -349,47 +349,47 @@ impl R {
     #[doc = "Bit 20 - touch controller force wake up"]
     #[inline(always)]
     pub fn touch_wakeup_force_en(&self) -> TOUCH_WAKEUP_FORCE_EN_R {
-        TOUCH_WAKEUP_FORCE_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        TOUCH_WAKEUP_FORCE_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - ULP-coprocessor force wake up"]
     #[inline(always)]
     pub fn ulp_cp_wakeup_force_en(&self) -> ULP_CP_WAKEUP_FORCE_EN_R {
-        ULP_CP_WAKEUP_FORCE_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        ULP_CP_WAKEUP_FORCE_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge 0: APB to RTC using sync"]
     #[inline(always)]
     pub fn apb2rtc_bridge_sel(&self) -> APB2RTC_BRIDGE_SEL_R {
-        APB2RTC_BRIDGE_SEL_R::new(((self.bits >> 22) & 0x01) != 0)
+        APB2RTC_BRIDGE_SEL_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - touch timer enable bit"]
     #[inline(always)]
     pub fn touch_slp_timer_en(&self) -> TOUCH_SLP_TIMER_EN_R {
-        TOUCH_SLP_TIMER_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        TOUCH_SLP_TIMER_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
     pub fn ulp_cp_slp_timer_en(&self) -> ULP_CP_SLP_TIMER_EN_R {
-        ULP_CP_SLP_TIMER_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        ULP_CP_SLP_TIMER_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 28 - SDIO active indication"]
     #[inline(always)]
     pub fn sdio_active_ind(&self) -> SDIO_ACTIVE_IND_R {
-        SDIO_ACTIVE_IND_R::new(((self.bits >> 28) & 0x01) != 0)
+        SDIO_ACTIVE_IND_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - sleep wakeup bit"]
     #[inline(always)]
     pub fn slp_wakeup(&self) -> SLP_WAKEUP_R {
-        SLP_WAKEUP_R::new(((self.bits >> 29) & 0x01) != 0)
+        SLP_WAKEUP_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - sleep reject bit"]
     #[inline(always)]
     pub fn slp_reject(&self) -> SLP_REJECT_R {
-        SLP_REJECT_R::new(((self.bits >> 30) & 0x01) != 0)
+        SLP_REJECT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
     pub fn sleep_en(&self) -> SLEEP_EN_R {
-        SLEEP_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        SLEEP_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

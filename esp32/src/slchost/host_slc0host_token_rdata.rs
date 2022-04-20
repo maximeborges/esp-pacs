@@ -82,7 +82,7 @@ impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn host_slc0_rx_pf_valid(&self) -> HOST_SLC0_RX_PF_VALID_R {
-        HOST_SLC0_RX_PF_VALID_R::new(((self.bits >> 12) & 0x01) != 0)
+        HOST_SLC0_RX_PF_VALID_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]

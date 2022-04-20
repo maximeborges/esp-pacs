@@ -67,7 +67,7 @@ impl<'a> APB_SARADC_THRES1_LOW_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> APB_SARADC_THRES0_LOW_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> APB_SARADC_THRES1_HIGH_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> APB_SARADC_THRES0_HIGH_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> APB_SARADC2_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> APB_SARADC1_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres1_low_int_ena(&self) -> APB_SARADC_THRES1_LOW_INT_ENA_R {
-        APB_SARADC_THRES1_LOW_INT_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
+        APB_SARADC_THRES1_LOW_INT_ENA_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres0_low_int_ena(&self) -> APB_SARADC_THRES0_LOW_INT_ENA_R {
-        APB_SARADC_THRES0_LOW_INT_ENA_R::new(((self.bits >> 27) & 0x01) != 0)
+        APB_SARADC_THRES0_LOW_INT_ENA_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres1_high_int_ena(&self) -> APB_SARADC_THRES1_HIGH_INT_ENA_R {
-        APB_SARADC_THRES1_HIGH_INT_ENA_R::new(((self.bits >> 28) & 0x01) != 0)
+        APB_SARADC_THRES1_HIGH_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres0_high_int_ena(&self) -> APB_SARADC_THRES0_HIGH_INT_ENA_R {
-        APB_SARADC_THRES0_HIGH_INT_ENA_R::new(((self.bits >> 29) & 0x01) != 0)
+        APB_SARADC_THRES0_HIGH_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc2_done_int_ena(&self) -> APB_SARADC2_DONE_INT_ENA_R {
-        APB_SARADC2_DONE_INT_ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+        APB_SARADC2_DONE_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc1_done_int_ena(&self) -> APB_SARADC1_DONE_INT_ENA_R {
-        APB_SARADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_SARADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

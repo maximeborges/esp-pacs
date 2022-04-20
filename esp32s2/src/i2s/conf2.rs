@@ -67,7 +67,7 @@ impl<'a> CAMERA_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LCD_TX_WRX2_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> LCD_TX_SDX2_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> DATA_ENABLE_TEST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DATA_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> LCD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> EXT_ADC_START_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> INTER_VALID_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CAM_SYNC_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CAM_CLK_LOOPBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> VSYNC_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -464,7 +464,7 @@ impl<'a> VSYNC_FILTER_THRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -472,62 +472,62 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
     pub fn camera_en(&self) -> CAMERA_EN_R {
-        CAMERA_EN_R::new((self.bits & 0x01) != 0)
+        CAMERA_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - LCD WR double for one datum."]
     #[inline(always)]
     pub fn lcd_tx_wrx2_en(&self) -> LCD_TX_WRX2_EN_R {
-        LCD_TX_WRX2_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        LCD_TX_WRX2_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
     #[inline(always)]
     pub fn lcd_tx_sdx2_en(&self) -> LCD_TX_SDX2_EN_R {
-        LCD_TX_SDX2_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        LCD_TX_SDX2_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - for debug camera mode enable"]
     #[inline(always)]
     pub fn data_enable_test_en(&self) -> DATA_ENABLE_TEST_EN_R {
-        DATA_ENABLE_TEST_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        DATA_ENABLE_TEST_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - for debug camera mode enable"]
     #[inline(always)]
     pub fn data_enable(&self) -> DATA_ENABLE_R {
-        DATA_ENABLE_R::new(((self.bits >> 4) & 0x01) != 0)
+        DATA_ENABLE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to enable LCD mode."]
     #[inline(always)]
     pub fn lcd_en(&self) -> LCD_EN_R {
-        LCD_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        LCD_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to enable the function that ADC mode is triggered by external signal."]
     #[inline(always)]
     pub fn ext_adc_start_en(&self) -> EXT_ADC_START_EN_R {
-        EXT_ADC_START_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        EXT_ADC_START_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
     #[inline(always)]
     pub fn inter_valid_en(&self) -> INTER_VALID_EN_R {
-        INTER_VALID_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        INTER_VALID_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to reset FIFO in camera mode."]
     #[inline(always)]
     pub fn cam_sync_fifo_reset(&self) -> CAM_SYNC_FIFO_RESET_R {
-        CAM_SYNC_FIFO_RESET_R::new(((self.bits >> 8) & 0x01) != 0)
+        CAM_SYNC_FIFO_RESET_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to loopback PCLK from I2S0I_WS_out."]
     #[inline(always)]
     pub fn cam_clk_loopback(&self) -> CAM_CLK_LOOPBACK_R {
-        CAM_CLK_LOOPBACK_R::new(((self.bits >> 9) & 0x01) != 0)
+        CAM_CLK_LOOPBACK_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set this bit to enable I2S VSYNC filter function."]
     #[inline(always)]
     pub fn vsync_filter_en(&self) -> VSYNC_FILTER_EN_R {
-        VSYNC_FILTER_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        VSYNC_FILTER_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:13 - Configure the I2S VSYNC filter threshold value."]
     #[inline(always)]
     pub fn vsync_filter_thres(&self) -> VSYNC_FILTER_THRES_R {
-        VSYNC_FILTER_THRES_R::new(((self.bits >> 11) & 0x07) as u8)
+        VSYNC_FILTER_THRES_R::new(((self.bits >> 11) & 7) as u8)
     }
 }
 impl W {

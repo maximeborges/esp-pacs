@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bits 0:2 - The bits are used to indicate the attribute of data from external memory when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
     #[inline(always)]
     pub fn pro_icache_tag_attr(&self) -> PRO_ICACHE_TAG_ATTR_R {
-        PRO_ICACHE_TAG_ATTR_R::new((self.bits & 0x07) as u8)
+        PRO_ICACHE_TAG_ATTR_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - The bits are used to indicate the attribute of CPU access icache when authentication fail. 0: invalidate, 1: execute-able, 2: read-able"]
     #[inline(always)]
     pub fn pro_icache_cpu_attr(&self) -> PRO_ICACHE_CPU_ATTR_R {
-        PRO_ICACHE_CPU_ATTR_R::new(((self.bits >> 3) & 0x07) as u8)
+        PRO_ICACHE_CPU_ATTR_R::new(((self.bits >> 3) & 7) as u8)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`]

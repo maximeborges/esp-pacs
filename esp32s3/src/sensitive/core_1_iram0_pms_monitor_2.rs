@@ -93,28 +93,28 @@ impl R {
     #[doc = "Bit 0 - recorded core1 iram0 pms monitor interrupt status."]
     #[inline(always)]
     pub fn core_1_iram0_pms_monitor_violate_intr(&self) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - recorded core1 iram0 wr status, only if loadstore is 1 have meaning, 1(store), 0(load)."]
     #[inline(always)]
     pub fn core_1_iram0_pms_monitor_violate_status_wr(
         &self,
     ) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - recorded core1 iram0 loadstore status, indicated the type of operation, 0(fetch), 1(load/store)."]
     #[inline(always)]
     pub fn core_1_iram0_pms_monitor_violate_status_loadstore(
         &self,
     ) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R::new(((self.bits >> 2) & 0x01) != 0)
+        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:4 - recorded core1 iram0 world status, 0x01 means world0, 0x10 means world1."]
     #[inline(always)]
     pub fn core_1_iram0_pms_monitor_violate_status_world(
         &self,
     ) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 3) & 0x03) as u8)
+        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bits 5:28 - recorded core1 iram0 address \\[25:2\\]
  status when core1 iram0 violated permission, the real address is 0x40000000+addr*4"]

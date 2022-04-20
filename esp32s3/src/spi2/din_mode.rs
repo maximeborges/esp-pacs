@@ -57,7 +57,7 @@ impl<'a> DIN0_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> DIN1_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> DIN2_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DIN3_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DIN4_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> DIN5_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> DIN6_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> DIN7_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -283,7 +283,7 @@ impl<'a> TIMING_HCLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -291,47 +291,47 @@ impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din0_mode(&self) -> DIN0_MODE_R {
-        DIN0_MODE_R::new((self.bits & 0x03) as u8)
+        DIN0_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din1_mode(&self) -> DIN1_MODE_R {
-        DIN1_MODE_R::new(((self.bits >> 2) & 0x03) as u8)
+        DIN1_MODE_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din2_mode(&self) -> DIN2_MODE_R {
-        DIN2_MODE_R::new(((self.bits >> 4) & 0x03) as u8)
+        DIN2_MODE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din3_mode(&self) -> DIN3_MODE_R {
-        DIN3_MODE_R::new(((self.bits >> 6) & 0x03) as u8)
+        DIN3_MODE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din4_mode(&self) -> DIN4_MODE_R {
-        DIN4_MODE_R::new(((self.bits >> 8) & 0x03) as u8)
+        DIN4_MODE_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din5_mode(&self) -> DIN5_MODE_R {
-        DIN5_MODE_R::new(((self.bits >> 10) & 0x03) as u8)
+        DIN5_MODE_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din6_mode(&self) -> DIN6_MODE_R {
-        DIN6_MODE_R::new(((self.bits >> 12) & 0x03) as u8)
+        DIN6_MODE_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn din7_mode(&self) -> DIN7_MODE_R {
-        DIN7_MODE_R::new(((self.bits >> 14) & 0x03) as u8)
+        DIN7_MODE_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bit 16 - 1:enable hclk in SPI input timing module. 0: disable it. Can be configured in CONF state."]
     #[inline(always)]
     pub fn timing_hclk_active(&self) -> TIMING_HCLK_ACTIVE_R {
-        TIMING_HCLK_ACTIVE_R::new(((self.bits >> 16) & 0x01) != 0)
+        TIMING_HCLK_ACTIVE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

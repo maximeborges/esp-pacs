@@ -94,7 +94,7 @@ impl<'a> SAR1_CLK_GATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SAR1_DATA_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SAR1_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl R {
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn sar1_clk_gated(&self) -> SAR1_CLK_GATED_R {
-        SAR1_CLK_GATED_R::new(((self.bits >> 18) & 0x01) != 0)
+        SAR1_CLK_GATED_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
@@ -218,12 +218,12 @@ impl R {
     #[doc = "Bit 28 - Invert SAR ADC1 data."]
     #[inline(always)]
     pub fn sar1_data_inv(&self) -> SAR1_DATA_INV_R {
-        SAR1_DATA_INV_R::new(((self.bits >> 28) & 0x01) != 0)
+        SAR1_DATA_INV_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Enable SAR ADC1 to send out interrupt."]
     #[inline(always)]
     pub fn sar1_int_en(&self) -> SAR1_INT_EN_R {
-        SAR1_INT_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        SAR1_INT_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

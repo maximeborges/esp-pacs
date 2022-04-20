@@ -57,7 +57,7 @@ impl<'a> CORE_0_WORLD_DRAM0_PIF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:1 - this field is used to read current world of Dram0 bus and PIF bus"]
     #[inline(always)]
     pub fn core_0_world_dram0_pif(&self) -> CORE_0_WORLD_DRAM0_PIF_R {
-        CORE_0_WORLD_DRAM0_PIF_R::new((self.bits & 0x03) as u8)
+        CORE_0_WORLD_DRAM0_PIF_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

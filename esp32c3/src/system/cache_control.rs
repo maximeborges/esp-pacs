@@ -67,7 +67,7 @@ impl<'a> ICACHE_CLK_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DCACHE_CLK_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> DCACHE_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - reg_icache_clk_on"]
     #[inline(always)]
     pub fn icache_clk_on(&self) -> ICACHE_CLK_ON_R {
-        ICACHE_CLK_ON_R::new((self.bits & 0x01) != 0)
+        ICACHE_CLK_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_icache_reset"]
     #[inline(always)]
     pub fn icache_reset(&self) -> ICACHE_RESET_R {
-        ICACHE_RESET_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_RESET_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_dcache_clk_on"]
     #[inline(always)]
     pub fn dcache_clk_on(&self) -> DCACHE_CLK_ON_R {
-        DCACHE_CLK_ON_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_CLK_ON_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_dcache_reset"]
     #[inline(always)]
     pub fn dcache_reset(&self) -> DCACHE_RESET_R {
-        DCACHE_RESET_R::new(((self.bits >> 3) & 0x01) != 0)
+        DCACHE_RESET_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

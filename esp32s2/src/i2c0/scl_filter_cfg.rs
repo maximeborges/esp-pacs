@@ -94,7 +94,7 @@ impl<'a> SCL_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 4 - This is the filter enable bit for SCL."]
     #[inline(always)]
     pub fn scl_filter_en(&self) -> SCL_FILTER_EN_R {
-        SCL_FILTER_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        SCL_FILTER_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

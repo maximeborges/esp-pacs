@@ -57,7 +57,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -227,37 +227,37 @@ impl R {
     #[doc = "Bits 0:1 - region_pms_constrain_world_0_area_0"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_0(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R::new((self.bits & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - region_pms_constrain_world_0_area_1"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_1(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R::new(((self.bits >> 2) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - region_pms_constrain_world_0_area_2"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_2(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R::new(((self.bits >> 4) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - region_pms_constrain_world_0_area_3"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_3(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R::new(((self.bits >> 6) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - region_pms_constrain_world_0_area_4"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_4(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R::new(((self.bits >> 8) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - region_pms_constrain_world_0_area_5"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_5(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R::new(((self.bits >> 10) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - region_pms_constrain_world_0_area_6"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_6(&self) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R {
-        REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R::new(((self.bits >> 12) & 0x03) as u8)
+        REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R::new(((self.bits >> 12) & 3) as u8)
     }
 }
 impl W {

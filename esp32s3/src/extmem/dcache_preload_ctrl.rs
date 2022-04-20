@@ -67,7 +67,7 @@ impl<'a> DCACHE_PRELOAD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -119,7 +119,7 @@ impl<'a> DCACHE_PRELOAD_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -127,17 +127,17 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
     pub fn dcache_preload_ena(&self) -> DCACHE_PRELOAD_ENA_R {
-        DCACHE_PRELOAD_ENA_R::new((self.bits & 0x01) != 0)
+        DCACHE_PRELOAD_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate preload operation is finished."]
     #[inline(always)]
     pub fn dcache_preload_done(&self) -> DCACHE_PRELOAD_DONE_R {
-        DCACHE_PRELOAD_DONE_R::new(((self.bits >> 1) & 0x01) != 0)
+        DCACHE_PRELOAD_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn dcache_preload_order(&self) -> DCACHE_PRELOAD_ORDER_R {
-        DCACHE_PRELOAD_ORDER_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_PRELOAD_ORDER_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

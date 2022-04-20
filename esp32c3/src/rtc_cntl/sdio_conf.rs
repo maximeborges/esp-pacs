@@ -84,7 +84,7 @@ impl<'a> SDIO_DTHDRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u32 & 0x03) << 9);
+        self.w.bits = (self.w.bits & !(3 << 9)) | ((value as u32 & 3) << 9);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> SDIO_DCAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 11)) | ((value as u32 & 0x03) << 11);
+        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> SDIO_INITI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -177,7 +177,7 @@ impl<'a> SDIO_EN_INITI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -204,7 +204,7 @@ impl<'a> SDIO_DCURLIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
         self.w
     }
 }
@@ -241,7 +241,7 @@ impl<'a> SDIO_MODECURLIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -278,7 +278,7 @@ impl<'a> SDIO_ENCURLIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -315,7 +315,7 @@ impl<'a> SDIO_REG_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -352,7 +352,7 @@ impl<'a> SDIO_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -389,7 +389,7 @@ impl<'a> SDIO_TIEH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -431,7 +431,7 @@ impl<'a> DREFL_SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 25)) | ((value as u32 & 0x03) << 25);
+        self.w.bits = (self.w.bits & !(3 << 25)) | ((value as u32 & 3) << 25);
         self.w
     }
 }
@@ -458,7 +458,7 @@ impl<'a> DREFM_SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -485,7 +485,7 @@ impl<'a> DREFH_SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -522,7 +522,7 @@ impl<'a> XPD_SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -535,78 +535,78 @@ impl R {
     #[doc = "Bits 9:10 - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current"]
     #[inline(always)]
     pub fn sdio_dthdrv(&self) -> SDIO_DTHDRV_R {
-        SDIO_DTHDRV_R::new(((self.bits >> 9) & 0x03) as u8)
+        SDIO_DTHDRV_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bits 11:12 - ability to prevent LDO from overshoot"]
     #[inline(always)]
     pub fn sdio_dcap(&self) -> SDIO_DCAP_R {
-        SDIO_DCAP_R::new(((self.bits >> 11) & 0x03) as u8)
+        SDIO_DCAP_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bits 13:14 - add resistor from ldo output to ground. 0: no res"]
     #[inline(always)]
     pub fn sdio_initi(&self) -> SDIO_INITI_R {
-        SDIO_INITI_R::new(((self.bits >> 13) & 0x03) as u8)
+        SDIO_INITI_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - 0 to set init\\[1:0\\]
 =0"]
     #[inline(always)]
     pub fn sdio_en_initi(&self) -> SDIO_EN_INITI_R {
-        SDIO_EN_INITI_R::new(((self.bits >> 15) & 0x01) != 0)
+        SDIO_EN_INITI_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:18 - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
     #[inline(always)]
     pub fn sdio_dcurlim(&self) -> SDIO_DCURLIM_R {
-        SDIO_DCURLIM_R::new(((self.bits >> 16) & 0x07) as u8)
+        SDIO_DCURLIM_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19 - select current limit mode"]
     #[inline(always)]
     pub fn sdio_modecurlim(&self) -> SDIO_MODECURLIM_R {
-        SDIO_MODECURLIM_R::new(((self.bits >> 19) & 0x01) != 0)
+        SDIO_MODECURLIM_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - enable current limit"]
     #[inline(always)]
     pub fn sdio_encurlim(&self) -> SDIO_ENCURLIM_R {
-        SDIO_ENCURLIM_R::new(((self.bits >> 20) & 0x01) != 0)
+        SDIO_ENCURLIM_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
     pub fn sdio_reg_pd_en(&self) -> SDIO_REG_PD_EN_R {
-        SDIO_REG_PD_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        SDIO_REG_PD_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG"]
     #[inline(always)]
     pub fn sdio_force(&self) -> SDIO_FORCE_R {
-        SDIO_FORCE_R::new(((self.bits >> 22) & 0x01) != 0)
+        SDIO_FORCE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn sdio_tieh(&self) -> SDIO_TIEH_R {
-        SDIO_TIEH_R::new(((self.bits >> 23) & 0x01) != 0)
+        SDIO_TIEH_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - read only register for REG1P8_READY"]
     #[inline(always)]
     pub fn _1p8_ready(&self) -> _1P8_READY_R {
-        _1P8_READY_R::new(((self.bits >> 24) & 0x01) != 0)
+        _1P8_READY_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefl_sdio(&self) -> DREFL_SDIO_R {
-        DREFL_SDIO_R::new(((self.bits >> 25) & 0x03) as u8)
+        DREFL_SDIO_R::new(((self.bits >> 25) & 3) as u8)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefm_sdio(&self) -> DREFM_SDIO_R {
-        DREFM_SDIO_R::new(((self.bits >> 27) & 0x03) as u8)
+        DREFM_SDIO_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefh_sdio(&self) -> DREFH_SDIO_R {
-        DREFH_SDIO_R::new(((self.bits >> 29) & 0x03) as u8)
+        DREFH_SDIO_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn xpd_sdio(&self) -> XPD_SDIO_R {
-        XPD_SDIO_R::new(((self.bits >> 31) & 0x01) != 0)
+        XPD_SDIO_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

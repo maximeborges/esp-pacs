@@ -111,7 +111,7 @@ impl<'a> TIMER1_PERIOD_UPMETHOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bits 24:25"]
     #[inline(always)]
     pub fn timer1_period_upmethod(&self) -> TIMER1_PERIOD_UPMETHOD_R {
-        TIMER1_PERIOD_UPMETHOD_R::new(((self.bits >> 24) & 0x03) as u8)
+        TIMER1_PERIOD_UPMETHOD_R::new(((self.bits >> 24) & 3) as u8)
     }
 }
 impl W {

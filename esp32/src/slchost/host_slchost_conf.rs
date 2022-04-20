@@ -202,7 +202,7 @@ impl<'a> HOST_SDIO20_INT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> HOST_SDIO_PAD_PULLUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -276,7 +276,7 @@ impl<'a> HOST_HSPEED_CON_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -309,17 +309,17 @@ impl R {
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn host_sdio20_int_delay(&self) -> HOST_SDIO20_INT_DELAY_R {
-        HOST_SDIO20_INT_DELAY_R::new(((self.bits >> 25) & 0x01) != 0)
+        HOST_SDIO20_INT_DELAY_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     pub fn host_sdio_pad_pullup(&self) -> HOST_SDIO_PAD_PULLUP_R {
-        HOST_SDIO_PAD_PULLUP_R::new(((self.bits >> 26) & 0x01) != 0)
+        HOST_SDIO_PAD_PULLUP_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     pub fn host_hspeed_con_en(&self) -> HOST_HSPEED_CON_EN_R {
-        HOST_HSPEED_CON_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        HOST_HSPEED_CON_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

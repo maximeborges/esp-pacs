@@ -67,7 +67,7 @@ impl<'a> CONSTANT_TIME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set this bit to 0 to enable the acceleration option of constant_time for modular exponentiation. Set to 1 to disable the acceleration (by default)."]
     #[inline(always)]
     pub fn constant_time(&self) -> CONSTANT_TIME_R {
-        CONSTANT_TIME_R::new((self.bits & 0x01) != 0)
+        CONSTANT_TIME_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

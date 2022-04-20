@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bits 0:2 - This register indicates the error type when DMA has received a packet with error. 3'b001: Checksum error in HCI packet. 3'b010: Sequence number error in HCI packet. 3'b011: CRC bit error in HCI packet. 3'b100: 0xc0 is found but received HCI packet is not end. 3'b101: 0xc0 is not found when receiving HCI packet is end. 3'b110: CRC check error."]
     #[inline(always)]
     pub fn rx_err_cause(&self) -> RX_ERR_CAUSE_R {
-        RX_ERR_CAUSE_R::new((self.bits & 0x07) as u8)
+        RX_ERR_CAUSE_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - UHCI decoder status."]
     #[inline(always)]
     pub fn decode_state(&self) -> DECODE_STATE_R {
-        DECODE_STATE_R::new(((self.bits >> 3) & 0x07) as u8)
+        DECODE_STATE_R::new(((self.bits >> 3) & 7) as u8)
     }
 }
 #[doc = "UHCI receive status\n\nThis register you can [`read`]

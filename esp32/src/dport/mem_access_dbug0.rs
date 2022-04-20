@@ -152,27 +152,27 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_rom_mpu_ad(&self) -> PRO_ROM_MPU_AD_R {
-        PRO_ROM_MPU_AD_R::new((self.bits & 0x01) != 0)
+        PRO_ROM_MPU_AD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pro_rom_ia(&self) -> PRO_ROM_IA_R {
-        PRO_ROM_IA_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_ROM_IA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn app_rom_mpu_ad(&self) -> APP_ROM_MPU_AD_R {
-        APP_ROM_MPU_AD_R::new(((self.bits >> 2) & 0x01) != 0)
+        APP_ROM_MPU_AD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn app_rom_ia(&self) -> APP_ROM_IA_R {
-        APP_ROM_IA_R::new(((self.bits >> 3) & 0x01) != 0)
+        APP_ROM_IA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn share_rom_mpu_ad(&self) -> SHARE_ROM_MPU_AD_R {
-        SHARE_ROM_MPU_AD_R::new(((self.bits >> 4) & 0x03) as u8)
+        SHARE_ROM_MPU_AD_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:9"]
     #[inline(always)]

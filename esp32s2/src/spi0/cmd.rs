@@ -94,7 +94,7 @@ impl<'a> USR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn usr(&self) -> USR_R {
-        USR_R::new(((self.bits >> 24) & 0x01) != 0)
+        USR_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

@@ -352,107 +352,107 @@ impl R {
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
     pub fn dis_rtc_ram_boot(&self) -> DIS_RTC_RAM_BOOT_R {
-        DIS_RTC_RAM_BOOT_R::new(((self.bits >> 7) & 0x01) != 0)
+        DIS_RTC_RAM_BOOT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to disable Icache."]
     #[inline(always)]
     pub fn dis_icache(&self) -> DIS_ICACHE_R {
-        DIS_ICACHE_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIS_ICACHE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to disable Dcache."]
     #[inline(always)]
     pub fn dis_dcache(&self) -> DIS_DCACHE_R {
-        DIS_DCACHE_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIS_DCACHE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Disables Icache when SoC is in Download mode."]
     #[inline(always)]
     pub fn dis_download_icache(&self) -> DIS_DOWNLOAD_ICACHE_R {
-        DIS_DOWNLOAD_ICACHE_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIS_DOWNLOAD_ICACHE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Disables Dcache when SoC is in Download mode."]
     #[inline(always)]
     pub fn dis_download_dcache(&self) -> DIS_DOWNLOAD_DCACHE_R {
-        DIS_DOWNLOAD_DCACHE_R::new(((self.bits >> 11) & 0x01) != 0)
+        DIS_DOWNLOAD_DCACHE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to disable the function that forces chip into download mode."]
     #[inline(always)]
     pub fn dis_force_download(&self) -> DIS_FORCE_DOWNLOAD_R {
-        DIS_FORCE_DOWNLOAD_R::new(((self.bits >> 12) & 0x01) != 0)
+        DIS_FORCE_DOWNLOAD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to disable USB OTG function."]
     #[inline(always)]
     pub fn dis_usb(&self) -> DIS_USB_R {
-        DIS_USB_R::new(((self.bits >> 13) & 0x01) != 0)
+        DIS_USB_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to disable the TWAI Controller function."]
     #[inline(always)]
     pub fn dis_can(&self) -> DIS_CAN_R {
-        DIS_CAN_R::new(((self.bits >> 14) & 0x01) != 0)
+        DIS_CAN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Disables capability to Remap RAM to ROM address space."]
     #[inline(always)]
     pub fn dis_boot_remap(&self) -> DIS_BOOT_REMAP_R {
-        DIS_BOOT_REMAP_R::new(((self.bits >> 15) & 0x01) != 0)
+        DIS_BOOT_REMAP_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Reserved (used for four backups method)."]
     #[inline(always)]
     pub fn rpt4_reserved5(&self) -> RPT4_RESERVED5_R {
-        RPT4_RESERVED5_R::new(((self.bits >> 16) & 0x01) != 0)
+        RPT4_RESERVED5_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Software disables JTAG. When software disabled, JTAG can be activated temporarily by HMAC peripheral."]
     #[inline(always)]
     pub fn soft_dis_jtag(&self) -> SOFT_DIS_JTAG_R {
-        SOFT_DIS_JTAG_R::new(((self.bits >> 17) & 0x01) != 0)
+        SOFT_DIS_JTAG_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Hardware disables JTAG permanently."]
     #[inline(always)]
     pub fn hard_dis_jtag(&self) -> HARD_DIS_JTAG_R {
-        HARD_DIS_JTAG_R::new(((self.bits >> 18) & 0x01) != 0)
+        HARD_DIS_JTAG_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Disables flash encryption when in download boot modes."]
     #[inline(always)]
     pub fn dis_download_manual_encrypt(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_R {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 19) & 0x01) != 0)
+        DIS_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bits 20:21 - Controls single-end input threshold vrefh, 1.76 V to 2 V with step of 80 mV, stored in eFuse."]
     #[inline(always)]
     pub fn usb_drefh(&self) -> USB_DREFH_R {
-        USB_DREFH_R::new(((self.bits >> 20) & 0x03) as u8)
+        USB_DREFH_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Controls single-end input threshold vrefl, 0.8 V to 1.04 V with step of 80 mV, stored in eFuse."]
     #[inline(always)]
     pub fn usb_drefl(&self) -> USB_DREFL_R {
-        USB_DREFL_R::new(((self.bits >> 22) & 0x03) as u8)
+        USB_DREFL_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - Set this bit to exchange USB D+ and D- pins."]
     #[inline(always)]
     pub fn usb_exchg_pins(&self) -> USB_EXCHG_PINS_R {
-        USB_EXCHG_PINS_R::new(((self.bits >> 24) & 0x01) != 0)
+        USB_EXCHG_PINS_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Set this bit to enable external USB PHY."]
     #[inline(always)]
     pub fn ext_phy_enable(&self) -> EXT_PHY_ENABLE_R {
-        EXT_PHY_ENABLE_R::new(((self.bits >> 25) & 0x01) != 0)
+        EXT_PHY_ENABLE_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - If set, forces USB BVALID to 1."]
     #[inline(always)]
     pub fn usb_force_nopersist(&self) -> USB_FORCE_NOPERSIST_R {
-        USB_FORCE_NOPERSIST_R::new(((self.bits >> 26) & 0x01) != 0)
+        USB_FORCE_NOPERSIST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - Reserved (used for four backups method)."]
     #[inline(always)]
     pub fn rpt4_reserved0(&self) -> RPT4_RESERVED0_R {
-        RPT4_RESERVED0_R::new(((self.bits >> 27) & 0x03) as u8)
+        RPT4_RESERVED0_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - SPI regulator switches current limit mode."]
     #[inline(always)]
     pub fn vdd_spi_modecurlim(&self) -> VDD_SPI_MODECURLIM_R {
-        VDD_SPI_MODECURLIM_R::new(((self.bits >> 29) & 0x01) != 0)
+        VDD_SPI_MODECURLIM_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - SPI regulator high voltage reference."]
     #[inline(always)]
     pub fn vdd_spi_drefh(&self) -> VDD_SPI_DREFH_R {
-        VDD_SPI_DREFH_R::new(((self.bits >> 30) & 0x03) as u8)
+        VDD_SPI_DREFH_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[doc = "Register 1 of BLOCK0.\n\nThis register you can [`read`]

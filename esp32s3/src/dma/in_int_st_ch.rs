@@ -167,52 +167,52 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the IN_DONE_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_done_ch_int_st(&self) -> IN_DONE_CH_INT_ST_R {
-        IN_DONE_CH_INT_ST_R::new((self.bits & 0x01) != 0)
+        IN_DONE_CH_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_suc_eof_ch_int_st(&self) -> IN_SUC_EOF_CH_INT_ST_R {
-        IN_SUC_EOF_CH_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        IN_SUC_EOF_CH_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_err_eof_ch_int_st(&self) -> IN_ERR_EOF_CH_INT_ST_R {
-        IN_ERR_EOF_CH_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        IN_ERR_EOF_CH_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_dscr_err_ch_int_st(&self) -> IN_DSCR_ERR_CH_INT_ST_R {
-        IN_DSCR_ERR_CH_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        IN_DSCR_ERR_CH_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_dscr_empty_ch_int_st(&self) -> IN_DSCR_EMPTY_CH_INT_ST_R {
-        IN_DSCR_EMPTY_CH_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        IN_DSCR_EMPTY_CH_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The raw interrupt status bit for the INFIFO_FULL_WM_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_full_wm_ch_int_st(&self) -> INFIFO_FULL_WM_CH_INT_ST_R {
-        INFIFO_FULL_WM_CH_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        INFIFO_FULL_WM_CH_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_ovf_l1_ch_int_st(&self) -> INFIFO_OVF_L1_CH_INT_ST_R {
-        INFIFO_OVF_L1_CH_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        INFIFO_OVF_L1_CH_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_udf_l1_ch_int_st(&self) -> INFIFO_UDF_L1_CH_INT_ST_R {
-        INFIFO_UDF_L1_CH_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        INFIFO_UDF_L1_CH_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The raw interrupt status bit for the INFIFO_OVF_L3_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_ovf_l3_ch_int_st(&self) -> INFIFO_OVF_L3_CH_INT_ST_R {
-        INFIFO_OVF_L3_CH_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        INFIFO_OVF_L3_CH_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The raw interrupt status bit for the INFIFO_UDF_L3_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_udf_l3_ch_int_st(&self) -> INFIFO_UDF_L3_CH_INT_ST_R {
-        INFIFO_UDF_L3_CH_INT_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        INFIFO_UDF_L3_CH_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt of Rx channel 0\n\nThis register you can [`read`]

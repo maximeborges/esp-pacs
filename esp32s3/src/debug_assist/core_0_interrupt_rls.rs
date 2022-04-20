@@ -67,7 +67,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_RD_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_WR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_RD_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_WR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CORE_0_AREA_PIF_0_RD_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CORE_0_AREA_PIF_0_WR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CORE_0_AREA_PIF_1_RD_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> CORE_0_AREA_PIF_1_WR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CORE_0_SP_SPILL_MIN_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CORE_0_SP_SPILL_MAX_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -482,62 +482,62 @@ impl R {
     #[doc = "Bit 0 - Core0 dram0 area0 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_rd_rls(&self) -> CORE_0_AREA_DRAM0_0_RD_RLS_R {
-        CORE_0_AREA_DRAM0_0_RD_RLS_R::new((self.bits & 0x01) != 0)
+        CORE_0_AREA_DRAM0_0_RD_RLS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Core0 dram0 area0 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_wr_rls(&self) -> CORE_0_AREA_DRAM0_0_WR_RLS_R {
-        CORE_0_AREA_DRAM0_0_WR_RLS_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_0_WR_RLS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Core0 dram0 area1 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_rd_rls(&self) -> CORE_0_AREA_DRAM0_1_RD_RLS_R {
-        CORE_0_AREA_DRAM0_1_RD_RLS_R::new(((self.bits >> 2) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_1_RD_RLS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Core0 dram0 area1 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_wr_rls(&self) -> CORE_0_AREA_DRAM0_1_WR_RLS_R {
-        CORE_0_AREA_DRAM0_1_WR_RLS_R::new(((self.bits >> 3) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_1_WR_RLS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Core0 PIF area0 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_pif_0_rd_rls(&self) -> CORE_0_AREA_PIF_0_RD_RLS_R {
-        CORE_0_AREA_PIF_0_RD_RLS_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE_0_AREA_PIF_0_RD_RLS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Core0 PIF area0 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_pif_0_wr_rls(&self) -> CORE_0_AREA_PIF_0_WR_RLS_R {
-        CORE_0_AREA_PIF_0_WR_RLS_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE_0_AREA_PIF_0_WR_RLS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Core0 PIF area1 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_pif_1_rd_rls(&self) -> CORE_0_AREA_PIF_1_RD_RLS_R {
-        CORE_0_AREA_PIF_1_RD_RLS_R::new(((self.bits >> 6) & 0x01) != 0)
+        CORE_0_AREA_PIF_1_RD_RLS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Core0 PIF area1 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_area_pif_1_wr_rls(&self) -> CORE_0_AREA_PIF_1_WR_RLS_R {
-        CORE_0_AREA_PIF_1_WR_RLS_R::new(((self.bits >> 7) & 0x01) != 0)
+        CORE_0_AREA_PIF_1_WR_RLS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Core0 stackpoint overflow monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_sp_spill_min_rls(&self) -> CORE_0_SP_SPILL_MIN_RLS_R {
-        CORE_0_SP_SPILL_MIN_RLS_R::new(((self.bits >> 8) & 0x01) != 0)
+        CORE_0_SP_SPILL_MIN_RLS_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Core0 stackpoint underflow monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_sp_spill_max_rls(&self) -> CORE_0_SP_SPILL_MAX_RLS_R {
-        CORE_0_SP_SPILL_MAX_RLS_R::new(((self.bits >> 9) & 0x01) != 0)
+        CORE_0_SP_SPILL_MAX_RLS_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - IBUS busy monitor interrupt enable"]
     #[inline(always)]
     pub fn core_0_iram0_exception_monitor_rls(&self) -> CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_R {
-        CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_R::new(((self.bits >> 10) & 0x01) != 0)
+        CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - DBUS busy monitor interrupt enbale"]
     #[inline(always)]
     pub fn core_0_dram0_exception_monitor_rls(&self) -> CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_R {
-        CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_R::new(((self.bits >> 11) & 0x01) != 0)
+        CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

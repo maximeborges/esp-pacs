@@ -67,7 +67,7 @@ impl<'a> USB_MEM_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> USB_MEM_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
     pub fn usb_mem_pd(&self) -> USB_MEM_PD_R {
-        USB_MEM_PD_R::new((self.bits & 0x01) != 0)
+        USB_MEM_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
     pub fn usb_mem_clk_en(&self) -> USB_MEM_CLK_EN_R {
-        USB_MEM_CLK_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        USB_MEM_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

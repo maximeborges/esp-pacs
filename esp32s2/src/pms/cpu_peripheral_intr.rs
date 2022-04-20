@@ -67,7 +67,7 @@ impl<'a> CPU_PERI_BYTE_ERROR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CPU_PERI_BYTE_ERROR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -127,17 +127,17 @@ impl R {
     #[doc = "Bit 0 - The clear signal for CPU peripheral access interrupt."]
     #[inline(always)]
     pub fn cpu_peri_byte_error_clr(&self) -> CPU_PERI_BYTE_ERROR_CLR_R {
-        CPU_PERI_BYTE_ERROR_CLR_R::new((self.bits & 0x01) != 0)
+        CPU_PERI_BYTE_ERROR_CLR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The enable signal for CPU peripheral access interrupt."]
     #[inline(always)]
     pub fn cpu_peri_byte_error_en(&self) -> CPU_PERI_BYTE_ERROR_EN_R {
-        CPU_PERI_BYTE_ERROR_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CPU_PERI_BYTE_ERROR_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - CPU peripheral access interrupt signal."]
     #[inline(always)]
     pub fn cpu_peri_byte_error_intr(&self) -> CPU_PERI_BYTE_ERROR_INTR_R {
-        CPU_PERI_BYTE_ERROR_INTR_R::new(((self.bits >> 2) & 0x01) != 0)
+        CPU_PERI_BYTE_ERROR_INTR_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

@@ -52,7 +52,7 @@ impl<'a> RTC_SW_CPU_INT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -74,7 +74,7 @@ impl<'a> RTC_SLP_REJECT_CAUSE_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> APB2RTC_BRIDGE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -163,7 +163,7 @@ impl<'a> SLP_WAKEUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -200,7 +200,7 @@ impl<'a> SLP_REJECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -237,7 +237,7 @@ impl<'a> SLEEP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -245,27 +245,27 @@ impl R {
     #[doc = "Bit 22 - 1: APB to RTC using bridge"]
     #[inline(always)]
     pub fn apb2rtc_bridge_sel(&self) -> APB2RTC_BRIDGE_SEL_R {
-        APB2RTC_BRIDGE_SEL_R::new(((self.bits >> 22) & 0x01) != 0)
+        APB2RTC_BRIDGE_SEL_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 28 - SDIO active indication"]
     #[inline(always)]
     pub fn sdio_active_ind(&self) -> SDIO_ACTIVE_IND_R {
-        SDIO_ACTIVE_IND_R::new(((self.bits >> 28) & 0x01) != 0)
+        SDIO_ACTIVE_IND_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - leep wakeup bit"]
     #[inline(always)]
     pub fn slp_wakeup(&self) -> SLP_WAKEUP_R {
-        SLP_WAKEUP_R::new(((self.bits >> 29) & 0x01) != 0)
+        SLP_WAKEUP_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - leep reject bit"]
     #[inline(always)]
     pub fn slp_reject(&self) -> SLP_REJECT_R {
-        SLP_REJECT_R::new(((self.bits >> 30) & 0x01) != 0)
+        SLP_REJECT_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
     pub fn sleep_en(&self) -> SLEEP_EN_R {
-        SLEEP_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        SLEEP_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

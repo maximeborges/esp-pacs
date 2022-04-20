@@ -273,78 +273,78 @@ impl R {
     #[doc = "Bits 0:1 - SPI regulator medium voltage reference."]
     #[inline(always)]
     pub fn vdd_spi_drefm(&self) -> VDD_SPI_DREFM_R {
-        VDD_SPI_DREFM_R::new((self.bits & 0x03) as u8)
+        VDD_SPI_DREFM_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - SPI regulator low voltage reference."]
     #[inline(always)]
     pub fn vdd_spi_drefl(&self) -> VDD_SPI_DREFL_R {
-        VDD_SPI_DREFL_R::new(((self.bits >> 2) & 0x03) as u8)
+        VDD_SPI_DREFL_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - If VDD_SPI_FORCE is 1, this value determines if the VDD_SPI regulator is powered on."]
     #[inline(always)]
     pub fn vdd_spi_xpd(&self) -> VDD_SPI_XPD_R {
-        VDD_SPI_XPD_R::new(((self.bits >> 4) & 0x01) != 0)
+        VDD_SPI_XPD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - If VDD_SPI_FORCE is 1, determines VDD_SPI voltage. 0: VDD_SPI connects to 1.8 V LDO. 1: VDD_SPI connects to VDD_RTC_IO."]
     #[inline(always)]
     pub fn vdd_spi_tieh(&self) -> VDD_SPI_TIEH_R {
-        VDD_SPI_TIEH_R::new(((self.bits >> 5) & 0x01) != 0)
+        VDD_SPI_TIEH_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to use XPD_VDD_PSI_REG and VDD_SPI_TIEH to configure VDD_SPI LDO."]
     #[inline(always)]
     pub fn vdd_spi_force(&self) -> VDD_SPI_FORCE_R {
-        VDD_SPI_FORCE_R::new(((self.bits >> 6) & 0x01) != 0)
+        VDD_SPI_FORCE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set SPI regulator to 0 to configure init\\[1:0\\]
 =0."]
     #[inline(always)]
     pub fn vdd_spi_en_init(&self) -> VDD_SPI_EN_INIT_R {
-        VDD_SPI_EN_INIT_R::new(((self.bits >> 7) & 0x01) != 0)
+        VDD_SPI_EN_INIT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set SPI regulator to 1 to enable output current limit."]
     #[inline(always)]
     pub fn vdd_spi_encurlim(&self) -> VDD_SPI_ENCURLIM_R {
-        VDD_SPI_ENCURLIM_R::new(((self.bits >> 8) & 0x01) != 0)
+        VDD_SPI_ENCURLIM_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:11 - Tunes the current limit threshold of SPI regulator when tieh=0, about 800 mA/(8+d)."]
     #[inline(always)]
     pub fn vdd_spi_dcurlim(&self) -> VDD_SPI_DCURLIM_R {
-        VDD_SPI_DCURLIM_R::new(((self.bits >> 9) & 0x07) as u8)
+        VDD_SPI_DCURLIM_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:13 - Adds resistor from LDO output to ground. 0: no resistance. 1: 6 K. 2: 4 K. 3: 2 K."]
     #[inline(always)]
     pub fn vdd_spi_init(&self) -> VDD_SPI_INIT_R {
-        VDD_SPI_INIT_R::new(((self.bits >> 12) & 0x03) as u8)
+        VDD_SPI_INIT_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Prevents SPI regulator from overshoot."]
     #[inline(always)]
     pub fn vdd_spi_dcap(&self) -> VDD_SPI_DCAP_R {
-        VDD_SPI_DCAP_R::new(((self.bits >> 14) & 0x03) as u8)
+        VDD_SPI_DCAP_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Selects RTC watchdog timeout threshold at startup. 0: 40,000 slow clock cycles. 1: 80,000 slow clock cycles. 2: 160,000 slow clock cycles. 3: 320,000 slow clock cycles."]
     #[inline(always)]
     pub fn wdt_delay_sel(&self) -> WDT_DELAY_SEL_R {
-        WDT_DELAY_SEL_R::new(((self.bits >> 16) & 0x03) as u8)
+        WDT_DELAY_SEL_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:20 - Enables encryption and decryption, when an SPI boot mode is set. Feature is enabled 1 or 3 bits are set in the eFuse, disabled otherwise."]
     #[inline(always)]
     pub fn spi_boot_crypt_cnt(&self) -> SPI_BOOT_CRYPT_CNT_R {
-        SPI_BOOT_CRYPT_CNT_R::new(((self.bits >> 18) & 0x07) as u8)
+        SPI_BOOT_CRYPT_CNT_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bit 21 - If set, revokes use of secure boot key digest 0."]
     #[inline(always)]
     pub fn secure_boot_key_revoke0(&self) -> SECURE_BOOT_KEY_REVOKE0_R {
-        SECURE_BOOT_KEY_REVOKE0_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE0_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - If set, revokes use of secure boot key digest 1."]
     #[inline(always)]
     pub fn secure_boot_key_revoke1(&self) -> SECURE_BOOT_KEY_REVOKE1_R {
-        SECURE_BOOT_KEY_REVOKE1_R::new(((self.bits >> 22) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE1_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - If set, revokes use of secure boot key digest 2."]
     #[inline(always)]
     pub fn secure_boot_key_revoke2(&self) -> SECURE_BOOT_KEY_REVOKE2_R {
-        SECURE_BOOT_KEY_REVOKE2_R::new(((self.bits >> 23) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE2_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:27 - Purpose of KEY0. Refer to Table Key Purpose Values."]
     #[inline(always)]

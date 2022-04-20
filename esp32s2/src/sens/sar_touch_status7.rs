@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 29:31 - Touch pad 7 debounce value."]
     #[inline(always)]
     pub fn touch_pad7_debounce(&self) -> TOUCH_PAD7_DEBOUNCE_R {
-        TOUCH_PAD7_DEBOUNCE_R::new(((self.bits >> 29) & 0x07) as u8)
+        TOUCH_PAD7_DEBOUNCE_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
 #[doc = "Touch pad 7 status\n\nThis register you can [`read`]

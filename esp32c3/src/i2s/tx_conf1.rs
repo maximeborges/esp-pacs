@@ -204,7 +204,7 @@ impl<'a> TX_MSB_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -241,7 +241,7 @@ impl<'a> TX_BCK_NO_DLY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -275,12 +275,12 @@ impl R {
     #[doc = "Bit 29 - Set this bit to enable transmitter in Phillips standard mode"]
     #[inline(always)]
     pub fn tx_msb_shift(&self) -> TX_MSB_SHIFT_R {
-        TX_MSB_SHIFT_R::new(((self.bits >> 29) & 0x01) != 0)
+        TX_MSB_SHIFT_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - 1: BCK is not delayed to generate pos/neg edge in master mode. 0: BCK is delayed to generate pos/neg edge in master mode."]
     #[inline(always)]
     pub fn tx_bck_no_dly(&self) -> TX_BCK_NO_DLY_R {
-        TX_BCK_NO_DLY_R::new(((self.bits >> 30) & 0x01) != 0)
+        TX_BCK_NO_DLY_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

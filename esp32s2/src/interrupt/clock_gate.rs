@@ -67,7 +67,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_NMI_MASK_HW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new((self.bits & 0x01) != 0)
+        CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This bit is used to disable all NMI interrupt signals to CPU."]
     #[inline(always)]
     pub fn pro_nmi_mask_hw(&self) -> PRO_NMI_MASK_HW_R {
-        PRO_NMI_MASK_HW_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_NMI_MASK_HW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

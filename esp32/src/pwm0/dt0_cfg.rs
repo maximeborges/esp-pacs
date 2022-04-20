@@ -121,7 +121,7 @@ impl<'a> DT0_DEB_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> DT0_A_OUTSWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> DT0_B_OUTSWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> DT0_RED_INSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> DT0_FED_INSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> DT0_RED_OUTINVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> DT0_FED_OUTINVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> DT0_A_OUTBYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> DT0_B_OUTBYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> DT0_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -472,52 +472,52 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn dt0_deb_mode(&self) -> DT0_DEB_MODE_R {
-        DT0_DEB_MODE_R::new(((self.bits >> 8) & 0x01) != 0)
+        DT0_DEB_MODE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn dt0_a_outswap(&self) -> DT0_A_OUTSWAP_R {
-        DT0_A_OUTSWAP_R::new(((self.bits >> 9) & 0x01) != 0)
+        DT0_A_OUTSWAP_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn dt0_b_outswap(&self) -> DT0_B_OUTSWAP_R {
-        DT0_B_OUTSWAP_R::new(((self.bits >> 10) & 0x01) != 0)
+        DT0_B_OUTSWAP_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn dt0_red_insel(&self) -> DT0_RED_INSEL_R {
-        DT0_RED_INSEL_R::new(((self.bits >> 11) & 0x01) != 0)
+        DT0_RED_INSEL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn dt0_fed_insel(&self) -> DT0_FED_INSEL_R {
-        DT0_FED_INSEL_R::new(((self.bits >> 12) & 0x01) != 0)
+        DT0_FED_INSEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn dt0_red_outinvert(&self) -> DT0_RED_OUTINVERT_R {
-        DT0_RED_OUTINVERT_R::new(((self.bits >> 13) & 0x01) != 0)
+        DT0_RED_OUTINVERT_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn dt0_fed_outinvert(&self) -> DT0_FED_OUTINVERT_R {
-        DT0_FED_OUTINVERT_R::new(((self.bits >> 14) & 0x01) != 0)
+        DT0_FED_OUTINVERT_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn dt0_a_outbypass(&self) -> DT0_A_OUTBYPASS_R {
-        DT0_A_OUTBYPASS_R::new(((self.bits >> 15) & 0x01) != 0)
+        DT0_A_OUTBYPASS_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn dt0_b_outbypass(&self) -> DT0_B_OUTBYPASS_R {
-        DT0_B_OUTBYPASS_R::new(((self.bits >> 16) & 0x01) != 0)
+        DT0_B_OUTBYPASS_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn dt0_clk_sel(&self) -> DT0_CLK_SEL_R {
-        DT0_CLK_SEL_R::new(((self.bits >> 17) & 0x01) != 0)
+        DT0_CLK_SEL_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {

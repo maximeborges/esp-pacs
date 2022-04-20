@@ -67,7 +67,7 @@ impl<'a> TIMER_SYS_STALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TIMER_XTL_OFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TIMER_SYS_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -163,7 +163,7 @@ impl<'a> TIME_UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -171,17 +171,17 @@ impl R {
     #[doc = "Bit 27 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     pub fn timer_sys_stall(&self) -> TIMER_SYS_STALL_R {
-        TIMER_SYS_STALL_R::new(((self.bits >> 27) & 0x01) != 0)
+        TIMER_SYS_STALL_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     pub fn timer_xtl_off(&self) -> TIMER_XTL_OFF_R {
-        TIMER_XTL_OFF_R::new(((self.bits >> 28) & 0x01) != 0)
+        TIMER_XTL_OFF_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
     pub fn timer_sys_rst(&self) -> TIMER_SYS_RST_R {
-        TIMER_SYS_RST_R::new(((self.bits >> 29) & 0x01) != 0)
+        TIMER_SYS_RST_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

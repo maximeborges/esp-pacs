@@ -137,7 +137,7 @@ impl R {
     #[doc = "Bit 30 - indicate I2C done"]
     #[inline(always)]
     pub fn i2c_done(&self) -> I2C_DONE_R {
-        I2C_DONE_R::new(((self.bits >> 30) & 0x01) != 0)
+        I2C_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

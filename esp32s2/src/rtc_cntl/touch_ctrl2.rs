@@ -57,7 +57,7 @@ impl<'a> TOUCH_DRANGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TOUCH_DREFL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> TOUCH_DREFH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> TOUCH_XPD_BIAS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> TOUCH_REFC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> TOUCH_DBIAS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -249,7 +249,7 @@ impl<'a> TOUCH_SLP_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> TOUCH_START_FSM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> TOUCH_START_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> TOUCH_START_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -414,7 +414,7 @@ impl<'a> TOUCH_SLP_CYC_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 25)) | ((value as u32 & 0x03) << 25);
+        self.w.bits = (self.w.bits & !(3 << 25)) | ((value as u32 & 3) << 25);
         self.w
     }
 }
@@ -441,7 +441,7 @@ impl<'a> TOUCH_TIMER_FORCE_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -478,7 +478,7 @@ impl<'a> TOUCH_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -515,7 +515,7 @@ impl<'a> TOUCH_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -552,7 +552,7 @@ impl<'a> TOUCH_CLKGATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -560,52 +560,52 @@ impl R {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
     pub fn touch_drange(&self) -> TOUCH_DRANGE_R {
-        TOUCH_DRANGE_R::new(((self.bits >> 2) & 0x03) as u8)
+        TOUCH_DRANGE_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
     #[inline(always)]
     pub fn touch_drefl(&self) -> TOUCH_DREFL_R {
-        TOUCH_DREFL_R::new(((self.bits >> 4) & 0x03) as u8)
+        TOUCH_DREFL_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
     #[inline(always)]
     pub fn touch_drefh(&self) -> TOUCH_DREFH_R {
-        TOUCH_DREFH_R::new(((self.bits >> 6) & 0x03) as u8)
+        TOUCH_DREFH_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - TOUCH BIAS power switch."]
     #[inline(always)]
     pub fn touch_xpd_bias(&self) -> TOUCH_XPD_BIAS_R {
-        TOUCH_XPD_BIAS_R::new(((self.bits >> 8) & 0x01) != 0)
+        TOUCH_XPD_BIAS_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:11 - Touch pad 0 reference capacitance."]
     #[inline(always)]
     pub fn touch_refc(&self) -> TOUCH_REFC_R {
-        TOUCH_REFC_R::new(((self.bits >> 9) & 0x07) as u8)
+        TOUCH_REFC_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bit 12 - 0: Use bandgap bias. 1: Use self bias."]
     #[inline(always)]
     pub fn touch_dbias(&self) -> TOUCH_DBIAS_R {
-        TOUCH_DBIAS_R::new(((self.bits >> 12) & 0x01) != 0)
+        TOUCH_DBIAS_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Touch timer enable bit."]
     #[inline(always)]
     pub fn touch_slp_timer_en(&self) -> TOUCH_SLP_TIMER_EN_R {
-        TOUCH_SLP_TIMER_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        TOUCH_SLP_TIMER_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
     #[inline(always)]
     pub fn touch_start_fsm_en(&self) -> TOUCH_START_FSM_EN_R {
-        TOUCH_START_FSM_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        TOUCH_START_FSM_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
     #[inline(always)]
     pub fn touch_start_en(&self) -> TOUCH_START_EN_R {
-        TOUCH_START_EN_R::new(((self.bits >> 15) & 0x01) != 0)
+        TOUCH_START_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
     #[inline(always)]
     pub fn touch_start_force(&self) -> TOUCH_START_FORCE_R {
-        TOUCH_START_FORCE_R::new(((self.bits >> 16) & 0x01) != 0)
+        TOUCH_START_FORCE_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:24 - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
     #[inline(always)]
@@ -615,27 +615,27 @@ impl R {
     #[doc = "Bits 25:26 - When a touch pad is active, sleep cycle could be divided by this number."]
     #[inline(always)]
     pub fn touch_slp_cyc_div(&self) -> TOUCH_SLP_CYC_DIV_R {
-        TOUCH_SLP_CYC_DIV_R::new(((self.bits >> 25) & 0x03) as u8)
+        TOUCH_SLP_CYC_DIV_R::new(((self.bits >> 25) & 3) as u8)
     }
     #[doc = "Bits 27:28 - Force touch timer done."]
     #[inline(always)]
     pub fn touch_timer_force_done(&self) -> TOUCH_TIMER_FORCE_DONE_R {
-        TOUCH_TIMER_FORCE_DONE_R::new(((self.bits >> 27) & 0x03) as u8)
+        TOUCH_TIMER_FORCE_DONE_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - Reset TOUCH FSM via software."]
     #[inline(always)]
     pub fn touch_reset(&self) -> TOUCH_RESET_R {
-        TOUCH_RESET_R::new(((self.bits >> 29) & 0x01) != 0)
+        TOUCH_RESET_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Touch clock force on."]
     #[inline(always)]
     pub fn touch_clk_fo(&self) -> TOUCH_CLK_FO_R {
-        TOUCH_CLK_FO_R::new(((self.bits >> 30) & 0x01) != 0)
+        TOUCH_CLK_FO_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Touch clock enable bit."]
     #[inline(always)]
     pub fn touch_clkgate_en(&self) -> TOUCH_CLKGATE_EN_R {
-        TOUCH_CLKGATE_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        TOUCH_CLKGATE_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

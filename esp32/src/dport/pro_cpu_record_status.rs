@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_cpu_recording(&self) -> PRO_CPU_RECORDING_R {
-        PRO_CPU_RECORDING_R::new((self.bits & 0x01) != 0)
+        PRO_CPU_RECORDING_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

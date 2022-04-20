@@ -148,7 +148,7 @@ impl<'a> DUTY_INC_LSCH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> DUTY_START_LSCH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -208,12 +208,12 @@ impl R {
     #[doc = "Bit 30 - This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel6."]
     #[inline(always)]
     pub fn duty_inc_lsch0(&self) -> DUTY_INC_LSCH0_R {
-        DUTY_INC_LSCH0_R::new(((self.bits >> 30) & 0x01) != 0)
+        DUTY_INC_LSCH0_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware."]
     #[inline(always)]
     pub fn duty_start_lsch0(&self) -> DUTY_START_LSCH0_R {
-        DUTY_START_LSCH0_R::new(((self.bits >> 31) & 0x01) != 0)
+        DUTY_START_LSCH0_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

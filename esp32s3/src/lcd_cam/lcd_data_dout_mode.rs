@@ -57,7 +57,7 @@ impl<'a> DOUT0_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> DOUT1_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> DOUT2_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DOUT3_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DOUT4_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> DOUT5_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> DOUT6_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> DOUT7_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> DOUT8_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -300,7 +300,7 @@ impl<'a> DOUT9_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -327,7 +327,7 @@ impl<'a> DOUT10_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -354,7 +354,7 @@ impl<'a> DOUT11_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -381,7 +381,7 @@ impl<'a> DOUT12_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -408,7 +408,7 @@ impl<'a> DOUT13_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -435,7 +435,7 @@ impl<'a> DOUT14_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -462,7 +462,7 @@ impl<'a> DOUT15_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -470,82 +470,82 @@ impl R {
     #[doc = "Bits 0:1 - The output data bit 0 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout0_mode(&self) -> DOUT0_MODE_R {
-        DOUT0_MODE_R::new((self.bits & 0x03) as u8)
+        DOUT0_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - The output data bit 2 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout1_mode(&self) -> DOUT1_MODE_R {
-        DOUT1_MODE_R::new(((self.bits >> 2) & 0x03) as u8)
+        DOUT1_MODE_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - The output data bit 4 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout2_mode(&self) -> DOUT2_MODE_R {
-        DOUT2_MODE_R::new(((self.bits >> 4) & 0x03) as u8)
+        DOUT2_MODE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - The output data bit 6 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout3_mode(&self) -> DOUT3_MODE_R {
-        DOUT3_MODE_R::new(((self.bits >> 6) & 0x03) as u8)
+        DOUT3_MODE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - The output data bit 8 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout4_mode(&self) -> DOUT4_MODE_R {
-        DOUT4_MODE_R::new(((self.bits >> 8) & 0x03) as u8)
+        DOUT4_MODE_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - The output data bit 10 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout5_mode(&self) -> DOUT5_MODE_R {
-        DOUT5_MODE_R::new(((self.bits >> 10) & 0x03) as u8)
+        DOUT5_MODE_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - The output data bit 12 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout6_mode(&self) -> DOUT6_MODE_R {
-        DOUT6_MODE_R::new(((self.bits >> 12) & 0x03) as u8)
+        DOUT6_MODE_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - The output data bit 14 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout7_mode(&self) -> DOUT7_MODE_R {
-        DOUT7_MODE_R::new(((self.bits >> 14) & 0x03) as u8)
+        DOUT7_MODE_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - The output data bit 16 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout8_mode(&self) -> DOUT8_MODE_R {
-        DOUT8_MODE_R::new(((self.bits >> 16) & 0x03) as u8)
+        DOUT8_MODE_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - The output data bit 18 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout9_mode(&self) -> DOUT9_MODE_R {
-        DOUT9_MODE_R::new(((self.bits >> 18) & 0x03) as u8)
+        DOUT9_MODE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - The output data bit 20 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout10_mode(&self) -> DOUT10_MODE_R {
-        DOUT10_MODE_R::new(((self.bits >> 20) & 0x03) as u8)
+        DOUT10_MODE_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - The output data bit 22 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout11_mode(&self) -> DOUT11_MODE_R {
-        DOUT11_MODE_R::new(((self.bits >> 22) & 0x03) as u8)
+        DOUT11_MODE_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - The output data bit 24 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout12_mode(&self) -> DOUT12_MODE_R {
-        DOUT12_MODE_R::new(((self.bits >> 24) & 0x03) as u8)
+        DOUT12_MODE_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - The output data bit 26 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout13_mode(&self) -> DOUT13_MODE_R {
-        DOUT13_MODE_R::new(((self.bits >> 26) & 0x03) as u8)
+        DOUT13_MODE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - The output data bit 28 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout14_mode(&self) -> DOUT14_MODE_R {
-        DOUT14_MODE_R::new(((self.bits >> 28) & 0x03) as u8)
+        DOUT14_MODE_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - The output data bit 30 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn dout15_mode(&self) -> DOUT15_MODE_R {
-        DOUT15_MODE_R::new(((self.bits >> 30) & 0x03) as u8)
+        DOUT15_MODE_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

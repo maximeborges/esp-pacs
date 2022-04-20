@@ -92,35 +92,35 @@ impl R {
     #[doc = "Bit 0 - Record core1 illegal access interrupt state."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_intr(&self) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_INTR_R {
-        CORE_1_PIF_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_1_PIF_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Record hport information when core1 initiate illegal access."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_status_hport_0(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
-        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:4 - Record access type when core1 initate illegal access."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_status_hsize(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 2) & 0x07) as u8)
+        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 2) & 7) as u8)
     }
     #[doc = "Bit 5 - Record access direction when core1 initiate illegal access."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_status_hwrite(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Record world information when core1 initiate illegal access."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_status_hworld(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
-        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 6) & 0x03) as u8)
+        CORE_1_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
 #[doc = "core1 permission report register 2.\n\nThis register you can [`read`]

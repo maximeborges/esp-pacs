@@ -105,7 +105,7 @@ impl R {
     #[doc = "Bit 31 - RTC I2C transmission is done."]
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
-        DONE_R::new(((self.bits >> 31) & 0x01) != 0)
+        DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

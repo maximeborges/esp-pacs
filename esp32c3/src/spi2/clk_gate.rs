@@ -67,7 +67,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MST_CLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MST_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new((self.bits & 0x01) != 0)
+        CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to power on the SPI module clock."]
     #[inline(always)]
     pub fn mst_clk_active(&self) -> MST_CLK_ACTIVE_R {
-        MST_CLK_ACTIVE_R::new(((self.bits >> 1) & 0x01) != 0)
+        MST_CLK_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
     #[inline(always)]
     pub fn mst_clk_sel(&self) -> MST_CLK_SEL_R {
-        MST_CLK_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        MST_CLK_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

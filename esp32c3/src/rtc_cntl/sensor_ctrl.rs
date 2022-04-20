@@ -57,7 +57,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 27)) | ((value as u32 & 0x07) << 27);
+        self.w.bits = (self.w.bits & !(7 << 27)) | ((value as u32 & 7) << 27);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> FORCE_XPD_SAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&self) -> SAR2_PWDET_CCT_R {
-        SAR2_PWDET_CCT_R::new(((self.bits >> 27) & 0x07) as u8)
+        SAR2_PWDET_CCT_R::new(((self.bits >> 27) & 7) as u8)
     }
     #[doc = "Bits 30:31 - force power up SAR"]
     #[inline(always)]
     pub fn force_xpd_sar(&self) -> FORCE_XPD_SAR_R {
-        FORCE_XPD_SAR_R::new(((self.bits >> 30) & 0x03) as u8)
+        FORCE_XPD_SAR_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

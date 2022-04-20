@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
     pub fn cnt_thr_event_u0_int_st(&self) -> CNT_THR_EVENT_U0_INT_ST_R {
-        CNT_THR_EVENT_U0_INT_ST_R::new((self.bits & 0x01) != 0)
+        CNT_THR_EVENT_U0_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
     pub fn cnt_thr_event_u1_int_st(&self) -> CNT_THR_EVENT_U1_INT_ST_R {
-        CNT_THR_EVENT_U1_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        CNT_THR_EVENT_U1_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
     pub fn cnt_thr_event_u2_int_st(&self) -> CNT_THR_EVENT_U2_INT_ST_R {
-        CNT_THR_EVENT_U2_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        CNT_THR_EVENT_U2_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
     pub fn cnt_thr_event_u3_int_st(&self) -> CNT_THR_EVENT_U3_INT_ST_R {
-        CNT_THR_EVENT_U3_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        CNT_THR_EVENT_U3_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "Interrupt status register\n\nThis register you can [`read`]

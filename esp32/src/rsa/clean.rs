@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - This bit will read 1 once the memory initialization is completed."]
     #[inline(always)]
     pub fn clean(&self) -> CLEAN_R {
-        CLEAN_R::new((self.bits & 0x01) != 0)
+        CLEAN_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

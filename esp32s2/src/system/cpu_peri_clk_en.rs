@@ -67,7 +67,7 @@ impl<'a> CLK_EN_DEDICATED_GPIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 7 - Set this bit to enable clock of DEDICATED GPIO module."]
     #[inline(always)]
     pub fn clk_en_dedicated_gpio(&self) -> CLK_EN_DEDICATED_GPIO_R {
-        CLK_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 0x01) != 0)
+        CLK_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

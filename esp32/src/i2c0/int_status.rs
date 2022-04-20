@@ -212,67 +212,67 @@ impl R {
     #[doc = "Bit 0 - The masked interrupt status for rxfifo_full_int interrupt."]
     #[inline(always)]
     pub fn rxfifo_full_int_st(&self) -> RXFIFO_FULL_INT_ST_R {
-        RXFIFO_FULL_INT_ST_R::new((self.bits & 0x01) != 0)
+        RXFIFO_FULL_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status for txfifo_empty_int interrupt."]
     #[inline(always)]
     pub fn txfifo_empty_int_st(&self) -> TXFIFO_EMPTY_INT_ST_R {
-        TXFIFO_EMPTY_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        TXFIFO_EMPTY_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status for rxfifo_ovf_int interrupt."]
     #[inline(always)]
     pub fn rxfifo_ovf_int_st(&self) -> RXFIFO_OVF_INT_ST_R {
-        RXFIFO_OVF_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXFIFO_OVF_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The masked interrupt status for end_detect_int interrupt."]
     #[inline(always)]
     pub fn end_detect_int_st(&self) -> END_DETECT_INT_ST_R {
-        END_DETECT_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        END_DETECT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The masked interrupt status for slave_tran_comp_int interrupt."]
     #[inline(always)]
     pub fn slave_tran_comp_int_st(&self) -> SLAVE_TRAN_COMP_INT_ST_R {
-        SLAVE_TRAN_COMP_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        SLAVE_TRAN_COMP_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The masked interrupt status for arbitration_lost_int interrupt."]
     #[inline(always)]
     pub fn arbitration_lost_int_st(&self) -> ARBITRATION_LOST_INT_ST_R {
-        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The masked interrupt status for master_tran_comp_int interrupt."]
     #[inline(always)]
     pub fn master_tran_comp_int_st(&self) -> MASTER_TRAN_COMP_INT_ST_R {
-        MASTER_TRAN_COMP_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        MASTER_TRAN_COMP_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The masked interrupt status for trans_complete_int interrupt."]
     #[inline(always)]
     pub fn trans_complete_int_st(&self) -> TRANS_COMPLETE_INT_ST_R {
-        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The masked interrupt status for time_out_int interrupt."]
     #[inline(always)]
     pub fn time_out_int_st(&self) -> TIME_OUT_INT_ST_R {
-        TIME_OUT_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        TIME_OUT_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The masked interrupt status for trans_start_int interrupt."]
     #[inline(always)]
     pub fn trans_start_int_st(&self) -> TRANS_START_INT_ST_R {
-        TRANS_START_INT_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        TRANS_START_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The masked interrupt status for ack_err_int interrupt."]
     #[inline(always)]
     pub fn ack_err_int_st(&self) -> ACK_ERR_INT_ST_R {
-        ACK_ERR_INT_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        ACK_ERR_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The masked interrupt status for rx_rec_full_int interrupt."]
     #[inline(always)]
     pub fn rx_rec_full_int_st(&self) -> RX_REC_FULL_INT_ST_R {
-        RX_REC_FULL_INT_ST_R::new(((self.bits >> 11) & 0x01) != 0)
+        RX_REC_FULL_INT_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The masked interrupt status for tx_send_empty_int interrupt."]
     #[inline(always)]
     pub fn tx_send_empty_int_st(&self) -> TX_SEND_EMPTY_INT_ST_R {
-        TX_SEND_EMPTY_INT_ST_R::new(((self.bits >> 12) & 0x01) != 0)
+        TX_SEND_EMPTY_INT_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

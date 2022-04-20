@@ -94,7 +94,7 @@ impl<'a> WDT_CHIP_RESET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> WDT_PAUSE_IN_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> WDT_APPCPU_RESET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> WDT_PROCPU_RESET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> WDT_FLASHBOOT_MOD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> WDT_SYS_RESET_LENGTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u32 & 0x07) << 13);
+        self.w.bits = (self.w.bits & !(7 << 13)) | ((value as u32 & 7) << 13);
         self.w
     }
 }
@@ -296,7 +296,7 @@ impl<'a> WDT_CPU_RESET_LENGTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> WDT_STG3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 19)) | ((value as u32 & 0x07) << 19);
+        self.w.bits = (self.w.bits & !(7 << 19)) | ((value as u32 & 7) << 19);
         self.w
     }
 }
@@ -350,7 +350,7 @@ impl<'a> WDT_STG2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 22)) | ((value as u32 & 0x07) << 22);
+        self.w.bits = (self.w.bits & !(7 << 22)) | ((value as u32 & 7) << 22);
         self.w
     }
 }
@@ -377,7 +377,7 @@ impl<'a> WDT_STG1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -404,7 +404,7 @@ impl<'a> WDT_STG0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -441,7 +441,7 @@ impl<'a> WDT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -454,62 +454,62 @@ impl R {
     #[doc = "Bit 8 - wdt reset whole chip enable"]
     #[inline(always)]
     pub fn wdt_chip_reset_en(&self) -> WDT_CHIP_RESET_EN_R {
-        WDT_CHIP_RESET_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        WDT_CHIP_RESET_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to pause the watchdog in sleep."]
     #[inline(always)]
     pub fn wdt_pause_in_slp(&self) -> WDT_PAUSE_IN_SLP_R {
-        WDT_PAUSE_IN_SLP_R::new(((self.bits >> 9) & 0x01) != 0)
+        WDT_PAUSE_IN_SLP_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - enable WDT reset APP CPU"]
     #[inline(always)]
     pub fn wdt_appcpu_reset_en(&self) -> WDT_APPCPU_RESET_EN_R {
-        WDT_APPCPU_RESET_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        WDT_APPCPU_RESET_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Set this bit to allow the watchdog to be able to reset CPU."]
     #[inline(always)]
     pub fn wdt_procpu_reset_en(&self) -> WDT_PROCPU_RESET_EN_R {
-        WDT_PROCPU_RESET_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        WDT_PROCPU_RESET_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to enable watchdog when the chip boots from flash."]
     #[inline(always)]
     pub fn wdt_flashboot_mod_en(&self) -> WDT_FLASHBOOT_MOD_EN_R {
-        WDT_FLASHBOOT_MOD_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        WDT_FLASHBOOT_MOD_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:15 - Sets the length of the system reset counter."]
     #[inline(always)]
     pub fn wdt_sys_reset_length(&self) -> WDT_SYS_RESET_LENGTH_R {
-        WDT_SYS_RESET_LENGTH_R::new(((self.bits >> 13) & 0x07) as u8)
+        WDT_SYS_RESET_LENGTH_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bits 16:18 - Sets the length of the CPU reset counter."]
     #[inline(always)]
     pub fn wdt_cpu_reset_length(&self) -> WDT_CPU_RESET_LENGTH_R {
-        WDT_CPU_RESET_LENGTH_R::new(((self.bits >> 16) & 0x07) as u8)
+        WDT_CPU_RESET_LENGTH_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bits 19:21 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg3(&self) -> WDT_STG3_R {
-        WDT_STG3_R::new(((self.bits >> 19) & 0x07) as u8)
+        WDT_STG3_R::new(((self.bits >> 19) & 7) as u8)
     }
     #[doc = "Bits 22:24 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg2(&self) -> WDT_STG2_R {
-        WDT_STG2_R::new(((self.bits >> 22) & 0x07) as u8)
+        WDT_STG2_R::new(((self.bits >> 22) & 7) as u8)
     }
     #[doc = "Bits 25:27 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg1(&self) -> WDT_STG1_R {
-        WDT_STG1_R::new(((self.bits >> 25) & 0x07) as u8)
+        WDT_STG1_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bits 28:30 - 1: enable at the interrupt stage 2: enable at the CPU stage 3: enable at the system stage 4: enable at the system and RTC stage."]
     #[inline(always)]
     pub fn wdt_stg0(&self) -> WDT_STG0_R {
-        WDT_STG0_R::new(((self.bits >> 28) & 0x07) as u8)
+        WDT_STG0_R::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31 - Set this bit to enable the RTC watchdog."]
     #[inline(always)]
     pub fn wdt_en(&self) -> WDT_EN_R {
-        WDT_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        WDT_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

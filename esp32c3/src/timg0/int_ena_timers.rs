@@ -67,7 +67,7 @@ impl<'a> T0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> WDT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - t0_int_ena"]
     #[inline(always)]
     pub fn t0_int_ena(&self) -> T0_INT_ENA_R {
-        T0_INT_ENA_R::new((self.bits & 0x01) != 0)
+        T0_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - wdt_int_ena"]
     #[inline(always)]
     pub fn wdt_int_ena(&self) -> WDT_INT_ENA_R {
-        WDT_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        WDT_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> GPIO_PIN0_PAD_DRIVER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> GPIO_PIN0_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 7)) | ((value as u32 & 0x07) << 7);
+        self.w.bits = (self.w.bits & !(7 << 7)) | ((value as u32 & 7) << 7);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -139,17 +139,17 @@ impl R {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
     pub fn gpio_pin0_pad_driver(&self) -> GPIO_PIN0_PAD_DRIVER_R {
-        GPIO_PIN0_PAD_DRIVER_R::new(((self.bits >> 2) & 0x01) != 0)
+        GPIO_PIN0_PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 7:9 - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
     #[inline(always)]
     pub fn gpio_pin0_int_type(&self) -> GPIO_PIN0_INT_TYPE_R {
-        GPIO_PIN0_INT_TYPE_R::new(((self.bits >> 7) & 0x07) as u8)
+        GPIO_PIN0_INT_TYPE_R::new(((self.bits >> 7) & 7) as u8)
     }
     #[doc = "Bit 10 - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
     #[inline(always)]
     pub fn gpio_pin0_wakeup_enable(&self) -> GPIO_PIN0_WAKEUP_ENABLE_R {
-        GPIO_PIN0_WAKEUP_ENABLE_R::new(((self.bits >> 10) & 0x01) != 0)
+        GPIO_PIN0_WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

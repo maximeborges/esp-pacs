@@ -177,12 +177,12 @@ impl R {
     #[doc = "Bit 20 - Any bit equal to 1 denotes a programming error in EFUSE_SECURE_BOOT_EN."]
     #[inline(always)]
     pub fn secure_boot_en_err(&self) -> SECURE_BOOT_EN_ERR_R {
-        SECURE_BOOT_EN_ERR_R::new(((self.bits >> 20) & 0x01) != 0)
+        SECURE_BOOT_EN_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Any bit equal to 1 denotes a programming error in EFUSE_SECURE_BOOT_AGGRESSIVE_REVOKE."]
     #[inline(always)]
     pub fn secure_boot_aggressive_revoke_err(&self) -> SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R {
-        SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 22:27 - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED1."]
     #[inline(always)]

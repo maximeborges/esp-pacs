@@ -57,7 +57,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -256,37 +256,37 @@ impl R {
     #[doc = "Bits 0:1 - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_0(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_R::new((self.bits & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_1(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_1_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_2(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_R::new(((self.bits >> 4) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_2_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_3(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_R::new(((self.bits >> 6) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_3_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_4(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_R::new(((self.bits >> 8) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_4_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_5(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_R::new(((self.bits >> 10) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_5_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_sram_line_0_category_6(&self) -> CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_R {
-        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_R::new(((self.bits >> 12) & 0x03) as u8)
+        CORE_X_IRAM0_SRAM_LINE_0_CATEGORY_6_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]
 bit of actual address"]

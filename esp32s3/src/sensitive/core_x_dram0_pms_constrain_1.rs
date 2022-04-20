@@ -57,7 +57,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -169,7 +169,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -200,7 +200,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -227,7 +227,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -254,7 +254,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -281,7 +281,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -308,7 +308,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -339,7 +339,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -370,7 +370,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -397,7 +397,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -434,28 +434,28 @@ impl R {
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_0(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R::new((self.bits & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - core0/core1's permission of data region1 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_1(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - core0/core1's permission of data region2 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_2(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R::new(((self.bits >> 4) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - core0/core1's permission of data region3 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_3(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R::new(((self.bits >> 6) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - core0/core1's permission of dcache data sram block0 in world0."]
     #[inline(always)]
@@ -463,7 +463,7 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R::new(
-            ((self.bits >> 8) & 0x03) as u8,
+            ((self.bits >> 8) & 3) as u8,
         )
     }
     #[doc = "Bits 10:11 - core0/core1's permission of dcache data sram block1 in world0."]
@@ -472,7 +472,7 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R::new(
-            ((self.bits >> 10) & 0x03) as u8,
+            ((self.bits >> 10) & 3) as u8,
         )
     }
     #[doc = "Bits 12:13 - core0/core1's permission of data region0 of SRAM in world1."]
@@ -480,28 +480,28 @@ impl R {
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_0(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R::new(((self.bits >> 12) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - core0/core1's permission of data region1 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_1(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R::new(((self.bits >> 14) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - core0/core1's permission of data region2 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_2(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R::new(((self.bits >> 16) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - core0/core1's permission of data region3 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_3(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R::new(((self.bits >> 18) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - core0/core1's permission of dcache data sram block0 in world1."]
     #[inline(always)]
@@ -509,7 +509,7 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_R::new(
-            ((self.bits >> 20) & 0x03) as u8,
+            ((self.bits >> 20) & 3) as u8,
         )
     }
     #[doc = "Bits 22:23 - core0/core1's permission of dcache data sram block1 in world1."]
@@ -518,7 +518,7 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_R::new(
-            ((self.bits >> 22) & 0x03) as u8,
+            ((self.bits >> 22) & 3) as u8,
         )
     }
     #[doc = "Bits 24:25 - core0/core1's permission(sotre,load) of rom in world0."]
@@ -526,14 +526,14 @@ impl R {
     pub fn core_x_dram0_pms_constrain_rom_world_0_pms(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R::new(((self.bits >> 24) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - core0/core1's permission(sotre,load) of rom in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_rom_world_1_pms(
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R {
-        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R::new(((self.bits >> 26) & 0x03) as u8)
+        CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R::new(((self.bits >> 26) & 3) as u8)
     }
 }
 impl W {

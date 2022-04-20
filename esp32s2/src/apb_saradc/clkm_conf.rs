@@ -138,7 +138,7 @@ impl<'a> CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 21)) | ((value as u32 & 0x03) << 21);
+        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
         self.w
     }
 }
@@ -161,7 +161,7 @@ impl R {
     #[doc = "Bits 21:22 - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
     #[inline(always)]
     pub fn clk_sel(&self) -> CLK_SEL_R {
-        CLK_SEL_R::new(((self.bits >> 21) & 0x03) as u8)
+        CLK_SEL_R::new(((self.bits >> 21) & 3) as u8)
     }
 }
 impl W {

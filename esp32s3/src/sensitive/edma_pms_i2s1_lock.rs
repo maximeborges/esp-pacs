@@ -67,7 +67,7 @@ impl<'a> EDMA_PMS_I2S1_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set 1 to lock EDMA-I2S1 permission control registers."]
     #[inline(always)]
     pub fn edma_pms_i2s1_lock(&self) -> EDMA_PMS_I2S1_LOCK_R {
-        EDMA_PMS_I2S1_LOCK_R::new((self.bits & 0x01) != 0)
+        EDMA_PMS_I2S1_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

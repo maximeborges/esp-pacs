@@ -67,7 +67,7 @@ impl<'a> DCACHE_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DCACHE_SIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> DCACHE_BLOCKSIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
         self.w
     }
 }
@@ -139,17 +139,17 @@ impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn dcache_enable(&self) -> DCACHE_ENABLE_R {
-        DCACHE_ENABLE_R::new((self.bits & 0x01) != 0)
+        DCACHE_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
     #[inline(always)]
     pub fn dcache_size_mode(&self) -> DCACHE_SIZE_MODE_R {
-        DCACHE_SIZE_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_SIZE_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:4 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
     #[inline(always)]
     pub fn dcache_blocksize_mode(&self) -> DCACHE_BLOCKSIZE_MODE_R {
-        DCACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 0x03) as u8)
+        DCACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
 impl W {

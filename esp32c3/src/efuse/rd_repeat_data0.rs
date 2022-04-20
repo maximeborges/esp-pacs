@@ -323,98 +323,98 @@ impl R {
     #[doc = "Bit 7 - Set this bit to disable boot from RTC RAM."]
     #[inline(always)]
     pub fn dis_rtc_ram_boot(&self) -> DIS_RTC_RAM_BOOT_R {
-        DIS_RTC_RAM_BOOT_R::new(((self.bits >> 7) & 0x01) != 0)
+        DIS_RTC_RAM_BOOT_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to disable Icache."]
     #[inline(always)]
     pub fn dis_icache(&self) -> DIS_ICACHE_R {
-        DIS_ICACHE_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIS_ICACHE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to disable function of usb switch to jtag in module of usb device."]
     #[inline(always)]
     pub fn dis_usb_jtag(&self) -> DIS_USB_JTAG_R {
-        DIS_USB_JTAG_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIS_USB_JTAG_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set this bit to disable Icache in download mode (boot_mode\\[3:0\\]
  is 0, 1, 2, 3, 6, 7)."]
     #[inline(always)]
     pub fn dis_download_icache(&self) -> DIS_DOWNLOAD_ICACHE_R {
-        DIS_DOWNLOAD_ICACHE_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIS_DOWNLOAD_ICACHE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Set this bit to disable usb device."]
     #[inline(always)]
     pub fn dis_usb_device(&self) -> DIS_USB_DEVICE_R {
-        DIS_USB_DEVICE_R::new(((self.bits >> 11) & 0x01) != 0)
+        DIS_USB_DEVICE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to disable the function that forces chip into download mode."]
     #[inline(always)]
     pub fn dis_force_download(&self) -> DIS_FORCE_DOWNLOAD_R {
-        DIS_FORCE_DOWNLOAD_R::new(((self.bits >> 12) & 0x01) != 0)
+        DIS_FORCE_DOWNLOAD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Reserved (used for four backups method)."]
     #[inline(always)]
     pub fn rpt4_reserved6(&self) -> RPT4_RESERVED6_R {
-        RPT4_RESERVED6_R::new(((self.bits >> 13) & 0x01) != 0)
+        RPT4_RESERVED6_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to disable CAN function."]
     #[inline(always)]
     pub fn dis_can(&self) -> DIS_CAN_R {
-        DIS_CAN_R::new(((self.bits >> 14) & 0x01) != 0)
+        DIS_CAN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Set this bit to enable selection between usb_to_jtag and pad_to_jtag through strapping gpio10 when both reg_dis_usb_jtag and reg_dis_pad_jtag are equal to 0."]
     #[inline(always)]
     pub fn jtag_sel_enable(&self) -> JTAG_SEL_ENABLE_R {
-        JTAG_SEL_ENABLE_R::new(((self.bits >> 15) & 0x01) != 0)
+        JTAG_SEL_ENABLE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:18 - Set these bits to disable JTAG in the soft way (odd number 1 means disable ). JTAG can be enabled in HMAC module."]
     #[inline(always)]
     pub fn soft_dis_jtag(&self) -> SOFT_DIS_JTAG_R {
-        SOFT_DIS_JTAG_R::new(((self.bits >> 16) & 0x07) as u8)
+        SOFT_DIS_JTAG_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19 - Set this bit to disable JTAG in the hard way. JTAG is disabled permanently."]
     #[inline(always)]
     pub fn dis_pad_jtag(&self) -> DIS_PAD_JTAG_R {
-        DIS_PAD_JTAG_R::new(((self.bits >> 19) & 0x01) != 0)
+        DIS_PAD_JTAG_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set this bit to disable flash encryption when in download boot modes."]
     #[inline(always)]
     pub fn dis_download_manual_encrypt(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_R {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 20) & 0x01) != 0)
+        DIS_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - Controls single-end input threshold vrefh, 1.76 V to 2 V with step of 80 mV, stored in eFuse."]
     #[inline(always)]
     pub fn usb_drefh(&self) -> USB_DREFH_R {
-        USB_DREFH_R::new(((self.bits >> 21) & 0x03) as u8)
+        USB_DREFH_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - Controls single-end input threshold vrefl, 0.8 V to 1.04 V with step of 80 mV, stored in eFuse."]
     #[inline(always)]
     pub fn usb_drefl(&self) -> USB_DREFL_R {
-        USB_DREFL_R::new(((self.bits >> 23) & 0x03) as u8)
+        USB_DREFL_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bit 25 - Set this bit to exchange USB D+ and D- pins."]
     #[inline(always)]
     pub fn usb_exchg_pins(&self) -> USB_EXCHG_PINS_R {
-        USB_EXCHG_PINS_R::new(((self.bits >> 25) & 0x01) != 0)
+        USB_EXCHG_PINS_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Set this bit to vdd spi pin function as gpio."]
     #[inline(always)]
     pub fn vdd_spi_as_gpio(&self) -> VDD_SPI_AS_GPIO_R {
-        VDD_SPI_AS_GPIO_R::new(((self.bits >> 26) & 0x01) != 0)
+        VDD_SPI_AS_GPIO_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - Enable btlc gpio."]
     #[inline(always)]
     pub fn btlc_gpio_enable(&self) -> BTLC_GPIO_ENABLE_R {
-        BTLC_GPIO_ENABLE_R::new(((self.bits >> 27) & 0x03) as u8)
+        BTLC_GPIO_ENABLE_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - Set this bit to enable power glitch function."]
     #[inline(always)]
     pub fn powerglitch_en(&self) -> POWERGLITCH_EN_R {
-        POWERGLITCH_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        POWERGLITCH_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - Sample delay configuration of power glitch."]
     #[inline(always)]
     pub fn power_glitch_dsense(&self) -> POWER_GLITCH_DSENSE_R {
-        POWER_GLITCH_DSENSE_R::new(((self.bits >> 30) & 0x03) as u8)
+        POWER_GLITCH_DSENSE_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[doc = "BLOCK0 data register 1.\n\nThis register you can [`read`]

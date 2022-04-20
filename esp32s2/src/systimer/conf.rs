@@ -67,7 +67,7 @@ impl<'a> CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - System timer clock force enable."]
     #[inline(always)]
     pub fn clk_fo(&self) -> CLK_FO_R {
-        CLK_FO_R::new((self.bits & 0x01) != 0)
+        CLK_FO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 31 - Register clock enable."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

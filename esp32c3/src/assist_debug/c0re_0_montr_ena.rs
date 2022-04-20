@@ -67,7 +67,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_RD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_WR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_RD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_WR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CORE_0_AREA_PIF_0_RD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CORE_0_AREA_PIF_0_WR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CORE_0_AREA_PIF_1_RD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> CORE_0_AREA_PIF_1_WR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CORE_0_SP_SPILL_MIN_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CORE_0_SP_SPILL_MAX_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -482,62 +482,62 @@ impl R {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_rd_ena(&self) -> CORE_0_AREA_DRAM0_0_RD_ENA_R {
-        CORE_0_AREA_DRAM0_0_RD_ENA_R::new((self.bits & 0x01) != 0)
+        CORE_0_AREA_DRAM0_0_RD_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_core_0_area_dram0_0_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_wr_ena(&self) -> CORE_0_AREA_DRAM0_0_WR_ENA_R {
-        CORE_0_AREA_DRAM0_0_WR_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_0_WR_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_core_0_area_dram0_1_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_rd_ena(&self) -> CORE_0_AREA_DRAM0_1_RD_ENA_R {
-        CORE_0_AREA_DRAM0_1_RD_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_1_RD_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_core_0_area_dram0_1_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_wr_ena(&self) -> CORE_0_AREA_DRAM0_1_WR_ENA_R {
-        CORE_0_AREA_DRAM0_1_WR_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        CORE_0_AREA_DRAM0_1_WR_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_core_0_area_pif_0_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_0_rd_ena(&self) -> CORE_0_AREA_PIF_0_RD_ENA_R {
-        CORE_0_AREA_PIF_0_RD_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE_0_AREA_PIF_0_RD_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_core_0_area_pif_0_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_0_wr_ena(&self) -> CORE_0_AREA_PIF_0_WR_ENA_R {
-        CORE_0_AREA_PIF_0_WR_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE_0_AREA_PIF_0_WR_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_core_0_area_pif_1_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_1_rd_ena(&self) -> CORE_0_AREA_PIF_1_RD_ENA_R {
-        CORE_0_AREA_PIF_1_RD_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        CORE_0_AREA_PIF_1_RD_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_core_0_area_pif_1_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_1_wr_ena(&self) -> CORE_0_AREA_PIF_1_WR_ENA_R {
-        CORE_0_AREA_PIF_1_WR_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        CORE_0_AREA_PIF_1_WR_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_core_0_sp_spill_min_ena"]
     #[inline(always)]
     pub fn core_0_sp_spill_min_ena(&self) -> CORE_0_SP_SPILL_MIN_ENA_R {
-        CORE_0_SP_SPILL_MIN_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        CORE_0_SP_SPILL_MIN_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_core_0_sp_spill_max_ena"]
     #[inline(always)]
     pub fn core_0_sp_spill_max_ena(&self) -> CORE_0_SP_SPILL_MAX_ENA_R {
-        CORE_0_SP_SPILL_MAX_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        CORE_0_SP_SPILL_MAX_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_core_0_iram0_exception_monitor_ena"]
     #[inline(always)]
     pub fn core_0_iram0_exception_monitor_ena(&self) -> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
-        CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_core_0_dram0_exception_monitor_ena"]
     #[inline(always)]
     pub fn core_0_dram0_exception_monitor_ena(&self) -> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
-        CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

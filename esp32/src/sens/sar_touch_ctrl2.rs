@@ -97,7 +97,7 @@ impl<'a> TOUCH_START_FSM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> TOUCH_START_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -171,7 +171,7 @@ impl<'a> TOUCH_START_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -220,7 +220,7 @@ impl<'a> TOUCH_MEAS_EN_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -233,22 +233,22 @@ impl R {
     #[doc = "Bit 10 - fsm set 1 to indicate touch touch meas is done"]
     #[inline(always)]
     pub fn touch_meas_done(&self) -> TOUCH_MEAS_DONE_R {
-        TOUCH_MEAS_DONE_R::new(((self.bits >> 10) & 0x01) != 0)
+        TOUCH_MEAS_DONE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
     #[inline(always)]
     pub fn touch_start_fsm_en(&self) -> TOUCH_START_FSM_EN_R {
-        TOUCH_START_FSM_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        TOUCH_START_FSM_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - 1: start touch fsm valid when reg_touch_start_force is set"]
     #[inline(always)]
     pub fn touch_start_en(&self) -> TOUCH_START_EN_R {
-        TOUCH_START_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        TOUCH_START_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
     #[inline(always)]
     pub fn touch_start_force(&self) -> TOUCH_START_FORCE_R {
-        TOUCH_START_FORCE_R::new(((self.bits >> 13) & 0x01) != 0)
+        TOUCH_START_FORCE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:29 - sleep cycles for timer"]
     #[inline(always)]

@@ -67,7 +67,7 @@ impl<'a> PRO_DPORT_APB_PERIPHERAL_FORBID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PRO_DPORT_RTCSLOW_L_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PRO_DPORT_RTCSLOW_L_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> PRO_DPORT_RTCSLOW_H_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> PRO_DPORT_RTCSLOW_H_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -277,7 +277,7 @@ impl R {
     #[doc = "Bit 0 - Setting to 1 denies PeriBus1 bus???s access to APB peripheral."]
     #[inline(always)]
     pub fn pro_dport_apb_peripheral_forbid(&self) -> PRO_DPORT_APB_PERIPHERAL_FORBID_R {
-        PRO_DPORT_APB_PERIPHERAL_FORBID_R::new((self.bits & 0x01) != 0)
+        PRO_DPORT_APB_PERIPHERAL_FORBID_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:11 - Configure the split address of RTC FAST for PeriBus1 access."]
     #[inline(always)]
@@ -287,22 +287,22 @@ impl R {
     #[doc = "Bit 12 - Setting to 1 grants PeriBus1 permission to read RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dport_rtcslow_l_r(&self) -> PRO_DPORT_RTCSLOW_L_R_R {
-        PRO_DPORT_RTCSLOW_L_R_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_DPORT_RTCSLOW_L_R_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Setting to 1 grants PeriBus1 permission to write RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dport_rtcslow_l_w(&self) -> PRO_DPORT_RTCSLOW_L_W_R {
-        PRO_DPORT_RTCSLOW_L_W_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_DPORT_RTCSLOW_L_W_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Setting to 1 grants PeriBus1 permission to read RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dport_rtcslow_h_r(&self) -> PRO_DPORT_RTCSLOW_H_R_R {
-        PRO_DPORT_RTCSLOW_H_R_R::new(((self.bits >> 14) & 0x01) != 0)
+        PRO_DPORT_RTCSLOW_H_R_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Setting to 1 grants PeriBus1 permission to write RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dport_rtcslow_h_w(&self) -> PRO_DPORT_RTCSLOW_H_W_R {
-        PRO_DPORT_RTCSLOW_H_W_R::new(((self.bits >> 15) & 0x01) != 0)
+        PRO_DPORT_RTCSLOW_H_W_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:19 - Configure whether to enable read protection for user-configured FIFO address."]
     #[inline(always)]

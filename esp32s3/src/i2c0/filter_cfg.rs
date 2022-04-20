@@ -121,7 +121,7 @@ impl<'a> SCL_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SDA_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -176,12 +176,12 @@ impl R {
     #[doc = "Bit 8 - This is the filter enable bit for SCL."]
     #[inline(always)]
     pub fn scl_filter_en(&self) -> SCL_FILTER_EN_R {
-        SCL_FILTER_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        SCL_FILTER_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - This is the filter enable bit for SDA."]
     #[inline(always)]
     pub fn sda_filter_en(&self) -> SDA_FILTER_EN_R {
-        SDA_FILTER_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        SDA_FILTER_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

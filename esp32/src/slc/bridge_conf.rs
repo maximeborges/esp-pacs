@@ -121,7 +121,7 @@ impl<'a> SLC0_TX_DUMMY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> HDA_MAP_128K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SLC1_TX_DUMMY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -240,17 +240,17 @@ impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn slc0_tx_dummy_mode(&self) -> SLC0_TX_DUMMY_MODE_R {
-        SLC0_TX_DUMMY_MODE_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLC0_TX_DUMMY_MODE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn hda_map_128k(&self) -> HDA_MAP_128K_R {
-        HDA_MAP_128K_R::new(((self.bits >> 13) & 0x01) != 0)
+        HDA_MAP_128K_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn slc1_tx_dummy_mode(&self) -> SLC1_TX_DUMMY_MODE_R {
-        SLC1_TX_DUMMY_MODE_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLC1_TX_DUMMY_MODE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]

@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn fh1_cbc_on(&self) -> FH1_CBC_ON_R {
-        FH1_CBC_ON_R::new((self.bits & 0x01) != 0)
+        FH1_CBC_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn fh1_ost_on(&self) -> FH1_OST_ON_R {
-        FH1_OST_ON_R::new(((self.bits >> 1) & 0x01) != 0)
+        FH1_OST_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> FRHOST_BIT8_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FRHOST_BIT9_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FRHOST_BIT10_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FRHOST_BIT11_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FRHOST_BIT12_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FRHOST_BIT13_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FRHOST_BIT14_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FRHOST_BIT15_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> SLC1_RX_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> SLC1_TX_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> SLC1_RX_UDF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> SLC1_TX_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> SLC1_TOKEN0_1TO0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> SLC1_TOKEN1_1TO0_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> SLC1_TX_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> SLC1_TX_SUC_EOF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> SLC1_RX_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> SLC1_RX_EOF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> SLC1_TOHOST_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> SLC1_TX_DSCR_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> SLC1_RX_DSCR_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> SLC1_TX_DSCR_EMPTY_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> SLC1_HOST_RD_ACK_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> SLC1_WR_RETRY_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> SLC1_TX_ERR_EOF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -963,127 +963,127 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn frhost_bit8_int_ena(&self) -> FRHOST_BIT8_INT_ENA_R {
-        FRHOST_BIT8_INT_ENA_R::new((self.bits & 0x01) != 0)
+        FRHOST_BIT8_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn frhost_bit9_int_ena(&self) -> FRHOST_BIT9_INT_ENA_R {
-        FRHOST_BIT9_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        FRHOST_BIT9_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn frhost_bit10_int_ena(&self) -> FRHOST_BIT10_INT_ENA_R {
-        FRHOST_BIT10_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        FRHOST_BIT10_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn frhost_bit11_int_ena(&self) -> FRHOST_BIT11_INT_ENA_R {
-        FRHOST_BIT11_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        FRHOST_BIT11_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn frhost_bit12_int_ena(&self) -> FRHOST_BIT12_INT_ENA_R {
-        FRHOST_BIT12_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        FRHOST_BIT12_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn frhost_bit13_int_ena(&self) -> FRHOST_BIT13_INT_ENA_R {
-        FRHOST_BIT13_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        FRHOST_BIT13_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn frhost_bit14_int_ena(&self) -> FRHOST_BIT14_INT_ENA_R {
-        FRHOST_BIT14_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        FRHOST_BIT14_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn frhost_bit15_int_ena(&self) -> FRHOST_BIT15_INT_ENA_R {
-        FRHOST_BIT15_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        FRHOST_BIT15_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn slc1_rx_start_int_ena(&self) -> SLC1_RX_START_INT_ENA_R {
-        SLC1_RX_START_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        SLC1_RX_START_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn slc1_tx_start_int_ena(&self) -> SLC1_TX_START_INT_ENA_R {
-        SLC1_TX_START_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        SLC1_TX_START_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn slc1_rx_udf_int_ena(&self) -> SLC1_RX_UDF_INT_ENA_R {
-        SLC1_RX_UDF_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLC1_RX_UDF_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn slc1_tx_ovf_int_ena(&self) -> SLC1_TX_OVF_INT_ENA_R {
-        SLC1_TX_OVF_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        SLC1_TX_OVF_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn slc1_token0_1to0_int_ena(&self) -> SLC1_TOKEN0_1TO0_INT_ENA_R {
-        SLC1_TOKEN0_1TO0_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLC1_TOKEN0_1TO0_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn slc1_token1_1to0_int_ena(&self) -> SLC1_TOKEN1_1TO0_INT_ENA_R {
-        SLC1_TOKEN1_1TO0_INT_ENA_R::new(((self.bits >> 13) & 0x01) != 0)
+        SLC1_TOKEN1_1TO0_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn slc1_tx_done_int_ena(&self) -> SLC1_TX_DONE_INT_ENA_R {
-        SLC1_TX_DONE_INT_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLC1_TX_DONE_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn slc1_tx_suc_eof_int_ena(&self) -> SLC1_TX_SUC_EOF_INT_ENA_R {
-        SLC1_TX_SUC_EOF_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        SLC1_TX_SUC_EOF_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_rx_done_int_ena(&self) -> SLC1_RX_DONE_INT_ENA_R {
-        SLC1_RX_DONE_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLC1_RX_DONE_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn slc1_rx_eof_int_ena(&self) -> SLC1_RX_EOF_INT_ENA_R {
-        SLC1_RX_EOF_INT_ENA_R::new(((self.bits >> 17) & 0x01) != 0)
+        SLC1_RX_EOF_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn slc1_tohost_int_ena(&self) -> SLC1_TOHOST_INT_ENA_R {
-        SLC1_TOHOST_INT_ENA_R::new(((self.bits >> 18) & 0x01) != 0)
+        SLC1_TOHOST_INT_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn slc1_tx_dscr_err_int_ena(&self) -> SLC1_TX_DSCR_ERR_INT_ENA_R {
-        SLC1_TX_DSCR_ERR_INT_ENA_R::new(((self.bits >> 19) & 0x01) != 0)
+        SLC1_TX_DSCR_ERR_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc1_rx_dscr_err_int_ena(&self) -> SLC1_RX_DSCR_ERR_INT_ENA_R {
-        SLC1_RX_DSCR_ERR_INT_ENA_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLC1_RX_DSCR_ERR_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn slc1_tx_dscr_empty_int_ena(&self) -> SLC1_TX_DSCR_EMPTY_INT_ENA_R {
-        SLC1_TX_DSCR_EMPTY_INT_ENA_R::new(((self.bits >> 21) & 0x01) != 0)
+        SLC1_TX_DSCR_EMPTY_INT_ENA_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn slc1_host_rd_ack_int_ena(&self) -> SLC1_HOST_RD_ACK_INT_ENA_R {
-        SLC1_HOST_RD_ACK_INT_ENA_R::new(((self.bits >> 22) & 0x01) != 0)
+        SLC1_HOST_RD_ACK_INT_ENA_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn slc1_wr_retry_done_int_ena(&self) -> SLC1_WR_RETRY_DONE_INT_ENA_R {
-        SLC1_WR_RETRY_DONE_INT_ENA_R::new(((self.bits >> 23) & 0x01) != 0)
+        SLC1_WR_RETRY_DONE_INT_ENA_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn slc1_tx_err_eof_int_ena(&self) -> SLC1_TX_ERR_EOF_INT_ENA_R {
-        SLC1_TX_ERR_EOF_INT_ENA_R::new(((self.bits >> 24) & 0x01) != 0)
+        SLC1_TX_ERR_EOF_INT_ENA_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

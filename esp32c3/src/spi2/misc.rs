@@ -67,7 +67,7 @@ impl<'a> CS0_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CS1_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CS2_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CS3_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CS4_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CS5_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CK_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> SLAVE_CS_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> CS_KEEP_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -464,7 +464,7 @@ impl<'a> QUAD_DIN_PIN_SWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -472,37 +472,37 @@ impl R {
     #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs0_dis(&self) -> CS0_DIS_R {
-        CS0_DIS_R::new((self.bits & 0x01) != 0)
+        CS0_DIS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs1_dis(&self) -> CS1_DIS_R {
-        CS1_DIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs2_dis(&self) -> CS2_DIS_R {
-        CS2_DIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        CS2_DIS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs3_dis(&self) -> CS3_DIS_R {
-        CS3_DIS_R::new(((self.bits >> 3) & 0x01) != 0)
+        CS3_DIS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs4_dis(&self) -> CS4_DIS_R {
-        CS4_DIS_R::new(((self.bits >> 4) & 0x01) != 0)
+        CS4_DIS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs5_dis(&self) -> CS5_DIS_R {
-        CS5_DIS_R::new(((self.bits >> 5) & 0x01) != 0)
+        CS5_DIS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn ck_dis(&self) -> CK_DIS_R {
-        CK_DIS_R::new(((self.bits >> 6) & 0x01) != 0)
+        CK_DIS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 7:12 - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
     #[inline(always)]
@@ -512,22 +512,22 @@ impl R {
     #[doc = "Bit 23 - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
     #[inline(always)]
     pub fn slave_cs_pol(&self) -> SLAVE_CS_POL_R {
-        SLAVE_CS_POL_R::new(((self.bits >> 23) & 0x01) != 0)
+        SLAVE_CS_POL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
     #[inline(always)]
     pub fn ck_idle_edge(&self) -> CK_IDLE_EDGE_R {
-        CK_IDLE_EDGE_R::new(((self.bits >> 29) & 0x01) != 0)
+        CK_IDLE_EDGE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - spi cs line keep low when the bit is set. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_keep_active(&self) -> CS_KEEP_ACTIVE_R {
-        CS_KEEP_ACTIVE_R::new(((self.bits >> 30) & 0x01) != 0)
+        CS_KEEP_ACTIVE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: spi quad input swap enable 0: spi quad input swap disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn quad_din_pin_swap(&self) -> QUAD_DIN_PIN_SWAP_R {
-        QUAD_DIN_PIN_SWAP_R::new(((self.bits >> 31) & 0x01) != 0)
+        QUAD_DIN_PIN_SWAP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

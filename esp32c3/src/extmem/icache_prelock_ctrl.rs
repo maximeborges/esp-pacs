@@ -67,7 +67,7 @@ impl<'a> ICACHE_PRELOCK_SCT0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_PRELOCK_SCT1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
     pub fn icache_prelock_sct0_en(&self) -> ICACHE_PRELOCK_SCT0_EN_R {
-        ICACHE_PRELOCK_SCT0_EN_R::new((self.bits & 0x01) != 0)
+        ICACHE_PRELOCK_SCT0_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function."]
     #[inline(always)]
     pub fn icache_prelock_sct1_en(&self) -> ICACHE_PRELOCK_SCT1_EN_R {
-        ICACHE_PRELOCK_SCT1_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_PRELOCK_SCT1_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

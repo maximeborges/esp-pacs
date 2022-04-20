@@ -67,7 +67,7 @@ impl<'a> PERI_BACKUP_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CRYPTO_AES_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CRYPTO_SHA_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CRYPTO_RSA_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CRYPTO_DS_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CRYPTO_HMAC_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> DMA_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> SDIO_HOST_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> LCD_CAM_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> UART2_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> USB_DEVICE_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -445,57 +445,57 @@ impl R {
     #[doc = "Bit 0 - Set 1 to enable BACKUP clock"]
     #[inline(always)]
     pub fn peri_backup_clk_en(&self) -> PERI_BACKUP_CLK_EN_R {
-        PERI_BACKUP_CLK_EN_R::new((self.bits & 0x01) != 0)
+        PERI_BACKUP_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set 1 to enable AES clock"]
     #[inline(always)]
     pub fn crypto_aes_clk_en(&self) -> CRYPTO_AES_CLK_EN_R {
-        CRYPTO_AES_CLK_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CRYPTO_AES_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
     pub fn crypto_sha_clk_en(&self) -> CRYPTO_SHA_CLK_EN_R {
-        CRYPTO_SHA_CLK_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        CRYPTO_SHA_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set 1 to enable RSA clock"]
     #[inline(always)]
     pub fn crypto_rsa_clk_en(&self) -> CRYPTO_RSA_CLK_EN_R {
-        CRYPTO_RSA_CLK_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        CRYPTO_RSA_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set 1 to enable DS clock"]
     #[inline(always)]
     pub fn crypto_ds_clk_en(&self) -> CRYPTO_DS_CLK_EN_R {
-        CRYPTO_DS_CLK_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        CRYPTO_DS_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set 1 to enable HMAC clock"]
     #[inline(always)]
     pub fn crypto_hmac_clk_en(&self) -> CRYPTO_HMAC_CLK_EN_R {
-        CRYPTO_HMAC_CLK_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        CRYPTO_HMAC_CLK_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
     pub fn dma_clk_en(&self) -> DMA_CLK_EN_R {
-        DMA_CLK_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        DMA_CLK_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set 1 to enable SDIO_HOST clock"]
     #[inline(always)]
     pub fn sdio_host_clk_en(&self) -> SDIO_HOST_CLK_EN_R {
-        SDIO_HOST_CLK_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        SDIO_HOST_CLK_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set 1 to enable LCD_CAM clock"]
     #[inline(always)]
     pub fn lcd_cam_clk_en(&self) -> LCD_CAM_CLK_EN_R {
-        LCD_CAM_CLK_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        LCD_CAM_CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set 1 to enable UART2 clock"]
     #[inline(always)]
     pub fn uart2_clk_en(&self) -> UART2_CLK_EN_R {
-        UART2_CLK_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        UART2_CLK_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set 1 to enable USB_DEVICE clock"]
     #[inline(always)]
     pub fn usb_device_clk_en(&self) -> USB_DEVICE_CLK_EN_R {
-        USB_DEVICE_CLK_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        USB_DEVICE_CLK_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bits 0:2 - a"]
     #[inline(always)]
     pub fn rx_err_cause(&self) -> RX_ERR_CAUSE_R {
-        RX_ERR_CAUSE_R::new((self.bits & 0x07) as u8)
+        RX_ERR_CAUSE_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - a"]
     #[inline(always)]
     pub fn decode_state(&self) -> DECODE_STATE_R {
-        DECODE_STATE_R::new(((self.bits >> 3) & 0x07) as u8)
+        DECODE_STATE_R::new(((self.bits >> 3) & 7) as u8)
     }
 }
 #[doc = "a\n\nThis register you can [`read`]

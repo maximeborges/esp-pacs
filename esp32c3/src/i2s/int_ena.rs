@@ -67,7 +67,7 @@ impl<'a> RX_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RX_HUNG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TX_HUNG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
     pub fn rx_done_int_ena(&self) -> RX_DONE_INT_ENA_R {
-        RX_DONE_INT_ENA_R::new((self.bits & 0x01) != 0)
+        RX_DONE_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the i2s_tx_done_int interrupt"]
     #[inline(always)]
     pub fn tx_done_int_ena(&self) -> TX_DONE_INT_ENA_R {
-        TX_DONE_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_DONE_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
     pub fn rx_hung_int_ena(&self) -> RX_HUNG_INT_ENA_R {
-        RX_HUNG_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_HUNG_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
     #[inline(always)]
     pub fn tx_hung_int_ena(&self) -> TX_HUNG_INT_ENA_R {
-        TX_HUNG_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_HUNG_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

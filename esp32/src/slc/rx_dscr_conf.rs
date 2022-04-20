@@ -67,7 +67,7 @@ impl<'a> SLC0_TOKEN_NO_REPLACE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLC0_INFOR_NO_REPLACE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLC0_RX_FILL_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SLC0_RX_EOF_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> SLC0_RX_FILL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> SLC1_TOKEN_NO_REPLACE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> SLC1_INFOR_NO_REPLACE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> SLC1_RX_FILL_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> SLC1_RX_EOF_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> SLC1_RX_FILL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -462,27 +462,27 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slc0_token_no_replace(&self) -> SLC0_TOKEN_NO_REPLACE_R {
-        SLC0_TOKEN_NO_REPLACE_R::new((self.bits & 0x01) != 0)
+        SLC0_TOKEN_NO_REPLACE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn slc0_infor_no_replace(&self) -> SLC0_INFOR_NO_REPLACE_R {
-        SLC0_INFOR_NO_REPLACE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLC0_INFOR_NO_REPLACE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn slc0_rx_fill_mode(&self) -> SLC0_RX_FILL_MODE_R {
-        SLC0_RX_FILL_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        SLC0_RX_FILL_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn slc0_rx_eof_mode(&self) -> SLC0_RX_EOF_MODE_R {
-        SLC0_RX_EOF_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLC0_RX_EOF_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slc0_rx_fill_en(&self) -> SLC0_RX_FILL_EN_R {
-        SLC0_RX_FILL_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        SLC0_RX_FILL_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:15"]
     #[inline(always)]
@@ -492,27 +492,27 @@ impl R {
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_token_no_replace(&self) -> SLC1_TOKEN_NO_REPLACE_R {
-        SLC1_TOKEN_NO_REPLACE_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLC1_TOKEN_NO_REPLACE_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn slc1_infor_no_replace(&self) -> SLC1_INFOR_NO_REPLACE_R {
-        SLC1_INFOR_NO_REPLACE_R::new(((self.bits >> 17) & 0x01) != 0)
+        SLC1_INFOR_NO_REPLACE_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn slc1_rx_fill_mode(&self) -> SLC1_RX_FILL_MODE_R {
-        SLC1_RX_FILL_MODE_R::new(((self.bits >> 18) & 0x01) != 0)
+        SLC1_RX_FILL_MODE_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn slc1_rx_eof_mode(&self) -> SLC1_RX_EOF_MODE_R {
-        SLC1_RX_EOF_MODE_R::new(((self.bits >> 19) & 0x01) != 0)
+        SLC1_RX_EOF_MODE_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc1_rx_fill_en(&self) -> SLC1_RX_FILL_EN_R {
-        SLC1_RX_FILL_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLC1_RX_FILL_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:31"]
     #[inline(always)]

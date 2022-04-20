@@ -94,7 +94,7 @@ impl<'a> TOUCH_TIMEOUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 22 - Enable touch timeout."]
     #[inline(always)]
     pub fn touch_timeout_en(&self) -> TOUCH_TIMEOUT_EN_R {
-        TOUCH_TIMEOUT_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        TOUCH_TIMEOUT_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {

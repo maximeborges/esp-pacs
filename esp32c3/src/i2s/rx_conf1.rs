@@ -204,7 +204,7 @@ impl<'a> RX_MSB_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -238,7 +238,7 @@ impl R {
     #[doc = "Bit 29 - Set this bit to enable receiver in Phillips standard mode"]
     #[inline(always)]
     pub fn rx_msb_shift(&self) -> RX_MSB_SHIFT_R {
-        RX_MSB_SHIFT_R::new(((self.bits >> 29) & 0x01) != 0)
+        RX_MSB_SHIFT_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

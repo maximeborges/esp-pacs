@@ -59,7 +59,7 @@ impl<'a> SPI_SMEM_SPICLK_FUN_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -88,7 +88,7 @@ impl<'a> SPI_FMEM_SPICLK_FUN_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SPI_SPICLK_PAD_DRV_CTL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -167,13 +167,13 @@ impl R {
  when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_spiclk_fun_drv(&self) -> SPI_SMEM_SPICLK_FUN_DRV_R {
-        SPI_SMEM_SPICLK_FUN_DRV_R::new((self.bits & 0x03) as u8)
+        SPI_SMEM_SPICLK_FUN_DRV_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\]
  when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
     #[inline(always)]
     pub fn spi_fmem_spiclk_fun_drv(&self) -> SPI_FMEM_SPICLK_FUN_DRV_R {
-        SPI_FMEM_SPICLK_FUN_DRV_R::new(((self.bits >> 2) & 0x03) as u8)
+        SPI_FMEM_SPICLK_FUN_DRV_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\]
  and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]
@@ -181,7 +181,7 @@ impl R {
  of SPICLK PAD."]
     #[inline(always)]
     pub fn spi_spiclk_pad_drv_ctl_en(&self) -> SPI_SPICLK_PAD_DRV_CTL_EN_R {
-        SPI_SPICLK_PAD_DRV_CTL_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        SPI_SPICLK_PAD_DRV_CTL_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:27 - SPI register version."]
     #[inline(always)]

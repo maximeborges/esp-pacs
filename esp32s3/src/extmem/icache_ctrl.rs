@@ -67,7 +67,7 @@ impl<'a> ICACHE_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_WAY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ICACHE_SIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> ICACHE_BLOCKSIZE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn icache_enable(&self) -> ICACHE_ENABLE_R {
-        ICACHE_ENABLE_R::new((self.bits & 0x01) != 0)
+        ICACHE_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
     #[inline(always)]
     pub fn icache_way_mode(&self) -> ICACHE_WAY_MODE_R {
-        ICACHE_WAY_MODE_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_WAY_MODE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
     #[inline(always)]
     pub fn icache_size_mode(&self) -> ICACHE_SIZE_MODE_R {
-        ICACHE_SIZE_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        ICACHE_SIZE_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
     pub fn icache_blocksize_mode(&self) -> ICACHE_BLOCKSIZE_MODE_R {
-        ICACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        ICACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

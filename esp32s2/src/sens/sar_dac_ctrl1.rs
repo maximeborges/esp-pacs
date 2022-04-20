@@ -94,7 +94,7 @@ impl<'a> SW_TONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> DAC_DIG_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> DAC_CLK_FORCE_LOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> DAC_CLK_FORCE_HIGH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> DAC_CLK_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> DAC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> DAC_CLKGATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -356,7 +356,7 @@ impl R {
     #[doc = "Bit 16 - 0: disable CW generator. 1: enable CW generator."]
     #[inline(always)]
     pub fn sw_tone_en(&self) -> SW_TONE_EN_R {
-        SW_TONE_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        SW_TONE_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:21"]
     #[inline(always)]
@@ -366,32 +366,32 @@ impl R {
     #[doc = "Bit 22 - 0: DAC1 and DAC2 do not use DMA. 1: DAC1 and DAC2 use DMA."]
     #[inline(always)]
     pub fn dac_dig_force(&self) -> DAC_DIG_FORCE_R {
-        DAC_DIG_FORCE_R::new(((self.bits >> 22) & 0x01) != 0)
+        DAC_DIG_FORCE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: force PDAC_CLK to low"]
     #[inline(always)]
     pub fn dac_clk_force_low(&self) -> DAC_CLK_FORCE_LOW_R {
-        DAC_CLK_FORCE_LOW_R::new(((self.bits >> 23) & 0x01) != 0)
+        DAC_CLK_FORCE_LOW_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: force PDAC_CLK to high"]
     #[inline(always)]
     pub fn dac_clk_force_high(&self) -> DAC_CLK_FORCE_HIGH_R {
-        DAC_CLK_FORCE_HIGH_R::new(((self.bits >> 24) & 0x01) != 0)
+        DAC_CLK_FORCE_HIGH_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: invert PDAC_CLK."]
     #[inline(always)]
     pub fn dac_clk_inv(&self) -> DAC_CLK_INV_R {
-        DAC_CLK_INV_R::new(((self.bits >> 25) & 0x01) != 0)
+        DAC_CLK_INV_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Reset DAC by software."]
     #[inline(always)]
     pub fn dac_reset(&self) -> DAC_RESET_R {
-        DAC_RESET_R::new(((self.bits >> 26) & 0x01) != 0)
+        DAC_RESET_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - DAC clock gate enable bit."]
     #[inline(always)]
     pub fn dac_clkgate_en(&self) -> DAC_CLKGATE_EN_R {
-        DAC_CLKGATE_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        DAC_CLKGATE_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

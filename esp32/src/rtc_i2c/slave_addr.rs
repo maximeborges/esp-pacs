@@ -94,7 +94,7 @@ impl<'a> _10BIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 31 - Set if local slave address is 10-bit"]
     #[inline(always)]
     pub fn _10bit(&self) -> _10BIT_R {
-        _10BIT_R::new(((self.bits >> 31) & 0x01) != 0)
+        _10BIT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

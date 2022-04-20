@@ -84,7 +84,7 @@ impl<'a> TIME_SEG2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
+        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> TIME_SAMP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -134,12 +134,12 @@ impl R {
     #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
     pub fn time_seg2(&self) -> TIME_SEG2_R {
-        TIME_SEG2_R::new(((self.bits >> 4) & 0x07) as u8)
+        TIME_SEG2_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
     pub fn time_samp(&self) -> TIME_SAMP_R {
-        TIME_SAMP_R::new(((self.bits >> 7) & 0x01) != 0)
+        TIME_SAMP_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> ICACHE_SHUT_CORE0_BUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_SHUT_CORE1_BUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn icache_shut_core0_bus(&self) -> ICACHE_SHUT_CORE0_BUS_R {
-        ICACHE_SHUT_CORE0_BUS_R::new((self.bits & 0x01) != 0)
+        ICACHE_SHUT_CORE0_BUS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn icache_shut_core1_bus(&self) -> ICACHE_SHUT_CORE1_BUS_R {
-        ICACHE_SHUT_CORE1_BUS_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_SHUT_CORE1_BUS_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

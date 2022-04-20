@@ -67,7 +67,7 @@ impl<'a> TOUCH_PAD0_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TOUCH_PAD0_SLP_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TOUCH_PAD0_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TOUCH_PAD0_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> TOUCH_PAD0_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> TOUCH_PAD0_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> TOUCH_PAD0_XPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> TOUCH_PAD0_TIE_OPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> TOUCH_PAD0_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> TOUCH_PAD0_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> TOUCH_PAD0_RUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> TOUCH_PAD0_RDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -481,7 +481,7 @@ impl<'a> TOUCH_PAD0_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -489,67 +489,67 @@ impl R {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
     pub fn touch_pad0_fun_ie(&self) -> TOUCH_PAD0_FUN_IE_R {
-        TOUCH_PAD0_FUN_IE_R::new(((self.bits >> 13) & 0x01) != 0)
+        TOUCH_PAD0_FUN_IE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Output enable in sleep mode."]
     #[inline(always)]
     pub fn touch_pad0_slp_oe(&self) -> TOUCH_PAD0_SLP_OE_R {
-        TOUCH_PAD0_SLP_OE_R::new(((self.bits >> 14) & 0x01) != 0)
+        TOUCH_PAD0_SLP_OE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Input enable in sleep mode."]
     #[inline(always)]
     pub fn touch_pad0_slp_ie(&self) -> TOUCH_PAD0_SLP_IE_R {
-        TOUCH_PAD0_SLP_IE_R::new(((self.bits >> 15) & 0x01) != 0)
+        TOUCH_PAD0_SLP_IE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 0: no sleep mode. 1: enable sleep mode."]
     #[inline(always)]
     pub fn touch_pad0_slp_sel(&self) -> TOUCH_PAD0_SLP_SEL_R {
-        TOUCH_PAD0_SLP_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        TOUCH_PAD0_SLP_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - Function selection."]
     #[inline(always)]
     pub fn touch_pad0_fun_sel(&self) -> TOUCH_PAD0_FUN_SEL_R {
-        TOUCH_PAD0_FUN_SEL_R::new(((self.bits >> 17) & 0x03) as u8)
+        TOUCH_PAD0_FUN_SEL_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - Connect the RTC pad input to digital pad input. 0 is available."]
     #[inline(always)]
     pub fn touch_pad0_mux_sel(&self) -> TOUCH_PAD0_MUX_SEL_R {
-        TOUCH_PAD0_MUX_SEL_R::new(((self.bits >> 19) & 0x01) != 0)
+        TOUCH_PAD0_MUX_SEL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Touch sensor power on."]
     #[inline(always)]
     pub fn touch_pad0_xpd(&self) -> TOUCH_PAD0_XPD_R {
-        TOUCH_PAD0_XPD_R::new(((self.bits >> 20) & 0x01) != 0)
+        TOUCH_PAD0_XPD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - The tie option of touch sensor. 0: tie low. 1: tie high."]
     #[inline(always)]
     pub fn touch_pad0_tie_opt(&self) -> TOUCH_PAD0_TIE_OPT_R {
-        TOUCH_PAD0_TIE_OPT_R::new(((self.bits >> 21) & 0x01) != 0)
+        TOUCH_PAD0_TIE_OPT_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Start touch sensor."]
     #[inline(always)]
     pub fn touch_pad0_start(&self) -> TOUCH_PAD0_START_R {
-        TOUCH_PAD0_START_R::new(((self.bits >> 22) & 0x01) != 0)
+        TOUCH_PAD0_START_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bits 23:25 - Touch sensor slope control. 3-bit for each touch pad, defaults to 0x4."]
     #[inline(always)]
     pub fn touch_pad0_dac(&self) -> TOUCH_PAD0_DAC_R {
-        TOUCH_PAD0_DAC_R::new(((self.bits >> 23) & 0x07) as u8)
+        TOUCH_PAD0_DAC_R::new(((self.bits >> 23) & 7) as u8)
     }
     #[doc = "Bit 27 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
     pub fn touch_pad0_rue(&self) -> TOUCH_PAD0_RUE_R {
-        TOUCH_PAD0_RUE_R::new(((self.bits >> 27) & 0x01) != 0)
+        TOUCH_PAD0_RUE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
     pub fn touch_pad0_rde(&self) -> TOUCH_PAD0_RDE_R {
-        TOUCH_PAD0_RDE_R::new(((self.bits >> 28) & 0x01) != 0)
+        TOUCH_PAD0_RDE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bits 29:30 - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
     pub fn touch_pad0_drv(&self) -> TOUCH_PAD0_DRV_R {
-        TOUCH_PAD0_DRV_R::new(((self.bits >> 29) & 0x03) as u8)
+        TOUCH_PAD0_DRV_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {

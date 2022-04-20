@@ -94,7 +94,7 @@ impl<'a> MAIN_TIMER_ALARM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
     pub fn main_timer_alarm_en(&self) -> MAIN_TIMER_ALARM_EN_R {
-        MAIN_TIMER_ALARM_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        MAIN_TIMER_ALARM_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

@@ -82,7 +82,7 @@ impl<'a> PRO_ICACHE_PRELOAD_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_ICACHE_PRELOAD_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -156,7 +156,7 @@ impl<'a> PRO_DCACHE_PRELOAD_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRO_DCACHE_PRELOAD_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache pre-load done."]
     #[inline(always)]
     pub fn pro_icache_preload_int_st(&self) -> PRO_ICACHE_PRELOAD_INT_ST_R {
-        PRO_ICACHE_PRELOAD_INT_ST_R::new((self.bits & 0x01) != 0)
+        PRO_ICACHE_PRELOAD_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache pre-load done."]
     #[inline(always)]
     pub fn pro_icache_preload_int_ena(&self) -> PRO_ICACHE_PRELOAD_INT_ENA_R {
-        PRO_ICACHE_PRELOAD_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_ICACHE_PRELOAD_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to indicate the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn pro_dcache_preload_int_st(&self) -> PRO_DCACHE_PRELOAD_INT_ST_R {
-        PRO_DCACHE_PRELOAD_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_DCACHE_PRELOAD_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn pro_dcache_preload_int_ena(&self) -> PRO_DCACHE_PRELOAD_INT_ENA_R {
-        PRO_DCACHE_PRELOAD_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        PRO_DCACHE_PRELOAD_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

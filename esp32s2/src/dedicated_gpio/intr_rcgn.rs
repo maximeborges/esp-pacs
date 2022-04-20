@@ -57,7 +57,7 @@ impl<'a> INTR_MODE_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> INTR_MODE_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> INTR_MODE_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> INTR_MODE_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> INTR_MODE_CH4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> INTR_MODE_CH5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 15)) | ((value as u32 & 0x07) << 15);
+        self.w.bits = (self.w.bits & !(7 << 15)) | ((value as u32 & 7) << 15);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> INTR_MODE_CH6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 18)) | ((value as u32 & 0x07) << 18);
+        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> INTR_MODE_CH7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 21)) | ((value as u32 & 0x07) << 21);
+        self.w.bits = (self.w.bits & !(7 << 21)) | ((value as u32 & 7) << 21);
         self.w
     }
 }
@@ -254,42 +254,42 @@ impl R {
     #[doc = "Bits 0:2 - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch0(&self) -> INTR_MODE_CH0_R {
-        INTR_MODE_CH0_R::new((self.bits & 0x07) as u8)
+        INTR_MODE_CH0_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch1(&self) -> INTR_MODE_CH1_R {
-        INTR_MODE_CH1_R::new(((self.bits >> 3) & 0x07) as u8)
+        INTR_MODE_CH1_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch2(&self) -> INTR_MODE_CH2_R {
-        INTR_MODE_CH2_R::new(((self.bits >> 6) & 0x07) as u8)
+        INTR_MODE_CH2_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11 - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch3(&self) -> INTR_MODE_CH3_R {
-        INTR_MODE_CH3_R::new(((self.bits >> 9) & 0x07) as u8)
+        INTR_MODE_CH3_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:14 - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch4(&self) -> INTR_MODE_CH4_R {
-        INTR_MODE_CH4_R::new(((self.bits >> 12) & 0x07) as u8)
+        INTR_MODE_CH4_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 15:17 - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch5(&self) -> INTR_MODE_CH5_R {
-        INTR_MODE_CH5_R::new(((self.bits >> 15) & 0x07) as u8)
+        INTR_MODE_CH5_R::new(((self.bits >> 15) & 7) as u8)
     }
     #[doc = "Bits 18:20 - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch6(&self) -> INTR_MODE_CH6_R {
-        INTR_MODE_CH6_R::new(((self.bits >> 18) & 0x07) as u8)
+        INTR_MODE_CH6_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:23 - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
     pub fn intr_mode_ch7(&self) -> INTR_MODE_CH7_R {
-        INTR_MODE_CH7_R::new(((self.bits >> 21) & 0x07) as u8)
+        INTR_MODE_CH7_R::new(((self.bits >> 21) & 7) as u8)
     }
 }
 impl W {

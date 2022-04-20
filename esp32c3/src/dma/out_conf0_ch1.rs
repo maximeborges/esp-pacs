@@ -67,7 +67,7 @@ impl<'a> OUT_RST_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> OUT_LOOP_TEST_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> OUT_AUTO_WRBACK_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> OUT_EOF_MODE_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> OUTDSCR_BURST_EN_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> OUT_DATA_BURST_EN_CH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
     pub fn out_rst_ch1(&self) -> OUT_RST_CH1_R {
-        OUT_RST_CH1_R::new((self.bits & 0x01) != 0)
+        OUT_RST_CH1_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
     pub fn out_loop_test_ch1(&self) -> OUT_LOOP_TEST_CH1_R {
-        OUT_LOOP_TEST_CH1_R::new(((self.bits >> 1) & 0x01) != 0)
+        OUT_LOOP_TEST_CH1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
     pub fn out_auto_wrback_ch1(&self) -> OUT_AUTO_WRBACK_CH1_R {
-        OUT_AUTO_WRBACK_CH1_R::new(((self.bits >> 2) & 0x01) != 0)
+        OUT_AUTO_WRBACK_CH1_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
     pub fn out_eof_mode_ch1(&self) -> OUT_EOF_MODE_CH1_R {
-        OUT_EOF_MODE_CH1_R::new(((self.bits >> 3) & 0x01) != 0)
+        OUT_EOF_MODE_CH1_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
     pub fn outdscr_burst_en_ch1(&self) -> OUTDSCR_BURST_EN_CH1_R {
-        OUTDSCR_BURST_EN_CH1_R::new(((self.bits >> 4) & 0x01) != 0)
+        OUTDSCR_BURST_EN_CH1_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM."]
     #[inline(always)]
     pub fn out_data_burst_en_ch1(&self) -> OUT_DATA_BURST_EN_CH1_R {
-        OUT_DATA_BURST_EN_CH1_R::new(((self.bits >> 5) & 0x01) != 0)
+        OUT_DATA_BURST_EN_CH1_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

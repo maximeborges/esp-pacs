@@ -94,7 +94,7 @@ impl<'a> RTC_MEM_CRC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> CLOSE_FLASH_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> PD_RF_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> RST_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -313,7 +313,7 @@ impl<'a> DBROWN_OUT_THRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 27)) | ((value as u32 & 0x07) << 27);
+        self.w.bits = (self.w.bits & !(7 << 27)) | ((value as u32 & 7) << 27);
         self.w
     }
 }
@@ -350,7 +350,7 @@ impl<'a> ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -402,7 +402,7 @@ impl<'a> RTC_MEM_CRC_FINISH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -415,7 +415,7 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn rtc_mem_crc_start(&self) -> RTC_MEM_CRC_START_R {
-        RTC_MEM_CRC_START_R::new(((self.bits >> 8) & 0x01) != 0)
+        RTC_MEM_CRC_START_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:19"]
     #[inline(always)]
@@ -425,12 +425,12 @@ impl R {
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
     pub fn close_flash_ena(&self) -> CLOSE_FLASH_ENA_R {
-        CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
     pub fn pd_rf_ena(&self) -> PD_RF_ENA_R {
-        PD_RF_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        PD_RF_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
@@ -445,27 +445,27 @@ impl R {
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
     pub fn rst_ena(&self) -> RST_ENA_R {
-        RST_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
+        RST_ENA_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:29 - brown out threshold"]
     #[inline(always)]
     pub fn dbrown_out_thres(&self) -> DBROWN_OUT_THRES_R {
-        DBROWN_OUT_THRES_R::new(((self.bits >> 27) & 0x07) as u8)
+        DBROWN_OUT_THRES_R::new(((self.bits >> 27) & 7) as u8)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
     pub fn ena(&self) -> ENA_R {
-        ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+        ENA_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - brown out detect"]
     #[inline(always)]
     pub fn det(&self) -> DET_R {
-        DET_R::new(((self.bits >> 31) & 0x01) != 0)
+        DET_R::new(((self.bits >> 31) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn rtc_mem_crc_finish(&self) -> RTC_MEM_CRC_FINISH_R {
-        RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 0x01) != 0)
+        RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

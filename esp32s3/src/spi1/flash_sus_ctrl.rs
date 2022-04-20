@@ -67,7 +67,7 @@ impl<'a> FLASH_PES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
     pub fn flash_pes_en(&self) -> FLASH_PES_EN_R {
-        FLASH_PES_EN_R::new((self.bits & 0x01) != 0)
+        FLASH_PES_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:8 - Program/Erase resume command value."]
     #[inline(always)]

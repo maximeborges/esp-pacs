@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - reg_target0_int_st"]
     #[inline(always)]
     pub fn target0_int_st(&self) -> TARGET0_INT_ST_R {
-        TARGET0_INT_ST_R::new((self.bits & 0x01) != 0)
+        TARGET0_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_target1_int_st"]
     #[inline(always)]
     pub fn target1_int_st(&self) -> TARGET1_INT_ST_R {
-        TARGET1_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        TARGET1_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_target2_int_st"]
     #[inline(always)]
     pub fn target2_int_st(&self) -> TARGET2_INT_ST_R {
-        TARGET2_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        TARGET2_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "SYSTIMER_INT_ST.\n\nThis register you can [`read`]

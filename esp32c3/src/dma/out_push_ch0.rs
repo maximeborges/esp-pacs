@@ -94,7 +94,7 @@ impl<'a> OUTFIFO_PUSH_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 9 - Set this bit to push data into DMA FIFO."]
     #[inline(always)]
     pub fn outfifo_push_ch0(&self) -> OUTFIFO_PUSH_CH0_R {
-        OUTFIFO_PUSH_CH0_R::new(((self.bits >> 9) & 0x01) != 0)
+        OUTFIFO_PUSH_CH0_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

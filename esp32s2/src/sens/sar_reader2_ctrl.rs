@@ -84,7 +84,7 @@ impl<'a> SAR2_WAIT_ARB_CYCLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> SAR2_CLK_GATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> SAR2_DATA_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> SAR2_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -235,12 +235,12 @@ impl R {
     #[doc = "Bits 16:17 - wait arbit stable after sar_done"]
     #[inline(always)]
     pub fn sar2_wait_arb_cycle(&self) -> SAR2_WAIT_ARB_CYCLE_R {
-        SAR2_WAIT_ARB_CYCLE_R::new(((self.bits >> 16) & 0x03) as u8)
+        SAR2_WAIT_ARB_CYCLE_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn sar2_clk_gated(&self) -> SAR2_CLK_GATED_R {
-        SAR2_CLK_GATED_R::new(((self.bits >> 18) & 0x01) != 0)
+        SAR2_CLK_GATED_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
@@ -250,12 +250,12 @@ impl R {
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
     pub fn sar2_data_inv(&self) -> SAR2_DATA_INV_R {
-        SAR2_DATA_INV_R::new(((self.bits >> 29) & 0x01) != 0)
+        SAR2_DATA_INV_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable saradc2 to send out interrupt"]
     #[inline(always)]
     pub fn sar2_int_en(&self) -> SAR2_INT_EN_R {
-        SAR2_INT_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        SAR2_INT_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

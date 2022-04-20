@@ -67,7 +67,7 @@ impl<'a> HOST_SLC_FUNC2_INT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn host_slc_func2_int(&self) -> HOST_SLC_FUNC2_INT_R {
-        HOST_SLC_FUNC2_INT_R::new(((self.bits >> 24) & 0x01) != 0)
+        HOST_SLC_FUNC2_INT_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

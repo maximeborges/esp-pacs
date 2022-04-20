@@ -67,7 +67,7 @@ impl<'a> SLV_WR_BUF_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -106,7 +106,7 @@ impl R {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_wr_buf_done(&self) -> SLV_WR_BUF_DONE_R {
-        SLV_WR_BUF_DONE_R::new(((self.bits >> 24) & 0x01) != 0)
+        SLV_WR_BUF_DONE_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:31 - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\]
  + SPI_CONF_BITLEN\\[23:0\\]

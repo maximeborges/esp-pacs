@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn record_app_pid(&self) -> RECORD_APP_PID_R {
-        RECORD_APP_PID_R::new((self.bits & 0x07) as u8)
+        RECORD_APP_PID_R::new((self.bits & 7) as u8)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

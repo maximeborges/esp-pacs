@@ -67,7 +67,7 @@ impl<'a> DMA_APBPERI_PMS_MONITOR_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set 1 to lock dma permission monitor Configuration Register."]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_lock(&self) -> DMA_APBPERI_PMS_MONITOR_LOCK_R {
-        DMA_APBPERI_PMS_MONITOR_LOCK_R::new((self.bits & 0x01) != 0)
+        DMA_APBPERI_PMS_MONITOR_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

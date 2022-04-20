@@ -63,14 +63,14 @@ impl R {
     #[doc = "Bit 0 - recorded dma's interrupt status when dma access violated permission"]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_intr(&self) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - recorded dma's world status when dma access violated permission"]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_status_world(
         &self,
     ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 1) & 0x03) as u8)
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:24 - recorded dma's address bit\\[25:4\\]
  status when dma access violated permission, real address is 0x3c00_0000+addr*16"]

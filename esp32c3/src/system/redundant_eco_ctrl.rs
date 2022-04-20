@@ -67,7 +67,7 @@ impl<'a> REDUNDANT_ECO_DRIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -90,12 +90,12 @@ impl R {
     #[doc = "Bit 0 - reg_redundant_eco_drive"]
     #[inline(always)]
     pub fn redundant_eco_drive(&self) -> REDUNDANT_ECO_DRIVE_R {
-        REDUNDANT_ECO_DRIVE_R::new((self.bits & 0x01) != 0)
+        REDUNDANT_ECO_DRIVE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_redundant_eco_result"]
     #[inline(always)]
     pub fn redundant_eco_result(&self) -> REDUNDANT_ECO_RESULT_R {
-        REDUNDANT_ECO_RESULT_R::new(((self.bits >> 1) & 0x01) != 0)
+        REDUNDANT_ECO_RESULT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

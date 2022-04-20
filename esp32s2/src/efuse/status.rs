@@ -142,32 +142,32 @@ impl R {
     #[doc = "Bit 4 - The value of OTP_LOAD_SW."]
     #[inline(always)]
     pub fn otp_load_sw(&self) -> OTP_LOAD_SW_R {
-        OTP_LOAD_SW_R::new(((self.bits >> 4) & 0x01) != 0)
+        OTP_LOAD_SW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The value of OTP_VDDQ_C_SYNC2."]
     #[inline(always)]
     pub fn otp_vddq_c_sync2(&self) -> OTP_VDDQ_C_SYNC2_R {
-        OTP_VDDQ_C_SYNC2_R::new(((self.bits >> 5) & 0x01) != 0)
+        OTP_VDDQ_C_SYNC2_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The value of OTP_STROBE_SW."]
     #[inline(always)]
     pub fn otp_strobe_sw(&self) -> OTP_STROBE_SW_R {
-        OTP_STROBE_SW_R::new(((self.bits >> 6) & 0x01) != 0)
+        OTP_STROBE_SW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The value of OTP_CSB_SW."]
     #[inline(always)]
     pub fn otp_csb_sw(&self) -> OTP_CSB_SW_R {
-        OTP_CSB_SW_R::new(((self.bits >> 7) & 0x01) != 0)
+        OTP_CSB_SW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The value of OTP_PGENB_SW."]
     #[inline(always)]
     pub fn otp_pgenb_sw(&self) -> OTP_PGENB_SW_R {
-        OTP_PGENB_SW_R::new(((self.bits >> 8) & 0x01) != 0)
+        OTP_PGENB_SW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The value of OTP_VDDQ_IS_SW."]
     #[inline(always)]
     pub fn otp_vddq_is_sw(&self) -> OTP_VDDQ_IS_SW_R {
-        OTP_VDDQ_IS_SW_R::new(((self.bits >> 9) & 0x01) != 0)
+        OTP_VDDQ_IS_SW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:17 - Indicates the number of error bits during programming BLOCK0."]
     #[inline(always)]

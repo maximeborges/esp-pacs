@@ -67,7 +67,7 @@ impl<'a> INT0_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> INT1_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> INT2_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Interrupt enable bit of system timer target 0."]
     #[inline(always)]
     pub fn int0_ena(&self) -> INT0_ENA_R {
-        INT0_ENA_R::new((self.bits & 0x01) != 0)
+        INT0_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Interrupt enable bit of system timer target 1."]
     #[inline(always)]
     pub fn int1_ena(&self) -> INT1_ENA_R {
-        INT1_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        INT1_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt enable bit of system timer target 2."]
     #[inline(always)]
     pub fn int2_ena(&self) -> INT2_ENA_R {
-        INT2_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        INT2_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

@@ -57,7 +57,7 @@ impl<'a> D_DQS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> D_CD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> D_DE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> D_HSYNC_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> D_VSYNC_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -202,7 +202,7 @@ impl<'a> DE_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> HS_BLANK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -247,37 +247,37 @@ impl R {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_dqs_mode(&self) -> D_DQS_MODE_R {
-        D_DQS_MODE_R::new((self.bits & 0x07) as u8)
+        D_DQS_MODE_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_cd_mode(&self) -> D_CD_MODE_R {
-        D_CD_MODE_R::new(((self.bits >> 3) & 0x07) as u8)
+        D_CD_MODE_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_de_mode(&self) -> D_DE_MODE_R {
-        D_DE_MODE_R::new(((self.bits >> 6) & 0x07) as u8)
+        D_DE_MODE_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11 - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_hsync_mode(&self) -> D_HSYNC_MODE_R {
-        D_HSYNC_MODE_R::new(((self.bits >> 9) & 0x07) as u8)
+        D_HSYNC_MODE_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:14 - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_vsync_mode(&self) -> D_VSYNC_MODE_R {
-        D_VSYNC_MODE_R::new(((self.bits >> 12) & 0x07) as u8)
+        D_VSYNC_MODE_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bit 15 - It is the idle value of spi_de."]
     #[inline(always)]
     pub fn de_idle_pol(&self) -> DE_IDLE_POL_R {
-        DE_IDLE_POL_R::new(((self.bits >> 15) & 0x01) != 0)
+        DE_IDLE_POL_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
     #[inline(always)]
     pub fn hs_blank_en(&self) -> HS_BLANK_EN_R {
-        HS_BLANK_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        HS_BLANK_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

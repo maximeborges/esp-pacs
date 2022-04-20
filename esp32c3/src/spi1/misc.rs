@@ -67,7 +67,7 @@ impl<'a> CS0_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CS1_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CS_KEEP_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - SPI_CS0 pin enable, 1: disable SPI_CS0, 0: SPI_CS0 pin is active to select SPI device, such as flash, external RAM and so on."]
     #[inline(always)]
     pub fn cs0_dis(&self) -> CS0_DIS_R {
-        CS0_DIS_R::new((self.bits & 0x01) != 0)
+        CS0_DIS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SPI_CS1 pin enable, 1: disable SPI_CS1, 0: SPI_CS1 pin is active to select SPI device, such as flash, external RAM and so on."]
     #[inline(always)]
     pub fn cs1_dis(&self) -> CS1_DIS_R {
-        CS1_DIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     pub fn ck_idle_edge(&self) -> CK_IDLE_EDGE_R {
-        CK_IDLE_EDGE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CK_IDLE_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     pub fn cs_keep_active(&self) -> CS_KEEP_ACTIVE_R {
-        CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 0x01) != 0)
+        CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

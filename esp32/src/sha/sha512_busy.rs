@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - SHA-512 operation status: 1 if the SHA accelerator is processing data, 0 if it is idle."]
     #[inline(always)]
     pub fn sha512_busy(&self) -> SHA512_BUSY_R {
-        SHA512_BUSY_R::new((self.bits & 0x01) != 0)
+        SHA512_BUSY_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

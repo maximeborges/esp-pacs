@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - 1: i2s_tx is idle state. 0: i2s_tx is working."]
     #[inline(always)]
     pub fn i2s_tx_idle(&self) -> I2S_TX_IDLE_R {
-        I2S_TX_IDLE_R::new((self.bits & 0x01) != 0)
+        I2S_TX_IDLE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "I2S TX status register\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> CAP_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CAP_SYNCI_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> CAP_SYNCI_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 2)) | ((value as u32 & 0x07) << 2);
+        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u32 & 7) << 2);
         self.w
     }
 }
@@ -153,7 +153,7 @@ impl<'a> CAP_SYNC_SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -161,17 +161,17 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn cap_timer_en(&self) -> CAP_TIMER_EN_R {
-        CAP_TIMER_EN_R::new((self.bits & 0x01) != 0)
+        CAP_TIMER_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn cap_synci_en(&self) -> CAP_SYNCI_EN_R {
-        CAP_SYNCI_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CAP_SYNCI_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
     pub fn cap_synci_sel(&self) -> CAP_SYNCI_SEL_R {
-        CAP_SYNCI_SEL_R::new(((self.bits >> 2) & 0x07) as u8)
+        CAP_SYNCI_SEL_R::new(((self.bits >> 2) & 7) as u8)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> SLAVE_TRANS_COMPLETE_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ARBITRATION_LOST_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MASTER_TRANS_COMPLETE_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TRANS_COMPLETE_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -201,27 +201,27 @@ impl R {
     #[doc = "Bit 3 - Slave accepted 1 byte and address matched"]
     #[inline(always)]
     pub fn slave_trans_complete_int_raw(&self) -> SLAVE_TRANS_COMPLETE_INT_RAW_R {
-        SLAVE_TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLAVE_TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Master lost arbitration"]
     #[inline(always)]
     pub fn arbitration_lost_int_raw(&self) -> ARBITRATION_LOST_INT_RAW_R {
-        ARBITRATION_LOST_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        ARBITRATION_LOST_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn master_trans_complete_int_raw(&self) -> MASTER_TRANS_COMPLETE_INT_RAW_R {
-        MASTER_TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        MASTER_TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Stop condition has been detected interrupt raw status"]
     #[inline(always)]
     pub fn trans_complete_int_raw(&self) -> TRANS_COMPLETE_INT_RAW_R {
-        TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - time out interrupt raw status"]
     #[inline(always)]
     pub fn time_out_int_raw(&self) -> TIME_OUT_INT_RAW_R {
-        TIME_OUT_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        TIME_OUT_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

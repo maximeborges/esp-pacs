@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - t0_int_raw"]
     #[inline(always)]
     pub fn t0_int_raw(&self) -> T0_INT_RAW_R {
-        T0_INT_RAW_R::new((self.bits & 0x01) != 0)
+        T0_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - wdt_int_raw"]
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
-        WDT_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        WDT_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "INT_RAW_TIMG_REG\n\nThis register you can [`read`]

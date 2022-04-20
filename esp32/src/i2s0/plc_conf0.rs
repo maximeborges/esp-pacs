@@ -84,7 +84,7 @@ impl<'a> N_ERR_SEG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> SHIFT_RATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> N_MIN_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -205,12 +205,12 @@ impl R {
     #[doc = "Bits 6:8"]
     #[inline(always)]
     pub fn n_err_seg(&self) -> N_ERR_SEG_R {
-        N_ERR_SEG_R::new(((self.bits >> 6) & 0x07) as u8)
+        N_ERR_SEG_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
     pub fn shift_rate(&self) -> SHIFT_RATE_R {
-        SHIFT_RATE_R::new(((self.bits >> 9) & 0x07) as u8)
+        SHIFT_RATE_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:19"]
     #[inline(always)]
@@ -225,7 +225,7 @@ impl R {
     #[doc = "Bits 25:27"]
     #[inline(always)]
     pub fn n_min_err(&self) -> N_MIN_ERR_R {
-        N_MIN_ERR_R::new(((self.bits >> 25) & 0x07) as u8)
+        N_MIN_ERR_R::new(((self.bits >> 25) & 7) as u8)
     }
 }
 impl W {

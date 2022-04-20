@@ -67,7 +67,7 @@ impl<'a> CLK20_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CLK22_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CLK44_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CLK_BB_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CLK80_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CLK160_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> CLK_320M_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> CLK_ADC_INF_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CLK_DAC_CPU_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CLK40X_BB_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CLK_XTAL_OEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -445,57 +445,57 @@ impl R {
     #[doc = "Bit 0 - reg_clk20_oen"]
     #[inline(always)]
     pub fn clk20_oen(&self) -> CLK20_OEN_R {
-        CLK20_OEN_R::new((self.bits & 0x01) != 0)
+        CLK20_OEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_clk22_oen"]
     #[inline(always)]
     pub fn clk22_oen(&self) -> CLK22_OEN_R {
-        CLK22_OEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CLK22_OEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_clk44_oen"]
     #[inline(always)]
     pub fn clk44_oen(&self) -> CLK44_OEN_R {
-        CLK44_OEN_R::new(((self.bits >> 2) & 0x01) != 0)
+        CLK44_OEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_clk_bb_oen"]
     #[inline(always)]
     pub fn clk_bb_oen(&self) -> CLK_BB_OEN_R {
-        CLK_BB_OEN_R::new(((self.bits >> 3) & 0x01) != 0)
+        CLK_BB_OEN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_clk80_oen"]
     #[inline(always)]
     pub fn clk80_oen(&self) -> CLK80_OEN_R {
-        CLK80_OEN_R::new(((self.bits >> 4) & 0x01) != 0)
+        CLK80_OEN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_clk160_oen"]
     #[inline(always)]
     pub fn clk160_oen(&self) -> CLK160_OEN_R {
-        CLK160_OEN_R::new(((self.bits >> 5) & 0x01) != 0)
+        CLK160_OEN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_clk_320m_oen"]
     #[inline(always)]
     pub fn clk_320m_oen(&self) -> CLK_320M_OEN_R {
-        CLK_320M_OEN_R::new(((self.bits >> 6) & 0x01) != 0)
+        CLK_320M_OEN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_clk_adc_inf_oen"]
     #[inline(always)]
     pub fn clk_adc_inf_oen(&self) -> CLK_ADC_INF_OEN_R {
-        CLK_ADC_INF_OEN_R::new(((self.bits >> 7) & 0x01) != 0)
+        CLK_ADC_INF_OEN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_clk_dac_cpu_oen"]
     #[inline(always)]
     pub fn clk_dac_cpu_oen(&self) -> CLK_DAC_CPU_OEN_R {
-        CLK_DAC_CPU_OEN_R::new(((self.bits >> 8) & 0x01) != 0)
+        CLK_DAC_CPU_OEN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_clk40x_bb_oen"]
     #[inline(always)]
     pub fn clk40x_bb_oen(&self) -> CLK40X_BB_OEN_R {
-        CLK40X_BB_OEN_R::new(((self.bits >> 9) & 0x01) != 0)
+        CLK40X_BB_OEN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_clk_xtal_oen"]
     #[inline(always)]
     pub fn clk_xtal_oen(&self) -> CLK_XTAL_OEN_R {
-        CLK_XTAL_OEN_R::new(((self.bits >> 10) & 0x01) != 0)
+        CLK_XTAL_OEN_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

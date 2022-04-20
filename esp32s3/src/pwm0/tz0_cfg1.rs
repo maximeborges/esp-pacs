@@ -67,7 +67,7 @@ impl<'a> TZ0_CLR_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> TZ0_CBCPULSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TZ0_FORCE_CBC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> TZ0_FORCE_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -176,22 +176,22 @@ impl R {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
     pub fn tz0_clr_ost(&self) -> TZ0_CLR_OST_R {
-        TZ0_CLR_OST_R::new((self.bits & 0x01) != 0)
+        TZ0_CLR_OST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
     #[inline(always)]
     pub fn tz0_cbcpulse(&self) -> TZ0_CBCPULSE_R {
-        TZ0_CBCPULSE_R::new(((self.bits >> 1) & 0x03) as u8)
+        TZ0_CBCPULSE_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bit 3 - a toggle trigger a cycle-by-cycle mode action"]
     #[inline(always)]
     pub fn tz0_force_cbc(&self) -> TZ0_FORCE_CBC_R {
-        TZ0_FORCE_CBC_R::new(((self.bits >> 3) & 0x01) != 0)
+        TZ0_FORCE_CBC_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - a toggle (software negate its value) triggers a one-shot mode action"]
     #[inline(always)]
     pub fn tz0_force_ost(&self) -> TZ0_FORCE_OST_R {
-        TZ0_FORCE_OST_R::new(((self.bits >> 4) & 0x01) != 0)
+        TZ0_FORCE_OST_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

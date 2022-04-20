@@ -94,7 +94,7 @@ impl<'a> CLK_320M_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> RST_TICK_CNT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -181,17 +181,17 @@ impl R {
     #[doc = "Bit 10 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_320m_en(&self) -> CLK_320M_EN_R {
-        CLK_320M_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        CLK_320M_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - ******* Description ***********"]
     #[inline(always)]
     pub fn rst_tick_cnt(&self) -> RST_TICK_CNT_R {
-        RST_TICK_CNT_R::new(((self.bits >> 12) & 0x01) != 0)
+        RST_TICK_CNT_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {

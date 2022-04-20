@@ -57,7 +57,7 @@ impl<'a> VDD_SPI_PWR_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> VDD_SPI_PWR_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> LSLP_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> LSLP_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> BT_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> BT_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> DG_PERI_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> DG_PERI_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> WIFI_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -464,7 +464,7 @@ impl<'a> WIFI_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -501,7 +501,7 @@ impl<'a> DG_WRAP_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -538,7 +538,7 @@ impl<'a> DG_WRAP_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -575,7 +575,7 @@ impl<'a> CPU_TOP_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -612,7 +612,7 @@ impl<'a> CPU_TOP_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -649,7 +649,7 @@ impl<'a> BT_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -686,7 +686,7 @@ impl<'a> DG_PERI_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -723,7 +723,7 @@ impl<'a> CPU_TOP_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -760,7 +760,7 @@ impl<'a> WIFI_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -797,7 +797,7 @@ impl<'a> DG_WRAP_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -805,107 +805,107 @@ impl R {
     #[doc = "Bits 0:1 - vdd_spi drv's software value"]
     #[inline(always)]
     pub fn vdd_spi_pwr_drv(&self) -> VDD_SPI_PWR_DRV_R {
-        VDD_SPI_PWR_DRV_R::new((self.bits & 0x03) as u8)
+        VDD_SPI_PWR_DRV_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - vdd_spi drv use software value"]
     #[inline(always)]
     pub fn vdd_spi_pwr_force(&self) -> VDD_SPI_PWR_FORCE_R {
-        VDD_SPI_PWR_FORCE_R::new(((self.bits >> 2) & 0x01) != 0)
+        VDD_SPI_PWR_FORCE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - memories in digital core force PD in sleep"]
     #[inline(always)]
     pub fn lslp_mem_force_pd(&self) -> LSLP_MEM_FORCE_PD_R {
-        LSLP_MEM_FORCE_PD_R::new(((self.bits >> 3) & 0x01) != 0)
+        LSLP_MEM_FORCE_PD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - memories in digital core force PU in sleep"]
     #[inline(always)]
     pub fn lslp_mem_force_pu(&self) -> LSLP_MEM_FORCE_PU_R {
-        LSLP_MEM_FORCE_PU_R::new(((self.bits >> 4) & 0x01) != 0)
+        LSLP_MEM_FORCE_PU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 11 - bt force power down"]
     #[inline(always)]
     pub fn bt_force_pd(&self) -> BT_FORCE_PD_R {
-        BT_FORCE_PD_R::new(((self.bits >> 11) & 0x01) != 0)
+        BT_FORCE_PD_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - bt force power up"]
     #[inline(always)]
     pub fn bt_force_pu(&self) -> BT_FORCE_PU_R {
-        BT_FORCE_PU_R::new(((self.bits >> 12) & 0x01) != 0)
+        BT_FORCE_PU_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - digital peri force power down"]
     #[inline(always)]
     pub fn dg_peri_force_pd(&self) -> DG_PERI_FORCE_PD_R {
-        DG_PERI_FORCE_PD_R::new(((self.bits >> 13) & 0x01) != 0)
+        DG_PERI_FORCE_PD_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - digital peri force power up"]
     #[inline(always)]
     pub fn dg_peri_force_pu(&self) -> DG_PERI_FORCE_PU_R {
-        DG_PERI_FORCE_PU_R::new(((self.bits >> 14) & 0x01) != 0)
+        DG_PERI_FORCE_PU_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - fastmemory retention mode in sleep"]
     #[inline(always)]
     pub fn rtc_fastmem_force_lpd(&self) -> RTC_FASTMEM_FORCE_LPD_R {
-        RTC_FASTMEM_FORCE_LPD_R::new(((self.bits >> 15) & 0x01) != 0)
+        RTC_FASTMEM_FORCE_LPD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - fastmemory donlt entry retention mode in sleep"]
     #[inline(always)]
     pub fn rtc_fastmem_force_lpu(&self) -> RTC_FASTMEM_FORCE_LPU_R {
-        RTC_FASTMEM_FORCE_LPU_R::new(((self.bits >> 16) & 0x01) != 0)
+        RTC_FASTMEM_FORCE_LPU_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]
     pub fn wifi_force_pd(&self) -> WIFI_FORCE_PD_R {
-        WIFI_FORCE_PD_R::new(((self.bits >> 17) & 0x01) != 0)
+        WIFI_FORCE_PD_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - wifi force power up"]
     #[inline(always)]
     pub fn wifi_force_pu(&self) -> WIFI_FORCE_PU_R {
-        WIFI_FORCE_PU_R::new(((self.bits >> 18) & 0x01) != 0)
+        WIFI_FORCE_PU_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
     pub fn dg_wrap_force_pd(&self) -> DG_WRAP_FORCE_PD_R {
-        DG_WRAP_FORCE_PD_R::new(((self.bits >> 19) & 0x01) != 0)
+        DG_WRAP_FORCE_PD_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
     pub fn dg_wrap_force_pu(&self) -> DG_WRAP_FORCE_PU_R {
-        DG_WRAP_FORCE_PU_R::new(((self.bits >> 20) & 0x01) != 0)
+        DG_WRAP_FORCE_PU_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - cpu core force power down"]
     #[inline(always)]
     pub fn cpu_top_force_pd(&self) -> CPU_TOP_FORCE_PD_R {
-        CPU_TOP_FORCE_PD_R::new(((self.bits >> 21) & 0x01) != 0)
+        CPU_TOP_FORCE_PD_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - cpu force power up"]
     #[inline(always)]
     pub fn cpu_top_force_pu(&self) -> CPU_TOP_FORCE_PU_R {
-        CPU_TOP_FORCE_PU_R::new(((self.bits >> 22) & 0x01) != 0)
+        CPU_TOP_FORCE_PU_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 27 - enable power down bt in sleep"]
     #[inline(always)]
     pub fn bt_pd_en(&self) -> BT_PD_EN_R {
-        BT_PD_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        BT_PD_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - enable power down digital peri in sleep"]
     #[inline(always)]
     pub fn dg_peri_pd_en(&self) -> DG_PERI_PD_EN_R {
-        DG_PERI_PD_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        DG_PERI_PD_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - enable power down cpu in sleep"]
     #[inline(always)]
     pub fn cpu_top_pd_en(&self) -> CPU_TOP_PD_EN_R {
-        CPU_TOP_PD_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        CPU_TOP_PD_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable power down wifi in sleep"]
     #[inline(always)]
     pub fn wifi_pd_en(&self) -> WIFI_PD_EN_R {
-        WIFI_PD_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        WIFI_PD_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable power down digital wrap in sleep"]
     #[inline(always)]
     pub fn dg_wrap_pd_en(&self) -> DG_WRAP_PD_EN_R {
-        DG_WRAP_PD_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        DG_WRAP_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

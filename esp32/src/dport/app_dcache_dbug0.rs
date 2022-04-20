@@ -67,7 +67,7 @@ impl<'a> APP_SLAVE_WDATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -195,12 +195,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_slave_wdata(&self) -> APP_SLAVE_WDATA_R {
-        APP_SLAVE_WDATA_R::new((self.bits & 0x01) != 0)
+        APP_SLAVE_WDATA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_cache_mmu_ia(&self) -> APP_CACHE_MMU_IA_R {
-        APP_CACHE_MMU_IA_R::new((self.bits & 0x01) != 0)
+        APP_CACHE_MMU_IA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:6"]
     #[inline(always)]
@@ -215,27 +215,27 @@ impl R {
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn app_wr_bak_to_read(&self) -> APP_WR_BAK_TO_READ_R {
-        APP_WR_BAK_TO_READ_R::new(((self.bits >> 19) & 0x01) != 0)
+        APP_WR_BAK_TO_READ_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn app_tx_end(&self) -> APP_TX_END_R {
-        APP_TX_END_R::new(((self.bits >> 20) & 0x01) != 0)
+        APP_TX_END_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn app_slave_wr(&self) -> APP_SLAVE_WR_R {
-        APP_SLAVE_WR_R::new(((self.bits >> 21) & 0x01) != 0)
+        APP_SLAVE_WR_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn app_slave_wdata_v(&self) -> APP_SLAVE_WDATA_V_R {
-        APP_SLAVE_WDATA_V_R::new(((self.bits >> 22) & 0x01) != 0)
+        APP_SLAVE_WDATA_V_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn app_rx_end(&self) -> APP_RX_END_R {
-        APP_RX_END_R::new(((self.bits >> 23) & 0x01) != 0)
+        APP_RX_END_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> LPCLK_SEL_RTC_SLOW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LPCLK_SEL_8M_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> LPCLK_SEL_XTAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> LPCLK_SEL_XTAL32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> LPCLK_RTC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 24 - Set this bit to select RTC slow clock as the low power clock."]
     #[inline(always)]
     pub fn lpclk_sel_rtc_slow(&self) -> LPCLK_SEL_RTC_SLOW_R {
-        LPCLK_SEL_RTC_SLOW_R::new(((self.bits >> 24) & 0x01) != 0)
+        LPCLK_SEL_RTC_SLOW_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Set this bit to select 8m clock as the low power clock."]
     #[inline(always)]
     pub fn lpclk_sel_8m(&self) -> LPCLK_SEL_8M_R {
-        LPCLK_SEL_8M_R::new(((self.bits >> 25) & 0x01) != 0)
+        LPCLK_SEL_8M_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Set this bit to select xtal clock as the low power clock."]
     #[inline(always)]
     pub fn lpclk_sel_xtal(&self) -> LPCLK_SEL_XTAL_R {
-        LPCLK_SEL_XTAL_R::new(((self.bits >> 26) & 0x01) != 0)
+        LPCLK_SEL_XTAL_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Set this bit to select xtal32k clock as the low power clock."]
     #[inline(always)]
     pub fn lpclk_sel_xtal32k(&self) -> LPCLK_SEL_XTAL32K_R {
-        LPCLK_SEL_XTAL32K_R::new(((self.bits >> 27) & 0x01) != 0)
+        LPCLK_SEL_XTAL32K_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Set this bit to enable the RTC low power clock."]
     #[inline(always)]
     pub fn lpclk_rtc_en(&self) -> LPCLK_RTC_EN_R {
-        LPCLK_RTC_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        LPCLK_RTC_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> APB_PERIPHERAL_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
     pub fn apb_peripheral_lock(&self) -> APB_PERIPHERAL_LOCK_R {
-        APB_PERIPHERAL_LOCK_R::new((self.bits & 0x01) != 0)
+        APB_PERIPHERAL_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

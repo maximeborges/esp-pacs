@@ -92,27 +92,27 @@ impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     pub fn per_end_int_st(&self) -> PER_END_INT_ST_R {
-        PER_END_INT_ST_R::new((self.bits & 0x01) != 0)
+        PER_END_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     pub fn pes_end_int_st(&self) -> PES_END_INT_ST_R {
-        PES_END_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        PES_END_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The status bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
     pub fn wpe_end_int_st(&self) -> WPE_END_INT_ST_R {
-        WPE_END_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        WPE_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The status bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
     pub fn slv_st_end_int_st(&self) -> SLV_ST_END_INT_ST_R {
-        SLV_ST_END_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLV_ST_END_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The status bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
     pub fn mst_st_end_int_st(&self) -> MST_ST_END_INT_ST_R {
-        MST_ST_END_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        MST_ST_END_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[doc = "SPI1 interrupt status register\n\nThis register you can [`read`]

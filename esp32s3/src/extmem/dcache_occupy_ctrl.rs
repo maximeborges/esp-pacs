@@ -67,7 +67,7 @@ impl<'a> DCACHE_OCCUPY_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -90,12 +90,12 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
     #[inline(always)]
     pub fn dcache_occupy_ena(&self) -> DCACHE_OCCUPY_ENA_R {
-        DCACHE_OCCUPY_ENA_R::new((self.bits & 0x01) != 0)
+        DCACHE_OCCUPY_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate occupy operation is finished."]
     #[inline(always)]
     pub fn dcache_occupy_done(&self) -> DCACHE_OCCUPY_DONE_R {
-        DCACHE_OCCUPY_DONE_R::new(((self.bits >> 1) & 0x01) != 0)
+        DCACHE_OCCUPY_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

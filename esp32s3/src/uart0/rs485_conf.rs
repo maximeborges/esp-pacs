@@ -67,7 +67,7 @@ impl<'a> RS485_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DL0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DL1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RS485TX_RX_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RS485RXBY_TX_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RS485_RX_DLY_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -287,32 +287,32 @@ impl R {
     #[doc = "Bit 0 - Set this bit to choose the rs485 mode."]
     #[inline(always)]
     pub fn rs485_en(&self) -> RS485_EN_R {
-        RS485_EN_R::new((self.bits & 0x01) != 0)
+        RS485_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     pub fn dl0_en(&self) -> DL0_EN_R {
-        DL0_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        DL0_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     pub fn dl1_en(&self) -> DL1_EN_R {
-        DL1_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        DL1_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
     #[inline(always)]
     pub fn rs485tx_rx_en(&self) -> RS485TX_RX_EN_R {
-        RS485TX_RX_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        RS485TX_RX_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
     #[inline(always)]
     pub fn rs485rxby_tx_en(&self) -> RS485RXBY_TX_EN_R {
-        RS485RXBY_TX_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        RS485RXBY_TX_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This register is used to delay the receiver's internal data signal."]
     #[inline(always)]
     pub fn rs485_rx_dly_num(&self) -> RS485_RX_DLY_NUM_R {
-        RS485_RX_DLY_NUM_R::new(((self.bits >> 5) & 0x01) != 0)
+        RS485_RX_DLY_NUM_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:9 - This register is used to delay the transmitter's internal data signal."]
     #[inline(always)]

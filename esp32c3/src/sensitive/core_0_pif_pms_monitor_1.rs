@@ -67,7 +67,7 @@ impl<'a> CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - core_0_pif_pms_monitor_violate_clr"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_violate_clr(&self) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R::new((self.bits & 0x01) != 0)
+        CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - core_0_pif_pms_monitor_violate_en"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_violate_en(&self) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

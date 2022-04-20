@@ -138,7 +138,7 @@ impl<'a> SCLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> SCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> RST_CORE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -249,7 +249,7 @@ impl<'a> TX_SCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> RX_SCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> TX_RST_CORE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> RX_RST_CORE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -383,37 +383,37 @@ impl R {
     #[doc = "Bits 20:21 - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
     #[inline(always)]
     pub fn sclk_sel(&self) -> SCLK_SEL_R {
-        SCLK_SEL_R::new(((self.bits >> 20) & 0x03) as u8)
+        SCLK_SEL_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bit 22 - Set this bit to enable UART Tx/Rx clock."]
     #[inline(always)]
     pub fn sclk_en(&self) -> SCLK_EN_R {
-        SCLK_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        SCLK_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
     #[inline(always)]
     pub fn rst_core(&self) -> RST_CORE_R {
-        RST_CORE_R::new(((self.bits >> 23) & 0x01) != 0)
+        RST_CORE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
     pub fn tx_sclk_en(&self) -> TX_SCLK_EN_R {
-        TX_SCLK_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        TX_SCLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Set this bit to enable UART Rx clock."]
     #[inline(always)]
     pub fn rx_sclk_en(&self) -> RX_SCLK_EN_R {
-        RX_SCLK_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        RX_SCLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit, reset UART Tx."]
     #[inline(always)]
     pub fn tx_rst_core(&self) -> TX_RST_CORE_R {
-        TX_RST_CORE_R::new(((self.bits >> 26) & 0x01) != 0)
+        TX_RST_CORE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Write 1 then write 0 to this bit, reset UART Rx."]
     #[inline(always)]
     pub fn rx_rst_core(&self) -> RX_RST_CORE_R {
-        RX_RST_CORE_R::new(((self.bits >> 27) & 0x01) != 0)
+        RX_RST_CORE_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

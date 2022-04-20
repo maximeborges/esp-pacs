@@ -92,27 +92,27 @@ impl R {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed. 0: Others."]
     #[inline(always)]
     pub fn per_end_int_raw(&self) -> PER_END_INT_RAW_R {
-        PER_END_INT_RAW_R::new((self.bits & 0x01) != 0)
+        PER_END_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended. 0: Others."]
     #[inline(always)]
     pub fn pes_end_int_raw(&self) -> PES_END_INT_RAW_R {
-        PES_END_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        PES_END_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
     #[inline(always)]
     pub fn wpe_end_int_raw(&self) -> WPE_END_INT_RAW_R {
-        WPE_END_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        WPE_END_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
     pub fn slv_st_end_int_raw(&self) -> SLV_ST_END_INT_RAW_R {
-        SLV_ST_END_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLV_ST_END_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
     #[inline(always)]
     pub fn mst_st_end_int_raw(&self) -> MST_ST_END_INT_RAW_R {
-        MST_ST_END_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        MST_ST_END_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[doc = "SPI1 interrupt raw register\n\nThis register you can [`read`]

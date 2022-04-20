@@ -67,7 +67,7 @@ impl<'a> DMA_RX_I_SRAM_0_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DMA_RX_I_SRAM_0_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DMA_RX_I_SRAM_1_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> DMA_RX_I_SRAM_1_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DMA_RX_I_SRAM_2_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> DMA_RX_I_SRAM_2_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> DMA_RX_I_SRAM_3_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> DMA_RX_I_SRAM_3_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> DMA_RX_I_SRAM_4_L_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> DMA_RX_I_SRAM_4_L_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -464,7 +464,7 @@ impl<'a> DMA_RX_I_SRAM_4_H_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -501,7 +501,7 @@ impl<'a> DMA_RX_I_SRAM_4_H_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -509,42 +509,42 @@ impl R {
     #[doc = "Bit 0 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 0."]
     #[inline(always)]
     pub fn dma_rx_i_sram_0_r(&self) -> DMA_RX_I_SRAM_0_R_R {
-        DMA_RX_I_SRAM_0_R_R::new((self.bits & 0x01) != 0)
+        DMA_RX_I_SRAM_0_R_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 0."]
     #[inline(always)]
     pub fn dma_rx_i_sram_0_w(&self) -> DMA_RX_I_SRAM_0_W_R {
-        DMA_RX_I_SRAM_0_W_R::new(((self.bits >> 1) & 0x01) != 0)
+        DMA_RX_I_SRAM_0_W_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 1."]
     #[inline(always)]
     pub fn dma_rx_i_sram_1_r(&self) -> DMA_RX_I_SRAM_1_R_R {
-        DMA_RX_I_SRAM_1_R_R::new(((self.bits >> 2) & 0x01) != 0)
+        DMA_RX_I_SRAM_1_R_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 1."]
     #[inline(always)]
     pub fn dma_rx_i_sram_1_w(&self) -> DMA_RX_I_SRAM_1_W_R {
-        DMA_RX_I_SRAM_1_W_R::new(((self.bits >> 3) & 0x01) != 0)
+        DMA_RX_I_SRAM_1_W_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 2."]
     #[inline(always)]
     pub fn dma_rx_i_sram_2_r(&self) -> DMA_RX_I_SRAM_2_R_R {
-        DMA_RX_I_SRAM_2_R_R::new(((self.bits >> 4) & 0x01) != 0)
+        DMA_RX_I_SRAM_2_R_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 2."]
     #[inline(always)]
     pub fn dma_rx_i_sram_2_w(&self) -> DMA_RX_I_SRAM_2_W_R {
-        DMA_RX_I_SRAM_2_W_R::new(((self.bits >> 5) & 0x01) != 0)
+        DMA_RX_I_SRAM_2_W_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 3."]
     #[inline(always)]
     pub fn dma_rx_i_sram_3_r(&self) -> DMA_RX_I_SRAM_3_R_R {
-        DMA_RX_I_SRAM_3_R_R::new(((self.bits >> 6) & 0x01) != 0)
+        DMA_RX_I_SRAM_3_R_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 3."]
     #[inline(always)]
     pub fn dma_rx_i_sram_3_w(&self) -> DMA_RX_I_SRAM_3_W_R {
-        DMA_RX_I_SRAM_3_W_R::new(((self.bits >> 7) & 0x01) != 0)
+        DMA_RX_I_SRAM_3_W_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:24 - Configure the split address of SRAM Block 4-21 for RX Copy DMA access."]
     #[inline(always)]
@@ -554,22 +554,22 @@ impl R {
     #[doc = "Bit 25 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
     pub fn dma_rx_i_sram_4_l_r(&self) -> DMA_RX_I_SRAM_4_L_R_R {
-        DMA_RX_I_SRAM_4_L_R_R::new(((self.bits >> 25) & 0x01) != 0)
+        DMA_RX_I_SRAM_4_L_R_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
     pub fn dma_rx_i_sram_4_l_w(&self) -> DMA_RX_I_SRAM_4_L_W_R {
-        DMA_RX_I_SRAM_4_L_W_R::new(((self.bits >> 26) & 0x01) != 0)
+        DMA_RX_I_SRAM_4_L_W_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
     pub fn dma_rx_i_sram_4_h_r(&self) -> DMA_RX_I_SRAM_4_H_R_R {
-        DMA_RX_I_SRAM_4_H_R_R::new(((self.bits >> 27) & 0x01) != 0)
+        DMA_RX_I_SRAM_4_H_R_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 4~21 high address region."]
     #[inline(always)]
     pub fn dma_rx_i_sram_4_h_w(&self) -> DMA_RX_I_SRAM_4_H_W_R {
-        DMA_RX_I_SRAM_4_H_W_R::new(((self.bits >> 28) & 0x01) != 0)
+        DMA_RX_I_SRAM_4_H_W_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

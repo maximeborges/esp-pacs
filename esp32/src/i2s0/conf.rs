@@ -67,7 +67,7 @@ impl<'a> TX_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TX_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RX_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> TX_SLAVE_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_SLAVE_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TX_RIGHT_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RX_RIGHT_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> TX_MSB_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> RX_MSB_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> TX_SHORT_SYNC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> RX_SHORT_SYNC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> TX_MONO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> RX_MONO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> TX_MSB_RIGHT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> RX_MSB_RIGHT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> SIG_LOOPBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -741,97 +741,97 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn tx_reset(&self) -> TX_RESET_R {
-        TX_RESET_R::new((self.bits & 0x01) != 0)
+        TX_RESET_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn rx_reset(&self) -> RX_RESET_R {
-        RX_RESET_R::new(((self.bits >> 1) & 0x01) != 0)
+        RX_RESET_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn tx_fifo_reset(&self) -> TX_FIFO_RESET_R {
-        TX_FIFO_RESET_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_FIFO_RESET_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn rx_fifo_reset(&self) -> RX_FIFO_RESET_R {
-        RX_FIFO_RESET_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FIFO_RESET_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn tx_start(&self) -> TX_START_R {
-        TX_START_R::new(((self.bits >> 4) & 0x01) != 0)
+        TX_START_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn rx_start(&self) -> RX_START_R {
-        RX_START_R::new(((self.bits >> 5) & 0x01) != 0)
+        RX_START_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn tx_slave_mod(&self) -> TX_SLAVE_MOD_R {
-        TX_SLAVE_MOD_R::new(((self.bits >> 6) & 0x01) != 0)
+        TX_SLAVE_MOD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn rx_slave_mod(&self) -> RX_SLAVE_MOD_R {
-        RX_SLAVE_MOD_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_SLAVE_MOD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn tx_right_first(&self) -> TX_RIGHT_FIRST_R {
-        TX_RIGHT_FIRST_R::new(((self.bits >> 8) & 0x01) != 0)
+        TX_RIGHT_FIRST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn rx_right_first(&self) -> RX_RIGHT_FIRST_R {
-        RX_RIGHT_FIRST_R::new(((self.bits >> 9) & 0x01) != 0)
+        RX_RIGHT_FIRST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn tx_msb_shift(&self) -> TX_MSB_SHIFT_R {
-        TX_MSB_SHIFT_R::new(((self.bits >> 10) & 0x01) != 0)
+        TX_MSB_SHIFT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn rx_msb_shift(&self) -> RX_MSB_SHIFT_R {
-        RX_MSB_SHIFT_R::new(((self.bits >> 11) & 0x01) != 0)
+        RX_MSB_SHIFT_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn tx_short_sync(&self) -> TX_SHORT_SYNC_R {
-        TX_SHORT_SYNC_R::new(((self.bits >> 12) & 0x01) != 0)
+        TX_SHORT_SYNC_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn rx_short_sync(&self) -> RX_SHORT_SYNC_R {
-        RX_SHORT_SYNC_R::new(((self.bits >> 13) & 0x01) != 0)
+        RX_SHORT_SYNC_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn tx_mono(&self) -> TX_MONO_R {
-        TX_MONO_R::new(((self.bits >> 14) & 0x01) != 0)
+        TX_MONO_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn rx_mono(&self) -> RX_MONO_R {
-        RX_MONO_R::new(((self.bits >> 15) & 0x01) != 0)
+        RX_MONO_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn tx_msb_right(&self) -> TX_MSB_RIGHT_R {
-        TX_MSB_RIGHT_R::new(((self.bits >> 16) & 0x01) != 0)
+        TX_MSB_RIGHT_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn rx_msb_right(&self) -> RX_MSB_RIGHT_R {
-        RX_MSB_RIGHT_R::new(((self.bits >> 17) & 0x01) != 0)
+        RX_MSB_RIGHT_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn sig_loopback(&self) -> SIG_LOOPBACK_R {
-        SIG_LOOPBACK_R::new(((self.bits >> 18) & 0x01) != 0)
+        SIG_LOOPBACK_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {

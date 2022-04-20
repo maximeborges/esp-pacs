@@ -67,7 +67,7 @@ impl<'a> TI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -143,7 +143,7 @@ impl<'a> FBE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -182,7 +182,7 @@ impl<'a> DU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> CES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,7 +260,7 @@ impl<'a> NIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -301,7 +301,7 @@ impl<'a> AIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -330,7 +330,7 @@ impl<'a> FBE_CODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 10)) | ((value as u32 & 0x07) << 10);
+        self.w.bits = (self.w.bits & !(7 << 10)) | ((value as u32 & 7) << 10);
         self.w
     }
 }
@@ -365,49 +365,49 @@ impl R {
     #[doc = "Bit 0 - Transmit Interrupt. Indicates that data transmission is finished for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn ti(&self) -> TI_R {
-        TI_R::new((self.bits & 0x01) != 0)
+        TI_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Receive Interrupt. Indicates the completion of data reception for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn ri(&self) -> RI_R {
-        RI_R::new(((self.bits >> 1) & 0x01) != 0)
+        RI_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Fatal Bus Error Interrupt. Indicates that a Bus Error occurred (IDSTS\\[12:10\\]
 ) . When this bit is set, the DMA disables all its bus accesses. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn fbe(&self) -> FBE_R {
-        FBE_R::new(((self.bits >> 2) & 0x01) != 0)
+        FBE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\]
  = 0). Writing 1 clears this bit."]
     #[inline(always)]
     pub fn du(&self) -> DU_R {
-        DU_R::new(((self.bits >> 4) & 0x01) != 0)
+        DU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Card Error Summary. Indicates the status of the transaction to/from the card, also present in RINTSTS. Indicates the logical OR of the following bits: EBE : End Bit Error; RTO : Response Timeout/Boot Ack Timeout; RCRC : Response CRC; SBE : Start Bit Error; DRTO : Data Read Timeout/BDS timeout; DCRC : Data CRC for Receive; RE : Response Error. Writing 1 clears this bit. The abort condition of the IDMAC depends on the setting of this CES bit. If the CES bit is enabled, then the IDMAC aborts on a response error."]
     #[inline(always)]
     pub fn ces(&self) -> CES_R {
-        CES_R::new(((self.bits >> 5) & 0x01) != 0)
+        CES_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\]
  : Transmit Interrupt, IDSTS\\[1\\]
  : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn nis(&self) -> NIS_R {
-        NIS_R::new(((self.bits >> 8) & 0x01) != 0)
+        NIS_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\]
  : Fatal Bus Interrupt, IDSTS\\[4\\]
  : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn ais(&self) -> AIS_R {
-        AIS_R::new(((self.bits >> 9) & 0x01) != 0)
+        AIS_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\]
  is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
     #[inline(always)]
     pub fn fbe_code(&self) -> FBE_CODE_R {
-        FBE_CODE_R::new(((self.bits >> 10) & 0x07) as u8)
+        FBE_CODE_R::new(((self.bits >> 10) & 7) as u8)
     }
     #[doc = "Bits 13:16 - DMAC FSM present state. 0: DMA_IDLE (idle state); 1: DMA_SUSPEND (suspend state); 2: DESC_RD (descriptor reading state); 3: DESC_CHK (descriptor checking state); 4: DMA_RD_REQ_WAIT (read-data request waiting state); 5: DMA_WR_REQ_WAIT (write-data request waiting state); 6: DMA_RD (data-read state); 7: DMA_WR (data-write state); 8: DESC_CLOSE (descriptor close state)."]
     #[inline(always)]

@@ -84,7 +84,7 @@ impl<'a> SOC_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -127,7 +127,7 @@ impl R {
     #[doc = "Bits 10:11 - This field is used to select SOC clock."]
     #[inline(always)]
     pub fn soc_clk_sel(&self) -> SOC_CLK_SEL_R {
-        SOC_CLK_SEL_R::new(((self.bits >> 10) & 0x03) as u8)
+        SOC_CLK_SEL_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:18 - This field is used to read XTAL frequency in MHz."]
     #[inline(always)]
@@ -137,7 +137,7 @@ impl R {
     #[doc = "Bit 19 - Not used, extends from ESP32."]
     #[inline(always)]
     pub fn clk_div_en(&self) -> CLK_DIV_EN_R {
-        CLK_DIV_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        CLK_DIV_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 impl W {

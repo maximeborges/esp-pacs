@@ -157,12 +157,12 @@ impl R {
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn rd_chip_ver_rev2(&self) -> RD_CHIP_VER_REV2_R {
-        RD_CHIP_VER_REV2_R::new(((self.bits >> 20) & 0x01) != 0)
+        RD_CHIP_VER_REV2_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 22:23 - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (RO)"]
     #[inline(always)]
     pub fn rd_vol_level_hp_inv(&self) -> RD_VOL_LEVEL_HP_INV_R {
-        RD_VOL_LEVEL_HP_INV_R::new(((self.bits >> 22) & 0x03) as u8)
+        RD_VOL_LEVEL_HP_INV_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]

@@ -165,7 +165,7 @@ impl<'a> MISO_DELAY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> MISO_DELAY_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 18)) | ((value as u32 & 0x07) << 18);
+        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> MOSI_DELAY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 21)) | ((value as u32 & 0x03) << 21);
+        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> MOSI_DELAY_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> CS_DELAY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -328,27 +328,27 @@ impl R {
     #[doc = "Bits 16:17 - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     pub fn miso_delay_mode(&self) -> MISO_DELAY_MODE_R {
-        MISO_DELAY_MODE_R::new(((self.bits >> 16) & 0x03) as u8)
+        MISO_DELAY_MODE_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:20 - MISO signals are delayed by system clock cycles"]
     #[inline(always)]
     pub fn miso_delay_num(&self) -> MISO_DELAY_NUM_R {
-        MISO_DELAY_NUM_R::new(((self.bits >> 18) & 0x07) as u8)
+        MISO_DELAY_NUM_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:22 - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     pub fn mosi_delay_mode(&self) -> MOSI_DELAY_MODE_R {
-        MOSI_DELAY_MODE_R::new(((self.bits >> 21) & 0x03) as u8)
+        MOSI_DELAY_MODE_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:25 - MOSI signals are delayed by system clock cycles"]
     #[inline(always)]
     pub fn mosi_delay_num(&self) -> MOSI_DELAY_NUM_R {
-        MOSI_DELAY_NUM_R::new(((self.bits >> 23) & 0x07) as u8)
+        MOSI_DELAY_NUM_R::new(((self.bits >> 23) & 7) as u8)
     }
     #[doc = "Bits 26:27 - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
     pub fn cs_delay_mode(&self) -> CS_DELAY_MODE_R {
-        CS_DELAY_MODE_R::new(((self.bits >> 26) & 0x03) as u8)
+        CS_DELAY_MODE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:31 - spi_cs signal is delayed by system clock cycles"]
     #[inline(always)]

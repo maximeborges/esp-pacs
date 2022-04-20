@@ -127,7 +127,7 @@ impl R {
     #[doc = "Bits 9:11 - reg_state_ch0."]
     #[inline(always)]
     pub fn state_ch0(&self) -> STATE_CH0_R {
-        STATE_CH0_R::new(((self.bits >> 9) & 0x07) as u8)
+        STATE_CH0_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:20 - reg_apb_mem_waddr_ch0."]
     #[inline(always)]
@@ -137,17 +137,17 @@ impl R {
     #[doc = "Bit 21 - reg_apb_mem_rd_err_ch0."]
     #[inline(always)]
     pub fn apb_mem_rd_err_ch0(&self) -> APB_MEM_RD_ERR_CH0_R {
-        APB_MEM_RD_ERR_CH0_R::new(((self.bits >> 21) & 0x01) != 0)
+        APB_MEM_RD_ERR_CH0_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - reg_mem_empty_ch0."]
     #[inline(always)]
     pub fn mem_empty_ch0(&self) -> MEM_EMPTY_CH0_R {
-        MEM_EMPTY_CH0_R::new(((self.bits >> 22) & 0x01) != 0)
+        MEM_EMPTY_CH0_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - reg_apb_mem_wr_err_ch0."]
     #[inline(always)]
     pub fn apb_mem_wr_err_ch0(&self) -> APB_MEM_WR_ERR_CH0_R {
-        APB_MEM_WR_ERR_CH0_R::new(((self.bits >> 23) & 0x01) != 0)
+        APB_MEM_WR_ERR_CH0_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:31 - reg_apb_mem_raddr_ch0."]
     #[inline(always)]

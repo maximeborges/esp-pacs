@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bits 0:2 - The bits are used to indicate the attribute of CPU access dbus when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
     #[inline(always)]
     pub fn core0_dbus_attr(&self) -> CORE0_DBUS_ATTR_R {
-        CORE0_DBUS_ATTR_R::new((self.bits & 0x07) as u8)
+        CORE0_DBUS_ATTR_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - The bit is used to indicate the world of CPU access dbus when authentication fail. 0: WORLD0, 1: WORLD1"]
     #[inline(always)]
     pub fn core0_dbus_world(&self) -> CORE0_DBUS_WORLD_R {
-        CORE0_DBUS_WORLD_R::new(((self.bits >> 3) & 0x01) != 0)
+        CORE0_DBUS_WORLD_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]

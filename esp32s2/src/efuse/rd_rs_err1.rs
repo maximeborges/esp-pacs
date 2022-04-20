@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bits 0:2 - The value of this signal means the number of error bytes in KEY5."]
     #[inline(always)]
     pub fn key5_err_num(&self) -> KEY5_ERR_NUM_R {
-        KEY5_ERR_NUM_R::new((self.bits & 0x07) as u8)
+        KEY5_ERR_NUM_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - 0: Means no failure and that the data of KEY5 is reliable. 1: Means that programming user data failed and the number of error bytes is over 5."]
     #[inline(always)]
     pub fn key5_fail(&self) -> KEY5_FAIL_R {
-        KEY5_FAIL_R::new(((self.bits >> 3) & 0x01) != 0)
+        KEY5_FAIL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:6 - The value of this signal means the number of error bytes in BLOCK10."]
     #[inline(always)]
     pub fn sys_part2_err_num(&self) -> SYS_PART2_ERR_NUM_R {
-        SYS_PART2_ERR_NUM_R::new(((self.bits >> 4) & 0x07) as u8)
+        SYS_PART2_ERR_NUM_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7 - 0: Means no failure and that the data of BLOCK10 is reliable. 1: Means that programming BLOCK10 data failed and the number of error bytes is over 5."]
     #[inline(always)]
     pub fn sys_part2_fail(&self) -> SYS_PART2_FAIL_R {
-        SYS_PART2_FAIL_R::new(((self.bits >> 7) & 0x01) != 0)
+        SYS_PART2_FAIL_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[doc = "Programming error record register 1 of BLOCK1-10.\n\nThis register you can [`read`]

@@ -61,7 +61,7 @@ impl<'a> CARD_WIDTH4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -92,7 +92,7 @@ impl<'a> CARD_WIDTH8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -102,14 +102,14 @@ impl R {
  respectively."]
     #[inline(always)]
     pub fn card_width4(&self) -> CARD_WIDTH4_R {
-        CARD_WIDTH4_R::new((self.bits & 0x03) as u8)
+        CARD_WIDTH4_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 16:17 - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\]
  correspond to card\\[1:0\\]
  respectively."]
     #[inline(always)]
     pub fn card_width8(&self) -> CARD_WIDTH8_R {
-        CARD_WIDTH8_R::new(((self.bits >> 16) & 0x03) as u8)
+        CARD_WIDTH8_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

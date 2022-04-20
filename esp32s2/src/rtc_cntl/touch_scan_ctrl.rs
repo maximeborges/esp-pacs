@@ -57,7 +57,7 @@ impl<'a> TOUCH_DENOISE_RES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> TOUCH_DENOISE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TOUCH_INACTIVE_CONNECTION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> TOUCH_SHIELD_PAD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> TOUCH_BUFDRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -257,22 +257,22 @@ impl R {
     #[doc = "Bits 0:1 - Denoise resolution. 0: 12-bit; 1: 10-bit; 2: 8-bit; 3: 4-bit."]
     #[inline(always)]
     pub fn touch_denoise_res(&self) -> TOUCH_DENOISE_RES_R {
-        TOUCH_DENOISE_RES_R::new((self.bits & 0x03) as u8)
+        TOUCH_DENOISE_RES_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - Touch pad 0 will be used to denoise."]
     #[inline(always)]
     pub fn touch_denoise_en(&self) -> TOUCH_DENOISE_EN_R {
-        TOUCH_DENOISE_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOUCH_DENOISE_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 8 - Inactive touch pads connect to 0: HighZ, 1: GND."]
     #[inline(always)]
     pub fn touch_inactive_connection(&self) -> TOUCH_INACTIVE_CONNECTION_R {
-        TOUCH_INACTIVE_CONNECTION_R::new(((self.bits >> 8) & 0x01) != 0)
+        TOUCH_INACTIVE_CONNECTION_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Touch pad 14 will be used as shield_pad."]
     #[inline(always)]
     pub fn touch_shield_pad_en(&self) -> TOUCH_SHIELD_PAD_EN_R {
-        TOUCH_SHIELD_PAD_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        TOUCH_SHIELD_PAD_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:24 - Pad enable map for touch scan mode."]
     #[inline(always)]
@@ -282,7 +282,7 @@ impl R {
     #[doc = "Bits 25:27 - Touch 14 buffer driver strength."]
     #[inline(always)]
     pub fn touch_bufdrv(&self) -> TOUCH_BUFDRV_R {
-        TOUCH_BUFDRV_R::new(((self.bits >> 25) & 0x07) as u8)
+        TOUCH_BUFDRV_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bits 28:31 - Select out one pad as guard_ring."]
     #[inline(always)]

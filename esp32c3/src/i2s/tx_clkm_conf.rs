@@ -98,7 +98,7 @@ impl<'a> TX_CLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -125,7 +125,7 @@ impl<'a> TX_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -162,7 +162,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -177,17 +177,17 @@ impl R {
     #[doc = "Bit 26 - I2S Tx module clock enable signal."]
     #[inline(always)]
     pub fn tx_clk_active(&self) -> TX_CLK_ACTIVE_R {
-        TX_CLK_ACTIVE_R::new(((self.bits >> 26) & 0x01) != 0)
+        TX_CLK_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     pub fn tx_clk_sel(&self) -> TX_CLK_SEL_R {
-        TX_CLK_SEL_R::new(((self.bits >> 27) & 0x03) as u8)
+        TX_CLK_SEL_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - Set this bit to enable clk gate"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

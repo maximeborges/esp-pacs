@@ -57,7 +57,7 @@ impl<'a> FLASH_ACE0_ATTR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:1 - reg_flash_ace0_attr"]
     #[inline(always)]
     pub fn flash_ace0_attr(&self) -> FLASH_ACE0_ATTR_R {
-        FLASH_ACE0_ATTR_R::new((self.bits & 0x03) as u8)
+        FLASH_ACE0_ATTR_R::new((self.bits & 3) as u8)
     }
 }
 impl W {

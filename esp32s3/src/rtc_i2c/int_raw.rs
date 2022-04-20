@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - slave transit complete interrupt raw"]
     #[inline(always)]
     pub fn slave_tran_comp_int_raw(&self) -> SLAVE_TRAN_COMP_INT_RAW_R {
-        SLAVE_TRAN_COMP_INT_RAW_R::new((self.bits & 0x01) != 0)
+        SLAVE_TRAN_COMP_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - arbitration lost interrupt raw"]
     #[inline(always)]
     pub fn arbitration_lost_int_raw(&self) -> ARBITRATION_LOST_INT_RAW_R {
-        ARBITRATION_LOST_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        ARBITRATION_LOST_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - master transit complete interrupt raw"]
     #[inline(always)]
     pub fn master_tran_comp_int_raw(&self) -> MASTER_TRAN_COMP_INT_RAW_R {
-        MASTER_TRAN_COMP_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        MASTER_TRAN_COMP_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - transit complete interrupt raw"]
     #[inline(always)]
     pub fn trans_complete_int_raw(&self) -> TRANS_COMPLETE_INT_RAW_R {
-        TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRANS_COMPLETE_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - time out interrupt raw"]
     #[inline(always)]
     pub fn time_out_int_raw(&self) -> TIME_OUT_INT_RAW_R {
-        TIME_OUT_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        TIME_OUT_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ack error interrupt raw"]
     #[inline(always)]
     pub fn ack_err_int_raw(&self) -> ACK_ERR_INT_RAW_R {
-        ACK_ERR_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        ACK_ERR_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - receive data interrupt raw"]
     #[inline(always)]
     pub fn rx_data_int_raw(&self) -> RX_DATA_INT_RAW_R {
-        RX_DATA_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_DATA_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - transit data interrupt raw"]
     #[inline(always)]
     pub fn tx_data_int_raw(&self) -> TX_DATA_INT_RAW_R {
-        TX_DATA_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        TX_DATA_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - detect start interrupt raw"]
     #[inline(always)]
     pub fn detect_start_int_raw(&self) -> DETECT_START_INT_RAW_R {
-        DETECT_START_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        DETECT_START_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "interrupt raw register\n\nThis register you can [`read`]

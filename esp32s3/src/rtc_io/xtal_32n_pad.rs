@@ -67,7 +67,7 @@ impl<'a> X32N_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> X32N_SLP_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> X32N_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> X32N_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> X32N_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> X32N_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> X32N_RUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> X32N_RDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> X32N_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -351,47 +351,47 @@ impl R {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
     pub fn x32n_fun_ie(&self) -> X32N_FUN_IE_R {
-        X32N_FUN_IE_R::new(((self.bits >> 13) & 0x01) != 0)
+        X32N_FUN_IE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
     pub fn x32n_slp_oe(&self) -> X32N_SLP_OE_R {
-        X32N_SLP_OE_R::new(((self.bits >> 14) & 0x01) != 0)
+        X32N_SLP_OE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
     pub fn x32n_slp_ie(&self) -> X32N_SLP_IE_R {
-        X32N_SLP_IE_R::new(((self.bits >> 15) & 0x01) != 0)
+        X32N_SLP_IE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
     pub fn x32n_slp_sel(&self) -> X32N_SLP_SEL_R {
-        X32N_SLP_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        X32N_SLP_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
     pub fn x32n_fun_sel(&self) -> X32N_FUN_SEL_R {
-        X32N_FUN_SEL_R::new(((self.bits >> 17) & 0x03) as u8)
+        X32N_FUN_SEL_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
     pub fn x32n_mux_sel(&self) -> X32N_MUX_SEL_R {
-        X32N_MUX_SEL_R::new(((self.bits >> 19) & 0x01) != 0)
+        X32N_MUX_SEL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
     pub fn x32n_rue(&self) -> X32N_RUE_R {
-        X32N_RUE_R::new(((self.bits >> 27) & 0x01) != 0)
+        X32N_RUE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
     pub fn x32n_rde(&self) -> X32N_RDE_R {
-        X32N_RDE_R::new(((self.bits >> 28) & 0x01) != 0)
+        X32N_RDE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
     pub fn x32n_drv(&self) -> X32N_DRV_R {
-        X32N_DRV_R::new(((self.bits >> 29) & 0x03) as u8)
+        X32N_DRV_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {

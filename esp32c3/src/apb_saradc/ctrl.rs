@@ -67,7 +67,7 @@ impl<'a> SARADC_START_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SARADC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SARADC_SAR_CLK_GATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SARADC_SAR_PATT_LEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 15)) | ((value as u32 & 0x07) << 15);
+        self.w.bits = (self.w.bits & !(7 << 15)) | ((value as u32 & 7) << 15);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> SARADC_SAR_PATT_P_CLEAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> SARADC_XPD_SAR_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> SARADC_WAIT_ARB_CYCLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -294,17 +294,17 @@ impl R {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
     pub fn saradc_start_force(&self) -> SARADC_START_FORCE_R {
-        SARADC_START_FORCE_R::new((self.bits & 0x01) != 0)
+        SARADC_START_FORCE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - software enable saradc sample"]
     #[inline(always)]
     pub fn saradc_start(&self) -> SARADC_START_R {
-        SARADC_START_R::new(((self.bits >> 1) & 0x01) != 0)
+        SARADC_START_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 6 - SAR clock gated"]
     #[inline(always)]
     pub fn saradc_sar_clk_gated(&self) -> SARADC_SAR_CLK_GATED_R {
-        SARADC_SAR_CLK_GATED_R::new(((self.bits >> 6) & 0x01) != 0)
+        SARADC_SAR_CLK_GATED_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
@@ -314,22 +314,22 @@ impl R {
     #[doc = "Bits 15:17 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
     pub fn saradc_sar_patt_len(&self) -> SARADC_SAR_PATT_LEN_R {
-        SARADC_SAR_PATT_LEN_R::new(((self.bits >> 15) & 0x07) as u8)
+        SARADC_SAR_PATT_LEN_R::new(((self.bits >> 15) & 7) as u8)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
     pub fn saradc_sar_patt_p_clear(&self) -> SARADC_SAR_PATT_P_CLEAR_R {
-        SARADC_SAR_PATT_P_CLEAR_R::new(((self.bits >> 23) & 0x01) != 0)
+        SARADC_SAR_PATT_P_CLEAR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 27:28 - force option to xpd sar blocks"]
     #[inline(always)]
     pub fn saradc_xpd_sar_force(&self) -> SARADC_XPD_SAR_FORCE_R {
-        SARADC_XPD_SAR_FORCE_R::new(((self.bits >> 27) & 0x03) as u8)
+        SARADC_XPD_SAR_FORCE_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
     pub fn saradc_wait_arb_cycle(&self) -> SARADC_WAIT_ARB_CYCLE_R {
-        SARADC_WAIT_ARB_CYCLE_R::new(((self.bits >> 30) & 0x03) as u8)
+        SARADC_WAIT_ARB_CYCLE_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

@@ -79,7 +79,7 @@ impl<'a> COMB_ERR_CNT_CLR_NVT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -116,7 +116,7 @@ impl<'a> COMB_PVT_MONITOR_EN_NVT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
     pub fn comb_pvt_monitor_en_nvt(&self) -> COMB_PVT_MONITOR_EN_NVT_R {
-        COMB_PVT_MONITOR_EN_NVT_R::new(((self.bits >> 6) & 0x01) != 0)
+        COMB_PVT_MONITOR_EN_NVT_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> INTERNAL_SRAM_IMMU_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> IMMU_PAGE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn internal_sram_immu_ena(&self) -> INTERNAL_SRAM_IMMU_ENA_R {
-        INTERNAL_SRAM_IMMU_ENA_R::new((self.bits & 0x01) != 0)
+        INTERNAL_SRAM_IMMU_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     pub fn immu_page_mode(&self) -> IMMU_PAGE_MODE_R {
-        IMMU_PAGE_MODE_R::new(((self.bits >> 1) & 0x03) as u8)
+        IMMU_PAGE_MODE_R::new(((self.bits >> 1) & 3) as u8)
     }
 }
 impl W {

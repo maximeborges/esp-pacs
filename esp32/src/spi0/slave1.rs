@@ -67,7 +67,7 @@ impl<'a> SLV_RDBUF_DUMMY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLV_WRBUF_DUMMY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLV_RDSTA_DUMMY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SLV_WRSTA_DUMMY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> SLV_STATUS_READBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> SLV_STATUS_FAST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -341,22 +341,22 @@ impl R {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
     pub fn slv_rdbuf_dummy_en(&self) -> SLV_RDBUF_DUMMY_EN_R {
-        SLV_RDBUF_DUMMY_EN_R::new((self.bits & 0x01) != 0)
+        SLV_RDBUF_DUMMY_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
     #[inline(always)]
     pub fn slv_wrbuf_dummy_en(&self) -> SLV_WRBUF_DUMMY_EN_R {
-        SLV_WRBUF_DUMMY_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLV_WRBUF_DUMMY_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - In the slave mode it is the enable bit of dummy phase for read-status operations."]
     #[inline(always)]
     pub fn slv_rdsta_dummy_en(&self) -> SLV_RDSTA_DUMMY_EN_R {
-        SLV_RDSTA_DUMMY_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        SLV_RDSTA_DUMMY_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - In the slave mode it is the enable bit of dummy phase for write-status operations."]
     #[inline(always)]
     pub fn slv_wrsta_dummy_en(&self) -> SLV_WRSTA_DUMMY_EN_R {
-        SLV_WRSTA_DUMMY_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLV_WRSTA_DUMMY_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:9 - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
@@ -371,12 +371,12 @@ impl R {
     #[doc = "Bit 25 - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
     #[inline(always)]
     pub fn slv_status_readback(&self) -> SLV_STATUS_READBACK_R {
-        SLV_STATUS_READBACK_R::new(((self.bits >> 25) & 0x01) != 0)
+        SLV_STATUS_READBACK_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - In the slave mode enable fast read status."]
     #[inline(always)]
     pub fn slv_status_fast_en(&self) -> SLV_STATUS_FAST_EN_R {
-        SLV_STATUS_FAST_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        SLV_STATUS_FAST_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:31 - In the slave mode it is the length of status bit."]
     #[inline(always)]

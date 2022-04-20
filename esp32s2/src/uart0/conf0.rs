@@ -67,7 +67,7 @@ impl<'a> PARITY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PARITY_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> BIT_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> STOP_BIT_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SW_RTS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> SW_DTR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> TXD_BRK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> IRDA_DPLX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> IRDA_TX_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> IRDA_WCTL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> IRDA_TX_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> IRDA_RX_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> LOOPBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -528,7 +528,7 @@ impl<'a> TX_FLOW_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -565,7 +565,7 @@ impl<'a> IRDA_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -602,7 +602,7 @@ impl<'a> RXFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -639,7 +639,7 @@ impl<'a> TXFIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -676,7 +676,7 @@ impl<'a> RXD_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -713,7 +713,7 @@ impl<'a> CTS_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -750,7 +750,7 @@ impl<'a> DSR_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -787,7 +787,7 @@ impl<'a> TXD_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -824,7 +824,7 @@ impl<'a> RTS_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -861,7 +861,7 @@ impl<'a> DTR_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -898,7 +898,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -935,7 +935,7 @@ impl<'a> ERR_WR_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -972,7 +972,7 @@ impl<'a> TICK_REF_ALWAYS_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1009,7 +1009,7 @@ impl<'a> MEM_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1017,137 +1017,137 @@ impl R {
     #[doc = "Bit 0 - This register is used to configure the parity check mode. 0: even. 1: odd."]
     #[inline(always)]
     pub fn parity(&self) -> PARITY_R {
-        PARITY_R::new((self.bits & 0x01) != 0)
+        PARITY_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enable UART parity check."]
     #[inline(always)]
     pub fn parity_en(&self) -> PARITY_EN_R {
-        PARITY_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        PARITY_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - This register is used to set the length of data. 0: 5 bits. 1: 6 bits. 2: 7 bits. 3: 8 bits."]
     #[inline(always)]
     pub fn bit_num(&self) -> BIT_NUM_R {
-        BIT_NUM_R::new(((self.bits >> 2) & 0x03) as u8)
+        BIT_NUM_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - This register is used to set the length of stop bit. 1: 1 bit. 2: 1.5 bits. 3: 2 bits."]
     #[inline(always)]
     pub fn stop_bit_num(&self) -> STOP_BIT_NUM_R {
-        STOP_BIT_NUM_R::new(((self.bits >> 4) & 0x03) as u8)
+        STOP_BIT_NUM_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - This register is used to configure the software RTS signal which is used in software flow control."]
     #[inline(always)]
     pub fn sw_rts(&self) -> SW_RTS_R {
-        SW_RTS_R::new(((self.bits >> 6) & 0x01) != 0)
+        SW_RTS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This register is used to configure the software DTR signal which is used in software flow control."]
     #[inline(always)]
     pub fn sw_dtr(&self) -> SW_DTR_R {
-        SW_DTR_R::new(((self.bits >> 7) & 0x01) != 0)
+        SW_DTR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to enable the transmitter to send NULL characters when the process of sending data is done."]
     #[inline(always)]
     pub fn txd_brk(&self) -> TXD_BRK_R {
-        TXD_BRK_R::new(((self.bits >> 8) & 0x01) != 0)
+        TXD_BRK_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set this bit to enable IrDA loopback mode."]
     #[inline(always)]
     pub fn irda_dplx(&self) -> IRDA_DPLX_R {
-        IRDA_DPLX_R::new(((self.bits >> 9) & 0x01) != 0)
+        IRDA_DPLX_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - This is the start enable bit for IrDA transmitter."]
     #[inline(always)]
     pub fn irda_tx_en(&self) -> IRDA_TX_EN_R {
-        IRDA_TX_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        IRDA_TX_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - 1: The IrDA transmitter's 11th bit is the same as 10th bit. 0: Set IrDA transmitter's 11th bit to 0."]
     #[inline(always)]
     pub fn irda_wctl(&self) -> IRDA_WCTL_R {
-        IRDA_WCTL_R::new(((self.bits >> 11) & 0x01) != 0)
+        IRDA_WCTL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to invert the level of IrDA transmitter."]
     #[inline(always)]
     pub fn irda_tx_inv(&self) -> IRDA_TX_INV_R {
-        IRDA_TX_INV_R::new(((self.bits >> 12) & 0x01) != 0)
+        IRDA_TX_INV_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to invert the level of IrDA receiver."]
     #[inline(always)]
     pub fn irda_rx_inv(&self) -> IRDA_RX_INV_R {
-        IRDA_RX_INV_R::new(((self.bits >> 13) & 0x01) != 0)
+        IRDA_RX_INV_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to enable UART loopback test mode."]
     #[inline(always)]
     pub fn loopback(&self) -> LOOPBACK_R {
-        LOOPBACK_R::new(((self.bits >> 14) & 0x01) != 0)
+        LOOPBACK_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Set this bit to enable flow control function for the transmitter."]
     #[inline(always)]
     pub fn tx_flow_en(&self) -> TX_FLOW_EN_R {
-        TX_FLOW_EN_R::new(((self.bits >> 15) & 0x01) != 0)
+        TX_FLOW_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Set this bit to enable IrDA protocol."]
     #[inline(always)]
     pub fn irda_en(&self) -> IRDA_EN_R {
-        IRDA_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        IRDA_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Set this bit to reset the UART RX FIFO."]
     #[inline(always)]
     pub fn rxfifo_rst(&self) -> RXFIFO_RST_R {
-        RXFIFO_RST_R::new(((self.bits >> 17) & 0x01) != 0)
+        RXFIFO_RST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Set this bit to reset the UART TX FIFO."]
     #[inline(always)]
     pub fn txfifo_rst(&self) -> TXFIFO_RST_R {
-        TXFIFO_RST_R::new(((self.bits >> 18) & 0x01) != 0)
+        TXFIFO_RST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Set this bit to invert the level of UART RXD signal."]
     #[inline(always)]
     pub fn rxd_inv(&self) -> RXD_INV_R {
-        RXD_INV_R::new(((self.bits >> 19) & 0x01) != 0)
+        RXD_INV_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set this bit to invert the level of UART CTS signal."]
     #[inline(always)]
     pub fn cts_inv(&self) -> CTS_INV_R {
-        CTS_INV_R::new(((self.bits >> 20) & 0x01) != 0)
+        CTS_INV_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to invert the level of UART DSR signal."]
     #[inline(always)]
     pub fn dsr_inv(&self) -> DSR_INV_R {
-        DSR_INV_R::new(((self.bits >> 21) & 0x01) != 0)
+        DSR_INV_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to invert the level of UART TXD signal."]
     #[inline(always)]
     pub fn txd_inv(&self) -> TXD_INV_R {
-        TXD_INV_R::new(((self.bits >> 22) & 0x01) != 0)
+        TXD_INV_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Set this bit to invert the level of UART RTS signal."]
     #[inline(always)]
     pub fn rts_inv(&self) -> RTS_INV_R {
-        RTS_INV_R::new(((self.bits >> 23) & 0x01) != 0)
+        RTS_INV_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to invert the level of UART DTR signal."]
     #[inline(always)]
     pub fn dtr_inv(&self) -> DTR_INV_R {
-        DTR_INV_R::new(((self.bits >> 24) & 0x01) != 0)
+        DTR_INV_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: Force clock on for registers. 0: Support clock only when application writes registers."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: The receiver stops storing data into FIFO when data is wrong. 0: The receiver stores the data even if the received data is wrong."]
     #[inline(always)]
     pub fn err_wr_mask(&self) -> ERR_WR_MASK_R {
-        ERR_WR_MASK_R::new(((self.bits >> 26) & 0x01) != 0)
+        ERR_WR_MASK_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - This register is used to select the clock. 1: APB_CLK. 0: REF_TICK."]
     #[inline(always)]
     pub fn tick_ref_always_on(&self) -> TICK_REF_ALWAYS_ON_R {
-        TICK_REF_ALWAYS_ON_R::new(((self.bits >> 27) & 0x01) != 0)
+        TICK_REF_ALWAYS_ON_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - The signal to enable UART RAM clock gating. 1: UART RAM powers on, the data of which can be read and written. 0: UART RAM powers down."]
     #[inline(always)]
     pub fn mem_clk_en(&self) -> MEM_CLK_EN_R {
-        MEM_CLK_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        MEM_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

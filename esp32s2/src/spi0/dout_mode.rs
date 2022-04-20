@@ -57,7 +57,7 @@ impl<'a> DOUT0_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> DOUT1_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> DOUT2_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DOUT3_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DOUT4_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> DOUT5_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 15)) | ((value as u32 & 0x07) << 15);
+        self.w.bits = (self.w.bits & !(7 << 15)) | ((value as u32 & 7) << 15);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> DOUT6_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 18)) | ((value as u32 & 0x07) << 18);
+        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> DOUT7_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 21)) | ((value as u32 & 0x07) << 21);
+        self.w.bits = (self.w.bits & !(7 << 21)) | ((value as u32 & 7) << 21);
         self.w
     }
 }
@@ -254,42 +254,42 @@ impl R {
     #[doc = "Bits 0:2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout0_mode(&self) -> DOUT0_MODE_R {
-        DOUT0_MODE_R::new((self.bits & 0x07) as u8)
+        DOUT0_MODE_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout1_mode(&self) -> DOUT1_MODE_R {
-        DOUT1_MODE_R::new(((self.bits >> 3) & 0x07) as u8)
+        DOUT1_MODE_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout2_mode(&self) -> DOUT2_MODE_R {
-        DOUT2_MODE_R::new(((self.bits >> 6) & 0x07) as u8)
+        DOUT2_MODE_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout3_mode(&self) -> DOUT3_MODE_R {
-        DOUT3_MODE_R::new(((self.bits >> 9) & 0x07) as u8)
+        DOUT3_MODE_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:14 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout4_mode(&self) -> DOUT4_MODE_R {
-        DOUT4_MODE_R::new(((self.bits >> 12) & 0x07) as u8)
+        DOUT4_MODE_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bits 15:17 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout5_mode(&self) -> DOUT5_MODE_R {
-        DOUT5_MODE_R::new(((self.bits >> 15) & 0x07) as u8)
+        DOUT5_MODE_R::new(((self.bits >> 15) & 7) as u8)
     }
     #[doc = "Bits 18:20 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout6_mode(&self) -> DOUT6_MODE_R {
-        DOUT6_MODE_R::new(((self.bits >> 18) & 0x07) as u8)
+        DOUT6_MODE_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bits 21:23 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout7_mode(&self) -> DOUT7_MODE_R {
-        DOUT7_MODE_R::new(((self.bits >> 21) & 0x07) as u8)
+        DOUT7_MODE_R::new(((self.bits >> 21) & 7) as u8)
     }
 }
 impl W {

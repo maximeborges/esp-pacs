@@ -84,7 +84,7 @@ impl<'a> WIFI_CLK_WIFI_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> WIFI_CLK_BT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -151,7 +151,7 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn wifi_clk_wifi_en(&self) -> WIFI_CLK_WIFI_EN_R {
-        WIFI_CLK_WIFI_EN_R::new((self.bits & 0x07) as u8)
+        WIFI_CLK_WIFI_EN_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -161,7 +161,7 @@ impl R {
     #[doc = "Bits 11:13"]
     #[inline(always)]
     pub fn wifi_clk_bt_en(&self) -> WIFI_CLK_BT_EN_R {
-        WIFI_CLK_BT_EN_R::new(((self.bits >> 11) & 0x07) as u8)
+        WIFI_CLK_BT_EN_R::new(((self.bits >> 11) & 7) as u8)
     }
 }
 impl W {

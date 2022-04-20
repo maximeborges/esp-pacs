@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - 1: The data in the RX buffer is not empty, with at least one received data packet."]
     #[inline(always)]
     pub fn rx_buf_st(&self) -> RX_BUF_ST_R {
-        RX_BUF_ST_R::new((self.bits & 0x01) != 0)
+        RX_BUF_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: The RX FIFO is full and data overrun has occurred."]
     #[inline(always)]
     pub fn overrun_st(&self) -> OVERRUN_ST_R {
-        OVERRUN_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        OVERRUN_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1: The TX buffer is empty, the CPU may write a message into it."]
     #[inline(always)]
     pub fn tx_buf_st(&self) -> TX_BUF_ST_R {
-        TX_BUF_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_BUF_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: The TWAI controller has successfully received a packet from the bus."]
     #[inline(always)]
     pub fn tx_complete(&self) -> TX_COMPLETE_R {
-        TX_COMPLETE_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_COMPLETE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1: The TWAI Controller is receiving a message from the bus."]
     #[inline(always)]
     pub fn rx_st(&self) -> RX_ST_R {
-        RX_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        RX_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - 1: The TWAI Controller is transmitting a message to the bus."]
     #[inline(always)]
     pub fn tx_st(&self) -> TX_ST_R {
-        TX_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        TX_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 1: At least one of the RX/TX error counter has reached or exceeded the value set in register TWAI_ERR_WARNING_LIMIT_REG."]
     #[inline(always)]
     pub fn err_st(&self) -> ERR_ST_R {
-        ERR_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        ERR_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: In bus-off status, the TWAI Controller is no longer involved in bus activities."]
     #[inline(always)]
     pub fn bus_off_st(&self) -> BUS_OFF_ST_R {
-        BUS_OFF_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        BUS_OFF_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - This bit reflects whether the data packet in the RX FIFO is complete. 1: The current packet is missing; 0: The current packet is complete"]
     #[inline(always)]
     pub fn miss_st(&self) -> MISS_ST_R {
-        MISS_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        MISS_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "Status register\n\nThis register you can [`read`]

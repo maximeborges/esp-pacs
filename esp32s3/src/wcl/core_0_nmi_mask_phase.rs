@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - this bit is used to indicates whether the NMI interrupt is being masked, 1 means NMI interrupt is being masked"]
     #[inline(always)]
     pub fn core_0_nmi_mask_phase(&self) -> CORE_0_NMI_MASK_PHASE_R {
-        CORE_0_NMI_MASK_PHASE_R::new((self.bits & 0x01) != 0)
+        CORE_0_NMI_MASK_PHASE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Core_0 NMI mask phase register\n\nThis register you can [`read`]

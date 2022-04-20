@@ -67,7 +67,7 @@ impl<'a> TRANS_END_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TRANS_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CSPI_ST_TRANS_END_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CSPI_ST_TRANS_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CS_KEEP_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     pub fn trans_end(&self) -> TRANS_END_R {
-        TRANS_END_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRANS_END_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     pub fn trans_end_int_ena(&self) -> TRANS_END_INT_ENA_R {
-        TRANS_END_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        TRANS_END_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     pub fn cspi_st_trans_end(&self) -> CSPI_ST_TRANS_END_R {
-        CSPI_ST_TRANS_END_R::new(((self.bits >> 5) & 0x01) != 0)
+        CSPI_ST_TRANS_END_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     pub fn cspi_st_trans_end_int_ena(&self) -> CSPI_ST_TRANS_END_INT_ENA_R {
-        CSPI_ST_TRANS_END_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        CSPI_ST_TRANS_END_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     pub fn ck_idle_edge(&self) -> CK_IDLE_EDGE_R {
-        CK_IDLE_EDGE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CK_IDLE_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     pub fn cs_keep_active(&self) -> CS_KEEP_ACTIVE_R {
-        CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 0x01) != 0)
+        CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

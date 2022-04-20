@@ -167,27 +167,27 @@ impl R {
     #[doc = "Bit 0 - The received ACK value in master mode or slave mode. 0: ACK, 1: NACK."]
     #[inline(always)]
     pub fn resp_rec(&self) -> RESP_REC_R {
-        RESP_REC_R::new((self.bits & 0x01) != 0)
+        RESP_REC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - When in slave mode, 1: master reads from slave; 0: master writes to slave."]
     #[inline(always)]
     pub fn slave_rw(&self) -> SLAVE_RW_R {
-        SLAVE_RW_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLAVE_RW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - When the I2C controller loses control of SCL line, this register changes to 1."]
     #[inline(always)]
     pub fn arb_lost(&self) -> ARB_LOST_R {
-        ARB_LOST_R::new(((self.bits >> 3) & 0x01) != 0)
+        ARB_LOST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1: the I2C bus is busy transferring data; 0: the I2C bus is in idle state."]
     #[inline(always)]
     pub fn bus_busy(&self) -> BUS_BUSY_R {
-        BUS_BUSY_R::new(((self.bits >> 4) & 0x01) != 0)
+        BUS_BUSY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - When configured as an I2C Slave, and the address sent by the master is equal to the address of the slave, then this bit will be of high level."]
     #[inline(always)]
     pub fn slave_addressed(&self) -> SLAVE_ADDRESSED_R {
-        SLAVE_ADDRESSED_R::new(((self.bits >> 5) & 0x01) != 0)
+        SLAVE_ADDRESSED_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 8:13 - This field represents the amount of data needed to be sent."]
     #[inline(always)]
@@ -197,7 +197,7 @@ impl R {
     #[doc = "Bits 14:15 - The cause of stretching SCL low in slave mode. 0: stretching SCL low at the beginning of I2C read data state. 1: stretching SCL low when I2C Tx FIFO is empty in slave mode. 2: stretching SCL low when I2C Rx FIFO is full in slave mode."]
     #[inline(always)]
     pub fn stretch_cause(&self) -> STRETCH_CAUSE_R {
-        STRETCH_CAUSE_R::new(((self.bits >> 14) & 0x03) as u8)
+        STRETCH_CAUSE_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 18:23 - This field stores the amount of received data in RAM."]
     #[inline(always)]
@@ -207,12 +207,12 @@ impl R {
     #[doc = "Bits 24:26 - This field indicates the states of the I2C module state machine. 0: Idle; 1: Address shift; 2: ACK address; 3: Rx data; 4: Tx data; 5: Send ACK; 6: Wait ACK"]
     #[inline(always)]
     pub fn scl_main_state_last(&self) -> SCL_MAIN_STATE_LAST_R {
-        SCL_MAIN_STATE_LAST_R::new(((self.bits >> 24) & 0x07) as u8)
+        SCL_MAIN_STATE_LAST_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bits 28:30 - This field indicates the states of the state machine used to produce SCL. 0: Idle; 1: Start; 2: Negative edge; 3: Low; 4: Positive edge; 5: High; 6: Stop"]
     #[inline(always)]
     pub fn scl_state_last(&self) -> SCL_STATE_LAST_R {
-        SCL_STATE_LAST_R::new(((self.bits >> 28) & 0x07) as u8)
+        SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 #[doc = "Describe I2C work status.\n\nThis register you can [`read`]

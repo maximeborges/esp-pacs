@@ -67,7 +67,7 @@ impl<'a> SDA_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SCL_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TRANS_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> I2C_CTRL_CLK_GATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> I2C_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> I2CCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - 1=push pull,0=open drain"]
     #[inline(always)]
     pub fn sda_force_out(&self) -> SDA_FORCE_OUT_R {
-        SDA_FORCE_OUT_R::new((self.bits & 0x01) != 0)
+        SDA_FORCE_OUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1=push pull,0=open drain"]
     #[inline(always)]
     pub fn scl_force_out(&self) -> SCL_FORCE_OUT_R {
-        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 0x01) != 0)
+        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1=master,0=slave"]
     #[inline(always)]
     pub fn ms_mode(&self) -> MS_MODE_R {
-        MS_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        MS_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - force start"]
     #[inline(always)]
     pub fn trans_start(&self) -> TRANS_START_R {
-        TRANS_START_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRANS_START_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - transit lsb first"]
     #[inline(always)]
     pub fn tx_lsb_first(&self) -> TX_LSB_FIRST_R {
-        TX_LSB_FIRST_R::new(((self.bits >> 4) & 0x01) != 0)
+        TX_LSB_FIRST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - receive lsb first"]
     #[inline(always)]
     pub fn rx_lsb_first(&self) -> RX_LSB_FIRST_R {
-        RX_LSB_FIRST_R::new(((self.bits >> 5) & 0x01) != 0)
+        RX_LSB_FIRST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 29 - configure i2c ctrl clk enable"]
     #[inline(always)]
     pub fn i2c_ctrl_clk_gate_en(&self) -> I2C_CTRL_CLK_GATE_EN_R {
-        I2C_CTRL_CLK_GATE_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        I2C_CTRL_CLK_GATE_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - rtc i2c sw reset"]
     #[inline(always)]
     pub fn i2c_reset(&self) -> I2C_RESET_R {
-        I2C_RESET_R::new(((self.bits >> 30) & 0x01) != 0)
+        I2C_RESET_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
     pub fn i2cclk_en(&self) -> I2CCLK_EN_R {
-        I2CCLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        I2CCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

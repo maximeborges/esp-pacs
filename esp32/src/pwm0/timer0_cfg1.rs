@@ -57,7 +57,7 @@ impl<'a> TIMER0_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TIMER0_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn timer0_start(&self) -> TIMER0_START_R {
-        TIMER0_START_R::new((self.bits & 0x07) as u8)
+        TIMER0_START_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
     pub fn timer0_mod(&self) -> TIMER0_MOD_R {
-        TIMER0_MOD_R::new(((self.bits >> 3) & 0x03) as u8)
+        TIMER0_MOD_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
 impl W {

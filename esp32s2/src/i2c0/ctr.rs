@@ -67,7 +67,7 @@ impl<'a> SDA_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SCL_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SAMPLE_SCL_LEVEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_FULL_ACK_LEVEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> MS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> TRANS_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> TX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> ARBITRATION_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> FSM_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> REF_ALWAYS_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -482,62 +482,62 @@ impl R {
     #[doc = "Bit 0 - 0: direct output. 1: open drain output."]
     #[inline(always)]
     pub fn sda_force_out(&self) -> SDA_FORCE_OUT_R {
-        SDA_FORCE_OUT_R::new((self.bits & 0x01) != 0)
+        SDA_FORCE_OUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 0: direct output. 1: open drain output."]
     #[inline(always)]
     pub fn scl_force_out(&self) -> SCL_FORCE_OUT_R {
-        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 0x01) != 0)
+        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
     #[inline(always)]
     pub fn sample_scl_level(&self) -> SAMPLE_SCL_LEVEL_R {
-        SAMPLE_SCL_LEVEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        SAMPLE_SCL_LEVEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
     pub fn rx_full_ack_level(&self) -> RX_FULL_ACK_LEVEL_R {
-        RX_FULL_ACK_LEVEL_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FULL_ACK_LEVEL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as an I2C Master. Clear this bit to configure the module as an I2C Slave."]
     #[inline(always)]
     pub fn ms_mode(&self) -> MS_MODE_R {
-        MS_MODE_R::new(((self.bits >> 4) & 0x01) != 0)
+        MS_MODE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to start sending the data in TX FIFO."]
     #[inline(always)]
     pub fn trans_start(&self) -> TRANS_START_R {
-        TRANS_START_R::new(((self.bits >> 5) & 0x01) != 0)
+        TRANS_START_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit. 0: send data from the most significant bit."]
     #[inline(always)]
     pub fn tx_lsb_first(&self) -> TX_LSB_FIRST_R {
-        TX_LSB_FIRST_R::new(((self.bits >> 6) & 0x01) != 0)
+        TX_LSB_FIRST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit. 0: receive data from the most significant bit."]
     #[inline(always)]
     pub fn rx_lsb_first(&self) -> RX_LSB_FIRST_R {
-        RX_LSB_FIRST_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_LSB_FIRST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Reserved."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - This is the enable bit for I2C bus arbitration function."]
     #[inline(always)]
     pub fn arbitration_en(&self) -> ARBITRATION_EN_R {
-        ARBITRATION_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        ARBITRATION_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - This register is used to reset the SCL_FSM."]
     #[inline(always)]
     pub fn fsm_rst(&self) -> FSM_RST_R {
-        FSM_RST_R::new(((self.bits >> 10) & 0x01) != 0)
+        FSM_RST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - This register is used to control the REF_TICK."]
     #[inline(always)]
     pub fn ref_always_on(&self) -> REF_ALWAYS_ON_R {
-        REF_ALWAYS_ON_R::new(((self.bits >> 11) & 0x01) != 0)
+        REF_ALWAYS_ON_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

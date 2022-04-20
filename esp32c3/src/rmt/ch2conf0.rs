@@ -111,7 +111,7 @@ impl<'a> MEM_SIZE_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> CARRIER_EN_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> CARRIER_OUT_LV_CH2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -203,17 +203,17 @@ impl R {
     #[doc = "Bits 23:25 - reg_mem_size_ch2."]
     #[inline(always)]
     pub fn mem_size_ch2(&self) -> MEM_SIZE_CH2_R {
-        MEM_SIZE_CH2_R::new(((self.bits >> 23) & 0x07) as u8)
+        MEM_SIZE_CH2_R::new(((self.bits >> 23) & 7) as u8)
     }
     #[doc = "Bit 28 - reg_carrier_en_ch2."]
     #[inline(always)]
     pub fn carrier_en_ch2(&self) -> CARRIER_EN_CH2_R {
-        CARRIER_EN_CH2_R::new(((self.bits >> 28) & 0x01) != 0)
+        CARRIER_EN_CH2_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - reg_carrier_out_lv_ch2."]
     #[inline(always)]
     pub fn carrier_out_lv_ch2(&self) -> CARRIER_OUT_LV_CH2_R {
-        CARRIER_OUT_LV_CH2_R::new(((self.bits >> 29) & 0x01) != 0)
+        CARRIER_OUT_LV_CH2_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

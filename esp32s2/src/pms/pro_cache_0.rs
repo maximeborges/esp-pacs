@@ -67,7 +67,7 @@ impl<'a> PRO_CACHE_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache permission control registers."]
     #[inline(always)]
     pub fn pro_cache_lock(&self) -> PRO_CACHE_LOCK_R {
-        PRO_CACHE_LOCK_R::new((self.bits & 0x01) != 0)
+        PRO_CACHE_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

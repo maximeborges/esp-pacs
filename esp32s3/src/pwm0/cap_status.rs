@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - Edge of last capture trigger on channel 0, 0: posedge, 1: negedge"]
     #[inline(always)]
     pub fn cap0_edge(&self) -> CAP0_EDGE_R {
-        CAP0_EDGE_R::new((self.bits & 0x01) != 0)
+        CAP0_EDGE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Edge of last capture trigger on channel 1, 0: posedge, 1: negedge"]
     #[inline(always)]
     pub fn cap1_edge(&self) -> CAP1_EDGE_R {
-        CAP1_EDGE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CAP1_EDGE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Edge of last capture trigger on channel 2, 0: posedge, 1: negedge"]
     #[inline(always)]
     pub fn cap2_edge(&self) -> CAP2_EDGE_R {
-        CAP2_EDGE_R::new(((self.bits >> 2) & 0x01) != 0)
+        CAP2_EDGE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "Edge of last capture trigger\n\nThis register you can [`read`]

@@ -62,7 +62,7 @@ impl R {
     #[doc = "Bits 0:1 - The reject accessing. Bit 0: if this bit is 1, the rejected accessing is READ. Bit 1: if this bit is 1, the rejected accessing is WRITE."]
     #[inline(always)]
     pub fn extmem_reject_atrr(&self) -> EXTMEM_REJECT_ATRR_R {
-        EXTMEM_REJECT_ATRR_R::new((self.bits & 0x03) as u8)
+        EXTMEM_REJECT_ATRR_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:5 - The register indicate the reject accessing from which channel."]
     #[inline(always)]

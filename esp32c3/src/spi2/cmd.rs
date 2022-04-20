@@ -94,7 +94,7 @@ impl<'a> UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> USR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 23 - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
     #[inline(always)]
     pub fn update(&self) -> UPDATE_R {
-        UPDATE_R::new(((self.bits >> 23) & 0x01) != 0)
+        UPDATE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn usr(&self) -> USR_R {
-        USR_R::new(((self.bits >> 24) & 0x01) != 0)
+        USR_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

@@ -94,7 +94,7 @@ impl<'a> SAR1_DAC_XPD_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> XPD_SAR_AMP_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> AMP_RST_FB_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> AMP_SHORT_REF_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> AMP_SHORT_REF_GND_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> XPD_SAR_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> SAR_RSTB_FSM_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SAR2_RSTB_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 11)) | ((value as u32 & 0x03) << 11);
+        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
         self.w
     }
 }
@@ -370,7 +370,7 @@ impl<'a> AMP_RST_FB_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -397,7 +397,7 @@ impl<'a> AMP_SHORT_REF_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 15)) | ((value as u32 & 0x03) << 15);
+        self.w.bits = (self.w.bits & !(3 << 15)) | ((value as u32 & 3) << 15);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> AMP_SHORT_REF_GND_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -437,57 +437,57 @@ impl R {
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn sar1_dac_xpd_fsm_idle(&self) -> SAR1_DAC_XPD_FSM_IDLE_R {
-        SAR1_DAC_XPD_FSM_IDLE_R::new(((self.bits >> 4) & 0x01) != 0)
+        SAR1_DAC_XPD_FSM_IDLE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn xpd_sar_amp_fsm_idle(&self) -> XPD_SAR_AMP_FSM_IDLE_R {
-        XPD_SAR_AMP_FSM_IDLE_R::new(((self.bits >> 5) & 0x01) != 0)
+        XPD_SAR_AMP_FSM_IDLE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn amp_rst_fb_fsm_idle(&self) -> AMP_RST_FB_FSM_IDLE_R {
-        AMP_RST_FB_FSM_IDLE_R::new(((self.bits >> 6) & 0x01) != 0)
+        AMP_RST_FB_FSM_IDLE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn amp_short_ref_fsm_idle(&self) -> AMP_SHORT_REF_FSM_IDLE_R {
-        AMP_SHORT_REF_FSM_IDLE_R::new(((self.bits >> 7) & 0x01) != 0)
+        AMP_SHORT_REF_FSM_IDLE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn amp_short_ref_gnd_fsm_idle(&self) -> AMP_SHORT_REF_GND_FSM_IDLE_R {
-        AMP_SHORT_REF_GND_FSM_IDLE_R::new(((self.bits >> 8) & 0x01) != 0)
+        AMP_SHORT_REF_GND_FSM_IDLE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn xpd_sar_fsm_idle(&self) -> XPD_SAR_FSM_IDLE_R {
-        XPD_SAR_FSM_IDLE_R::new(((self.bits >> 9) & 0x01) != 0)
+        XPD_SAR_FSM_IDLE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn sar_rstb_fsm_idle(&self) -> SAR_RSTB_FSM_IDLE_R {
-        SAR_RSTB_FSM_IDLE_R::new(((self.bits >> 10) & 0x01) != 0)
+        SAR_RSTB_FSM_IDLE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     pub fn sar2_rstb_force(&self) -> SAR2_RSTB_FORCE_R {
-        SAR2_RSTB_FORCE_R::new(((self.bits >> 11) & 0x03) as u8)
+        SAR2_RSTB_FORCE_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
     pub fn amp_rst_fb_force(&self) -> AMP_RST_FB_FORCE_R {
-        AMP_RST_FB_FORCE_R::new(((self.bits >> 13) & 0x03) as u8)
+        AMP_RST_FB_FORCE_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bits 15:16"]
     #[inline(always)]
     pub fn amp_short_ref_force(&self) -> AMP_SHORT_REF_FORCE_R {
-        AMP_SHORT_REF_FORCE_R::new(((self.bits >> 15) & 0x03) as u8)
+        AMP_SHORT_REF_FORCE_R::new(((self.bits >> 15) & 3) as u8)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
     pub fn amp_short_ref_gnd_force(&self) -> AMP_SHORT_REF_GND_FORCE_R {
-        AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 17) & 0x03) as u8)
+        AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 17) & 3) as u8)
     }
 }
 impl W {

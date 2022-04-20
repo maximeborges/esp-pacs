@@ -57,7 +57,7 @@ impl<'a> SCLK_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> SDIN_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SDOUT_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SADDR_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> SCMD_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> SDIN_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> SDOUT_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SADDR_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> SCMD_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> SDIN_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> SDOUT_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> SADDR_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -528,7 +528,7 @@ impl<'a> SCMD_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -565,7 +565,7 @@ impl<'a> SDUMMY_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -573,7 +573,7 @@ impl R {
     #[doc = "Bits 0:1 - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
     pub fn sclk_mode(&self) -> SCLK_MODE_R {
-        SCLK_MODE_R::new((self.bits & 0x03) as u8)
+        SCLK_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:9 - Mode bits when SPI0 accesses to Ext_RAM."]
     #[inline(always)]
@@ -583,67 +583,67 @@ impl R {
     #[doc = "Bit 10 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
     pub fn sdin_dual(&self) -> SDIN_DUAL_R {
-        SDIN_DUAL_R::new(((self.bits >> 10) & 0x01) != 0)
+        SDIN_DUAL_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
     pub fn sdout_dual(&self) -> SDOUT_DUAL_R {
-        SDOUT_DUAL_R::new(((self.bits >> 11) & 0x01) != 0)
+        SDOUT_DUAL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
     pub fn saddr_dual(&self) -> SADDR_DUAL_R {
-        SADDR_DUAL_R::new(((self.bits >> 12) & 0x01) != 0)
+        SADDR_DUAL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
     #[inline(always)]
     pub fn scmd_dual(&self) -> SCMD_DUAL_R {
-        SCMD_DUAL_R::new(((self.bits >> 13) & 0x01) != 0)
+        SCMD_DUAL_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
     pub fn sdin_quad(&self) -> SDIN_QUAD_R {
-        SDIN_QUAD_R::new(((self.bits >> 14) & 0x01) != 0)
+        SDIN_QUAD_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
     pub fn sdout_quad(&self) -> SDOUT_QUAD_R {
-        SDOUT_QUAD_R::new(((self.bits >> 15) & 0x01) != 0)
+        SDOUT_QUAD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
     pub fn saddr_quad(&self) -> SADDR_QUAD_R {
-        SADDR_QUAD_R::new(((self.bits >> 16) & 0x01) != 0)
+        SADDR_QUAD_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
     #[inline(always)]
     pub fn scmd_quad(&self) -> SCMD_QUAD_R {
-        SCMD_QUAD_R::new(((self.bits >> 17) & 0x01) != 0)
+        SCMD_QUAD_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
     #[inline(always)]
     pub fn sdin_oct(&self) -> SDIN_OCT_R {
-        SDIN_OCT_R::new(((self.bits >> 18) & 0x01) != 0)
+        SDIN_OCT_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
     #[inline(always)]
     pub fn sdout_oct(&self) -> SDOUT_OCT_R {
-        SDOUT_OCT_R::new(((self.bits >> 19) & 0x01) != 0)
+        SDOUT_OCT_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
     #[inline(always)]
     pub fn saddr_oct(&self) -> SADDR_OCT_R {
-        SADDR_OCT_R::new(((self.bits >> 20) & 0x01) != 0)
+        SADDR_OCT_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
     #[inline(always)]
     pub fn scmd_oct(&self) -> SCMD_OCT_R {
-        SCMD_OCT_R::new(((self.bits >> 21) & 0x01) != 0)
+        SCMD_OCT_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
     pub fn sdummy_out(&self) -> SDUMMY_OUT_R {
-        SDUMMY_OUT_R::new(((self.bits >> 22) & 0x01) != 0)
+        SDUMMY_OUT_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {

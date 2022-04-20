@@ -67,7 +67,7 @@ impl<'a> RTC_CPUSEL_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> RTC_CPUPERIOD_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
     pub fn rtc_cpusel_conf(&self) -> RTC_CPUSEL_CONF_R {
-        RTC_CPUSEL_CONF_R::new(((self.bits >> 29) & 0x01) != 0)
+        RTC_CPUSEL_CONF_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - CPU clk sel option"]
     #[inline(always)]
     pub fn rtc_cpuperiod_sel(&self) -> RTC_CPUPERIOD_SEL_R {
-        RTC_CPUPERIOD_SEL_R::new(((self.bits >> 30) & 0x03) as u8)
+        RTC_CPUPERIOD_SEL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

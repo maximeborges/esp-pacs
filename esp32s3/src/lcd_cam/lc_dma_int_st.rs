@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0 - The status bit for LCD frame end interrupt."]
     #[inline(always)]
     pub fn lcd_vsync_int_st(&self) -> LCD_VSYNC_INT_ST_R {
-        LCD_VSYNC_INT_ST_R::new((self.bits & 0x01) != 0)
+        LCD_VSYNC_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status bit for lcd transfer end interrupt."]
     #[inline(always)]
     pub fn lcd_trans_done_int_st(&self) -> LCD_TRANS_DONE_INT_ST_R {
-        LCD_TRANS_DONE_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        LCD_TRANS_DONE_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The status bit for Camera frame end interrupt."]
     #[inline(always)]
     pub fn cam_vsync_int_st(&self) -> CAM_VSYNC_INT_ST_R {
-        CAM_VSYNC_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        CAM_VSYNC_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The status bit for Camera transfer end interrupt."]
     #[inline(always)]
     pub fn cam_hs_int_st(&self) -> CAM_HS_INT_ST_R {
-        CAM_HS_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        CAM_HS_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "LCD_camera DMA masked inturrupt status register\n\nThis register you can [`read`]

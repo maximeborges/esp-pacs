@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Set this bit when encryption operation is complete."]
     #[inline(always)]
     pub fn flash_done(&self) -> FLASH_DONE_R {
-        FLASH_DONE_R::new((self.bits & 0x01) != 0)
+        FLASH_DONE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

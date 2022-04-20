@@ -67,7 +67,7 @@ impl<'a> CACHE_REQ_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CACHE_FLASH_USR_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CACHE_FLASH_PES_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_req_en(&self) -> CACHE_REQ_EN_R {
-        CACHE_REQ_EN_R::new((self.bits & 0x01) != 0)
+        CACHE_REQ_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_usr_cmd_4byte(&self) -> CACHE_USR_CMD_4BYTE_R {
-        CACHE_USR_CMD_4BYTE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CACHE_USR_CMD_4BYTE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - For SPI0 cache read flash for user define command 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_flash_usr_cmd(&self) -> CACHE_FLASH_USR_CMD_R {
-        CACHE_FLASH_USR_CMD_R::new(((self.bits >> 2) & 0x01) != 0)
+        CACHE_FLASH_USR_CMD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_flash_pes_en(&self) -> CACHE_FLASH_PES_EN_R {
-        CACHE_FLASH_PES_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        CACHE_FLASH_PES_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

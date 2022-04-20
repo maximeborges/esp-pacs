@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
     #[inline(always)]
     pub fn slp_wakeup_int_raw(&self) -> SLP_WAKEUP_INT_RAW_R {
-        SLP_WAKEUP_INT_RAW_R::new((self.bits & 0x01) != 0)
+        SLP_WAKEUP_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - sleep reject interrupt raw"]
     #[inline(always)]
     pub fn slp_reject_int_raw(&self) -> SLP_REJECT_INT_RAW_R {
-        SLP_REJECT_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLP_REJECT_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SDIO idle interrupt raw"]
     #[inline(always)]
     pub fn sdio_idle_int_raw(&self) -> SDIO_IDLE_INT_RAW_R {
-        SDIO_IDLE_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        SDIO_IDLE_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC WDT interrupt raw"]
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
-        WDT_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        WDT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC time valid interrupt raw"]
     #[inline(always)]
     pub fn time_valid_int_raw(&self) -> TIME_VALID_INT_RAW_R {
-        TIME_VALID_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        TIME_VALID_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ULP-coprocessor interrupt raw"]
     #[inline(always)]
     pub fn ulp_cp_int_raw(&self) -> ULP_CP_INT_RAW_R {
-        ULP_CP_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        ULP_CP_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - touch interrupt raw"]
     #[inline(always)]
     pub fn touch_int_raw(&self) -> TOUCH_INT_RAW_R {
-        TOUCH_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        TOUCH_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - brown out interrupt raw"]
     #[inline(always)]
     pub fn brown_out_int_raw(&self) -> BROWN_OUT_INT_RAW_R {
-        BROWN_OUT_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        BROWN_OUT_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RTC main timer interrupt raw"]
     #[inline(always)]
     pub fn main_timer_int_raw(&self) -> MAIN_TIMER_INT_RAW_R {
-        MAIN_TIMER_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        MAIN_TIMER_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

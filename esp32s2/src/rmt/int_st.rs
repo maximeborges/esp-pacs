@@ -317,102 +317,102 @@ impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
     #[inline(always)]
     pub fn ch0_tx_end_int_st(&self) -> CH0_TX_END_INT_ST_R {
-        CH0_TX_END_INT_ST_R::new((self.bits & 0x01) != 0)
+        CH0_TX_END_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status bit for CH0_RX_END_INT."]
     #[inline(always)]
     pub fn ch0_rx_end_int_st(&self) -> CH0_RX_END_INT_ST_R {
-        CH0_RX_END_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        CH0_RX_END_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status bit for CH0_ERR_INT."]
     #[inline(always)]
     pub fn ch0_err_int_st(&self) -> CH0_ERR_INT_ST_R {
-        CH0_ERR_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        CH0_ERR_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The masked interrupt status bit for CH1_TX_END_INT."]
     #[inline(always)]
     pub fn ch1_tx_end_int_st(&self) -> CH1_TX_END_INT_ST_R {
-        CH1_TX_END_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        CH1_TX_END_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The masked interrupt status bit for CH1_RX_END_INT."]
     #[inline(always)]
     pub fn ch1_rx_end_int_st(&self) -> CH1_RX_END_INT_ST_R {
-        CH1_RX_END_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        CH1_RX_END_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The masked interrupt status bit for CH1_ERR_INT."]
     #[inline(always)]
     pub fn ch1_err_int_st(&self) -> CH1_ERR_INT_ST_R {
-        CH1_ERR_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        CH1_ERR_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The masked interrupt status bit for CH2_TX_END_INT."]
     #[inline(always)]
     pub fn ch2_tx_end_int_st(&self) -> CH2_TX_END_INT_ST_R {
-        CH2_TX_END_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        CH2_TX_END_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The masked interrupt status bit for CH2_RX_END_INT."]
     #[inline(always)]
     pub fn ch2_rx_end_int_st(&self) -> CH2_RX_END_INT_ST_R {
-        CH2_RX_END_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        CH2_RX_END_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The masked interrupt status bit for CH2_ERR_INT."]
     #[inline(always)]
     pub fn ch2_err_int_st(&self) -> CH2_ERR_INT_ST_R {
-        CH2_ERR_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        CH2_ERR_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The masked interrupt status bit for CH3_TX_END_INT."]
     #[inline(always)]
     pub fn ch3_tx_end_int_st(&self) -> CH3_TX_END_INT_ST_R {
-        CH3_TX_END_INT_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        CH3_TX_END_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The masked interrupt status bit for CH3_RX_END_INT."]
     #[inline(always)]
     pub fn ch3_rx_end_int_st(&self) -> CH3_RX_END_INT_ST_R {
-        CH3_RX_END_INT_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        CH3_RX_END_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The masked interrupt status bit for CH3_ERR_INT."]
     #[inline(always)]
     pub fn ch3_err_int_st(&self) -> CH3_ERR_INT_ST_R {
-        CH3_ERR_INT_ST_R::new(((self.bits >> 11) & 0x01) != 0)
+        CH3_ERR_INT_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch0_tx_thr_event_int_st(&self) -> CH0_TX_THR_EVENT_INT_ST_R {
-        CH0_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 12) & 0x01) != 0)
+        CH0_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The masked interrupt status bit for CH1_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch1_tx_thr_event_int_st(&self) -> CH1_TX_THR_EVENT_INT_ST_R {
-        CH1_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 13) & 0x01) != 0)
+        CH1_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The masked interrupt status bit for CH2_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch2_tx_thr_event_int_st(&self) -> CH2_TX_THR_EVENT_INT_ST_R {
-        CH2_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 14) & 0x01) != 0)
+        CH2_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The masked interrupt status bit for CH3_TX_THR_EVENT_INT."]
     #[inline(always)]
     pub fn ch3_tx_thr_event_int_st(&self) -> CH3_TX_THR_EVENT_INT_ST_R {
-        CH3_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 15) & 0x01) != 0)
+        CH3_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - The masked interrupt status bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch0_tx_loop_int_st(&self) -> CH0_TX_LOOP_INT_ST_R {
-        CH0_TX_LOOP_INT_ST_R::new(((self.bits >> 16) & 0x01) != 0)
+        CH0_TX_LOOP_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - The masked interrupt status bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch1_tx_loop_int_st(&self) -> CH1_TX_LOOP_INT_ST_R {
-        CH1_TX_LOOP_INT_ST_R::new(((self.bits >> 17) & 0x01) != 0)
+        CH1_TX_LOOP_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - The masked interrupt status bit for CH2_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch2_tx_loop_int_st(&self) -> CH2_TX_LOOP_INT_ST_R {
-        CH2_TX_LOOP_INT_ST_R::new(((self.bits >> 18) & 0x01) != 0)
+        CH2_TX_LOOP_INT_ST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - The masked interrupt status bit for CH3_TX_LOOP_INT."]
     #[inline(always)]
     pub fn ch3_tx_loop_int_st(&self) -> CH3_TX_LOOP_INT_ST_R {
-        CH3_TX_LOOP_INT_ST_R::new(((self.bits >> 19) & 0x01) != 0)
+        CH3_TX_LOOP_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`]

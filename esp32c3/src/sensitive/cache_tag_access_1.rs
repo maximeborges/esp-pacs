@@ -67,7 +67,7 @@ impl<'a> PRO_I_TAG_RD_ACS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_I_TAG_WR_ACS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_D_TAG_RD_ACS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRO_D_TAG_WR_ACS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - pro_i_tag_rd_acs"]
     #[inline(always)]
     pub fn pro_i_tag_rd_acs(&self) -> PRO_I_TAG_RD_ACS_R {
-        PRO_I_TAG_RD_ACS_R::new((self.bits & 0x01) != 0)
+        PRO_I_TAG_RD_ACS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - pro_i_tag_wr_acs"]
     #[inline(always)]
     pub fn pro_i_tag_wr_acs(&self) -> PRO_I_TAG_WR_ACS_R {
-        PRO_I_TAG_WR_ACS_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_I_TAG_WR_ACS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - pro_d_tag_rd_acs"]
     #[inline(always)]
     pub fn pro_d_tag_rd_acs(&self) -> PRO_D_TAG_RD_ACS_R {
-        PRO_D_TAG_RD_ACS_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_D_TAG_RD_ACS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - pro_d_tag_wr_acs"]
     #[inline(always)]
     pub fn pro_d_tag_wr_acs(&self) -> PRO_D_TAG_WR_ACS_R {
-        PRO_D_TAG_WR_ACS_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_D_TAG_WR_ACS_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

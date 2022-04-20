@@ -85,7 +85,7 @@ impl R {
     #[doc = "Bit 31 - reg_redcy_andor"]
     #[inline(always)]
     pub fn redcy_andor(&self) -> REDCY_ANDOR_R {
-        REDCY_ANDOR_R::new(((self.bits >> 31) & 0x01) != 0)
+        REDCY_ANDOR_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -111,7 +111,7 @@ impl<'a> SDIO_DREFH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> SDIO_DREFM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> SDIO_DREFL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -202,7 +202,7 @@ impl<'a> XPD_SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> SDIO_TIEH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -276,7 +276,7 @@ impl<'a> SDIO_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -294,32 +294,32 @@ impl R {
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn sdio_drefh(&self) -> SDIO_DREFH_R {
-        SDIO_DREFH_R::new(((self.bits >> 8) & 0x03) as u8)
+        SDIO_DREFH_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn sdio_drefm(&self) -> SDIO_DREFM_R {
-        SDIO_DREFM_R::new(((self.bits >> 10) & 0x03) as u8)
+        SDIO_DREFM_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn sdio_drefl(&self) -> SDIO_DREFL_R {
-        SDIO_DREFL_R::new(((self.bits >> 12) & 0x03) as u8)
+        SDIO_DREFL_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - program for XPD_SDIO_REG"]
     #[inline(always)]
     pub fn xpd_sdio(&self) -> XPD_SDIO_R {
-        XPD_SDIO_R::new(((self.bits >> 14) & 0x01) != 0)
+        XPD_SDIO_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - program for SDIO_TIEH"]
     #[inline(always)]
     pub fn sdio_tieh(&self) -> SDIO_TIEH_R {
-        SDIO_TIEH_R::new(((self.bits >> 15) & 0x01) != 0)
+        SDIO_TIEH_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - program for sdio_force"]
     #[inline(always)]
     pub fn sdio_force(&self) -> SDIO_FORCE_R {
-        SDIO_FORCE_R::new(((self.bits >> 16) & 0x01) != 0)
+        SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

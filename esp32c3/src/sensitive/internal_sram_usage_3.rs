@@ -57,7 +57,7 @@ impl<'a> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 0:2 - internal_sram_usage_mac_dump_sram"]
     #[inline(always)]
     pub fn internal_sram_usage_mac_dump_sram(&self) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_R {
-        INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_R::new((self.bits & 0x07) as u8)
+        INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - internal_sram_alloc_mac_dump"]
     #[inline(always)]
     pub fn internal_sram_alloc_mac_dump(&self) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_R {
-        INTERNAL_SRAM_ALLOC_MAC_DUMP_R::new(((self.bits >> 3) & 0x01) != 0)
+        INTERNAL_SRAM_ALLOC_MAC_DUMP_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

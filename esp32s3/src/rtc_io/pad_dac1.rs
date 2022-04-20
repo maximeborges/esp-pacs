@@ -94,7 +94,7 @@ impl<'a> PDAC1_XPD_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PDAC1_DAC_XPD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PDAC1_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> PDAC1_SLP_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> PDAC1_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> PDAC1_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> PDAC1_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> PDAC1_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> PDAC1_RUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> PDAC1_RDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -444,7 +444,7 @@ impl<'a> PDAC1_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -457,57 +457,57 @@ impl R {
     #[doc = "Bit 11 - PDAC1_XPD_DAC"]
     #[inline(always)]
     pub fn pdac1_xpd_dac(&self) -> PDAC1_XPD_DAC_R {
-        PDAC1_XPD_DAC_R::new(((self.bits >> 11) & 0x01) != 0)
+        PDAC1_XPD_DAC_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - 1: use reg_pdac1_xpd_dac to control PDAC1_XPD_DAC,0: use SAR ADC FSM to control PDAC1_XPD_DAC"]
     #[inline(always)]
     pub fn pdac1_dac_xpd_force(&self) -> PDAC1_DAC_XPD_FORCE_R {
-        PDAC1_DAC_XPD_FORCE_R::new(((self.bits >> 12) & 0x01) != 0)
+        PDAC1_DAC_XPD_FORCE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
     pub fn pdac1_fun_ie(&self) -> PDAC1_FUN_IE_R {
-        PDAC1_FUN_IE_R::new(((self.bits >> 13) & 0x01) != 0)
+        PDAC1_FUN_IE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
     pub fn pdac1_slp_oe(&self) -> PDAC1_SLP_OE_R {
-        PDAC1_SLP_OE_R::new(((self.bits >> 14) & 0x01) != 0)
+        PDAC1_SLP_OE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
     pub fn pdac1_slp_ie(&self) -> PDAC1_SLP_IE_R {
-        PDAC1_SLP_IE_R::new(((self.bits >> 15) & 0x01) != 0)
+        PDAC1_SLP_IE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
     pub fn pdac1_slp_sel(&self) -> PDAC1_SLP_SEL_R {
-        PDAC1_SLP_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        PDAC1_SLP_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - PDAC1 function sel"]
     #[inline(always)]
     pub fn pdac1_fun_sel(&self) -> PDAC1_FUN_SEL_R {
-        PDAC1_FUN_SEL_R::new(((self.bits >> 17) & 0x03) as u8)
+        PDAC1_FUN_SEL_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
     pub fn pdac1_mux_sel(&self) -> PDAC1_MUX_SEL_R {
-        PDAC1_MUX_SEL_R::new(((self.bits >> 19) & 0x01) != 0)
+        PDAC1_MUX_SEL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 27 - PDAC1_RUE"]
     #[inline(always)]
     pub fn pdac1_rue(&self) -> PDAC1_RUE_R {
-        PDAC1_RUE_R::new(((self.bits >> 27) & 0x01) != 0)
+        PDAC1_RUE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - PDAC1_RDE"]
     #[inline(always)]
     pub fn pdac1_rde(&self) -> PDAC1_RDE_R {
-        PDAC1_RDE_R::new(((self.bits >> 28) & 0x01) != 0)
+        PDAC1_RDE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bits 29:30 - PDAC1_DRV"]
     #[inline(always)]
     pub fn pdac1_drv(&self) -> PDAC1_DRV_R {
-        PDAC1_DRV_R::new(((self.bits >> 29) & 0x03) as u8)
+        PDAC1_DRV_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {

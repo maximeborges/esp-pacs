@@ -84,7 +84,7 @@ impl<'a> GEN2_T0_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
+        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> GEN2_T1_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 7)) | ((value as u32 & 0x07) << 7);
+        self.w.bits = (self.w.bits & !(7 << 7)) | ((value as u32 & 7) << 7);
         self.w
     }
 }
@@ -124,12 +124,12 @@ impl R {
     #[doc = "Bits 4:6"]
     #[inline(always)]
     pub fn gen2_t0_sel(&self) -> GEN2_T0_SEL_R {
-        GEN2_T0_SEL_R::new(((self.bits >> 4) & 0x07) as u8)
+        GEN2_T0_SEL_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
     pub fn gen2_t1_sel(&self) -> GEN2_T1_SEL_R {
-        GEN2_T1_SEL_R::new(((self.bits >> 7) & 0x07) as u8)
+        GEN2_T1_SEL_R::new(((self.bits >> 7) & 7) as u8)
     }
 }
 impl W {

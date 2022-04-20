@@ -142,17 +142,17 @@ impl R {
     #[doc = "Bit 13 - This register represents the level of the internal UART DSR signal."]
     #[inline(always)]
     pub fn dsrn(&self) -> DSRN_R {
-        DSRN_R::new(((self.bits >> 13) & 0x01) != 0)
+        DSRN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - This register represents the level of the internal UART CTS signal."]
     #[inline(always)]
     pub fn ctsn(&self) -> CTSN_R {
-        CTSN_R::new(((self.bits >> 14) & 0x01) != 0)
+        CTSN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - This register represents the level of the internal UART RXD signal."]
     #[inline(always)]
     pub fn rxd(&self) -> RXD_R {
-        RXD_R::new(((self.bits >> 15) & 0x01) != 0)
+        RXD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:25 - Stores the number of data bytes in TX FIFO."]
     #[inline(always)]
@@ -162,17 +162,17 @@ impl R {
     #[doc = "Bit 29 - This bit represents the level of the internal UART DTR signal."]
     #[inline(always)]
     pub fn dtrn(&self) -> DTRN_R {
-        DTRN_R::new(((self.bits >> 29) & 0x01) != 0)
+        DTRN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - This bit represents the level of the internal UART RTS signal."]
     #[inline(always)]
     pub fn rtsn(&self) -> RTSN_R {
-        RTSN_R::new(((self.bits >> 30) & 0x01) != 0)
+        RTSN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - This bit represents the level of the internal UART TXD signal."]
     #[inline(always)]
     pub fn txd(&self) -> TXD_R {
-        TXD_R::new(((self.bits >> 31) & 0x01) != 0)
+        TXD_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "UART status register\n\nThis register you can [`read`]

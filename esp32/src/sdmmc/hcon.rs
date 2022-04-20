@@ -152,7 +152,7 @@ impl R {
     #[doc = "Bit 0 - Hardware support SDIO and MMC."]
     #[inline(always)]
     pub fn card_type(&self) -> CARD_TYPE_R {
-        CARD_TYPE_R::new((self.bits & 0x01) != 0)
+        CARD_TYPE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:5 - Support card number is 2."]
     #[inline(always)]
@@ -162,12 +162,12 @@ impl R {
     #[doc = "Bit 6 - Register config is APB bus."]
     #[inline(always)]
     pub fn bus_type(&self) -> BUS_TYPE_R {
-        BUS_TYPE_R::new(((self.bits >> 6) & 0x01) != 0)
+        BUS_TYPE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 7:9 - Regisger data widht is 32."]
     #[inline(always)]
     pub fn data_width(&self) -> DATA_WIDTH_R {
-        DATA_WIDTH_R::new(((self.bits >> 7) & 0x07) as u8)
+        DATA_WIDTH_R::new(((self.bits >> 7) & 7) as u8)
     }
     #[doc = "Bits 10:15 - Register address width is 32."]
     #[inline(always)]
@@ -177,22 +177,22 @@ impl R {
     #[doc = "Bits 18:20 - DMA data witdth is 32."]
     #[inline(always)]
     pub fn dma_width(&self) -> DMA_WIDTH_R {
-        DMA_WIDTH_R::new(((self.bits >> 18) & 0x07) as u8)
+        DMA_WIDTH_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bit 21 - Inside RAM in SDMMC module."]
     #[inline(always)]
     pub fn ram_indise(&self) -> RAM_INDISE_R {
-        RAM_INDISE_R::new(((self.bits >> 21) & 0x01) != 0)
+        RAM_INDISE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Have a hold regiser in data path ."]
     #[inline(always)]
     pub fn hold(&self) -> HOLD_R {
-        HOLD_R::new(((self.bits >> 22) & 0x01) != 0)
+        HOLD_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bits 24:25 - Have 4 clk divider in design ."]
     #[inline(always)]
     pub fn num_clk_div(&self) -> NUM_CLK_DIV_R {
-        NUM_CLK_DIV_R::new(((self.bits >> 24) & 0x03) as u8)
+        NUM_CLK_DIV_R::new(((self.bits >> 24) & 3) as u8)
     }
 }
 #[doc = "Hardware feature register\n\nThis register you can [`read`]

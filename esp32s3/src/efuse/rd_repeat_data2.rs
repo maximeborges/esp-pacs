@@ -237,37 +237,37 @@ impl R {
     #[doc = "Bit 20 - Set this bit to enable secure boot."]
     #[inline(always)]
     pub fn secure_boot_en(&self) -> SECURE_BOOT_EN_R {
-        SECURE_BOOT_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SECURE_BOOT_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to enable revoking aggressive secure boot."]
     #[inline(always)]
     pub fn secure_boot_aggressive_revoke(&self) -> SECURE_BOOT_AGGRESSIVE_REVOKE_R {
-        SECURE_BOOT_AGGRESSIVE_REVOKE_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_AGGRESSIVE_REVOKE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to disable function of usb switch to jtag in module of usb device."]
     #[inline(always)]
     pub fn dis_usb_jtag(&self) -> DIS_USB_JTAG_R {
-        DIS_USB_JTAG_R::new(((self.bits >> 22) & 0x01) != 0)
+        DIS_USB_JTAG_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Set this bit to disable usb device."]
     #[inline(always)]
     pub fn dis_usb_device(&self) -> DIS_USB_DEVICE_R {
-        DIS_USB_DEVICE_R::new(((self.bits >> 23) & 0x01) != 0)
+        DIS_USB_DEVICE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to enable selection between usb_to_jtag and pad_to_jtag through strapping gpio10 when both reg_dis_usb_jtag and reg_dis_pad_jtag are equal to 0."]
     #[inline(always)]
     pub fn strap_jtag_sel(&self) -> STRAP_JTAG_SEL_R {
-        STRAP_JTAG_SEL_R::new(((self.bits >> 24) & 0x01) != 0)
+        STRAP_JTAG_SEL_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - This bit is used to switch internal PHY and external PHY for USB OTG and USB Device. 0: internal PHY is assigned to USB Device while external PHY is assigned to USB OTG. 1: internal PHY is assigned to USB OTG while external PHY is assigned to USB Device."]
     #[inline(always)]
     pub fn usb_phy_sel(&self) -> USB_PHY_SEL_R {
-        USB_PHY_SEL_R::new(((self.bits >> 25) & 0x01) != 0)
+        USB_PHY_SEL_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bits 26:27 - Sample delay configuration of power glitch."]
     #[inline(always)]
     pub fn power_glitch_dsense(&self) -> POWER_GLITCH_DSENSE_R {
-        POWER_GLITCH_DSENSE_R::new(((self.bits >> 26) & 0x03) as u8)
+        POWER_GLITCH_DSENSE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:31 - Configures flash waiting time after power-up, in unit of ms. If the value is less than 15, the waiting time is the configurable value. Otherwise, the waiting time is twice the configurable value."]
     #[inline(always)]

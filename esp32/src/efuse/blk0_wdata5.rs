@@ -192,7 +192,7 @@ impl<'a> VOL_LEVEL_HP_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl R {
     #[doc = "Bits 22:23 - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)"]
     #[inline(always)]
     pub fn vol_level_hp_inv(&self) -> VOL_LEVEL_HP_INV_R {
-        VOL_LEVEL_HP_INV_R::new(((self.bits >> 22) & 0x03) as u8)
+        VOL_LEVEL_HP_INV_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]

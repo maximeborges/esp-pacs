@@ -94,7 +94,7 @@ impl<'a> APB_ADC_RESET_FSM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> APB_ADC_TRANS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 30 - reset_apb_adc_state"]
     #[inline(always)]
     pub fn apb_adc_reset_fsm(&self) -> APB_ADC_RESET_FSM_R {
-        APB_ADC_RESET_FSM_R::new(((self.bits >> 30) & 0x01) != 0)
+        APB_ADC_RESET_FSM_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable apb_adc use spi_dma"]
     #[inline(always)]
     pub fn apb_adc_trans(&self) -> APB_ADC_TRANS_R {
-        APB_ADC_TRANS_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_ADC_TRANS_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

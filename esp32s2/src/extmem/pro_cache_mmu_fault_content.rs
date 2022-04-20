@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 17:19 - The bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: flush, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx"]
     #[inline(always)]
     pub fn pro_cache_mmu_fault_code(&self) -> PRO_CACHE_MMU_FAULT_CODE_R {
-        PRO_CACHE_MMU_FAULT_CODE_R::new(((self.bits >> 17) & 0x07) as u8)
+        PRO_CACHE_MMU_FAULT_CODE_R::new(((self.bits >> 17) & 7) as u8)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`]

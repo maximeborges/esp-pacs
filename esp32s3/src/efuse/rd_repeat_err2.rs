@@ -237,37 +237,37 @@ impl R {
     #[doc = "Bit 20 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn secure_boot_en_err(&self) -> SECURE_BOOT_EN_ERR_R {
-        SECURE_BOOT_EN_ERR_R::new(((self.bits >> 20) & 0x01) != 0)
+        SECURE_BOOT_EN_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn secure_boot_aggressive_revoke_err(&self) -> SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R {
-        SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_usb_jtag_err(&self) -> DIS_USB_JTAG_ERR_R {
-        DIS_USB_JTAG_ERR_R::new(((self.bits >> 22) & 0x01) != 0)
+        DIS_USB_JTAG_ERR_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_usb_device_err(&self) -> DIS_USB_DEVICE_ERR_R {
-        DIS_USB_DEVICE_ERR_R::new(((self.bits >> 23) & 0x01) != 0)
+        DIS_USB_DEVICE_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn strap_jtag_sel_err(&self) -> STRAP_JTAG_SEL_ERR_R {
-        STRAP_JTAG_SEL_ERR_R::new(((self.bits >> 24) & 0x01) != 0)
+        STRAP_JTAG_SEL_ERR_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_phy_sel_err(&self) -> USB_PHY_SEL_ERR_R {
-        USB_PHY_SEL_ERR_R::new(((self.bits >> 25) & 0x01) != 0)
+        USB_PHY_SEL_ERR_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bits 26:27 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn power_glitch_dsense_err(&self) -> POWER_GLITCH_DSENSE_ERR_R {
-        POWER_GLITCH_DSENSE_ERR_R::new(((self.bits >> 26) & 0x03) as u8)
+        POWER_GLITCH_DSENSE_ERR_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:31 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]

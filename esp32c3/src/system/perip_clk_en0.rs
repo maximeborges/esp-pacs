@@ -67,7 +67,7 @@ impl<'a> TIMERS_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPI01_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> UART_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> WDG_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> I2S0_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> UART1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> SPI2_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> I2C_EXT0_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> UHCI0_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RMT_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> PCNT_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> LEDC_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> UHCI1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> TIMERGROUP_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> EFUSE_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> TIMERGROUP1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> SPI3_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> PWM0_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> EXT1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> CAN_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> PWM1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> I2S1_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> SPI2_DMA_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> USB_DEVICE_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> UART_MEM_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -992,7 +992,7 @@ impl<'a> PWM2_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -1029,7 +1029,7 @@ impl<'a> PWM3_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -1066,7 +1066,7 @@ impl<'a> SPI3_DMA_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1103,7 +1103,7 @@ impl<'a> APB_SARADC_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1140,7 +1140,7 @@ impl<'a> SYSTIMER_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -1177,7 +1177,7 @@ impl<'a> ADC2_ARB_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -1214,7 +1214,7 @@ impl<'a> SPI4_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -1222,162 +1222,162 @@ impl R {
     #[doc = "Bit 0 - reg_timers_clk_en"]
     #[inline(always)]
     pub fn timers_clk_en(&self) -> TIMERS_CLK_EN_R {
-        TIMERS_CLK_EN_R::new((self.bits & 0x01) != 0)
+        TIMERS_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_spi01_clk_en"]
     #[inline(always)]
     pub fn spi01_clk_en(&self) -> SPI01_CLK_EN_R {
-        SPI01_CLK_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        SPI01_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_uart_clk_en"]
     #[inline(always)]
     pub fn uart_clk_en(&self) -> UART_CLK_EN_R {
-        UART_CLK_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        UART_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_wdg_clk_en"]
     #[inline(always)]
     pub fn wdg_clk_en(&self) -> WDG_CLK_EN_R {
-        WDG_CLK_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        WDG_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_i2s0_clk_en"]
     #[inline(always)]
     pub fn i2s0_clk_en(&self) -> I2S0_CLK_EN_R {
-        I2S0_CLK_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        I2S0_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_uart1_clk_en"]
     #[inline(always)]
     pub fn uart1_clk_en(&self) -> UART1_CLK_EN_R {
-        UART1_CLK_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        UART1_CLK_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_spi2_clk_en"]
     #[inline(always)]
     pub fn spi2_clk_en(&self) -> SPI2_CLK_EN_R {
-        SPI2_CLK_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        SPI2_CLK_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_ext0_clk_en"]
     #[inline(always)]
     pub fn i2c_ext0_clk_en(&self) -> I2C_EXT0_CLK_EN_R {
-        I2C_EXT0_CLK_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        I2C_EXT0_CLK_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_uhci0_clk_en"]
     #[inline(always)]
     pub fn uhci0_clk_en(&self) -> UHCI0_CLK_EN_R {
-        UHCI0_CLK_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        UHCI0_CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_rmt_clk_en"]
     #[inline(always)]
     pub fn rmt_clk_en(&self) -> RMT_CLK_EN_R {
-        RMT_CLK_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        RMT_CLK_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_pcnt_clk_en"]
     #[inline(always)]
     pub fn pcnt_clk_en(&self) -> PCNT_CLK_EN_R {
-        PCNT_CLK_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        PCNT_CLK_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_ledc_clk_en"]
     #[inline(always)]
     pub fn ledc_clk_en(&self) -> LEDC_CLK_EN_R {
-        LEDC_CLK_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        LEDC_CLK_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_uhci1_clk_en"]
     #[inline(always)]
     pub fn uhci1_clk_en(&self) -> UHCI1_CLK_EN_R {
-        UHCI1_CLK_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        UHCI1_CLK_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_timergroup_clk_en"]
     #[inline(always)]
     pub fn timergroup_clk_en(&self) -> TIMERGROUP_CLK_EN_R {
-        TIMERGROUP_CLK_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        TIMERGROUP_CLK_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_efuse_clk_en"]
     #[inline(always)]
     pub fn efuse_clk_en(&self) -> EFUSE_CLK_EN_R {
-        EFUSE_CLK_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        EFUSE_CLK_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - reg_timergroup1_clk_en"]
     #[inline(always)]
     pub fn timergroup1_clk_en(&self) -> TIMERGROUP1_CLK_EN_R {
-        TIMERGROUP1_CLK_EN_R::new(((self.bits >> 15) & 0x01) != 0)
+        TIMERGROUP1_CLK_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - reg_spi3_clk_en"]
     #[inline(always)]
     pub fn spi3_clk_en(&self) -> SPI3_CLK_EN_R {
-        SPI3_CLK_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        SPI3_CLK_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - reg_pwm0_clk_en"]
     #[inline(always)]
     pub fn pwm0_clk_en(&self) -> PWM0_CLK_EN_R {
-        PWM0_CLK_EN_R::new(((self.bits >> 17) & 0x01) != 0)
+        PWM0_CLK_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - reg_ext1_clk_en"]
     #[inline(always)]
     pub fn ext1_clk_en(&self) -> EXT1_CLK_EN_R {
-        EXT1_CLK_EN_R::new(((self.bits >> 18) & 0x01) != 0)
+        EXT1_CLK_EN_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - reg_can_clk_en"]
     #[inline(always)]
     pub fn can_clk_en(&self) -> CAN_CLK_EN_R {
-        CAN_CLK_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        CAN_CLK_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - reg_pwm1_clk_en"]
     #[inline(always)]
     pub fn pwm1_clk_en(&self) -> PWM1_CLK_EN_R {
-        PWM1_CLK_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        PWM1_CLK_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - reg_i2s1_clk_en"]
     #[inline(always)]
     pub fn i2s1_clk_en(&self) -> I2S1_CLK_EN_R {
-        I2S1_CLK_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        I2S1_CLK_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - reg_spi2_dma_clk_en"]
     #[inline(always)]
     pub fn spi2_dma_clk_en(&self) -> SPI2_DMA_CLK_EN_R {
-        SPI2_DMA_CLK_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        SPI2_DMA_CLK_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - reg_usb_device_clk_en"]
     #[inline(always)]
     pub fn usb_device_clk_en(&self) -> USB_DEVICE_CLK_EN_R {
-        USB_DEVICE_CLK_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        USB_DEVICE_CLK_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - reg_uart_mem_clk_en"]
     #[inline(always)]
     pub fn uart_mem_clk_en(&self) -> UART_MEM_CLK_EN_R {
-        UART_MEM_CLK_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        UART_MEM_CLK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - reg_pwm2_clk_en"]
     #[inline(always)]
     pub fn pwm2_clk_en(&self) -> PWM2_CLK_EN_R {
-        PWM2_CLK_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        PWM2_CLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - reg_pwm3_clk_en"]
     #[inline(always)]
     pub fn pwm3_clk_en(&self) -> PWM3_CLK_EN_R {
-        PWM3_CLK_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        PWM3_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - reg_spi3_dma_clk_en"]
     #[inline(always)]
     pub fn spi3_dma_clk_en(&self) -> SPI3_DMA_CLK_EN_R {
-        SPI3_DMA_CLK_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        SPI3_DMA_CLK_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - reg_apb_saradc_clk_en"]
     #[inline(always)]
     pub fn apb_saradc_clk_en(&self) -> APB_SARADC_CLK_EN_R {
-        APB_SARADC_CLK_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        APB_SARADC_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - reg_systimer_clk_en"]
     #[inline(always)]
     pub fn systimer_clk_en(&self) -> SYSTIMER_CLK_EN_R {
-        SYSTIMER_CLK_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        SYSTIMER_CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - reg_adc2_arb_clk_en"]
     #[inline(always)]
     pub fn adc2_arb_clk_en(&self) -> ADC2_ARB_CLK_EN_R {
-        ADC2_ARB_CLK_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        ADC2_ARB_CLK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - reg_spi4_clk_en"]
     #[inline(always)]
     pub fn spi4_clk_en(&self) -> SPI4_CLK_EN_R {
-        SPI4_CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        SPI4_CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -57,7 +57,7 @@ impl<'a> ROM_POWER_UP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -92,7 +92,7 @@ impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
     pub fn rom_power_up(&self) -> ROM_POWER_UP_R {
-        ROM_POWER_UP_R::new((self.bits & 0x07) as u8)
+        ROM_POWER_UP_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]

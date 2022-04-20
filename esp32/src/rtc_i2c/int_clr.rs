@@ -67,7 +67,7 @@ impl<'a> SLAVE_TRANS_COMPLETE_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ARBITRATION_LOST_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MASTER_TRANS_COMPLETE_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TRANS_COMPLETE_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -200,7 +200,7 @@ impl<'a> TIME_OUT_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -208,22 +208,22 @@ impl R {
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slave_trans_complete_int_clr(&self) -> SLAVE_TRANS_COMPLETE_INT_CLR_R {
-        SLAVE_TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 4) & 0x01) != 0)
+        SLAVE_TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn arbitration_lost_int_clr(&self) -> ARBITRATION_LOST_INT_CLR_R {
-        ARBITRATION_LOST_INT_CLR_R::new(((self.bits >> 5) & 0x01) != 0)
+        ARBITRATION_LOST_INT_CLR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn master_trans_complete_int_clr(&self) -> MASTER_TRANS_COMPLETE_INT_CLR_R {
-        MASTER_TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 6) & 0x01) != 0)
+        MASTER_TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn trans_complete_int_clr(&self) -> TRANS_COMPLETE_INT_CLR_R {
-        TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 7) & 0x01) != 0)
+        TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

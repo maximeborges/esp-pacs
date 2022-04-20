@@ -67,7 +67,7 @@ impl<'a> DCACHE_INVALIDATE_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DCACHE_WRITEBACK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DCACHE_CLEAN_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -164,22 +164,22 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
     pub fn dcache_invalidate_ena(&self) -> DCACHE_INVALIDATE_ENA_R {
-        DCACHE_INVALIDATE_ENA_R::new((self.bits & 0x01) != 0)
+        DCACHE_INVALIDATE_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
     #[inline(always)]
     pub fn dcache_writeback_ena(&self) -> DCACHE_WRITEBACK_ENA_R {
-        DCACHE_WRITEBACK_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        DCACHE_WRITEBACK_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
     pub fn dcache_clean_ena(&self) -> DCACHE_CLEAN_ENA_R {
-        DCACHE_CLEAN_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_CLEAN_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to indicate clean/writeback/invalidate operation is finished."]
     #[inline(always)]
     pub fn dcache_sync_done(&self) -> DCACHE_SYNC_DONE_R {
-        DCACHE_SYNC_DONE_R::new(((self.bits >> 3) & 0x01) != 0)
+        DCACHE_SYNC_DONE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

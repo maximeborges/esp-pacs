@@ -67,7 +67,7 @@ impl<'a> PRO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> APP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SDIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PRODPORT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> APPDPORT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> AHB_LITE_SDHOST_PID_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -250,32 +250,32 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro(&self) -> PRO_R {
-        PRO_R::new((self.bits & 0x01) != 0)
+        PRO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn app(&self) -> APP_R {
-        APP_R::new(((self.bits >> 4) & 0x01) != 0)
+        APP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn sdio(&self) -> SDIO_R {
-        SDIO_R::new(((self.bits >> 8) & 0x01) != 0)
+        SDIO_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn prodport(&self) -> PRODPORT_R {
-        PRODPORT_R::new(((self.bits >> 9) & 0x01) != 0)
+        PRODPORT_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn appdport(&self) -> APPDPORT_R {
-        APPDPORT_R::new(((self.bits >> 10) & 0x01) != 0)
+        APPDPORT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
     pub fn ahb_lite_sdhost_pid(&self) -> AHB_LITE_SDHOST_PID_R {
-        AHB_LITE_SDHOST_PID_R::new(((self.bits >> 11) & 0x07) as u8)
+        AHB_LITE_SDHOST_PID_R::new(((self.bits >> 11) & 7) as u8)
     }
 }
 impl W {

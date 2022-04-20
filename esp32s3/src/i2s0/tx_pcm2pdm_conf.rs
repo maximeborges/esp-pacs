@@ -67,7 +67,7 @@ impl<'a> TX_PDM_HP_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> TX_PDM_HP_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> TX_PDM_LP_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 15)) | ((value as u32 & 0x03) << 15);
+        self.w.bits = (self.w.bits & !(3 << 15)) | ((value as u32 & 3) << 15);
         self.w
     }
 }
@@ -202,7 +202,7 @@ impl<'a> TX_PDM_SINC_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -229,7 +229,7 @@ impl<'a> TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 19)) | ((value as u32 & 0x03) << 19);
+        self.w.bits = (self.w.bits & !(3 << 19)) | ((value as u32 & 3) << 19);
         self.w
     }
 }
@@ -266,7 +266,7 @@ impl<'a> TX_PDM_SIGMADELTA_DITHER2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -303,7 +303,7 @@ impl<'a> TX_PDM_SIGMADELTA_DITHER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -340,7 +340,7 @@ impl<'a> TX_PDM_DAC_2OUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -377,7 +377,7 @@ impl<'a> TX_PDM_DAC_MODE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -414,7 +414,7 @@ impl<'a> PCM2PDM_CONV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -422,7 +422,7 @@ impl R {
     #[doc = "Bit 0 - I2S TX PDM bypass hp filter or not. The option has been removed."]
     #[inline(always)]
     pub fn tx_pdm_hp_bypass(&self) -> TX_PDM_HP_BYPASS_R {
-        TX_PDM_HP_BYPASS_R::new((self.bits & 0x01) != 0)
+        TX_PDM_HP_BYPASS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:4 - I2S TX PDM OSR2 value"]
     #[inline(always)]
@@ -437,47 +437,47 @@ impl R {
     #[doc = "Bits 13:14 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_hp_in_shift(&self) -> TX_PDM_HP_IN_SHIFT_R {
-        TX_PDM_HP_IN_SHIFT_R::new(((self.bits >> 13) & 0x03) as u8)
+        TX_PDM_HP_IN_SHIFT_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bits 15:16 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_lp_in_shift(&self) -> TX_PDM_LP_IN_SHIFT_R {
-        TX_PDM_LP_IN_SHIFT_R::new(((self.bits >> 15) & 0x03) as u8)
+        TX_PDM_LP_IN_SHIFT_R::new(((self.bits >> 15) & 3) as u8)
     }
     #[doc = "Bits 17:18 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_sinc_in_shift(&self) -> TX_PDM_SINC_IN_SHIFT_R {
-        TX_PDM_SINC_IN_SHIFT_R::new(((self.bits >> 17) & 0x03) as u8)
+        TX_PDM_SINC_IN_SHIFT_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bits 19:20 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_in_shift(&self) -> TX_PDM_SIGMADELTA_IN_SHIFT_R {
-        TX_PDM_SIGMADELTA_IN_SHIFT_R::new(((self.bits >> 19) & 0x03) as u8)
+        TX_PDM_SIGMADELTA_IN_SHIFT_R::new(((self.bits >> 19) & 3) as u8)
     }
     #[doc = "Bit 21 - I2S TX PDM sigmadelta dither2 value"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_dither2(&self) -> TX_PDM_SIGMADELTA_DITHER2_R {
-        TX_PDM_SIGMADELTA_DITHER2_R::new(((self.bits >> 21) & 0x01) != 0)
+        TX_PDM_SIGMADELTA_DITHER2_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - I2S TX PDM sigmadelta dither value"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_dither(&self) -> TX_PDM_SIGMADELTA_DITHER_R {
-        TX_PDM_SIGMADELTA_DITHER_R::new(((self.bits >> 22) & 0x01) != 0)
+        TX_PDM_SIGMADELTA_DITHER_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - I2S TX PDM dac mode enable"]
     #[inline(always)]
     pub fn tx_pdm_dac_2out_en(&self) -> TX_PDM_DAC_2OUT_EN_R {
-        TX_PDM_DAC_2OUT_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        TX_PDM_DAC_2OUT_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - I2S TX PDM dac 2channel enable"]
     #[inline(always)]
     pub fn tx_pdm_dac_mode_en(&self) -> TX_PDM_DAC_MODE_EN_R {
-        TX_PDM_DAC_MODE_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        TX_PDM_DAC_MODE_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - I2S TX PDM Converter enable"]
     #[inline(always)]
     pub fn pcm2pdm_conv_en(&self) -> PCM2PDM_CONV_EN_R {
-        PCM2PDM_CONV_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        PCM2PDM_CONV_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

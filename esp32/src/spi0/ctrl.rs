@@ -67,7 +67,7 @@ impl<'a> FCS_CRC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_CRC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> WAIT_FLASH_IDLE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FASTRD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FREAD_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RESANDRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FREAD_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> WP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> WRSR_2B_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> FREAD_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> FREAD_QIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> RD_BIT_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> WR_BIT_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -519,67 +519,67 @@ impl R {
     #[doc = "Bit 10 - For SPI1 initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
     pub fn fcs_crc_en(&self) -> FCS_CRC_EN_R {
-        FCS_CRC_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        FCS_CRC_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - For SPI1 enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
     #[inline(always)]
     pub fn tx_crc_en(&self) -> TX_CRC_EN_R {
-        TX_CRC_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        TX_CRC_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - wait flash idle when program flash or erase flash. 1: enable 0: disable."]
     #[inline(always)]
     pub fn wait_flash_idle_en(&self) -> WAIT_FLASH_IDLE_EN_R {
-        WAIT_FLASH_IDLE_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        WAIT_FLASH_IDLE_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - This bit enable the bits: spi_fread_qio spi_fread_dio spi_fread_qout and spi_fread_dout. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fastrd_mode(&self) -> FASTRD_MODE_R {
-        FASTRD_MODE_R::new(((self.bits >> 13) & 0x01) != 0)
+        FASTRD_MODE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - In the read operations read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_dual(&self) -> FREAD_DUAL_R {
-        FREAD_DUAL_R::new(((self.bits >> 14) & 0x01) != 0)
+        FREAD_DUAL_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The Device ID is read out to SPI_RD_STATUS register, this bit combine with spi_flash_res bit. 1: enable 0: disable."]
     #[inline(always)]
     pub fn resandres(&self) -> RESANDRES_R {
-        RESANDRES_R::new(((self.bits >> 15) & 0x01) != 0)
+        RESANDRES_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 20 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_quad(&self) -> FREAD_QUAD_R {
-        FREAD_QUAD_R::new(((self.bits >> 20) & 0x01) != 0)
+        FREAD_QUAD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high 0: output low."]
     #[inline(always)]
     pub fn wp(&self) -> WP_R {
-        WP_R::new(((self.bits >> 21) & 0x01) != 0)
+        WP_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
     #[inline(always)]
     pub fn wrsr_2b(&self) -> WRSR_2B_R {
-        WRSR_2B_R::new(((self.bits >> 22) & 0x01) != 0)
+        WRSR_2B_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_dio(&self) -> FREAD_DIO_R {
-        FREAD_DIO_R::new(((self.bits >> 23) & 0x01) != 0)
+        FREAD_DIO_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
     pub fn fread_qio(&self) -> FREAD_QIO_R {
-        FREAD_QIO_R::new(((self.bits >> 24) & 0x01) != 0)
+        FREAD_QIO_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - In read-data (MISO) phase 1: LSB first 0: MSB first"]
     #[inline(always)]
     pub fn rd_bit_order(&self) -> RD_BIT_ORDER_R {
-        RD_BIT_ORDER_R::new(((self.bits >> 25) & 0x01) != 0)
+        RD_BIT_ORDER_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first"]
     #[inline(always)]
     pub fn wr_bit_order(&self) -> WR_BIT_ORDER_R {
-        WR_BIT_ORDER_R::new(((self.bits >> 26) & 0x01) != 0)
+        WR_BIT_ORDER_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> ADC2_THRES_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ADC1_THRES_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ADC2_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> ADC1_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 28 - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
     pub fn adc2_thres_int_ena(&self) -> ADC2_THRES_INT_ENA_R {
-        ADC2_THRES_INT_ENA_R::new(((self.bits >> 28) & 0x01) != 0)
+        ADC2_THRES_INT_ENA_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
     pub fn adc1_thres_int_ena(&self) -> ADC1_THRES_INT_ENA_R {
-        ADC1_THRES_INT_ENA_R::new(((self.bits >> 29) & 0x01) != 0)
+        ADC1_THRES_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
     pub fn adc2_done_int_ena(&self) -> ADC2_DONE_INT_ENA_R {
-        ADC2_DONE_INT_ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+        ADC2_DONE_INT_ENA_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
     pub fn adc1_done_int_ena(&self) -> ADC1_DONE_INT_ENA_R {
-        ADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 0x01) != 0)
+        ADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

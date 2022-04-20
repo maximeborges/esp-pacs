@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bits 18:19 - SPI dma out descriptor state."]
     #[inline(always)]
     pub fn dma_outdscr_state(&self) -> DMA_OUTDSCR_STATE_R {
-        DMA_OUTDSCR_STATE_R::new(((self.bits >> 18) & 0x03) as u8)
+        DMA_OUTDSCR_STATE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - SPI dma out data state."]
     #[inline(always)]
     pub fn dma_out_state(&self) -> DMA_OUT_STATE_R {
-        DMA_OUT_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
+        DMA_OUT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:29 - The remains of SPI dma outfifo data."]
     #[inline(always)]
@@ -127,12 +127,12 @@ impl R {
     #[doc = "Bit 30 - SPI dma outfifo is full."]
     #[inline(always)]
     pub fn dma_outfifo_full(&self) -> DMA_OUTFIFO_FULL_R {
-        DMA_OUTFIFO_FULL_R::new(((self.bits >> 30) & 0x01) != 0)
+        DMA_OUTFIFO_FULL_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - SPI dma outfifo is empty."]
     #[inline(always)]
     pub fn dma_outfifo_empty(&self) -> DMA_OUTFIFO_EMPTY_R {
-        DMA_OUTFIFO_EMPTY_R::new(((self.bits >> 31) & 0x01) != 0)
+        DMA_OUTFIFO_EMPTY_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "SPI DMA TX status\n\nThis register you can [`read`]

@@ -121,7 +121,7 @@ impl<'a> CAM_CLK_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> CAM_VSYNC_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> CAM_2BYTE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> CAM_DE_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> CAM_HSYNC_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> CAM_VSYNC_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> CAM_VH_DE_MODE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> CAM_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -402,7 +402,7 @@ impl<'a> CAM_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> CAM_AFIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -442,42 +442,42 @@ impl R {
     #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
     #[inline(always)]
     pub fn cam_clk_inv(&self) -> CAM_CLK_INV_R {
-        CAM_CLK_INV_R::new(((self.bits >> 22) & 0x01) != 0)
+        CAM_CLK_INV_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: bypass."]
     #[inline(always)]
     pub fn cam_vsync_filter_en(&self) -> CAM_VSYNC_FILTER_EN_R {
-        CAM_VSYNC_FILTER_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        CAM_VSYNC_FILTER_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
     #[inline(always)]
     pub fn cam_2byte_en(&self) -> CAM_2BYTE_EN_R {
-        CAM_2BYTE_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        CAM_2BYTE_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - CAM_DE invert enable signal, valid in high level."]
     #[inline(always)]
     pub fn cam_de_inv(&self) -> CAM_DE_INV_R {
-        CAM_DE_INV_R::new(((self.bits >> 25) & 0x01) != 0)
+        CAM_DE_INV_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - CAM_HSYNC invert enable signal, valid in high level."]
     #[inline(always)]
     pub fn cam_hsync_inv(&self) -> CAM_HSYNC_INV_R {
-        CAM_HSYNC_INV_R::new(((self.bits >> 26) & 0x01) != 0)
+        CAM_HSYNC_INV_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - CAM_VSYNC invert enable signal, valid in high level."]
     #[inline(always)]
     pub fn cam_vsync_inv(&self) -> CAM_VSYNC_INV_R {
-        CAM_VSYNC_INV_R::new(((self.bits >> 27) & 0x01) != 0)
+        CAM_VSYNC_INV_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
     #[inline(always)]
     pub fn cam_vh_de_mode_en(&self) -> CAM_VH_DE_MODE_EN_R {
-        CAM_VH_DE_MODE_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        CAM_VH_DE_MODE_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Camera module start signal."]
     #[inline(always)]
     pub fn cam_start(&self) -> CAM_START_R {
-        CAM_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        CAM_START_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

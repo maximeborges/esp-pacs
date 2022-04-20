@@ -137,42 +137,42 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
     #[inline(always)]
     pub fn out_done_ch_int_raw(&self) -> OUT_DONE_CH_INT_RAW_R {
-        OUT_DONE_CH_INT_RAW_R::new((self.bits & 0x01) != 0)
+        OUT_DONE_CH_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
     #[inline(always)]
     pub fn out_eof_ch_int_raw(&self) -> OUT_EOF_CH_INT_RAW_R {
-        OUT_EOF_CH_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        OUT_EOF_CH_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 0."]
     #[inline(always)]
     pub fn out_dscr_err_ch_int_raw(&self) -> OUT_DSCR_ERR_CH_INT_RAW_R {
-        OUT_DSCR_ERR_CH_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        OUT_DSCR_ERR_CH_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
     #[inline(always)]
     pub fn out_total_eof_ch_int_raw(&self) -> OUT_TOTAL_EOF_CH_INT_RAW_R {
-        OUT_TOTAL_EOF_CH_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        OUT_TOTAL_EOF_CH_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
     #[inline(always)]
     pub fn outfifo_ovf_l1_ch_int_raw(&self) -> OUTFIFO_OVF_L1_CH_INT_RAW_R {
-        OUTFIFO_OVF_L1_CH_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        OUTFIFO_OVF_L1_CH_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
     #[inline(always)]
     pub fn outfifo_udf_l1_ch_int_raw(&self) -> OUTFIFO_UDF_L1_CH_INT_RAW_R {
-        OUTFIFO_UDF_L1_CH_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        OUTFIFO_UDF_L1_CH_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This raw interrupt bit turns to high level when level 3 fifo of Tx channel 0 is overflow."]
     #[inline(always)]
     pub fn outfifo_ovf_l3_ch_int_raw(&self) -> OUTFIFO_OVF_L3_CH_INT_RAW_R {
-        OUTFIFO_OVF_L3_CH_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUTFIFO_OVF_L3_CH_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This raw interrupt bit turns to high level when level 3 fifo of Tx channel 0 is underflow."]
     #[inline(always)]
     pub fn outfifo_udf_l3_ch_int_raw(&self) -> OUTFIFO_UDF_L3_CH_INT_RAW_R {
-        OUTFIFO_UDF_L3_CH_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        OUTFIFO_UDF_L3_CH_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[doc = "Raw status interrupt of Tx channel 0\n\nThis register you can [`read`]

@@ -85,7 +85,7 @@ impl R {
     #[doc = "Bit 31 - command10_done"]
     #[inline(always)]
     pub fn command10_done(&self) -> COMMAND10_DONE_R {
-        COMMAND10_DONE_R::new(((self.bits >> 31) & 0x01) != 0)
+        COMMAND10_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

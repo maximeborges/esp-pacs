@@ -67,7 +67,7 @@ impl<'a> CLK_FORCE_ON_DB_ENCRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CLK_FORCE_ON_G0CB_DECRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,19 +149,19 @@ impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_db_encrypt(&self) -> CLK_FORCE_ON_DB_ENCRYPT_R {
-        CLK_FORCE_ON_DB_ENCRYPT_R::new((self.bits & 0x01) != 0)
+        CLK_FORCE_ON_DB_ENCRYPT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_g0cb_decrypt(&self) -> CLK_FORCE_ON_G0CB_DECRYPT_R {
-        CLK_FORCE_ON_G0CB_DECRYPT_R::new(((self.bits >> 1) & 0x01) != 0)
+        CLK_FORCE_ON_G0CB_DECRYPT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_automatic_encrypt_decrypt(
         &self,
     ) -> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R {
-        CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R::new(((self.bits >> 2) & 0x01) != 0)
+        CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

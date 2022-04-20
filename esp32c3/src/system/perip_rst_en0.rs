@@ -67,7 +67,7 @@ impl<'a> TIMERS_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPI01_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> UART_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> WDG_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> I2S0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> UART1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> SPI2_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> I2C_EXT0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> UHCI0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RMT_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> PCNT_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> LEDC_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> UHCI1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> TIMERGROUP_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> EFUSE_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> TIMERGROUP1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> SPI3_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> PWM0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> EXT1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> CAN_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> PWM1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> I2S1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -881,7 +881,7 @@ impl<'a> SPI2_DMA_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -918,7 +918,7 @@ impl<'a> USB_DEVICE_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -955,7 +955,7 @@ impl<'a> UART_MEM_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -992,7 +992,7 @@ impl<'a> PWM2_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -1029,7 +1029,7 @@ impl<'a> PWM3_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -1066,7 +1066,7 @@ impl<'a> SPI3_DMA_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -1103,7 +1103,7 @@ impl<'a> APB_SARADC_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -1140,7 +1140,7 @@ impl<'a> SYSTIMER_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -1177,7 +1177,7 @@ impl<'a> ADC2_ARB_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -1214,7 +1214,7 @@ impl<'a> SPI4_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -1222,162 +1222,162 @@ impl R {
     #[doc = "Bit 0 - reg_timers_rst"]
     #[inline(always)]
     pub fn timers_rst(&self) -> TIMERS_RST_R {
-        TIMERS_RST_R::new((self.bits & 0x01) != 0)
+        TIMERS_RST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_spi01_rst"]
     #[inline(always)]
     pub fn spi01_rst(&self) -> SPI01_RST_R {
-        SPI01_RST_R::new(((self.bits >> 1) & 0x01) != 0)
+        SPI01_RST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_uart_rst"]
     #[inline(always)]
     pub fn uart_rst(&self) -> UART_RST_R {
-        UART_RST_R::new(((self.bits >> 2) & 0x01) != 0)
+        UART_RST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_wdg_rst"]
     #[inline(always)]
     pub fn wdg_rst(&self) -> WDG_RST_R {
-        WDG_RST_R::new(((self.bits >> 3) & 0x01) != 0)
+        WDG_RST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_i2s0_rst"]
     #[inline(always)]
     pub fn i2s0_rst(&self) -> I2S0_RST_R {
-        I2S0_RST_R::new(((self.bits >> 4) & 0x01) != 0)
+        I2S0_RST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_uart1_rst"]
     #[inline(always)]
     pub fn uart1_rst(&self) -> UART1_RST_R {
-        UART1_RST_R::new(((self.bits >> 5) & 0x01) != 0)
+        UART1_RST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_spi2_rst"]
     #[inline(always)]
     pub fn spi2_rst(&self) -> SPI2_RST_R {
-        SPI2_RST_R::new(((self.bits >> 6) & 0x01) != 0)
+        SPI2_RST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_ext0_rst"]
     #[inline(always)]
     pub fn i2c_ext0_rst(&self) -> I2C_EXT0_RST_R {
-        I2C_EXT0_RST_R::new(((self.bits >> 7) & 0x01) != 0)
+        I2C_EXT0_RST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_uhci0_rst"]
     #[inline(always)]
     pub fn uhci0_rst(&self) -> UHCI0_RST_R {
-        UHCI0_RST_R::new(((self.bits >> 8) & 0x01) != 0)
+        UHCI0_RST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_rmt_rst"]
     #[inline(always)]
     pub fn rmt_rst(&self) -> RMT_RST_R {
-        RMT_RST_R::new(((self.bits >> 9) & 0x01) != 0)
+        RMT_RST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_pcnt_rst"]
     #[inline(always)]
     pub fn pcnt_rst(&self) -> PCNT_RST_R {
-        PCNT_RST_R::new(((self.bits >> 10) & 0x01) != 0)
+        PCNT_RST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_ledc_rst"]
     #[inline(always)]
     pub fn ledc_rst(&self) -> LEDC_RST_R {
-        LEDC_RST_R::new(((self.bits >> 11) & 0x01) != 0)
+        LEDC_RST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_uhci1_rst"]
     #[inline(always)]
     pub fn uhci1_rst(&self) -> UHCI1_RST_R {
-        UHCI1_RST_R::new(((self.bits >> 12) & 0x01) != 0)
+        UHCI1_RST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_timergroup_rst"]
     #[inline(always)]
     pub fn timergroup_rst(&self) -> TIMERGROUP_RST_R {
-        TIMERGROUP_RST_R::new(((self.bits >> 13) & 0x01) != 0)
+        TIMERGROUP_RST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_efuse_rst"]
     #[inline(always)]
     pub fn efuse_rst(&self) -> EFUSE_RST_R {
-        EFUSE_RST_R::new(((self.bits >> 14) & 0x01) != 0)
+        EFUSE_RST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - reg_timergroup1_rst"]
     #[inline(always)]
     pub fn timergroup1_rst(&self) -> TIMERGROUP1_RST_R {
-        TIMERGROUP1_RST_R::new(((self.bits >> 15) & 0x01) != 0)
+        TIMERGROUP1_RST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - reg_spi3_rst"]
     #[inline(always)]
     pub fn spi3_rst(&self) -> SPI3_RST_R {
-        SPI3_RST_R::new(((self.bits >> 16) & 0x01) != 0)
+        SPI3_RST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - reg_pwm0_rst"]
     #[inline(always)]
     pub fn pwm0_rst(&self) -> PWM0_RST_R {
-        PWM0_RST_R::new(((self.bits >> 17) & 0x01) != 0)
+        PWM0_RST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - reg_ext1_rst"]
     #[inline(always)]
     pub fn ext1_rst(&self) -> EXT1_RST_R {
-        EXT1_RST_R::new(((self.bits >> 18) & 0x01) != 0)
+        EXT1_RST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - reg_can_rst"]
     #[inline(always)]
     pub fn can_rst(&self) -> CAN_RST_R {
-        CAN_RST_R::new(((self.bits >> 19) & 0x01) != 0)
+        CAN_RST_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - reg_pwm1_rst"]
     #[inline(always)]
     pub fn pwm1_rst(&self) -> PWM1_RST_R {
-        PWM1_RST_R::new(((self.bits >> 20) & 0x01) != 0)
+        PWM1_RST_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - reg_i2s1_rst"]
     #[inline(always)]
     pub fn i2s1_rst(&self) -> I2S1_RST_R {
-        I2S1_RST_R::new(((self.bits >> 21) & 0x01) != 0)
+        I2S1_RST_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - reg_spi2_dma_rst"]
     #[inline(always)]
     pub fn spi2_dma_rst(&self) -> SPI2_DMA_RST_R {
-        SPI2_DMA_RST_R::new(((self.bits >> 22) & 0x01) != 0)
+        SPI2_DMA_RST_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - reg_usb_device_rst"]
     #[inline(always)]
     pub fn usb_device_rst(&self) -> USB_DEVICE_RST_R {
-        USB_DEVICE_RST_R::new(((self.bits >> 23) & 0x01) != 0)
+        USB_DEVICE_RST_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - reg_uart_mem_rst"]
     #[inline(always)]
     pub fn uart_mem_rst(&self) -> UART_MEM_RST_R {
-        UART_MEM_RST_R::new(((self.bits >> 24) & 0x01) != 0)
+        UART_MEM_RST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - reg_pwm2_rst"]
     #[inline(always)]
     pub fn pwm2_rst(&self) -> PWM2_RST_R {
-        PWM2_RST_R::new(((self.bits >> 25) & 0x01) != 0)
+        PWM2_RST_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - reg_pwm3_rst"]
     #[inline(always)]
     pub fn pwm3_rst(&self) -> PWM3_RST_R {
-        PWM3_RST_R::new(((self.bits >> 26) & 0x01) != 0)
+        PWM3_RST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - reg_spi3_dma_rst"]
     #[inline(always)]
     pub fn spi3_dma_rst(&self) -> SPI3_DMA_RST_R {
-        SPI3_DMA_RST_R::new(((self.bits >> 27) & 0x01) != 0)
+        SPI3_DMA_RST_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - reg_apb_saradc_rst"]
     #[inline(always)]
     pub fn apb_saradc_rst(&self) -> APB_SARADC_RST_R {
-        APB_SARADC_RST_R::new(((self.bits >> 28) & 0x01) != 0)
+        APB_SARADC_RST_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - reg_systimer_rst"]
     #[inline(always)]
     pub fn systimer_rst(&self) -> SYSTIMER_RST_R {
-        SYSTIMER_RST_R::new(((self.bits >> 29) & 0x01) != 0)
+        SYSTIMER_RST_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - reg_adc2_arb_rst"]
     #[inline(always)]
     pub fn adc2_arb_rst(&self) -> ADC2_ARB_RST_R {
-        ADC2_ARB_RST_R::new(((self.bits >> 30) & 0x01) != 0)
+        ADC2_ARB_RST_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - reg_spi4_rst"]
     #[inline(always)]
     pub fn spi4_rst(&self) -> SPI4_RST_R {
-        SPI4_RST_R::new(((self.bits >> 31) & 0x01) != 0)
+        SPI4_RST_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

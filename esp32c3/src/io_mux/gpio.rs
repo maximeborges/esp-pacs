@@ -67,7 +67,7 @@ impl<'a> MCU_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MCU_WPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> MCU_WPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> MCU_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FUN_WPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FUN_WPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> FUN_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> MCU_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -425,57 +425,57 @@ impl R {
     #[doc = "Bit 0 - Output enable of the pad in sleep mode. 1: output enabled; 0: output disabled."]
     #[inline(always)]
     pub fn mcu_oe(&self) -> MCU_OE_R {
-        MCU_OE_R::new((self.bits & 0x01) != 0)
+        MCU_OE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pad. Set to 1 to put the pad in pad mode."]
     #[inline(always)]
     pub fn slp_sel(&self) -> SLP_SEL_R {
-        SLP_SEL_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLP_SEL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
     #[inline(always)]
     pub fn mcu_wpd(&self) -> MCU_WPD_R {
-        MCU_WPD_R::new(((self.bits >> 2) & 0x01) != 0)
+        MCU_WPD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
     #[inline(always)]
     pub fn mcu_wpu(&self) -> MCU_WPU_R {
-        MCU_WPU_R::new(((self.bits >> 3) & 0x01) != 0)
+        MCU_WPU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
     #[inline(always)]
     pub fn mcu_ie(&self) -> MCU_IE_R {
-        MCU_IE_R::new(((self.bits >> 4) & 0x01) != 0)
+        MCU_IE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 7 - Pull-down enable of the pad. 1: internal pull-down enabled; 0: internal pull-down disabled."]
     #[inline(always)]
     pub fn fun_wpd(&self) -> FUN_WPD_R {
-        FUN_WPD_R::new(((self.bits >> 7) & 0x01) != 0)
+        FUN_WPD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled."]
     #[inline(always)]
     pub fn fun_wpu(&self) -> FUN_WPU_R {
-        FUN_WPU_R::new(((self.bits >> 8) & 0x01) != 0)
+        FUN_WPU_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Input enable of the pad. 1: input enabled; 0: input disabled."]
     #[inline(always)]
     pub fn fun_ie(&self) -> FUN_IE_R {
-        FUN_IE_R::new(((self.bits >> 9) & 0x01) != 0)
+        FUN_IE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pad. 0: ~5 mA; 1: ~10mA; 2: ~20mA; 3: ~40mA."]
     #[inline(always)]
     pub fn fun_drv(&self) -> FUN_DRV_R {
-        FUN_DRV_R::new(((self.bits >> 10) & 0x03) as u8)
+        FUN_DRV_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:14 - Select IO MUX function for this signal. 0: Select Function 1; 1: Select Function 2; etc."]
     #[inline(always)]
     pub fn mcu_sel(&self) -> MCU_SEL_R {
-        MCU_SEL_R::new(((self.bits >> 12) & 0x07) as u8)
+        MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bit 15 - Enable filter for pin input signals. 1: Filter enabled; 2: Filter disabled."]
     #[inline(always)]
     pub fn filter_en(&self) -> FILTER_EN_R {
-        FILTER_EN_R::new(((self.bits >> 15) & 0x01) != 0)
+        FILTER_EN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

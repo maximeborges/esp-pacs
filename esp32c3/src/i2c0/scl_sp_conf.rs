@@ -67,7 +67,7 @@ impl<'a> SCL_RST_SLV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SCL_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SDA_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -176,7 +176,7 @@ impl R {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
     pub fn scl_rst_slv_en(&self) -> SCL_RST_SLV_EN_R {
-        SCL_RST_SLV_EN_R::new((self.bits & 0x01) != 0)
+        SCL_RST_SLV_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:5 - reg_scl_rst_slv_num"]
     #[inline(always)]
@@ -186,12 +186,12 @@ impl R {
     #[doc = "Bit 6 - reg_scl_pd_en"]
     #[inline(always)]
     pub fn scl_pd_en(&self) -> SCL_PD_EN_R {
-        SCL_PD_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        SCL_PD_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_sda_pd_en"]
     #[inline(always)]
     pub fn sda_pd_en(&self) -> SDA_PD_EN_R {
-        SDA_PD_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        SDA_PD_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

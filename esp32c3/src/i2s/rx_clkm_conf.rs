@@ -94,7 +94,7 @@ impl<'a> RX_CLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> RX_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> MCLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -171,17 +171,17 @@ impl R {
     #[doc = "Bit 26 - I2S Rx module clock enable signal."]
     #[inline(always)]
     pub fn rx_clk_active(&self) -> RX_CLK_ACTIVE_R {
-        RX_CLK_ACTIVE_R::new(((self.bits >> 26) & 0x01) != 0)
+        RX_CLK_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
     pub fn rx_clk_sel(&self) -> RX_CLK_SEL_R {
-        RX_CLK_SEL_R::new(((self.bits >> 27) & 0x03) as u8)
+        RX_CLK_SEL_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
     #[inline(always)]
     pub fn mclk_sel(&self) -> MCLK_SEL_R {
-        MCLK_SEL_R::new(((self.bits >> 29) & 0x01) != 0)
+        MCLK_SEL_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

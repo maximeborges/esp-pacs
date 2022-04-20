@@ -67,7 +67,7 @@ impl<'a> IN_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> OUT_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> AHBM_FIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> AHBM_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> IN_LOOP_TEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> OUT_LOOP_TEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> OUT_AUTO_WRBACK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> OUT_EOF_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> OUTDSCR_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> INDSCR_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> OUT_DATA_BURST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> MEM_TRANS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> DMA_RX_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> DMA_TX_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> DMA_CONTINUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> SLV_LAST_SEG_POP_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> DMA_SLV_SEG_TRANS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> SLV_RX_SEG_TRANS_CLR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> SLV_TX_SEG_TRANS_CLR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -774,7 +774,7 @@ impl<'a> RX_EOF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -811,7 +811,7 @@ impl<'a> DMA_INFIFO_FULL_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -848,7 +848,7 @@ impl<'a> DMA_OUTFIFO_EMPTY_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -875,7 +875,7 @@ impl<'a> EXT_MEM_BK_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -912,7 +912,7 @@ impl<'a> DMA_SEG_TRANS_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -920,124 +920,124 @@ impl R {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
     pub fn in_rst(&self) -> IN_RST_R {
-        IN_RST_R::new(((self.bits >> 2) & 0x01) != 0)
+        IN_RST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
     pub fn out_rst(&self) -> OUT_RST_R {
-        OUT_RST_R::new(((self.bits >> 3) & 0x01) != 0)
+        OUT_RST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Reset spi dma ahb master fifo pointer."]
     #[inline(always)]
     pub fn ahbm_fifo_rst(&self) -> AHBM_FIFO_RST_R {
-        AHBM_FIFO_RST_R::new(((self.bits >> 4) & 0x01) != 0)
+        AHBM_FIFO_RST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Reset spi dma ahb master."]
     #[inline(always)]
     pub fn ahbm_rst(&self) -> AHBM_RST_R {
-        AHBM_RST_R::new(((self.bits >> 5) & 0x01) != 0)
+        AHBM_RST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
     pub fn in_loop_test(&self) -> IN_LOOP_TEST_R {
-        IN_LOOP_TEST_R::new(((self.bits >> 6) & 0x01) != 0)
+        IN_LOOP_TEST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
     pub fn out_loop_test(&self) -> OUT_LOOP_TEST_R {
-        OUT_LOOP_TEST_R::new(((self.bits >> 7) & 0x01) != 0)
+        OUT_LOOP_TEST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - when the bit is set, DMA continue to use the next inlink node when the length of inlink is 0."]
     #[inline(always)]
     pub fn out_auto_wrback(&self) -> OUT_AUTO_WRBACK_R {
-        OUT_AUTO_WRBACK_R::new(((self.bits >> 8) & 0x01) != 0)
+        OUT_AUTO_WRBACK_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
     pub fn out_eof_mode(&self) -> OUT_EOF_MODE_R {
-        OUT_EOF_MODE_R::new(((self.bits >> 9) & 0x01) != 0)
+        OUT_EOF_MODE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
     pub fn outdscr_burst_en(&self) -> OUTDSCR_BURST_EN_R {
-        OUTDSCR_BURST_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        OUTDSCR_BURST_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
     pub fn indscr_burst_en(&self) -> INDSCR_BURST_EN_R {
-        INDSCR_BURST_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        INDSCR_BURST_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
     pub fn out_data_burst_en(&self) -> OUT_DATA_BURST_EN_R {
-        OUT_DATA_BURST_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        OUT_DATA_BURST_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - 1: Internal memory data transfer enable bit. Send SPI DMA RX buffer data to SPI DMA TX buffer. 0: Disable this function."]
     #[inline(always)]
     pub fn mem_trans_en(&self) -> MEM_TRANS_EN_R {
-        MEM_TRANS_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        MEM_TRANS_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
     pub fn dma_rx_stop(&self) -> DMA_RX_STOP_R {
-        DMA_RX_STOP_R::new(((self.bits >> 14) & 0x01) != 0)
+        DMA_RX_STOP_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
     pub fn dma_tx_stop(&self) -> DMA_TX_STOP_R {
-        DMA_TX_STOP_R::new(((self.bits >> 15) & 0x01) != 0)
+        DMA_TX_STOP_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
     pub fn dma_continue(&self) -> DMA_CONTINUE_R {
-        DMA_CONTINUE_R::new(((self.bits >> 16) & 0x01) != 0)
+        DMA_CONTINUE_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - 1: Clear spi_slv_seg_frt_pop_mask. 0 : others"]
     #[inline(always)]
     pub fn slv_last_seg_pop_clr(&self) -> SLV_LAST_SEG_POP_CLR_R {
-        SLV_LAST_SEG_POP_CLR_R::new(((self.bits >> 17) & 0x01) != 0)
+        SLV_LAST_SEG_POP_CLR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
     pub fn dma_slv_seg_trans_en(&self) -> DMA_SLV_SEG_TRANS_EN_R {
-        DMA_SLV_SEG_TRANS_EN_R::new(((self.bits >> 18) & 0x01) != 0)
+        DMA_SLV_SEG_TRANS_EN_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - 1: spi_dma_infifo_full_vld is cleared by spi slave CMD5. 0: spi_dma_infifo_full_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
     pub fn slv_rx_seg_trans_clr_en(&self) -> SLV_RX_SEG_TRANS_CLR_EN_R {
-        SLV_RX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        SLV_RX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - 1: spi_dma_outfifo_empty_vld is cleared by spi slave CMD6. 0: spi_dma_outfifo_empty_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
     pub fn slv_tx_seg_trans_clr_en(&self) -> SLV_TX_SEG_TRANS_CLR_EN_R {
-        SLV_TX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLV_TX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - 1: SPI_IN_SUC_EOF_INT_RAW is set when the number of dma pushed data bytes is equal to the value of SPI_SLV_DMA_RD_BYTELEN\\[19:0\\]
 / SPI_MST_DMA_RD_BYTELEN\\[19:0\\]
  in spi dma transition. 0: SPI_IN_SUC_EOF_INT_RAW is set by SPI_TRANS_DONE in non-seg-trans or SPI_DMA_SEG_TRANS_DONE in seg-trans."]
     #[inline(always)]
     pub fn rx_eof_en(&self) -> RX_EOF_EN_R {
-        RX_EOF_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        RX_EOF_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - 1:Clear spi_dma_infifo_full_vld. 0: Do not control it."]
     #[inline(always)]
     pub fn dma_infifo_full_clr(&self) -> DMA_INFIFO_FULL_CLR_R {
-        DMA_INFIFO_FULL_CLR_R::new(((self.bits >> 22) & 0x01) != 0)
+        DMA_INFIFO_FULL_CLR_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1:Clear spi_dma_outfifo_empty_vld. 0: Do not control it."]
     #[inline(always)]
     pub fn dma_outfifo_empty_clr(&self) -> DMA_OUTFIFO_EMPTY_CLR_R {
-        DMA_OUTFIFO_EMPTY_CLR_R::new(((self.bits >> 23) & 0x01) != 0)
+        DMA_OUTFIFO_EMPTY_CLR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 26:27 - Select the external memory block size."]
     #[inline(always)]
     pub fn ext_mem_bk_size(&self) -> EXT_MEM_BK_SIZE_R {
-        EXT_MEM_BK_SIZE_R::new(((self.bits >> 26) & 0x03) as u8)
+        EXT_MEM_BK_SIZE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bit 28 - 1: End slave seg-trans, which acts as 0x05 command. 2 or more end seg-trans signals will induce error in DMA RX. 0: others. Will be cleared in 1 APB CLK cycles by hardware.."]
     #[inline(always)]
     pub fn dma_seg_trans_clr(&self) -> DMA_SEG_TRANS_CLR_R {
-        DMA_SEG_TRANS_CLR_R::new(((self.bits >> 28) & 0x01) != 0)
+        DMA_SEG_TRANS_CLR_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

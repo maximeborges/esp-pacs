@@ -180,32 +180,32 @@ impl R {
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn rd_sdio_drefh(&self) -> RD_SDIO_DREFH_R {
-        RD_SDIO_DREFH_R::new(((self.bits >> 8) & 0x03) as u8)
+        RD_SDIO_DREFH_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn rd_sdio_drefm(&self) -> RD_SDIO_DREFM_R {
-        RD_SDIO_DREFM_R::new(((self.bits >> 10) & 0x03) as u8)
+        RD_SDIO_DREFM_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn rd_sdio_drefl(&self) -> RD_SDIO_DREFL_R {
-        RD_SDIO_DREFL_R::new(((self.bits >> 12) & 0x03) as u8)
+        RD_SDIO_DREFL_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - read for XPD_SDIO_REG"]
     #[inline(always)]
     pub fn rd_xpd_sdio(&self) -> RD_XPD_SDIO_R {
-        RD_XPD_SDIO_R::new(((self.bits >> 14) & 0x01) != 0)
+        RD_XPD_SDIO_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - read for SDIO_TIEH"]
     #[inline(always)]
     pub fn rd_sdio_tieh(&self) -> RD_SDIO_TIEH_R {
-        RD_SDIO_TIEH_R::new(((self.bits >> 15) & 0x01) != 0)
+        RD_SDIO_TIEH_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - read for sdio_force"]
     #[inline(always)]
     pub fn rd_sdio_force(&self) -> RD_SDIO_FORCE_R {
-        RD_SDIO_FORCE_R::new(((self.bits >> 16) & 0x01) != 0)
+        RD_SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

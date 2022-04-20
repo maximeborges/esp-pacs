@@ -57,7 +57,7 @@ impl<'a> SARADC_ONETIME_ATTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 23)) | ((value as u32 & 0x03) << 23);
+        self.w.bits = (self.w.bits & !(3 << 23)) | ((value as u32 & 3) << 23);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> SARADC_ONETIME_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SARADC2_ONETIME_SAMPLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> SARADC1_ONETIME_SAMPLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -203,7 +203,7 @@ impl R {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
     pub fn saradc_onetime_atten(&self) -> SARADC_ONETIME_ATTEN_R {
-        SARADC_ONETIME_ATTEN_R::new(((self.bits >> 23) & 0x03) as u8)
+        SARADC_ONETIME_ATTEN_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:28 - configure onetime channel"]
     #[inline(always)]
@@ -213,17 +213,17 @@ impl R {
     #[doc = "Bit 29 - trigger adc onetime sample"]
     #[inline(always)]
     pub fn saradc_onetime_start(&self) -> SARADC_ONETIME_START_R {
-        SARADC_ONETIME_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        SARADC_ONETIME_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable adc2 onetime sample"]
     #[inline(always)]
     pub fn saradc2_onetime_sample(&self) -> SARADC2_ONETIME_SAMPLE_R {
-        SARADC2_ONETIME_SAMPLE_R::new(((self.bits >> 30) & 0x01) != 0)
+        SARADC2_ONETIME_SAMPLE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable adc1 onetime sample"]
     #[inline(always)]
     pub fn saradc1_onetime_sample(&self) -> SARADC1_ONETIME_SAMPLE_R {
-        SARADC1_ONETIME_SAMPLE_R::new(((self.bits >> 31) & 0x01) != 0)
+        SARADC1_ONETIME_SAMPLE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

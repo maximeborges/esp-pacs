@@ -67,7 +67,7 @@ impl<'a> SENSE4_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SENSE4_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SENSE4_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SENSE4_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 7)) | ((value as u32 & 0x03) << 7);
+        self.w.bits = (self.w.bits & !(3 << 7)) | ((value as u32 & 3) << 7);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> SENSE3_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> SENSE3_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> SENSE3_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> SENSE3_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SENSE2_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> SENSE2_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> SENSE2_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -444,7 +444,7 @@ impl<'a> SENSE2_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -481,7 +481,7 @@ impl<'a> SENSE1_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -518,7 +518,7 @@ impl<'a> SENSE1_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -555,7 +555,7 @@ impl<'a> SENSE1_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -582,7 +582,7 @@ impl<'a> SENSE1_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -619,7 +619,7 @@ impl<'a> SENSE4_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -656,7 +656,7 @@ impl<'a> SENSE3_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -693,7 +693,7 @@ impl<'a> SENSE2_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -730,7 +730,7 @@ impl<'a> SENSE1_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -767,7 +767,7 @@ impl<'a> SENSE4_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -804,7 +804,7 @@ impl<'a> SENSE3_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -841,7 +841,7 @@ impl<'a> SENSE2_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -878,7 +878,7 @@ impl<'a> SENSE1_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -886,122 +886,122 @@ impl R {
     #[doc = "Bit 4 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense4_fun_ie(&self) -> SENSE4_FUN_IE_R {
-        SENSE4_FUN_IE_R::new(((self.bits >> 4) & 0x01) != 0)
+        SENSE4_FUN_IE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense4_slp_ie(&self) -> SENSE4_SLP_IE_R {
-        SENSE4_SLP_IE_R::new(((self.bits >> 5) & 0x01) != 0)
+        SENSE4_SLP_IE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense4_slp_sel(&self) -> SENSE4_SLP_SEL_R {
-        SENSE4_SLP_SEL_R::new(((self.bits >> 6) & 0x01) != 0)
+        SENSE4_SLP_SEL_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 7:8 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense4_fun_sel(&self) -> SENSE4_FUN_SEL_R {
-        SENSE4_FUN_SEL_R::new(((self.bits >> 7) & 0x03) as u8)
+        SENSE4_FUN_SEL_R::new(((self.bits >> 7) & 3) as u8)
     }
     #[doc = "Bit 9 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense3_fun_ie(&self) -> SENSE3_FUN_IE_R {
-        SENSE3_FUN_IE_R::new(((self.bits >> 9) & 0x01) != 0)
+        SENSE3_FUN_IE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense3_slp_ie(&self) -> SENSE3_SLP_IE_R {
-        SENSE3_SLP_IE_R::new(((self.bits >> 10) & 0x01) != 0)
+        SENSE3_SLP_IE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense3_slp_sel(&self) -> SENSE3_SLP_SEL_R {
-        SENSE3_SLP_SEL_R::new(((self.bits >> 11) & 0x01) != 0)
+        SENSE3_SLP_SEL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:13 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense3_fun_sel(&self) -> SENSE3_FUN_SEL_R {
-        SENSE3_FUN_SEL_R::new(((self.bits >> 12) & 0x03) as u8)
+        SENSE3_FUN_SEL_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense2_fun_ie(&self) -> SENSE2_FUN_IE_R {
-        SENSE2_FUN_IE_R::new(((self.bits >> 14) & 0x01) != 0)
+        SENSE2_FUN_IE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense2_slp_ie(&self) -> SENSE2_SLP_IE_R {
-        SENSE2_SLP_IE_R::new(((self.bits >> 15) & 0x01) != 0)
+        SENSE2_SLP_IE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense2_slp_sel(&self) -> SENSE2_SLP_SEL_R {
-        SENSE2_SLP_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        SENSE2_SLP_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense2_fun_sel(&self) -> SENSE2_FUN_SEL_R {
-        SENSE2_FUN_SEL_R::new(((self.bits >> 17) & 0x03) as u8)
+        SENSE2_FUN_SEL_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense1_fun_ie(&self) -> SENSE1_FUN_IE_R {
-        SENSE1_FUN_IE_R::new(((self.bits >> 19) & 0x01) != 0)
+        SENSE1_FUN_IE_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense1_slp_ie(&self) -> SENSE1_SLP_IE_R {
-        SENSE1_SLP_IE_R::new(((self.bits >> 20) & 0x01) != 0)
+        SENSE1_SLP_IE_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense1_slp_sel(&self) -> SENSE1_SLP_SEL_R {
-        SENSE1_SLP_SEL_R::new(((self.bits >> 21) & 0x01) != 0)
+        SENSE1_SLP_SEL_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 22:23 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense1_fun_sel(&self) -> SENSE1_FUN_SEL_R {
-        SENSE1_FUN_SEL_R::new(((self.bits >> 22) & 0x03) as u8)
+        SENSE1_FUN_SEL_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense4_mux_sel(&self) -> SENSE4_MUX_SEL_R {
-        SENSE4_MUX_SEL_R::new(((self.bits >> 24) & 0x01) != 0)
+        SENSE4_MUX_SEL_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense3_mux_sel(&self) -> SENSE3_MUX_SEL_R {
-        SENSE3_MUX_SEL_R::new(((self.bits >> 25) & 0x01) != 0)
+        SENSE3_MUX_SEL_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense2_mux_sel(&self) -> SENSE2_MUX_SEL_R {
-        SENSE2_MUX_SEL_R::new(((self.bits >> 26) & 0x01) != 0)
+        SENSE2_MUX_SEL_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense1_mux_sel(&self) -> SENSE1_MUX_SEL_R {
-        SENSE1_MUX_SEL_R::new(((self.bits >> 27) & 0x01) != 0)
+        SENSE1_MUX_SEL_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense4_hold(&self) -> SENSE4_HOLD_R {
-        SENSE4_HOLD_R::new(((self.bits >> 28) & 0x01) != 0)
+        SENSE4_HOLD_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense3_hold(&self) -> SENSE3_HOLD_R {
-        SENSE3_HOLD_R::new(((self.bits >> 29) & 0x01) != 0)
+        SENSE3_HOLD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense2_hold(&self) -> SENSE2_HOLD_R {
-        SENSE2_HOLD_R::new(((self.bits >> 30) & 0x01) != 0)
+        SENSE2_HOLD_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense1_hold(&self) -> SENSE1_HOLD_R {
-        SENSE1_HOLD_R::new(((self.bits >> 31) & 0x01) != 0)
+        SENSE1_HOLD_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

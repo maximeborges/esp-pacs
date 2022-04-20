@@ -107,32 +107,32 @@ impl R {
     #[doc = "Bit 26 - interrupt of thres1 low"]
     #[inline(always)]
     pub fn thres1_low_int_st(&self) -> THRES1_LOW_INT_ST_R {
-        THRES1_LOW_INT_ST_R::new(((self.bits >> 26) & 0x01) != 0)
+        THRES1_LOW_INT_ST_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - interrupt of thres0 low"]
     #[inline(always)]
     pub fn thres0_low_int_st(&self) -> THRES0_LOW_INT_ST_R {
-        THRES0_LOW_INT_ST_R::new(((self.bits >> 27) & 0x01) != 0)
+        THRES0_LOW_INT_ST_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - interrupt of thres1 high"]
     #[inline(always)]
     pub fn thres1_high_int_st(&self) -> THRES1_HIGH_INT_ST_R {
-        THRES1_HIGH_INT_ST_R::new(((self.bits >> 28) & 0x01) != 0)
+        THRES1_HIGH_INT_ST_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - interrupt of thres0 high"]
     #[inline(always)]
     pub fn thres0_high_int_st(&self) -> THRES0_HIGH_INT_ST_R {
-        THRES0_HIGH_INT_ST_R::new(((self.bits >> 29) & 0x01) != 0)
+        THRES0_HIGH_INT_ST_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - interrupt of sar2 done"]
     #[inline(always)]
     pub fn apb_saradc2_done_int_st(&self) -> APB_SARADC2_DONE_INT_ST_R {
-        APB_SARADC2_DONE_INT_ST_R::new(((self.bits >> 30) & 0x01) != 0)
+        APB_SARADC2_DONE_INT_ST_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - interrupt of sar1 done"]
     #[inline(always)]
     pub fn apb_saradc1_done_int_st(&self) -> APB_SARADC1_DONE_INT_ST_R {
-        APB_SARADC1_DONE_INT_ST_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_SARADC1_DONE_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "state of interrupt\n\nThis register you can [`read`]

@@ -467,152 +467,152 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn timer0_stop_int_raw(&self) -> TIMER0_STOP_INT_RAW_R {
-        TIMER0_STOP_INT_RAW_R::new((self.bits & 0x01) != 0)
+        TIMER0_STOP_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn timer1_stop_int_raw(&self) -> TIMER1_STOP_INT_RAW_R {
-        TIMER1_STOP_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        TIMER1_STOP_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn timer2_stop_int_raw(&self) -> TIMER2_STOP_INT_RAW_R {
-        TIMER2_STOP_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        TIMER2_STOP_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn timer0_tez_int_raw(&self) -> TIMER0_TEZ_INT_RAW_R {
-        TIMER0_TEZ_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        TIMER0_TEZ_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn timer1_tez_int_raw(&self) -> TIMER1_TEZ_INT_RAW_R {
-        TIMER1_TEZ_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        TIMER1_TEZ_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn timer2_tez_int_raw(&self) -> TIMER2_TEZ_INT_RAW_R {
-        TIMER2_TEZ_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        TIMER2_TEZ_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn timer0_tep_int_raw(&self) -> TIMER0_TEP_INT_RAW_R {
-        TIMER0_TEP_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        TIMER0_TEP_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn timer1_tep_int_raw(&self) -> TIMER1_TEP_INT_RAW_R {
-        TIMER1_TEP_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        TIMER1_TEP_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn timer2_tep_int_raw(&self) -> TIMER2_TEP_INT_RAW_R {
-        TIMER2_TEP_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        TIMER2_TEP_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn fault0_int_raw(&self) -> FAULT0_INT_RAW_R {
-        FAULT0_INT_RAW_R::new(((self.bits >> 9) & 0x01) != 0)
+        FAULT0_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn fault1_int_raw(&self) -> FAULT1_INT_RAW_R {
-        FAULT1_INT_RAW_R::new(((self.bits >> 10) & 0x01) != 0)
+        FAULT1_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn fault2_int_raw(&self) -> FAULT2_INT_RAW_R {
-        FAULT2_INT_RAW_R::new(((self.bits >> 11) & 0x01) != 0)
+        FAULT2_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn fault0_clr_int_raw(&self) -> FAULT0_CLR_INT_RAW_R {
-        FAULT0_CLR_INT_RAW_R::new(((self.bits >> 12) & 0x01) != 0)
+        FAULT0_CLR_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn fault1_clr_int_raw(&self) -> FAULT1_CLR_INT_RAW_R {
-        FAULT1_CLR_INT_RAW_R::new(((self.bits >> 13) & 0x01) != 0)
+        FAULT1_CLR_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn fault2_clr_int_raw(&self) -> FAULT2_CLR_INT_RAW_R {
-        FAULT2_CLR_INT_RAW_R::new(((self.bits >> 14) & 0x01) != 0)
+        FAULT2_CLR_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn op0_tea_int_raw(&self) -> OP0_TEA_INT_RAW_R {
-        OP0_TEA_INT_RAW_R::new(((self.bits >> 15) & 0x01) != 0)
+        OP0_TEA_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn op1_tea_int_raw(&self) -> OP1_TEA_INT_RAW_R {
-        OP1_TEA_INT_RAW_R::new(((self.bits >> 16) & 0x01) != 0)
+        OP1_TEA_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn op2_tea_int_raw(&self) -> OP2_TEA_INT_RAW_R {
-        OP2_TEA_INT_RAW_R::new(((self.bits >> 17) & 0x01) != 0)
+        OP2_TEA_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn op0_teb_int_raw(&self) -> OP0_TEB_INT_RAW_R {
-        OP0_TEB_INT_RAW_R::new(((self.bits >> 18) & 0x01) != 0)
+        OP0_TEB_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn op1_teb_int_raw(&self) -> OP1_TEB_INT_RAW_R {
-        OP1_TEB_INT_RAW_R::new(((self.bits >> 19) & 0x01) != 0)
+        OP1_TEB_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn op2_teb_int_raw(&self) -> OP2_TEB_INT_RAW_R {
-        OP2_TEB_INT_RAW_R::new(((self.bits >> 20) & 0x01) != 0)
+        OP2_TEB_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn fh0_cbc_int_raw(&self) -> FH0_CBC_INT_RAW_R {
-        FH0_CBC_INT_RAW_R::new(((self.bits >> 21) & 0x01) != 0)
+        FH0_CBC_INT_RAW_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn fh1_cbc_int_raw(&self) -> FH1_CBC_INT_RAW_R {
-        FH1_CBC_INT_RAW_R::new(((self.bits >> 22) & 0x01) != 0)
+        FH1_CBC_INT_RAW_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn fh2_cbc_int_raw(&self) -> FH2_CBC_INT_RAW_R {
-        FH2_CBC_INT_RAW_R::new(((self.bits >> 23) & 0x01) != 0)
+        FH2_CBC_INT_RAW_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn fh0_ost_int_raw(&self) -> FH0_OST_INT_RAW_R {
-        FH0_OST_INT_RAW_R::new(((self.bits >> 24) & 0x01) != 0)
+        FH0_OST_INT_RAW_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn fh1_ost_int_raw(&self) -> FH1_OST_INT_RAW_R {
-        FH1_OST_INT_RAW_R::new(((self.bits >> 25) & 0x01) != 0)
+        FH1_OST_INT_RAW_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     pub fn fh2_ost_int_raw(&self) -> FH2_OST_INT_RAW_R {
-        FH2_OST_INT_RAW_R::new(((self.bits >> 26) & 0x01) != 0)
+        FH2_OST_INT_RAW_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     pub fn cap0_int_raw(&self) -> CAP0_INT_RAW_R {
-        CAP0_INT_RAW_R::new(((self.bits >> 27) & 0x01) != 0)
+        CAP0_INT_RAW_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn cap1_int_raw(&self) -> CAP1_INT_RAW_R {
-        CAP1_INT_RAW_R::new(((self.bits >> 28) & 0x01) != 0)
+        CAP1_INT_RAW_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn cap2_int_raw(&self) -> CAP2_INT_RAW_R {
-        CAP2_INT_RAW_R::new(((self.bits >> 29) & 0x01) != 0)
+        CAP2_INT_RAW_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

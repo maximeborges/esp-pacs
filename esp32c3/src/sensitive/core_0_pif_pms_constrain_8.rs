@@ -57,7 +57,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_WRAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_PERI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_DMA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_ADC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_PWR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_DEVICE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTEM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SENSITIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_INTERRUPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -300,7 +300,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DMA_COPY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -327,7 +327,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CACHE_CONFIG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -354,7 +354,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_AD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -381,7 +381,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -408,7 +408,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WORLD_CONTROLLER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -418,94 +418,94 @@ impl R {
     pub fn core_0_pif_pms_constrain_world_1_usb_wrap(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_WRAP_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_WRAP_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_WRAP_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_crypto_peri"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_crypto_peri(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_PERI_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_PERI_R::new(((self.bits >> 4) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_PERI_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_1_crypto_dma"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_crypto_dma(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_DMA_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_DMA_R::new(((self.bits >> 6) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CRYPTO_DMA_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - core_0_pif_pms_constrain_world_1_apb_adc"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_apb_adc(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_ADC_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_ADC_R::new(((self.bits >> 8) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_ADC_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 12:13 - core_0_pif_pms_constrain_world_1_bt_pwr"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_bt_pwr(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_PWR_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_PWR_R::new(((self.bits >> 12) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_PWR_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_1_usb_device"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_usb_device(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_DEVICE_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_DEVICE_R::new(((self.bits >> 14) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_USB_DEVICE_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_1_system"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_system(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTEM_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTEM_R::new(((self.bits >> 16) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTEM_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - core_0_pif_pms_constrain_world_1_sensitive"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_sensitive(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SENSITIVE_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SENSITIVE_R::new(((self.bits >> 18) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SENSITIVE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - core_0_pif_pms_constrain_world_1_interrupt"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_interrupt(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_INTERRUPT_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_INTERRUPT_R::new(((self.bits >> 20) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_INTERRUPT_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_1_dma_copy"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_dma_copy(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DMA_COPY_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DMA_COPY_R::new(((self.bits >> 22) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DMA_COPY_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - core_0_pif_pms_constrain_world_1_cache_config"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_cache_config(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CACHE_CONFIG_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CACHE_CONFIG_R::new(((self.bits >> 24) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CACHE_CONFIG_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_ad"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_ad(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_AD_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_AD_R::new(((self.bits >> 26) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_AD_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_1_dio"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_dio(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DIO_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DIO_R::new(((self.bits >> 28) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_DIO_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_1_world_controller"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_world_controller(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WORLD_CONTROLLER_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WORLD_CONTROLLER_R::new(((self.bits >> 30) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WORLD_CONTROLLER_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

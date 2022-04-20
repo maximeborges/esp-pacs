@@ -94,7 +94,7 @@ impl<'a> SPI_FMEM_ECC_ERR_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 8 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
     pub fn spi_fmem_ecc_err_int_en(&self) -> SPI_FMEM_ECC_ERR_INT_EN_R {
-        SPI_FMEM_ECC_ERR_INT_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        SPI_FMEM_ECC_ERR_INT_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

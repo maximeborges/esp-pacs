@@ -67,7 +67,7 @@ impl<'a> FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLP_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> RUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> RDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -351,47 +351,47 @@ impl R {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
     pub fn fun_ie(&self) -> FUN_IE_R {
-        FUN_IE_R::new(((self.bits >> 13) & 0x01) != 0)
+        FUN_IE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Output enable in sleep mode."]
     #[inline(always)]
     pub fn slp_oe(&self) -> SLP_OE_R {
-        SLP_OE_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLP_OE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Input enable in sleep mode."]
     #[inline(always)]
     pub fn slp_ie(&self) -> SLP_IE_R {
-        SLP_IE_R::new(((self.bits >> 15) & 0x01) != 0)
+        SLP_IE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 1: enable sleep mode. 0: no sleep mode."]
     #[inline(always)]
     pub fn slp_sel(&self) -> SLP_SEL_R {
-        SLP_SEL_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLP_SEL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - Function selection."]
     #[inline(always)]
     pub fn fun_sel(&self) -> FUN_SEL_R {
-        FUN_SEL_R::new(((self.bits >> 17) & 0x03) as u8)
+        FUN_SEL_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO. 0: use digital GPIO."]
     #[inline(always)]
     pub fn mux_sel(&self) -> MUX_SEL_R {
-        MUX_SEL_R::new(((self.bits >> 19) & 0x01) != 0)
+        MUX_SEL_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 27 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
     pub fn rue(&self) -> RUE_R {
-        RUE_R::new(((self.bits >> 27) & 0x01) != 0)
+        RUE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
     pub fn rde(&self) -> RDE_R {
-        RDE_R::new(((self.bits >> 28) & 0x01) != 0)
+        RDE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bits 29:30 - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
     pub fn drv(&self) -> DRV_R {
-        DRV_R::new(((self.bits >> 29) & 0x03) as u8)
+        DRV_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {

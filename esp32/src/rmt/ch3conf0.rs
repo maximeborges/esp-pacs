@@ -148,7 +148,7 @@ impl<'a> CARRIER_EN_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> CARRIER_OUT_LV_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -208,12 +208,12 @@ impl R {
     #[doc = "Bit 28 - This is the carrier modulation enable control bit for channel3."]
     #[inline(always)]
     pub fn carrier_en_ch3(&self) -> CARRIER_EN_CH3_R {
-        CARRIER_EN_CH3_R::new(((self.bits >> 28) & 0x01) != 0)
+        CARRIER_EN_CH3_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - This bit is used to configure carrier wave's position for channel3.1'b1:add on low level 1'b0:add on high level."]
     #[inline(always)]
     pub fn carrier_out_lv_ch3(&self) -> CARRIER_OUT_LV_CH3_R {
-        CARRIER_OUT_LV_CH3_R::new(((self.bits >> 29) & 0x01) != 0)
+        CARRIER_OUT_LV_CH3_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

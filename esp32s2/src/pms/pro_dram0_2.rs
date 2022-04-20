@@ -94,7 +94,7 @@ impl<'a> PRO_DRAM0_RTCFAST_L_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PRO_DRAM0_RTCFAST_L_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PRO_DRAM0_RTCFAST_H_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> PRO_DRAM0_RTCFAST_H_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -218,22 +218,22 @@ impl R {
     #[doc = "Bit 11 - Setting to 1 grants DBUS0 permission to read RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_l_r(&self) -> PRO_DRAM0_RTCFAST_L_R_R {
-        PRO_DRAM0_RTCFAST_L_R_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_DRAM0_RTCFAST_L_R_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Setting to 1 grants DBUS0 permission to write RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_l_w(&self) -> PRO_DRAM0_RTCFAST_L_W_R {
-        PRO_DRAM0_RTCFAST_L_W_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_DRAM0_RTCFAST_L_W_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Setting to 1 grants DBUS0 permission to read RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_h_r(&self) -> PRO_DRAM0_RTCFAST_H_R_R {
-        PRO_DRAM0_RTCFAST_H_R_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_DRAM0_RTCFAST_H_R_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Setting to 1 grants DBUS0 permission to write RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_h_w(&self) -> PRO_DRAM0_RTCFAST_H_W_R {
-        PRO_DRAM0_RTCFAST_H_W_R::new(((self.bits >> 14) & 0x01) != 0)
+        PRO_DRAM0_RTCFAST_H_W_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {

@@ -77,21 +77,21 @@ impl R {
     #[doc = "Bit 0 - core_0_dram0_pms_monitor_violate_intr"]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_intr(&self) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - core_0_dram0_pms_monitor_violate_status_lock"]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_status_lock(
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - core_0_dram0_pms_monitor_violate_status_world"]
     #[inline(always)]
     pub fn core_0_dram0_pms_monitor_violate_status_world(
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 2) & 0x03) as u8)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:27 - core_0_dram0_pms_monitor_violate_status_addr"]
     #[inline(always)]

@@ -172,7 +172,7 @@ impl<'a> APP_CTRL0_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -209,7 +209,7 @@ impl<'a> APP_CTRL1_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -217,47 +217,47 @@ impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
     pub fn rx_start_int_raw(&self) -> RX_START_INT_RAW_R {
-        RX_START_INT_RAW_R::new((self.bits & 0x01) != 0)
+        RX_START_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
     pub fn tx_start_int_raw(&self) -> TX_START_INT_RAW_R {
-        TX_START_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_START_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
     pub fn rx_hung_int_raw(&self) -> RX_HUNG_INT_RAW_R {
-        RX_HUNG_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_HUNG_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
     pub fn tx_hung_int_raw(&self) -> TX_HUNG_INT_RAW_R {
-        TX_HUNG_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_HUNG_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
     pub fn send_s_reg_q_int_raw(&self) -> SEND_S_REG_Q_INT_RAW_R {
-        SEND_S_REG_Q_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        SEND_S_REG_Q_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
     pub fn send_a_reg_q_int_raw(&self) -> SEND_A_REG_Q_INT_RAW_R {
-        SEND_A_REG_Q_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        SEND_A_REG_Q_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
     #[inline(always)]
     pub fn out_eof_int_raw(&self) -> OUT_EOF_INT_RAW_R {
-        OUT_EOF_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUT_EOF_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Soft control int raw bit."]
     #[inline(always)]
     pub fn app_ctrl0_int_raw(&self) -> APP_CTRL0_INT_RAW_R {
-        APP_CTRL0_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        APP_CTRL0_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Soft control int raw bit."]
     #[inline(always)]
     pub fn app_ctrl1_int_raw(&self) -> APP_CTRL1_INT_RAW_R {
-        APP_CTRL1_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        APP_CTRL1_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> DESTINATION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occurs if users write 1. 0:flash. 1: external RAM."]
     #[inline(always)]
     pub fn destination(&self) -> DESTINATION_R {
-        DESTINATION_R::new((self.bits & 0x01) != 0)
+        DESTINATION_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

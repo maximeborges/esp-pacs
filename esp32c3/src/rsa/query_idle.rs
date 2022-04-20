@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - query rsa idle. 1'b0: busy, 1'b1: idle"]
     #[inline(always)]
     pub fn query_idle(&self) -> QUERY_IDLE_R {
-        QUERY_IDLE_R::new((self.bits & 0x01) != 0)
+        QUERY_IDLE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RSA query idle register\n\nThis register you can [`read`]

@@ -202,7 +202,7 @@ impl<'a> RTC_DEBUG_12M_NO_GATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -235,7 +235,7 @@ impl R {
     #[doc = "Bit 25 - configure rtc debug"]
     #[inline(always)]
     pub fn rtc_debug_12m_no_gating(&self) -> RTC_DEBUG_12M_NO_GATING_R {
-        RTC_DEBUG_12M_NO_GATING_R::new(((self.bits >> 25) & 0x01) != 0)
+        RTC_DEBUG_12M_NO_GATING_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

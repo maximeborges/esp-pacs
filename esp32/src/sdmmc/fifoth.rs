@@ -111,7 +111,7 @@ impl<'a> DMA_MULTIPLE_TRANSACTION_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bits 28:30 - Burst size of multiple transaction, should be programmed same as DMA controller multiple-transaction-size SDHOST_SRC/DEST_MSIZE. 000: 1-byte transfer; 001: 4-byte transfer; 010: 8-byte transfer; 011: 16-byte transfer; 100: 32-byte transfer; 101: 64-byte transfer; 110: 128-byte transfer; 111: 256-byte transfer."]
     #[inline(always)]
     pub fn dma_multiple_transaction_size(&self) -> DMA_MULTIPLE_TRANSACTION_SIZE_R {
-        DMA_MULTIPLE_TRANSACTION_SIZE_R::new(((self.bits >> 28) & 0x07) as u8)
+        DMA_MULTIPLE_TRANSACTION_SIZE_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 impl W {

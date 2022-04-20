@@ -148,7 +148,7 @@ impl<'a> DUTY_INC_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> DUTY_START_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -208,12 +208,12 @@ impl R {
     #[doc = "Bit 30 - This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase. 0: Decrease."]
     #[inline(always)]
     pub fn duty_inc_ch0(&self) -> DUTY_INC_CH0_R {
-        DUTY_INC_CH0_R::new(((self.bits >> 30) & 0x01) != 0)
+        DUTY_INC_CH0_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
     pub fn duty_start_ch0(&self) -> DUTY_START_CH0_R {
-        DUTY_START_CH0_R::new(((self.bits >> 31) & 0x01) != 0)
+        DUTY_START_CH0_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

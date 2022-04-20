@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
     pub fn extmem_reject_int_st(&self) -> EXTMEM_REJECT_INT_ST_R {
-        EXTMEM_REJECT_INT_ST_R::new((self.bits & 0x01) != 0)
+        EXTMEM_REJECT_INT_ST_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status of external RAM permission\n\nThis register you can [`read`]

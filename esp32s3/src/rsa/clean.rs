@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - The content of this bit is 1 when memories complete initialization."]
     #[inline(always)]
     pub fn clean(&self) -> CLEAN_R {
-        CLEAN_R::new((self.bits & 0x01) != 0)
+        CLEAN_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RSA clean register\n\nThis register you can [`read`]

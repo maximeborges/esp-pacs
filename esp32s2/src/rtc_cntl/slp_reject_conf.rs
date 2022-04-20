@@ -94,7 +94,7 @@ impl<'a> LIGHT_SLP_REJECT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> DEEP_SLP_REJECT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 30 - Set this bit to enable reject-to-light-sleep."]
     #[inline(always)]
     pub fn light_slp_reject_en(&self) -> LIGHT_SLP_REJECT_EN_R {
-        LIGHT_SLP_REJECT_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        LIGHT_SLP_REJECT_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Set this bit to enable reject-to-deep-sleep."]
     #[inline(always)]
     pub fn deep_slp_reject_en(&self) -> DEEP_SLP_REJECT_EN_R {
-        DEEP_SLP_REJECT_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        DEEP_SLP_REJECT_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

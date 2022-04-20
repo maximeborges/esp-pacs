@@ -57,7 +57,7 @@ impl<'a> CVSD_K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CVSD_J_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CVSD_H_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
         self.w
     }
 }
@@ -146,12 +146,12 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn cvsd_k(&self) -> CVSD_K_R {
-        CVSD_K_R::new((self.bits & 0x07) as u8)
+        CVSD_K_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
     pub fn cvsd_j(&self) -> CVSD_J_R {
-        CVSD_J_R::new(((self.bits >> 3) & 0x07) as u8)
+        CVSD_J_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:15"]
     #[inline(always)]
@@ -161,7 +161,7 @@ impl R {
     #[doc = "Bits 16:18"]
     #[inline(always)]
     pub fn cvsd_h(&self) -> CVSD_H_R {
-        CVSD_H_R::new(((self.bits >> 16) & 0x07) as u8)
+        CVSD_H_R::new(((self.bits >> 16) & 7) as u8)
     }
 }
 impl W {

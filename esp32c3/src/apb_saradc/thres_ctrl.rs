@@ -67,7 +67,7 @@ impl<'a> APB_SARADC_THRES_ALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> APB_SARADC_THRES1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> APB_SARADC_THRES0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 27 - enable thres to all channel"]
     #[inline(always)]
     pub fn apb_saradc_thres_all_en(&self) -> APB_SARADC_THRES_ALL_EN_R {
-        APB_SARADC_THRES_ALL_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        APB_SARADC_THRES_ALL_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 30 - enable thres1"]
     #[inline(always)]
     pub fn apb_saradc_thres1_en(&self) -> APB_SARADC_THRES1_EN_R {
-        APB_SARADC_THRES1_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        APB_SARADC_THRES1_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable thres0"]
     #[inline(always)]
     pub fn apb_saradc_thres0_en(&self) -> APB_SARADC_THRES0_EN_R {
-        APB_SARADC_THRES0_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_SARADC_THRES0_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

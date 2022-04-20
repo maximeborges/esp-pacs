@@ -84,7 +84,7 @@ impl<'a> SYNC_JUMP_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -97,7 +97,7 @@ impl R {
     #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
     pub fn sync_jump_width(&self) -> SYNC_JUMP_WIDTH_R {
-        SYNC_JUMP_WIDTH_R::new(((self.bits >> 14) & 0x03) as u8)
+        SYNC_JUMP_WIDTH_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {

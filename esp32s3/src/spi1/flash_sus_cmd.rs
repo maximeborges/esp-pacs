@@ -67,7 +67,7 @@ impl<'a> FLASH_PER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FLASH_PES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FLASH_PER_WAIT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FLASH_PES_WAIT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PES_PER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PESR_IDLE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_per(&self) -> FLASH_PER_R {
-        FLASH_PER_R::new((self.bits & 0x01) != 0)
+        FLASH_PER_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_pes(&self) -> FLASH_PES_R {
-        FLASH_PES_R::new(((self.bits >> 1) & 0x01) != 0)
+        FLASH_PES_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to add delay time after program erase resume(PER) is sent."]
     #[inline(always)]
     pub fn flash_per_wait_en(&self) -> FLASH_PER_WAIT_EN_R {
-        FLASH_PER_WAIT_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        FLASH_PER_WAIT_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to add delay time after program erase suspend(PES) command is sent."]
     #[inline(always)]
     pub fn flash_pes_wait_en(&self) -> FLASH_PES_WAIT_EN_R {
-        FLASH_PES_WAIT_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        FLASH_PES_WAIT_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to enable PES transfer trigger PES transfer option."]
     #[inline(always)]
     pub fn pes_per_en(&self) -> PES_PER_EN_R {
-        PES_PER_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        PES_PER_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
     #[inline(always)]
     pub fn pesr_idle_en(&self) -> PESR_IDLE_EN_R {
-        PESR_IDLE_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        PESR_IDLE_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

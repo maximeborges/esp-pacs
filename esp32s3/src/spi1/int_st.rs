@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
     pub fn per_end_int_st(&self) -> PER_END_INT_ST_R {
-        PER_END_INT_ST_R::new((self.bits & 0x01) != 0)
+        PER_END_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
     pub fn pes_end_int_st(&self) -> PES_END_INT_ST_R {
-        PES_END_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        PES_END_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_st(&self) -> TOTAL_TRANS_END_INT_ST_R {
-        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
     pub fn brown_out_int_st(&self) -> BROWN_OUT_INT_ST_R {
-        BROWN_OUT_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        BROWN_OUT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "SPI1 interrupt status register\n\nThis register you can [`read`]

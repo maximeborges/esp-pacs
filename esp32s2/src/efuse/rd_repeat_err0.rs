@@ -352,107 +352,107 @@ impl R {
     #[doc = "Bit 7 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_RTC_RAM_BOOT."]
     #[inline(always)]
     pub fn dis_rtc_ram_boot_err(&self) -> DIS_RTC_RAM_BOOT_ERR_R {
-        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 0x01) != 0)
+        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_ICACHE."]
     #[inline(always)]
     pub fn dis_icache_err(&self) -> DIS_ICACHE_ERR_R {
-        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DCACHE."]
     #[inline(always)]
     pub fn dis_dcache_err(&self) -> DIS_DCACHE_ERR_R {
-        DIS_DCACHE_ERR_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIS_DCACHE_ERR_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_ICACHE."]
     #[inline(always)]
     pub fn dis_download_icache_err(&self) -> DIS_DOWNLOAD_ICACHE_ERR_R {
-        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_DCACHE."]
     #[inline(always)]
     pub fn dis_download_dcache_err(&self) -> DIS_DOWNLOAD_DCACHE_ERR_R {
-        DIS_DOWNLOAD_DCACHE_ERR_R::new(((self.bits >> 11) & 0x01) != 0)
+        DIS_DOWNLOAD_DCACHE_ERR_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_FORCE_DOWNLOAD."]
     #[inline(always)]
     pub fn dis_force_download_err(&self) -> DIS_FORCE_DOWNLOAD_ERR_R {
-        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 0x01) != 0)
+        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_USB."]
     #[inline(always)]
     pub fn dis_usb_err(&self) -> DIS_USB_ERR_R {
-        DIS_USB_ERR_R::new(((self.bits >> 13) & 0x01) != 0)
+        DIS_USB_ERR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_CAN."]
     #[inline(always)]
     pub fn dis_can_err(&self) -> DIS_CAN_ERR_R {
-        DIS_CAN_ERR_R::new(((self.bits >> 14) & 0x01) != 0)
+        DIS_CAN_ERR_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_BOOT_REMAP."]
     #[inline(always)]
     pub fn dis_boot_remap_err(&self) -> DIS_BOOT_REMAP_ERR_R {
-        DIS_BOOT_REMAP_ERR_R::new(((self.bits >> 15) & 0x01) != 0)
+        DIS_BOOT_REMAP_ERR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED5."]
     #[inline(always)]
     pub fn rpt4_reserved5_err(&self) -> RPT4_RESERVED5_ERR_R {
-        RPT4_RESERVED5_ERR_R::new(((self.bits >> 16) & 0x01) != 0)
+        RPT4_RESERVED5_ERR_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Any bit equal to 1 denotes a programming error in EFUSE_SOFT_DIS_JTAG."]
     #[inline(always)]
     pub fn soft_dis_jtag_err(&self) -> SOFT_DIS_JTAG_ERR_R {
-        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 17) & 0x01) != 0)
+        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Any bit equal to 1 denotes a programming error in EFUSE_HARD_DIS_JTAG."]
     #[inline(always)]
     pub fn hard_dis_jtag_err(&self) -> HARD_DIS_JTAG_ERR_R {
-        HARD_DIS_JTAG_ERR_R::new(((self.bits >> 18) & 0x01) != 0)
+        HARD_DIS_JTAG_ERR_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_MANUAL_ENCRYPT."]
     #[inline(always)]
     pub fn dis_download_manual_encrypt_err(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 19) & 0x01) != 0)
+        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bits 20:21 - Any bit equal to 1 denotes a programming error in EFUSE_USB_DREFH."]
     #[inline(always)]
     pub fn usb_drefh_err(&self) -> USB_DREFH_ERR_R {
-        USB_DREFH_ERR_R::new(((self.bits >> 20) & 0x03) as u8)
+        USB_DREFH_ERR_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Any bit equal to 1 denotes a programming error in EFUSE_USB_DREFL."]
     #[inline(always)]
     pub fn usb_drefl_err(&self) -> USB_DREFL_ERR_R {
-        USB_DREFL_ERR_R::new(((self.bits >> 22) & 0x03) as u8)
+        USB_DREFL_ERR_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - Any bit equal to 1 denotes a programming error in EFUSE_USB_EXCHG_PINS."]
     #[inline(always)]
     pub fn usb_exchg_pins_err(&self) -> USB_EXCHG_PINS_ERR_R {
-        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 24) & 0x01) != 0)
+        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Any bit equal to 1 denotes a programming error in EFUSE_EXT_PHY_ENABLE."]
     #[inline(always)]
     pub fn ext_phy_enable_err(&self) -> EXT_PHY_ENABLE_ERR_R {
-        EXT_PHY_ENABLE_ERR_R::new(((self.bits >> 25) & 0x01) != 0)
+        EXT_PHY_ENABLE_ERR_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Any bit equal to 1 denotes a programming error in EFUSE_USB_FORCE_NOPERSIST."]
     #[inline(always)]
     pub fn usb_force_nopersist_err(&self) -> USB_FORCE_NOPERSIST_ERR_R {
-        USB_FORCE_NOPERSIST_ERR_R::new(((self.bits >> 26) & 0x01) != 0)
+        USB_FORCE_NOPERSIST_ERR_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED0."]
     #[inline(always)]
     pub fn rpt4_reserved0_err(&self) -> RPT4_RESERVED0_ERR_R {
-        RPT4_RESERVED0_ERR_R::new(((self.bits >> 27) & 0x03) as u8)
+        RPT4_RESERVED0_ERR_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - Any bit equal to 1 denotes a programming error in EFUSE_VDD_SPI_MODECURLIM."]
     #[inline(always)]
     pub fn vdd_spi_modecurlim_err(&self) -> VDD_SPI_MODECURLIM_ERR_R {
-        VDD_SPI_MODECURLIM_ERR_R::new(((self.bits >> 29) & 0x01) != 0)
+        VDD_SPI_MODECURLIM_ERR_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - Any bit equal to 1 denotes a programming error in EFUSE_VDD_SPI_DREFH."]
     #[inline(always)]
     pub fn vdd_spi_drefh_err(&self) -> VDD_SPI_DREFH_ERR_R {
-        VDD_SPI_DREFH_ERR_R::new(((self.bits >> 30) & 0x03) as u8)
+        VDD_SPI_DREFH_ERR_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`]

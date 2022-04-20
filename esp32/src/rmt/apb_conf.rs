@@ -67,7 +67,7 @@ impl<'a> APB_FIFO_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MEM_TX_WRAP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Set this bit to disable apb fifo access"]
     #[inline(always)]
     pub fn apb_fifo_mask(&self) -> APB_FIFO_MASK_R {
-        APB_FIFO_MASK_R::new((self.bits & 0x01) != 0)
+        APB_FIFO_MASK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
     #[inline(always)]
     pub fn mem_tx_wrap_en(&self) -> MEM_TX_WRAP_EN_R {
-        MEM_TX_WRAP_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        MEM_TX_WRAP_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

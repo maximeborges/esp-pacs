@@ -67,7 +67,7 @@ impl<'a> PRO_ICACHE_CLK_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_DCACHE_CLK_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_CACHE_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable clock of i-cache."]
     #[inline(always)]
     pub fn pro_icache_clk_on(&self) -> PRO_ICACHE_CLK_ON_R {
-        PRO_ICACHE_CLK_ON_R::new((self.bits & 0x01) != 0)
+        PRO_ICACHE_CLK_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enable clock of d-cache."]
     #[inline(always)]
     pub fn pro_dcache_clk_on(&self) -> PRO_DCACHE_CLK_ON_R {
-        PRO_DCACHE_CLK_ON_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_DCACHE_CLK_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to reset cache."]
     #[inline(always)]
     pub fn pro_cache_reset(&self) -> PRO_CACHE_RESET_R {
-        PRO_CACHE_RESET_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_CACHE_RESET_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

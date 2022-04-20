@@ -57,7 +57,7 @@ impl<'a> BLOCK_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
     pub fn block_mode(&self) -> BLOCK_MODE_R {
-        BLOCK_MODE_R::new((self.bits & 0x07) as u8)
+        BLOCK_MODE_R::new((self.bits & 7) as u8)
     }
 }
 impl W {

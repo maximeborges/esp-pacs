@@ -57,7 +57,7 @@ impl<'a> TX_BCK_IN_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TX_WS_IN_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> RX_BCK_IN_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> RX_WS_IN_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> RX_SD_IN_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> TX_BCK_OUT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> TX_WS_OUT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> TX_SD_OUT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> RX_WS_OUT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -300,7 +300,7 @@ impl<'a> RX_BCK_OUT_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -337,7 +337,7 @@ impl<'a> TX_DSYNC_SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -374,7 +374,7 @@ impl<'a> RX_DSYNC_SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -401,7 +401,7 @@ impl<'a> DATA_ENABLE_DELAY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -438,7 +438,7 @@ impl<'a> TX_BCK_IN_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -446,72 +446,72 @@ impl R {
     #[doc = "Bits 0:1 - Number of delay cycles for BCK signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn tx_bck_in_delay(&self) -> TX_BCK_IN_DELAY_R {
-        TX_BCK_IN_DELAY_R::new((self.bits & 0x03) as u8)
+        TX_BCK_IN_DELAY_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - Number of delay cycles for WS signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn tx_ws_in_delay(&self) -> TX_WS_IN_DELAY_R {
-        TX_WS_IN_DELAY_R::new(((self.bits >> 2) & 0x03) as u8)
+        TX_WS_IN_DELAY_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - Number of delay cycles for BCK signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn rx_bck_in_delay(&self) -> RX_BCK_IN_DELAY_R {
-        RX_BCK_IN_DELAY_R::new(((self.bits >> 4) & 0x03) as u8)
+        RX_BCK_IN_DELAY_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - Number of delay cycles for WS signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn rx_ws_in_delay(&self) -> RX_WS_IN_DELAY_R {
-        RX_WS_IN_DELAY_R::new(((self.bits >> 6) & 0x03) as u8)
+        RX_WS_IN_DELAY_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Number of delay cycles for SD signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn rx_sd_in_delay(&self) -> RX_SD_IN_DELAY_R {
-        RX_SD_IN_DELAY_R::new(((self.bits >> 8) & 0x03) as u8)
+        RX_SD_IN_DELAY_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - Number of delay cycles for BCK signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
     pub fn tx_bck_out_delay(&self) -> TX_BCK_OUT_DELAY_R {
-        TX_BCK_OUT_DELAY_R::new(((self.bits >> 10) & 0x03) as u8)
+        TX_BCK_OUT_DELAY_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - Number of delay cycles for WS signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
     pub fn tx_ws_out_delay(&self) -> TX_WS_OUT_DELAY_R {
-        TX_WS_OUT_DELAY_R::new(((self.bits >> 12) & 0x03) as u8)
+        TX_WS_OUT_DELAY_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Number of delay cycles for SD signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
     pub fn tx_sd_out_delay(&self) -> TX_SD_OUT_DELAY_R {
-        TX_SD_OUT_DELAY_R::new(((self.bits >> 14) & 0x03) as u8)
+        TX_SD_OUT_DELAY_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - Number of delay cycles for WS signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
     pub fn rx_ws_out_delay(&self) -> RX_WS_OUT_DELAY_R {
-        RX_WS_OUT_DELAY_R::new(((self.bits >> 16) & 0x03) as u8)
+        RX_WS_OUT_DELAY_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - Number of delay cycles for BCK signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
     pub fn rx_bck_out_delay(&self) -> RX_BCK_OUT_DELAY_R {
-        RX_BCK_OUT_DELAY_R::new(((self.bits >> 18) & 0x03) as u8)
+        RX_BCK_OUT_DELAY_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bit 20 - Set this bit to synchronize signals into the transmitter by two flip-flop synchronizer. 0: the signals will be firstly clocked by rising clock edge , then clocked by falling clock edge. 1: the signals will be firstly clocked by falling clock edge, then clocked by rising clock edge."]
     #[inline(always)]
     pub fn tx_dsync_sw(&self) -> TX_DSYNC_SW_R {
-        TX_DSYNC_SW_R::new(((self.bits >> 20) & 0x01) != 0)
+        TX_DSYNC_SW_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to synchronize signals into the receiver by two flip-flop synchronizer. 0: the signals will be clocked by rising clock edge firstly, then clocked by falling clock edge. 1: the signals will be clocked by falling clock edge firstly, then clocked by rising clock edge."]
     #[inline(always)]
     pub fn rx_dsync_sw(&self) -> RX_DSYNC_SW_R {
-        RX_DSYNC_SW_R::new(((self.bits >> 21) & 0x01) != 0)
+        RX_DSYNC_SW_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 22:23 - Number of delay cycles for data valid flag based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
     pub fn data_enable_delay(&self) -> DATA_ENABLE_DELAY_R {
-        DATA_ENABLE_DELAY_R::new(((self.bits >> 22) & 0x03) as u8)
+        DATA_ENABLE_DELAY_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - Set this bit to invert BCK signal input to the slave transmitter."]
     #[inline(always)]
     pub fn tx_bck_in_inv(&self) -> TX_BCK_IN_INV_R {
-        TX_BCK_IN_INV_R::new(((self.bits >> 24) & 0x01) != 0)
+        TX_BCK_IN_INV_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

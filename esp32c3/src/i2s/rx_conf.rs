@@ -52,7 +52,7 @@ impl<'a> RX_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -74,7 +74,7 @@ impl<'a> RX_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> RX_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> RX_SLAVE_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> RX_MONO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> RX_BIG_ENDIAN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> RX_UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -296,7 +296,7 @@ impl<'a> RX_MONO_FST_VLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> RX_PCM_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> RX_PCM_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -387,7 +387,7 @@ impl<'a> RX_STOP_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -424,7 +424,7 @@ impl<'a> RX_LEFT_ALIGN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -461,7 +461,7 @@ impl<'a> RX_24_FILL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -498,7 +498,7 @@ impl<'a> RX_WS_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -535,7 +535,7 @@ impl<'a> RX_BIT_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -572,7 +572,7 @@ impl<'a> RX_TDM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -609,7 +609,7 @@ impl<'a> RX_PDM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -617,77 +617,77 @@ impl R {
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
     pub fn rx_start(&self) -> RX_START_R {
-        RX_START_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_START_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
     pub fn rx_slave_mod(&self) -> RX_SLAVE_MOD_R {
-        RX_SLAVE_MOD_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_SLAVE_MOD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to enable receiver in mono mode"]
     #[inline(always)]
     pub fn rx_mono(&self) -> RX_MONO_R {
-        RX_MONO_R::new(((self.bits >> 5) & 0x01) != 0)
+        RX_MONO_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
     #[inline(always)]
     pub fn rx_big_endian(&self) -> RX_BIG_ENDIAN_R {
-        RX_BIG_ENDIAN_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_BIG_ENDIAN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
     #[inline(always)]
     pub fn rx_update(&self) -> RX_UPDATE_R {
-        RX_UPDATE_R::new(((self.bits >> 8) & 0x01) != 0)
+        RX_UPDATE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
     #[inline(always)]
     pub fn rx_mono_fst_vld(&self) -> RX_MONO_FST_VLD_R {
-        RX_MONO_FST_VLD_R::new(((self.bits >> 9) & 0x01) != 0)
+        RX_MONO_FST_VLD_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
     #[inline(always)]
     pub fn rx_pcm_conf(&self) -> RX_PCM_CONF_R {
-        RX_PCM_CONF_R::new(((self.bits >> 10) & 0x03) as u8)
+        RX_PCM_CONF_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bit 12 - Set this bit to bypass Compress/Decompress module for received data."]
     #[inline(always)]
     pub fn rx_pcm_bypass(&self) -> RX_PCM_BYPASS_R {
-        RX_PCM_BYPASS_R::new(((self.bits >> 12) & 0x01) != 0)
+        RX_PCM_BYPASS_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:14 - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
     #[inline(always)]
     pub fn rx_stop_mode(&self) -> RX_STOP_MODE_R {
-        RX_STOP_MODE_R::new(((self.bits >> 13) & 0x03) as u8)
+        RX_STOP_MODE_R::new(((self.bits >> 13) & 3) as u8)
     }
     #[doc = "Bit 15 - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
     #[inline(always)]
     pub fn rx_left_align(&self) -> RX_LEFT_ALIGN_R {
-        RX_LEFT_ALIGN_R::new(((self.bits >> 15) & 0x01) != 0)
+        RX_LEFT_ALIGN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
     #[inline(always)]
     pub fn rx_24_fill_en(&self) -> RX_24_FILL_EN_R {
-        RX_24_FILL_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        RX_24_FILL_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
     #[inline(always)]
     pub fn rx_ws_idle_pol(&self) -> RX_WS_IDLE_POL_R {
-        RX_WS_IDLE_POL_R::new(((self.bits >> 17) & 0x01) != 0)
+        RX_WS_IDLE_POL_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
     #[inline(always)]
     pub fn rx_bit_order(&self) -> RX_BIT_ORDER_R {
-        RX_BIT_ORDER_R::new(((self.bits >> 18) & 0x01) != 0)
+        RX_BIT_ORDER_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - 1: Enable I2S TDM Rx mode . 0: Disable."]
     #[inline(always)]
     pub fn rx_tdm_en(&self) -> RX_TDM_EN_R {
-        RX_TDM_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        RX_TDM_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - 1: Enable I2S PDM Rx mode . 0: Disable."]
     #[inline(always)]
     pub fn rx_pdm_en(&self) -> RX_PDM_EN_R {
-        RX_PDM_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        RX_PDM_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {

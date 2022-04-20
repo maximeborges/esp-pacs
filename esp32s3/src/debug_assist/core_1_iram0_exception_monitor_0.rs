@@ -69,12 +69,12 @@ impl R {
     #[doc = "Bit 24 - The first iram0's wr status when trigger IRAM busy interrupt"]
     #[inline(always)]
     pub fn core_1_iram0_recording_wr_0(&self) -> CORE_1_IRAM0_RECORDING_WR_0_R {
-        CORE_1_IRAM0_RECORDING_WR_0_R::new(((self.bits >> 24) & 0x01) != 0)
+        CORE_1_IRAM0_RECORDING_WR_0_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - The first iram0's loadstore status when trigger IRAM busy interrupt"]
     #[inline(always)]
     pub fn core_1_iram0_recording_loadstore_0(&self) -> CORE_1_IRAM0_RECORDING_LOADSTORE_0_R {
-        CORE_1_IRAM0_RECORDING_LOADSTORE_0_R::new(((self.bits >> 25) & 0x01) != 0)
+        CORE_1_IRAM0_RECORDING_LOADSTORE_0_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 #[doc = "Core1 bus busy status regsiter\n\nThis register you can [`read`]

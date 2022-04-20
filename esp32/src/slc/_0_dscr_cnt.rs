@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc0_rx_get_eof_occ(&self) -> SLC0_RX_GET_EOF_OCC_R {
-        SLC0_RX_GET_EOF_OCC_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLC0_RX_GET_EOF_OCC_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

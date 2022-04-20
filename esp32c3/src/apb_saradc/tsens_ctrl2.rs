@@ -84,7 +84,7 @@ impl<'a> TSENS_XPD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> TSENS_CLK_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> TSENS_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -171,17 +171,17 @@ impl R {
     #[doc = "Bits 12:13 - force power up tsens"]
     #[inline(always)]
     pub fn tsens_xpd_force(&self) -> TSENS_XPD_FORCE_R {
-        TSENS_XPD_FORCE_R::new(((self.bits >> 12) & 0x03) as u8)
+        TSENS_XPD_FORCE_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bit 14 - inv tsens clk"]
     #[inline(always)]
     pub fn tsens_clk_inv(&self) -> TSENS_CLK_INV_R {
-        TSENS_CLK_INV_R::new(((self.bits >> 14) & 0x01) != 0)
+        TSENS_CLK_INV_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - tsens clk select"]
     #[inline(always)]
     pub fn tsens_clk_sel(&self) -> TSENS_CLK_SEL_R {
-        TSENS_CLK_SEL_R::new(((self.bits >> 15) & 0x01) != 0)
+        TSENS_CLK_SEL_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

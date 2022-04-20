@@ -67,7 +67,7 @@ impl<'a> CARDRDTHREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CARDCLRINTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CARDWRTHREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -176,17 +176,17 @@ impl R {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
     pub fn cardrdthren(&self) -> CARDRDTHREN_R {
-        CARDRDTHREN_R::new((self.bits & 0x01) != 0)
+        CARDRDTHREN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
     #[inline(always)]
     pub fn cardclrinten(&self) -> CARDCLRINTEN_R {
-        CARDCLRINTEN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CARDCLRINTEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
     #[inline(always)]
     pub fn cardwrthren(&self) -> CARDWRTHREN_R {
-        CARDWRTHREN_R::new(((self.bits >> 2) & 0x01) != 0)
+        CARDWRTHREN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 16:31 - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
     #[inline(always)]

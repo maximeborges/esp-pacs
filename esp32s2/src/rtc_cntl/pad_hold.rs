@@ -67,7 +67,7 @@ impl<'a> TOUCH_PAD0_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TOUCH_PAD1_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TOUCH_PAD2_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TOUCH_PAD3_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TOUCH_PAD4_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> TOUCH_PAD5_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> TOUCH_PAD6_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> TOUCH_PAD7_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TOUCH_PAD8_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> TOUCH_PAD9_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> TOUCH_PAD10_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> TOUCH_PAD11_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> TOUCH_PAD12_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> TOUCH_PAD13_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> TOUCH_PAD14_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> X32P_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> X32N_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> PDAC1_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> PDAC2_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> PAD19_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> PAD20_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> PAD21_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -852,112 +852,112 @@ impl R {
     #[doc = "Bit 0 - Sets the touch GPIO 0 to hold."]
     #[inline(always)]
     pub fn touch_pad0_hold(&self) -> TOUCH_PAD0_HOLD_R {
-        TOUCH_PAD0_HOLD_R::new((self.bits & 0x01) != 0)
+        TOUCH_PAD0_HOLD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Sets the touch GPIO 1 to hold."]
     #[inline(always)]
     pub fn touch_pad1_hold(&self) -> TOUCH_PAD1_HOLD_R {
-        TOUCH_PAD1_HOLD_R::new(((self.bits >> 1) & 0x01) != 0)
+        TOUCH_PAD1_HOLD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Sets the touch GPIO 2 to hold."]
     #[inline(always)]
     pub fn touch_pad2_hold(&self) -> TOUCH_PAD2_HOLD_R {
-        TOUCH_PAD2_HOLD_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOUCH_PAD2_HOLD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Sets the touch GPIO 3 to hold."]
     #[inline(always)]
     pub fn touch_pad3_hold(&self) -> TOUCH_PAD3_HOLD_R {
-        TOUCH_PAD3_HOLD_R::new(((self.bits >> 3) & 0x01) != 0)
+        TOUCH_PAD3_HOLD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Sets the touch GPIO 4 to hold."]
     #[inline(always)]
     pub fn touch_pad4_hold(&self) -> TOUCH_PAD4_HOLD_R {
-        TOUCH_PAD4_HOLD_R::new(((self.bits >> 4) & 0x01) != 0)
+        TOUCH_PAD4_HOLD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Sets the touch GPIO 5 to hold."]
     #[inline(always)]
     pub fn touch_pad5_hold(&self) -> TOUCH_PAD5_HOLD_R {
-        TOUCH_PAD5_HOLD_R::new(((self.bits >> 5) & 0x01) != 0)
+        TOUCH_PAD5_HOLD_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Sets the touch GPIO 6 to hold."]
     #[inline(always)]
     pub fn touch_pad6_hold(&self) -> TOUCH_PAD6_HOLD_R {
-        TOUCH_PAD6_HOLD_R::new(((self.bits >> 6) & 0x01) != 0)
+        TOUCH_PAD6_HOLD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Sets the touch GPIO 7 to hold."]
     #[inline(always)]
     pub fn touch_pad7_hold(&self) -> TOUCH_PAD7_HOLD_R {
-        TOUCH_PAD7_HOLD_R::new(((self.bits >> 7) & 0x01) != 0)
+        TOUCH_PAD7_HOLD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Sets the touch GPIO 8 to hold."]
     #[inline(always)]
     pub fn touch_pad8_hold(&self) -> TOUCH_PAD8_HOLD_R {
-        TOUCH_PAD8_HOLD_R::new(((self.bits >> 8) & 0x01) != 0)
+        TOUCH_PAD8_HOLD_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Sets the touch GPIO 9 to hold."]
     #[inline(always)]
     pub fn touch_pad9_hold(&self) -> TOUCH_PAD9_HOLD_R {
-        TOUCH_PAD9_HOLD_R::new(((self.bits >> 9) & 0x01) != 0)
+        TOUCH_PAD9_HOLD_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Sets the touch GPIO 10 to hold."]
     #[inline(always)]
     pub fn touch_pad10_hold(&self) -> TOUCH_PAD10_HOLD_R {
-        TOUCH_PAD10_HOLD_R::new(((self.bits >> 10) & 0x01) != 0)
+        TOUCH_PAD10_HOLD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Sets the touch GPIO 11 to hold."]
     #[inline(always)]
     pub fn touch_pad11_hold(&self) -> TOUCH_PAD11_HOLD_R {
-        TOUCH_PAD11_HOLD_R::new(((self.bits >> 11) & 0x01) != 0)
+        TOUCH_PAD11_HOLD_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Sets the touch GPIO 12 to hold."]
     #[inline(always)]
     pub fn touch_pad12_hold(&self) -> TOUCH_PAD12_HOLD_R {
-        TOUCH_PAD12_HOLD_R::new(((self.bits >> 12) & 0x01) != 0)
+        TOUCH_PAD12_HOLD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Sets the touch GPIO 13 to hold."]
     #[inline(always)]
     pub fn touch_pad13_hold(&self) -> TOUCH_PAD13_HOLD_R {
-        TOUCH_PAD13_HOLD_R::new(((self.bits >> 13) & 0x01) != 0)
+        TOUCH_PAD13_HOLD_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Sets the touch GPIO 14 to hold."]
     #[inline(always)]
     pub fn touch_pad14_hold(&self) -> TOUCH_PAD14_HOLD_R {
-        TOUCH_PAD14_HOLD_R::new(((self.bits >> 14) & 0x01) != 0)
+        TOUCH_PAD14_HOLD_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Sets the x32p to hold."]
     #[inline(always)]
     pub fn x32p_hold(&self) -> X32P_HOLD_R {
-        X32P_HOLD_R::new(((self.bits >> 15) & 0x01) != 0)
+        X32P_HOLD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Sets the x32n to hold."]
     #[inline(always)]
     pub fn x32n_hold(&self) -> X32N_HOLD_R {
-        X32N_HOLD_R::new(((self.bits >> 16) & 0x01) != 0)
+        X32N_HOLD_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Sets the pdac1 to hold."]
     #[inline(always)]
     pub fn pdac1_hold(&self) -> PDAC1_HOLD_R {
-        PDAC1_HOLD_R::new(((self.bits >> 17) & 0x01) != 0)
+        PDAC1_HOLD_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Sets the pdac2 to hold."]
     #[inline(always)]
     pub fn pdac2_hold(&self) -> PDAC2_HOLD_R {
-        PDAC2_HOLD_R::new(((self.bits >> 18) & 0x01) != 0)
+        PDAC2_HOLD_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Sets the RTG GPIO 19 to hold."]
     #[inline(always)]
     pub fn pad19_hold(&self) -> PAD19_HOLD_R {
-        PAD19_HOLD_R::new(((self.bits >> 19) & 0x01) != 0)
+        PAD19_HOLD_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Sets the RTG GPIO 20 to hold."]
     #[inline(always)]
     pub fn pad20_hold(&self) -> PAD20_HOLD_R {
-        PAD20_HOLD_R::new(((self.bits >> 20) & 0x01) != 0)
+        PAD20_HOLD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Sets the RTG GPIO 21 to hold."]
     #[inline(always)]
     pub fn pad21_hold(&self) -> PAD21_HOLD_R {
-        PAD21_HOLD_R::new(((self.bits >> 21) & 0x01) != 0)
+        PAD21_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

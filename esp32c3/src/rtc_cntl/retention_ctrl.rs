@@ -67,7 +67,7 @@ impl<'a> RETENTION_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> RETENTION_DONE_WAIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 19)) | ((value as u32 & 0x07) << 19);
+        self.w.bits = (self.w.bits & !(7 << 19)) | ((value as u32 & 7) << 19);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> RETENTION_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -193,12 +193,12 @@ impl R {
     #[doc = "Bit 18 - Retention clk sel"]
     #[inline(always)]
     pub fn retention_clk_sel(&self) -> RETENTION_CLK_SEL_R {
-        RETENTION_CLK_SEL_R::new(((self.bits >> 18) & 0x01) != 0)
+        RETENTION_CLK_SEL_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:21 - Retention done wait time"]
     #[inline(always)]
     pub fn retention_done_wait(&self) -> RETENTION_DONE_WAIT_R {
-        RETENTION_DONE_WAIT_R::new(((self.bits >> 19) & 0x07) as u8)
+        RETENTION_DONE_WAIT_R::new(((self.bits >> 19) & 7) as u8)
     }
     #[doc = "Bits 22:25 - Retention clkoff wait time"]
     #[inline(always)]
@@ -208,7 +208,7 @@ impl R {
     #[doc = "Bit 26 - enable cpu retention when light sleep"]
     #[inline(always)]
     pub fn retention_en(&self) -> RETENTION_EN_R {
-        RETENTION_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        RETENTION_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:31 - wait cycles for rention operation"]
     #[inline(always)]

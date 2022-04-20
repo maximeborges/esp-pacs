@@ -94,7 +94,7 @@ impl<'a> DAC_CLK_PAD_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn dac_clk_pad_sel(&self) -> DAC_CLK_PAD_SEL_R {
-        DAC_CLK_PAD_SEL_R::new(((self.bits >> 8) & 0x01) != 0)
+        DAC_CLK_PAD_SEL_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

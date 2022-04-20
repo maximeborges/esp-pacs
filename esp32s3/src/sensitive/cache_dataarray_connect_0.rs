@@ -67,7 +67,7 @@ impl<'a> CACHE_DATAARRAY_CONNECT_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set 1 to lock cache data array registers."]
     #[inline(always)]
     pub fn cache_dataarray_connect_lock(&self) -> CACHE_DATAARRAY_CONNECT_LOCK_R {
-        CACHE_DATAARRAY_CONNECT_LOCK_R::new((self.bits & 0x01) != 0)
+        CACHE_DATAARRAY_CONNECT_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

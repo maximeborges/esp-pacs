@@ -67,7 +67,7 @@ impl<'a> SARADC_MEAS_NUM_LIMIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SARADC_SAR1_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SARADC_SAR2_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> SARADC_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -240,7 +240,7 @@ impl R {
     #[doc = "Bit 0 - enable max meas num"]
     #[inline(always)]
     pub fn saradc_meas_num_limit(&self) -> SARADC_MEAS_NUM_LIMIT_R {
-        SARADC_MEAS_NUM_LIMIT_R::new((self.bits & 0x01) != 0)
+        SARADC_MEAS_NUM_LIMIT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:8 - max conversion number"]
     #[inline(always)]
@@ -250,12 +250,12 @@ impl R {
     #[doc = "Bit 9 - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
     #[inline(always)]
     pub fn saradc_sar1_inv(&self) -> SARADC_SAR1_INV_R {
-        SARADC_SAR1_INV_R::new(((self.bits >> 9) & 0x01) != 0)
+        SARADC_SAR1_INV_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
     #[inline(always)]
     pub fn saradc_sar2_inv(&self) -> SARADC_SAR2_INV_R {
-        SARADC_SAR2_INV_R::new(((self.bits >> 10) & 0x01) != 0)
+        SARADC_SAR2_INV_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 12:23 - to set saradc timer target"]
     #[inline(always)]
@@ -265,7 +265,7 @@ impl R {
     #[doc = "Bit 24 - to enable saradc timer trigger"]
     #[inline(always)]
     pub fn saradc_timer_en(&self) -> SARADC_TIMER_EN_R {
-        SARADC_TIMER_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        SARADC_TIMER_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

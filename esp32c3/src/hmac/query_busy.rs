@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Hmac state. 1'b0: idle. 1'b1: busy"]
     #[inline(always)]
     pub fn busy_state(&self) -> BUSY_STATE_R {
-        BUSY_STATE_R::new((self.bits & 0x01) != 0)
+        BUSY_STATE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Busy register.\n\nThis register you can [`read`]

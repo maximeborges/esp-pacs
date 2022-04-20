@@ -67,7 +67,7 @@ impl<'a> PDAC2_DAC_XPD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PDAC2_FUN_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PDAC2_SLP_OE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PDAC2_SLP_IE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PDAC2_SLP_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> PDAC2_FUN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 15)) | ((value as u32 & 0x03) << 15);
+        self.w.bits = (self.w.bits & !(3 << 15)) | ((value as u32 & 3) << 15);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> PDAC2_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> PDAC2_XPD_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> PDAC2_RUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> PDAC2_RDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> PDAC2_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -481,7 +481,7 @@ impl<'a> PDAC2_DRV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -489,42 +489,42 @@ impl R {
     #[doc = "Bit 10 - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     pub fn pdac2_dac_xpd_force(&self) -> PDAC2_DAC_XPD_FORCE_R {
-        PDAC2_DAC_XPD_FORCE_R::new(((self.bits >> 10) & 0x01) != 0)
+        PDAC2_DAC_XPD_FORCE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
     pub fn pdac2_fun_ie(&self) -> PDAC2_FUN_IE_R {
-        PDAC2_FUN_IE_R::new(((self.bits >> 11) & 0x01) != 0)
+        PDAC2_FUN_IE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
     pub fn pdac2_slp_oe(&self) -> PDAC2_SLP_OE_R {
-        PDAC2_SLP_OE_R::new(((self.bits >> 12) & 0x01) != 0)
+        PDAC2_SLP_OE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn pdac2_slp_ie(&self) -> PDAC2_SLP_IE_R {
-        PDAC2_SLP_IE_R::new(((self.bits >> 13) & 0x01) != 0)
+        PDAC2_SLP_IE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn pdac2_slp_sel(&self) -> PDAC2_SLP_SEL_R {
-        PDAC2_SLP_SEL_R::new(((self.bits >> 14) & 0x01) != 0)
+        PDAC2_SLP_SEL_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn pdac2_fun_sel(&self) -> PDAC2_FUN_SEL_R {
-        PDAC2_FUN_SEL_R::new(((self.bits >> 15) & 0x03) as u8)
+        PDAC2_FUN_SEL_R::new(((self.bits >> 15) & 3) as u8)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn pdac2_mux_sel(&self) -> PDAC2_MUX_SEL_R {
-        PDAC2_MUX_SEL_R::new(((self.bits >> 17) & 0x01) != 0)
+        PDAC2_MUX_SEL_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Power on DAC2. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     pub fn pdac2_xpd_dac(&self) -> PDAC2_XPD_DAC_R {
-        PDAC2_XPD_DAC_R::new(((self.bits >> 18) & 0x01) != 0)
+        PDAC2_XPD_DAC_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:26 - PAD DAC2 control code."]
     #[inline(always)]
@@ -534,22 +534,22 @@ impl R {
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
     pub fn pdac2_rue(&self) -> PDAC2_RUE_R {
-        PDAC2_RUE_R::new(((self.bits >> 27) & 0x01) != 0)
+        PDAC2_RUE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
     pub fn pdac2_rde(&self) -> PDAC2_RDE_R {
-        PDAC2_RDE_R::new(((self.bits >> 28) & 0x01) != 0)
+        PDAC2_RDE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn pdac2_hold(&self) -> PDAC2_HOLD_R {
-        PDAC2_HOLD_R::new(((self.bits >> 29) & 0x01) != 0)
+        PDAC2_HOLD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
     pub fn pdac2_drv(&self) -> PDAC2_DRV_R {
-        PDAC2_DRV_R::new(((self.bits >> 30) & 0x03) as u8)
+        PDAC2_DRV_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

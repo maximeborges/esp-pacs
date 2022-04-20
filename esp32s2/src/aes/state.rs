@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:1 - Stores the working status of the AES Accelerator. For details, see Table 3 for Typical AES working mode and Table 9 for DMA AES working mode. For typical AES; 0 = idle; 1 = busy. For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done."]
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
-        STATE_R::new((self.bits & 0x03) as u8)
+        STATE_R::new((self.bits & 3) as u8)
     }
 }
 #[doc = "Operation status register\n\nThis register you can [`read`]

@@ -67,7 +67,7 @@ impl<'a> OUT_CHECK_OWNER_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> OUT_EXT_MEM_BK_SIZE_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 13)) | ((value as u32 & 0x03) << 13);
+        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
     pub fn out_check_owner_ch(&self) -> OUT_CHECK_OWNER_CH_R {
-        OUT_CHECK_OWNER_CH_R::new(((self.bits >> 12) & 0x01) != 0)
+        OUT_CHECK_OWNER_CH_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
     pub fn out_ext_mem_bk_size_ch(&self) -> OUT_EXT_MEM_BK_SIZE_CH_R {
-        OUT_EXT_MEM_BK_SIZE_CH_R::new(((self.bits >> 13) & 0x03) as u8)
+        OUT_EXT_MEM_BK_SIZE_CH_R::new(((self.bits >> 13) & 3) as u8)
     }
 }
 impl W {

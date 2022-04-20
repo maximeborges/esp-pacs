@@ -57,7 +57,7 @@ impl<'a> LOG_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> LOG_MEM_LOOP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bits 0:2 - reg_log_ena"]
     #[inline(always)]
     pub fn log_ena(&self) -> LOG_ENA_R {
-        LOG_ENA_R::new((self.bits & 0x07) as u8)
+        LOG_ENA_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:6 - reg_log_mode"]
     #[inline(always)]
@@ -139,7 +139,7 @@ impl R {
     #[doc = "Bit 7 - reg_log_mem_loop_enable"]
     #[inline(always)]
     pub fn log_mem_loop_enable(&self) -> LOG_MEM_LOOP_ENABLE_R {
-        LOG_MEM_LOOP_ENABLE_R::new(((self.bits >> 7) & 0x01) != 0)
+        LOG_MEM_LOOP_ENABLE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

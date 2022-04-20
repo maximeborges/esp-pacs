@@ -111,7 +111,7 @@ impl<'a> CS_DELAY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 26)) | ((value as u32 & 0x07) << 26);
+        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CS_DELAY_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -156,12 +156,12 @@ impl R {
     #[doc = "Bits 26:28 - spi_cs signal is delayed by spi_clk . 0: zero 1: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by half cycle else delayed by one cycle 2: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by one cycle, else delayed by half cycle 3: delayed one cycle. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_delay_mode(&self) -> CS_DELAY_MODE_R {
-        CS_DELAY_MODE_R::new(((self.bits >> 26) & 0x07) as u8)
+        CS_DELAY_MODE_R::new(((self.bits >> 26) & 7) as u8)
     }
     #[doc = "Bits 29:30 - spi_cs signal is delayed by system clock cycles. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_delay_num(&self) -> CS_DELAY_NUM_R {
-        CS_DELAY_NUM_R::new(((self.bits >> 29) & 0x03) as u8)
+        CS_DELAY_NUM_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
 impl W {

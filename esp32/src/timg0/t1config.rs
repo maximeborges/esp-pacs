@@ -67,7 +67,7 @@ impl<'a> T1_ALARM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> T1_LEVEL_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> T1_EDGE_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> T1_AUTORELOAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> T1_INCREASE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> T1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -287,17 +287,17 @@ impl R {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
     pub fn t1_alarm_en(&self) -> T1_ALARM_EN_R {
-        T1_ALARM_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        T1_ALARM_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - When set level type interrupt will be generated during alarm"]
     #[inline(always)]
     pub fn t1_level_int_en(&self) -> T1_LEVEL_INT_EN_R {
-        T1_LEVEL_INT_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        T1_LEVEL_INT_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - When set edge type interrupt will be generated during alarm"]
     #[inline(always)]
     pub fn t1_edge_int_en(&self) -> T1_EDGE_INT_EN_R {
-        T1_EDGE_INT_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        T1_EDGE_INT_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:28 - Timer 1 clock (T1_clk) prescale value."]
     #[inline(always)]
@@ -307,17 +307,17 @@ impl R {
     #[doc = "Bit 29 - When set timer 1 auto-reload at alarming is enabled"]
     #[inline(always)]
     pub fn t1_autoreload(&self) -> T1_AUTORELOAD_R {
-        T1_AUTORELOAD_R::new(((self.bits >> 29) & 0x01) != 0)
+        T1_AUTORELOAD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
     #[inline(always)]
     pub fn t1_increase(&self) -> T1_INCREASE_R {
-        T1_INCREASE_R::new(((self.bits >> 30) & 0x01) != 0)
+        T1_INCREASE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - When set timer 1 time-base counter is enabled"]
     #[inline(always)]
     pub fn t1_en(&self) -> T1_EN_R {
-        T1_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        T1_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

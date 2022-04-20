@@ -67,7 +67,7 @@ impl<'a> FH1_SW_CBC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FH1_F2_CBC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FH1_F1_CBC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FH1_F0_CBC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FH1_SW_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FH1_F2_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FH1_F1_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FH1_F0_OST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> FH1_A_CBC_D_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> FH1_A_CBC_U_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -407,7 +407,7 @@ impl<'a> FH1_A_OST_D_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -434,7 +434,7 @@ impl<'a> FH1_A_OST_U_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -461,7 +461,7 @@ impl<'a> FH1_B_CBC_D_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -488,7 +488,7 @@ impl<'a> FH1_B_CBC_U_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -515,7 +515,7 @@ impl<'a> FH1_B_OST_D_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -542,7 +542,7 @@ impl<'a> FH1_B_OST_U_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -550,82 +550,82 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn fh1_sw_cbc(&self) -> FH1_SW_CBC_R {
-        FH1_SW_CBC_R::new((self.bits & 0x01) != 0)
+        FH1_SW_CBC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn fh1_f2_cbc(&self) -> FH1_F2_CBC_R {
-        FH1_F2_CBC_R::new(((self.bits >> 1) & 0x01) != 0)
+        FH1_F2_CBC_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn fh1_f1_cbc(&self) -> FH1_F1_CBC_R {
-        FH1_F1_CBC_R::new(((self.bits >> 2) & 0x01) != 0)
+        FH1_F1_CBC_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn fh1_f0_cbc(&self) -> FH1_F0_CBC_R {
-        FH1_F0_CBC_R::new(((self.bits >> 3) & 0x01) != 0)
+        FH1_F0_CBC_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn fh1_sw_ost(&self) -> FH1_SW_OST_R {
-        FH1_SW_OST_R::new(((self.bits >> 4) & 0x01) != 0)
+        FH1_SW_OST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn fh1_f2_ost(&self) -> FH1_F2_OST_R {
-        FH1_F2_OST_R::new(((self.bits >> 5) & 0x01) != 0)
+        FH1_F2_OST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn fh1_f1_ost(&self) -> FH1_F1_OST_R {
-        FH1_F1_OST_R::new(((self.bits >> 6) & 0x01) != 0)
+        FH1_F1_OST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn fh1_f0_ost(&self) -> FH1_F0_OST_R {
-        FH1_F0_OST_R::new(((self.bits >> 7) & 0x01) != 0)
+        FH1_F0_OST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn fh1_a_cbc_d(&self) -> FH1_A_CBC_D_R {
-        FH1_A_CBC_D_R::new(((self.bits >> 8) & 0x03) as u8)
+        FH1_A_CBC_D_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn fh1_a_cbc_u(&self) -> FH1_A_CBC_U_R {
-        FH1_A_CBC_U_R::new(((self.bits >> 10) & 0x03) as u8)
+        FH1_A_CBC_U_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn fh1_a_ost_d(&self) -> FH1_A_OST_D_R {
-        FH1_A_OST_D_R::new(((self.bits >> 12) & 0x03) as u8)
+        FH1_A_OST_D_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     pub fn fh1_a_ost_u(&self) -> FH1_A_OST_U_R {
-        FH1_A_OST_U_R::new(((self.bits >> 14) & 0x03) as u8)
+        FH1_A_OST_U_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn fh1_b_cbc_d(&self) -> FH1_B_CBC_D_R {
-        FH1_B_CBC_D_R::new(((self.bits >> 16) & 0x03) as u8)
+        FH1_B_CBC_D_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn fh1_b_cbc_u(&self) -> FH1_B_CBC_U_R {
-        FH1_B_CBC_U_R::new(((self.bits >> 18) & 0x03) as u8)
+        FH1_B_CBC_U_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn fh1_b_ost_d(&self) -> FH1_B_OST_D_R {
-        FH1_B_OST_D_R::new(((self.bits >> 20) & 0x03) as u8)
+        FH1_B_OST_D_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     pub fn fh1_b_ost_u(&self) -> FH1_B_OST_U_R {
-        FH1_B_OST_U_R::new(((self.bits >> 22) & 0x03) as u8)
+        FH1_B_OST_U_R::new(((self.bits >> 22) & 3) as u8)
     }
 }
 impl W {

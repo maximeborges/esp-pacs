@@ -67,7 +67,7 @@ impl<'a> ALLOC_WB_HOLD_ARBITER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
     pub fn alloc_wb_hold_arbiter(&self) -> ALLOC_WB_HOLD_ARBITER_R {
-        ALLOC_WB_HOLD_ARBITER_R::new((self.bits & 0x01) != 0)
+        ALLOC_WB_HOLD_ARBITER_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

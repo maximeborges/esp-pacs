@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - AES Idle register. Reads ’zero’ while the AES Accelerator is busy processing; reads ’one’ otherwise."]
     #[inline(always)]
     pub fn idle(&self) -> IDLE_R {
-        IDLE_R::new((self.bits & 0x01) != 0)
+        IDLE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

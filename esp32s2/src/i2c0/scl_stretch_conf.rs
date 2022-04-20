@@ -94,7 +94,7 @@ impl<'a> SLAVE_SCL_STRETCH_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -116,7 +116,7 @@ impl<'a> SLAVE_SCL_STRETCH_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -129,7 +129,7 @@ impl R {
     #[doc = "Bit 10 - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE."]
     #[inline(always)]
     pub fn slave_scl_stretch_en(&self) -> SLAVE_SCL_STRETCH_EN_R {
-        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

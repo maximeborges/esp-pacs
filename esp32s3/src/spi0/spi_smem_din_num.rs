@@ -57,7 +57,7 @@ impl<'a> SPI_SMEM_DIN0_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> SPI_SMEM_DIN1_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> SPI_SMEM_DIN2_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> SPI_SMEM_DIN3_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> SPI_SMEM_DIN4_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> SPI_SMEM_DIN5_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> SPI_SMEM_DIN6_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> SPI_SMEM_DIN7_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> SPI_SMEM_DINS_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -281,47 +281,47 @@ impl R {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
     pub fn spi_smem_din0_num(&self) -> SPI_SMEM_DIN0_NUM_R {
-        SPI_SMEM_DIN0_NUM_R::new((self.bits & 0x03) as u8)
+        SPI_SMEM_DIN0_NUM_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - SPI_Q input delay number."]
     #[inline(always)]
     pub fn spi_smem_din1_num(&self) -> SPI_SMEM_DIN1_NUM_R {
-        SPI_SMEM_DIN1_NUM_R::new(((self.bits >> 2) & 0x03) as u8)
+        SPI_SMEM_DIN1_NUM_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - SPI_WP input delay number."]
     #[inline(always)]
     pub fn spi_smem_din2_num(&self) -> SPI_SMEM_DIN2_NUM_R {
-        SPI_SMEM_DIN2_NUM_R::new(((self.bits >> 4) & 0x03) as u8)
+        SPI_SMEM_DIN2_NUM_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - SPI_HD input delay number."]
     #[inline(always)]
     pub fn spi_smem_din3_num(&self) -> SPI_SMEM_DIN3_NUM_R {
-        SPI_SMEM_DIN3_NUM_R::new(((self.bits >> 6) & 0x03) as u8)
+        SPI_SMEM_DIN3_NUM_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - SPI_IO4 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din4_num(&self) -> SPI_SMEM_DIN4_NUM_R {
-        SPI_SMEM_DIN4_NUM_R::new(((self.bits >> 8) & 0x03) as u8)
+        SPI_SMEM_DIN4_NUM_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 10:11 - SPI_IO5 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din5_num(&self) -> SPI_SMEM_DIN5_NUM_R {
-        SPI_SMEM_DIN5_NUM_R::new(((self.bits >> 10) & 0x03) as u8)
+        SPI_SMEM_DIN5_NUM_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 12:13 - SPI_IO6 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din6_num(&self) -> SPI_SMEM_DIN6_NUM_R {
-        SPI_SMEM_DIN6_NUM_R::new(((self.bits >> 12) & 0x03) as u8)
+        SPI_SMEM_DIN6_NUM_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - SPI_IO7 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din7_num(&self) -> SPI_SMEM_DIN7_NUM_R {
-        SPI_SMEM_DIN7_NUM_R::new(((self.bits >> 14) & 0x03) as u8)
+        SPI_SMEM_DIN7_NUM_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - SPI_DQS input delay number."]
     #[inline(always)]
     pub fn spi_smem_dins_num(&self) -> SPI_SMEM_DINS_NUM_R {
-        SPI_SMEM_DINS_NUM_R::new(((self.bits >> 16) & 0x03) as u8)
+        SPI_SMEM_DINS_NUM_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

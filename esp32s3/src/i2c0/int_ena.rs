@@ -67,7 +67,7 @@ impl<'a> RXFIFO_WM_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TXFIFO_WM_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RXFIFO_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> END_DETECT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> BYTE_TRANS_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> ARBITRATION_LOST_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> MST_TXFIFO_UDF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> TRANS_COMPLETE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TIME_OUT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> TRANS_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> NACK_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> TXFIFO_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> RXFIFO_UDF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> SCL_ST_TO_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> SCL_MAIN_ST_TO_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> DET_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> SLAVE_STRETCH_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> GENERAL_CALL_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -704,92 +704,92 @@ impl R {
     #[doc = "Bit 0 - The interrupt enable bit for I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]
     pub fn rxfifo_wm_int_ena(&self) -> RXFIFO_WM_INT_ENA_R {
-        RXFIFO_WM_INT_ENA_R::new((self.bits & 0x01) != 0)
+        RXFIFO_WM_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for I2C_TXFIFO_WM_INT interrupt."]
     #[inline(always)]
     pub fn txfifo_wm_int_ena(&self) -> TXFIFO_WM_INT_ENA_R {
-        TXFIFO_WM_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        TXFIFO_WM_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt enable bit for I2C_RXFIFO_OVF_INT interrupt."]
     #[inline(always)]
     pub fn rxfifo_ovf_int_ena(&self) -> RXFIFO_OVF_INT_ENA_R {
-        RXFIFO_OVF_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXFIFO_OVF_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
     pub fn end_detect_int_ena(&self) -> END_DETECT_INT_ENA_R {
-        END_DETECT_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        END_DETECT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
     pub fn byte_trans_done_int_ena(&self) -> BYTE_TRANS_DONE_INT_ENA_R {
-        BYTE_TRANS_DONE_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        BYTE_TRANS_DONE_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the I2C_ARBITRATION_LOST_INT interrupt."]
     #[inline(always)]
     pub fn arbitration_lost_int_ena(&self) -> ARBITRATION_LOST_INT_ENA_R {
-        ARBITRATION_LOST_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        ARBITRATION_LOST_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The interrupt enable bit for I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
     pub fn mst_txfifo_udf_int_ena(&self) -> MST_TXFIFO_UDF_INT_ENA_R {
-        MST_TXFIFO_UDF_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        MST_TXFIFO_UDF_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
     pub fn trans_complete_int_ena(&self) -> TRANS_COMPLETE_INT_ENA_R {
-        TRANS_COMPLETE_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        TRANS_COMPLETE_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the I2C_TIME_OUT_INT interrupt."]
     #[inline(always)]
     pub fn time_out_int_ena(&self) -> TIME_OUT_INT_ENA_R {
-        TIME_OUT_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        TIME_OUT_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the I2C_TRANS_START_INT interrupt."]
     #[inline(always)]
     pub fn trans_start_int_ena(&self) -> TRANS_START_INT_ENA_R {
-        TRANS_START_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        TRANS_START_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
     pub fn nack_int_ena(&self) -> NACK_INT_ENA_R {
-        NACK_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        NACK_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The interrupt enable bit for I2C_TXFIFO_OVF_INT interrupt."]
     #[inline(always)]
     pub fn txfifo_ovf_int_ena(&self) -> TXFIFO_OVF_INT_ENA_R {
-        TXFIFO_OVF_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        TXFIFO_OVF_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The interrupt enable bit for I2C_RXFIFO_UDF_INT interrupt."]
     #[inline(always)]
     pub fn rxfifo_udf_int_ena(&self) -> RXFIFO_UDF_INT_ENA_R {
-        RXFIFO_UDF_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        RXFIFO_UDF_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The interrupt enable bit for I2C_SCL_ST_TO_INT interrupt."]
     #[inline(always)]
     pub fn scl_st_to_int_ena(&self) -> SCL_ST_TO_INT_ENA_R {
-        SCL_ST_TO_INT_ENA_R::new(((self.bits >> 13) & 0x01) != 0)
+        SCL_ST_TO_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The interrupt enable bit for I2C_SCL_MAIN_ST_TO_INT interrupt."]
     #[inline(always)]
     pub fn scl_main_st_to_int_ena(&self) -> SCL_MAIN_ST_TO_INT_ENA_R {
-        SCL_MAIN_ST_TO_INT_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        SCL_MAIN_ST_TO_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The interrupt enable bit for I2C_DET_START_INT interrupt."]
     #[inline(always)]
     pub fn det_start_int_ena(&self) -> DET_START_INT_ENA_R {
-        DET_START_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        DET_START_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
     pub fn slave_stretch_int_ena(&self) -> SLAVE_STRETCH_INT_ENA_R {
-        SLAVE_STRETCH_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLAVE_STRETCH_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - The interrupt enable bit for I2C_GENARAL_CALL_INT interrupt."]
     #[inline(always)]
     pub fn general_call_int_ena(&self) -> GENERAL_CALL_INT_ENA_R {
-        GENERAL_CALL_INT_ENA_R::new(((self.bits >> 17) & 0x01) != 0)
+        GENERAL_CALL_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {

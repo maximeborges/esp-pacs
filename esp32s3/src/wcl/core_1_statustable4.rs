@@ -67,7 +67,7 @@ impl<'a> CORE_1_FROM_WORLD_4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> CORE_1_CURRENT_4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl R {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 4"]
     #[inline(always)]
     pub fn core_1_from_world_4(&self) -> CORE_1_FROM_WORLD_4_R {
-        CORE_1_FROM_WORLD_4_R::new((self.bits & 0x01) != 0)
+        CORE_1_FROM_WORLD_4_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 4"]
     #[inline(always)]
@@ -149,7 +149,7 @@ impl R {
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 4"]
     #[inline(always)]
     pub fn core_1_current_4(&self) -> CORE_1_CURRENT_4_R {
-        CORE_1_CURRENT_4_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE_1_CURRENT_4_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

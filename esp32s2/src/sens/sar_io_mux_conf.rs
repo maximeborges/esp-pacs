@@ -67,7 +67,7 @@ impl<'a> IOMUX_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> IOMUX_CLK_GATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
     pub fn iomux_reset(&self) -> IOMUX_RESET_R {
-        IOMUX_RESET_R::new(((self.bits >> 30) & 0x01) != 0)
+        IOMUX_RESET_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - IO MUX clock gate enable bit"]
     #[inline(always)]
     pub fn iomux_clk_gate_en(&self) -> IOMUX_CLK_GATE_EN_R {
-        IOMUX_CLK_GATE_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        IOMUX_CLK_GATE_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

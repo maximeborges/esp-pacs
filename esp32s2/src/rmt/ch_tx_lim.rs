@@ -121,7 +121,7 @@ impl<'a> TX_LOOP_CNT_EN_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -143,7 +143,7 @@ impl<'a> LOOP_COUNT_RESET_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -161,7 +161,7 @@ impl R {
     #[doc = "Bit 19 - This register is the enabled bit for loop count."]
     #[inline(always)]
     pub fn tx_loop_cnt_en_ch0(&self) -> TX_LOOP_CNT_EN_CH0_R {
-        TX_LOOP_CNT_EN_CH0_R::new(((self.bits >> 19) & 0x01) != 0)
+        TX_LOOP_CNT_EN_CH0_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 impl W {

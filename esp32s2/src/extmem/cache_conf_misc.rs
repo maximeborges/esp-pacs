@@ -67,7 +67,7 @@ impl<'a> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -114,12 +114,12 @@ impl R {
     pub fn pro_cache_ignore_preload_mmu_entry_fault(
         &self,
     ) -> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R {
-        PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R::new((self.bits & 0x01) != 0)
+        PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
     pub fn pro_cache_ignore_sync_mmu_entry_fault(&self) -> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R {
-        PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

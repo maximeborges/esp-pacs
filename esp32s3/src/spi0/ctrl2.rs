@@ -111,7 +111,7 @@ impl<'a> ECC_CS_HOLD_TIME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 10)) | ((value as u32 & 0x07) << 10);
+        self.w.bits = (self.w.bits & !(7 << 10)) | ((value as u32 & 7) << 10);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> ECC_SKIP_PAGE_CORNER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> ECC_16TO18_BYTE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -251,7 +251,7 @@ impl<'a> SYNC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -269,17 +269,17 @@ impl R {
     #[doc = "Bits 10:12 - SPI_MEM_CS_HOLD_TIME + SPI_MEM_ECC_CS_HOLD_TIME is the SPI_CS hold cycle in ECC mode when accessed flash."]
     #[inline(always)]
     pub fn ecc_cs_hold_time(&self) -> ECC_CS_HOLD_TIME_R {
-        ECC_CS_HOLD_TIME_R::new(((self.bits >> 10) & 0x07) as u8)
+        ECC_CS_HOLD_TIME_R::new(((self.bits >> 10) & 7) as u8)
     }
     #[doc = "Bit 13 - 1: MSPI skips page corner when accesses flash. 0: Not skip page corner when accesses flash."]
     #[inline(always)]
     pub fn ecc_skip_page_corner(&self) -> ECC_SKIP_PAGE_CORNER_R {
-        ECC_SKIP_PAGE_CORNER_R::new(((self.bits >> 13) & 0x01) != 0)
+        ECC_SKIP_PAGE_CORNER_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses flash."]
     #[inline(always)]
     pub fn ecc_16to18_byte_en(&self) -> ECC_16TO18_BYTE_EN_R {
-        ECC_16TO18_BYTE_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        ECC_16TO18_BYTE_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\]
  + 1) MSPI core clock cycles."]
@@ -290,7 +290,7 @@ impl R {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
     pub fn sync_reset(&self) -> SYNC_RESET_R {
-        SYNC_RESET_R::new(((self.bits >> 31) & 0x01) != 0)
+        SYNC_RESET_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

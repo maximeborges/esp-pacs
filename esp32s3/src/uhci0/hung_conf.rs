@@ -84,7 +84,7 @@ impl<'a> TXFIFO_TIMEOUT_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
+        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> TXFIFO_TIMEOUT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> RXFIFO_TIMEOUT_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
+        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> RXFIFO_TIMEOUT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -225,12 +225,12 @@ impl R {
     #[doc = "Bits 8:10 - This register is used to configure the tick count maximum value."]
     #[inline(always)]
     pub fn txfifo_timeout_shift(&self) -> TXFIFO_TIMEOUT_SHIFT_R {
-        TXFIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 8) & 0x07) as u8)
+        TXFIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bit 11 - This is the enable bit for Tx-FIFO receive-data timeout."]
     #[inline(always)]
     pub fn txfifo_timeout_ena(&self) -> TXFIFO_TIMEOUT_ENA_R {
-        TXFIFO_TIMEOUT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        TXFIFO_TIMEOUT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:19 - This register stores the timeout value. It will produce the UHCI_RX_HUNG_INT interrupt when DMA takes more time to read data from RAM."]
     #[inline(always)]
@@ -240,12 +240,12 @@ impl R {
     #[doc = "Bits 20:22 - This register is used to configure the tick count maximum value."]
     #[inline(always)]
     pub fn rxfifo_timeout_shift(&self) -> RXFIFO_TIMEOUT_SHIFT_R {
-        RXFIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 20) & 0x07) as u8)
+        RXFIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bit 23 - This is the enable bit for DMA send-data timeout."]
     #[inline(always)]
     pub fn rxfifo_timeout_ena(&self) -> RXFIFO_TIMEOUT_ENA_R {
-        RXFIFO_TIMEOUT_ENA_R::new(((self.bits >> 23) & 0x01) != 0)
+        RXFIFO_TIMEOUT_ENA_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {

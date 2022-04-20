@@ -67,7 +67,7 @@ impl<'a> INTERNAL_SRAM_USAGE_LOG_SRAM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - internal_sram_usage_log_sram"]
     #[inline(always)]
     pub fn internal_sram_usage_log_sram(&self) -> INTERNAL_SRAM_USAGE_LOG_SRAM_R {
-        INTERNAL_SRAM_USAGE_LOG_SRAM_R::new((self.bits & 0x01) != 0)
+        INTERNAL_SRAM_USAGE_LOG_SRAM_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

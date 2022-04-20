@@ -137,7 +137,7 @@ impl R {
     #[doc = "Bit 30 - indicate temperature sensor out ready"]
     #[inline(always)]
     pub fn tsens_rdy_out(&self) -> TSENS_RDY_OUT_R {
-        TSENS_RDY_OUT_R::new(((self.bits >> 30) & 0x01) != 0)
+        TSENS_RDY_OUT_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

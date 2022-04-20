@@ -317,102 +317,102 @@ impl R {
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
     pub fn timer0_ovf_int_raw(&self) -> TIMER0_OVF_INT_RAW_R {
-        TIMER0_OVF_INT_RAW_R::new((self.bits & 0x01) != 0)
+        TIMER0_OVF_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
     pub fn timer1_ovf_int_raw(&self) -> TIMER1_OVF_INT_RAW_R {
-        TIMER1_OVF_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        TIMER1_OVF_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Triggered when the timer2 has reached its maximum counter value."]
     #[inline(always)]
     pub fn timer2_ovf_int_raw(&self) -> TIMER2_OVF_INT_RAW_R {
-        TIMER2_OVF_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        TIMER2_OVF_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Triggered when the timer3 has reached its maximum counter value."]
     #[inline(always)]
     pub fn timer3_ovf_int_raw(&self) -> TIMER3_OVF_INT_RAW_R {
-        TIMER3_OVF_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        TIMER3_OVF_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch0_int_raw(&self) -> DUTY_CHNG_END_CH0_INT_RAW_R {
-        DUTY_CHNG_END_CH0_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        DUTY_CHNG_END_CH0_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch1_int_raw(&self) -> DUTY_CHNG_END_CH1_INT_RAW_R {
-        DUTY_CHNG_END_CH1_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        DUTY_CHNG_END_CH1_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch2_int_raw(&self) -> DUTY_CHNG_END_CH2_INT_RAW_R {
-        DUTY_CHNG_END_CH2_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        DUTY_CHNG_END_CH2_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch3_int_raw(&self) -> DUTY_CHNG_END_CH3_INT_RAW_R {
-        DUTY_CHNG_END_CH3_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        DUTY_CHNG_END_CH3_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch4_int_raw(&self) -> DUTY_CHNG_END_CH4_INT_RAW_R {
-        DUTY_CHNG_END_CH4_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        DUTY_CHNG_END_CH4_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch5_int_raw(&self) -> DUTY_CHNG_END_CH5_INT_RAW_R {
-        DUTY_CHNG_END_CH5_INT_RAW_R::new(((self.bits >> 9) & 0x01) != 0)
+        DUTY_CHNG_END_CH5_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Interrupt raw bit for channel 6. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch6_int_raw(&self) -> DUTY_CHNG_END_CH6_INT_RAW_R {
-        DUTY_CHNG_END_CH6_INT_RAW_R::new(((self.bits >> 10) & 0x01) != 0)
+        DUTY_CHNG_END_CH6_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Interrupt raw bit for channel 7. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
     pub fn duty_chng_end_ch7_int_raw(&self) -> DUTY_CHNG_END_CH7_INT_RAW_R {
-        DUTY_CHNG_END_CH7_INT_RAW_R::new(((self.bits >> 11) & 0x01) != 0)
+        DUTY_CHNG_END_CH7_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
     #[inline(always)]
     pub fn ovf_cnt_ch0_int_raw(&self) -> OVF_CNT_CH0_INT_RAW_R {
-        OVF_CNT_CH0_INT_RAW_R::new(((self.bits >> 12) & 0x01) != 0)
+        OVF_CNT_CH0_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
     #[inline(always)]
     pub fn ovf_cnt_ch1_int_raw(&self) -> OVF_CNT_CH1_INT_RAW_R {
-        OVF_CNT_CH1_INT_RAW_R::new(((self.bits >> 13) & 0x01) != 0)
+        OVF_CNT_CH1_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
     #[inline(always)]
     pub fn ovf_cnt_ch2_int_raw(&self) -> OVF_CNT_CH2_INT_RAW_R {
-        OVF_CNT_CH2_INT_RAW_R::new(((self.bits >> 14) & 0x01) != 0)
+        OVF_CNT_CH2_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
     #[inline(always)]
     pub fn ovf_cnt_ch3_int_raw(&self) -> OVF_CNT_CH3_INT_RAW_R {
-        OVF_CNT_CH3_INT_RAW_R::new(((self.bits >> 15) & 0x01) != 0)
+        OVF_CNT_CH3_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
     #[inline(always)]
     pub fn ovf_cnt_ch4_int_raw(&self) -> OVF_CNT_CH4_INT_RAW_R {
-        OVF_CNT_CH4_INT_RAW_R::new(((self.bits >> 16) & 0x01) != 0)
+        OVF_CNT_CH4_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
     #[inline(always)]
     pub fn ovf_cnt_ch5_int_raw(&self) -> OVF_CNT_CH5_INT_RAW_R {
-        OVF_CNT_CH5_INT_RAW_R::new(((self.bits >> 17) & 0x01) != 0)
+        OVF_CNT_CH5_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Interrupt raw bit for channel 6. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
     #[inline(always)]
     pub fn ovf_cnt_ch6_int_raw(&self) -> OVF_CNT_CH6_INT_RAW_R {
-        OVF_CNT_CH6_INT_RAW_R::new(((self.bits >> 18) & 0x01) != 0)
+        OVF_CNT_CH6_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Interrupt raw bit for channel 7. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
     #[inline(always)]
     pub fn ovf_cnt_ch7_int_raw(&self) -> OVF_CNT_CH7_INT_RAW_R {
-        OVF_CNT_CH7_INT_RAW_R::new(((self.bits >> 19) & 0x01) != 0)
+        OVF_CNT_CH7_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`]

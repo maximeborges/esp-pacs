@@ -121,7 +121,7 @@ impl<'a> DIS_RX_DAT_OVF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> RX_TOUT_FLOW_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> RX_FLOW_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> RX_TOUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -250,22 +250,22 @@ impl R {
     #[doc = "Bit 18 - Disable UART Rx data overflow detect."]
     #[inline(always)]
     pub fn dis_rx_dat_ovf(&self) -> DIS_RX_DAT_OVF_R {
-        DIS_RX_DAT_OVF_R::new(((self.bits >> 18) & 0x01) != 0)
+        DIS_RX_DAT_OVF_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
     pub fn rx_tout_flow_dis(&self) -> RX_TOUT_FLOW_DIS_R {
-        RX_TOUT_FLOW_DIS_R::new(((self.bits >> 19) & 0x01) != 0)
+        RX_TOUT_FLOW_DIS_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - This is the flow enable bit for UART receiver."]
     #[inline(always)]
     pub fn rx_flow_en(&self) -> RX_FLOW_EN_R {
-        RX_FLOW_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        RX_FLOW_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
     pub fn rx_tout_en(&self) -> RX_TOUT_EN_R {
-        RX_TOUT_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        RX_TOUT_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

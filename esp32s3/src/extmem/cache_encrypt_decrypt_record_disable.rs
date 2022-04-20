@@ -67,7 +67,7 @@ impl<'a> RECORD_DISABLE_DB_ENCRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RECORD_DISABLE_G0CB_DECRYPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
     pub fn record_disable_db_encrypt(&self) -> RECORD_DISABLE_DB_ENCRYPT_R {
-        RECORD_DISABLE_DB_ENCRYPT_R::new((self.bits & 0x01) != 0)
+        RECORD_DISABLE_DB_ENCRYPT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
     pub fn record_disable_g0cb_decrypt(&self) -> RECORD_DISABLE_G0CB_DECRYPT_R {
-        RECORD_DISABLE_G0CB_DECRYPT_R::new(((self.bits >> 1) & 0x01) != 0)
+        RECORD_DISABLE_G0CB_DECRYPT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

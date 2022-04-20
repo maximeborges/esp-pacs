@@ -148,7 +148,7 @@ impl<'a> RX_FLOW_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> RX_TOUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -235,7 +235,7 @@ impl R {
     #[doc = "Bit 23 - This is the flow enable bit for uart receiver. 1:choose software flow control with configuring sw_rts signal"]
     #[inline(always)]
     pub fn rx_flow_en(&self) -> RX_FLOW_EN_R {
-        RX_FLOW_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        RX_FLOW_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:30 - This register is used to configure the timeout value for uart receiver receiving a byte."]
     #[inline(always)]
@@ -245,7 +245,7 @@ impl R {
     #[doc = "Bit 31 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
     pub fn rx_tout_en(&self) -> RX_TOUT_EN_R {
-        RX_TOUT_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        RX_TOUT_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

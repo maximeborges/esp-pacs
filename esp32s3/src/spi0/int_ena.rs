@@ -67,7 +67,7 @@ impl<'a> TOTAL_TRANS_END_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ECC_ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_ena(&self) -> TOTAL_TRANS_END_INT_ENA_R {
-        TOTAL_TRANS_END_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOTAL_TRANS_END_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ecc_err_int_ena(&self) -> ECC_ERR_INT_ENA_R {
-        ECC_ERR_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        ECC_ERR_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

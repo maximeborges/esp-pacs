@@ -94,7 +94,7 @@ impl<'a> IO_TOUCH_BUFMODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 4 - BUF_MODE when touch work without fsm"]
     #[inline(always)]
     pub fn io_touch_bufmode(&self) -> IO_TOUCH_BUFMODE_R {
-        IO_TOUCH_BUFMODE_R::new(((self.bits >> 4) & 0x01) != 0)
+        IO_TOUCH_BUFMODE_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

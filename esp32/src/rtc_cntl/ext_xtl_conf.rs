@@ -67,7 +67,7 @@ impl<'a> XTL_EXT_CTR_LV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> XTL_EXT_CTR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 30 - 0: power down XTAL at high level 1: power down XTAL at low level"]
     #[inline(always)]
     pub fn xtl_ext_ctr_lv(&self) -> XTL_EXT_CTR_LV_R {
-        XTL_EXT_CTR_LV_R::new(((self.bits >> 30) & 0x01) != 0)
+        XTL_EXT_CTR_LV_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable control XTAL by external pads"]
     #[inline(always)]
     pub fn xtl_ext_ctr_en(&self) -> XTL_EXT_CTR_EN_R {
-        XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> COCPU_TOUCH_DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> COCPU_TOUCH_INACTIVE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> COCPU_TOUCH_ACTIVE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> COCPU_SARADC1_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> COCPU_SARADC2_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> COCPU_TSENS_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> COCPU_START_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> COCPU_SW_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> COCPU_SWD_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_touch_done_int_ena(&self) -> COCPU_TOUCH_DONE_INT_ENA_R {
-        COCPU_TOUCH_DONE_INT_ENA_R::new((self.bits & 0x01) != 0)
+        COCPU_TOUCH_DONE_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - TOUCH_INACTIVE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_touch_inactive_int_ena(&self) -> COCPU_TOUCH_INACTIVE_INT_ENA_R {
-        COCPU_TOUCH_INACTIVE_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        COCPU_TOUCH_INACTIVE_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TOUCH_ACTIVE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_touch_active_int_ena(&self) -> COCPU_TOUCH_ACTIVE_INT_ENA_R {
-        COCPU_TOUCH_ACTIVE_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        COCPU_TOUCH_ACTIVE_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SARADC1_DONE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_saradc1_int_ena(&self) -> COCPU_SARADC1_INT_ENA_R {
-        COCPU_SARADC1_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        COCPU_SARADC1_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SARADC2_DONE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_saradc2_int_ena(&self) -> COCPU_SARADC2_INT_ENA_R {
-        COCPU_SARADC2_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        COCPU_SARADC2_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - TSENS_DONE_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_tsens_int_ena(&self) -> COCPU_TSENS_INT_ENA_R {
-        COCPU_TSENS_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        COCPU_TSENS_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RISCV_START_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_start_int_ena(&self) -> COCPU_START_INT_ENA_R {
-        COCPU_START_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        COCPU_START_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SW_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_sw_int_ena(&self) -> COCPU_SW_INT_ENA_R {
-        COCPU_SW_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        COCPU_SW_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - SWD_INT interrupt enable bit"]
     #[inline(always)]
     pub fn cocpu_swd_int_ena(&self) -> COCPU_SWD_INT_ENA_R {
-        COCPU_SWD_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        COCPU_SWD_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

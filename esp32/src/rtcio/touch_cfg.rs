@@ -57,7 +57,7 @@ impl<'a> TOUCH_DCUR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 23)) | ((value as u32 & 0x03) << 23);
+        self.w.bits = (self.w.bits & !(3 << 23)) | ((value as u32 & 3) << 23);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TOUCH_DRANGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 25)) | ((value as u32 & 0x03) << 25);
+        self.w.bits = (self.w.bits & !(3 << 25)) | ((value as u32 & 3) << 25);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> TOUCH_DREFL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> TOUCH_DREFH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> TOUCH_XPD_BIAS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -183,27 +183,27 @@ impl R {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
     pub fn touch_dcur(&self) -> TOUCH_DCUR_R {
-        TOUCH_DCUR_R::new(((self.bits >> 23) & 0x03) as u8)
+        TOUCH_DCUR_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:26 - touch sensor saw wave voltage range."]
     #[inline(always)]
     pub fn touch_drange(&self) -> TOUCH_DRANGE_R {
-        TOUCH_DRANGE_R::new(((self.bits >> 25) & 0x03) as u8)
+        TOUCH_DRANGE_R::new(((self.bits >> 25) & 3) as u8)
     }
     #[doc = "Bits 27:28 - touch sensor saw wave bottom voltage."]
     #[inline(always)]
     pub fn touch_drefl(&self) -> TOUCH_DREFL_R {
-        TOUCH_DREFL_R::new(((self.bits >> 27) & 0x03) as u8)
+        TOUCH_DREFL_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bits 29:30 - touch sensor saw wave top voltage."]
     #[inline(always)]
     pub fn touch_drefh(&self) -> TOUCH_DREFH_R {
-        TOUCH_DREFH_R::new(((self.bits >> 29) & 0x03) as u8)
+        TOUCH_DREFH_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31 - touch sensor bias power on."]
     #[inline(always)]
     pub fn touch_xpd_bias(&self) -> TOUCH_XPD_BIAS_R {
-        TOUCH_XPD_BIAS_R::new(((self.bits >> 31) & 0x01) != 0)
+        TOUCH_XPD_BIAS_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

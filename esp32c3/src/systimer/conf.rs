@@ -67,7 +67,7 @@ impl<'a> SYSTIMER_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TARGET2_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TARGET1_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TARGET0_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TIMER_UNIT1_CORE1_STALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> TIMER_UNIT1_CORE0_STALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> TIMER_UNIT0_CORE1_STALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> TIMER_UNIT0_CORE0_STALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TIMER_UNIT1_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> TIMER_UNIT0_WORK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -445,57 +445,57 @@ impl R {
     #[doc = "Bit 0 - systimer clock force on"]
     #[inline(always)]
     pub fn systimer_clk_fo(&self) -> SYSTIMER_CLK_FO_R {
-        SYSTIMER_CLK_FO_R::new((self.bits & 0x01) != 0)
+        SYSTIMER_CLK_FO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 22 - target2 work enable"]
     #[inline(always)]
     pub fn target2_work_en(&self) -> TARGET2_WORK_EN_R {
-        TARGET2_WORK_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        TARGET2_WORK_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - target1 work enable"]
     #[inline(always)]
     pub fn target1_work_en(&self) -> TARGET1_WORK_EN_R {
-        TARGET1_WORK_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        TARGET1_WORK_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - target0 work enable"]
     #[inline(always)]
     pub fn target0_work_en(&self) -> TARGET0_WORK_EN_R {
-        TARGET0_WORK_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        TARGET0_WORK_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - If timer unit1 is stalled when core1 stalled"]
     #[inline(always)]
     pub fn timer_unit1_core1_stall_en(&self) -> TIMER_UNIT1_CORE1_STALL_EN_R {
-        TIMER_UNIT1_CORE1_STALL_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        TIMER_UNIT1_CORE1_STALL_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - If timer unit1 is stalled when core0 stalled"]
     #[inline(always)]
     pub fn timer_unit1_core0_stall_en(&self) -> TIMER_UNIT1_CORE0_STALL_EN_R {
-        TIMER_UNIT1_CORE0_STALL_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        TIMER_UNIT1_CORE0_STALL_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - If timer unit0 is stalled when core1 stalled"]
     #[inline(always)]
     pub fn timer_unit0_core1_stall_en(&self) -> TIMER_UNIT0_CORE1_STALL_EN_R {
-        TIMER_UNIT0_CORE1_STALL_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        TIMER_UNIT0_CORE1_STALL_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - If timer unit0 is stalled when core0 stalled"]
     #[inline(always)]
     pub fn timer_unit0_core0_stall_en(&self) -> TIMER_UNIT0_CORE0_STALL_EN_R {
-        TIMER_UNIT0_CORE0_STALL_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        TIMER_UNIT0_CORE0_STALL_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - timer unit1 work enable"]
     #[inline(always)]
     pub fn timer_unit1_work_en(&self) -> TIMER_UNIT1_WORK_EN_R {
-        TIMER_UNIT1_WORK_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        TIMER_UNIT1_WORK_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - timer unit0 work enable"]
     #[inline(always)]
     pub fn timer_unit0_work_en(&self) -> TIMER_UNIT0_WORK_EN_R {
-        TIMER_UNIT0_WORK_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        TIMER_UNIT0_WORK_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -322,97 +322,97 @@ impl R {
     #[doc = "Bit 7 - If DIS_RTC_RAM_BOOT is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_rtc_ram_boot_err(&self) -> DIS_RTC_RAM_BOOT_ERR_R {
-        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 0x01) != 0)
+        DIS_RTC_RAM_BOOT_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - If DIS_ICACHE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_icache_err(&self) -> DIS_ICACHE_ERR_R {
-        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIS_ICACHE_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - If DIS_USB_JTAG is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_usb_jtag_err(&self) -> DIS_USB_JTAG_ERR_R {
-        DIS_USB_JTAG_ERR_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIS_USB_JTAG_ERR_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - If DIS_DOWNLOAD_ICACHE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_download_icache_err(&self) -> DIS_DOWNLOAD_ICACHE_ERR_R {
-        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIS_DOWNLOAD_ICACHE_ERR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - If DIS_USB_DEVICE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_usb_device_err(&self) -> DIS_USB_DEVICE_ERR_R {
-        DIS_USB_DEVICE_ERR_R::new(((self.bits >> 11) & 0x01) != 0)
+        DIS_USB_DEVICE_ERR_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - If DIS_FORCE_DOWNLOAD is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_force_download_err(&self) -> DIS_FORCE_DOWNLOAD_ERR_R {
-        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 0x01) != 0)
+        DIS_FORCE_DOWNLOAD_ERR_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Reserved."]
     #[inline(always)]
     pub fn rpt4_reserved6_err(&self) -> RPT4_RESERVED6_ERR_R {
-        RPT4_RESERVED6_ERR_R::new(((self.bits >> 13) & 0x01) != 0)
+        RPT4_RESERVED6_ERR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - If DIS_CAN is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_can_err(&self) -> DIS_CAN_ERR_R {
-        DIS_CAN_ERR_R::new(((self.bits >> 14) & 0x01) != 0)
+        DIS_CAN_ERR_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - If JTAG_SEL_ENABLE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn jtag_sel_enable_err(&self) -> JTAG_SEL_ENABLE_ERR_R {
-        JTAG_SEL_ENABLE_ERR_R::new(((self.bits >> 15) & 0x01) != 0)
+        JTAG_SEL_ENABLE_ERR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:18 - If SOFT_DIS_JTAG is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn soft_dis_jtag_err(&self) -> SOFT_DIS_JTAG_ERR_R {
-        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 16) & 0x07) as u8)
+        SOFT_DIS_JTAG_ERR_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19 - If DIS_PAD_JTAG is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_pad_jtag_err(&self) -> DIS_PAD_JTAG_ERR_R {
-        DIS_PAD_JTAG_ERR_R::new(((self.bits >> 19) & 0x01) != 0)
+        DIS_PAD_JTAG_ERR_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - If DIS_DOWNLOAD_MANUAL_ENCRYPT is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn dis_download_manual_encrypt_err(&self) -> DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 20) & 0x01) != 0)
+        DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bits 21:22 - If any bit in USB_DREFH is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_drefh_err(&self) -> USB_DREFH_ERR_R {
-        USB_DREFH_ERR_R::new(((self.bits >> 21) & 0x03) as u8)
+        USB_DREFH_ERR_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - If any bit in USB_DREFL is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_drefl_err(&self) -> USB_DREFL_ERR_R {
-        USB_DREFL_ERR_R::new(((self.bits >> 23) & 0x03) as u8)
+        USB_DREFL_ERR_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bit 25 - If USB_EXCHG_PINS is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn usb_exchg_pins_err(&self) -> USB_EXCHG_PINS_ERR_R {
-        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 25) & 0x01) != 0)
+        USB_EXCHG_PINS_ERR_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - If VDD_SPI_AS_GPIO is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_as_gpio_err(&self) -> VDD_SPI_AS_GPIO_ERR_R {
-        VDD_SPI_AS_GPIO_ERR_R::new(((self.bits >> 26) & 0x01) != 0)
+        VDD_SPI_AS_GPIO_ERR_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:28 - If any bit in BTLC_GPIO_ENABLE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn btlc_gpio_enable_err(&self) -> BTLC_GPIO_ENABLE_ERR_R {
-        BTLC_GPIO_ENABLE_ERR_R::new(((self.bits >> 27) & 0x03) as u8)
+        BTLC_GPIO_ENABLE_ERR_R::new(((self.bits >> 27) & 3) as u8)
     }
     #[doc = "Bit 29 - If POWERGLITCH_EN is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn powerglitch_en_err(&self) -> POWERGLITCH_EN_ERR_R {
-        POWERGLITCH_EN_ERR_R::new(((self.bits >> 29) & 0x01) != 0)
+        POWERGLITCH_EN_ERR_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - If any bit in POWER_GLITCH_DSENSE is 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn power_glitch_dsense_err(&self) -> POWER_GLITCH_DSENSE_ERR_R {
-        POWER_GLITCH_DSENSE_ERR_R::new(((self.bits >> 30) & 0x03) as u8)
+        POWER_GLITCH_DSENSE_ERR_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`]

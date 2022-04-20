@@ -57,7 +57,7 @@ impl<'a> SAR1_BIT_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> SAR2_BIT_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> SAR2_EN_TEST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> ULP_CP_FORCE_START_TOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> ULP_CP_START_TOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> SARCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> SAR2_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> SAR1_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -397,7 +397,7 @@ impl<'a> SAR2_PWDET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -405,37 +405,37 @@ impl R {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     pub fn sar1_bit_width(&self) -> SAR1_BIT_WIDTH_R {
-        SAR1_BIT_WIDTH_R::new((self.bits & 0x03) as u8)
+        SAR1_BIT_WIDTH_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     pub fn sar2_bit_width(&self) -> SAR2_BIT_WIDTH_R {
-        SAR2_BIT_WIDTH_R::new(((self.bits >> 2) & 0x03) as u8)
+        SAR2_BIT_WIDTH_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
     #[inline(always)]
     pub fn sar2_en_test(&self) -> SAR2_EN_TEST_R {
-        SAR2_EN_TEST_R::new(((self.bits >> 4) & 0x01) != 0)
+        SAR2_EN_TEST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:7 - SAR2_PWDET_CCT PA power detector capacitance tuning."]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&self) -> SAR2_PWDET_CCT_R {
-        SAR2_PWDET_CCT_R::new(((self.bits >> 5) & 0x07) as u8)
+        SAR2_PWDET_CCT_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bit 8 - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
     #[inline(always)]
     pub fn ulp_cp_force_start_top(&self) -> ULP_CP_FORCE_START_TOP_R {
-        ULP_CP_FORCE_START_TOP_R::new(((self.bits >> 8) & 0x01) != 0)
+        ULP_CP_FORCE_START_TOP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
     #[inline(always)]
     pub fn ulp_cp_start_top(&self) -> ULP_CP_START_TOP_R {
-        ULP_CP_START_TOP_R::new(((self.bits >> 9) & 0x01) != 0)
+        ULP_CP_START_TOP_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn sarclk_en(&self) -> SARCLK_EN_R {
-        SARCLK_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        SARCLK_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:21 - initialized PC for ULP-coprocessor"]
     #[inline(always)]
@@ -445,17 +445,17 @@ impl R {
     #[doc = "Bit 22 - stop SAR ADC2 conversion"]
     #[inline(always)]
     pub fn sar2_stop(&self) -> SAR2_STOP_R {
-        SAR2_STOP_R::new(((self.bits >> 22) & 0x01) != 0)
+        SAR2_STOP_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - stop SAR ADC1 conversion"]
     #[inline(always)]
     pub fn sar1_stop(&self) -> SAR1_STOP_R {
-        SAR1_STOP_R::new(((self.bits >> 23) & 0x01) != 0)
+        SAR1_STOP_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
     pub fn sar2_pwdet_en(&self) -> SAR2_PWDET_EN_R {
-        SAR2_PWDET_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        SAR2_PWDET_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

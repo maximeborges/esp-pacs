@@ -97,7 +97,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -171,7 +171,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -245,7 +245,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -315,37 +315,37 @@ impl R {
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_opposite(&self) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R {
-        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R::new(((self.bits >> 9) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_dram1(&self) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_R {
-        PRO_CPU_DISABLED_CACHE_IA_DRAM1_R::new(((self.bits >> 10) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_DRAM1_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_irom0(&self) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_R {
-        PRO_CPU_DISABLED_CACHE_IA_IROM0_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_IROM0_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_iram1(&self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_R {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM1_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_IRAM1_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_iram0(&self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_R {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM0_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_IRAM0_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_drom0(&self) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_R {
-        PRO_CPU_DISABLED_CACHE_IA_DROM0_R::new(((self.bits >> 14) & 0x01) != 0)
+        PRO_CPU_DISABLED_CACHE_IA_DROM0_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn pro_cache_iram0_pid_error(&self) -> PRO_CACHE_IRAM0_PID_ERROR_R {
-        PRO_CACHE_IRAM0_PID_ERROR_R::new(((self.bits >> 15) & 0x01) != 0)
+        PRO_CACHE_IRAM0_PID_ERROR_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

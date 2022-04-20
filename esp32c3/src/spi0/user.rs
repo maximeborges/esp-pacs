@@ -67,7 +67,7 @@ impl<'a> CS_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CS_SETUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CK_OUT_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> USR_DUMMY_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> USR_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
     pub fn cs_hold(&self) -> CS_HOLD_R {
-        CS_HOLD_R::new(((self.bits >> 6) & 0x01) != 0)
+        CS_HOLD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
     #[inline(always)]
     pub fn cs_setup(&self) -> CS_SETUP_R {
-        CS_SETUP_R::new(((self.bits >> 7) & 0x01) != 0)
+        CS_SETUP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
     pub fn ck_out_edge(&self) -> CK_OUT_EDGE_R {
-        CK_OUT_EDGE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CK_OUT_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
     pub fn usr_dummy_idle(&self) -> USR_DUMMY_IDLE_R {
-        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 0x01) != 0)
+        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
-        USR_DUMMY_R::new(((self.bits >> 29) & 0x01) != 0)
+        USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

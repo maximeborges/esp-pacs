@@ -107,32 +107,32 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by cpu access icache while the core0_ibus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]
     pub fn core0_ibus_acs_msk_icache_st(&self) -> CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
-        CORE0_IBUS_ACS_MSK_ICACHE_ST_R::new((self.bits & 0x01) != 0)
+        CORE0_IBUS_ACS_MSK_ICACHE_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate interrupt by ibus trying to write icache"]
     #[inline(always)]
     pub fn core0_ibus_wr_icache_st(&self) -> CORE0_IBUS_WR_ICACHE_ST_R {
-        CORE0_IBUS_WR_ICACHE_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        CORE0_IBUS_WR_ICACHE_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to indicate interrupt by authentication fail."]
     #[inline(always)]
     pub fn core0_ibus_reject_st(&self) -> CORE0_IBUS_REJECT_ST_R {
-        CORE0_IBUS_REJECT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        CORE0_IBUS_REJECT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to indicate interrupt by cpu access icache while the core0_dbus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]
     pub fn core0_dbus_acs_msk_icache_st(&self) -> CORE0_DBUS_ACS_MSK_ICACHE_ST_R {
-        CORE0_DBUS_ACS_MSK_ICACHE_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        CORE0_DBUS_ACS_MSK_ICACHE_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to indicate interrupt by authentication fail."]
     #[inline(always)]
     pub fn core0_dbus_reject_st(&self) -> CORE0_DBUS_REJECT_ST_R {
-        CORE0_DBUS_REJECT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        CORE0_DBUS_REJECT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to indicate interrupt by dbus trying to write icache"]
     #[inline(always)]
     pub fn core0_dbus_wr_icache_st(&self) -> CORE0_DBUS_WR_ICACHE_ST_R {
-        CORE0_DBUS_WR_ICACHE_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE0_DBUS_WR_ICACHE_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 #[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]

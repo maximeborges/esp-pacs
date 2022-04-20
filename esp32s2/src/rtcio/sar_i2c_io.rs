@@ -84,7 +84,7 @@ impl<'a> SAR_I2C_SCL_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> SAR_I2C_SDA_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -124,12 +124,12 @@ impl R {
     #[doc = "Bits 28:29 - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
     #[inline(always)]
     pub fn sar_i2c_scl_sel(&self) -> SAR_I2C_SCL_SEL_R {
-        SAR_I2C_SCL_SEL_R::new(((self.bits >> 28) & 0x03) as u8)
+        SAR_I2C_SCL_SEL_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
     #[inline(always)]
     pub fn sar_i2c_sda_sel(&self) -> SAR_I2C_SDA_SEL_R {
-        SAR_I2C_SDA_SEL_R::new(((self.bits >> 30) & 0x03) as u8)
+        SAR_I2C_SDA_SEL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

@@ -197,62 +197,62 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by sync configurations fault."]
     #[inline(always)]
     pub fn icache_sync_op_fault_st(&self) -> ICACHE_SYNC_OP_FAULT_ST_R {
-        ICACHE_SYNC_OP_FAULT_ST_R::new((self.bits & 0x01) != 0)
+        ICACHE_SYNC_OP_FAULT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate interrupt by preload configurations fault."]
     #[inline(always)]
     pub fn icache_preload_op_fault_st(&self) -> ICACHE_PRELOAD_OP_FAULT_ST_R {
-        ICACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to indicate interrupt by sync configurations fault."]
     #[inline(always)]
     pub fn dcache_sync_op_fault_st(&self) -> DCACHE_SYNC_OP_FAULT_ST_R {
-        DCACHE_SYNC_OP_FAULT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_SYNC_OP_FAULT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to indicate interrupt by preload configurations fault."]
     #[inline(always)]
     pub fn dcache_preload_op_fault_st(&self) -> DCACHE_PRELOAD_OP_FAULT_ST_R {
-        DCACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        DCACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to indicate interrupt by dcache trying to write flash."]
     #[inline(always)]
     pub fn dcache_write_flash_st(&self) -> DCACHE_WRITE_FLASH_ST_R {
-        DCACHE_WRITE_FLASH_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        DCACHE_WRITE_FLASH_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to indicate interrupt by mmu entry fault."]
     #[inline(always)]
     pub fn mmu_entry_fault_st(&self) -> MMU_ENTRY_FAULT_ST_R {
-        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The bit is used to indicate interrupt by dcache trying to replace a line whose blocks all have been occupied by occupy-mode."]
     #[inline(always)]
     pub fn dcache_occupy_exc_st(&self) -> DCACHE_OCCUPY_EXC_ST_R {
-        DCACHE_OCCUPY_EXC_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        DCACHE_OCCUPY_EXC_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The bit is used to indicate interrupt by ibus access flash/spiram counter overflow."]
     #[inline(always)]
     pub fn ibus_acs_cnt_ovf_st(&self) -> IBUS_ACS_CNT_OVF_ST_R {
-        IBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        IBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The bit is used to indicate interrupt by ibus access flash/spiram miss counter overflow."]
     #[inline(always)]
     pub fn ibus_acs_miss_cnt_ovf_st(&self) -> IBUS_ACS_MISS_CNT_OVF_ST_R {
-        IBUS_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        IBUS_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bit is used to indicate interrupt by dbus access flash/spiram counter overflow."]
     #[inline(always)]
     pub fn dbus_acs_cnt_ovf_st(&self) -> DBUS_ACS_CNT_OVF_ST_R {
-        DBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        DBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The bit is used to indicate interrupt by dbus access flash miss counter overflow."]
     #[inline(always)]
     pub fn dbus_acs_flash_miss_cnt_ovf_st(&self) -> DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R {
-        DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The bit is used to indicate interrupt by dbus access spiram miss counter overflow."]
     #[inline(always)]
     pub fn dbus_acs_spiram_miss_cnt_ovf_st(&self) -> DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R {
-        DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R::new(((self.bits >> 11) & 0x01) != 0)
+        DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 #[doc = "******* Description ***********\n\nThis register you can [`read`]

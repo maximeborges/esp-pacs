@@ -57,7 +57,7 @@ impl<'a> TIMER_SEL_LSCH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> SIG_OUT_EN_LSCH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> IDLE_LV_LSCH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PARA_UP_LSCH1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -176,22 +176,22 @@ impl R {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel1. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
     pub fn timer_sel_lsch1(&self) -> TIMER_SEL_LSCH1_R {
-        TIMER_SEL_LSCH1_R::new((self.bits & 0x03) as u8)
+        TIMER_SEL_LSCH1_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - This is the output enable control bit for low speed channel1."]
     #[inline(always)]
     pub fn sig_out_en_lsch1(&self) -> SIG_OUT_EN_LSCH1_R {
-        SIG_OUT_EN_LSCH1_R::new(((self.bits >> 2) & 0x01) != 0)
+        SIG_OUT_EN_LSCH1_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when low speed channel1 is off."]
     #[inline(always)]
     pub fn idle_lv_lsch1(&self) -> IDLE_LV_LSCH1_R {
-        IDLE_LV_LSCH1_R::new(((self.bits >> 3) & 0x01) != 0)
+        IDLE_LV_LSCH1_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This bit is used to update register LEDC_LSCH1_HPOINT and LEDC_LSCH1_DUTY for low speed channel1."]
     #[inline(always)]
     pub fn para_up_lsch1(&self) -> PARA_UP_LSCH1_R {
-        PARA_UP_LSCH1_R::new(((self.bits >> 4) & 0x01) != 0)
+        PARA_UP_LSCH1_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

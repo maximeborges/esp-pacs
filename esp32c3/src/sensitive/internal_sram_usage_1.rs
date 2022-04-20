@@ -67,7 +67,7 @@ impl<'a> INTERNAL_SRAM_USAGE_CPU_CACHE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> INTERNAL_SRAM_USAGE_CPU_SRAM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 1)) | ((value as u32 & 0x07) << 1);
+        self.w.bits = (self.w.bits & !(7 << 1)) | ((value as u32 & 7) << 1);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bit 0 - internal_sram_usage_cpu_cache"]
     #[inline(always)]
     pub fn internal_sram_usage_cpu_cache(&self) -> INTERNAL_SRAM_USAGE_CPU_CACHE_R {
-        INTERNAL_SRAM_USAGE_CPU_CACHE_R::new((self.bits & 0x01) != 0)
+        INTERNAL_SRAM_USAGE_CPU_CACHE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:3 - internal_sram_usage_cpu_sram"]
     #[inline(always)]
     pub fn internal_sram_usage_cpu_sram(&self) -> INTERNAL_SRAM_USAGE_CPU_SRAM_R {
-        INTERNAL_SRAM_USAGE_CPU_SRAM_R::new(((self.bits >> 1) & 0x07) as u8)
+        INTERNAL_SRAM_USAGE_CPU_SRAM_R::new(((self.bits >> 1) & 7) as u8)
     }
 }
 impl W {

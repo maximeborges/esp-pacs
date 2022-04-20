@@ -67,7 +67,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_STEP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_RQST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_SCT0_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> PRO_DCACHE_AUTOLOAD_SCT1_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -267,37 +267,37 @@ impl R {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
     pub fn pro_dcache_autoload_mode(&self) -> PRO_DCACHE_AUTOLOAD_MODE_R {
-        PRO_DCACHE_AUTOLOAD_MODE_R::new((self.bits & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_MODE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - Reserved."]
     #[inline(always)]
     pub fn pro_dcache_autoload_step(&self) -> PRO_DCACHE_AUTOLOAD_STEP_R {
-        PRO_DCACHE_AUTOLOAD_STEP_R::new(((self.bits >> 1) & 0x03) as u8)
+        PRO_DCACHE_AUTOLOAD_STEP_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bit 3 - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn pro_dcache_autoload_order(&self) -> PRO_DCACHE_AUTOLOAD_ORDER_R {
-        PRO_DCACHE_AUTOLOAD_ORDER_R::new(((self.bits >> 3) & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_ORDER_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     pub fn pro_dcache_autoload_rqst(&self) -> PRO_DCACHE_AUTOLOAD_RQST_R {
-        PRO_DCACHE_AUTOLOAD_RQST_R::new(((self.bits >> 4) & 0x03) as u8)
+        PRO_DCACHE_AUTOLOAD_RQST_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_size(&self) -> PRO_DCACHE_AUTOLOAD_SIZE_R {
-        PRO_DCACHE_AUTOLOAD_SIZE_R::new(((self.bits >> 6) & 0x03) as u8)
+        PRO_DCACHE_AUTOLOAD_SIZE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - The bits are used to enable the second section for conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_sct0_ena(&self) -> PRO_DCACHE_AUTOLOAD_SCT0_ENA_R {
-        PRO_DCACHE_AUTOLOAD_SCT0_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_SCT0_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bits are used to enable the first section for conditional pre-load operation."]
     #[inline(always)]
     pub fn pro_dcache_autoload_sct1_ena(&self) -> PRO_DCACHE_AUTOLOAD_SCT1_ENA_R {
-        PRO_DCACHE_AUTOLOAD_SCT1_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        PRO_DCACHE_AUTOLOAD_SCT1_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

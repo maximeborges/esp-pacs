@@ -67,7 +67,7 @@ impl<'a> CACHE_REQ_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CACHE_FLASH_USR_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FDIN_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FDOUT_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FADDR_DUAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FDIN_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FDOUT_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> FADDR_QUAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable Cache's access and SPI0's transfer."]
     #[inline(always)]
     pub fn cache_req_en(&self) -> CACHE_REQ_EN_R {
-        CACHE_REQ_EN_R::new((self.bits & 0x01) != 0)
+        CACHE_REQ_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to enable SPI0 read flash with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
     #[inline(always)]
     pub fn cache_usr_cmd_4byte(&self) -> CACHE_USR_CMD_4BYTE_R {
-        CACHE_USR_CMD_4BYTE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CACHE_USR_CMD_4BYTE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1: The command value of SPI0 reads flash is SPI_MEM_USR_COMMAND_VALUE. 0: Hardware read command value, controlled by SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD, SPI_MEM_FREAD_DUAL and SPI_MEM_FASTRD_MODE bits."]
     #[inline(always)]
     pub fn cache_flash_usr_cmd(&self) -> CACHE_FLASH_USR_CMD_R {
-        CACHE_FLASH_USR_CMD_R::new(((self.bits >> 2) & 0x01) != 0)
+        CACHE_FLASH_USR_CMD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - When SPI0 accesses to flash, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
     pub fn fdin_dual(&self) -> FDIN_DUAL_R {
-        FDIN_DUAL_R::new(((self.bits >> 3) & 0x01) != 0)
+        FDIN_DUAL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - When SPI0 accesses to flash, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
     pub fn fdout_dual(&self) -> FDOUT_DUAL_R {
-        FDOUT_DUAL_R::new(((self.bits >> 4) & 0x01) != 0)
+        FDOUT_DUAL_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - When SPI0 accesses to flash, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
     pub fn faddr_dual(&self) -> FADDR_DUAL_R {
-        FADDR_DUAL_R::new(((self.bits >> 5) & 0x01) != 0)
+        FADDR_DUAL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - When SPI0 accesses to flash, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
     pub fn fdin_quad(&self) -> FDIN_QUAD_R {
-        FDIN_QUAD_R::new(((self.bits >> 6) & 0x01) != 0)
+        FDIN_QUAD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - When SPI0 accesses to flash, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
     pub fn fdout_quad(&self) -> FDOUT_QUAD_R {
-        FDOUT_QUAD_R::new(((self.bits >> 7) & 0x01) != 0)
+        FDOUT_QUAD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - When SPI0 accesses to flash, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
     pub fn faddr_quad(&self) -> FADDR_QUAD_R {
-        FADDR_QUAD_R::new(((self.bits >> 8) & 0x01) != 0)
+        FADDR_QUAD_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> FIFO_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FIFO_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PLC_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PLC_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DMA_RAM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> DMA_RAM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> DMA_RAM_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -297,37 +297,37 @@ impl R {
     #[doc = "Bit 0 - Force FIFO power-down."]
     #[inline(always)]
     pub fn fifo_force_pd(&self) -> FIFO_FORCE_PD_R {
-        FIFO_FORCE_PD_R::new((self.bits & 0x01) != 0)
+        FIFO_FORCE_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Force FIFO power-up."]
     #[inline(always)]
     pub fn fifo_force_pu(&self) -> FIFO_FORCE_PU_R {
-        FIFO_FORCE_PU_R::new(((self.bits >> 1) & 0x01) != 0)
+        FIFO_FORCE_PU_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Force I2S memory power-down."]
     #[inline(always)]
     pub fn plc_mem_force_pd(&self) -> PLC_MEM_FORCE_PD_R {
-        PLC_MEM_FORCE_PD_R::new(((self.bits >> 2) & 0x01) != 0)
+        PLC_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Force I2S memory power-up."]
     #[inline(always)]
     pub fn plc_mem_force_pu(&self) -> PLC_MEM_FORCE_PU_R {
-        PLC_MEM_FORCE_PU_R::new(((self.bits >> 3) & 0x01) != 0)
+        PLC_MEM_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Force DMA FIFO power-down."]
     #[inline(always)]
     pub fn dma_ram_force_pd(&self) -> DMA_RAM_FORCE_PD_R {
-        DMA_RAM_FORCE_PD_R::new(((self.bits >> 4) & 0x01) != 0)
+        DMA_RAM_FORCE_PD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Force DMA FIFO power-up."]
     #[inline(always)]
     pub fn dma_ram_force_pu(&self) -> DMA_RAM_FORCE_PU_R {
-        DMA_RAM_FORCE_PU_R::new(((self.bits >> 5) & 0x01) != 0)
+        DMA_RAM_FORCE_PU_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to force on DMA RAM clock."]
     #[inline(always)]
     pub fn dma_ram_clk_fo(&self) -> DMA_RAM_CLK_FO_R {
-        DMA_RAM_CLK_FO_R::new(((self.bits >> 6) & 0x01) != 0)
+        DMA_RAM_CLK_FO_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {

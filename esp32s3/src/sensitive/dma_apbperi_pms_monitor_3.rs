@@ -49,7 +49,7 @@ impl R {
     pub fn dma_apbperi_pms_monitor_violate_status_wr(
         &self,
     ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WR_R::new((self.bits & 0x01) != 0)
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:16 - recorded dma's byte enable status when dma access violated permission"]
     #[inline(always)]

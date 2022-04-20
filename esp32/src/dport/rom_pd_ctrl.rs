@@ -67,7 +67,7 @@ impl<'a> PRO_ROM_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> APP_ROM_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -139,12 +139,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_rom_pd(&self) -> PRO_ROM_PD_R {
-        PRO_ROM_PD_R::new((self.bits & 0x01) != 0)
+        PRO_ROM_PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn app_rom_pd(&self) -> APP_ROM_PD_R {
-        APP_ROM_PD_R::new(((self.bits >> 1) & 0x01) != 0)
+        APP_ROM_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]

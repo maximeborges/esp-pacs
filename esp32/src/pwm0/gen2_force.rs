@@ -84,7 +84,7 @@ impl<'a> GEN2_A_CNTUFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> GEN2_B_CNTUFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> GEN2_A_NCIFORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> GEN2_A_NCIFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 11)) | ((value as u32 & 0x03) << 11);
+        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> GEN2_B_NCIFORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> GEN2_B_NCIFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -252,32 +252,32 @@ impl R {
     #[doc = "Bits 6:7"]
     #[inline(always)]
     pub fn gen2_a_cntuforce_mode(&self) -> GEN2_A_CNTUFORCE_MODE_R {
-        GEN2_A_CNTUFORCE_MODE_R::new(((self.bits >> 6) & 0x03) as u8)
+        GEN2_A_CNTUFORCE_MODE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn gen2_b_cntuforce_mode(&self) -> GEN2_B_CNTUFORCE_MODE_R {
-        GEN2_B_CNTUFORCE_MODE_R::new(((self.bits >> 8) & 0x03) as u8)
+        GEN2_B_CNTUFORCE_MODE_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn gen2_a_nciforce(&self) -> GEN2_A_NCIFORCE_R {
-        GEN2_A_NCIFORCE_R::new(((self.bits >> 10) & 0x01) != 0)
+        GEN2_A_NCIFORCE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     pub fn gen2_a_nciforce_mode(&self) -> GEN2_A_NCIFORCE_MODE_R {
-        GEN2_A_NCIFORCE_MODE_R::new(((self.bits >> 11) & 0x03) as u8)
+        GEN2_A_NCIFORCE_MODE_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn gen2_b_nciforce(&self) -> GEN2_B_NCIFORCE_R {
-        GEN2_B_NCIFORCE_R::new(((self.bits >> 13) & 0x01) != 0)
+        GEN2_B_NCIFORCE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     pub fn gen2_b_nciforce_mode(&self) -> GEN2_B_NCIFORCE_MODE_R {
-        GEN2_B_NCIFORCE_MODE_R::new(((self.bits >> 14) & 0x03) as u8)
+        GEN2_B_NCIFORCE_MODE_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {

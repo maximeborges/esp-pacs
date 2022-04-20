@@ -111,7 +111,7 @@ impl<'a> SAR1_SAMPLE_BIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> SAR1_CLK_GATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> SAR1_DIG_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -249,7 +249,7 @@ impl<'a> SAR1_DATA_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -267,12 +267,12 @@ impl R {
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
     pub fn sar1_sample_bit(&self) -> SAR1_SAMPLE_BIT_R {
-        SAR1_SAMPLE_BIT_R::new(((self.bits >> 16) & 0x03) as u8)
+        SAR1_SAMPLE_BIT_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn sar1_clk_gated(&self) -> SAR1_CLK_GATED_R {
-        SAR1_CLK_GATED_R::new(((self.bits >> 18) & 0x01) != 0)
+        SAR1_CLK_GATED_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
@@ -282,12 +282,12 @@ impl R {
     #[doc = "Bit 27 - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
     #[inline(always)]
     pub fn sar1_dig_force(&self) -> SAR1_DIG_FORCE_R {
-        SAR1_DIG_FORCE_R::new(((self.bits >> 27) & 0x01) != 0)
+        SAR1_DIG_FORCE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data"]
     #[inline(always)]
     pub fn sar1_data_inv(&self) -> SAR1_DATA_INV_R {
-        SAR1_DATA_INV_R::new(((self.bits >> 28) & 0x01) != 0)
+        SAR1_DATA_INV_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

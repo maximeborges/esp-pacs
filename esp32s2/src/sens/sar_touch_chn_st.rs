@@ -85,7 +85,7 @@ impl R {
     #[doc = "Bit 31 - Signal flag that indicates one touch pad is done."]
     #[inline(always)]
     pub fn touch_meas_done(&self) -> TOUCH_MEAS_DONE_R {
-        TOUCH_MEAS_DONE_R::new(((self.bits >> 31) & 0x01) != 0)
+        TOUCH_MEAS_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -64,21 +64,21 @@ impl R {
     pub fn core_0_pif_pms_monitor_nonword_violate_intr(
         &self,
     ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R {
-        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - core_0_pif_pms_monitor_nonword_violate_status_hsize"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_nonword_violate_status_hsize(
         &self,
     ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R {
-        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 1) & 0x03) as u8)
+        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:4 - core_0_pif_pms_monitor_nonword_violate_status_hworld"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_nonword_violate_status_hworld(
         &self,
     ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R {
-        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 3) & 0x03) as u8)
+        CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_5_REG\n\nThis register you can [`read`]

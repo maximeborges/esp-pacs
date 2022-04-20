@@ -57,7 +57,7 @@ impl<'a> DDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
     pub fn ddr(&self) -> DDR_R {
-        DDR_R::new(((self.bits >> 16) & 0x03) as u8)
+        DDR_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

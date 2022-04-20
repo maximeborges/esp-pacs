@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - sha busy state. 1'b0: idle 1'b1: busy"]
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
-        STATE_R::new((self.bits & 0x01) != 0)
+        STATE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Busy register.\n\nThis register you can [`read`]

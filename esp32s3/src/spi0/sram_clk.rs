@@ -148,7 +148,7 @@ impl<'a> SCLK_EQU_SYSCLK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -171,7 +171,7 @@ impl R {
     #[doc = "Bit 31 - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
     pub fn sclk_equ_sysclk(&self) -> SCLK_EQU_SYSCLK_R {
-        SCLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 0x01) != 0)
+        SCLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

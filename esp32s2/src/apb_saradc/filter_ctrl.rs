@@ -67,7 +67,7 @@ impl<'a> ADC2_FILTER_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ADC1_FILTER_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> ADC2_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> ADC1_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -240,12 +240,12 @@ impl R {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
     pub fn adc2_filter_reset(&self) -> ADC2_FILTER_RESET_R {
-        ADC2_FILTER_RESET_R::new((self.bits & 0x01) != 0)
+        ADC2_FILTER_RESET_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Reset ADC1 filter."]
     #[inline(always)]
     pub fn adc1_filter_reset(&self) -> ADC1_FILTER_RESET_R {
-        ADC1_FILTER_RESET_R::new(((self.bits >> 1) & 0x01) != 0)
+        ADC1_FILTER_RESET_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 16:22 - Set filter factor for DIG ADC2 CRTL."]
     #[inline(always)]
@@ -260,12 +260,12 @@ impl R {
     #[doc = "Bit 30 - Enable DIG ADC2 CRTL filter."]
     #[inline(always)]
     pub fn adc2_filter_en(&self) -> ADC2_FILTER_EN_R {
-        ADC2_FILTER_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        ADC2_FILTER_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Enable DIG ADC1 CRTL filter."]
     #[inline(always)]
     pub fn adc1_filter_en(&self) -> ADC1_FILTER_EN_R {
-        ADC1_FILTER_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        ADC1_FILTER_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

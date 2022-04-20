@@ -67,7 +67,7 @@ impl<'a> RX_EN_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -89,7 +89,7 @@ impl<'a> MEM_WR_RST_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> APB_MEM_RST_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> MEM_OWNER_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> RX_FILTER_EN_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -249,7 +249,7 @@ impl<'a> MEM_RX_WRAP_EN_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -271,7 +271,7 @@ impl<'a> AFIFO_RST_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -293,7 +293,7 @@ impl<'a> CONF_UPDATE_CH3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -301,17 +301,17 @@ impl R {
     #[doc = "Bit 0 - reg_rx_en_ch3."]
     #[inline(always)]
     pub fn rx_en_ch3(&self) -> RX_EN_CH3_R {
-        RX_EN_CH3_R::new((self.bits & 0x01) != 0)
+        RX_EN_CH3_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 3 - reg_mem_owner_ch3."]
     #[inline(always)]
     pub fn mem_owner_ch3(&self) -> MEM_OWNER_CH3_R {
-        MEM_OWNER_CH3_R::new(((self.bits >> 3) & 0x01) != 0)
+        MEM_OWNER_CH3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_rx_filter_en_ch3."]
     #[inline(always)]
     pub fn rx_filter_en_ch3(&self) -> RX_FILTER_EN_CH3_R {
-        RX_FILTER_EN_CH3_R::new(((self.bits >> 4) & 0x01) != 0)
+        RX_FILTER_EN_CH3_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:12 - reg_rx_filter_thres_ch3."]
     #[inline(always)]
@@ -321,7 +321,7 @@ impl R {
     #[doc = "Bit 13 - reg_mem_rx_wrap_en_ch3."]
     #[inline(always)]
     pub fn mem_rx_wrap_en_ch3(&self) -> MEM_RX_WRAP_EN_CH3_R {
-        MEM_RX_WRAP_EN_CH3_R::new(((self.bits >> 13) & 0x01) != 0)
+        MEM_RX_WRAP_EN_CH3_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

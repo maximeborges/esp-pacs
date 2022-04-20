@@ -96,7 +96,7 @@ impl<'a> SLV_RDDMA_BYTELEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -133,7 +133,7 @@ impl<'a> SLV_WRDMA_BYTELEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -170,7 +170,7 @@ impl<'a> SLV_RDBUF_BYTELEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -207,7 +207,7 @@ impl<'a> SLV_WRBUF_BYTELEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -271,7 +271,7 @@ impl<'a> SLV_RD_DMA_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -308,7 +308,7 @@ impl<'a> USR_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -322,22 +322,22 @@ impl R {
     #[doc = "Bit 20 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
     #[inline(always)]
     pub fn slv_rddma_bytelen_en(&self) -> SLV_RDDMA_BYTELEN_EN_R {
-        SLV_RDDMA_BYTELEN_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLV_RDDMA_BYTELEN_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
     #[inline(always)]
     pub fn slv_wrdma_bytelen_en(&self) -> SLV_WRDMA_BYTELEN_EN_R {
-        SLV_WRDMA_BYTELEN_EN_R::new(((self.bits >> 21) & 0x01) != 0)
+        SLV_WRDMA_BYTELEN_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
     #[inline(always)]
     pub fn slv_rdbuf_bytelen_en(&self) -> SLV_RDBUF_BYTELEN_EN_R {
-        SLV_RDBUF_BYTELEN_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        SLV_RDBUF_BYTELEN_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
     #[inline(always)]
     pub fn slv_wrbuf_bytelen_en(&self) -> SLV_WRBUF_BYTELEN_EN_R {
-        SLV_WRBUF_BYTELEN_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        SLV_WRBUF_BYTELEN_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:27 - The magic value of BM table in master DMA seg-trans."]
     #[inline(always)]
@@ -347,12 +347,12 @@ impl R {
     #[doc = "Bit 30 - The interrupt raw bit for the completion of Rd-DMA operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_rd_dma_done(&self) -> SLV_RD_DMA_DONE_R {
-        SLV_RD_DMA_DONE_R::new(((self.bits >> 30) & 0x01) != 0)
+        SLV_RD_DMA_DONE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
     #[inline(always)]
     pub fn usr_conf(&self) -> USR_CONF_R {
-        USR_CONF_R::new(((self.bits >> 31) & 0x01) != 0)
+        USR_CONF_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

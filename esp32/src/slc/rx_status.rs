@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slc0_rx_full(&self) -> SLC0_RX_FULL_R {
-        SLC0_RX_FULL_R::new((self.bits & 0x01) != 0)
+        SLC0_RX_FULL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn slc0_rx_empty(&self) -> SLC0_RX_EMPTY_R {
-        SLC0_RX_EMPTY_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLC0_RX_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_rx_full(&self) -> SLC1_RX_FULL_R {
-        SLC1_RX_FULL_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLC1_RX_FULL_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn slc1_rx_empty(&self) -> SLC1_RX_EMPTY_R {
-        SLC1_RX_EMPTY_R::new(((self.bits >> 17) & 0x01) != 0)
+        SLC1_RX_EMPTY_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

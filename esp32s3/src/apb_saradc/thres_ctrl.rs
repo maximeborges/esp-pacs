@@ -67,7 +67,7 @@ impl<'a> THRES_ALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> THRES3_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> THRES2_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> THRES1_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> THRES0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
     pub fn thres_all_en(&self) -> THRES_ALL_EN_R {
-        THRES_ALL_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        THRES_ALL_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - no public"]
     #[inline(always)]
     pub fn thres3_en(&self) -> THRES3_EN_R {
-        THRES3_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        THRES3_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - no public"]
     #[inline(always)]
     pub fn thres2_en(&self) -> THRES2_EN_R {
-        THRES2_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        THRES2_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable thres1"]
     #[inline(always)]
     pub fn thres1_en(&self) -> THRES1_EN_R {
-        THRES1_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        THRES1_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable thres0"]
     #[inline(always)]
     pub fn thres0_en(&self) -> THRES0_EN_R {
-        THRES0_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        THRES0_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

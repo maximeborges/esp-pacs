@@ -67,7 +67,7 @@ impl<'a> SDIO_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SDIO_IOREADY1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> HIGHSPEED_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -193,7 +193,7 @@ impl<'a> SDIO_CD_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -230,7 +230,7 @@ impl<'a> SDIO_IOREADY2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -267,7 +267,7 @@ impl<'a> SDIO_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -438,7 +438,7 @@ impl<'a> SDIO20_CONF1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 29)) | ((value as u32 & 0x07) << 29);
+        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
         self.w
     }
 }
@@ -446,62 +446,62 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sdio_enable(&self) -> SDIO_ENABLE_R {
-        SDIO_ENABLE_R::new((self.bits & 0x01) != 0)
+        SDIO_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sdio_ioready1(&self) -> SDIO_IOREADY1_R {
-        SDIO_IOREADY1_R::new(((self.bits >> 1) & 0x01) != 0)
+        SDIO_IOREADY1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn highspeed_enable(&self) -> HIGHSPEED_ENABLE_R {
-        HIGHSPEED_ENABLE_R::new(((self.bits >> 2) & 0x01) != 0)
+        HIGHSPEED_ENABLE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn highspeed_mode(&self) -> HIGHSPEED_MODE_R {
-        HIGHSPEED_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        HIGHSPEED_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn sdio_cd_enable(&self) -> SDIO_CD_ENABLE_R {
-        SDIO_CD_ENABLE_R::new(((self.bits >> 4) & 0x01) != 0)
+        SDIO_CD_ENABLE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn sdio_ioready2(&self) -> SDIO_IOREADY2_R {
-        SDIO_IOREADY2_R::new(((self.bits >> 5) & 0x01) != 0)
+        SDIO_IOREADY2_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn sdio_int_mask(&self) -> SDIO_INT_MASK_R {
-        SDIO_INT_MASK_R::new(((self.bits >> 6) & 0x01) != 0)
+        SDIO_INT_MASK_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn ioenable2(&self) -> IOENABLE2_R {
-        IOENABLE2_R::new(((self.bits >> 7) & 0x01) != 0)
+        IOENABLE2_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn cd_disable(&self) -> CD_DISABLE_R {
-        CD_DISABLE_R::new(((self.bits >> 8) & 0x01) != 0)
+        CD_DISABLE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn func1_eps(&self) -> FUNC1_EPS_R {
-        FUNC1_EPS_R::new(((self.bits >> 9) & 0x01) != 0)
+        FUNC1_EPS_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn emp(&self) -> EMP_R {
-        EMP_R::new(((self.bits >> 10) & 0x01) != 0)
+        EMP_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn ioenable1(&self) -> IOENABLE1_R {
-        IOENABLE1_R::new(((self.bits >> 11) & 0x01) != 0)
+        IOENABLE1_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
@@ -516,12 +516,12 @@ impl R {
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn func2_eps(&self) -> FUNC2_EPS_R {
-        FUNC2_EPS_R::new(((self.bits >> 28) & 0x01) != 0)
+        FUNC2_EPS_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bits 29:31"]
     #[inline(always)]
     pub fn sdio20_conf1(&self) -> SDIO20_CONF1_R {
-        SDIO20_CONF1_R::new(((self.bits >> 29) & 0x07) as u8)
+        SDIO20_CONF1_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
 impl W {

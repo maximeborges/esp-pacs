@@ -121,7 +121,7 @@ impl<'a> TIMER0_PAUSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> TIMER0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -197,7 +197,7 @@ impl<'a> TICK_SEL_TIMER0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> TIMER0_PARA_UP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -237,18 +237,18 @@ impl R {
     #[doc = "Bit 22 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
     pub fn timer0_pause(&self) -> TIMER0_PAUSE_R {
-        TIMER0_PAUSE_R::new(((self.bits >> 22) & 0x01) != 0)
+        TIMER0_PAUSE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - This bit is used to reset timer %s. The counter will show 0 after reset."]
     #[inline(always)]
     pub fn timer0_rst(&self) -> TIMER0_RST_R {
-        TIMER0_RST_R::new(((self.bits >> 23) & 0x01) != 0)
+        TIMER0_RST_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\]
  should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
     #[inline(always)]
     pub fn tick_sel_timer0(&self) -> TICK_SEL_TIMER0_R {
-        TICK_SEL_TIMER0_R::new(((self.bits >> 24) & 0x01) != 0)
+        TICK_SEL_TIMER0_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

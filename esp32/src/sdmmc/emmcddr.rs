@@ -57,7 +57,7 @@ impl<'a> HALFSTARTBIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> HS400_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
     pub fn halfstartbit(&self) -> HALFSTARTBIT_R {
-        HALFSTARTBIT_R::new((self.bits & 0x03) as u8)
+        HALFSTARTBIT_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 31 - Set 1 to enable HS400 mode."]
     #[inline(always)]
     pub fn hs400_mode(&self) -> HS400_MODE_R {
-        HS400_MODE_R::new(((self.bits >> 31) & 0x01) != 0)
+        HS400_MODE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> SLV_ADDR_ERR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLV_CMD_ERR_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLV_NO_QPI_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> SLV_WR_DMA_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -270,32 +270,32 @@ impl R {
     #[doc = "Bit 10 - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_addr_err_clr(&self) -> SLV_ADDR_ERR_CLR_R {
-        SLV_ADDR_ERR_CLR_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLV_ADDR_ERR_CLR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_cmd_err_clr(&self) -> SLV_CMD_ERR_CLR_R {
-        SLV_CMD_ERR_CLR_R::new(((self.bits >> 11) & 0x01) != 0)
+        SLV_CMD_ERR_CLR_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
     #[inline(always)]
     pub fn slv_no_qpi_en(&self) -> SLV_NO_QPI_EN_R {
-        SLV_NO_QPI_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLV_NO_QPI_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - 1: The address value of the last SPI transfer is not supported by SPI slave. 0: The address value is supported or no address value is received."]
     #[inline(always)]
     pub fn slv_addr_err(&self) -> SLV_ADDR_ERR_R {
-        SLV_ADDR_ERR_R::new(((self.bits >> 13) & 0x01) != 0)
+        SLV_ADDR_ERR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - 1: The command value of the last SPI transfer is not supported by SPI slave. 0: The command value is supported or no command value is received."]
     #[inline(always)]
     pub fn slv_cmd_err(&self) -> SLV_CMD_ERR_R {
-        SLV_CMD_ERR_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLV_CMD_ERR_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_wr_dma_done(&self) -> SLV_WR_DMA_DONE_R {
-        SLV_WR_DMA_DONE_R::new(((self.bits >> 15) & 0x01) != 0)
+        SLV_WR_DMA_DONE_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the value of command."]
     #[inline(always)]

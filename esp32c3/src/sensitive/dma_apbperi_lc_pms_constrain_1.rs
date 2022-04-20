@@ -57,7 +57,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -256,56 +256,56 @@ impl R {
     pub fn dma_apbperi_lc_pms_constrain_sram_world_0_pms_0(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R::new((self.bits & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - dma_apbperi_lc_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_0_pms_1(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R::new(((self.bits >> 2) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - dma_apbperi_lc_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_0_pms_2(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R::new(((self.bits >> 4) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - dma_apbperi_lc_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_0_pms_3(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R::new(((self.bits >> 6) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 12:13 - dma_apbperi_lc_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_1_pms_0(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R::new(((self.bits >> 12) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - dma_apbperi_lc_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_1_pms_1(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R::new(((self.bits >> 14) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - dma_apbperi_lc_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_1_pms_2(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R::new(((self.bits >> 16) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - dma_apbperi_lc_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_lc_pms_constrain_sram_world_1_pms_3(
         &self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
-        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R::new(((self.bits >> 18) & 0x03) as u8)
+        DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R::new(((self.bits >> 18) & 3) as u8)
     }
 }
 impl W {

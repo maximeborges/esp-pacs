@@ -67,7 +67,7 @@ impl<'a> TIMING_CLK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TIMING_CALI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> EXTRA_DUMMY_CYCLELEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 2)) | ((value as u32 & 0x07) << 2);
+        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u32 & 7) << 2);
         self.w
     }
 }
@@ -139,17 +139,17 @@ impl R {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
     pub fn timing_clk_ena(&self) -> TIMING_CLK_ENA_R {
-        TIMING_CLK_ENA_R::new((self.bits & 0x01) != 0)
+        TIMING_CLK_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
     pub fn timing_cali(&self) -> TIMING_CALI_R {
-        TIMING_CALI_R::new(((self.bits >> 1) & 0x01) != 0)
+        TIMING_CALI_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&self) -> EXTRA_DUMMY_CYCLELEN_R {
-        EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 0x07) as u8)
+        EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 7) as u8)
     }
 }
 impl W {

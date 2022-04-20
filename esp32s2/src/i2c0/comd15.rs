@@ -94,7 +94,7 @@ impl<'a> COMMAND15_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 31 - When command 15 is done in I2C Master mode, this bit changes to high level."]
     #[inline(always)]
     pub fn command15_done(&self) -> COMMAND15_DONE_R {
-        COMMAND15_DONE_R::new(((self.bits >> 31) & 0x01) != 0)
+        COMMAND15_DONE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

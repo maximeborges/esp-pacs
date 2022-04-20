@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
     pub fn t0_int_raw(&self) -> T0_INT_RAW_R {
-        T0_INT_RAW_R::new((self.bits & 0x01) != 0)
+        T0_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
     pub fn t1_int_raw(&self) -> T1_INT_RAW_R {
-        T1_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        T1_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
-        WDT_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        WDT_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`]

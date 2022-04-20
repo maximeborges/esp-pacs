@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bits 0:2 - refer to the rxfifo_cnt's describtion."]
     #[inline(always)]
     pub fn rx_mem_cnt(&self) -> RX_MEM_CNT_R {
-        RX_MEM_CNT_R::new((self.bits & 0x07) as u8)
+        RX_MEM_CNT_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - refer to the txfifo_cnt's describtion."]
     #[inline(always)]
     pub fn tx_mem_cnt(&self) -> TX_MEM_CNT_R {
-        TX_MEM_CNT_R::new(((self.bits >> 3) & 0x07) as u8)
+        TX_MEM_CNT_R::new(((self.bits >> 3) & 7) as u8)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

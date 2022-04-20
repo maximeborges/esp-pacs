@@ -57,7 +57,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_L_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_H_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_L_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_H_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 9)) | ((value as u32 & 0x07) << 9);
+        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
         self.w
     }
 }
@@ -148,28 +148,28 @@ impl R {
     pub fn core_1_pif_pms_constrain_rtcslow_1_world_0_l(
         &self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_L_R {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_L_R::new((self.bits & 0x07) as u8)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_L_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - RTCSlow_1 memory high region permission in world 0 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcslow_1_world_0_h(
         &self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_H_R {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_H_R::new(((self.bits >> 3) & 0x07) as u8)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_0_H_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - RTCSlow_1 memory low region permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcslow_1_world_1_l(
         &self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_L_R {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_L_R::new(((self.bits >> 6) & 0x07) as u8)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_L_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:11 - RTCSlow_1 memory high region permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcslow_1_world_1_h(
         &self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_H_R {
-        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_H_R::new(((self.bits >> 9) & 0x07) as u8)
+        CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_1_WORLD_1_H_R::new(((self.bits >> 9) & 7) as u8)
     }
 }
 impl W {

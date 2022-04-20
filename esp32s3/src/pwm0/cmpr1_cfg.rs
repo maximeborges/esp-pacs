@@ -132,12 +132,12 @@ impl R {
     #[doc = "Bit 8 - Set and reset by hardware. If set, PWM generator 1 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
     #[inline(always)]
     pub fn cmpr1_a_shdw_full(&self) -> CMPR1_A_SHDW_FULL_R {
-        CMPR1_A_SHDW_FULL_R::new(((self.bits >> 8) & 0x01) != 0)
+        CMPR1_A_SHDW_FULL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set and reset by hardware. If set, PWM generator 1 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
     #[inline(always)]
     pub fn cmpr1_b_shdw_full(&self) -> CMPR1_B_SHDW_FULL_R {
-        CMPR1_B_SHDW_FULL_R::new(((self.bits >> 9) & 0x01) != 0)
+        CMPR1_B_SHDW_FULL_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Hmac error status. 0: hmac key and purpose match. 1: error."]
     #[inline(always)]
     pub fn qurey_check(&self) -> QUREY_CHECK_R {
-        QUREY_CHECK_R::new((self.bits & 0x01) != 0)
+        QUREY_CHECK_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "The matching result between key and purpose user configured\n\nThis register you can [`read`]

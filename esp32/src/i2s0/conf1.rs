@@ -57,7 +57,7 @@ impl<'a> TX_PCM_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> TX_PCM_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> RX_PCM_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
+        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> RX_PCM_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> TX_STOP_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> TX_ZEROS_RM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -240,32 +240,32 @@ impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn tx_pcm_conf(&self) -> TX_PCM_CONF_R {
-        TX_PCM_CONF_R::new((self.bits & 0x07) as u8)
+        TX_PCM_CONF_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn tx_pcm_bypass(&self) -> TX_PCM_BYPASS_R {
-        TX_PCM_BYPASS_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_PCM_BYPASS_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
     pub fn rx_pcm_conf(&self) -> RX_PCM_CONF_R {
-        RX_PCM_CONF_R::new(((self.bits >> 4) & 0x07) as u8)
+        RX_PCM_CONF_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn rx_pcm_bypass(&self) -> RX_PCM_BYPASS_R {
-        RX_PCM_BYPASS_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_PCM_BYPASS_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn tx_stop_en(&self) -> TX_STOP_EN_R {
-        TX_STOP_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        TX_STOP_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn tx_zeros_rm_en(&self) -> TX_ZEROS_RM_EN_R {
-        TX_ZEROS_RM_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        TX_ZEROS_RM_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

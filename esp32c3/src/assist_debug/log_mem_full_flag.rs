@@ -82,7 +82,7 @@ impl<'a> CLR_LOG_MEM_FULL_FLAG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -90,12 +90,12 @@ impl R {
     #[doc = "Bit 0 - reg_log_mem_full_flag"]
     #[inline(always)]
     pub fn log_mem_full_flag(&self) -> LOG_MEM_FULL_FLAG_R {
-        LOG_MEM_FULL_FLAG_R::new((self.bits & 0x01) != 0)
+        LOG_MEM_FULL_FLAG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_clr_log_mem_full_flag"]
     #[inline(always)]
     pub fn clr_log_mem_full_flag(&self) -> CLR_LOG_MEM_FULL_FLAG_R {
-        CLR_LOG_MEM_FULL_FLAG_R::new(((self.bits >> 1) & 0x01) != 0)
+        CLR_LOG_MEM_FULL_FLAG_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

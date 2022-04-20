@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - The status signal for read_done interrupt."]
     #[inline(always)]
     pub fn read_done_int_st(&self) -> READ_DONE_INT_ST_R {
-        READ_DONE_INT_ST_R::new((self.bits & 0x01) != 0)
+        READ_DONE_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status signal for pgm_done interrupt."]
     #[inline(always)]
     pub fn pgm_done_int_st(&self) -> PGM_DONE_INT_ST_R {
-        PGM_DONE_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        PGM_DONE_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "eFuse interrupt status register.\n\nThis register you can [`read`]

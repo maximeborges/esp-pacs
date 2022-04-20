@@ -94,7 +94,7 @@ impl<'a> PRO_IRAM0_SRAM_4_L_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PRO_IRAM0_SRAM_4_L_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PRO_IRAM0_SRAM_4_L_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> PRO_IRAM0_SRAM_4_H_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> PRO_IRAM0_SRAM_4_H_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> PRO_IRAM0_SRAM_4_H_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -292,32 +292,32 @@ impl R {
     #[doc = "Bit 17 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_l_f(&self) -> PRO_IRAM0_SRAM_4_L_F_R {
-        PRO_IRAM0_SRAM_4_L_F_R::new(((self.bits >> 17) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_L_F_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_l_r(&self) -> PRO_IRAM0_SRAM_4_L_R_R {
-        PRO_IRAM0_SRAM_4_L_R_R::new(((self.bits >> 18) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_L_R_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_l_w(&self) -> PRO_IRAM0_SRAM_4_L_W_R {
-        PRO_IRAM0_SRAM_4_L_W_R::new(((self.bits >> 19) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_L_W_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 high address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_h_f(&self) -> PRO_IRAM0_SRAM_4_H_F_R {
-        PRO_IRAM0_SRAM_4_H_F_R::new(((self.bits >> 20) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_H_F_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_h_r(&self) -> PRO_IRAM0_SRAM_4_H_R_R {
-        PRO_IRAM0_SRAM_4_H_R_R::new(((self.bits >> 21) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_H_R_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 high address region."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_h_w(&self) -> PRO_IRAM0_SRAM_4_H_W_R {
-        PRO_IRAM0_SRAM_4_H_W_R::new(((self.bits >> 22) & 0x01) != 0)
+        PRO_IRAM0_SRAM_4_H_W_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {

@@ -287,92 +287,92 @@ impl R {
     #[doc = "Bit 0 - reg_rxfifo_wm_int_st"]
     #[inline(always)]
     pub fn rxfifo_wm_int_st(&self) -> RXFIFO_WM_INT_ST_R {
-        RXFIFO_WM_INT_ST_R::new((self.bits & 0x01) != 0)
+        RXFIFO_WM_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_txfifo_wm_int_st"]
     #[inline(always)]
     pub fn txfifo_wm_int_st(&self) -> TXFIFO_WM_INT_ST_R {
-        TXFIFO_WM_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        TXFIFO_WM_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_rxfifo_ovf_int_st"]
     #[inline(always)]
     pub fn rxfifo_ovf_int_st(&self) -> RXFIFO_OVF_INT_ST_R {
-        RXFIFO_OVF_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        RXFIFO_OVF_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_end_detect_int_st"]
     #[inline(always)]
     pub fn end_detect_int_st(&self) -> END_DETECT_INT_ST_R {
-        END_DETECT_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        END_DETECT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_byte_trans_done_int_st"]
     #[inline(always)]
     pub fn byte_trans_done_int_st(&self) -> BYTE_TRANS_DONE_INT_ST_R {
-        BYTE_TRANS_DONE_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        BYTE_TRANS_DONE_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_arbitration_lost_int_st"]
     #[inline(always)]
     pub fn arbitration_lost_int_st(&self) -> ARBITRATION_LOST_INT_ST_R {
-        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_mst_txfifo_udf_int_st"]
     #[inline(always)]
     pub fn mst_txfifo_udf_int_st(&self) -> MST_TXFIFO_UDF_INT_ST_R {
-        MST_TXFIFO_UDF_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        MST_TXFIFO_UDF_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_trans_complete_int_st"]
     #[inline(always)]
     pub fn trans_complete_int_st(&self) -> TRANS_COMPLETE_INT_ST_R {
-        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_time_out_int_st"]
     #[inline(always)]
     pub fn time_out_int_st(&self) -> TIME_OUT_INT_ST_R {
-        TIME_OUT_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        TIME_OUT_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_trans_start_int_st"]
     #[inline(always)]
     pub fn trans_start_int_st(&self) -> TRANS_START_INT_ST_R {
-        TRANS_START_INT_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        TRANS_START_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - reg_nack_int_st"]
     #[inline(always)]
     pub fn nack_int_st(&self) -> NACK_INT_ST_R {
-        NACK_INT_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        NACK_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_txfifo_ovf_int_st"]
     #[inline(always)]
     pub fn txfifo_ovf_int_st(&self) -> TXFIFO_OVF_INT_ST_R {
-        TXFIFO_OVF_INT_ST_R::new(((self.bits >> 11) & 0x01) != 0)
+        TXFIFO_OVF_INT_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_rxfifo_udf_int_st"]
     #[inline(always)]
     pub fn rxfifo_udf_int_st(&self) -> RXFIFO_UDF_INT_ST_R {
-        RXFIFO_UDF_INT_ST_R::new(((self.bits >> 12) & 0x01) != 0)
+        RXFIFO_UDF_INT_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_scl_st_to_int_st"]
     #[inline(always)]
     pub fn scl_st_to_int_st(&self) -> SCL_ST_TO_INT_ST_R {
-        SCL_ST_TO_INT_ST_R::new(((self.bits >> 13) & 0x01) != 0)
+        SCL_ST_TO_INT_ST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_scl_main_st_to_int_st"]
     #[inline(always)]
     pub fn scl_main_st_to_int_st(&self) -> SCL_MAIN_ST_TO_INT_ST_R {
-        SCL_MAIN_ST_TO_INT_ST_R::new(((self.bits >> 14) & 0x01) != 0)
+        SCL_MAIN_ST_TO_INT_ST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - reg_det_start_int_st"]
     #[inline(always)]
     pub fn det_start_int_st(&self) -> DET_START_INT_ST_R {
-        DET_START_INT_ST_R::new(((self.bits >> 15) & 0x01) != 0)
+        DET_START_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - reg_slave_stretch_int_st"]
     #[inline(always)]
     pub fn slave_stretch_int_st(&self) -> SLAVE_STRETCH_INT_ST_R {
-        SLAVE_STRETCH_INT_ST_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLAVE_STRETCH_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - reg_general_call_int_st"]
     #[inline(always)]
     pub fn general_call_int_st(&self) -> GENERAL_CALL_INT_ST_R {
-        GENERAL_CALL_INT_ST_R::new(((self.bits >> 17) & 0x01) != 0)
+        GENERAL_CALL_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 #[doc = "I2C_INT_STATUS_REG\n\nThis register you can [`read`]

@@ -62,7 +62,7 @@ impl R {
     #[doc = "Bits 0:1 - State of OUT Endpoint 0."]
     #[inline(always)]
     pub fn out_ep0_state(&self) -> OUT_EP0_STATE_R {
-        OUT_EP0_STATE_R::new((self.bits & 0x03) as u8)
+        OUT_EP0_STATE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:8 - Write data address of OUT endpoint 0. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP0_WR_ADDR-2 bytes data in OUT EP0."]
     #[inline(always)]

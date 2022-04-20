@@ -67,7 +67,7 @@ impl<'a> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -77,7 +77,7 @@ impl R {
     pub fn core_1_toomanyexceptions_m_override_lock(
         &self,
     ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R {
-        CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R::new((self.bits & 0x01) != 0)
+        CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> CONTROL_CORE_1_RUNSTALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CONTROL_CORE_1_CLKGATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CONTROL_CORE_1_RESETING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Set 1 to stall core1"]
     #[inline(always)]
     pub fn control_core_1_runstall(&self) -> CONTROL_CORE_1_RUNSTALL_R {
-        CONTROL_CORE_1_RUNSTALL_R::new((self.bits & 0x01) != 0)
+        CONTROL_CORE_1_RUNSTALL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set 1 to open core1 clock"]
     #[inline(always)]
     pub fn control_core_1_clkgate_en(&self) -> CONTROL_CORE_1_CLKGATE_EN_R {
-        CONTROL_CORE_1_CLKGATE_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        CONTROL_CORE_1_CLKGATE_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set 1 to let core1 reset"]
     #[inline(always)]
     pub fn control_core_1_reseting(&self) -> CONTROL_CORE_1_RESETING_R {
-        CONTROL_CORE_1_RESETING_R::new(((self.bits >> 2) & 0x01) != 0)
+        CONTROL_CORE_1_RESETING_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

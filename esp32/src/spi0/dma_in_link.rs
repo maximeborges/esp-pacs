@@ -94,7 +94,7 @@ impl<'a> INLINK_AUTO_RET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> INLINK_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> INLINK_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> INLINK_RESTART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -218,22 +218,22 @@ impl R {
     #[doc = "Bit 20 - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
     #[inline(always)]
     pub fn inlink_auto_ret(&self) -> INLINK_AUTO_RET_R {
-        INLINK_AUTO_RET_R::new(((self.bits >> 20) & 0x01) != 0)
+        INLINK_AUTO_RET_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 28 - Set the bit to stop to use inlink descriptor."]
     #[inline(always)]
     pub fn inlink_stop(&self) -> INLINK_STOP_R {
-        INLINK_STOP_R::new(((self.bits >> 28) & 0x01) != 0)
+        INLINK_STOP_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set the bit to start to use inlink descriptor."]
     #[inline(always)]
     pub fn inlink_start(&self) -> INLINK_START_R {
-        INLINK_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        INLINK_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set the bit to mount on new inlink descriptors."]
     #[inline(always)]
     pub fn inlink_restart(&self) -> INLINK_RESTART_R {
-        INLINK_RESTART_R::new(((self.bits >> 30) & 0x01) != 0)
+        INLINK_RESTART_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

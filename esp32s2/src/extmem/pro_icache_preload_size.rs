@@ -94,7 +94,7 @@ impl<'a> PRO_ICACHE_PRELOAD_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn pro_icache_preload_order(&self) -> PRO_ICACHE_PRELOAD_ORDER_R {
-        PRO_ICACHE_PRELOAD_ORDER_R::new(((self.bits >> 10) & 0x01) != 0)
+        PRO_ICACHE_PRELOAD_ORDER_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {

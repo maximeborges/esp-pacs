@@ -67,7 +67,7 @@ impl<'a> AHBM_RST_INTER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> AHBM_RST_EXTER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ARB_PRI_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - Set this bit, then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
     pub fn ahbm_rst_inter(&self) -> AHBM_RST_INTER_R {
-        AHBM_RST_INTER_R::new((self.bits & 0x01) != 0)
+        AHBM_RST_INTER_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit, then clear this bit to reset the external ahb FSM."]
     #[inline(always)]
     pub fn ahbm_rst_exter(&self) -> AHBM_RST_EXTER_R {
-        AHBM_RST_EXTER_R::new(((self.bits >> 1) & 0x01) != 0)
+        AHBM_RST_EXTER_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
     pub fn arb_pri_dis(&self) -> ARB_PRI_DIS_R {
-        ARB_PRI_DIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        ARB_PRI_DIS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> RESET_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LISTEN_ONLY_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SELF_TEST_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_FILTER_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0 - This bit is used to configure the operating mode of the TWAI Controller. 1: Reset mode; 0: Operating mode."]
     #[inline(always)]
     pub fn reset_mode(&self) -> RESET_MODE_R {
-        RESET_MODE_R::new((self.bits & 0x01) != 0)
+        RESET_MODE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: Listen only mode. In this mode the nodes will only receive messages from the bus, without generating the acknowledge signal nor updating the RX error counter."]
     #[inline(always)]
     pub fn listen_only_mode(&self) -> LISTEN_ONLY_MODE_R {
-        LISTEN_ONLY_MODE_R::new(((self.bits >> 1) & 0x01) != 0)
+        LISTEN_ONLY_MODE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1: Self test mode. In this mode the TX nodes can perform a successful transmission without receiving the acknowledge signal. This mode is often used to test a single node with the self reception request command."]
     #[inline(always)]
     pub fn self_test_mode(&self) -> SELF_TEST_MODE_R {
-        SELF_TEST_MODE_R::new(((self.bits >> 2) & 0x01) != 0)
+        SELF_TEST_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This bit is used to configure the filter mode. 0: Dual filter mode; 1: Single filter mode."]
     #[inline(always)]
     pub fn rx_filter_mode(&self) -> RX_FILTER_MODE_R {
-        RX_FILTER_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FILTER_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

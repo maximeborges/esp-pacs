@@ -67,7 +67,7 @@ impl<'a> COCPU_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> COCPU_SHUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> COCPU_SHUT_RESET_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> COCPU_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -296,7 +296,7 @@ impl<'a> COCPU_DONE_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -333,7 +333,7 @@ impl<'a> COCPU_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -355,7 +355,7 @@ impl<'a> COCPU_SW_INT_TRIGGER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -392,7 +392,7 @@ impl<'a> COCPU_CLKGATE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl R {
     #[doc = "Bit 0 - cocpu clk force on"]
     #[inline(always)]
     pub fn cocpu_clk_fo(&self) -> COCPU_CLK_FO_R {
-        COCPU_CLK_FO_R::new((self.bits & 0x01) != 0)
+        COCPU_CLK_FO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:6 - time from start cocpu to pull down reset"]
     #[inline(always)]
@@ -415,7 +415,7 @@ impl R {
     #[doc = "Bit 13 - to shut cocpu"]
     #[inline(always)]
     pub fn cocpu_shut(&self) -> COCPU_SHUT_R {
-        COCPU_SHUT_R::new(((self.bits >> 13) & 0x01) != 0)
+        COCPU_SHUT_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:21 - time from shut cocpu to disable clk"]
     #[inline(always)]
@@ -425,27 +425,27 @@ impl R {
     #[doc = "Bit 22 - to reset cocpu"]
     #[inline(always)]
     pub fn cocpu_shut_reset_en(&self) -> COCPU_SHUT_RESET_EN_R {
-        COCPU_SHUT_RESET_EN_R::new(((self.bits >> 22) & 0x01) != 0)
+        COCPU_SHUT_RESET_EN_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: old ULP 0: new riscV"]
     #[inline(always)]
     pub fn cocpu_sel(&self) -> COCPU_SEL_R {
-        COCPU_SEL_R::new(((self.bits >> 23) & 0x01) != 0)
+        COCPU_SEL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: select riscv done 0: select ulp done"]
     #[inline(always)]
     pub fn cocpu_done_force(&self) -> COCPU_DONE_FORCE_R {
-        COCPU_DONE_FORCE_R::new(((self.bits >> 24) & 0x01) != 0)
+        COCPU_DONE_FORCE_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - done signal used by riscv to control timer."]
     #[inline(always)]
     pub fn cocpu_done(&self) -> COCPU_DONE_R {
-        COCPU_DONE_R::new(((self.bits >> 25) & 0x01) != 0)
+        COCPU_DONE_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 27 - open ulp-riscv clk gate"]
     #[inline(always)]
     pub fn cocpu_clkgate_en(&self) -> COCPU_CLKGATE_EN_R {
-        COCPU_CLKGATE_EN_R::new(((self.bits >> 27) & 0x01) != 0)
+        COCPU_CLKGATE_EN_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 impl W {

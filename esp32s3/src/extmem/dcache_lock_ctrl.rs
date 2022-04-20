@@ -67,7 +67,7 @@ impl<'a> DCACHE_LOCK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DCACHE_UNLOCK_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -127,17 +127,17 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
     pub fn dcache_lock_ena(&self) -> DCACHE_LOCK_ENA_R {
-        DCACHE_LOCK_ENA_R::new((self.bits & 0x01) != 0)
+        DCACHE_LOCK_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
     pub fn dcache_unlock_ena(&self) -> DCACHE_UNLOCK_ENA_R {
-        DCACHE_UNLOCK_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        DCACHE_UNLOCK_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to indicate unlock/lock operation is finished."]
     #[inline(always)]
     pub fn dcache_lock_done(&self) -> DCACHE_LOCK_DONE_R {
-        DCACHE_LOCK_DONE_R::new(((self.bits >> 2) & 0x01) != 0)
+        DCACHE_LOCK_DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

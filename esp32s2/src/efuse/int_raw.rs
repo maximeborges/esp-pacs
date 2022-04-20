@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - The raw bit signal for read_done interrupt."]
     #[inline(always)]
     pub fn read_done_int_raw(&self) -> READ_DONE_INT_RAW_R {
-        READ_DONE_INT_RAW_R::new((self.bits & 0x01) != 0)
+        READ_DONE_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw bit signal for pgm_done interrupt."]
     #[inline(always)]
     pub fn pgm_done_int_raw(&self) -> PGM_DONE_INT_RAW_R {
-        PGM_DONE_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        PGM_DONE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "eFuse raw interrupt register.\n\nThis register you can [`read`]

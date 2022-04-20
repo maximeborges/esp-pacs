@@ -57,7 +57,7 @@ impl<'a> CLK_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -102,7 +102,7 @@ impl<'a> CLK_MODE_13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl<'a> RSCK_DATA_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -176,7 +176,7 @@ impl<'a> SLV_RDDMA_BITLEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -213,7 +213,7 @@ impl<'a> SLV_WRDMA_BITLEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -250,7 +250,7 @@ impl<'a> SLV_RDBUF_BITLEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -287,7 +287,7 @@ impl<'a> SLV_WRBUF_BITLEN_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -351,7 +351,7 @@ impl<'a> MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -373,7 +373,7 @@ impl<'a> SOFT_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -410,7 +410,7 @@ impl<'a> USR_CONF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -418,7 +418,7 @@ impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
     #[inline(always)]
     pub fn clk_mode(&self) -> CLK_MODE_R {
-        CLK_MODE_R::new((self.bits & 0x03) as u8)
+        CLK_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
 /B\\[7\\]
@@ -427,32 +427,32 @@ impl R {
 ."]
     #[inline(always)]
     pub fn clk_mode_13(&self) -> CLK_MODE_13_R {
-        CLK_MODE_13_R::new(((self.bits >> 2) & 0x01) != 0)
+        CLK_MODE_13_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
     #[inline(always)]
     pub fn rsck_data_out(&self) -> RSCK_DATA_OUT_R {
-        RSCK_DATA_OUT_R::new(((self.bits >> 3) & 0x01) != 0)
+        RSCK_DATA_OUT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 8 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
     #[inline(always)]
     pub fn slv_rddma_bitlen_en(&self) -> SLV_RDDMA_BITLEN_EN_R {
-        SLV_RDDMA_BITLEN_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        SLV_RDDMA_BITLEN_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
     #[inline(always)]
     pub fn slv_wrdma_bitlen_en(&self) -> SLV_WRDMA_BITLEN_EN_R {
-        SLV_WRDMA_BITLEN_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        SLV_WRDMA_BITLEN_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
     #[inline(always)]
     pub fn slv_rdbuf_bitlen_en(&self) -> SLV_RDBUF_BITLEN_EN_R {
-        SLV_RDBUF_BITLEN_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLV_RDBUF_BITLEN_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
     #[inline(always)]
     pub fn slv_wrbuf_bitlen_en(&self) -> SLV_WRBUF_BITLEN_EN_R {
-        SLV_WRBUF_BITLEN_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        SLV_WRBUF_BITLEN_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 22:25 - The magic value of BM table in master DMA seg-trans."]
     #[inline(always)]
@@ -462,12 +462,12 @@ impl R {
     #[doc = "Bit 26 - Set SPI work mode. 1: slave mode 0: master mode."]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new(((self.bits >> 26) & 0x01) != 0)
+        MODE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 28 - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
     #[inline(always)]
     pub fn usr_conf(&self) -> USR_CONF_R {
-        USR_CONF_R::new(((self.bits >> 28) & 0x01) != 0)
+        USR_CONF_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {

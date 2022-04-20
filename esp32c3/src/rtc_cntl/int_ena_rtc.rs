@@ -67,7 +67,7 @@ impl<'a> SLP_WAKEUP_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLP_REJECT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RTC_WDT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RTC_BROWN_OUT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RTC_MAIN_TIMER_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RTC_SWD_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RTC_XTAL32K_DEAD_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RTC_GLITCH_DET_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> RTC_BBPLL_CAL_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
     pub fn slp_wakeup_int_ena(&self) -> SLP_WAKEUP_INT_ENA_R {
-        SLP_WAKEUP_INT_ENA_R::new((self.bits & 0x01) != 0)
+        SLP_WAKEUP_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
     pub fn slp_reject_int_ena(&self) -> SLP_REJECT_INT_ENA_R {
-        SLP_REJECT_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLP_REJECT_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
     pub fn rtc_wdt_int_ena(&self) -> RTC_WDT_INT_ENA_R {
-        RTC_WDT_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        RTC_WDT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
     pub fn rtc_brown_out_int_ena(&self) -> RTC_BROWN_OUT_INT_ENA_R {
-        RTC_BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        RTC_BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
     pub fn rtc_main_timer_int_ena(&self) -> RTC_MAIN_TIMER_INT_ENA_R {
-        RTC_MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        RTC_MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
     pub fn rtc_swd_int_ena(&self) -> RTC_SWD_INT_ENA_R {
-        RTC_SWD_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        RTC_SWD_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
     pub fn rtc_xtal32k_dead_int_ena(&self) -> RTC_XTAL32K_DEAD_INT_ENA_R {
-        RTC_XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
+        RTC_XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
     pub fn rtc_glitch_det_int_ena(&self) -> RTC_GLITCH_DET_INT_ENA_R {
-        RTC_GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 0x01) != 0)
+        RTC_GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - enbale bbpll cal end interrupt"]
     #[inline(always)]
     pub fn rtc_bbpll_cal_int_ena(&self) -> RTC_BBPLL_CAL_INT_ENA_R {
-        RTC_BBPLL_CAL_INT_ENA_R::new(((self.bits >> 20) & 0x01) != 0)
+        RTC_BBPLL_CAL_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {

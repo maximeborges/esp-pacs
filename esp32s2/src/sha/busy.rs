@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - Indicates the states of SHA accelerator. 1'h0: idle 1'h1: busy"]
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
-        STATE_R::new((self.bits & 0x01) != 0)
+        STATE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Indicates if SHA Accelerator is busy or not\n\nThis register you can [`read`]

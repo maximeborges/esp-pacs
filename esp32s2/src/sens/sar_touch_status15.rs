@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 29:31 - Touch sleep pad debouce value."]
     #[inline(always)]
     pub fn touch_slp_debounce(&self) -> TOUCH_SLP_DEBOUNCE_R {
-        TOUCH_SLP_DEBOUNCE_R::new(((self.bits >> 29) & 0x07) as u8)
+        TOUCH_SLP_DEBOUNCE_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
 #[doc = "Touch sleep pad status\n\nThis register you can [`read`]

@@ -82,7 +82,7 @@ impl<'a> ICACHE_SYNC_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_SYNC_INT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache sync done."]
     #[inline(always)]
     pub fn icache_sync_int_st(&self) -> ICACHE_SYNC_INT_ST_R {
-        ICACHE_SYNC_INT_ST_R::new((self.bits & 0x01) != 0)
+        ICACHE_SYNC_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache sync done."]
     #[inline(always)]
     pub fn icache_sync_int_ena(&self) -> ICACHE_SYNC_INT_ENA_R {
-        ICACHE_SYNC_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_SYNC_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

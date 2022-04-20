@@ -67,7 +67,7 @@ impl<'a> SLV_RD_BUF_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLV_WR_BUF_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLV_RD_STA_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SLV_WR_STA_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> TRANS_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> CS_I_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -351,7 +351,7 @@ impl<'a> SLV_CMD_DEFINE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -388,7 +388,7 @@ impl<'a> SLV_WR_RD_STA_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -425,7 +425,7 @@ impl<'a> SLV_WR_RD_BUF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -462,7 +462,7 @@ impl<'a> MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -499,7 +499,7 @@ impl<'a> SYNC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -507,27 +507,27 @@ impl R {
     #[doc = "Bit 0 - The interrupt raw bit for the completion of read-buffer operation in the slave mode."]
     #[inline(always)]
     pub fn slv_rd_buf_done(&self) -> SLV_RD_BUF_DONE_R {
-        SLV_RD_BUF_DONE_R::new((self.bits & 0x01) != 0)
+        SLV_RD_BUF_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt raw bit for the completion of write-buffer operation in the slave mode."]
     #[inline(always)]
     pub fn slv_wr_buf_done(&self) -> SLV_WR_BUF_DONE_R {
-        SLV_WR_BUF_DONE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLV_WR_BUF_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt raw bit for the completion of read-status operation in the slave mode."]
     #[inline(always)]
     pub fn slv_rd_sta_done(&self) -> SLV_RD_STA_DONE_R {
-        SLV_RD_STA_DONE_R::new(((self.bits >> 2) & 0x01) != 0)
+        SLV_RD_STA_DONE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The interrupt raw bit for the completion of write-status operation in the slave mode."]
     #[inline(always)]
     pub fn slv_wr_sta_done(&self) -> SLV_WR_STA_DONE_R {
-        SLV_WR_STA_DONE_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLV_WR_STA_DONE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode."]
     #[inline(always)]
     pub fn trans_done(&self) -> TRANS_DONE_R {
-        TRANS_DONE_R::new(((self.bits >> 4) & 0x01) != 0)
+        TRANS_DONE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
     #[inline(always)]
@@ -537,17 +537,17 @@ impl R {
     #[doc = "Bits 10:11 - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
     #[inline(always)]
     pub fn cs_i_mode(&self) -> CS_I_MODE_R {
-        CS_I_MODE_R::new(((self.bits >> 10) & 0x03) as u8)
+        CS_I_MODE_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 17:19 - In the slave mode it is the value of command."]
     #[inline(always)]
     pub fn slv_last_command(&self) -> SLV_LAST_COMMAND_R {
-        SLV_LAST_COMMAND_R::new(((self.bits >> 17) & 0x07) as u8)
+        SLV_LAST_COMMAND_R::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:22 - In the slave mode it is the state of spi state machine."]
     #[inline(always)]
     pub fn slv_last_state(&self) -> SLV_LAST_STATE_R {
-        SLV_LAST_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
+        SLV_LAST_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:26 - The operations counter in both the master mode and the slave mode. 4: read-status"]
     #[inline(always)]
@@ -557,27 +557,27 @@ impl R {
     #[doc = "Bit 27 - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as: 1: write-status 2: write-buffer and 3: read-buffer."]
     #[inline(always)]
     pub fn slv_cmd_define(&self) -> SLV_CMD_DEFINE_R {
-        SLV_CMD_DEFINE_R::new(((self.bits >> 27) & 0x01) != 0)
+        SLV_CMD_DEFINE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - write and read status enable in the slave mode"]
     #[inline(always)]
     pub fn slv_wr_rd_sta_en(&self) -> SLV_WR_RD_STA_EN_R {
-        SLV_WR_RD_STA_EN_R::new(((self.bits >> 28) & 0x01) != 0)
+        SLV_WR_RD_STA_EN_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - write and read buffer enable in the slave mode"]
     #[inline(always)]
     pub fn slv_wr_rd_buf_en(&self) -> SLV_WR_RD_BUF_EN_R {
-        SLV_WR_RD_BUF_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        SLV_WR_RD_BUF_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - 1: slave mode 0: master mode."]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new(((self.bits >> 30) & 0x01) != 0)
+        MODE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Software reset enable, reset the spi clock line cs line and data lines."]
     #[inline(always)]
     pub fn sync_reset(&self) -> SYNC_RESET_R {
-        SYNC_RESET_R::new(((self.bits >> 31) & 0x01) != 0)
+        SYNC_RESET_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

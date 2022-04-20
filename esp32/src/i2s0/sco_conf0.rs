@@ -67,7 +67,7 @@ impl<'a> SCO_WITH_I2S_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SCO_NO_I2S_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CVSD_ENC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CVSD_ENC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sco_with_i2s_en(&self) -> SCO_WITH_I2S_EN_R {
-        SCO_WITH_I2S_EN_R::new((self.bits & 0x01) != 0)
+        SCO_WITH_I2S_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sco_no_i2s_en(&self) -> SCO_NO_I2S_EN_R {
-        SCO_NO_I2S_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        SCO_NO_I2S_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn cvsd_enc_start(&self) -> CVSD_ENC_START_R {
-        CVSD_ENC_START_R::new(((self.bits >> 2) & 0x01) != 0)
+        CVSD_ENC_START_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn cvsd_enc_reset(&self) -> CVSD_ENC_RESET_R {
-        CVSD_ENC_RESET_R::new(((self.bits >> 3) & 0x01) != 0)
+        CVSD_ENC_RESET_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

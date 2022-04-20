@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - digital signature state. 1'b0: idle, 1'b1: busy"]
     #[inline(always)]
     pub fn query_busy(&self) -> QUERY_BUSY_R {
-        QUERY_BUSY_R::new((self.bits & 0x01) != 0)
+        QUERY_BUSY_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "DS query busy register\n\nThis register you can [`read`]

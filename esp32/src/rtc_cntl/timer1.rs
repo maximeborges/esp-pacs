@@ -67,7 +67,7 @@ impl<'a> CPU_STALL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -183,7 +183,7 @@ impl R {
     #[doc = "Bit 0 - CPU stall enable bit"]
     #[inline(always)]
     pub fn cpu_stall_en(&self) -> CPU_STALL_EN_R {
-        CPU_STALL_EN_R::new((self.bits & 0x01) != 0)
+        CPU_STALL_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:5 - CPU stall wait cycles in fast_clk_rtc"]
     #[inline(always)]

@@ -57,7 +57,7 @@ impl<'a> SCL_FILTER_THRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> SCL_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
     pub fn scl_filter_thres(&self) -> SCL_FILTER_THRES_R {
-        SCL_FILTER_THRES_R::new((self.bits & 0x07) as u8)
+        SCL_FILTER_THRES_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - This is the filter enable bit for SCL."]
     #[inline(always)]
     pub fn scl_filter_en(&self) -> SCL_FILTER_EN_R {
-        SCL_FILTER_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        SCL_FILTER_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

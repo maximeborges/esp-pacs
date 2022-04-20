@@ -97,12 +97,12 @@ impl R {
     #[doc = "Bit 13 - ULP-RISCV memory valid output"]
     #[inline(always)]
     pub fn cocpu_mem_vld(&self) -> COCPU_MEM_VLD_R {
-        COCPU_MEM_VLD_R::new(((self.bits >> 13) & 0x01) != 0)
+        COCPU_MEM_VLD_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - ULP-RISCV memory ready input"]
     #[inline(always)]
     pub fn cocpu_mem_rdy(&self) -> COCPU_MEM_RDY_R {
-        COCPU_MEM_RDY_R::new(((self.bits >> 14) & 0x01) != 0)
+        COCPU_MEM_RDY_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bits 15:18 - ULP-RISCV memory write enable output"]
     #[inline(always)]

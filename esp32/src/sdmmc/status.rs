@@ -169,22 +169,22 @@ impl R {
     #[doc = "Bit 0 - FIFO reached Receive watermark level, not qualified with data transfer."]
     #[inline(always)]
     pub fn fifo_rx_watermark(&self) -> FIFO_RX_WATERMARK_R {
-        FIFO_RX_WATERMARK_R::new((self.bits & 0x01) != 0)
+        FIFO_RX_WATERMARK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - FIFO reached Transmit watermark level, not qualified with data transfer."]
     #[inline(always)]
     pub fn fifo_tx_watermark(&self) -> FIFO_TX_WATERMARK_R {
-        FIFO_TX_WATERMARK_R::new(((self.bits >> 1) & 0x01) != 0)
+        FIFO_TX_WATERMARK_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - FIFO is empty status."]
     #[inline(always)]
     pub fn fifo_empty(&self) -> FIFO_EMPTY_R {
-        FIFO_EMPTY_R::new(((self.bits >> 2) & 0x01) != 0)
+        FIFO_EMPTY_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - FIFO is full status."]
     #[inline(always)]
     pub fn fifo_full(&self) -> FIFO_FULL_R {
-        FIFO_FULL_R::new(((self.bits >> 3) & 0x01) != 0)
+        FIFO_FULL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:7 - Command FSM states. 0: Idle; 1: Send init sequence; 2: Send cmd start bit; 3: Send cmd tx bit; 4: Send cmd index + arg; 5: Send cmd crc7; 6: Send cmd end bit; 7: Receive resp start bit; 8: Receive resp IRQ response; 9: Receive resp tx bit; 10: Receive resp cmd idx; 11: Receive resp data; 12: Receive resp crc7; 13: Receive resp end bit; 14: Cmd path wait NCC; 15: Wait, cmd-to-response turnaround."]
     #[inline(always)]
@@ -195,18 +195,18 @@ impl R {
 , checks whether card is present. 0: card not present; 1: card present."]
     #[inline(always)]
     pub fn data_3_status(&self) -> DATA_3_STATUS_R {
-        DATA_3_STATUS_R::new(((self.bits >> 8) & 0x01) != 0)
+        DATA_3_STATUS_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Inverted version of raw selected sdhost_card_data\\[0\\]
 . 0: Card data not busy; 1: Card data busy."]
     #[inline(always)]
     pub fn data_busy(&self) -> DATA_BUSY_R {
-        DATA_BUSY_R::new(((self.bits >> 9) & 0x01) != 0)
+        DATA_BUSY_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Data transmit or receive state-machine is busy."]
     #[inline(always)]
     pub fn data_state_mc_busy(&self) -> DATA_STATE_MC_BUSY_R {
-        DATA_STATE_MC_BUSY_R::new(((self.bits >> 10) & 0x01) != 0)
+        DATA_STATE_MC_BUSY_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:16 - Index of previous response, including any auto-stop sent by core."]
     #[inline(always)]

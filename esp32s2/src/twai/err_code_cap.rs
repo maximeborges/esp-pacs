@@ -67,12 +67,12 @@ impl R {
     #[doc = "Bit 5 - This register contains information about transmission direction of the node when error occurs. 1: Error occurs when receiving a message; 0: Error occurs when transmitting a message"]
     #[inline(always)]
     pub fn ecc_direction(&self) -> ECC_DIRECTION_R {
-        ECC_DIRECTION_R::new(((self.bits >> 5) & 0x01) != 0)
+        ECC_DIRECTION_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - This register contains information about error types: 00: bit error; 01: form error; 10: stuff error; 11: other type of error"]
     #[inline(always)]
     pub fn ecc_type(&self) -> ECC_TYPE_R {
-        ECC_TYPE_R::new(((self.bits >> 6) & 0x03) as u8)
+        ECC_TYPE_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
 #[doc = "Error Code Capture Register\n\nThis register you can [`read`]

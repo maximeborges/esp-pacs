@@ -52,7 +52,7 @@ impl<'a> WR_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -90,12 +90,12 @@ impl R {
     #[doc = "Bit 1 - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
     #[inline(always)]
     pub fn serial_in_ep_data_free(&self) -> SERIAL_IN_EP_DATA_FREE_R {
-        SERIAL_IN_EP_DATA_FREE_R::new(((self.bits >> 1) & 0x01) != 0)
+        SERIAL_IN_EP_DATA_FREE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - 1'b1: Indicate there is data in UART Rx FIFO."]
     #[inline(always)]
     pub fn serial_out_ep_data_avail(&self) -> SERIAL_OUT_EP_DATA_AVAIL_R {
-        SERIAL_OUT_EP_DATA_AVAIL_R::new(((self.bits >> 2) & 0x01) != 0)
+        SERIAL_OUT_EP_DATA_AVAIL_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

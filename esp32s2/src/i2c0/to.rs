@@ -94,7 +94,7 @@ impl<'a> TIME_OUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 24 - This is the enable bit for time out control."]
     #[inline(always)]
     pub fn time_out_en(&self) -> TIME_OUT_EN_R {
-        TIME_OUT_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        TIME_OUT_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

@@ -177,12 +177,12 @@ impl R {
     #[doc = "Bit 20 - Set this bit to enable secure boot."]
     #[inline(always)]
     pub fn secure_boot_en(&self) -> SECURE_BOOT_EN_R {
-        SECURE_BOOT_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        SECURE_BOOT_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to enable aggressive secure boot key revocation mode."]
     #[inline(always)]
     pub fn secure_boot_aggressive_revoke(&self) -> SECURE_BOOT_AGGRESSIVE_REVOKE_R {
-        SECURE_BOOT_AGGRESSIVE_REVOKE_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_AGGRESSIVE_REVOKE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 22:27 - Reserved (used for four backups method)."]
     #[inline(always)]

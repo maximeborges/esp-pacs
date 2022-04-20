@@ -57,7 +57,7 @@ impl<'a> APB_SARADC_FILTER_FACTOR1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 26)) | ((value as u32 & 0x07) << 26);
+        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> APB_SARADC_FILTER_FACTOR0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 29)) | ((value as u32 & 0x07) << 29);
+        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 26:28 - Factor of saradc filter1"]
     #[inline(always)]
     pub fn apb_saradc_filter_factor1(&self) -> APB_SARADC_FILTER_FACTOR1_R {
-        APB_SARADC_FILTER_FACTOR1_R::new(((self.bits >> 26) & 0x07) as u8)
+        APB_SARADC_FILTER_FACTOR1_R::new(((self.bits >> 26) & 7) as u8)
     }
     #[doc = "Bits 29:31 - Factor of saradc filter0"]
     #[inline(always)]
     pub fn apb_saradc_filter_factor0(&self) -> APB_SARADC_FILTER_FACTOR0_R {
-        APB_SARADC_FILTER_FACTOR0_R::new(((self.bits >> 29) & 0x07) as u8)
+        APB_SARADC_FILTER_FACTOR0_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
 impl W {

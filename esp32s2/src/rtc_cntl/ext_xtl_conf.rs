@@ -67,7 +67,7 @@ impl<'a> XTAL32K_WDT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> XTAL32K_WDT_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> XTAL32K_WDT_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> XTAL32K_EXT_CLK_FO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> XTAL32K_AUTO_BACKUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> XTAL32K_AUTO_RESTART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> XTAL32K_AUTO_RETURN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> XTAL32K_XPD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> ENCKINIT_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> DBUF_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -427,7 +427,7 @@ impl<'a> DGM_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 10)) | ((value as u32 & 0x07) << 10);
+        self.w.bits = (self.w.bits & !(7 << 10)) | ((value as u32 & 7) << 10);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> DRES_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u32 & 0x07) << 13);
+        self.w.bits = (self.w.bits & !(7 << 13)) | ((value as u32 & 7) << 13);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> XPD_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -518,7 +518,7 @@ impl<'a> DAC_XTAL_32K_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 17)) | ((value as u32 & 0x07) << 17);
+        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
         self.w
     }
 }
@@ -570,7 +570,7 @@ impl<'a> XTAL32K_GPIO_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -607,7 +607,7 @@ impl<'a> XTL_EXT_CTR_LV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -644,7 +644,7 @@ impl<'a> XTL_EXT_CTR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -652,92 +652,92 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable the 32 kHz crystal watchdog."]
     #[inline(always)]
     pub fn xtal32k_wdt_en(&self) -> XTAL32K_WDT_EN_R {
-        XTAL32K_WDT_EN_R::new((self.bits & 0x01) != 0)
+        XTAL32K_WDT_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to FPU the 32 kHz crystal watchdog clock."]
     #[inline(always)]
     pub fn xtal32k_wdt_clk_fo(&self) -> XTAL32K_WDT_CLK_FO_R {
-        XTAL32K_WDT_CLK_FO_R::new(((self.bits >> 1) & 0x01) != 0)
+        XTAL32K_WDT_CLK_FO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to reset the 32 kHz crystal watchdog by SW."]
     #[inline(always)]
     pub fn xtal32k_wdt_reset(&self) -> XTAL32K_WDT_RESET_R {
-        XTAL32K_WDT_RESET_R::new(((self.bits >> 2) & 0x01) != 0)
+        XTAL32K_WDT_RESET_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to FPU the external clock of 32 kHz crystal."]
     #[inline(always)]
     pub fn xtal32k_ext_clk_fo(&self) -> XTAL32K_EXT_CLK_FO_R {
-        XTAL32K_EXT_CLK_FO_R::new(((self.bits >> 3) & 0x01) != 0)
+        XTAL32K_EXT_CLK_FO_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to switch to the backup clock when the 32 kHz crystal is dead."]
     #[inline(always)]
     pub fn xtal32k_auto_backup(&self) -> XTAL32K_AUTO_BACKUP_R {
-        XTAL32K_AUTO_BACKUP_R::new(((self.bits >> 4) & 0x01) != 0)
+        XTAL32K_AUTO_BACKUP_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to restart the 32 kHz crystal automatically when the 32 kHz crystal is dead."]
     #[inline(always)]
     pub fn xtal32k_auto_restart(&self) -> XTAL32K_AUTO_RESTART_R {
-        XTAL32K_AUTO_RESTART_R::new(((self.bits >> 5) & 0x01) != 0)
+        XTAL32K_AUTO_RESTART_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to switch back to 32 kHz crystal when the 32 kHz crystal is restarted."]
     #[inline(always)]
     pub fn xtal32k_auto_return(&self) -> XTAL32K_AUTO_RETURN_R {
-        XTAL32K_AUTO_RETURN_R::new(((self.bits >> 6) & 0x01) != 0)
+        XTAL32K_AUTO_RETURN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
     #[inline(always)]
     pub fn xtal32k_xpd_force(&self) -> XTAL32K_XPD_FORCE_R {
-        XTAL32K_XPD_FORCE_R::new(((self.bits >> 7) & 0x01) != 0)
+        XTAL32K_XPD_FORCE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Applies an internal clock to help the 32 kHz crystal to start."]
     #[inline(always)]
     pub fn enckinit_xtal_32k(&self) -> ENCKINIT_XTAL_32K_R {
-        ENCKINIT_XTAL_32K_R::new(((self.bits >> 8) & 0x01) != 0)
+        ENCKINIT_XTAL_32K_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 0: single-end buffer 1: differential buffer"]
     #[inline(always)]
     pub fn dbuf_xtal_32k(&self) -> DBUF_XTAL_32K_R {
-        DBUF_XTAL_32K_R::new(((self.bits >> 9) & 0x01) != 0)
+        DBUF_XTAL_32K_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:12 - xtal_32k gm control"]
     #[inline(always)]
     pub fn dgm_xtal_32k(&self) -> DGM_XTAL_32K_R {
-        DGM_XTAL_32K_R::new(((self.bits >> 10) & 0x07) as u8)
+        DGM_XTAL_32K_R::new(((self.bits >> 10) & 7) as u8)
     }
     #[doc = "Bits 13:15 - DRES_XTAL_32K"]
     #[inline(always)]
     pub fn dres_xtal_32k(&self) -> DRES_XTAL_32K_R {
-        DRES_XTAL_32K_R::new(((self.bits >> 13) & 0x07) as u8)
+        DRES_XTAL_32K_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bit 16 - XPD_XTAL_32K"]
     #[inline(always)]
     pub fn xpd_xtal_32k(&self) -> XPD_XTAL_32K_R {
-        XPD_XTAL_32K_R::new(((self.bits >> 16) & 0x01) != 0)
+        XPD_XTAL_32K_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:19 - DAC_XTAL_32K"]
     #[inline(always)]
     pub fn dac_xtal_32k(&self) -> DAC_XTAL_32K_R {
-        DAC_XTAL_32K_R::new(((self.bits >> 17) & 0x07) as u8)
+        DAC_XTAL_32K_R::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:22 - Stores the status of the 32 kHz watchdog."]
     #[inline(always)]
     pub fn wdt_state(&self) -> WDT_STATE_R {
-        WDT_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
+        WDT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
     #[inline(always)]
     pub fn xtal32k_gpio_sel(&self) -> XTAL32K_GPIO_SEL_R {
-        XTAL32K_GPIO_SEL_R::new(((self.bits >> 23) & 0x01) != 0)
+        XTAL32K_GPIO_SEL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 30 - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
     #[inline(always)]
     pub fn xtl_ext_ctr_lv(&self) -> XTL_EXT_CTR_LV_R {
-        XTL_EXT_CTR_LV_R::new(((self.bits >> 30) & 0x01) != 0)
+        XTL_EXT_CTR_LV_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Enables the GPIO to power down the crystal oscillator."]
     #[inline(always)]
     pub fn xtl_ext_ctr_en(&self) -> XTL_EXT_CTR_EN_R {
-        XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

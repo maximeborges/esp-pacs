@@ -67,7 +67,7 @@ impl<'a> SPI_SMEM_CS_SETUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPI_SMEM_CS_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> SPI_SMEM_ECC_CS_HOLD_TIME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> SPI_SMEM_ECC_SKIP_PAGE_CORNER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> SPI_SMEM_ECC_16TO18_BYTE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -296,7 +296,7 @@ impl<'a> SPI_SMEM_ECC_ERR_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -333,12 +333,12 @@ impl R {
     #[doc = "Bit 0 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
     pub fn spi_smem_cs_setup(&self) -> SPI_SMEM_CS_SETUP_R {
-        SPI_SMEM_CS_SETUP_R::new((self.bits & 0x01) != 0)
+        SPI_SMEM_CS_SETUP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
     pub fn spi_smem_cs_hold(&self) -> SPI_SMEM_CS_HOLD_R {
-        SPI_SMEM_CS_HOLD_R::new(((self.bits >> 1) & 0x01) != 0)
+        SPI_SMEM_CS_HOLD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:6 - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
@@ -353,22 +353,22 @@ impl R {
     #[doc = "Bits 12:14 - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the MSPI CS hold cycles in ECC mode when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_cs_hold_time(&self) -> SPI_SMEM_ECC_CS_HOLD_TIME_R {
-        SPI_SMEM_ECC_CS_HOLD_TIME_R::new(((self.bits >> 12) & 0x07) as u8)
+        SPI_SMEM_ECC_CS_HOLD_TIME_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bit 15 - 1: MSPI skips page corner when accesses to external RAM. 0: Not skip page corner when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_skip_page_corner(&self) -> SPI_SMEM_ECC_SKIP_PAGE_CORNER_R {
-        SPI_SMEM_ECC_SKIP_PAGE_CORNER_R::new(((self.bits >> 15) & 0x01) != 0)
+        SPI_SMEM_ECC_SKIP_PAGE_CORNER_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_16to18_byte_en(&self) -> SPI_SMEM_ECC_16TO18_BYTE_EN_R {
-        SPI_SMEM_ECC_16TO18_BYTE_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        SPI_SMEM_ECC_16TO18_BYTE_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_err_int_en(&self) -> SPI_SMEM_ECC_ERR_INT_EN_R {
-        SPI_SMEM_ECC_ERR_INT_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        SPI_SMEM_ECC_ERR_INT_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\]
  + 1) MSPI core clock cycles."]

@@ -49,7 +49,7 @@ impl R {
     pub fn core_1_dram0_pms_monitor_violate_status_wr(
         &self,
     ) -> CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-        CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R::new((self.bits & 0x01) != 0)
+        CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:16 - recorded core1 dram0 byteen status."]
     #[inline(always)]

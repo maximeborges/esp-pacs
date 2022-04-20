@@ -123,7 +123,7 @@ impl<'a> HSTIMER1_PAUSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -160,7 +160,7 @@ impl<'a> HSTIMER1_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -197,7 +197,7 @@ impl<'a> TICK_SEL_HSTIMER1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -243,17 +243,17 @@ impl R {
     #[doc = "Bit 23 - This bit is used to pause the counter in high speed timer1"]
     #[inline(always)]
     pub fn hstimer1_pause(&self) -> HSTIMER1_PAUSE_R {
-        HSTIMER1_PAUSE_R::new(((self.bits >> 23) & 0x01) != 0)
+        HSTIMER1_PAUSE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - This bit is used to reset high speed timer1 the counter will be 0 after reset."]
     #[inline(always)]
     pub fn hstimer1_rst(&self) -> HSTIMER1_RST_R {
-        HSTIMER1_RST_R::new(((self.bits >> 24) & 0x01) != 0)
+        HSTIMER1_RST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - This bit is used to choose apb_clk or ref_tick for high speed timer1. 1'b1:apb_clk 0:ref_tick"]
     #[inline(always)]
     pub fn tick_sel_hstimer1(&self) -> TICK_SEL_HSTIMER1_R {
-        TICK_SEL_HSTIMER1_R::new(((self.bits >> 25) & 0x01) != 0)
+        TICK_SEL_HSTIMER1_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bits 31:35"]
     #[inline(always)]

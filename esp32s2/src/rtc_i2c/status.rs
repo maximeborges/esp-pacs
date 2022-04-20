@@ -167,37 +167,37 @@ impl R {
     #[doc = "Bit 0 - The received ACK value. 0: ACK. 1: NACK."]
     #[inline(always)]
     pub fn ack_rec(&self) -> ACK_REC_R {
-        ACK_REC_R::new((self.bits & 0x01) != 0)
+        ACK_REC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 0: master writes to slave. 1: master reads from slave."]
     #[inline(always)]
     pub fn slave_rw(&self) -> SLAVE_RW_R {
-        SLAVE_RW_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLAVE_RW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - When the RTC I2C loses control of SCL line, the register changes to 1."]
     #[inline(always)]
     pub fn arb_lost(&self) -> ARB_LOST_R {
-        ARB_LOST_R::new(((self.bits >> 2) & 0x01) != 0)
+        ARB_LOST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 0: RTC I2C bus is in idle state. 1: RTC I2C bus is busy transferring data."]
     #[inline(always)]
     pub fn bus_busy(&self) -> BUS_BUSY_R {
-        BUS_BUSY_R::new(((self.bits >> 3) & 0x01) != 0)
+        BUS_BUSY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - When the address sent by the master matches the address of the slave, then this bit will be set."]
     #[inline(always)]
     pub fn slave_addressed(&self) -> SLAVE_ADDRESSED_R {
-        SLAVE_ADDRESSED_R::new(((self.bits >> 4) & 0x01) != 0)
+        SLAVE_ADDRESSED_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This field changes to 1 when one byte is transferred."]
     #[inline(always)]
     pub fn byte_trans(&self) -> BYTE_TRANS_R {
-        BYTE_TRANS_R::new(((self.bits >> 5) & 0x01) != 0)
+        BYTE_TRANS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Indicate which operation is working."]
     #[inline(always)]
     pub fn op_cnt(&self) -> OP_CNT_R {
-        OP_CNT_R::new(((self.bits >> 6) & 0x03) as u8)
+        OP_CNT_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 16:23 - shifter content"]
     #[inline(always)]
@@ -207,12 +207,12 @@ impl R {
     #[doc = "Bits 24:26 - i2c last main status"]
     #[inline(always)]
     pub fn scl_main_state_last(&self) -> SCL_MAIN_STATE_LAST_R {
-        SCL_MAIN_STATE_LAST_R::new(((self.bits >> 24) & 0x07) as u8)
+        SCL_MAIN_STATE_LAST_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bits 28:30 - scl last status"]
     #[inline(always)]
     pub fn scl_state_last(&self) -> SCL_STATE_LAST_R {
-        SCL_STATE_LAST_R::new(((self.bits >> 28) & 0x07) as u8)
+        SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 #[doc = "RTC I2C status\n\nThis register you can [`read`]

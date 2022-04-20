@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bit 16 - current PWM timer2 counter direction, 0: increment 1: decrement"]
     #[inline(always)]
     pub fn timer2_direction(&self) -> TIMER2_DIRECTION_R {
-        TIMER2_DIRECTION_R::new(((self.bits >> 16) & 0x01) != 0)
+        TIMER2_DIRECTION_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 #[doc = "PWM timer2 status register.\n\nThis register you can [`read`]

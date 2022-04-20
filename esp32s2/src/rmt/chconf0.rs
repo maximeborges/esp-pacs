@@ -111,7 +111,7 @@ impl<'a> MEM_SIZE_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 24)) | ((value as u32 & 0x07) << 24);
+        self.w.bits = (self.w.bits & !(7 << 24)) | ((value as u32 & 7) << 24);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> CARRIER_EFF_EN_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> CARRIER_EN_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> CARRIER_OUT_LV_CH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -240,22 +240,22 @@ impl R {
     #[doc = "Bits 24:26 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
     pub fn mem_size_ch(&self) -> MEM_SIZE_CH_R {
-        MEM_SIZE_CH_R::new(((self.bits >> 24) & 0x07) as u8)
+        MEM_SIZE_CH_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bit 27 - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
     #[inline(always)]
     pub fn carrier_eff_en_ch(&self) -> CARRIER_EFF_EN_CH_R {
-        CARRIER_EFF_EN_CH_R::new(((self.bits >> 27) & 0x01) != 0)
+        CARRIER_EFF_EN_CH_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
     pub fn carrier_en_ch(&self) -> CARRIER_EN_CH_R {
-        CARRIER_EN_CH_R::new(((self.bits >> 28) & 0x01) != 0)
+        CARRIER_EN_CH_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
     pub fn carrier_out_lv_ch(&self) -> CARRIER_OUT_LV_CH_R {
-        CARRIER_OUT_LV_CH_R::new(((self.bits >> 29) & 0x01) != 0)
+        CARRIER_OUT_LV_CH_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

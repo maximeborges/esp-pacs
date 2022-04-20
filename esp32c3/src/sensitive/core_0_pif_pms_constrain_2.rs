@@ -57,7 +57,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RMT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 10)) | ((value as u32 & 0x03) << 10);
+        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BB_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | ((value as u32 & 0x03) << 26);
+        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -281,57 +281,57 @@ impl R {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_0_bt"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_bt(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_R::new((self.bits & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_0_i2c_ext0"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_i2c_ext0(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R::new(((self.bits >> 4) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_0_uhci0"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_uhci0(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R::new(((self.bits >> 6) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_0_rmt"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_rmt(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R::new(((self.bits >> 10) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_0_ledc"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_ledc(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R::new(((self.bits >> 16) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_0_bb"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_bb(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BB_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BB_R::new(((self.bits >> 22) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BB_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_0_timergroup"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_timergroup(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R::new(((self.bits >> 26) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_0_timergroup1"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_timergroup1(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R::new(((self.bits >> 28) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_0_systimer"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_systimer(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R {
-        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R::new(((self.bits >> 30) & 0x03) as u8)
+        CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

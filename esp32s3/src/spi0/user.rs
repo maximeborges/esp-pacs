@@ -67,7 +67,7 @@ impl<'a> CS_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CS_SETUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CK_OUT_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> USR_DUMMY_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> USR_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
     pub fn cs_hold(&self) -> CS_HOLD_R {
-        CS_HOLD_R::new(((self.bits >> 6) & 0x01) != 0)
+        CS_HOLD_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
     pub fn cs_setup(&self) -> CS_SETUP_R {
-        CS_SETUP_R::new(((self.bits >> 7) & 0x01) != 0)
+        CS_SETUP_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
     pub fn ck_out_edge(&self) -> CK_OUT_EDGE_R {
-        CK_OUT_EDGE_R::new(((self.bits >> 9) & 0x01) != 0)
+        CK_OUT_EDGE_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 26 - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
     #[inline(always)]
     pub fn usr_dummy_idle(&self) -> USR_DUMMY_IDLE_R {
-        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 0x01) != 0)
+        USR_DUMMY_IDLE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 29 - This bit enable the DUMMY phase of an SPI transfer."]
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
-        USR_DUMMY_R::new(((self.bits >> 29) & 0x01) != 0)
+        USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

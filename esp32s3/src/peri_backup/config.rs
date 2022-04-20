@@ -82,7 +82,7 @@ impl<'a> ADDR_MAP_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> TO_MEM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -267,12 +267,12 @@ impl R {
     #[doc = "Bits 0:2 - x"]
     #[inline(always)]
     pub fn flow_err(&self) -> FLOW_ERR_R {
-        FLOW_ERR_R::new((self.bits & 0x07) as u8)
+        FLOW_ERR_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - x"]
     #[inline(always)]
     pub fn addr_map_mode(&self) -> ADDR_MAP_MODE_R {
-        ADDR_MAP_MODE_R::new(((self.bits >> 3) & 0x01) != 0)
+        ADDR_MAP_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:8 - x"]
     #[inline(always)]
@@ -292,12 +292,12 @@ impl R {
     #[doc = "Bit 30 - x"]
     #[inline(always)]
     pub fn to_mem(&self) -> TO_MEM_R {
-        TO_MEM_R::new(((self.bits >> 30) & 0x01) != 0)
+        TO_MEM_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - x"]
     #[inline(always)]
     pub fn ena(&self) -> ENA_R {
-        ENA_R::new(((self.bits >> 31) & 0x01) != 0)
+        ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

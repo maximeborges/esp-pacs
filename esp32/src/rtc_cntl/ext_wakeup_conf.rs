@@ -67,7 +67,7 @@ impl<'a> EXT_WAKEUP0_LV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> EXT_WAKEUP1_LV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 30 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
     pub fn ext_wakeup0_lv(&self) -> EXT_WAKEUP0_LV_R {
-        EXT_WAKEUP0_LV_R::new(((self.bits >> 30) & 0x01) != 0)
+        EXT_WAKEUP0_LV_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
     pub fn ext_wakeup1_lv(&self) -> EXT_WAKEUP1_LV_R {
-        EXT_WAKEUP1_LV_R::new(((self.bits >> 31) & 0x01) != 0)
+        EXT_WAKEUP1_LV_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

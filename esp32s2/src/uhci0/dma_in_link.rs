@@ -94,7 +94,7 @@ impl<'a> INLINK_AUTO_RET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> INLINK_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> INLINK_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> INLINK_RESTART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -233,27 +233,27 @@ impl R {
     #[doc = "Bit 20 - This is the enable bit to return to current receive descriptor's address, when there are some errors in current packet."]
     #[inline(always)]
     pub fn inlink_auto_ret(&self) -> INLINK_AUTO_RET_R {
-        INLINK_AUTO_RET_R::new(((self.bits >> 20) & 0x01) != 0)
+        INLINK_AUTO_RET_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 28 - Set this bit to stop dealing with the receive descriptors."]
     #[inline(always)]
     pub fn inlink_stop(&self) -> INLINK_STOP_R {
-        INLINK_STOP_R::new(((self.bits >> 28) & 0x01) != 0)
+        INLINK_STOP_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set this bit to start dealing with the receive descriptors."]
     #[inline(always)]
     pub fn inlink_start(&self) -> INLINK_START_R {
-        INLINK_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        INLINK_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to restart new receive descriptors."]
     #[inline(always)]
     pub fn inlink_restart(&self) -> INLINK_RESTART_R {
-        INLINK_RESTART_R::new(((self.bits >> 30) & 0x01) != 0)
+        INLINK_RESTART_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: the receive descriptor's FSM is in idle state. 0: the receive descriptor's FSM is working."]
     #[inline(always)]
     pub fn inlink_park(&self) -> INLINK_PARK_R {
-        INLINK_PARK_R::new(((self.bits >> 31) & 0x01) != 0)
+        INLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

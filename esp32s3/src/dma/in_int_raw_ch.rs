@@ -167,52 +167,52 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0."]
     #[inline(always)]
     pub fn in_done_ch_int_raw(&self) -> IN_DONE_CH_INT_RAW_R {
-        IN_DONE_CH_INT_RAW_R::new((self.bits & 0x01) != 0)
+        IN_DONE_CH_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0."]
     #[inline(always)]
     pub fn in_suc_eof_ch_int_raw(&self) -> IN_SUC_EOF_CH_INT_RAW_R {
-        IN_SUC_EOF_CH_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        IN_SUC_EOF_CH_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals, this raw interrupt is reserved."]
     #[inline(always)]
     pub fn in_err_eof_ch_int_raw(&self) -> IN_ERR_EOF_CH_INT_RAW_R {
-        IN_ERR_EOF_CH_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        IN_ERR_EOF_CH_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0."]
     #[inline(always)]
     pub fn in_dscr_err_ch_int_raw(&self) -> IN_DSCR_ERR_CH_INT_RAW_R {
-        IN_DSCR_ERR_CH_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        IN_DSCR_ERR_CH_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 0."]
     #[inline(always)]
     pub fn in_dscr_empty_ch_int_raw(&self) -> IN_DSCR_EMPTY_CH_INT_RAW_R {
-        IN_DSCR_EMPTY_CH_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        IN_DSCR_EMPTY_CH_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The raw interrupt bit turns to high level when received data byte number is up to threshold configured by REG_DMA_INFIFO_FULL_THRS_CH0 in Rx FIFO of channel 0."]
     #[inline(always)]
     pub fn infifo_full_wm_ch_int_raw(&self) -> INFIFO_FULL_WM_CH_INT_RAW_R {
-        INFIFO_FULL_WM_CH_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        INFIFO_FULL_WM_CH_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow."]
     #[inline(always)]
     pub fn infifo_ovf_l1_ch_int_raw(&self) -> INFIFO_OVF_L1_CH_INT_RAW_R {
-        INFIFO_OVF_L1_CH_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        INFIFO_OVF_L1_CH_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow."]
     #[inline(always)]
     pub fn infifo_udf_l1_ch_int_raw(&self) -> INFIFO_UDF_L1_CH_INT_RAW_R {
-        INFIFO_UDF_L1_CH_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        INFIFO_UDF_L1_CH_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - This raw interrupt bit turns to high level when level 3 fifo of Rx channel 0 is overflow."]
     #[inline(always)]
     pub fn infifo_ovf_l3_ch_int_raw(&self) -> INFIFO_OVF_L3_CH_INT_RAW_R {
-        INFIFO_OVF_L3_CH_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        INFIFO_OVF_L3_CH_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - This raw interrupt bit turns to high level when level 3 fifo of Rx channel 0 is underflow."]
     #[inline(always)]
     pub fn infifo_udf_l3_ch_int_raw(&self) -> INFIFO_UDF_L3_CH_INT_RAW_R {
-        INFIFO_UDF_L3_CH_INT_RAW_R::new(((self.bits >> 9) & 0x01) != 0)
+        INFIFO_UDF_L3_CH_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 #[doc = "Raw status interrupt of Rx channel 0\n\nThis register you can [`read`]

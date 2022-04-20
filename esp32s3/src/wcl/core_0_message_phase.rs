@@ -77,7 +77,7 @@ impl R {
     #[doc = "Bit 0 - This bit indicates whether the check is successful"]
     #[inline(always)]
     pub fn core_0_message_match(&self) -> CORE_0_MESSAGE_MATCH_R {
-        CORE_0_MESSAGE_MATCH_R::new((self.bits & 0x01) != 0)
+        CORE_0_MESSAGE_MATCH_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:4 - This field indicates the data to be written next time"]
     #[inline(always)]
@@ -87,12 +87,12 @@ impl R {
     #[doc = "Bit 5 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data"]
     #[inline(always)]
     pub fn core_0_message_dataphase(&self) -> CORE_0_MESSAGE_DATAPHASE_R {
-        CORE_0_MESSAGE_DATAPHASE_R::new(((self.bits >> 5) & 0x01) != 0)
+        CORE_0_MESSAGE_DATAPHASE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address."]
     #[inline(always)]
     pub fn core_0_message_addressphase(&self) -> CORE_0_MESSAGE_ADDRESSPHASE_R {
-        CORE_0_MESSAGE_ADDRESSPHASE_R::new(((self.bits >> 6) & 0x01) != 0)
+        CORE_0_MESSAGE_ADDRESSPHASE_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 #[doc = "Clear writer_buffer status register\n\nThis register you can [`read`]

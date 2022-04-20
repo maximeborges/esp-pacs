@@ -67,7 +67,7 @@ impl<'a> CACHE_DBG_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> IBUS_ACS_MSK_IC_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> IBUS_CNT_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> IC_SYNC_SIZE_FAULT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> IC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> ICACHE_REJECT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> ICACHE_SET_PRELOAD_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> ICACHE_SET_SYNC_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> ICACHE_SET_LOCK_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> DBUS_ACS_MSK_DC_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> DBUS_CNT_OVF_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> DC_SYNC_SIZE_FAULT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> DC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> DCACHE_WRITE_FLASH_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> DCACHE_REJECT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> DCACHE_SET_PRELOAD_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> DCACHE_SET_SYNC_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> DCACHE_SET_LOCK_ILG_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> MMU_ENTRY_FAULT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -741,97 +741,97 @@ impl R {
     #[doc = "Bit 0 - The bit is used to activate the cache track function. 1: enable, 0: disable."]
     #[inline(always)]
     pub fn cache_dbg_en(&self) -> CACHE_DBG_EN_R {
-        CACHE_DBG_EN_R::new((self.bits & 0x01) != 0)
+        CACHE_DBG_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
     #[inline(always)]
     pub fn ibus_acs_msk_ic_int_ena(&self) -> IBUS_ACS_MSK_IC_INT_ENA_R {
-        IBUS_ACS_MSK_IC_INT_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        IBUS_ACS_MSK_IC_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to enable interrupt by ibus counter overflow."]
     #[inline(always)]
     pub fn ibus_cnt_ovf_int_ena(&self) -> IBUS_CNT_OVF_INT_ENA_R {
-        IBUS_CNT_OVF_INT_ENA_R::new(((self.bits >> 3) & 0x01) != 0)
+        IBUS_CNT_OVF_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bit is used to enable interrupt by manual sync configurations fault."]
     #[inline(always)]
     pub fn ic_sync_size_fault_int_ena(&self) -> IC_SYNC_SIZE_FAULT_INT_ENA_R {
-        IC_SYNC_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        IC_SYNC_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt by manual pre-load configurations fault."]
     #[inline(always)]
     pub fn ic_preload_size_fault_int_ena(&self) -> IC_PRELOAD_SIZE_FAULT_INT_ENA_R {
-        IC_PRELOAD_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 5) & 0x01) != 0)
+        IC_PRELOAD_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     pub fn icache_reject_int_ena(&self) -> ICACHE_REJECT_INT_ENA_R {
-        ICACHE_REJECT_INT_ENA_R::new(((self.bits >> 6) & 0x01) != 0)
+        ICACHE_REJECT_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The bit is used to enable interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn icache_set_preload_ilg_int_ena(&self) -> ICACHE_SET_PRELOAD_ILG_INT_ENA_R {
-        ICACHE_SET_PRELOAD_ILG_INT_ENA_R::new(((self.bits >> 7) & 0x01) != 0)
+        ICACHE_SET_PRELOAD_ILG_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The bit is used to enable interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn icache_set_sync_ilg_int_ena(&self) -> ICACHE_SET_SYNC_ILG_INT_ENA_R {
-        ICACHE_SET_SYNC_ILG_INT_ENA_R::new(((self.bits >> 8) & 0x01) != 0)
+        ICACHE_SET_SYNC_ILG_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bit is used to enable interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
     #[inline(always)]
     pub fn icache_set_lock_ilg_int_ena(&self) -> ICACHE_SET_LOCK_ILG_INT_ENA_R {
-        ICACHE_SET_LOCK_ILG_INT_ENA_R::new(((self.bits >> 9) & 0x01) != 0)
+        ICACHE_SET_LOCK_ILG_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
     #[inline(always)]
     pub fn dbus_acs_msk_dc_int_ena(&self) -> DBUS_ACS_MSK_DC_INT_ENA_R {
-        DBUS_ACS_MSK_DC_INT_ENA_R::new(((self.bits >> 10) & 0x01) != 0)
+        DBUS_ACS_MSK_DC_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The bit is used to enable interrupt by dbus counter overflow."]
     #[inline(always)]
     pub fn dbus_cnt_ovf_int_ena(&self) -> DBUS_CNT_OVF_INT_ENA_R {
-        DBUS_CNT_OVF_INT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        DBUS_CNT_OVF_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The bit is used to enable interrupt by manual sync configurations fault."]
     #[inline(always)]
     pub fn dc_sync_size_fault_int_ena(&self) -> DC_SYNC_SIZE_FAULT_INT_ENA_R {
-        DC_SYNC_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 12) & 0x01) != 0)
+        DC_SYNC_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The bit is used to enable interrupt by manual pre-load configurations fault."]
     #[inline(always)]
     pub fn dc_preload_size_fault_int_ena(&self) -> DC_PRELOAD_SIZE_FAULT_INT_ENA_R {
-        DC_PRELOAD_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 13) & 0x01) != 0)
+        DC_PRELOAD_SIZE_FAULT_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The bit is used to enable interrupt by dcache trying to write flash."]
     #[inline(always)]
     pub fn dcache_write_flash_int_ena(&self) -> DCACHE_WRITE_FLASH_INT_ENA_R {
-        DCACHE_WRITE_FLASH_INT_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        DCACHE_WRITE_FLASH_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
     pub fn dcache_reject_int_ena(&self) -> DCACHE_REJECT_INT_ENA_R {
-        DCACHE_REJECT_INT_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        DCACHE_REJECT_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - The bit is used to enable interrupt by illegal writing preload registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_preload_ilg_int_ena(&self) -> DCACHE_SET_PRELOAD_ILG_INT_ENA_R {
-        DCACHE_SET_PRELOAD_ILG_INT_ENA_R::new(((self.bits >> 16) & 0x01) != 0)
+        DCACHE_SET_PRELOAD_ILG_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - The bit is used to enable interrupt by illegal writing sync registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_sync_ilg_int_ena(&self) -> DCACHE_SET_SYNC_ILG_INT_ENA_R {
-        DCACHE_SET_SYNC_ILG_INT_ENA_R::new(((self.bits >> 17) & 0x01) != 0)
+        DCACHE_SET_SYNC_ILG_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - The bit is used to enable interrupt by illegal writing lock registers of dcache while dcache is busy to issue lock,sync or pre-load operations."]
     #[inline(always)]
     pub fn dcache_set_lock_ilg_int_ena(&self) -> DCACHE_SET_LOCK_ILG_INT_ENA_R {
-        DCACHE_SET_LOCK_ILG_INT_ENA_R::new(((self.bits >> 18) & 0x01) != 0)
+        DCACHE_SET_LOCK_ILG_INT_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - The bit is used to enable interrupt by mmu entry fault."]
     #[inline(always)]
     pub fn mmu_entry_fault_int_ena(&self) -> MMU_ENTRY_FAULT_INT_ENA_R {
-        MMU_ENTRY_FAULT_INT_ENA_R::new(((self.bits >> 19) & 0x01) != 0)
+        MMU_ENTRY_FAULT_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
 impl W {

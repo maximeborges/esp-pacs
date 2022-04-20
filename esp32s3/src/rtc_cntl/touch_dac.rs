@@ -57,7 +57,7 @@ impl<'a> TOUCH_PAD9_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 2)) | ((value as u32 & 0x07) << 2);
+        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u32 & 7) << 2);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TOUCH_PAD8_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> TOUCH_PAD7_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
+        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> TOUCH_PAD6_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> TOUCH_PAD5_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 14)) | ((value as u32 & 0x07) << 14);
+        self.w.bits = (self.w.bits & !(7 << 14)) | ((value as u32 & 7) << 14);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> TOUCH_PAD4_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 17)) | ((value as u32 & 0x07) << 17);
+        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> TOUCH_PAD3_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
+        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> TOUCH_PAD2_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -273,7 +273,7 @@ impl<'a> TOUCH_PAD1_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 26)) | ((value as u32 & 0x07) << 26);
+        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
         self.w
     }
 }
@@ -300,7 +300,7 @@ impl<'a> TOUCH_PAD0_DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 29)) | ((value as u32 & 0x07) << 29);
+        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
         self.w
     }
 }
@@ -308,52 +308,52 @@ impl R {
     #[doc = "Bits 2:4 - configure touch pad dac9"]
     #[inline(always)]
     pub fn touch_pad9_dac(&self) -> TOUCH_PAD9_DAC_R {
-        TOUCH_PAD9_DAC_R::new(((self.bits >> 2) & 0x07) as u8)
+        TOUCH_PAD9_DAC_R::new(((self.bits >> 2) & 7) as u8)
     }
     #[doc = "Bits 5:7 - configure touch pad dac8"]
     #[inline(always)]
     pub fn touch_pad8_dac(&self) -> TOUCH_PAD8_DAC_R {
-        TOUCH_PAD8_DAC_R::new(((self.bits >> 5) & 0x07) as u8)
+        TOUCH_PAD8_DAC_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bits 8:10 - configure touch pad dac7"]
     #[inline(always)]
     pub fn touch_pad7_dac(&self) -> TOUCH_PAD7_DAC_R {
-        TOUCH_PAD7_DAC_R::new(((self.bits >> 8) & 0x07) as u8)
+        TOUCH_PAD7_DAC_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 11:13 - configure touch pad dac6"]
     #[inline(always)]
     pub fn touch_pad6_dac(&self) -> TOUCH_PAD6_DAC_R {
-        TOUCH_PAD6_DAC_R::new(((self.bits >> 11) & 0x07) as u8)
+        TOUCH_PAD6_DAC_R::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bits 14:16 - configure touch pad dac5"]
     #[inline(always)]
     pub fn touch_pad5_dac(&self) -> TOUCH_PAD5_DAC_R {
-        TOUCH_PAD5_DAC_R::new(((self.bits >> 14) & 0x07) as u8)
+        TOUCH_PAD5_DAC_R::new(((self.bits >> 14) & 7) as u8)
     }
     #[doc = "Bits 17:19 - configure touch pad dac4"]
     #[inline(always)]
     pub fn touch_pad4_dac(&self) -> TOUCH_PAD4_DAC_R {
-        TOUCH_PAD4_DAC_R::new(((self.bits >> 17) & 0x07) as u8)
+        TOUCH_PAD4_DAC_R::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:22 - configure touch pad dac3"]
     #[inline(always)]
     pub fn touch_pad3_dac(&self) -> TOUCH_PAD3_DAC_R {
-        TOUCH_PAD3_DAC_R::new(((self.bits >> 20) & 0x07) as u8)
+        TOUCH_PAD3_DAC_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:25 - configure touch pad dac2"]
     #[inline(always)]
     pub fn touch_pad2_dac(&self) -> TOUCH_PAD2_DAC_R {
-        TOUCH_PAD2_DAC_R::new(((self.bits >> 23) & 0x07) as u8)
+        TOUCH_PAD2_DAC_R::new(((self.bits >> 23) & 7) as u8)
     }
     #[doc = "Bits 26:28 - configure touch pad dac1"]
     #[inline(always)]
     pub fn touch_pad1_dac(&self) -> TOUCH_PAD1_DAC_R {
-        TOUCH_PAD1_DAC_R::new(((self.bits >> 26) & 0x07) as u8)
+        TOUCH_PAD1_DAC_R::new(((self.bits >> 26) & 7) as u8)
     }
     #[doc = "Bits 29:31 - configure touch pad dac0"]
     #[inline(always)]
     pub fn touch_pad0_dac(&self) -> TOUCH_PAD0_DAC_R {
-        TOUCH_PAD0_DAC_R::new(((self.bits >> 29) & 0x07) as u8)
+        TOUCH_PAD0_DAC_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
 impl W {

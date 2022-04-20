@@ -57,7 +57,7 @@ impl<'a> CCLKIN_EDGE_DRV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> CCLKIN_EDGE_SAM_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> CCLKIN_EDGE_SLF_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -229,7 +229,7 @@ impl<'a> ESDIO_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -266,7 +266,7 @@ impl<'a> ESD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -303,7 +303,7 @@ impl<'a> CCLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -311,17 +311,17 @@ impl R {
     #[doc = "Bits 0:2 - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     pub fn cclkin_edge_drv_sel(&self) -> CCLKIN_EDGE_DRV_SEL_R {
-        CCLKIN_EDGE_DRV_SEL_R::new((self.bits & 0x07) as u8)
+        CCLKIN_EDGE_DRV_SEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     pub fn cclkin_edge_sam_sel(&self) -> CCLKIN_EDGE_SAM_SEL_R {
-        CCLKIN_EDGE_SAM_SEL_R::new(((self.bits >> 3) & 0x07) as u8)
+        CCLKIN_EDGE_SAM_SEL_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
     pub fn cclkin_edge_slf_sel(&self) -> CCLKIN_EDGE_SLF_SEL_R {
-        CCLKIN_EDGE_SLF_SEL_R::new(((self.bits >> 6) & 0x07) as u8)
+        CCLKIN_EDGE_SLF_SEL_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bits 9:12 - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
     #[inline(always)]
@@ -341,17 +341,17 @@ impl R {
     #[doc = "Bit 21 - Enable esdio mode."]
     #[inline(always)]
     pub fn esdio_mode(&self) -> ESDIO_MODE_R {
-        ESDIO_MODE_R::new(((self.bits >> 21) & 0x01) != 0)
+        ESDIO_MODE_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Enable esd mode."]
     #[inline(always)]
     pub fn esd_mode(&self) -> ESD_MODE_R {
-        ESD_MODE_R::new(((self.bits >> 22) & 0x01) != 0)
+        ESD_MODE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Sdio clock enable"]
     #[inline(always)]
     pub fn cclk_en(&self) -> CCLK_EN_R {
-        CCLK_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        CCLK_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> TRANS_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> INT_RD_BUF_DONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> INT_WR_BUF_DONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> INT_RD_DMA_DONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> INT_WR_DMA_DONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> INT_TRANS_DONE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> INT_DMA_SEG_TRANS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> SEG_MAGIC_ERR_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -378,7 +378,7 @@ impl<'a> TRANS_DONE_AUTO_CLR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -415,7 +415,7 @@ impl<'a> MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -452,7 +452,7 @@ impl<'a> SOFT_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -460,42 +460,42 @@ impl R {
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn trans_done(&self) -> TRANS_DONE_R {
-        TRANS_DONE_R::new(((self.bits >> 4) & 0x01) != 0)
+        TRANS_DONE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_rd_buf_done_en(&self) -> INT_RD_BUF_DONE_EN_R {
-        INT_RD_BUF_DONE_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        INT_RD_BUF_DONE_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_wr_buf_done_en(&self) -> INT_WR_BUF_DONE_EN_R {
-        INT_WR_BUF_DONE_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        INT_WR_BUF_DONE_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_rd_dma_done_en(&self) -> INT_RD_DMA_DONE_EN_R {
-        INT_RD_DMA_DONE_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        INT_RD_DMA_DONE_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_wr_dma_done_en(&self) -> INT_WR_DMA_DONE_EN_R {
-        INT_WR_DMA_DONE_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        INT_WR_DMA_DONE_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_trans_done_en(&self) -> INT_TRANS_DONE_EN_R {
-        INT_TRANS_DONE_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        INT_TRANS_DONE_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn int_dma_seg_trans_en(&self) -> INT_DMA_SEG_TRANS_EN_R {
-        INT_DMA_SEG_TRANS_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        INT_DMA_SEG_TRANS_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
     #[inline(always)]
     pub fn seg_magic_err_int_en(&self) -> SEG_MAGIC_ERR_INT_EN_R {
-        SEG_MAGIC_ERR_INT_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        SEG_MAGIC_ERR_INT_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 23:26 - The operations counter in both the master mode and the slave mode."]
     #[inline(always)]
@@ -505,17 +505,17 @@ impl R {
     #[doc = "Bit 29 - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn trans_done_auto_clr_en(&self) -> TRANS_DONE_AUTO_CLR_EN_R {
-        TRANS_DONE_AUTO_CLR_EN_R::new(((self.bits >> 29) & 0x01) != 0)
+        TRANS_DONE_AUTO_CLR_EN_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set SPI work mode. 1: slave mode 0: master mode."]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new(((self.bits >> 30) & 0x01) != 0)
+        MODE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
     #[inline(always)]
     pub fn soft_reset(&self) -> SOFT_RESET_R {
-        SOFT_RESET_R::new(((self.bits >> 31) & 0x01) != 0)
+        SOFT_RESET_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

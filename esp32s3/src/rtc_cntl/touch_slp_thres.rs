@@ -94,7 +94,7 @@ impl<'a> TOUCH_SLP_APPROACH_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl R {
     #[doc = "Bit 26 - sleep pad approach function enable"]
     #[inline(always)]
     pub fn touch_slp_approach_en(&self) -> TOUCH_SLP_APPROACH_EN_R {
-        TOUCH_SLP_APPROACH_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        TOUCH_SLP_APPROACH_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 27:31 - configure which pad as slp pad"]
     #[inline(always)]

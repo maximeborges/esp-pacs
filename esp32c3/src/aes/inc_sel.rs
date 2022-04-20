@@ -67,7 +67,7 @@ impl<'a> INC_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - This bit decides the standard incrementing function. 0: INC32. 1: INC128."]
     #[inline(always)]
     pub fn inc_sel(&self) -> INC_SEL_R {
-        INC_SEL_R::new((self.bits & 0x01) != 0)
+        INC_SEL_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

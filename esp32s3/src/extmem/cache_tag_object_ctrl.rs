@@ -67,7 +67,7 @@ impl<'a> ICACHE_TAG_OBJECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> DCACHE_TAG_OBJECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
     pub fn icache_tag_object(&self) -> ICACHE_TAG_OBJECT_R {
-        ICACHE_TAG_OBJECT_R::new((self.bits & 0x01) != 0)
+        ICACHE_TAG_OBJECT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
     pub fn dcache_tag_object(&self) -> DCACHE_TAG_OBJECT_R {
-        DCACHE_TAG_OBJECT_R::new(((self.bits >> 1) & 0x01) != 0)
+        DCACHE_TAG_OBJECT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

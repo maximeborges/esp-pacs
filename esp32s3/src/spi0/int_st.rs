@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 2 - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
     pub fn total_trans_end_int_st(&self) -> TOTAL_TRANS_END_INT_ST_R {
-        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        TOTAL_TRANS_END_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - The status bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ecc_err_int_st(&self) -> ECC_ERR_INT_ST_R {
-        ECC_ERR_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        ECC_ERR_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[doc = "SPI1 interrupt status register\n\nThis register you can [`read`]

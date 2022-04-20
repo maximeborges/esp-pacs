@@ -94,7 +94,7 @@ impl<'a> DAC_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> APB_DAC_ALTER_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> APB_DAC_TRANS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> DAC_RESET_FIFO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> APB_DAC_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -255,27 +255,27 @@ impl R {
     #[doc = "Bit 12 - Enable read dac data."]
     #[inline(always)]
     pub fn dac_timer_en(&self) -> DAC_TIMER_EN_R {
-        DAC_TIMER_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        DAC_TIMER_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Enable DAC alter mode."]
     #[inline(always)]
     pub fn apb_dac_alter_mode(&self) -> APB_DAC_ALTER_MODE_R {
-        APB_DAC_ALTER_MODE_R::new(((self.bits >> 13) & 0x01) != 0)
+        APB_DAC_ALTER_MODE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Enable DMA_DAC."]
     #[inline(always)]
     pub fn apb_dac_trans(&self) -> APB_DAC_TRANS_R {
-        APB_DAC_TRANS_R::new(((self.bits >> 14) & 0x01) != 0)
+        APB_DAC_TRANS_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Reset DIG DAC FIFO."]
     #[inline(always)]
     pub fn dac_reset_fifo(&self) -> DAC_RESET_FIFO_R {
-        DAC_RESET_FIFO_R::new(((self.bits >> 15) & 0x01) != 0)
+        DAC_RESET_FIFO_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Reset DIG DAC by software."]
     #[inline(always)]
     pub fn apb_dac_rst(&self) -> APB_DAC_RST_R {
-        APB_DAC_RST_R::new(((self.bits >> 16) & 0x01) != 0)
+        APB_DAC_RST_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

@@ -197,52 +197,52 @@ impl R {
     #[doc = "Bit 0 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_MODE."]
     #[inline(always)]
     pub fn dis_download_mode_err(&self) -> DIS_DOWNLOAD_MODE_ERR_R {
-        DIS_DOWNLOAD_MODE_ERR_R::new((self.bits & 0x01) != 0)
+        DIS_DOWNLOAD_MODE_ERR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_LEGACY_SPI_BOOT."]
     #[inline(always)]
     pub fn dis_legacy_spi_boot_err(&self) -> DIS_LEGACY_SPI_BOOT_ERR_R {
-        DIS_LEGACY_SPI_BOOT_ERR_R::new(((self.bits >> 1) & 0x01) != 0)
+        DIS_LEGACY_SPI_BOOT_ERR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Any bit equal to 1 denotes a programming error in EFUSE_UART_PRINT_CHANNEL."]
     #[inline(always)]
     pub fn uart_print_channel_err(&self) -> UART_PRINT_CHANNEL_ERR_R {
-        UART_PRINT_CHANNEL_ERR_R::new(((self.bits >> 2) & 0x01) != 0)
+        UART_PRINT_CHANNEL_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED3."]
     #[inline(always)]
     pub fn rpt4_reserved3_err(&self) -> RPT4_RESERVED3_ERR_R {
-        RPT4_RESERVED3_ERR_R::new(((self.bits >> 3) & 0x01) != 0)
+        RPT4_RESERVED3_ERR_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Any bit equal to 1 denotes a programming error in EFUSE_DIS_USB_DOWNLOAD_MODE."]
     #[inline(always)]
     pub fn dis_usb_download_mode_err(&self) -> DIS_USB_DOWNLOAD_MODE_ERR_R {
-        DIS_USB_DOWNLOAD_MODE_ERR_R::new(((self.bits >> 4) & 0x01) != 0)
+        DIS_USB_DOWNLOAD_MODE_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Any bit equal to 1 denotes a programming error in EFUSE_ENABLE_SECURITY_DOWNLOAD."]
     #[inline(always)]
     pub fn enable_security_download_err(&self) -> ENABLE_SECURITY_DOWNLOAD_ERR_R {
-        ENABLE_SECURITY_DOWNLOAD_ERR_R::new(((self.bits >> 5) & 0x01) != 0)
+        ENABLE_SECURITY_DOWNLOAD_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:7 - Any bit equal to 1 denotes a programming error in EFUSE_UART_PRINT_CONTROL."]
     #[inline(always)]
     pub fn uart_print_control_err(&self) -> UART_PRINT_CONTROL_ERR_R {
-        UART_PRINT_CONTROL_ERR_R::new(((self.bits >> 6) & 0x03) as u8)
+        UART_PRINT_CONTROL_ERR_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - Any bit equal to 1 denotes a programming error in EFUSE_PIN_POWER_SELECTION."]
     #[inline(always)]
     pub fn pin_power_selection_err(&self) -> PIN_POWER_SELECTION_ERR_R {
-        PIN_POWER_SELECTION_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        PIN_POWER_SELECTION_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Any bit equal to 1 denotes a programming error in EFUSE_FLASH_TYPE."]
     #[inline(always)]
     pub fn flash_type_err(&self) -> FLASH_TYPE_ERR_R {
-        FLASH_TYPE_ERR_R::new(((self.bits >> 9) & 0x01) != 0)
+        FLASH_TYPE_ERR_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Any bit equal to 1 denotes a programming error in EFUSE_FORCE_SEND_RESUME."]
     #[inline(always)]
     pub fn force_send_resume_err(&self) -> FORCE_SEND_RESUME_ERR_R {
-        FORCE_SEND_RESUME_ERR_R::new(((self.bits >> 10) & 0x01) != 0)
+        FORCE_SEND_RESUME_ERR_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:26 - Any bit equal to 1 denotes a programming error in EFUSE_SECURE_VERSION."]
     #[inline(always)]

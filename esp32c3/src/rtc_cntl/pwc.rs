@@ -67,7 +67,7 @@ impl<'a> RTC_PAD_FORCE_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
     pub fn rtc_pad_force_hold(&self) -> RTC_PAD_FORCE_HOLD_R {
-        RTC_PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 0x01) != 0)
+        RTC_PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

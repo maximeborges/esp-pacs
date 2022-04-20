@@ -332,107 +332,107 @@ impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
     pub fn slp_wakeup_int_st(&self) -> SLP_WAKEUP_INT_ST_R {
-        SLP_WAKEUP_INT_ST_R::new((self.bits & 0x01) != 0)
+        SLP_WAKEUP_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - sleep reject interrupt state"]
     #[inline(always)]
     pub fn slp_reject_int_st(&self) -> SLP_REJECT_INT_ST_R {
-        SLP_REJECT_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLP_REJECT_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - SDIO idle interrupt state"]
     #[inline(always)]
     pub fn sdio_idle_int_st(&self) -> SDIO_IDLE_INT_ST_R {
-        SDIO_IDLE_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        SDIO_IDLE_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC WDT interrupt state"]
     #[inline(always)]
     pub fn rtc_wdt_int_st(&self) -> RTC_WDT_INT_ST_R {
-        RTC_WDT_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        RTC_WDT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - enable touch scan done interrupt raw"]
     #[inline(always)]
     pub fn rtc_touch_scan_done_int_st(&self) -> RTC_TOUCH_SCAN_DONE_INT_ST_R {
-        RTC_TOUCH_SCAN_DONE_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        RTC_TOUCH_SCAN_DONE_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ULP-coprocessor interrupt state"]
     #[inline(always)]
     pub fn rtc_ulp_cp_int_st(&self) -> RTC_ULP_CP_INT_ST_R {
-        RTC_ULP_CP_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        RTC_ULP_CP_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - touch done interrupt state"]
     #[inline(always)]
     pub fn rtc_touch_done_int_st(&self) -> RTC_TOUCH_DONE_INT_ST_R {
-        RTC_TOUCH_DONE_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTC_TOUCH_DONE_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - touch active interrupt state"]
     #[inline(always)]
     pub fn rtc_touch_active_int_st(&self) -> RTC_TOUCH_ACTIVE_INT_ST_R {
-        RTC_TOUCH_ACTIVE_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        RTC_TOUCH_ACTIVE_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - touch inactive interrupt state"]
     #[inline(always)]
     pub fn rtc_touch_inactive_int_st(&self) -> RTC_TOUCH_INACTIVE_INT_ST_R {
-        RTC_TOUCH_INACTIVE_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        RTC_TOUCH_INACTIVE_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - brown out interrupt state"]
     #[inline(always)]
     pub fn rtc_brown_out_int_st(&self) -> RTC_BROWN_OUT_INT_ST_R {
-        RTC_BROWN_OUT_INT_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        RTC_BROWN_OUT_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC main timer interrupt state"]
     #[inline(always)]
     pub fn rtc_main_timer_int_st(&self) -> RTC_MAIN_TIMER_INT_ST_R {
-        RTC_MAIN_TIMER_INT_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        RTC_MAIN_TIMER_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - saradc1 interrupt state"]
     #[inline(always)]
     pub fn rtc_saradc1_int_st(&self) -> RTC_SARADC1_INT_ST_R {
-        RTC_SARADC1_INT_ST_R::new(((self.bits >> 11) & 0x01) != 0)
+        RTC_SARADC1_INT_ST_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - tsens interrupt state"]
     #[inline(always)]
     pub fn rtc_tsens_int_st(&self) -> RTC_TSENS_INT_ST_R {
-        RTC_TSENS_INT_ST_R::new(((self.bits >> 12) & 0x01) != 0)
+        RTC_TSENS_INT_ST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - riscV cocpu interrupt state"]
     #[inline(always)]
     pub fn rtc_cocpu_int_st(&self) -> RTC_COCPU_INT_ST_R {
-        RTC_COCPU_INT_ST_R::new(((self.bits >> 13) & 0x01) != 0)
+        RTC_COCPU_INT_ST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - saradc2 interrupt state"]
     #[inline(always)]
     pub fn rtc_saradc2_int_st(&self) -> RTC_SARADC2_INT_ST_R {
-        RTC_SARADC2_INT_ST_R::new(((self.bits >> 14) & 0x01) != 0)
+        RTC_SARADC2_INT_ST_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - super watch dog interrupt state"]
     #[inline(always)]
     pub fn rtc_swd_int_st(&self) -> RTC_SWD_INT_ST_R {
-        RTC_SWD_INT_ST_R::new(((self.bits >> 15) & 0x01) != 0)
+        RTC_SWD_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - xtal32k dead detection interrupt state"]
     #[inline(always)]
     pub fn rtc_xtal32k_dead_int_st(&self) -> RTC_XTAL32K_DEAD_INT_ST_R {
-        RTC_XTAL32K_DEAD_INT_ST_R::new(((self.bits >> 16) & 0x01) != 0)
+        RTC_XTAL32K_DEAD_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - cocpu trap interrupt state"]
     #[inline(always)]
     pub fn rtc_cocpu_trap_int_st(&self) -> RTC_COCPU_TRAP_INT_ST_R {
-        RTC_COCPU_TRAP_INT_ST_R::new(((self.bits >> 17) & 0x01) != 0)
+        RTC_COCPU_TRAP_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Touch timeout interrupt state"]
     #[inline(always)]
     pub fn rtc_touch_timeout_int_st(&self) -> RTC_TOUCH_TIMEOUT_INT_ST_R {
-        RTC_TOUCH_TIMEOUT_INT_ST_R::new(((self.bits >> 18) & 0x01) != 0)
+        RTC_TOUCH_TIMEOUT_INT_ST_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - glitch_det_interrupt state"]
     #[inline(always)]
     pub fn rtc_glitch_det_int_st(&self) -> RTC_GLITCH_DET_INT_ST_R {
-        RTC_GLITCH_DET_INT_ST_R::new(((self.bits >> 19) & 0x01) != 0)
+        RTC_GLITCH_DET_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - touch approach mode loop interrupt state"]
     #[inline(always)]
     pub fn rtc_touch_approach_loop_done_int_st(&self) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_ST_R {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_ST_R::new(((self.bits >> 20) & 0x01) != 0)
+        RTC_TOUCH_APPROACH_LOOP_DONE_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 #[doc = "rtc interrupt register\n\nThis register you can [`read`]

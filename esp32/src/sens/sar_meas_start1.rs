@@ -97,7 +97,7 @@ impl<'a> MEAS1_START_SAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> MEAS1_START_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -198,7 +198,7 @@ impl<'a> SAR1_EN_PAD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -211,17 +211,17 @@ impl R {
     #[doc = "Bit 16 - SAR ADC1 conversion done indication"]
     #[inline(always)]
     pub fn meas1_done_sar(&self) -> MEAS1_DONE_SAR_R {
-        MEAS1_DONE_SAR_R::new(((self.bits >> 16) & 0x01) != 0)
+        MEAS1_DONE_SAR_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - SAR ADC1 controller (in RTC) starts conversion only active when reg_meas1_start_force = 1"]
     #[inline(always)]
     pub fn meas1_start_sar(&self) -> MEAS1_START_SAR_R {
-        MEAS1_START_SAR_R::new(((self.bits >> 17) & 0x01) != 0)
+        MEAS1_START_SAR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - 1: SAR ADC1 controller (in RTC) is started by SW 0: SAR ADC1 controller is started by ULP-coprocessor"]
     #[inline(always)]
     pub fn meas1_start_force(&self) -> MEAS1_START_FORCE_R {
-        MEAS1_START_FORCE_R::new(((self.bits >> 18) & 0x01) != 0)
+        MEAS1_START_FORCE_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bits 19:30 - SAR ADC1 pad enable bitmap only active when reg_sar1_en_pad_force = 1"]
     #[inline(always)]
@@ -231,7 +231,7 @@ impl R {
     #[doc = "Bit 31 - 1: SAR ADC1 pad enable bitmap is controlled by SW 0: SAR ADC1 pad enable bitmap is controlled by ULP-coprocessor"]
     #[inline(always)]
     pub fn sar1_en_pad_force(&self) -> SAR1_EN_PAD_FORCE_R {
-        SAR1_EN_PAD_FORCE_R::new(((self.bits >> 31) & 0x01) != 0)
+        SAR1_EN_PAD_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

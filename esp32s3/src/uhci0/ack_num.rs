@@ -57,7 +57,7 @@ impl<'a> ACK_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -79,7 +79,7 @@ impl<'a> LOAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -87,7 +87,7 @@ impl R {
     #[doc = "Bits 0:2 - This ACK number used in software flow control."]
     #[inline(always)]
     pub fn ack_num(&self) -> ACK_NUM_R {
-        ACK_NUM_R::new((self.bits & 0x07) as u8)
+        ACK_NUM_R::new((self.bits & 7) as u8)
     }
 }
 impl W {

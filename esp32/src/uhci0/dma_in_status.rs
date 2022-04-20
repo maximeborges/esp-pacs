@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn in_full(&self) -> IN_FULL_R {
-        IN_FULL_R::new((self.bits & 0x01) != 0)
+        IN_FULL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn in_empty(&self) -> IN_EMPTY_R {
-        IN_EMPTY_R::new(((self.bits >> 1) & 0x01) != 0)
+        IN_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 4:6 - This register stores the errors caused in out link descriptor's data packet."]
     #[inline(always)]
     pub fn rx_err_cause(&self) -> RX_ERR_CAUSE_R {
-        RX_ERR_CAUSE_R::new(((self.bits >> 4) & 0x07) as u8)
+        RX_ERR_CAUSE_R::new(((self.bits >> 4) & 7) as u8)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

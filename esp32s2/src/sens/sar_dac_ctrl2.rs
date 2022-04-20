@@ -111,7 +111,7 @@ impl<'a> DAC_SCALE1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> DAC_SCALE2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> DAC_INV1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> DAC_INV2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -229,7 +229,7 @@ impl<'a> DAC_CW_EN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -266,7 +266,7 @@ impl<'a> DAC_CW_EN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -284,32 +284,32 @@ impl R {
     #[doc = "Bits 16:17 - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
     pub fn dac_scale1(&self) -> DAC_SCALE1_R {
-        DAC_SCALE1_R::new(((self.bits >> 16) & 0x03) as u8)
+        DAC_SCALE1_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
     pub fn dac_scale2(&self) -> DAC_SCALE2_R {
-        DAC_SCALE2_R::new(((self.bits >> 18) & 0x03) as u8)
+        DAC_SCALE2_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
     pub fn dac_inv1(&self) -> DAC_INV1_R {
-        DAC_INV1_R::new(((self.bits >> 20) & 0x03) as u8)
+        DAC_INV1_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
     pub fn dac_inv2(&self) -> DAC_INV2_R {
-        DAC_INV2_R::new(((self.bits >> 22) & 0x03) as u8)
+        DAC_INV2_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24 - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
     #[inline(always)]
     pub fn dac_cw_en1(&self) -> DAC_CW_EN1_R {
-        DAC_CW_EN1_R::new(((self.bits >> 24) & 0x01) != 0)
+        DAC_CW_EN1_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
     #[inline(always)]
     pub fn dac_cw_en2(&self) -> DAC_CW_EN2_R {
-        DAC_CW_EN2_R::new(((self.bits >> 25) & 0x01) != 0)
+        DAC_CW_EN2_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

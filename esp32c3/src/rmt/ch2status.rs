@@ -117,22 +117,22 @@ impl R {
     #[doc = "Bits 22:24 - reg_state_ch2."]
     #[inline(always)]
     pub fn state_ch2(&self) -> STATE_CH2_R {
-        STATE_CH2_R::new(((self.bits >> 22) & 0x07) as u8)
+        STATE_CH2_R::new(((self.bits >> 22) & 7) as u8)
     }
     #[doc = "Bit 25 - reg_mem_owner_err_ch2."]
     #[inline(always)]
     pub fn mem_owner_err_ch2(&self) -> MEM_OWNER_ERR_CH2_R {
-        MEM_OWNER_ERR_CH2_R::new(((self.bits >> 25) & 0x01) != 0)
+        MEM_OWNER_ERR_CH2_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - reg_mem_full_ch2."]
     #[inline(always)]
     pub fn mem_full_ch2(&self) -> MEM_FULL_CH2_R {
-        MEM_FULL_CH2_R::new(((self.bits >> 26) & 0x01) != 0)
+        MEM_FULL_CH2_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - reg_apb_mem_rd_err_ch2."]
     #[inline(always)]
     pub fn apb_mem_rd_err_ch2(&self) -> APB_MEM_RD_ERR_CH2_R {
-        APB_MEM_RD_ERR_CH2_R::new(((self.bits >> 27) & 0x01) != 0)
+        APB_MEM_RD_ERR_CH2_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 #[doc = "RMT_CH2STATUS_REG.\n\nThis register you can [`read`]

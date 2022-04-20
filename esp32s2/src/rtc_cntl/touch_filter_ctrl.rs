@@ -57,7 +57,7 @@ impl<'a> TOUCH_SMOOTH_LVL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u32 & 0x03) << 9);
+        self.w.bits = (self.w.bits & !(3 << 9)) | ((value as u32 & 3) << 9);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> TOUCH_NEG_NOISE_THRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 19)) | ((value as u32 & 0x03) << 19);
+        self.w.bits = (self.w.bits & !(3 << 19)) | ((value as u32 & 3) << 19);
         self.w
     }
 }
@@ -165,7 +165,7 @@ impl<'a> TOUCH_NOISE_THRES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 21)) | ((value as u32 & 0x03) << 21);
+        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
         self.w
     }
 }
@@ -192,7 +192,7 @@ impl<'a> TOUCH_HYSTERESIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 23)) | ((value as u32 & 0x03) << 23);
+        self.w.bits = (self.w.bits & !(3 << 23)) | ((value as u32 & 3) << 23);
         self.w
     }
 }
@@ -219,7 +219,7 @@ impl<'a> TOUCH_DEBOUNCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> TOUCH_FILTER_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -283,7 +283,7 @@ impl<'a> TOUCH_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -291,7 +291,7 @@ impl R {
     #[doc = "Bits 9:10 - 0: Raw data. 1: IIR1/2. 2: IIR1/4. 3: IIR1/8."]
     #[inline(always)]
     pub fn touch_smooth_lvl(&self) -> TOUCH_SMOOTH_LVL_R {
-        TOUCH_SMOOTH_LVL_R::new(((self.bits >> 9) & 0x03) as u8)
+        TOUCH_SMOOTH_LVL_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bits 11:14 - Touch jitter step. Range: 0 – 15."]
     #[inline(always)]
@@ -306,32 +306,32 @@ impl R {
     #[doc = "Bits 19:20 - Negative noise threshold."]
     #[inline(always)]
     pub fn touch_neg_noise_thres(&self) -> TOUCH_NEG_NOISE_THRES_R {
-        TOUCH_NEG_NOISE_THRES_R::new(((self.bits >> 19) & 0x03) as u8)
+        TOUCH_NEG_NOISE_THRES_R::new(((self.bits >> 19) & 3) as u8)
     }
     #[doc = "Bits 21:22 - Active noise threshold."]
     #[inline(always)]
     pub fn touch_noise_thres(&self) -> TOUCH_NOISE_THRES_R {
-        TOUCH_NOISE_THRES_R::new(((self.bits >> 21) & 0x03) as u8)
+        TOUCH_NOISE_THRES_R::new(((self.bits >> 21) & 3) as u8)
     }
     #[doc = "Bits 23:24 - Touch hysteresis."]
     #[inline(always)]
     pub fn touch_hysteresis(&self) -> TOUCH_HYSTERESIS_R {
-        TOUCH_HYSTERESIS_R::new(((self.bits >> 23) & 0x03) as u8)
+        TOUCH_HYSTERESIS_R::new(((self.bits >> 23) & 3) as u8)
     }
     #[doc = "Bits 25:27 - Debounce counter."]
     #[inline(always)]
     pub fn touch_debounce(&self) -> TOUCH_DEBOUNCE_R {
-        TOUCH_DEBOUNCE_R::new(((self.bits >> 25) & 0x07) as u8)
+        TOUCH_DEBOUNCE_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bits 28:30 - Set filter mode. 0: IIR 1/2; 1: IIR 1/4; 2: IIR 1/8; 3: IIR 1/16; 4: IIR 1/32; 5: IIR 1/64; 6: IIR 1/128; 7: Jitter."]
     #[inline(always)]
     pub fn touch_filter_mode(&self) -> TOUCH_FILTER_MODE_R {
-        TOUCH_FILTER_MODE_R::new(((self.bits >> 28) & 0x07) as u8)
+        TOUCH_FILTER_MODE_R::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31 - Enable touch filter."]
     #[inline(always)]
     pub fn touch_filter_en(&self) -> TOUCH_FILTER_EN_R {
-        TOUCH_FILTER_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        TOUCH_FILTER_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

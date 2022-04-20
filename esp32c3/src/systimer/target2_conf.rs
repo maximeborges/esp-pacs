@@ -94,7 +94,7 @@ impl<'a> TARGET2_PERIOD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TARGET2_TIMER_UNIT_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 30 - Set target2 to period mode"]
     #[inline(always)]
     pub fn target2_period_mode(&self) -> TARGET2_PERIOD_MODE_R {
-        TARGET2_PERIOD_MODE_R::new(((self.bits >> 30) & 0x01) != 0)
+        TARGET2_PERIOD_MODE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - select which unit to compare"]
     #[inline(always)]
     pub fn target2_timer_unit_sel(&self) -> TARGET2_TIMER_UNIT_SEL_R {
-        TARGET2_TIMER_UNIT_SEL_R::new(((self.bits >> 31) & 0x01) != 0)
+        TARGET2_TIMER_UNIT_SEL_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

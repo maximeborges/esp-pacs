@@ -121,7 +121,7 @@ impl<'a> DSCR_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> TX_FIFO_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 13)) | ((value as u32 & 0x07) << 13);
+        self.w.bits = (self.w.bits & !(7 << 13)) | ((value as u32 & 7) << 13);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> RX_FIFO_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
+        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> TX_FIFO_MOD_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -249,7 +249,7 @@ impl<'a> RX_FIFO_MOD_FORCE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -267,27 +267,27 @@ impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn dscr_en(&self) -> DSCR_EN_R {
-        DSCR_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        DSCR_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
     pub fn tx_fifo_mod(&self) -> TX_FIFO_MOD_R {
-        TX_FIFO_MOD_R::new(((self.bits >> 13) & 0x07) as u8)
+        TX_FIFO_MOD_R::new(((self.bits >> 13) & 7) as u8)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
     pub fn rx_fifo_mod(&self) -> RX_FIFO_MOD_R {
-        RX_FIFO_MOD_R::new(((self.bits >> 16) & 0x07) as u8)
+        RX_FIFO_MOD_R::new(((self.bits >> 16) & 7) as u8)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn tx_fifo_mod_force_en(&self) -> TX_FIFO_MOD_FORCE_EN_R {
-        TX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 19) & 0x01) != 0)
+        TX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn rx_fifo_mod_force_en(&self) -> RX_FIFO_MOD_FORCE_EN_R {
-        RX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        RX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {

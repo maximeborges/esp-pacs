@@ -57,7 +57,7 @@ impl<'a> SINGLE_SEND_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> SINGLE_SEND_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> ALWAYS_SEND_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
+        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> ALWAYS_SEND_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -166,22 +166,22 @@ impl R {
     #[doc = "Bits 0:2 - This register is used to specify the single_send mode."]
     #[inline(always)]
     pub fn single_send_num(&self) -> SINGLE_SEND_NUM_R {
-        SINGLE_SEND_NUM_R::new((self.bits & 0x07) as u8)
+        SINGLE_SEND_NUM_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - Set this bit to enable single_send mode to send short packets."]
     #[inline(always)]
     pub fn single_send_en(&self) -> SINGLE_SEND_EN_R {
-        SINGLE_SEND_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        SINGLE_SEND_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:6 - This register is used to specify the always_send mode."]
     #[inline(always)]
     pub fn always_send_num(&self) -> ALWAYS_SEND_NUM_R {
-        ALWAYS_SEND_NUM_R::new(((self.bits >> 4) & 0x07) as u8)
+        ALWAYS_SEND_NUM_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7 - Set this bit to enable always_send mode to send short packets."]
     #[inline(always)]
     pub fn always_send_en(&self) -> ALWAYS_SEND_EN_R {
-        ALWAYS_SEND_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        ALWAYS_SEND_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

@@ -57,7 +57,7 @@ impl<'a> DBG_ATTEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> ENB_SCK_XTAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> INC_HEARTBEAT_REFRESH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> DEC_HEARTBEAT_PERIOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> INC_HEARTBEAT_PERIOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> DEC_HEARTBEAT_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> RST_BIAS_I2C_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -287,37 +287,37 @@ impl R {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
     pub fn dbg_atten(&self) -> DBG_ATTEN_R {
-        DBG_ATTEN_R::new(((self.bits >> 24) & 0x03) as u8)
+        DBG_ATTEN_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
     pub fn enb_sck_xtal(&self) -> ENB_SCK_XTAL_R {
-        ENB_SCK_XTAL_R::new(((self.bits >> 26) & 0x01) != 0)
+        ENB_SCK_XTAL_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
     pub fn inc_heartbeat_refresh(&self) -> INC_HEARTBEAT_REFRESH_R {
-        INC_HEARTBEAT_REFRESH_R::new(((self.bits >> 27) & 0x01) != 0)
+        INC_HEARTBEAT_REFRESH_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     pub fn dec_heartbeat_period(&self) -> DEC_HEARTBEAT_PERIOD_R {
-        DEC_HEARTBEAT_PERIOD_R::new(((self.bits >> 28) & 0x01) != 0)
+        DEC_HEARTBEAT_PERIOD_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     pub fn inc_heartbeat_period(&self) -> INC_HEARTBEAT_PERIOD_R {
-        INC_HEARTBEAT_PERIOD_R::new(((self.bits >> 29) & 0x01) != 0)
+        INC_HEARTBEAT_PERIOD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
     pub fn dec_heartbeat_width(&self) -> DEC_HEARTBEAT_WIDTH_R {
-        DEC_HEARTBEAT_WIDTH_R::new(((self.bits >> 30) & 0x01) != 0)
+        DEC_HEARTBEAT_WIDTH_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - RST_BIAS_I2C"]
     #[inline(always)]
     pub fn rst_bias_i2c(&self) -> RST_BIAS_I2C_R {
-        RST_BIAS_I2C_R::new(((self.bits >> 31) & 0x01) != 0)
+        RST_BIAS_I2C_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

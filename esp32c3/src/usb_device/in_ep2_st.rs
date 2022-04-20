@@ -62,7 +62,7 @@ impl R {
     #[doc = "Bits 0:1 - State of IN Endpoint 2."]
     #[inline(always)]
     pub fn in_ep2_state(&self) -> IN_EP2_STATE_R {
-        IN_EP2_STATE_R::new((self.bits & 0x03) as u8)
+        IN_EP2_STATE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:8 - Write data address of IN endpoint 2."]
     #[inline(always)]

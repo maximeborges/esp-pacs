@@ -82,7 +82,7 @@ impl<'a> TSENS_IN_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -146,7 +146,7 @@ impl<'a> TSENS_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -159,7 +159,7 @@ impl R {
     #[doc = "Bit 13 - invert temperature sensor data"]
     #[inline(always)]
     pub fn tsens_in_inv(&self) -> TSENS_IN_INV_R {
-        TSENS_IN_INV_R::new(((self.bits >> 13) & 0x01) != 0)
+        TSENS_IN_INV_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:21 - temperature sensor clock divider"]
     #[inline(always)]
@@ -169,7 +169,7 @@ impl R {
     #[doc = "Bit 22 - temperature sensor power up"]
     #[inline(always)]
     pub fn tsens_pu(&self) -> TSENS_PU_R {
-        TSENS_PU_R::new(((self.bits >> 22) & 0x01) != 0)
+        TSENS_PU_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {

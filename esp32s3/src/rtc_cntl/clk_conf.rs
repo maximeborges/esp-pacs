@@ -67,7 +67,7 @@ impl<'a> EFUSE_CLK_FORCE_GATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> EFUSE_CLK_FORCE_NOGATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CK8M_DIV_SEL_VLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> CK8M_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> ENB_CK8M_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> ENB_CK8M_DIV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> DIG_XTAL32K_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> DIG_CLK8M_D256_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> DIG_CLK8M_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> CK8M_DIV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> XTAL_FORCE_NOGATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> CK8M_FORCE_NOGATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -518,7 +518,7 @@ impl<'a> CK8M_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -555,7 +555,7 @@ impl<'a> CK8M_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -592,7 +592,7 @@ impl<'a> XTAL_GLOBAL_FORCE_GATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -629,7 +629,7 @@ impl<'a> XTAL_GLOBAL_FORCE_NOGATING_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -666,7 +666,7 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -693,7 +693,7 @@ impl<'a> ANA_CLK_RTC_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -701,62 +701,62 @@ impl R {
     #[doc = "Bit 1 - force efuse clk gating"]
     #[inline(always)]
     pub fn efuse_clk_force_gating(&self) -> EFUSE_CLK_FORCE_GATING_R {
-        EFUSE_CLK_FORCE_GATING_R::new(((self.bits >> 1) & 0x01) != 0)
+        EFUSE_CLK_FORCE_GATING_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - force efuse clk nogating"]
     #[inline(always)]
     pub fn efuse_clk_force_nogating(&self) -> EFUSE_CLK_FORCE_NOGATING_R {
-        EFUSE_CLK_FORCE_NOGATING_R::new(((self.bits >> 2) & 0x01) != 0)
+        EFUSE_CLK_FORCE_NOGATING_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - used to sync reg_ck8m_div_sel bus. Clear vld before set reg_ck8m_div_sel, then set vld to actually switch the clk"]
     #[inline(always)]
     pub fn ck8m_div_sel_vld(&self) -> CK8M_DIV_SEL_VLD_R {
-        CK8M_DIV_SEL_VLD_R::new(((self.bits >> 3) & 0x01) != 0)
+        CK8M_DIV_SEL_VLD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - CK8M_D256_OUT divider. 00: div128, 01: div256, 10: div512, 11: div1024."]
     #[inline(always)]
     pub fn ck8m_div(&self) -> CK8M_DIV_R {
-        CK8M_DIV_R::new(((self.bits >> 4) & 0x03) as u8)
+        CK8M_DIV_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - disable CK8M and CK8M_D256_OUT"]
     #[inline(always)]
     pub fn enb_ck8m(&self) -> ENB_CK8M_R {
-        ENB_CK8M_R::new(((self.bits >> 6) & 0x01) != 0)
+        ENB_CK8M_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: CK8M_D256_OUT is actually CK8M, 0: CK8M_D256_OUT is CK8M divided by 256"]
     #[inline(always)]
     pub fn enb_ck8m_div(&self) -> ENB_CK8M_DIV_R {
-        ENB_CK8M_DIV_R::new(((self.bits >> 7) & 0x01) != 0)
+        ENB_CK8M_DIV_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_xtal32k_en(&self) -> DIG_XTAL32K_EN_R {
-        DIG_XTAL32K_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        DIG_XTAL32K_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_clk8m_d256_en(&self) -> DIG_CLK8M_D256_EN_R {
-        DIG_CLK8M_D256_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        DIG_CLK8M_D256_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - enable CK8M for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_clk8m_en(&self) -> DIG_CLK8M_EN_R {
-        DIG_CLK8M_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        DIG_CLK8M_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 12:14 - divider = reg_ck8m_div_sel + 1"]
     #[inline(always)]
     pub fn ck8m_div_sel(&self) -> CK8M_DIV_SEL_R {
-        CK8M_DIV_SEL_R::new(((self.bits >> 12) & 0x07) as u8)
+        CK8M_DIV_SEL_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bit 15 - XTAL force no gating during sleep"]
     #[inline(always)]
     pub fn xtal_force_nogating(&self) -> XTAL_FORCE_NOGATING_R {
-        XTAL_FORCE_NOGATING_R::new(((self.bits >> 15) & 0x01) != 0)
+        XTAL_FORCE_NOGATING_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - CK8M force no gating during sleep"]
     #[inline(always)]
     pub fn ck8m_force_nogating(&self) -> CK8M_FORCE_NOGATING_R {
-        CK8M_FORCE_NOGATING_R::new(((self.bits >> 16) & 0x01) != 0)
+        CK8M_FORCE_NOGATING_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
@@ -766,32 +766,32 @@ impl R {
     #[doc = "Bit 25 - CK8M force power down"]
     #[inline(always)]
     pub fn ck8m_force_pd(&self) -> CK8M_FORCE_PD_R {
-        CK8M_FORCE_PD_R::new(((self.bits >> 25) & 0x01) != 0)
+        CK8M_FORCE_PD_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - CK8M force power up"]
     #[inline(always)]
     pub fn ck8m_force_pu(&self) -> CK8M_FORCE_PU_R {
-        CK8M_FORCE_PU_R::new(((self.bits >> 26) & 0x01) != 0)
+        CK8M_FORCE_PU_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - force global xtal gating"]
     #[inline(always)]
     pub fn xtal_global_force_gating(&self) -> XTAL_GLOBAL_FORCE_GATING_R {
-        XTAL_GLOBAL_FORCE_GATING_R::new(((self.bits >> 27) & 0x01) != 0)
+        XTAL_GLOBAL_FORCE_GATING_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - force global xtal no gating"]
     #[inline(always)]
     pub fn xtal_global_force_nogating(&self) -> XTAL_GLOBAL_FORCE_NOGATING_R {
-        XTAL_GLOBAL_FORCE_NOGATING_R::new(((self.bits >> 28) & 0x01) != 0)
+        XTAL_GLOBAL_FORCE_NOGATING_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - fast_clk_rtc sel. 0: XTAL div 4, 1: CK8M"]
     #[inline(always)]
     pub fn fast_clk_rtc_sel(&self) -> FAST_CLK_RTC_SEL_R {
-        FAST_CLK_RTC_SEL_R::new(((self.bits >> 29) & 0x01) != 0)
+        FAST_CLK_RTC_SEL_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - select slow clock"]
     #[inline(always)]
     pub fn ana_clk_rtc_sel(&self) -> ANA_CLK_RTC_SEL_R {
-        ANA_CLK_RTC_SEL_R::new(((self.bits >> 30) & 0x03) as u8)
+        ANA_CLK_RTC_SEL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

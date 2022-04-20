@@ -126,7 +126,7 @@ impl<'a> RECORD_PDEBUGLS0STAT_STCOH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | ((value as u32 & 0x03) << 17);
+        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
         self.w
     }
 }
@@ -176,7 +176,7 @@ impl R {
     #[doc = "Bits 17:18"]
     #[inline(always)]
     pub fn record_pdebugls0stat_stcoh(&self) -> RECORD_PDEBUGLS0STAT_STCOH_R {
-        RECORD_PDEBUGLS0STAT_STCOH_R::new(((self.bits >> 17) & 0x03) as u8)
+        RECORD_PDEBUGLS0STAT_STCOH_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]

@@ -123,7 +123,7 @@ impl<'a> LSTIMER0_PAUSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -160,7 +160,7 @@ impl<'a> LSTIMER0_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -197,7 +197,7 @@ impl<'a> TICK_SEL_LSTIMER0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -234,7 +234,7 @@ impl<'a> LSTIMER0_PARA_UP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -280,22 +280,22 @@ impl R {
     #[doc = "Bit 23 - This bit is used to pause the counter in low speed timer0."]
     #[inline(always)]
     pub fn lstimer0_pause(&self) -> LSTIMER0_PAUSE_R {
-        LSTIMER0_PAUSE_R::new(((self.bits >> 23) & 0x01) != 0)
+        LSTIMER0_PAUSE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - This bit is used to reset low speed timer0 the counter will be 0 after reset."]
     #[inline(always)]
     pub fn lstimer0_rst(&self) -> LSTIMER0_RST_R {
-        LSTIMER0_RST_R::new(((self.bits >> 24) & 0x01) != 0)
+        LSTIMER0_RST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - This bit is used to choose slow_clk or ref_tick for low speed timer0. 1'b1:slow_clk 0:ref_tick"]
     #[inline(always)]
     pub fn tick_sel_lstimer0(&self) -> TICK_SEL_LSTIMER0_R {
-        TICK_SEL_LSTIMER0_R::new(((self.bits >> 25) & 0x01) != 0)
+        TICK_SEL_LSTIMER0_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Set this bit to update reg_div_num_lstime0 and reg_lstimer0_lim."]
     #[inline(always)]
     pub fn lstimer0_para_up(&self) -> LSTIMER0_PARA_UP_R {
-        LSTIMER0_PARA_UP_R::new(((self.bits >> 26) & 0x01) != 0)
+        LSTIMER0_PARA_UP_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bits 31:35"]
     #[inline(always)]

@@ -67,7 +67,7 @@ impl<'a> TX_PDM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RX_PDM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PCM2PDM_CONV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PDM2PCM_CONV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -259,7 +259,7 @@ impl<'a> TX_PDM_HP_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> TX_PDM_LP_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -313,7 +313,7 @@ impl<'a> TX_PDM_SINC_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -340,7 +340,7 @@ impl<'a> TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -377,7 +377,7 @@ impl<'a> RX_PDM_SINC_DSR_16_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -414,7 +414,7 @@ impl<'a> TX_PDM_HP_BYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -422,22 +422,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn tx_pdm_en(&self) -> TX_PDM_EN_R {
-        TX_PDM_EN_R::new((self.bits & 0x01) != 0)
+        TX_PDM_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn rx_pdm_en(&self) -> RX_PDM_EN_R {
-        RX_PDM_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        RX_PDM_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn pcm2pdm_conv_en(&self) -> PCM2PDM_CONV_EN_R {
-        PCM2PDM_CONV_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        PCM2PDM_CONV_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn pdm2pcm_conv_en(&self) -> PDM2PCM_CONV_EN_R {
-        PDM2PCM_CONV_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        PDM2PCM_CONV_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
@@ -452,32 +452,32 @@ impl R {
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn tx_pdm_hp_in_shift(&self) -> TX_PDM_HP_IN_SHIFT_R {
-        TX_PDM_HP_IN_SHIFT_R::new(((self.bits >> 16) & 0x03) as u8)
+        TX_PDM_HP_IN_SHIFT_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn tx_pdm_lp_in_shift(&self) -> TX_PDM_LP_IN_SHIFT_R {
-        TX_PDM_LP_IN_SHIFT_R::new(((self.bits >> 18) & 0x03) as u8)
+        TX_PDM_LP_IN_SHIFT_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn tx_pdm_sinc_in_shift(&self) -> TX_PDM_SINC_IN_SHIFT_R {
-        TX_PDM_SINC_IN_SHIFT_R::new(((self.bits >> 20) & 0x03) as u8)
+        TX_PDM_SINC_IN_SHIFT_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_in_shift(&self) -> TX_PDM_SIGMADELTA_IN_SHIFT_R {
-        TX_PDM_SIGMADELTA_IN_SHIFT_R::new(((self.bits >> 22) & 0x03) as u8)
+        TX_PDM_SIGMADELTA_IN_SHIFT_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn rx_pdm_sinc_dsr_16_en(&self) -> RX_PDM_SINC_DSR_16_EN_R {
-        RX_PDM_SINC_DSR_16_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        RX_PDM_SINC_DSR_16_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn tx_pdm_hp_bypass(&self) -> TX_PDM_HP_BYPASS_R {
-        TX_PDM_HP_BYPASS_R::new(((self.bits >> 25) & 0x01) != 0)
+        TX_PDM_HP_BYPASS_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> ESCO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ESCO_CHAN_MOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ESCO_CVSD_DEC_PACK_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> ESCO_CVSD_INF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> CVSD_DEC_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> CVSD_DEC_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> PLC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> PLC2DMA_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -361,17 +361,17 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn esco_en(&self) -> ESCO_EN_R {
-        ESCO_EN_R::new((self.bits & 0x01) != 0)
+        ESCO_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn esco_chan_mod(&self) -> ESCO_CHAN_MOD_R {
-        ESCO_CHAN_MOD_R::new(((self.bits >> 1) & 0x01) != 0)
+        ESCO_CHAN_MOD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn esco_cvsd_dec_pack_err(&self) -> ESCO_CVSD_DEC_PACK_ERR_R {
-        ESCO_CVSD_DEC_PACK_ERR_R::new(((self.bits >> 2) & 0x01) != 0)
+        ESCO_CVSD_DEC_PACK_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
@@ -381,27 +381,27 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn esco_cvsd_inf_en(&self) -> ESCO_CVSD_INF_EN_R {
-        ESCO_CVSD_INF_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        ESCO_CVSD_INF_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn cvsd_dec_start(&self) -> CVSD_DEC_START_R {
-        CVSD_DEC_START_R::new(((self.bits >> 9) & 0x01) != 0)
+        CVSD_DEC_START_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn cvsd_dec_reset(&self) -> CVSD_DEC_RESET_R {
-        CVSD_DEC_RESET_R::new(((self.bits >> 10) & 0x01) != 0)
+        CVSD_DEC_RESET_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn plc_en(&self) -> PLC_EN_R {
-        PLC_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        PLC_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn plc2dma_en(&self) -> PLC2DMA_EN_R {
-        PLC2DMA_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        PLC2DMA_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {

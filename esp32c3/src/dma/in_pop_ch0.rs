@@ -82,7 +82,7 @@ impl<'a> INFIFO_POP_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -95,7 +95,7 @@ impl R {
     #[doc = "Bit 12 - Set this bit to pop data from DMA FIFO."]
     #[inline(always)]
     pub fn infifo_pop_ch0(&self) -> INFIFO_POP_CH0_R {
-        INFIFO_POP_CH0_R::new(((self.bits >> 12) & 0x01) != 0)
+        INFIFO_POP_CH0_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {

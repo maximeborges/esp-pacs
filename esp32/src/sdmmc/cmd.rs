@@ -94,7 +94,7 @@ impl<'a> RESPONSE_EXPECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> RESPONSE_LENGTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> CHECK_RESPONSE_CRC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> DATA_EXPECTED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> READ_WRITE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> TRANSFER_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> SEND_AUTO_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -355,7 +355,7 @@ impl<'a> WAIT_PRVDATA_COMPLETE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -392,7 +392,7 @@ impl<'a> STOP_ABORT_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -429,7 +429,7 @@ impl<'a> SEND_INITIALIZATION_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -493,7 +493,7 @@ impl<'a> UPDATE_CLOCK_REGISTERS_ONLY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -530,7 +530,7 @@ impl<'a> READ_CEATA_DEVICE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -567,7 +567,7 @@ impl<'a> CCS_EXPECTED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -604,7 +604,7 @@ impl<'a> USE_HOLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -641,7 +641,7 @@ impl<'a> START_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -654,53 +654,53 @@ impl R {
     #[doc = "Bit 6 - 0: No response expected from card; 1: Response expected from card."]
     #[inline(always)]
     pub fn response_expect(&self) -> RESPONSE_EXPECT_R {
-        RESPONSE_EXPECT_R::new(((self.bits >> 6) & 0x01) != 0)
+        RESPONSE_EXPECT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 0: Short response expected from card; 1: Long response expected from card."]
     #[inline(always)]
     pub fn response_length(&self) -> RESPONSE_LENGTH_R {
-        RESPONSE_LENGTH_R::new(((self.bits >> 7) & 0x01) != 0)
+        RESPONSE_LENGTH_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - 0: Do not check; 1: Check response CRC. Some of command responses do not return valid CRC bits. Software should disable CRC checks for those commands in order to disable CRC checking by controller."]
     #[inline(always)]
     pub fn check_response_crc(&self) -> CHECK_RESPONSE_CRC_R {
-        CHECK_RESPONSE_CRC_R::new(((self.bits >> 8) & 0x01) != 0)
+        CHECK_RESPONSE_CRC_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 0: No data transfer expected; 1: Data transfer expected."]
     #[inline(always)]
     pub fn data_expected(&self) -> DATA_EXPECTED_R {
-        DATA_EXPECTED_R::new(((self.bits >> 9) & 0x01) != 0)
+        DATA_EXPECTED_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - 0: Read from card; 1: Write to card. Don't care if no data is expected from card."]
     #[inline(always)]
     pub fn read_write(&self) -> READ_WRITE_R {
-        READ_WRITE_R::new(((self.bits >> 10) & 0x01) != 0)
+        READ_WRITE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Block data transfer command; 1: Stream data transfer command. Don't care if no data expected."]
     #[inline(always)]
     pub fn transfer_mode(&self) -> TRANSFER_MODE_R {
-        TRANSFER_MODE_R::new(((self.bits >> 11) & 0x01) != 0)
+        TRANSFER_MODE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - 0: No stop command is sent at the end of data transfer; 1: Send stop command at the end of data transfer."]
     #[inline(always)]
     pub fn send_auto_stop(&self) -> SEND_AUTO_STOP_R {
-        SEND_AUTO_STOP_R::new(((self.bits >> 12) & 0x01) != 0)
+        SEND_AUTO_STOP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\]
  = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
     #[inline(always)]
     pub fn wait_prvdata_complete(&self) -> WAIT_PRVDATA_COMPLETE_R {
-        WAIT_PRVDATA_COMPLETE_R::new(((self.bits >> 13) & 0x01) != 0)
+        WAIT_PRVDATA_COMPLETE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - 0: Neither stop nor abort command can stop current data transfer. If abort is sent to function-number currently selected or not in data-transfer mode, then bit should be set to 0; 1: Stop or abort command intended to stop current data transfer in progress. When open-ended or predefined data transfer is in progress, and host issues stop or abort command to stop data transfer, bit should be set so that command/data state-machines of CIU can return correctly to idle state."]
     #[inline(always)]
     pub fn stop_abort_cmd(&self) -> STOP_ABORT_CMD_R {
-        STOP_ABORT_CMD_R::new(((self.bits >> 14) & 0x01) != 0)
+        STOP_ABORT_CMD_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - 0: Do not send initialization sequence (80 clocks of 1) before sending this command; 1: Send initialization sequence before sending this command. After powered on, 80 clocks must be sent to card for initialization before sending any commands to card. Bit should be set while sending first command to card so that controller will initialize clocks before sending command to card."]
     #[inline(always)]
     pub fn send_initialization(&self) -> SEND_INITIALIZATION_R {
-        SEND_INITIALIZATION_R::new(((self.bits >> 15) & 0x01) != 0)
+        SEND_INITIALIZATION_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:20 - Card number in use. Represents physical slot number of card being accessed. In SD-only mode, up to two cards are supported."]
     #[inline(always)]
@@ -710,27 +710,27 @@ impl R {
     #[doc = "Bit 21 - 0: Normal command sequence; 1: Do not send commands, just update clock register value into card clock domain. Following register values are transferred into card clock domain: CLKDIV, CLRSRC, and CLKENA. Changes card clocks (change frequency, truncate off or on, and set low-frequency mode). This is provided in order to change clock frequency or stop clock without having to send command to cards. During normal command sequence, when sdhost_update_clock_registers_only = 0, following control registers are transferred from BIU to CIU: CMD, CMDARG, TMOUT, CTYPE, BLKSIZ, and BYTCNT. CIU uses new register values for new command sequence to card(s). When bit is set, there are no Command Done interrupts because no command is sent to SD_MMC_CEATA cards."]
     #[inline(always)]
     pub fn update_clock_registers_only(&self) -> UPDATE_CLOCK_REGISTERS_ONLY_R {
-        UPDATE_CLOCK_REGISTERS_ONLY_R::new(((self.bits >> 21) & 0x01) != 0)
+        UPDATE_CLOCK_REGISTERS_ONLY_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Read access flag. 0: Host is not performing read access (RW_REG or RW_BLK)towards CE-ATA device; 1: Host is performing read access (RW_REG or RW_BLK) towards CE-ATA device. Software should set this bit to indicate that CE-ATA device is being accessed for read transfer. This bit is used to disable read data timeout indication while performing CE-ATA read transfers. Maximum value of I/O transmission delay can be no less than 10 seconds. SD/MMC should not indicate read data timeout while waiting for data from CE-ATA device."]
     #[inline(always)]
     pub fn read_ceata_device(&self) -> READ_CEATA_DEVICE_R {
-        READ_CEATA_DEVICE_R::new(((self.bits >> 22) & 0x01) != 0)
+        READ_CEATA_DEVICE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Expected Command Completion Signal (CCS) configuration. 0: Interrupts are not enabled in CE-ATA device (nIEN = 1 in ATA control register), or command does not expect CCS from device; 1: Interrupts are enabled in CE-ATA device (nIEN = 0), and RW_BLK command expects command completion signal from CE-ATA device. If the command expects Command Completion Signal (CCS) from the CE-ATA device, the software should set this control bit. SD/MMC sets Data Transfer Over (DTO) bit in RINTSTS register and generates interrupt to host if Data Transfer Over interrupt is not masked."]
     #[inline(always)]
     pub fn ccs_expected(&self) -> CCS_EXPECTED_R {
-        CCS_EXPECTED_R::new(((self.bits >> 23) & 0x01) != 0)
+        CCS_EXPECTED_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 29 - Use Hold Register. 0: CMD and DATA sent to card bypassing HOLD Register; 1: CMD and DATA sent to card through the HOLD Register."]
     #[inline(always)]
     pub fn use_hole(&self) -> USE_HOLE_R {
-        USE_HOLE_R::new(((self.bits >> 29) & 0x01) != 0)
+        USE_HOLE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31 - Start command. Once command is served by the CIU, this bit is automatically cleared. When this bit is set, host should not attempt to write to any command registers. If a write is attempted, hardware lock error is set in raw interrupt register. Once command is sent and a response is received from SD_MMC_CEATA cards, Command Done bit is set in the raw interrupt Register."]
     #[inline(always)]
     pub fn start_cmd(&self) -> START_CMD_R {
-        START_CMD_R::new(((self.bits >> 31) & 0x01) != 0)
+        START_CMD_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

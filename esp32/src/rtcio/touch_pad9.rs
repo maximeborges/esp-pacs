@@ -67,7 +67,7 @@ impl<'a> TO_GPIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> XPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TIE_OPT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> DAC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -213,27 +213,27 @@ impl R {
     #[doc = "Bit 19 - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
     #[inline(always)]
     pub fn to_gpio(&self) -> TO_GPIO_R {
-        TO_GPIO_R::new(((self.bits >> 19) & 0x01) != 0)
+        TO_GPIO_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
     pub fn xpd(&self) -> XPD_R {
-        XPD_R::new(((self.bits >> 20) & 0x01) != 0)
+        XPD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
     pub fn tie_opt(&self) -> TIE_OPT_R {
-        TIE_OPT_R::new(((self.bits >> 21) & 0x01) != 0)
+        TIE_OPT_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
     pub fn start(&self) -> START_R {
-        START_R::new(((self.bits >> 22) & 0x01) != 0)
+        START_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
     pub fn dac(&self) -> DAC_R {
-        DAC_R::new(((self.bits >> 23) & 0x07) as u8)
+        DAC_R::new(((self.bits >> 23) & 7) as u8)
     }
 }
 impl W {

@@ -94,7 +94,7 @@ impl<'a> LCD_CLK_EQU_SYSCLK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> LCD_CK_IDLE_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> LCD_CK_OUT_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -276,7 +276,7 @@ impl<'a> LCD_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -313,7 +313,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -326,17 +326,17 @@ impl R {
     #[doc = "Bit 6 - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
     #[inline(always)]
     pub fn lcd_clk_equ_sysclk(&self) -> LCD_CLK_EQU_SYSCLK_R {
-        LCD_CLK_EQU_SYSCLK_R::new(((self.bits >> 6) & 0x01) != 0)
+        LCD_CLK_EQU_SYSCLK_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
     #[inline(always)]
     pub fn lcd_ck_idle_edge(&self) -> LCD_CK_IDLE_EDGE_R {
-        LCD_CK_IDLE_EDGE_R::new(((self.bits >> 7) & 0x01) != 0)
+        LCD_CK_IDLE_EDGE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
     #[inline(always)]
     pub fn lcd_ck_out_edge(&self) -> LCD_CK_OUT_EDGE_R {
-        LCD_CK_OUT_EDGE_R::new(((self.bits >> 8) & 0x01) != 0)
+        LCD_CK_OUT_EDGE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:16 - Integral LCD clock divider value"]
     #[inline(always)]
@@ -356,12 +356,12 @@ impl R {
     #[doc = "Bits 29:30 - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
     #[inline(always)]
     pub fn lcd_clk_sel(&self) -> LCD_CLK_SEL_R {
-        LCD_CLK_SEL_R::new(((self.bits >> 29) & 0x03) as u8)
+        LCD_CLK_SEL_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31 - Set this bit to enable clk gate"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

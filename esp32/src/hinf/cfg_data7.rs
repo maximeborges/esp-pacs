@@ -121,7 +121,7 @@ impl<'a> SDIO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SDIO_IOREADY0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -176,12 +176,12 @@ impl R {
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn sdio_rst(&self) -> SDIO_RST_R {
-        SDIO_RST_R::new(((self.bits >> 16) & 0x01) != 0)
+        SDIO_RST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn sdio_ioready0(&self) -> SDIO_IOREADY0_R {
-        SDIO_IOREADY0_R::new(((self.bits >> 17) & 0x01) != 0)
+        SDIO_IOREADY0_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {

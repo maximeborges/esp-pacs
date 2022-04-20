@@ -54,7 +54,7 @@ impl R {
  correspond to card1 and card0, respectively. SDIO interrupt for card is enabled only if corresponding sdhost_sdio_int_mask bit is set in Interrupt mask register (Setting mask bit enables interrupt)."]
     #[inline(always)]
     pub fn sdio_interrupt_msk(&self) -> SDIO_INTERRUPT_MSK_R {
-        SDIO_INTERRUPT_MSK_R::new(((self.bits >> 16) & 0x03) as u8)
+        SDIO_INTERRUPT_MSK_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 #[doc = "Masked interrupt status register\n\nThis register you can [`read`]

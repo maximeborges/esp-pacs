@@ -57,7 +57,7 @@ impl<'a> FLASH_PAGE_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | ((value as u32 & 0x03) << 18);
+        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> SRAM_PAGE_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | ((value as u32 & 0x03) << 20);
+        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     pub fn flash_page_size(&self) -> FLASH_PAGE_SIZE_R {
-        FLASH_PAGE_SIZE_R::new(((self.bits >> 18) & 0x03) as u8)
+        FLASH_PAGE_SIZE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     pub fn sram_page_size(&self) -> SRAM_PAGE_SIZE_R {
-        SRAM_PAGE_SIZE_R::new(((self.bits >> 20) & 0x03) as u8)
+        SRAM_PAGE_SIZE_R::new(((self.bits >> 20) & 3) as u8)
     }
 }
 impl W {

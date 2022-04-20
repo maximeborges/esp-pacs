@@ -57,7 +57,7 @@ impl<'a> OPERATOR0_TIMERSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> OPERATOR1_TIMERSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> OPERATOR2_TIMERSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -119,17 +119,17 @@ impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn operator0_timersel(&self) -> OPERATOR0_TIMERSEL_R {
-        OPERATOR0_TIMERSEL_R::new((self.bits & 0x03) as u8)
+        OPERATOR0_TIMERSEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     pub fn operator1_timersel(&self) -> OPERATOR1_TIMERSEL_R {
-        OPERATOR1_TIMERSEL_R::new(((self.bits >> 2) & 0x03) as u8)
+        OPERATOR1_TIMERSEL_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn operator2_timersel(&self) -> OPERATOR2_TIMERSEL_R {
-        OPERATOR2_TIMERSEL_R::new(((self.bits >> 4) & 0x03) as u8)
+        OPERATOR2_TIMERSEL_R::new(((self.bits >> 4) & 3) as u8)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> REG_CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - reg_core0_reg_clk_en"]
     #[inline(always)]
     pub fn reg_clk_en(&self) -> REG_CLK_EN_R {
-        REG_CLK_EN_R::new((self.bits & 0x01) != 0)
+        REG_CLK_EN_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

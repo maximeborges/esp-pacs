@@ -67,7 +67,7 @@ impl<'a> READ_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PGM_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - command for read"]
     #[inline(always)]
     pub fn read_cmd(&self) -> READ_CMD_R {
-        READ_CMD_R::new((self.bits & 0x01) != 0)
+        READ_CMD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - command for program"]
     #[inline(always)]
     pub fn pgm_cmd(&self) -> PGM_CMD_R {
-        PGM_CMD_R::new(((self.bits >> 1) & 0x01) != 0)
+        PGM_CMD_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

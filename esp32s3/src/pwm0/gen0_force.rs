@@ -84,7 +84,7 @@ impl<'a> GEN0_A_CNTUFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> GEN0_B_CNTUFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> GEN0_A_NCIFORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> GEN0_A_NCIFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 11)) | ((value as u32 & 0x03) << 11);
+        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
         self.w
     }
 }
@@ -212,7 +212,7 @@ impl<'a> GEN0_B_NCIFORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -239,7 +239,7 @@ impl<'a> GEN0_B_NCIFORCE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
+        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
         self.w
     }
 }
@@ -252,32 +252,32 @@ impl R {
     #[doc = "Bits 6:7 - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen0_a_cntuforce_mode(&self) -> GEN0_A_CNTUFORCE_MODE_R {
-        GEN0_A_CNTUFORCE_MODE_R::new(((self.bits >> 6) & 0x03) as u8)
+        GEN0_A_CNTUFORCE_MODE_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 8:9 - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen0_b_cntuforce_mode(&self) -> GEN0_B_CNTUFORCE_MODE_R {
-        GEN0_B_CNTUFORCE_MODE_R::new(((self.bits >> 8) & 0x03) as u8)
+        GEN0_B_CNTUFORCE_MODE_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 10 - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
     #[inline(always)]
     pub fn gen0_a_nciforce(&self) -> GEN0_A_NCIFORCE_R {
-        GEN0_A_NCIFORCE_R::new(((self.bits >> 10) & 0x01) != 0)
+        GEN0_A_NCIFORCE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:12 - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen0_a_nciforce_mode(&self) -> GEN0_A_NCIFORCE_MODE_R {
-        GEN0_A_NCIFORCE_MODE_R::new(((self.bits >> 11) & 0x03) as u8)
+        GEN0_A_NCIFORCE_MODE_R::new(((self.bits >> 11) & 3) as u8)
     }
     #[doc = "Bit 13 - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
     #[inline(always)]
     pub fn gen0_b_nciforce(&self) -> GEN0_B_NCIFORCE_R {
-        GEN0_B_NCIFORCE_R::new(((self.bits >> 13) & 0x01) != 0)
+        GEN0_B_NCIFORCE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15 - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen0_b_nciforce_mode(&self) -> GEN0_B_NCIFORCE_MODE_R {
-        GEN0_B_NCIFORCE_MODE_R::new(((self.bits >> 14) & 0x03) as u8)
+        GEN0_B_NCIFORCE_MODE_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {

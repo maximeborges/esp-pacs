@@ -67,7 +67,7 @@ impl<'a> ENT_RTC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> DTEST_RTC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
+        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
         self.w
     }
 }
@@ -102,12 +102,12 @@ impl R {
     #[doc = "Bit 29 - ENT_RTC"]
     #[inline(always)]
     pub fn ent_rtc(&self) -> ENT_RTC_R {
-        ENT_RTC_R::new(((self.bits >> 29) & 0x01) != 0)
+        ENT_RTC_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - DTEST_RTC"]
     #[inline(always)]
     pub fn dtest_rtc(&self) -> DTEST_RTC_R {
-        DTEST_RTC_R::new(((self.bits >> 30) & 0x03) as u8)
+        DTEST_RTC_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {

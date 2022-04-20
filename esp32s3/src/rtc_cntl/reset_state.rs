@@ -97,7 +97,7 @@ impl<'a> APPCPU_STAT_VECTOR_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -134,7 +134,7 @@ impl<'a> PROCPU_STAT_VECTOR_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -186,7 +186,7 @@ impl<'a> RESET_FLAG_PROCPU_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -208,7 +208,7 @@ impl<'a> RESET_FLAG_APPCPU_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -245,7 +245,7 @@ impl<'a> APPCPU_OCD_HALT_ON_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -282,7 +282,7 @@ impl<'a> PROCPU_OCD_HALT_ON_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -334,7 +334,7 @@ impl<'a> RESET_FLAG_JTAG_PROCPU_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -356,7 +356,7 @@ impl<'a> RESET_FLAG_JTAG_APPCPU_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -393,7 +393,7 @@ impl<'a> RTC_APP_DRESET_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -430,7 +430,7 @@ impl<'a> RTC_PRO_DRESET_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -448,52 +448,52 @@ impl R {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
     pub fn appcpu_stat_vector_sel(&self) -> APPCPU_STAT_VECTOR_SEL_R {
-        APPCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 12) & 0x01) != 0)
+        APPCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
     pub fn procpu_stat_vector_sel(&self) -> PROCPU_STAT_VECTOR_SEL_R {
-        PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 0x01) != 0)
+        PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - PRO CPU reset_flag"]
     #[inline(always)]
     pub fn reset_flag_procpu(&self) -> RESET_FLAG_PROCPU_R {
-        RESET_FLAG_PROCPU_R::new(((self.bits >> 14) & 0x01) != 0)
+        RESET_FLAG_PROCPU_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - APP CPU reset flag"]
     #[inline(always)]
     pub fn reset_flag_appcpu(&self) -> RESET_FLAG_APPCPU_R {
-        RESET_FLAG_APPCPU_R::new(((self.bits >> 15) & 0x01) != 0)
+        RESET_FLAG_APPCPU_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 18 - APPCPU OcdHaltOnReset"]
     #[inline(always)]
     pub fn appcpu_ocd_halt_on_reset(&self) -> APPCPU_OCD_HALT_ON_RESET_R {
-        APPCPU_OCD_HALT_ON_RESET_R::new(((self.bits >> 18) & 0x01) != 0)
+        APPCPU_OCD_HALT_ON_RESET_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
     pub fn procpu_ocd_halt_on_reset(&self) -> PROCPU_OCD_HALT_ON_RESET_R {
-        PROCPU_OCD_HALT_ON_RESET_R::new(((self.bits >> 19) & 0x01) != 0)
+        PROCPU_OCD_HALT_ON_RESET_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - jtag reset flag"]
     #[inline(always)]
     pub fn reset_flag_jtag_procpu(&self) -> RESET_FLAG_JTAG_PROCPU_R {
-        RESET_FLAG_JTAG_PROCPU_R::new(((self.bits >> 20) & 0x01) != 0)
+        RESET_FLAG_JTAG_PROCPU_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - jtag reset flag"]
     #[inline(always)]
     pub fn reset_flag_jtag_appcpu(&self) -> RESET_FLAG_JTAG_APPCPU_R {
-        RESET_FLAG_JTAG_APPCPU_R::new(((self.bits >> 21) & 0x01) != 0)
+        RESET_FLAG_JTAG_APPCPU_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 24 - bypass cpu1 dreset"]
     #[inline(always)]
     pub fn rtc_app_dreset_mask(&self) -> RTC_APP_DRESET_MASK_R {
-        RTC_APP_DRESET_MASK_R::new(((self.bits >> 24) & 0x01) != 0)
+        RTC_APP_DRESET_MASK_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - bypass cpu0 dreset"]
     #[inline(always)]
     pub fn rtc_pro_dreset_mask(&self) -> RTC_PRO_DRESET_MASK_R {
-        RTC_PRO_DRESET_MASK_R::new(((self.bits >> 25) & 0x01) != 0)
+        RTC_PRO_DRESET_MASK_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

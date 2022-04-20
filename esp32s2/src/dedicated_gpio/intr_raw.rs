@@ -137,42 +137,42 @@ impl R {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when dedicated GPIO0 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio0(&self) -> GPIO0_R {
-        GPIO0_R::new((self.bits & 0x01) != 0)
+        GPIO0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This interrupt raw bit turns to high level when dedicated GPIO1 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio1(&self) -> GPIO1_R {
-        GPIO1_R::new(((self.bits >> 1) & 0x01) != 0)
+        GPIO1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - This interrupt raw bit turns to high level when dedicated GPIO2 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio2(&self) -> GPIO2_R {
-        GPIO2_R::new(((self.bits >> 2) & 0x01) != 0)
+        GPIO2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - This interrupt raw bit turns to high level when dedicated GPIO3 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio3(&self) -> GPIO3_R {
-        GPIO3_R::new(((self.bits >> 3) & 0x01) != 0)
+        GPIO3_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - This interrupt raw bit turns to high level when dedicated GPIO4 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio4(&self) -> GPIO4_R {
-        GPIO4_R::new(((self.bits >> 4) & 0x01) != 0)
+        GPIO4_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - This interrupt raw bit turns to high level when dedicated GPIO5 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio5(&self) -> GPIO5_R {
-        GPIO5_R::new(((self.bits >> 5) & 0x01) != 0)
+        GPIO5_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - This interrupt raw bit turns to high level when dedicated GPIO6 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio6(&self) -> GPIO6_R {
-        GPIO6_R::new(((self.bits >> 6) & 0x01) != 0)
+        GPIO6_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - This interrupt raw bit turns to high level when dedicated GPIO7 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
     pub fn gpio7(&self) -> GPIO7_R {
-        GPIO7_R::new(((self.bits >> 7) & 0x01) != 0)
+        GPIO7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`]

@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:1 - Indicates the status of the Manual Encryption block. 0x0 (XTS_AES_IDLE): idle. 0x1 (XTS_AES_BUSY): busy with encryption. 0x2 (XTS_AES_DONE): encryption is completed, but the encrypted result is not accessible to SPI. 0X3 (XTS_AES_RELEASE): encrypted result is accessible to SPI."]
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
-        STATE_R::new((self.bits & 0x03) as u8)
+        STATE_R::new((self.bits & 3) as u8)
     }
 }
 #[doc = "Status register\n\nThis register you can [`read`]

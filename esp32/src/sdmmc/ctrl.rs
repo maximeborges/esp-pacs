@@ -67,7 +67,7 @@ impl<'a> CONTROLLER_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> DMA_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> INT_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> READ_WAIT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> SEND_IRQ_RESPONSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> ABORT_READ_DATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> SEND_CCSD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> SEND_AUTO_STOP_CCSD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> CEATA_DEVICE_INTERRUPT_STATUS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -408,52 +408,52 @@ impl R {
     #[doc = "Bit 0 - To reset controller, firmware should set this bit. This bit is auto-cleared after two AHB and two sdhost_cclk_in clock cycles."]
     #[inline(always)]
     pub fn controller_reset(&self) -> CONTROLLER_RESET_R {
-        CONTROLLER_RESET_R::new((self.bits & 0x01) != 0)
+        CONTROLLER_RESET_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - To reset FIFO, firmware should set bit to 1. This bit is auto-cleared after completion of reset operation. Note: FIFO pointers will be out of reset after 2 cycles of system clocks in addition to synchronization delay (2 cycles of card clock), after the fifo_reset is cleared."]
     #[inline(always)]
     pub fn fifo_reset(&self) -> FIFO_RESET_R {
-        FIFO_RESET_R::new(((self.bits >> 1) & 0x01) != 0)
+        FIFO_RESET_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - To reset DMA interface, firmware should set bit to 1. This bit is auto-cleared after two AHB clocks."]
     #[inline(always)]
     pub fn dma_reset(&self) -> DMA_RESET_R {
-        DMA_RESET_R::new(((self.bits >> 2) & 0x01) != 0)
+        DMA_RESET_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - Global interrupt enable/disable bit. 0: Disable; 1: Enable."]
     #[inline(always)]
     pub fn int_enable(&self) -> INT_ENABLE_R {
-        INT_ENABLE_R::new(((self.bits >> 4) & 0x01) != 0)
+        INT_ENABLE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - For sending read-wait to SDIO cards."]
     #[inline(always)]
     pub fn read_wait(&self) -> READ_WAIT_R {
-        READ_WAIT_R::new(((self.bits >> 6) & 0x01) != 0)
+        READ_WAIT_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Bit automatically clears once response is sent. To wait for MMC card interrupts, host issues CMD40 and waits for interrupt response from MMC card(s). In the meantime, if host wants SD/MMC to exit waiting for interrupt state, it can set this bit, at which time SD/MMC command state-machine sends CMD40 response on bus and returns to idle state."]
     #[inline(always)]
     pub fn send_irq_response(&self) -> SEND_IRQ_RESPONSE_R {
-        SEND_IRQ_RESPONSE_R::new(((self.bits >> 7) & 0x01) != 0)
+        SEND_IRQ_RESPONSE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - After a suspend-command is issued during a read-operation, software polls the card to find when the suspend-event occurred. Once the suspend-event has occurred, software sets the bit which will reset the data state machine that is waiting for the next block of data. This bit is automatically cleared once the data state machine is reset to idle."]
     #[inline(always)]
     pub fn abort_read_data(&self) -> ABORT_READ_DATA_R {
-        ABORT_READ_DATA_R::new(((self.bits >> 8) & 0x01) != 0)
+        ABORT_READ_DATA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - When set, SD/MMC sends CCSD to the CE-ATA device. Software sets this bit only if the current command is expecting CCS (that is, RW_BLK), and if interrupts are enabled for the CE-ATA device. Once the CCSD pattern is sent to the device, SD/MMC automatically clears the SDHOST_SEND_CCSD bit. It also sets the Command Done (CD) bit in the SDHOST_RINTSTS_REG register, and generates an interrupt for the host, in case the Command Done interrupt is not masked. NOTE: Once the SDHOST_SEND_CCSD bit is set, it takes two card clock cycles to drive the CCSD on the CMD line. Due to this, within the boundary conditions the CCSD may be sent to the CE-ATA device, even if the device has signalled CCS."]
     #[inline(always)]
     pub fn send_ccsd(&self) -> SEND_CCSD_R {
-        SEND_CCSD_R::new(((self.bits >> 9) & 0x01) != 0)
+        SEND_CCSD_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Always Set SDHOST_SEND_AUTO_STOP_CCSD and SDHOST_SEND_CCSD bits together; SDHOST_SEND_AUTO_STOP_CCSD should not be set independently of send_ccsd. When set, SD/MMC automatically sends an internally-generated STOP command (CMD12) to the CE-ATA device. After sending this internally-generated STOP command, the Auto Command Done (ACD) bit in SDHOST_RINTSTS_REG is set and an interrupt is generated for the host, in case the ACD interrupt is not masked. After sending the Command Completion Signal Disable (CCSD), SD/MMC automatically clears the SDHOST_SEND_AUTO_STOP_CCSD bit."]
     #[inline(always)]
     pub fn send_auto_stop_ccsd(&self) -> SEND_AUTO_STOP_CCSD_R {
-        SEND_AUTO_STOP_CCSD_R::new(((self.bits >> 10) & 0x01) != 0)
+        SEND_AUTO_STOP_CCSD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Software should appropriately write to this bit after the power-on reset or any other reset to the CE-ATA device. After reset, the CE-ATA device's interrupt is usually disabled (nIEN = 1). If the host enables the CE-ATA device's interrupt, then software should set this bit."]
     #[inline(always)]
     pub fn ceata_device_interrupt_status(&self) -> CEATA_DEVICE_INTERRUPT_STATUS_R {
-        CEATA_DEVICE_INTERRUPT_STATUS_R::new(((self.bits >> 11) & 0x01) != 0)
+        CEATA_DEVICE_INTERRUPT_STATUS_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

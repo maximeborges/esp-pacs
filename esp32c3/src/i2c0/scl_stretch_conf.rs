@@ -94,7 +94,7 @@ impl<'a> SLAVE_SCL_STRETCH_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -116,7 +116,7 @@ impl<'a> SLAVE_SCL_STRETCH_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -153,7 +153,7 @@ impl<'a> SLAVE_BYTE_ACK_CTL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -190,7 +190,7 @@ impl<'a> SLAVE_BYTE_ACK_LVL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -203,17 +203,17 @@ impl R {
     #[doc = "Bit 10 - reg_slave_scl_stretch_en"]
     #[inline(always)]
     pub fn slave_scl_stretch_en(&self) -> SLAVE_SCL_STRETCH_EN_R {
-        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_slave_byte_ack_ctl_en"]
     #[inline(always)]
     pub fn slave_byte_ack_ctl_en(&self) -> SLAVE_BYTE_ACK_CTL_EN_R {
-        SLAVE_BYTE_ACK_CTL_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLAVE_BYTE_ACK_CTL_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_slave_byte_ack_lvl"]
     #[inline(always)]
     pub fn slave_byte_ack_lvl(&self) -> SLAVE_BYTE_ACK_LVL_R {
-        SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 0x01) != 0)
+        SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

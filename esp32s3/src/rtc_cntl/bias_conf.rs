@@ -67,7 +67,7 @@ impl<'a> BIAS_BUF_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> BIAS_BUF_WAKE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BIAS_BUF_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BIAS_BUF_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PD_CUR_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PD_CUR_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BIAS_SLEEP_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> BIAS_SLEEP_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -415,42 +415,42 @@ impl R {
     #[doc = "Bit 10 - No public"]
     #[inline(always)]
     pub fn bias_buf_idle(&self) -> BIAS_BUF_IDLE_R {
-        BIAS_BUF_IDLE_R::new(((self.bits >> 10) & 0x01) != 0)
+        BIAS_BUF_IDLE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - No public"]
     #[inline(always)]
     pub fn bias_buf_wake(&self) -> BIAS_BUF_WAKE_R {
-        BIAS_BUF_WAKE_R::new(((self.bits >> 11) & 0x01) != 0)
+        BIAS_BUF_WAKE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - No public"]
     #[inline(always)]
     pub fn bias_buf_deep_slp(&self) -> BIAS_BUF_DEEP_SLP_R {
-        BIAS_BUF_DEEP_SLP_R::new(((self.bits >> 12) & 0x01) != 0)
+        BIAS_BUF_DEEP_SLP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - No public"]
     #[inline(always)]
     pub fn bias_buf_monitor(&self) -> BIAS_BUF_MONITOR_R {
-        BIAS_BUF_MONITOR_R::new(((self.bits >> 13) & 0x01) != 0)
+        BIAS_BUF_MONITOR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
     pub fn pd_cur_deep_slp(&self) -> PD_CUR_DEEP_SLP_R {
-        PD_CUR_DEEP_SLP_R::new(((self.bits >> 14) & 0x01) != 0)
+        PD_CUR_DEEP_SLP_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
     pub fn pd_cur_monitor(&self) -> PD_CUR_MONITOR_R {
-        PD_CUR_MONITOR_R::new(((self.bits >> 15) & 0x01) != 0)
+        PD_CUR_MONITOR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
     pub fn bias_sleep_deep_slp(&self) -> BIAS_SLEEP_DEEP_SLP_R {
-        BIAS_SLEEP_DEEP_SLP_R::new(((self.bits >> 16) & 0x01) != 0)
+        BIAS_SLEEP_DEEP_SLP_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
     pub fn bias_sleep_monitor(&self) -> BIAS_SLEEP_MONITOR_R {
-        BIAS_SLEEP_MONITOR_R::new(((self.bits >> 17) & 0x01) != 0)
+        BIAS_SLEEP_MONITOR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]

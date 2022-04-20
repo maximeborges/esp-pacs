@@ -67,7 +67,7 @@ impl R {
     #[doc = "Bit 24 - reg_core_0_dram0_recording_wr_1"]
     #[inline(always)]
     pub fn core_0_dram0_recording_wr_1(&self) -> CORE_0_DRAM0_RECORDING_WR_1_R {
-        CORE_0_DRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 0x01) != 0)
+        CORE_0_DRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:28 - reg_core_0_dram0_recording_byteen_1"]
     #[inline(always)]

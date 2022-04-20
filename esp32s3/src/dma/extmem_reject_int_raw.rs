@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]
     pub fn extmem_reject_int_raw(&self) -> EXTMEM_REJECT_INT_RAW_R {
-        EXTMEM_REJECT_INT_RAW_R::new((self.bits & 0x01) != 0)
+        EXTMEM_REJECT_INT_RAW_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Raw interrupt status of external RAM permission\n\nThis register you can [`read`]

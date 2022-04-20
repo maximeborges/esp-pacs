@@ -67,7 +67,7 @@ impl<'a> PRO_CACHE_TAG_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_CACHE_TAG_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> APP_CACHE_TAG_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> APP_CACHE_TAG_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -186,22 +186,22 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_cache_tag_force_on(&self) -> PRO_CACHE_TAG_FORCE_ON_R {
-        PRO_CACHE_TAG_FORCE_ON_R::new((self.bits & 0x01) != 0)
+        PRO_CACHE_TAG_FORCE_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pro_cache_tag_pd(&self) -> PRO_CACHE_TAG_PD_R {
-        PRO_CACHE_TAG_PD_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_CACHE_TAG_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn app_cache_tag_force_on(&self) -> APP_CACHE_TAG_FORCE_ON_R {
-        APP_CACHE_TAG_FORCE_ON_R::new(((self.bits >> 8) & 0x01) != 0)
+        APP_CACHE_TAG_FORCE_ON_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn app_cache_tag_pd(&self) -> APP_CACHE_TAG_PD_R {
-        APP_CACHE_TAG_PD_R::new(((self.bits >> 9) & 0x01) != 0)
+        APP_CACHE_TAG_PD_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

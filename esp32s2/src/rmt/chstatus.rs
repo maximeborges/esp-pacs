@@ -147,32 +147,32 @@ impl R {
     #[doc = "Bits 20:22 - This register records the FSM status of CHANNEL%s."]
     #[inline(always)]
     pub fn state_ch0(&self) -> STATE_CH0_R {
-        STATE_CH0_R::new(((self.bits >> 20) & 0x07) as u8)
+        STATE_CH0_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bit 23 - This status bit will be set when the ownership of memory block is wrong."]
     #[inline(always)]
     pub fn mem_owner_err_ch0(&self) -> MEM_OWNER_ERR_CH0_R {
-        MEM_OWNER_ERR_CH0_R::new(((self.bits >> 23) & 0x01) != 0)
+        MEM_OWNER_ERR_CH0_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - This status bit will be set if the receiver receives more data than the memory size."]
     #[inline(always)]
     pub fn mem_full_ch0(&self) -> MEM_FULL_CH0_R {
-        MEM_FULL_CH0_R::new(((self.bits >> 24) & 0x01) != 0)
+        MEM_FULL_CH0_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - This status bit will be set when the data to be set is more than memory size and the wraparound mode is disabled."]
     #[inline(always)]
     pub fn mem_empty_ch0(&self) -> MEM_EMPTY_CH0_R {
-        MEM_EMPTY_CH0_R::new(((self.bits >> 25) & 0x01) != 0)
+        MEM_EMPTY_CH0_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - This status bit will be set if the offset address out of memory size when writes via APB bus."]
     #[inline(always)]
     pub fn apb_mem_wr_err_ch0(&self) -> APB_MEM_WR_ERR_CH0_R {
-        APB_MEM_WR_ERR_CH0_R::new(((self.bits >> 26) & 0x01) != 0)
+        APB_MEM_WR_ERR_CH0_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - This status bit will be set if the offset address out of memory size when reads via APB bus."]
     #[inline(always)]
     pub fn apb_mem_rd_err_ch0(&self) -> APB_MEM_RD_ERR_CH0_R {
-        APB_MEM_RD_ERR_CH0_R::new(((self.bits >> 27) & 0x01) != 0)
+        APB_MEM_RD_ERR_CH0_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 #[doc = "Channel %s status register\n\nThis register you can [`read`]

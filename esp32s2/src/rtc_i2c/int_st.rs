@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt status bit"]
     #[inline(always)]
     pub fn slave_tran_comp_int_st(&self) -> SLAVE_TRAN_COMP_INT_ST_R {
-        SLAVE_TRAN_COMP_INT_ST_R::new((self.bits & 0x01) != 0)
+        SLAVE_TRAN_COMP_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTC_I2C_ARBITRATION_LOST_INT interrupt status bit"]
     #[inline(always)]
     pub fn arbitration_lost_int_st(&self) -> ARBITRATION_LOST_INT_ST_R {
-        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        ARBITRATION_LOST_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC_I2C_MASTER_TRAN_COMP_INT interrupt status bit"]
     #[inline(always)]
     pub fn master_tran_comp_int_st(&self) -> MASTER_TRAN_COMP_INT_ST_R {
-        MASTER_TRAN_COMP_INT_ST_R::new(((self.bits >> 2) & 0x01) != 0)
+        MASTER_TRAN_COMP_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC_I2C_TRANS_COMPLETE_INT interrupt status bit"]
     #[inline(always)]
     pub fn trans_complete_int_st(&self) -> TRANS_COMPLETE_INT_ST_R {
-        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 3) & 0x01) != 0)
+        TRANS_COMPLETE_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RTC_I2C_TIME_OUT_INT interrupt status bit"]
     #[inline(always)]
     pub fn time_out_int_st(&self) -> TIME_OUT_INT_ST_R {
-        TIME_OUT_INT_ST_R::new(((self.bits >> 4) & 0x01) != 0)
+        TIME_OUT_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RTC_I2C_ACK_ERR_INT interrupt status bit"]
     #[inline(always)]
     pub fn ack_err_int_st(&self) -> ACK_ERR_INT_ST_R {
-        ACK_ERR_INT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        ACK_ERR_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RTC_I2C_RX_DATA_INT interrupt status bit"]
     #[inline(always)]
     pub fn rx_data_int_st(&self) -> RX_DATA_INT_ST_R {
-        RX_DATA_INT_ST_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_DATA_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - RTC_I2C_TX_DATA_INT interrupt status bit"]
     #[inline(always)]
     pub fn tx_data_int_st(&self) -> TX_DATA_INT_ST_R {
-        TX_DATA_INT_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        TX_DATA_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RTC_I2C_DETECT_START_INT interrupt status bit"]
     #[inline(always)]
     pub fn detect_start_int_st(&self) -> DETECT_START_INT_ST_R {
-        DETECT_START_INT_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        DETECT_START_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "RTC I2C interrupt status\n\nThis register you can [`read`]

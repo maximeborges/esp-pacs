@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bits 18:19 - I2S DMA out descriptor state."]
     #[inline(always)]
     pub fn out_dscr_state(&self) -> OUT_DSCR_STATE_R {
-        OUT_DSCR_STATE_R::new(((self.bits >> 18) & 0x03) as u8)
+        OUT_DSCR_STATE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - I2S DMA out data state."]
     #[inline(always)]
     pub fn out_state(&self) -> OUT_STATE_R {
-        OUT_STATE_R::new(((self.bits >> 20) & 0x07) as u8)
+        OUT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:29 - The remains of I2S DMA outfifo data."]
     #[inline(always)]
@@ -127,12 +127,12 @@ impl R {
     #[doc = "Bit 30 - I2S DMA outfifo is full."]
     #[inline(always)]
     pub fn out_full(&self) -> OUT_FULL_R {
-        OUT_FULL_R::new(((self.bits >> 30) & 0x01) != 0)
+        OUT_FULL_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - I2S DMA outfifo is empty."]
     #[inline(always)]
     pub fn out_empty(&self) -> OUT_EMPTY_R {
-        OUT_EMPTY_R::new(((self.bits >> 31) & 0x01) != 0)
+        OUT_EMPTY_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "I2S DMA TX status\n\nThis register you can [`read`]

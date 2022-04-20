@@ -67,7 +67,7 @@ impl<'a> PULSE_CNT_RST_U0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> CNT_PAUSE_U0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PULSE_CNT_RST_U1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> CNT_PAUSE_U1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PULSE_CNT_RST_U2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CNT_PAUSE_U2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> PULSE_CNT_RST_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> CNT_PAUSE_U3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -371,47 +371,47 @@ impl R {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
     pub fn pulse_cnt_rst_u0(&self) -> PULSE_CNT_RST_U0_R {
-        PULSE_CNT_RST_U0_R::new((self.bits & 0x01) != 0)
+        PULSE_CNT_RST_U0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
     pub fn cnt_pause_u0(&self) -> CNT_PAUSE_U0_R {
-        CNT_PAUSE_U0_R::new(((self.bits >> 1) & 0x01) != 0)
+        CNT_PAUSE_U0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
     pub fn pulse_cnt_rst_u1(&self) -> PULSE_CNT_RST_U1_R {
-        PULSE_CNT_RST_U1_R::new(((self.bits >> 2) & 0x01) != 0)
+        PULSE_CNT_RST_U1_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
     pub fn cnt_pause_u1(&self) -> CNT_PAUSE_U1_R {
-        CNT_PAUSE_U1_R::new(((self.bits >> 3) & 0x01) != 0)
+        CNT_PAUSE_U1_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to clear unit 4's counter."]
     #[inline(always)]
     pub fn pulse_cnt_rst_u2(&self) -> PULSE_CNT_RST_U2_R {
-        PULSE_CNT_RST_U2_R::new(((self.bits >> 4) & 0x01) != 0)
+        PULSE_CNT_RST_U2_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 5's counter."]
     #[inline(always)]
     pub fn cnt_pause_u2(&self) -> CNT_PAUSE_U2_R {
-        CNT_PAUSE_U2_R::new(((self.bits >> 5) & 0x01) != 0)
+        CNT_PAUSE_U2_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set this bit to clear unit 6's counter."]
     #[inline(always)]
     pub fn pulse_cnt_rst_u3(&self) -> PULSE_CNT_RST_U3_R {
-        PULSE_CNT_RST_U3_R::new(((self.bits >> 6) & 0x01) != 0)
+        PULSE_CNT_RST_U3_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 7's counter."]
     #[inline(always)]
     pub fn cnt_pause_u3(&self) -> CNT_PAUSE_U3_R {
-        CNT_PAUSE_U3_R::new(((self.bits >> 7) & 0x01) != 0)
+        CNT_PAUSE_U3_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 16 - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

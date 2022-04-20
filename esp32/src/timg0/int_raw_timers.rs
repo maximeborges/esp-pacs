@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
     pub fn t0_int_raw(&self) -> T0_INT_RAW_R {
-        T0_INT_RAW_R::new((self.bits & 0x01) != 0)
+        T0_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - interrupt when timer1 alarm"]
     #[inline(always)]
     pub fn t1_int_raw(&self) -> T1_INT_RAW_R {
-        T1_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        T1_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Interrupt when an interrupt stage timeout"]
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
-        WDT_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        WDT_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn lact_int_raw(&self) -> LACT_INT_RAW_R {
-        LACT_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        LACT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

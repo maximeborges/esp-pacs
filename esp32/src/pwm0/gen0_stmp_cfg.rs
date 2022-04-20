@@ -121,7 +121,7 @@ impl<'a> GEN0_A_SHDW_FULL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> GEN0_B_SHDW_FULL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -176,12 +176,12 @@ impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn gen0_a_shdw_full(&self) -> GEN0_A_SHDW_FULL_R {
-        GEN0_A_SHDW_FULL_R::new(((self.bits >> 8) & 0x01) != 0)
+        GEN0_A_SHDW_FULL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn gen0_b_shdw_full(&self) -> GEN0_B_SHDW_FULL_R {
-        GEN0_B_SHDW_FULL_R::new(((self.bits >> 9) & 0x01) != 0)
+        GEN0_B_SHDW_FULL_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

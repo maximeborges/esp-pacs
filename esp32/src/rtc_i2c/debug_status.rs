@@ -67,7 +67,7 @@ impl<'a> ACK_VAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SLAVE_RW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TIMED_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> ARB_LOST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> BUS_BUSY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> SLAVE_ADDR_MATCH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BYTE_TRANS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> MAIN_STATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 25)) | ((value as u32 & 0x07) << 25);
+        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SCL_STATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 28)) | ((value as u32 & 0x07) << 28);
+        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
         self.w
     }
 }
@@ -351,47 +351,47 @@ impl R {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
     pub fn ack_val(&self) -> ACK_VAL_R {
-        ACK_VAL_R::new((self.bits & 0x01) != 0)
+        ACK_VAL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - When working as a slave, the value of R/W bit received"]
     #[inline(always)]
     pub fn slave_rw(&self) -> SLAVE_RW_R {
-        SLAVE_RW_R::new(((self.bits >> 1) & 0x01) != 0)
+        SLAVE_RW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Transfer has timed out"]
     #[inline(always)]
     pub fn timed_out(&self) -> TIMED_OUT_R {
-        TIMED_OUT_R::new(((self.bits >> 2) & 0x01) != 0)
+        TIMED_OUT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - When working as a master, lost control of I2C bus"]
     #[inline(always)]
     pub fn arb_lost(&self) -> ARB_LOST_R {
-        ARB_LOST_R::new(((self.bits >> 3) & 0x01) != 0)
+        ARB_LOST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - operation is in progress"]
     #[inline(always)]
     pub fn bus_busy(&self) -> BUS_BUSY_R {
-        BUS_BUSY_R::new(((self.bits >> 4) & 0x01) != 0)
+        BUS_BUSY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - When working as a slave, whether address was matched"]
     #[inline(always)]
     pub fn slave_addr_match(&self) -> SLAVE_ADDR_MATCH_R {
-        SLAVE_ADDR_MATCH_R::new(((self.bits >> 5) & 0x01) != 0)
+        SLAVE_ADDR_MATCH_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 8 bit transmit done"]
     #[inline(always)]
     pub fn byte_trans(&self) -> BYTE_TRANS_R {
-        BYTE_TRANS_R::new(((self.bits >> 6) & 0x01) != 0)
+        BYTE_TRANS_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bits 25:27 - state of the main state machine"]
     #[inline(always)]
     pub fn main_state(&self) -> MAIN_STATE_R {
-        MAIN_STATE_R::new(((self.bits >> 25) & 0x07) as u8)
+        MAIN_STATE_R::new(((self.bits >> 25) & 7) as u8)
     }
     #[doc = "Bits 28:30 - state of SCL state machine"]
     #[inline(always)]
     pub fn scl_state(&self) -> SCL_STATE_R {
-        SCL_STATE_R::new(((self.bits >> 28) & 0x07) as u8)
+        SCL_STATE_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
 impl W {

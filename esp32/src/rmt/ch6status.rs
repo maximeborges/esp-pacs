@@ -167,32 +167,32 @@ impl R {
     #[doc = "Bits 24:26 - The channel6 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait."]
     #[inline(always)]
     pub fn state_ch6(&self) -> STATE_CH6_R {
-        STATE_CH6_R::new(((self.bits >> 24) & 0x07) as u8)
+        STATE_CH6_R::new(((self.bits >> 24) & 7) as u8)
     }
     #[doc = "Bit 27 - When channel6 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1."]
     #[inline(always)]
     pub fn mem_owner_err_ch6(&self) -> MEM_OWNER_ERR_CH6_R {
-        MEM_OWNER_ERR_CH6_R::new(((self.bits >> 27) & 0x01) != 0)
+        MEM_OWNER_ERR_CH6_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - The memory full status bit for channel6 turns to high level when mem_waddr_ex is greater than or equal to the configuration range."]
     #[inline(always)]
     pub fn mem_full_ch6(&self) -> MEM_FULL_CH6_R {
-        MEM_FULL_CH6_R::new(((self.bits >> 28) & 0x01) != 0)
+        MEM_FULL_CH6_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - The memory empty status bit for channel6. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range."]
     #[inline(always)]
     pub fn mem_empty_ch6(&self) -> MEM_EMPTY_CH6_R {
-        MEM_EMPTY_CH6_R::new(((self.bits >> 29) & 0x01) != 0)
+        MEM_EMPTY_CH6_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - The apb write memory status bit for channel6 turns to high level when the apb write address exceeds the configuration range."]
     #[inline(always)]
     pub fn apb_mem_wr_err_ch6(&self) -> APB_MEM_WR_ERR_CH6_R {
-        APB_MEM_WR_ERR_CH6_R::new(((self.bits >> 30) & 0x01) != 0)
+        APB_MEM_WR_ERR_CH6_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - The apb read memory status bit for channel6 turns to high level when the apb read address exceeds the configuration range."]
     #[inline(always)]
     pub fn apb_mem_rd_err_ch6(&self) -> APB_MEM_RD_ERR_CH6_R {
-        APB_MEM_RD_ERR_CH6_R::new(((self.bits >> 31) & 0x01) != 0)
+        APB_MEM_RD_ERR_CH6_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

@@ -94,7 +94,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_L_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_L_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_L_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_H_F_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -242,7 +242,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_H_R_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> PRO_AHB_RTCSLOW_0_H_W_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -292,32 +292,32 @@ impl R {
     #[doc = "Bit 11 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 low address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_l_f(&self) -> PRO_AHB_RTCSLOW_0_L_F_R {
-        PRO_AHB_RTCSLOW_0_L_F_R::new(((self.bits >> 11) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_L_F_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 low address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_l_r(&self) -> PRO_AHB_RTCSLOW_0_L_R_R {
-        PRO_AHB_RTCSLOW_0_L_R_R::new(((self.bits >> 12) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_L_R_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 low address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_l_w(&self) -> PRO_AHB_RTCSLOW_0_L_W_R {
-        PRO_AHB_RTCSLOW_0_L_W_R::new(((self.bits >> 13) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_L_W_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 high address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_h_f(&self) -> PRO_AHB_RTCSLOW_0_H_F_R {
-        PRO_AHB_RTCSLOW_0_H_F_R::new(((self.bits >> 14) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_H_F_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 high address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_h_r(&self) -> PRO_AHB_RTCSLOW_0_H_R_R {
-        PRO_AHB_RTCSLOW_0_H_R_R::new(((self.bits >> 15) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_H_R_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 high address region."]
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_h_w(&self) -> PRO_AHB_RTCSLOW_0_H_W_R {
-        PRO_AHB_RTCSLOW_0_H_W_R::new(((self.bits >> 16) & 0x01) != 0)
+        PRO_AHB_RTCSLOW_0_H_W_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

@@ -57,7 +57,7 @@ impl<'a> CLK_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -102,7 +102,7 @@ impl<'a> CLK_MODE_13_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl<'a> RSCK_DATA_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -176,7 +176,7 @@ impl<'a> W16_17_WR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -211,7 +211,7 @@ impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
     #[inline(always)]
     pub fn clk_mode(&self) -> CLK_MODE_R {
-        CLK_MODE_R::new((self.bits & 0x03) as u8)
+        CLK_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
 /B\\[7\\]
@@ -220,17 +220,17 @@ impl R {
 ."]
     #[inline(always)]
     pub fn clk_mode_13(&self) -> CLK_MODE_13_R {
-        CLK_MODE_13_R::new(((self.bits >> 2) & 0x01) != 0)
+        CLK_MODE_13_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
     #[inline(always)]
     pub fn rsck_data_out(&self) -> RSCK_DATA_OUT_R {
-        RSCK_DATA_OUT_R::new(((self.bits >> 3) & 0x01) != 0)
+        RSCK_DATA_OUT_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - 1:SPI_BUF16~SPI_BUF17 can be written 0:SPI_BUF16~SPI_BUF17 can not be written. Can be configured in CONF state."]
     #[inline(always)]
     pub fn w16_17_wr_ena(&self) -> W16_17_WR_ENA_R {
-        W16_17_WR_ENA_R::new(((self.bits >> 4) & 0x01) != 0)
+        W16_17_WR_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 14:19 - SPI cs signal is delayed by spi clock cycles. Can be configured in CONF state."]
     #[inline(always)]

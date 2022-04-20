@@ -94,7 +94,7 @@ impl<'a> SDA_FILTER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 4 - This is the filter enable bit for SDA."]
     #[inline(always)]
     pub fn sda_filter_en(&self) -> SDA_FILTER_EN_R {
-        SDA_FILTER_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        SDA_FILTER_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

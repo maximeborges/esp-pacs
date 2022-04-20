@@ -67,7 +67,7 @@ impl<'a> IN_RST_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> IN_LOOP_TEST_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> INDSCR_BURST_EN_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> IN_DATA_BURST_EN_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> MEM_TRANS_EN_CH0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -223,27 +223,27 @@ impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
     pub fn in_rst_ch0(&self) -> IN_RST_CH0_R {
-        IN_RST_CH0_R::new((self.bits & 0x01) != 0)
+        IN_RST_CH0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
     pub fn in_loop_test_ch0(&self) -> IN_LOOP_TEST_CH0_R {
-        IN_LOOP_TEST_CH0_R::new(((self.bits >> 1) & 0x01) != 0)
+        IN_LOOP_TEST_CH0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
     pub fn indscr_burst_en_ch0(&self) -> INDSCR_BURST_EN_CH0_R {
-        INDSCR_BURST_EN_CH0_R::new(((self.bits >> 2) & 0x01) != 0)
+        INDSCR_BURST_EN_CH0_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
     #[inline(always)]
     pub fn in_data_burst_en_ch0(&self) -> IN_DATA_BURST_EN_CH0_R {
-        IN_DATA_BURST_EN_CH0_R::new(((self.bits >> 3) & 0x01) != 0)
+        IN_DATA_BURST_EN_CH0_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
     pub fn mem_trans_en_ch0(&self) -> MEM_TRANS_EN_CH0_R {
-        MEM_TRANS_EN_CH0_R::new(((self.bits >> 4) & 0x01) != 0)
+        MEM_TRANS_EN_CH0_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
 impl W {

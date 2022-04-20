@@ -67,7 +67,7 @@ impl<'a> TIMER_UNIT1_UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 29 - timer value is sync and valid"]
     #[inline(always)]
     pub fn timer_unit1_value_valid(&self) -> TIMER_UNIT1_VALUE_VALID_R {
-        TIMER_UNIT1_VALUE_VALID_R::new(((self.bits >> 29) & 0x01) != 0)
+        TIMER_UNIT1_VALUE_VALID_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {

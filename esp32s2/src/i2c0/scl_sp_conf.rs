@@ -69,7 +69,7 @@ impl<'a> SCL_RST_SLV_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -133,7 +133,7 @@ impl<'a> SCL_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -170,7 +170,7 @@ impl<'a> SDA_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -179,7 +179,7 @@ impl R {
 ."]
     #[inline(always)]
     pub fn scl_rst_slv_en(&self) -> SCL_RST_SLV_EN_R {
-        SCL_RST_SLV_EN_R::new((self.bits & 0x01) != 0)
+        SCL_RST_SLV_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:5 - Configure the pulses of SCL generated in I2C master mode. Valid when I2C_SCL_RST_SLV_EN is 1."]
     #[inline(always)]
@@ -189,12 +189,12 @@ impl R {
     #[doc = "Bit 6 - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set I2C_SCL_FORCE_OUT and I2C_SCL_PD_EN to 1 to stretch SCL low."]
     #[inline(always)]
     pub fn scl_pd_en(&self) -> SCL_PD_EN_R {
-        SCL_PD_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        SCL_PD_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set I2C_SDA_FORCE_OUT and I2C_SDA_PD_EN to 1 to stretch SDA low."]
     #[inline(always)]
     pub fn sda_pd_en(&self) -> SDA_PD_EN_R {
-        SDA_PD_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        SDA_PD_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

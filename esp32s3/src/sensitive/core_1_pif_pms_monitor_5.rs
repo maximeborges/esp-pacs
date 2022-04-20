@@ -64,21 +64,21 @@ impl R {
     pub fn core_1_pif_pms_monitor_nonword_violate_intr(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R::new((self.bits & 0x01) != 0)
+        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - Record access type when core1 initiate unsupported access type."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_nonword_violate_status_hsize(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 1) & 0x03) as u8)
+        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:4 - Record world information when core1 initiate unsupported access type."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_nonword_violate_status_hworld(
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 3) & 0x03) as u8)
+        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
 #[doc = "core1 permission report register 5.\n\nThis register you can [`read`]

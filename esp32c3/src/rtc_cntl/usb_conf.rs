@@ -67,7 +67,7 @@ impl<'a> IO_MUX_RESET_DISABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 18 - disable io_mux reset"]
     #[inline(always)]
     pub fn io_mux_reset_disable(&self) -> IO_MUX_RESET_DISABLE_R {
-        IO_MUX_RESET_DISABLE_R::new(((self.bits >> 18) & 0x01) != 0)
+        IO_MUX_RESET_DISABLE_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {

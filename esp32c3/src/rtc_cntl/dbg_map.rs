@@ -67,7 +67,7 @@ impl<'a> RTC_GPIO_PIN5_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RTC_GPIO_PIN4_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RTC_GPIO_PIN3_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RTC_GPIO_PIN2_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RTC_GPIO_PIN1_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RTC_GPIO_PIN0_MUX_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -422,32 +422,32 @@ impl R {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_mux_sel(&self) -> RTC_GPIO_PIN5_MUX_SEL_R {
-        RTC_GPIO_PIN5_MUX_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTC_GPIO_PIN5_MUX_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_mux_sel(&self) -> RTC_GPIO_PIN4_MUX_SEL_R {
-        RTC_GPIO_PIN4_MUX_SEL_R::new(((self.bits >> 3) & 0x01) != 0)
+        RTC_GPIO_PIN4_MUX_SEL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_mux_sel(&self) -> RTC_GPIO_PIN3_MUX_SEL_R {
-        RTC_GPIO_PIN3_MUX_SEL_R::new(((self.bits >> 4) & 0x01) != 0)
+        RTC_GPIO_PIN3_MUX_SEL_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_mux_sel(&self) -> RTC_GPIO_PIN2_MUX_SEL_R {
-        RTC_GPIO_PIN2_MUX_SEL_R::new(((self.bits >> 5) & 0x01) != 0)
+        RTC_GPIO_PIN2_MUX_SEL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_mux_sel(&self) -> RTC_GPIO_PIN1_MUX_SEL_R {
-        RTC_GPIO_PIN1_MUX_SEL_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTC_GPIO_PIN1_MUX_SEL_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_mux_sel(&self) -> RTC_GPIO_PIN0_MUX_SEL_R {
-        RTC_GPIO_PIN0_MUX_SEL_R::new(((self.bits >> 7) & 0x01) != 0)
+        RTC_GPIO_PIN0_MUX_SEL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:11 - use for debug"]
     #[inline(always)]

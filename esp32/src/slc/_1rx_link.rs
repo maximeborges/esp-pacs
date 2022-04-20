@@ -94,7 +94,7 @@ impl<'a> SLC1_BT_PACKET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SLC1_RXLINK_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SLC1_RXLINK_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> SLC1_RXLINK_RESTART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -233,27 +233,27 @@ impl R {
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc1_bt_packet(&self) -> SLC1_BT_PACKET_R {
-        SLC1_BT_PACKET_R::new(((self.bits >> 20) & 0x01) != 0)
+        SLC1_BT_PACKET_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn slc1_rxlink_stop(&self) -> SLC1_RXLINK_STOP_R {
-        SLC1_RXLINK_STOP_R::new(((self.bits >> 28) & 0x01) != 0)
+        SLC1_RXLINK_STOP_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn slc1_rxlink_start(&self) -> SLC1_RXLINK_START_R {
-        SLC1_RXLINK_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        SLC1_RXLINK_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     pub fn slc1_rxlink_restart(&self) -> SLC1_RXLINK_RESTART_R {
-        SLC1_RXLINK_RESTART_R::new(((self.bits >> 30) & 0x01) != 0)
+        SLC1_RXLINK_RESTART_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn slc1_rxlink_park(&self) -> SLC1_RXLINK_PARK_R {
-        SLC1_RXLINK_PARK_R::new(((self.bits >> 31) & 0x01) != 0)
+        SLC1_RXLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

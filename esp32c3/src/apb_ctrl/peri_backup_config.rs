@@ -148,7 +148,7 @@ impl<'a> PERI_BACKUP_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> PERI_BACKUP_TO_MEM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> PERI_BACKUP_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -230,7 +230,7 @@ impl R {
     #[doc = "Bits 1:2 - reg_peri_backup_flow_err"]
     #[inline(always)]
     pub fn peri_backup_flow_err(&self) -> PERI_BACKUP_FLOW_ERR_R {
-        PERI_BACKUP_FLOW_ERR_R::new(((self.bits >> 1) & 0x03) as u8)
+        PERI_BACKUP_FLOW_ERR_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 4:8 - reg_peri_backup_burst_limit"]
     #[inline(always)]
@@ -250,12 +250,12 @@ impl R {
     #[doc = "Bit 30 - reg_peri_backup_to_mem"]
     #[inline(always)]
     pub fn peri_backup_to_mem(&self) -> PERI_BACKUP_TO_MEM_R {
-        PERI_BACKUP_TO_MEM_R::new(((self.bits >> 30) & 0x01) != 0)
+        PERI_BACKUP_TO_MEM_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - reg_peri_backup_ena"]
     #[inline(always)]
     pub fn peri_backup_ena(&self) -> PERI_BACKUP_ENA_R {
-        PERI_BACKUP_ENA_R::new(((self.bits >> 31) & 0x01) != 0)
+        PERI_BACKUP_ENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

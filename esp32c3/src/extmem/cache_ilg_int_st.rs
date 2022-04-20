@@ -122,37 +122,37 @@ impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by sync configurations fault."]
     #[inline(always)]
     pub fn icache_sync_op_fault_st(&self) -> ICACHE_SYNC_OP_FAULT_ST_R {
-        ICACHE_SYNC_OP_FAULT_ST_R::new((self.bits & 0x01) != 0)
+        ICACHE_SYNC_OP_FAULT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to indicate interrupt by preload configurations fault."]
     #[inline(always)]
     pub fn icache_preload_op_fault_st(&self) -> ICACHE_PRELOAD_OP_FAULT_ST_R {
-        ICACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_PRELOAD_OP_FAULT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 5 - The bit is used to indicate interrupt by mmu entry fault."]
     #[inline(always)]
     pub fn mmu_entry_fault_st(&self) -> MMU_ENTRY_FAULT_ST_R {
-        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 5) & 0x01) != 0)
+        MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - The bit is used to indicate interrupt by ibus access flash/spiram counter overflow."]
     #[inline(always)]
     pub fn ibus_acs_cnt_ovf_st(&self) -> IBUS_ACS_CNT_OVF_ST_R {
-        IBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 7) & 0x01) != 0)
+        IBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The bit is used to indicate interrupt by ibus access flash/spiram miss counter overflow."]
     #[inline(always)]
     pub fn ibus_acs_miss_cnt_ovf_st(&self) -> IBUS_ACS_MISS_CNT_OVF_ST_R {
-        IBUS_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 0x01) != 0)
+        IBUS_ACS_MISS_CNT_OVF_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The bit is used to indicate interrupt by dbus access flash/spiram counter overflow."]
     #[inline(always)]
     pub fn dbus_acs_cnt_ovf_st(&self) -> DBUS_ACS_CNT_OVF_ST_R {
-        DBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 9) & 0x01) != 0)
+        DBUS_ACS_CNT_OVF_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - The bit is used to indicate interrupt by dbus access flash miss counter overflow."]
     #[inline(always)]
     pub fn dbus_acs_flash_miss_cnt_ovf_st(&self) -> DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R {
-        DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 0x01) != 0)
+        DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 #[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]

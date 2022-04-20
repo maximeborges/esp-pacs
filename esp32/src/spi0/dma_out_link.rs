@@ -94,7 +94,7 @@ impl<'a> OUTLINK_STOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> OUTLINK_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> OUTLINK_RESTART_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -181,17 +181,17 @@ impl R {
     #[doc = "Bit 28 - Set the bit to stop to use outlink descriptor."]
     #[inline(always)]
     pub fn outlink_stop(&self) -> OUTLINK_STOP_R {
-        OUTLINK_STOP_R::new(((self.bits >> 28) & 0x01) != 0)
+        OUTLINK_STOP_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set the bit to start to use outlink descriptor."]
     #[inline(always)]
     pub fn outlink_start(&self) -> OUTLINK_START_R {
-        OUTLINK_START_R::new(((self.bits >> 29) & 0x01) != 0)
+        OUTLINK_START_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set the bit to mount on new outlink descriptors."]
     #[inline(always)]
     pub fn outlink_restart(&self) -> OUTLINK_RESTART_R {
-        OUTLINK_RESTART_R::new(((self.bits >> 30) & 0x01) != 0)
+        OUTLINK_RESTART_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

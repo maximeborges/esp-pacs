@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:2 - UHCI encoder status."]
     #[inline(always)]
     pub fn encode_state(&self) -> ENCODE_STATE_R {
-        ENCODE_STATE_R::new((self.bits & 0x07) as u8)
+        ENCODE_STATE_R::new((self.bits & 7) as u8)
     }
 }
 #[doc = "UHCI transmit status\n\nThis register you can [`read`]

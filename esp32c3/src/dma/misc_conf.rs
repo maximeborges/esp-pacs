@@ -67,7 +67,7 @@ impl<'a> AHBM_RST_INTER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ARB_PRI_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - Set this bit, then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
     pub fn ahbm_rst_inter(&self) -> AHBM_RST_INTER_R {
-        AHBM_RST_INTER_R::new((self.bits & 0x01) != 0)
+        AHBM_RST_INTER_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
     pub fn arb_pri_dis(&self) -> ARB_PRI_DIS_R {
-        ARB_PRI_DIS_R::new(((self.bits >> 2) & 0x01) != 0)
+        ARB_PRI_DIS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_clk_en"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

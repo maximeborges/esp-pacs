@@ -67,7 +67,7 @@ impl<'a> SDA_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SCL_FORCE_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SAMPLE_SCL_LEVEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RX_FULL_ACK_LEVEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> MS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -237,7 +237,7 @@ impl<'a> TRANS_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -274,7 +274,7 @@ impl<'a> TX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -311,7 +311,7 @@ impl<'a> RX_LSB_FIRST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -348,7 +348,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -385,7 +385,7 @@ impl<'a> ARBITRATION_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -407,7 +407,7 @@ impl<'a> FSM_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -429,7 +429,7 @@ impl<'a> CONF_UPGATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -466,7 +466,7 @@ impl<'a> SLV_TX_AUTO_START_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -503,7 +503,7 @@ impl<'a> ADDR_10BIT_RW_CHECK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -540,7 +540,7 @@ impl<'a> ADDR_BROADCASTING_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -548,62 +548,62 @@ impl R {
     #[doc = "Bit 0 - reg_sda_force_out"]
     #[inline(always)]
     pub fn sda_force_out(&self) -> SDA_FORCE_OUT_R {
-        SDA_FORCE_OUT_R::new((self.bits & 0x01) != 0)
+        SDA_FORCE_OUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_scl_force_out"]
     #[inline(always)]
     pub fn scl_force_out(&self) -> SCL_FORCE_OUT_R {
-        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 0x01) != 0)
+        SCL_FORCE_OUT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_sample_scl_level"]
     #[inline(always)]
     pub fn sample_scl_level(&self) -> SAMPLE_SCL_LEVEL_R {
-        SAMPLE_SCL_LEVEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        SAMPLE_SCL_LEVEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_rx_full_ack_level"]
     #[inline(always)]
     pub fn rx_full_ack_level(&self) -> RX_FULL_ACK_LEVEL_R {
-        RX_FULL_ACK_LEVEL_R::new(((self.bits >> 3) & 0x01) != 0)
+        RX_FULL_ACK_LEVEL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_ms_mode"]
     #[inline(always)]
     pub fn ms_mode(&self) -> MS_MODE_R {
-        MS_MODE_R::new(((self.bits >> 4) & 0x01) != 0)
+        MS_MODE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_tx_lsb_first"]
     #[inline(always)]
     pub fn tx_lsb_first(&self) -> TX_LSB_FIRST_R {
-        TX_LSB_FIRST_R::new(((self.bits >> 6) & 0x01) != 0)
+        TX_LSB_FIRST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_rx_lsb_first"]
     #[inline(always)]
     pub fn rx_lsb_first(&self) -> RX_LSB_FIRST_R {
-        RX_LSB_FIRST_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_LSB_FIRST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_clk_en"]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - reg_arbitration_en"]
     #[inline(always)]
     pub fn arbitration_en(&self) -> ARBITRATION_EN_R {
-        ARBITRATION_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        ARBITRATION_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_slv_tx_auto_start_en"]
     #[inline(always)]
     pub fn slv_tx_auto_start_en(&self) -> SLV_TX_AUTO_START_EN_R {
-        SLV_TX_AUTO_START_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLV_TX_AUTO_START_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_addr_10bit_rw_check_en"]
     #[inline(always)]
     pub fn addr_10bit_rw_check_en(&self) -> ADDR_10BIT_RW_CHECK_EN_R {
-        ADDR_10BIT_RW_CHECK_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        ADDR_10BIT_RW_CHECK_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_addr_broadcasting_en"]
     #[inline(always)]
     pub fn addr_broadcasting_en(&self) -> ADDR_BROADCASTING_EN_R {
-        ADDR_BROADCASTING_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        ADDR_BROADCASTING_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {

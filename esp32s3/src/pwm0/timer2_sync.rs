@@ -67,7 +67,7 @@ impl<'a> TIMER2_SYNCI_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TIMER2_SYNCO_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -166,17 +166,17 @@ impl R {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
     pub fn timer2_synci_en(&self) -> TIMER2_SYNCI_EN_R {
-        TIMER2_SYNCI_EN_R::new((self.bits & 0x01) != 0)
+        TIMER2_SYNCI_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Toggling this bit will trigger a software sync."]
     #[inline(always)]
     pub fn sw(&self) -> SW_R {
-        SW_R::new(((self.bits >> 1) & 0x01) != 0)
+        SW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - PWM timer2 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
     #[inline(always)]
     pub fn timer2_synco_sel(&self) -> TIMER2_SYNCO_SEL_R {
-        TIMER2_SYNCO_SEL_R::new(((self.bits >> 2) & 0x03) as u8)
+        TIMER2_SYNCO_SEL_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:20 - phase for timer reload on sync event"]
     #[inline(always)]

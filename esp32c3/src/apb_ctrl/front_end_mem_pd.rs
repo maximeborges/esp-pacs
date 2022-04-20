@@ -67,7 +67,7 @@ impl<'a> AGC_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> AGC_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PBUS_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> PBUS_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> DC_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> DC_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - reg_agc_mem_force_pu"]
     #[inline(always)]
     pub fn agc_mem_force_pu(&self) -> AGC_MEM_FORCE_PU_R {
-        AGC_MEM_FORCE_PU_R::new((self.bits & 0x01) != 0)
+        AGC_MEM_FORCE_PU_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_agc_mem_force_pd"]
     #[inline(always)]
     pub fn agc_mem_force_pd(&self) -> AGC_MEM_FORCE_PD_R {
-        AGC_MEM_FORCE_PD_R::new(((self.bits >> 1) & 0x01) != 0)
+        AGC_MEM_FORCE_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_pbus_mem_force_pu"]
     #[inline(always)]
     pub fn pbus_mem_force_pu(&self) -> PBUS_MEM_FORCE_PU_R {
-        PBUS_MEM_FORCE_PU_R::new(((self.bits >> 2) & 0x01) != 0)
+        PBUS_MEM_FORCE_PU_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_pbus_mem_force_pd"]
     #[inline(always)]
     pub fn pbus_mem_force_pd(&self) -> PBUS_MEM_FORCE_PD_R {
-        PBUS_MEM_FORCE_PD_R::new(((self.bits >> 3) & 0x01) != 0)
+        PBUS_MEM_FORCE_PD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_dc_mem_force_pu"]
     #[inline(always)]
     pub fn dc_mem_force_pu(&self) -> DC_MEM_FORCE_PU_R {
-        DC_MEM_FORCE_PU_R::new(((self.bits >> 4) & 0x01) != 0)
+        DC_MEM_FORCE_PU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_dc_mem_force_pd"]
     #[inline(always)]
     pub fn dc_mem_force_pd(&self) -> DC_MEM_FORCE_PD_R {
-        DC_MEM_FORCE_PD_R::new(((self.bits >> 5) & 0x01) != 0)
+        DC_MEM_FORCE_PD_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

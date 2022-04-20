@@ -94,7 +94,7 @@ impl<'a> IN_INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 6 - revert the value of the input if you want to revert please set the value to 1"]
     #[inline(always)]
     pub fn in_inv_sel(&self) -> IN_INV_SEL_R {
-        IN_INV_SEL_R::new(((self.bits >> 6) & 0x01) != 0)
+        IN_INV_SEL_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
-        SEL_R::new(((self.bits >> 7) & 0x01) != 0)
+        SEL_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

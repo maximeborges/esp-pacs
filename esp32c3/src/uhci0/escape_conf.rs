@@ -67,7 +67,7 @@ impl<'a> TX_C0_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> TX_DB_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> TX_11_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> TX_13_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RX_C0_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RX_DB_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RX_11_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RX_13_ESC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -334,42 +334,42 @@ impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
     pub fn tx_c0_esc_en(&self) -> TX_C0_ESC_EN_R {
-        TX_C0_ESC_EN_R::new((self.bits & 0x01) != 0)
+        TX_C0_ESC_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
     pub fn tx_db_esc_en(&self) -> TX_DB_ESC_EN_R {
-        TX_DB_ESC_EN_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_DB_ESC_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
     pub fn tx_11_esc_en(&self) -> TX_11_ESC_EN_R {
-        TX_11_ESC_EN_R::new(((self.bits >> 2) & 0x01) != 0)
+        TX_11_ESC_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
     pub fn tx_13_esc_en(&self) -> TX_13_ESC_EN_R {
-        TX_13_ESC_EN_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_13_ESC_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
     pub fn rx_c0_esc_en(&self) -> RX_C0_ESC_EN_R {
-        RX_C0_ESC_EN_R::new(((self.bits >> 4) & 0x01) != 0)
+        RX_C0_ESC_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
     pub fn rx_db_esc_en(&self) -> RX_DB_ESC_EN_R {
-        RX_DB_ESC_EN_R::new(((self.bits >> 5) & 0x01) != 0)
+        RX_DB_ESC_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - a"]
     #[inline(always)]
     pub fn rx_11_esc_en(&self) -> RX_11_ESC_EN_R {
-        RX_11_ESC_EN_R::new(((self.bits >> 6) & 0x01) != 0)
+        RX_11_ESC_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
     pub fn rx_13_esc_en(&self) -> RX_13_ESC_EN_R {
-        RX_13_ESC_EN_R::new(((self.bits >> 7) & 0x01) != 0)
+        RX_13_ESC_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

@@ -86,7 +86,7 @@ impl<'a> SDIO_INTERRUPT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -100,7 +100,7 @@ impl R {
  correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
     #[inline(always)]
     pub fn sdio_interrupt_raw(&self) -> SDIO_INTERRUPT_RAW_R {
-        SDIO_INTERRUPT_RAW_R::new(((self.bits >> 16) & 0x03) as u8)
+        SDIO_INTERRUPT_RAW_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

@@ -94,7 +94,7 @@ impl<'a> TSENS_XPD_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> TSENS_CLK_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> TSENS_CLK_GATED_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -205,7 +205,7 @@ impl<'a> TSENS_IN_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> TSENS_POWER_UP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> TSENS_POWER_UP_FORCE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> TSENS_DUMP_OUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -356,22 +356,22 @@ impl R {
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn tsens_xpd_force(&self) -> TSENS_XPD_FORCE_R {
-        TSENS_XPD_FORCE_R::new(((self.bits >> 12) & 0x01) != 0)
+        TSENS_XPD_FORCE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn tsens_clk_inv(&self) -> TSENS_CLK_INV_R {
-        TSENS_CLK_INV_R::new(((self.bits >> 13) & 0x01) != 0)
+        TSENS_CLK_INV_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn tsens_clk_gated(&self) -> TSENS_CLK_GATED_R {
-        TSENS_CLK_GATED_R::new(((self.bits >> 14) & 0x01) != 0)
+        TSENS_CLK_GATED_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - invert temperature sensor data"]
     #[inline(always)]
     pub fn tsens_in_inv(&self) -> TSENS_IN_INV_R {
-        TSENS_IN_INV_R::new(((self.bits >> 15) & 0x01) != 0)
+        TSENS_IN_INV_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:23 - temperature sensor clock divider"]
     #[inline(always)]
@@ -381,17 +381,17 @@ impl R {
     #[doc = "Bit 24 - temperature sensor power up"]
     #[inline(always)]
     pub fn tsens_power_up(&self) -> TSENS_POWER_UP_R {
-        TSENS_POWER_UP_R::new(((self.bits >> 24) & 0x01) != 0)
+        TSENS_POWER_UP_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
     pub fn tsens_power_up_force(&self) -> TSENS_POWER_UP_FORCE_R {
-        TSENS_POWER_UP_FORCE_R::new(((self.bits >> 25) & 0x01) != 0)
+        TSENS_POWER_UP_FORCE_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
     pub fn tsens_dump_out(&self) -> TSENS_DUMP_OUT_R {
-        TSENS_DUMP_OUT_R::new(((self.bits >> 26) & 0x01) != 0)
+        TSENS_DUMP_OUT_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
 impl W {

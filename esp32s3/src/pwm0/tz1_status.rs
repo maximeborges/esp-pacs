@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - Set and reset by hardware. If set, a cycle-by-cycle mode action is on going"]
     #[inline(always)]
     pub fn tz1_cbc_on(&self) -> TZ1_CBC_ON_R {
-        TZ1_CBC_ON_R::new((self.bits & 0x01) != 0)
+        TZ1_CBC_ON_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set and reset by hardware. If set, an one-shot mode action is on going"]
     #[inline(always)]
     pub fn tz1_ost_on(&self) -> TZ1_OST_ON_R {
-        TZ1_OST_ON_R::new(((self.bits >> 1) & 0x01) != 0)
+        TZ1_OST_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "Status of fault events.\n\nThis register you can [`read`]

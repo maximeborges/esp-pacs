@@ -67,7 +67,7 @@ impl<'a> DMA_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
     #[inline(always)]
     pub fn dma_enable(&self) -> DMA_ENABLE_R {
-        DMA_ENABLE_R::new((self.bits & 0x01) != 0)
+        DMA_ENABLE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

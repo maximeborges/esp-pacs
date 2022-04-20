@@ -94,7 +94,7 @@ impl<'a> SLV_RD_BUF_DONE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> SEG_MAGIC_ERR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -144,12 +144,12 @@ impl R {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn slv_rd_buf_done(&self) -> SLV_RD_BUF_DONE_R {
-        SLV_RD_BUF_DONE_R::new(((self.bits >> 24) & 0x01) != 0)
+        SLV_RD_BUF_DONE_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: The recent magic value in CONF buffer is not right in master DMA seg-trans mode. 0: others."]
     #[inline(always)]
     pub fn seg_magic_err(&self) -> SEG_MAGIC_ERR_R {
-        SEG_MAGIC_ERR_R::new(((self.bits >> 25) & 0x01) != 0)
+        SEG_MAGIC_ERR_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {

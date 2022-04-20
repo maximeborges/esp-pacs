@@ -67,7 +67,7 @@ impl<'a> EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> SPI_SMEM_VAR_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RDAT_SWP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> WDAT_SWP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CMD_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -279,7 +279,7 @@ impl<'a> SPI_SMEM_TX_DDR_MSK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> SPI_SMEM_RX_DDR_MSK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> DQS_LOOP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> DQS_LOOP_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> SPI_SMEM_CLK_DIFF_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> SPI_SMEM_HYPERBUS_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -528,7 +528,7 @@ impl<'a> SPI_SMEM_DQS_CA_IN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -565,7 +565,7 @@ impl<'a> SPI_SMEM_HYPERBUS_DUMMY_2X_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -602,7 +602,7 @@ impl<'a> SPI_SMEM_CLK_DIFF_INV_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -645,7 +645,7 @@ impl<'a> SPI_SMEM_OCTA_RAM_ADDR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -688,7 +688,7 @@ impl<'a> SPI_SMEM_HYPERBUS_CA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -696,27 +696,27 @@ impl R {
     #[doc = "Bit 0 - 1: in ddr mode, 0 in sdr mode"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
-        EN_R::new((self.bits & 0x01) != 0)
+        EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in spi ddr mode."]
     #[inline(always)]
     pub fn spi_smem_var_dummy(&self) -> SPI_SMEM_VAR_DUMMY_R {
-        SPI_SMEM_VAR_DUMMY_R::new(((self.bits >> 1) & 0x01) != 0)
+        SPI_SMEM_VAR_DUMMY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set the bit to reorder rx data of the word in spi ddr mode."]
     #[inline(always)]
     pub fn rdat_swp(&self) -> RDAT_SWP_R {
-        RDAT_SWP_R::new(((self.bits >> 2) & 0x01) != 0)
+        RDAT_SWP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set the bit to reorder tx data of the word in spi ddr mode."]
     #[inline(always)]
     pub fn wdat_swp(&self) -> WDAT_SWP_R {
-        WDAT_SWP_R::new(((self.bits >> 3) & 0x01) != 0)
+        WDAT_SWP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - the bit is used to disable dual edge in CMD phase when ddr mode."]
     #[inline(always)]
     pub fn cmd_dis(&self) -> CMD_DIS_R {
-        CMD_DIS_R::new(((self.bits >> 4) & 0x01) != 0)
+        CMD_DIS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:11 - It is the minimum output data length in the ddr psram."]
     #[inline(always)]
@@ -726,12 +726,12 @@ impl R {
     #[doc = "Bit 12 - Set this bit to mask the first or the last byte in MSPI ECC DDR write mode, when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_tx_ddr_msk_en(&self) -> SPI_SMEM_TX_DDR_MSK_EN_R {
-        SPI_SMEM_TX_DDR_MSK_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        SPI_SMEM_TX_DDR_MSK_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to mask the first or the last byte in MSPI ECC DDR read mode, when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_rx_ddr_msk_en(&self) -> SPI_SMEM_RX_DDR_MSK_EN_R {
-        SPI_SMEM_RX_DDR_MSK_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        SPI_SMEM_RX_DDR_MSK_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:20 - The delay number of data strobe which from memory based on SPI_CLK."]
     #[inline(always)]
@@ -741,37 +741,37 @@ impl R {
     #[doc = "Bit 21 - 1: Use internal signal as data strobe, the strobe can not be delayed by input timing module. 0: Use input SPI_DQS signal from PAD as data strobe, the strobe can be delayed by input timing module"]
     #[inline(always)]
     pub fn dqs_loop(&self) -> DQS_LOOP_R {
-        DQS_LOOP_R::new(((self.bits >> 21) & 0x01) != 0)
+        DQS_LOOP_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - When SPI_SMEM_DDR_DQS_LOOP and SPI_SMEM_DDR_EN are set, 1: Use internal SPI_CLK as data strobe. 0: Use internal ~SPI_CLK as data strobe. Otherwise this bit is not active."]
     #[inline(always)]
     pub fn dqs_loop_mode(&self) -> DQS_LOOP_MODE_R {
-        DQS_LOOP_MODE_R::new(((self.bits >> 22) & 0x01) != 0)
+        DQS_LOOP_MODE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 24 - Set this bit to enable the differential SPI_CLK#."]
     #[inline(always)]
     pub fn spi_smem_clk_diff_en(&self) -> SPI_SMEM_CLK_DIFF_EN_R {
-        SPI_SMEM_CLK_DIFF_EN_R::new(((self.bits >> 24) & 0x01) != 0)
+        SPI_SMEM_CLK_DIFF_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - Set this bit to enable the SPI HyperBus mode."]
     #[inline(always)]
     pub fn spi_smem_hyperbus_mode(&self) -> SPI_SMEM_HYPERBUS_MODE_R {
-        SPI_SMEM_HYPERBUS_MODE_R::new(((self.bits >> 25) & 0x01) != 0)
+        SPI_SMEM_HYPERBUS_MODE_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Set this bit to enable the input of SPI_DQS signal in SPI phases of CMD and ADDR."]
     #[inline(always)]
     pub fn spi_smem_dqs_ca_in(&self) -> SPI_SMEM_DQS_CA_IN_R {
-        SPI_SMEM_DQS_CA_IN_R::new(((self.bits >> 26) & 0x01) != 0)
+        SPI_SMEM_DQS_CA_IN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses to flash or SPI1 accesses flash or sram."]
     #[inline(always)]
     pub fn spi_smem_hyperbus_dummy_2x(&self) -> SPI_SMEM_HYPERBUS_DUMMY_2X_R {
-        SPI_SMEM_HYPERBUS_DUMMY_2X_R::new(((self.bits >> 27) & 0x01) != 0)
+        SPI_SMEM_HYPERBUS_DUMMY_2X_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Set this bit to invert SPI_DIFF when accesses to external RAM. ."]
     #[inline(always)]
     pub fn spi_smem_clk_diff_inv(&self) -> SPI_SMEM_CLK_DIFF_INV_R {
-        SPI_SMEM_CLK_DIFF_INV_R::new(((self.bits >> 28) & 0x01) != 0)
+        SPI_SMEM_CLK_DIFF_INV_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - Set this bit to enable octa_ram address out when accesses to external RAM, which means ADDR_OUT\\[31:0\\]
  = {spi_usr_addr_value\\[25:4\\]
@@ -779,7 +779,7 @@ impl R {
 , 1'b0}."]
     #[inline(always)]
     pub fn spi_smem_octa_ram_addr(&self) -> SPI_SMEM_OCTA_RAM_ADDR_R {
-        SPI_SMEM_OCTA_RAM_ADDR_R::new(((self.bits >> 29) & 0x01) != 0)
+        SPI_SMEM_OCTA_RAM_ADDR_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to enable HyperRAM address out when accesses to external RAM, which means ADDR_OUT\\[31:0\\]
  = {spi_usr_addr_value\\[19:4\\]
@@ -787,7 +787,7 @@ impl R {
 }."]
     #[inline(always)]
     pub fn spi_smem_hyperbus_ca(&self) -> SPI_SMEM_HYPERBUS_CA_R {
-        SPI_SMEM_HYPERBUS_CA_R::new(((self.bits >> 30) & 0x01) != 0)
+        SPI_SMEM_HYPERBUS_CA_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
 impl W {

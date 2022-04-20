@@ -57,7 +57,7 @@ impl<'a> LCD_CD_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> LCD_DE_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | ((value as u32 & 0x03) << 2);
+        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> LCD_HSYNC_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
+        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
         self.w
     }
 }
@@ -138,7 +138,7 @@ impl<'a> LCD_VSYNC_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
         self.w
     }
 }
@@ -146,22 +146,22 @@ impl R {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_cd_mode(&self) -> LCD_CD_MODE_R {
-        LCD_CD_MODE_R::new((self.bits & 0x03) as u8)
+        LCD_CD_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_de_mode(&self) -> LCD_DE_MODE_R {
-        LCD_DE_MODE_R::new(((self.bits >> 2) & 0x03) as u8)
+        LCD_DE_MODE_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_hsync_mode(&self) -> LCD_HSYNC_MODE_R {
-        LCD_HSYNC_MODE_R::new(((self.bits >> 4) & 0x03) as u8)
+        LCD_HSYNC_MODE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_vsync_mode(&self) -> LCD_VSYNC_MODE_R {
-        LCD_VSYNC_MODE_R::new(((self.bits >> 6) & 0x03) as u8)
+        LCD_VSYNC_MODE_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
 impl W {

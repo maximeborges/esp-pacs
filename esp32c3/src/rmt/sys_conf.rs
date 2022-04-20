@@ -67,7 +67,7 @@ impl<'a> APB_FIFO_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> MEM_CLK_FORCE_ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RMT_MEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RMT_MEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -286,7 +286,7 @@ impl<'a> RMT_SCLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | ((value as u32 & 0x03) << 24);
+        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
         self.w
     }
 }
@@ -323,7 +323,7 @@ impl<'a> RMT_SCLK_ACTIVE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -360,7 +360,7 @@ impl<'a> CLK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -368,22 +368,22 @@ impl R {
     #[doc = "Bit 0 - reg_apb_fifo_mask."]
     #[inline(always)]
     pub fn apb_fifo_mask(&self) -> APB_FIFO_MASK_R {
-        APB_FIFO_MASK_R::new((self.bits & 0x01) != 0)
+        APB_FIFO_MASK_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_mem_clk_force_on."]
     #[inline(always)]
     pub fn mem_clk_force_on(&self) -> MEM_CLK_FORCE_ON_R {
-        MEM_CLK_FORCE_ON_R::new(((self.bits >> 1) & 0x01) != 0)
+        MEM_CLK_FORCE_ON_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_rmt_mem_force_pd."]
     #[inline(always)]
     pub fn rmt_mem_force_pd(&self) -> RMT_MEM_FORCE_PD_R {
-        RMT_MEM_FORCE_PD_R::new(((self.bits >> 2) & 0x01) != 0)
+        RMT_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - reg_rmt_mem_force_pu."]
     #[inline(always)]
     pub fn rmt_mem_force_pu(&self) -> RMT_MEM_FORCE_PU_R {
-        RMT_MEM_FORCE_PU_R::new(((self.bits >> 3) & 0x01) != 0)
+        RMT_MEM_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:11 - reg_rmt_sclk_div_num."]
     #[inline(always)]
@@ -403,17 +403,17 @@ impl R {
     #[doc = "Bits 24:25 - reg_rmt_sclk_sel."]
     #[inline(always)]
     pub fn rmt_sclk_sel(&self) -> RMT_SCLK_SEL_R {
-        RMT_SCLK_SEL_R::new(((self.bits >> 24) & 0x03) as u8)
+        RMT_SCLK_SEL_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bit 26 - reg_rmt_sclk_active."]
     #[inline(always)]
     pub fn rmt_sclk_active(&self) -> RMT_SCLK_ACTIVE_R {
-        RMT_SCLK_ACTIVE_R::new(((self.bits >> 26) & 0x01) != 0)
+        RMT_SCLK_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
-        CLK_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

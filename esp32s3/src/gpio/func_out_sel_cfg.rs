@@ -102,7 +102,7 @@ impl<'a> INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> OEN_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> OEN_INV_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -195,18 +195,18 @@ impl R {
     #[doc = "Bit 9 - set this bit to invert output signal.1:invert.:not invert."]
     #[inline(always)]
     pub fn inv_sel(&self) -> INV_SEL_R {
-        INV_SEL_R::new(((self.bits >> 9) & 0x01) != 0)
+        INV_SEL_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\]
  as output enable signal.:use peripheral output enable signal."]
     #[inline(always)]
     pub fn oen_sel(&self) -> OEN_SEL_R {
-        OEN_SEL_R::new(((self.bits >> 10) & 0x01) != 0)
+        OEN_SEL_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - set this bit to invert output enable signal.1:invert.:not invert."]
     #[inline(always)]
     pub fn oen_inv_sel(&self) -> OEN_INV_SEL_R {
-        OEN_INV_SEL_R::new(((self.bits >> 11) & 0x01) != 0)
+        OEN_INV_SEL_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

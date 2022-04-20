@@ -67,7 +67,7 @@ impl<'a> BIAS_BUF_IDLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> BIAS_BUF_WAKE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> BIAS_BUF_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> BIAS_BUF_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PD_CUR_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> PD_CUR_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BIAS_SLEEP_DEEP_SLP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> BIAS_SLEEP_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> ENB_SCK_XTAL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> INC_HEARTBEAT_REFRESH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> DEC_HEARTBEAT_PERIOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -528,7 +528,7 @@ impl<'a> INC_HEARTBEAT_PERIOD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -565,7 +565,7 @@ impl<'a> DEC_HEARTBEAT_WIDTH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -602,7 +602,7 @@ impl<'a> RST_BIAS_I2C_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -610,42 +610,42 @@ impl R {
     #[doc = "Bit 10 - open bias buf when system in active"]
     #[inline(always)]
     pub fn bias_buf_idle(&self) -> BIAS_BUF_IDLE_R {
-        BIAS_BUF_IDLE_R::new(((self.bits >> 10) & 0x01) != 0)
+        BIAS_BUF_IDLE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - open bias buf when rtc in wakeup"]
     #[inline(always)]
     pub fn bias_buf_wake(&self) -> BIAS_BUF_WAKE_R {
-        BIAS_BUF_WAKE_R::new(((self.bits >> 11) & 0x01) != 0)
+        BIAS_BUF_WAKE_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - open bias buf when rtc in deep sleep"]
     #[inline(always)]
     pub fn bias_buf_deep_slp(&self) -> BIAS_BUF_DEEP_SLP_R {
-        BIAS_BUF_DEEP_SLP_R::new(((self.bits >> 12) & 0x01) != 0)
+        BIAS_BUF_DEEP_SLP_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - open bias buf when rtc in monitor state"]
     #[inline(always)]
     pub fn bias_buf_monitor(&self) -> BIAS_BUF_MONITOR_R {
-        BIAS_BUF_MONITOR_R::new(((self.bits >> 13) & 0x01) != 0)
+        BIAS_BUF_MONITOR_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
     pub fn pd_cur_deep_slp(&self) -> PD_CUR_DEEP_SLP_R {
-        PD_CUR_DEEP_SLP_R::new(((self.bits >> 14) & 0x01) != 0)
+        PD_CUR_DEEP_SLP_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
     pub fn pd_cur_monitor(&self) -> PD_CUR_MONITOR_R {
-        PD_CUR_MONITOR_R::new(((self.bits >> 15) & 0x01) != 0)
+        PD_CUR_MONITOR_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
     pub fn bias_sleep_deep_slp(&self) -> BIAS_SLEEP_DEEP_SLP_R {
-        BIAS_SLEEP_DEEP_SLP_R::new(((self.bits >> 16) & 0x01) != 0)
+        BIAS_SLEEP_DEEP_SLP_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
     pub fn bias_sleep_monitor(&self) -> BIAS_SLEEP_MONITOR_R {
-        BIAS_SLEEP_MONITOR_R::new(((self.bits >> 17) & 0x01) != 0)
+        BIAS_SLEEP_MONITOR_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
@@ -660,32 +660,32 @@ impl R {
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
     pub fn enb_sck_xtal(&self) -> ENB_SCK_XTAL_R {
-        ENB_SCK_XTAL_R::new(((self.bits >> 26) & 0x01) != 0)
+        ENB_SCK_XTAL_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
     pub fn inc_heartbeat_refresh(&self) -> INC_HEARTBEAT_REFRESH_R {
-        INC_HEARTBEAT_REFRESH_R::new(((self.bits >> 27) & 0x01) != 0)
+        INC_HEARTBEAT_REFRESH_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     pub fn dec_heartbeat_period(&self) -> DEC_HEARTBEAT_PERIOD_R {
-        DEC_HEARTBEAT_PERIOD_R::new(((self.bits >> 28) & 0x01) != 0)
+        DEC_HEARTBEAT_PERIOD_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
     pub fn inc_heartbeat_period(&self) -> INC_HEARTBEAT_PERIOD_R {
-        INC_HEARTBEAT_PERIOD_R::new(((self.bits >> 29) & 0x01) != 0)
+        INC_HEARTBEAT_PERIOD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
     pub fn dec_heartbeat_width(&self) -> DEC_HEARTBEAT_WIDTH_R {
-        DEC_HEARTBEAT_WIDTH_R::new(((self.bits >> 30) & 0x01) != 0)
+        DEC_HEARTBEAT_WIDTH_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn rst_bias_i2c(&self) -> RST_BIAS_I2C_R {
-        RST_BIAS_I2C_R::new(((self.bits >> 31) & 0x01) != 0)
+        RST_BIAS_I2C_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

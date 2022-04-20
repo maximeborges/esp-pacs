@@ -94,7 +94,7 @@ impl<'a> SLAVE_SCL_STRETCH_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -116,7 +116,7 @@ impl<'a> SLAVE_SCL_STRETCH_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -153,7 +153,7 @@ impl<'a> SLAVE_BYTE_ACK_CTL_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -190,7 +190,7 @@ impl<'a> SLAVE_BYTE_ACK_LVL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -203,17 +203,17 @@ impl R {
     #[doc = "Bit 10 - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
     #[inline(always)]
     pub fn slave_scl_stretch_en(&self) -> SLAVE_SCL_STRETCH_EN_R {
-        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - The enable bit for slave to control ACK level function."]
     #[inline(always)]
     pub fn slave_byte_ack_ctl_en(&self) -> SLAVE_BYTE_ACK_CTL_EN_R {
-        SLAVE_BYTE_ACK_CTL_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLAVE_BYTE_ACK_CTL_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables."]
     #[inline(always)]
     pub fn slave_byte_ack_lvl(&self) -> SLAVE_BYTE_ACK_LVL_R {
-        SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 0x01) != 0)
+        SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

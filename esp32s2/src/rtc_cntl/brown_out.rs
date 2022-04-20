@@ -67,7 +67,7 @@ impl<'a> BROWN_OUT2_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> CLOSE_FLASH_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> PD_RF_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> RST_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> RST_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -291,7 +291,7 @@ impl<'a> CNT_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -328,7 +328,7 @@ impl<'a> ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -351,7 +351,7 @@ impl R {
     #[doc = "Bit 0 - Enables the brown_out2 to initiate a chip reset."]
     #[inline(always)]
     pub fn brown_out2_ena(&self) -> BROWN_OUT2_ENA_R {
-        BROWN_OUT2_ENA_R::new((self.bits & 0x01) != 0)
+        BROWN_OUT2_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
@@ -361,12 +361,12 @@ impl R {
     #[doc = "Bit 14 - Set this bit to enable PD the flash when a brown-out happens."]
     #[inline(always)]
     pub fn close_flash_ena(&self) -> CLOSE_FLASH_ENA_R {
-        CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 0x01) != 0)
+        CLOSE_FLASH_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Set this bit to enable PD the RF circuits when a brown-out happens."]
     #[inline(always)]
     pub fn pd_rf_ena(&self) -> PD_RF_ENA_R {
-        PD_RF_ENA_R::new(((self.bits >> 15) & 0x01) != 0)
+        PD_RF_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
@@ -376,22 +376,22 @@ impl R {
     #[doc = "Bit 26 - Enables to reset brown-out."]
     #[inline(always)]
     pub fn rst_ena(&self) -> RST_ENA_R {
-        RST_ENA_R::new(((self.bits >> 26) & 0x01) != 0)
+        RST_ENA_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
     pub fn rst_sel(&self) -> RST_SEL_R {
-        RST_SEL_R::new(((self.bits >> 27) & 0x01) != 0)
+        RST_SEL_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 30 - Set this bit to enable brown-out detection."]
     #[inline(always)]
     pub fn ena(&self) -> ENA_R {
-        ENA_R::new(((self.bits >> 30) & 0x01) != 0)
+        ENA_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Indicates the status of the brown-out signal."]
     #[inline(always)]
     pub fn det(&self) -> DET_R {
-        DET_R::new(((self.bits >> 31) & 0x01) != 0)
+        DET_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

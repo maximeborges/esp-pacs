@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:1 - Value on sdhost_card_write_prt input ports (1 bit per card). 1 represents write protection. Only NUM_CARDS number of bits are implemented."]
     #[inline(always)]
     pub fn write_protect(&self) -> WRITE_PROTECT_R {
-        WRITE_PROTECT_R::new((self.bits & 0x03) as u8)
+        WRITE_PROTECT_R::new((self.bits & 3) as u8)
     }
 }
 #[doc = "Card write protection (WP) status register\n\nThis register you can [`read`]

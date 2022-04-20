@@ -94,7 +94,7 @@ impl<'a> VSYNC_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> HSYNC_IDLE_POL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -198,7 +198,7 @@ impl R {
     #[doc = "Bit 7 - It is the idle value of spi_vsync. Can be configured in CONF state."]
     #[inline(always)]
     pub fn vsync_idle_pol(&self) -> VSYNC_IDLE_POL_R {
-        VSYNC_IDLE_POL_R::new(((self.bits >> 7) & 0x01) != 0)
+        VSYNC_IDLE_POL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 16:22 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
@@ -208,7 +208,7 @@ impl R {
     #[doc = "Bit 23 - It is the idle value of spi_hsync. Can be configured in CONF state."]
     #[inline(always)]
     pub fn hsync_idle_pol(&self) -> HSYNC_IDLE_POL_R {
-        HSYNC_IDLE_POL_R::new(((self.bits >> 23) & 0x01) != 0)
+        HSYNC_IDLE_POL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:31 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]

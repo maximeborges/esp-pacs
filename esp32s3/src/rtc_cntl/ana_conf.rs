@@ -67,7 +67,7 @@ impl<'a> I2C_RESET_POR_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> I2C_RESET_POR_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> GLITCH_RST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SAR_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> ANALOG_TOP_ISO_SLEEP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> ANALOG_TOP_ISO_MONITOR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> BBPLL_CAL_SLP_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> PVTMON_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> TXRF_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RFRX_PBUS_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> CKGEN_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> PLL_I2C_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -482,62 +482,62 @@ impl R {
     #[doc = "Bit 18 - force down I2C_RESET_POR"]
     #[inline(always)]
     pub fn i2c_reset_por_force_pd(&self) -> I2C_RESET_POR_FORCE_PD_R {
-        I2C_RESET_POR_FORCE_PD_R::new(((self.bits >> 18) & 0x01) != 0)
+        I2C_RESET_POR_FORCE_PD_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - force on I2C_RESET_POR"]
     #[inline(always)]
     pub fn i2c_reset_por_force_pu(&self) -> I2C_RESET_POR_FORCE_PU_R {
-        I2C_RESET_POR_FORCE_PU_R::new(((self.bits >> 19) & 0x01) != 0)
+        I2C_RESET_POR_FORCE_PU_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - enable clk glitch"]
     #[inline(always)]
     pub fn glitch_rst_en(&self) -> GLITCH_RST_EN_R {
-        GLITCH_RST_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        GLITCH_RST_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 22 - PLLA force power up"]
     #[inline(always)]
     pub fn sar_i2c_pu(&self) -> SAR_I2C_PU_R {
-        SAR_I2C_PU_R::new(((self.bits >> 22) & 0x01) != 0)
+        SAR_I2C_PU_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
     pub fn analog_top_iso_sleep(&self) -> ANALOG_TOP_ISO_SLEEP_R {
-        ANALOG_TOP_ISO_SLEEP_R::new(((self.bits >> 23) & 0x01) != 0)
+        ANALOG_TOP_ISO_SLEEP_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
     pub fn analog_top_iso_monitor(&self) -> ANALOG_TOP_ISO_MONITOR_R {
-        ANALOG_TOP_ISO_MONITOR_R::new(((self.bits >> 24) & 0x01) != 0)
+        ANALOG_TOP_ISO_MONITOR_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
     pub fn bbpll_cal_slp_start(&self) -> BBPLL_CAL_SLP_START_R {
-        BBPLL_CAL_SLP_START_R::new(((self.bits >> 25) & 0x01) != 0)
+        BBPLL_CAL_SLP_START_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: PVTMON power up, otherwise power down"]
     #[inline(always)]
     pub fn pvtmon_pu(&self) -> PVTMON_PU_R {
-        PVTMON_PU_R::new(((self.bits >> 26) & 0x01) != 0)
+        PVTMON_PU_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up, otherwise power down"]
     #[inline(always)]
     pub fn txrf_i2c_pu(&self) -> TXRF_I2C_PU_R {
-        TXRF_I2C_PU_R::new(((self.bits >> 27) & 0x01) != 0)
+        TXRF_I2C_PU_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up, otherwise power down"]
     #[inline(always)]
     pub fn rfrx_pbus_pu(&self) -> RFRX_PBUS_PU_R {
-        RFRX_PBUS_PU_R::new(((self.bits >> 28) & 0x01) != 0)
+        RFRX_PBUS_PU_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up, otherwise power down"]
     #[inline(always)]
     pub fn ckgen_i2c_pu(&self) -> CKGEN_I2C_PU_R {
-        CKGEN_I2C_PU_R::new(((self.bits >> 30) & 0x01) != 0)
+        CKGEN_I2C_PU_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - power on pll i2c"]
     #[inline(always)]
     pub fn pll_i2c_pu(&self) -> PLL_I2C_PU_R {
-        PLL_I2C_PU_R::new(((self.bits >> 31) & 0x01) != 0)
+        PLL_I2C_PU_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

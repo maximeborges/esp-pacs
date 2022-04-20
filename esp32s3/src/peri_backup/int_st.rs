@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
     pub fn done_int_st(&self) -> DONE_INT_ST_R {
-        DONE_INT_ST_R::new((self.bits & 0x01) != 0)
+        DONE_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - x"]
     #[inline(always)]
     pub fn err_int_st(&self) -> ERR_INT_ST_R {
-        ERR_INT_ST_R::new(((self.bits >> 1) & 0x01) != 0)
+        ERR_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "x\n\nThis register you can [`read`]

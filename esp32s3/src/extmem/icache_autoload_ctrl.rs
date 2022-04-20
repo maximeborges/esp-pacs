@@ -67,7 +67,7 @@ impl<'a> ICACHE_AUTOLOAD_SCT0_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ICACHE_AUTOLOAD_SCT1_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> ICACHE_AUTOLOAD_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -193,7 +193,7 @@ impl<'a> ICACHE_AUTOLOAD_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -220,7 +220,7 @@ impl<'a> ICACHE_AUTOLOAD_RQST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 5)) | ((value as u32 & 0x03) << 5);
+        self.w.bits = (self.w.bits & !(3 << 5)) | ((value as u32 & 3) << 5);
         self.w
     }
 }
@@ -247,7 +247,7 @@ impl<'a> ICACHE_AUTOLOAD_SIZE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 7)) | ((value as u32 & 0x03) << 7);
+        self.w.bits = (self.w.bits & !(3 << 7)) | ((value as u32 & 3) << 7);
         self.w
     }
 }
@@ -284,7 +284,7 @@ impl<'a> ICACHE_AUTOLOAD_BUFFER_CLEAR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -292,42 +292,42 @@ impl R {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
     pub fn icache_autoload_sct0_ena(&self) -> ICACHE_AUTOLOAD_SCT0_ENA_R {
-        ICACHE_AUTOLOAD_SCT0_ENA_R::new((self.bits & 0x01) != 0)
+        ICACHE_AUTOLOAD_SCT0_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bits are used to enable the second section for autoload operation."]
     #[inline(always)]
     pub fn icache_autoload_sct1_ena(&self) -> ICACHE_AUTOLOAD_SCT1_ENA_R {
-        ICACHE_AUTOLOAD_SCT1_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        ICACHE_AUTOLOAD_SCT1_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     pub fn icache_autoload_ena(&self) -> ICACHE_AUTOLOAD_ENA_R {
-        ICACHE_AUTOLOAD_ENA_R::new(((self.bits >> 2) & 0x01) != 0)
+        ICACHE_AUTOLOAD_ENA_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The bit is used to indicate autoload operation is finished."]
     #[inline(always)]
     pub fn icache_autoload_done(&self) -> ICACHE_AUTOLOAD_DONE_R {
-        ICACHE_AUTOLOAD_DONE_R::new(((self.bits >> 3) & 0x01) != 0)
+        ICACHE_AUTOLOAD_DONE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn icache_autoload_order(&self) -> ICACHE_AUTOLOAD_ORDER_R {
-        ICACHE_AUTOLOAD_ORDER_R::new(((self.bits >> 4) & 0x01) != 0)
+        ICACHE_AUTOLOAD_ORDER_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:6 - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     pub fn icache_autoload_rqst(&self) -> ICACHE_AUTOLOAD_RQST_R {
-        ICACHE_AUTOLOAD_RQST_R::new(((self.bits >> 5) & 0x03) as u8)
+        ICACHE_AUTOLOAD_RQST_R::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bits 7:8 - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
     #[inline(always)]
     pub fn icache_autoload_size(&self) -> ICACHE_AUTOLOAD_SIZE_R {
-        ICACHE_AUTOLOAD_SIZE_R::new(((self.bits >> 7) & 0x03) as u8)
+        ICACHE_AUTOLOAD_SIZE_R::new(((self.bits >> 7) & 3) as u8)
     }
     #[doc = "Bit 9 - The bit is used to clear autoload buffer in icache."]
     #[inline(always)]
     pub fn icache_autoload_buffer_clear(&self) -> ICACHE_AUTOLOAD_BUFFER_CLEAR_R {
-        ICACHE_AUTOLOAD_BUFFER_CLEAR_R::new(((self.bits >> 9) & 0x01) != 0)
+        ICACHE_AUTOLOAD_BUFFER_CLEAR_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

@@ -121,7 +121,7 @@ impl<'a> LSTIMER3_PAUSE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> LSTIMER3_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> TICK_SEL_LSTIMER3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -217,7 +217,7 @@ impl<'a> LSTIMER3_PARA_UP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -235,17 +235,17 @@ impl R {
     #[doc = "Bit 22 - reg_lstimer3_pause."]
     #[inline(always)]
     pub fn lstimer3_pause(&self) -> LSTIMER3_PAUSE_R {
-        LSTIMER3_PAUSE_R::new(((self.bits >> 22) & 0x01) != 0)
+        LSTIMER3_PAUSE_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - reg_lstimer3_rst."]
     #[inline(always)]
     pub fn lstimer3_rst(&self) -> LSTIMER3_RST_R {
-        LSTIMER3_RST_R::new(((self.bits >> 23) & 0x01) != 0)
+        LSTIMER3_RST_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - reg_tick_sel_lstimer3."]
     #[inline(always)]
     pub fn tick_sel_lstimer3(&self) -> TICK_SEL_LSTIMER3_R {
-        TICK_SEL_LSTIMER3_R::new(((self.bits >> 24) & 0x01) != 0)
+        TICK_SEL_LSTIMER3_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {

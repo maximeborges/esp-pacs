@@ -77,22 +77,22 @@ impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
     pub fn rx_done_int_raw(&self) -> RX_DONE_INT_RAW_R {
-        RX_DONE_INT_RAW_R::new((self.bits & 0x01) != 0)
+        RX_DONE_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the i2s_tx_done_int interrupt"]
     #[inline(always)]
     pub fn tx_done_int_raw(&self) -> TX_DONE_INT_RAW_R {
-        TX_DONE_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        TX_DONE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
     pub fn rx_hung_int_raw(&self) -> RX_HUNG_INT_RAW_R {
-        RX_HUNG_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        RX_HUNG_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the i2s_tx_hung_int interrupt"]
     #[inline(always)]
     pub fn tx_hung_int_raw(&self) -> TX_HUNG_INT_RAW_R {
-        TX_HUNG_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        TX_HUNG_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "I2S interrupt raw register, valid in level.\n\nThis register you can [`read`]

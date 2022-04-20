@@ -232,7 +232,7 @@ impl<'a> SLV_CMD6_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> SLV_CMD7_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> SLV_CMD8_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SLV_CMD9_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> SLV_CMDA_INT_RAW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -388,82 +388,82 @@ impl R {
     #[doc = "Bit 0 - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
     pub fn inlink_dscr_empty_int_raw(&self) -> INLINK_DSCR_EMPTY_INT_RAW_R {
-        INLINK_DSCR_EMPTY_INT_RAW_R::new((self.bits & 0x01) != 0)
+        INLINK_DSCR_EMPTY_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw bit for outlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
     pub fn outlink_dscr_error_int_raw(&self) -> OUTLINK_DSCR_ERROR_INT_RAW_R {
-        OUTLINK_DSCR_ERROR_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        OUTLINK_DSCR_ERROR_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw bit for inlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
     pub fn inlink_dscr_error_int_raw(&self) -> INLINK_DSCR_ERROR_INT_RAW_R {
-        INLINK_DSCR_ERROR_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        INLINK_DSCR_ERROR_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
     pub fn in_done_int_raw(&self) -> IN_DONE_INT_RAW_R {
-        IN_DONE_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        IN_DONE_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw bit for receiving error. Can be configured in CONF state."]
     #[inline(always)]
     pub fn in_err_eof_int_raw(&self) -> IN_ERR_EOF_INT_RAW_R {
-        IN_ERR_EOF_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        IN_ERR_EOF_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The raw bit for completing receiving all the packets from host. Can be configured in CONF state."]
     #[inline(always)]
     pub fn in_suc_eof_int_raw(&self) -> IN_SUC_EOF_INT_RAW_R {
-        IN_SUC_EOF_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        IN_SUC_EOF_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The raw bit for completing usage of a outlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
     pub fn out_done_int_raw(&self) -> OUT_DONE_INT_RAW_R {
-        OUT_DONE_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUT_DONE_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The raw bit for sending a packet to host done. Can be configured in CONF state."]
     #[inline(always)]
     pub fn out_eof_int_raw(&self) -> OUT_EOF_INT_RAW_R {
-        OUT_EOF_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        OUT_EOF_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - The raw bit for sending all the packets to host done. Can be configured in CONF state."]
     #[inline(always)]
     pub fn out_total_eof_int_raw(&self) -> OUT_TOTAL_EOF_INT_RAW_R {
-        OUT_TOTAL_EOF_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        OUT_TOTAL_EOF_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 1:SPI_DMA_INFIFO_FULL and spi_push_data_prep are valid, which means that DMA Rx buffer is full but push is valid. 0: Others. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn infifo_full_err_int_raw(&self) -> INFIFO_FULL_ERR_INT_RAW_R {
-        INFIFO_FULL_ERR_INT_RAW_R::new(((self.bits >> 9) & 0x01) != 0)
+        INFIFO_FULL_ERR_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - 1:SPI_DMA_OUTFIFO_EMPTY and spi_pop_data_prep are valid, which means that there is no data to pop but pop is valid. 0: Others. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn outfifo_empty_err_int_raw(&self) -> OUTFIFO_EMPTY_ERR_INT_RAW_R {
-        OUTFIFO_EMPTY_ERR_INT_RAW_R::new(((self.bits >> 10) & 0x01) != 0)
+        OUTFIFO_EMPTY_ERR_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The raw bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
     pub fn slv_cmd6_int_raw(&self) -> SLV_CMD6_INT_RAW_R {
-        SLV_CMD6_INT_RAW_R::new(((self.bits >> 11) & 0x01) != 0)
+        SLV_CMD6_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - The raw bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
     pub fn slv_cmd7_int_raw(&self) -> SLV_CMD7_INT_RAW_R {
-        SLV_CMD7_INT_RAW_R::new(((self.bits >> 12) & 0x01) != 0)
+        SLV_CMD7_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The raw bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
     pub fn slv_cmd8_int_raw(&self) -> SLV_CMD8_INT_RAW_R {
-        SLV_CMD8_INT_RAW_R::new(((self.bits >> 13) & 0x01) != 0)
+        SLV_CMD8_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - The raw bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
     pub fn slv_cmd9_int_raw(&self) -> SLV_CMD9_INT_RAW_R {
-        SLV_CMD9_INT_RAW_R::new(((self.bits >> 14) & 0x01) != 0)
+        SLV_CMD9_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - The raw bit for SPI slave CMDA interrupt."]
     #[inline(always)]
     pub fn slv_cmda_int_raw(&self) -> SLV_CMDA_INT_RAW_R {
-        SLV_CMDA_INT_RAW_R::new(((self.bits >> 15) & 0x01) != 0)
+        SLV_CMDA_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

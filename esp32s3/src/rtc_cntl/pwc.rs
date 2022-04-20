@@ -67,7 +67,7 @@ impl<'a> RTC_FASTMEM_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RTC_FASTMEM_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> RTC_SLOWMEM_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> RTC_SLOWMEM_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> RTC_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> RTC_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> RTC_FASTMEM_FOLW_CPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> RTC_SLOWMEM_FOLW_CPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> RTC_SLOWMEM_FORCE_LPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> RTC_SLOWMEM_FORCE_LPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> RTC_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> RTC_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> RTC_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> RTC_PAD_FORCE_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -630,82 +630,82 @@ impl R {
     #[doc = "Bit 0 - Fast RTC memory force no ISO"]
     #[inline(always)]
     pub fn rtc_fastmem_force_noiso(&self) -> RTC_FASTMEM_FORCE_NOISO_R {
-        RTC_FASTMEM_FORCE_NOISO_R::new((self.bits & 0x01) != 0)
+        RTC_FASTMEM_FORCE_NOISO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Fast RTC memory force ISO"]
     #[inline(always)]
     pub fn rtc_fastmem_force_iso(&self) -> RTC_FASTMEM_FORCE_ISO_R {
-        RTC_FASTMEM_FORCE_ISO_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTC_FASTMEM_FORCE_ISO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RTC memory force no ISO"]
     #[inline(always)]
     pub fn rtc_slowmem_force_noiso(&self) -> RTC_SLOWMEM_FORCE_NOISO_R {
-        RTC_SLOWMEM_FORCE_NOISO_R::new(((self.bits >> 2) & 0x01) != 0)
+        RTC_SLOWMEM_FORCE_NOISO_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RTC memory force ISO"]
     #[inline(always)]
     pub fn rtc_slowmem_force_iso(&self) -> RTC_SLOWMEM_FORCE_ISO_R {
-        RTC_SLOWMEM_FORCE_ISO_R::new(((self.bits >> 3) & 0x01) != 0)
+        RTC_SLOWMEM_FORCE_ISO_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - rtc_peri force ISO"]
     #[inline(always)]
     pub fn rtc_force_iso(&self) -> RTC_FORCE_ISO_R {
-        RTC_FORCE_ISO_R::new(((self.bits >> 4) & 0x01) != 0)
+        RTC_FORCE_ISO_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - rtc_peri force no ISO"]
     #[inline(always)]
     pub fn rtc_force_noiso(&self) -> RTC_FORCE_NOISO_R {
-        RTC_FORCE_NOISO_R::new(((self.bits >> 5) & 0x01) != 0)
+        RTC_FORCE_NOISO_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 1: Fast RTC memory PD following CPU, 0: fast RTC memory PD following RTC state machine"]
     #[inline(always)]
     pub fn rtc_fastmem_folw_cpu(&self) -> RTC_FASTMEM_FOLW_CPU_R {
-        RTC_FASTMEM_FOLW_CPU_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTC_FASTMEM_FOLW_CPU_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Fast RTC memory force PD"]
     #[inline(always)]
     pub fn rtc_fastmem_force_lpd(&self) -> RTC_FASTMEM_FORCE_LPD_R {
-        RTC_FASTMEM_FORCE_LPD_R::new(((self.bits >> 7) & 0x01) != 0)
+        RTC_FASTMEM_FORCE_LPD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Fast RTC memory force no PD"]
     #[inline(always)]
     pub fn rtc_fastmem_force_lpu(&self) -> RTC_FASTMEM_FORCE_LPU_R {
-        RTC_FASTMEM_FORCE_LPU_R::new(((self.bits >> 8) & 0x01) != 0)
+        RTC_FASTMEM_FORCE_LPU_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: RTC memory PD following CPU, 0: RTC memory PD following RTC state machine"]
     #[inline(always)]
     pub fn rtc_slowmem_folw_cpu(&self) -> RTC_SLOWMEM_FOLW_CPU_R {
-        RTC_SLOWMEM_FOLW_CPU_R::new(((self.bits >> 9) & 0x01) != 0)
+        RTC_SLOWMEM_FOLW_CPU_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC memory force PD"]
     #[inline(always)]
     pub fn rtc_slowmem_force_lpd(&self) -> RTC_SLOWMEM_FORCE_LPD_R {
-        RTC_SLOWMEM_FORCE_LPD_R::new(((self.bits >> 10) & 0x01) != 0)
+        RTC_SLOWMEM_FORCE_LPD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - RTC memory force no PD"]
     #[inline(always)]
     pub fn rtc_slowmem_force_lpu(&self) -> RTC_SLOWMEM_FORCE_LPU_R {
-        RTC_SLOWMEM_FORCE_LPU_R::new(((self.bits >> 11) & 0x01) != 0)
+        RTC_SLOWMEM_FORCE_LPU_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 18 - rtc_peri force power down"]
     #[inline(always)]
     pub fn rtc_force_pd(&self) -> RTC_FORCE_PD_R {
-        RTC_FORCE_PD_R::new(((self.bits >> 18) & 0x01) != 0)
+        RTC_FORCE_PD_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - rtc_peri force power up"]
     #[inline(always)]
     pub fn rtc_force_pu(&self) -> RTC_FORCE_PU_R {
-        RTC_FORCE_PU_R::new(((self.bits >> 19) & 0x01) != 0)
+        RTC_FORCE_PU_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - enable power down rtc_peri in sleep"]
     #[inline(always)]
     pub fn rtc_pd_en(&self) -> RTC_PD_EN_R {
-        RTC_PD_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        RTC_PD_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
     pub fn rtc_pad_force_hold(&self) -> RTC_PAD_FORCE_HOLD_R {
-        RTC_PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 0x01) != 0)
+        RTC_PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

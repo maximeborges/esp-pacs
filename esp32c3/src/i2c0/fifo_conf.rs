@@ -121,7 +121,7 @@ impl<'a> NONFIFO_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> FIFO_ADDR_CFG_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> RX_FIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> TX_FIFO_RST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> FIFO_PRT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -287,27 +287,27 @@ impl R {
     #[doc = "Bit 10 - reg_nonfifo_en"]
     #[inline(always)]
     pub fn nonfifo_en(&self) -> NONFIFO_EN_R {
-        NONFIFO_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        NONFIFO_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - reg_fifo_addr_cfg_en"]
     #[inline(always)]
     pub fn fifo_addr_cfg_en(&self) -> FIFO_ADDR_CFG_EN_R {
-        FIFO_ADDR_CFG_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        FIFO_ADDR_CFG_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_rx_fifo_rst"]
     #[inline(always)]
     pub fn rx_fifo_rst(&self) -> RX_FIFO_RST_R {
-        RX_FIFO_RST_R::new(((self.bits >> 12) & 0x01) != 0)
+        RX_FIFO_RST_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - reg_tx_fifo_rst"]
     #[inline(always)]
     pub fn tx_fifo_rst(&self) -> TX_FIFO_RST_R {
-        TX_FIFO_RST_R::new(((self.bits >> 13) & 0x01) != 0)
+        TX_FIFO_RST_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - reg_fifo_prt_en"]
     #[inline(always)]
     pub fn fifo_prt_en(&self) -> FIFO_PRT_EN_R {
-        FIFO_PRT_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        FIFO_PRT_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {

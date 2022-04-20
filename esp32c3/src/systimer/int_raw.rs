@@ -62,17 +62,17 @@ impl R {
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]
     pub fn target0_int_raw(&self) -> TARGET0_INT_RAW_R {
-        TARGET0_INT_RAW_R::new((self.bits & 0x01) != 0)
+        TARGET0_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - interupt1 raw"]
     #[inline(always)]
     pub fn target1_int_raw(&self) -> TARGET1_INT_RAW_R {
-        TARGET1_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        TARGET1_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - interupt2 raw"]
     #[inline(always)]
     pub fn target2_int_raw(&self) -> TARGET2_INT_RAW_R {
-        TARGET2_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        TARGET2_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[doc = "SYSTIMER_INT_RAW.\n\nThis register you can [`read`]

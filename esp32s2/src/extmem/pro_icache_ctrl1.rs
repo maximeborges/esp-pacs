@@ -67,7 +67,7 @@ impl<'a> PRO_ICACHE_MASK_BUS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_ICACHE_MASK_BUS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PRO_ICACHE_MASK_BUS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -149,17 +149,17 @@ impl R {
     #[doc = "Bit 0 - The bit is used to disable ibus0, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus0(&self) -> PRO_ICACHE_MASK_BUS0_R {
-        PRO_ICACHE_MASK_BUS0_R::new((self.bits & 0x01) != 0)
+        PRO_ICACHE_MASK_BUS0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to disable ibus1, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus1(&self) -> PRO_ICACHE_MASK_BUS1_R {
-        PRO_ICACHE_MASK_BUS1_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_ICACHE_MASK_BUS1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The bit is used to disable ibus2, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus2(&self) -> PRO_ICACHE_MASK_BUS2_R {
-        PRO_ICACHE_MASK_BUS2_R::new(((self.bits >> 2) & 0x01) != 0)
+        PRO_ICACHE_MASK_BUS2_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {

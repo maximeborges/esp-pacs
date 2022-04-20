@@ -138,7 +138,7 @@ impl<'a> SWITCH_PRT_NUM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
         self.w
     }
 }
@@ -175,7 +175,7 @@ impl<'a> PAD_POWER_CTRL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -198,12 +198,12 @@ impl R {
     #[doc = "Bits 12:14 - IO pin power switch delay, delay unit is one APB clock."]
     #[inline(always)]
     pub fn switch_prt_num(&self) -> SWITCH_PRT_NUM_R {
-        SWITCH_PRT_NUM_R::new(((self.bits >> 12) & 0x07) as u8)
+        SWITCH_PRT_NUM_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Bit 15 - Select power voltage for GPIO33 ~ GPIO37. 1: select VDD_SPI 1.8 V. 0: select VDD3P3_CPU 3.3 V."]
     #[inline(always)]
     pub fn pad_power_ctrl(&self) -> PAD_POWER_CTRL_R {
-        PAD_POWER_CTRL_R::new(((self.bits >> 15) & 0x01) != 0)
+        PAD_POWER_CTRL_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {

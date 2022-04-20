@@ -57,7 +57,7 @@ impl<'a> TIMER0_SYNCISEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
+        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> TIMER1_SYNCISEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 3)) | ((value as u32 & 0x07) << 3);
+        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
         self.w
     }
 }
@@ -111,7 +111,7 @@ impl<'a> TIMER2_SYNCISEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 6)) | ((value as u32 & 0x07) << 6);
+        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
         self.w
     }
 }
@@ -148,7 +148,7 @@ impl<'a> EXTERNAL_SYNCI0_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> EXTERNAL_SYNCI1_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> EXTERNAL_SYNCI2_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -230,32 +230,32 @@ impl R {
     #[doc = "Bits 0:2 - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer0_syncisel(&self) -> TIMER0_SYNCISEL_R {
-        TIMER0_SYNCISEL_R::new((self.bits & 0x07) as u8)
+        TIMER0_SYNCISEL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bits 3:5 - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer1_syncisel(&self) -> TIMER1_SYNCISEL_R {
-        TIMER1_SYNCISEL_R::new(((self.bits >> 3) & 0x07) as u8)
+        TIMER1_SYNCISEL_R::new(((self.bits >> 3) & 7) as u8)
     }
     #[doc = "Bits 6:8 - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer2_syncisel(&self) -> TIMER2_SYNCISEL_R {
-        TIMER2_SYNCISEL_R::new(((self.bits >> 6) & 0x07) as u8)
+        TIMER2_SYNCISEL_R::new(((self.bits >> 6) & 7) as u8)
     }
     #[doc = "Bit 9 - invert SYNC0 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci0_invert(&self) -> EXTERNAL_SYNCI0_INVERT_R {
-        EXTERNAL_SYNCI0_INVERT_R::new(((self.bits >> 9) & 0x01) != 0)
+        EXTERNAL_SYNCI0_INVERT_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - invert SYNC1 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci1_invert(&self) -> EXTERNAL_SYNCI1_INVERT_R {
-        EXTERNAL_SYNCI1_INVERT_R::new(((self.bits >> 10) & 0x01) != 0)
+        EXTERNAL_SYNCI1_INVERT_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - invert SYNC2 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci2_invert(&self) -> EXTERNAL_SYNCI2_INVERT_R {
-        EXTERNAL_SYNCI2_INVERT_R::new(((self.bits >> 11) & 0x01) != 0)
+        EXTERNAL_SYNCI2_INVERT_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

@@ -148,7 +148,7 @@ impl<'a> LCD_NEXT_FRAME_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> LCD_BK_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -207,7 +207,7 @@ impl<'a> LCD_AFIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -246,7 +246,7 @@ impl<'a> LCD_CD_DATA_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -285,7 +285,7 @@ impl<'a> LCD_CD_DUMMY_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -324,7 +324,7 @@ impl<'a> LCD_CD_CMD_SET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -361,7 +361,7 @@ impl<'a> LCD_CD_IDLE_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -384,35 +384,35 @@ impl R {
     #[doc = "Bit 25 - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
     #[inline(always)]
     pub fn lcd_next_frame_en(&self) -> LCD_NEXT_FRAME_EN_R {
-        LCD_NEXT_FRAME_EN_R::new(((self.bits >> 25) & 0x01) != 0)
+        LCD_NEXT_FRAME_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: Enable blank region when LCD sends data out. 0: No blank region."]
     #[inline(always)]
     pub fn lcd_bk_en(&self) -> LCD_BK_EN_R {
-        LCD_BK_EN_R::new(((self.bits >> 26) & 0x01) != 0)
+        LCD_BK_EN_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 28 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\]
  is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_data_set(&self) -> LCD_CD_DATA_SET_R {
-        LCD_CD_DATA_SET_R::new(((self.bits >> 28) & 0x01) != 0)
+        LCD_CD_DATA_SET_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\]
  is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_dummy_set(&self) -> LCD_CD_DUMMY_SET_R {
-        LCD_CD_DUMMY_SET_R::new(((self.bits >> 29) & 0x01) != 0)
+        LCD_CD_DUMMY_SET_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\]
  is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_cmd_set(&self) -> LCD_CD_CMD_SET_R {
-        LCD_CD_CMD_SET_R::new(((self.bits >> 30) & 0x01) != 0)
+        LCD_CD_CMD_SET_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - The default value of LCD_CD."]
     #[inline(always)]
     pub fn lcd_cd_idle_edge(&self) -> LCD_CD_IDLE_EDGE_R {
-        LCD_CD_IDLE_EDGE_R::new(((self.bits >> 31) & 0x01) != 0)
+        LCD_CD_IDLE_EDGE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

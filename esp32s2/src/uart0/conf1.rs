@@ -121,7 +121,7 @@ impl<'a> RX_TOUT_FLOW_DIS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> RX_FLOW_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> RX_TOUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -213,17 +213,17 @@ impl R {
     #[doc = "Bit 29 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
     pub fn rx_tout_flow_dis(&self) -> RX_TOUT_FLOW_DIS_R {
-        RX_TOUT_FLOW_DIS_R::new(((self.bits >> 29) & 0x01) != 0)
+        RX_TOUT_FLOW_DIS_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - This is the flow enable bit for UART receiver. 1: Choose software flow control with configuring sw_rts signal. 0: Disable software flow control."]
     #[inline(always)]
     pub fn rx_flow_en(&self) -> RX_FLOW_EN_R {
-        RX_FLOW_EN_R::new(((self.bits >> 30) & 0x01) != 0)
+        RX_FLOW_EN_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - This is the enable bit for UART receiver's timeout function."]
     #[inline(always)]
     pub fn rx_tout_en(&self) -> RX_TOUT_EN_R {
-        RX_TOUT_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        RX_TOUT_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

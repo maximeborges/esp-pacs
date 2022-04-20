@@ -121,7 +121,7 @@ impl<'a> DB1_DEB_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> DB1_A_OUTSWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> DB1_B_OUTSWAP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> DB1_RED_INSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> DB1_FED_INSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> DB1_RED_OUTINVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> DB1_FED_OUTINVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> DB1_A_OUTBYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> DB1_B_OUTBYPASS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> DB1_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -472,52 +472,52 @@ impl R {
     #[doc = "Bit 8 - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
     #[inline(always)]
     pub fn db1_deb_mode(&self) -> DB1_DEB_MODE_R {
-        DB1_DEB_MODE_R::new(((self.bits >> 8) & 0x01) != 0)
+        DB1_DEB_MODE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - S6 in documentation"]
     #[inline(always)]
     pub fn db1_a_outswap(&self) -> DB1_A_OUTSWAP_R {
-        DB1_A_OUTSWAP_R::new(((self.bits >> 9) & 0x01) != 0)
+        DB1_A_OUTSWAP_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - S7 in documentation"]
     #[inline(always)]
     pub fn db1_b_outswap(&self) -> DB1_B_OUTSWAP_R {
-        DB1_B_OUTSWAP_R::new(((self.bits >> 10) & 0x01) != 0)
+        DB1_B_OUTSWAP_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - S4 in documentation"]
     #[inline(always)]
     pub fn db1_red_insel(&self) -> DB1_RED_INSEL_R {
-        DB1_RED_INSEL_R::new(((self.bits >> 11) & 0x01) != 0)
+        DB1_RED_INSEL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - S5 in documentation"]
     #[inline(always)]
     pub fn db1_fed_insel(&self) -> DB1_FED_INSEL_R {
-        DB1_FED_INSEL_R::new(((self.bits >> 12) & 0x01) != 0)
+        DB1_FED_INSEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - S2 in documentation"]
     #[inline(always)]
     pub fn db1_red_outinvert(&self) -> DB1_RED_OUTINVERT_R {
-        DB1_RED_OUTINVERT_R::new(((self.bits >> 13) & 0x01) != 0)
+        DB1_RED_OUTINVERT_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - S3 in documentation"]
     #[inline(always)]
     pub fn db1_fed_outinvert(&self) -> DB1_FED_OUTINVERT_R {
-        DB1_FED_OUTINVERT_R::new(((self.bits >> 14) & 0x01) != 0)
+        DB1_FED_OUTINVERT_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - S1 in documentation"]
     #[inline(always)]
     pub fn db1_a_outbypass(&self) -> DB1_A_OUTBYPASS_R {
-        DB1_A_OUTBYPASS_R::new(((self.bits >> 15) & 0x01) != 0)
+        DB1_A_OUTBYPASS_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - S0 in documentation"]
     #[inline(always)]
     pub fn db1_b_outbypass(&self) -> DB1_B_OUTBYPASS_R {
-        DB1_B_OUTBYPASS_R::new(((self.bits >> 16) & 0x01) != 0)
+        DB1_B_OUTBYPASS_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Dead time generator 1 clock selection. 0: PWM_clk, 1: PT_clk"]
     #[inline(always)]
     pub fn db1_clk_sel(&self) -> DB1_CLK_SEL_R {
-        DB1_CLK_SEL_R::new(((self.bits >> 17) & 0x01) != 0)
+        DB1_CLK_SEL_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {

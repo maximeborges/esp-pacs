@@ -84,7 +84,7 @@ impl<'a> CORE_0_VECBASE_OVERRIDE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
+        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
         self.w
     }
 }
@@ -97,7 +97,7 @@ impl R {
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
     pub fn core_0_vecbase_override_sel(&self) -> CORE_0_VECBASE_OVERRIDE_SEL_R {
-        CORE_0_VECBASE_OVERRIDE_SEL_R::new(((self.bits >> 22) & 0x03) as u8)
+        CORE_0_VECBASE_OVERRIDE_SEL_R::new(((self.bits >> 22) & 3) as u8)
     }
 }
 impl W {

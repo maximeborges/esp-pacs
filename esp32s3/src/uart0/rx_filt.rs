@@ -94,7 +94,7 @@ impl<'a> GLITCH_FILT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 8 - Set this bit to enable Rx signal filter."]
     #[inline(always)]
     pub fn glitch_filt_en(&self) -> GLITCH_FILT_EN_R {
-        GLITCH_FILT_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        GLITCH_FILT_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {

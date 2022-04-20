@@ -67,7 +67,7 @@ impl<'a> RST_EN_ASSIST_DEBUG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RST_EN_DEDICATED_GPIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 6 - reg_rst_en_assist_debug"]
     #[inline(always)]
     pub fn rst_en_assist_debug(&self) -> RST_EN_ASSIST_DEBUG_R {
-        RST_EN_ASSIST_DEBUG_R::new(((self.bits >> 6) & 0x01) != 0)
+        RST_EN_ASSIST_DEBUG_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - reg_rst_en_dedicated_gpio"]
     #[inline(always)]
     pub fn rst_en_dedicated_gpio(&self) -> RST_EN_DEDICATED_GPIO_R {
-        RST_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 0x01) != 0)
+        RST_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {

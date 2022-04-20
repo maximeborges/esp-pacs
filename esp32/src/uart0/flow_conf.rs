@@ -67,7 +67,7 @@ impl<'a> SW_FLOW_CON_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> XONOFF_DEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FORCE_XON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> FORCE_XOFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> SEND_XON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> SEND_XOFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -260,32 +260,32 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable software flow control. it is used with register sw_xon or sw_xoff ."]
     #[inline(always)]
     pub fn sw_flow_con_en(&self) -> SW_FLOW_CON_EN_R {
-        SW_FLOW_CON_EN_R::new((self.bits & 0x01) != 0)
+        SW_FLOW_CON_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
     pub fn xonoff_del(&self) -> XONOFF_DEL_R {
-        XONOFF_DEL_R::new(((self.bits >> 1) & 0x01) != 0)
+        XONOFF_DEL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to clear ctsn to stop the transmitter from sending data."]
     #[inline(always)]
     pub fn force_xon(&self) -> FORCE_XON_R {
-        FORCE_XON_R::new(((self.bits >> 2) & 0x01) != 0)
+        FORCE_XON_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to set ctsn to enable the transmitter to go on sending data."]
     #[inline(always)]
     pub fn force_xoff(&self) -> FORCE_XOFF_R {
-        FORCE_XOFF_R::new(((self.bits >> 3) & 0x01) != 0)
+        FORCE_XOFF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to send xon char. it is cleared by hardware automatically."]
     #[inline(always)]
     pub fn send_xon(&self) -> SEND_XON_R {
-        SEND_XON_R::new(((self.bits >> 4) & 0x01) != 0)
+        SEND_XON_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to send xoff char. it is cleared by hardware automatically."]
     #[inline(always)]
     pub fn send_xoff(&self) -> SEND_XOFF_R {
-        SEND_XOFF_R::new(((self.bits >> 5) & 0x01) != 0)
+        SEND_XOFF_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {

@@ -57,7 +57,7 @@ impl<'a> CCLK_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -84,7 +84,7 @@ impl<'a> LP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -92,12 +92,12 @@ impl R {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
     pub fn cclk_enable(&self) -> CCLK_ENABLE_R {
-        CCLK_ENABLE_R::new((self.bits & 0x03) as u8)
+        CCLK_ENABLE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 16:17 - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
     #[inline(always)]
     pub fn lp_enable(&self) -> LP_ENABLE_R {
-        LP_ENABLE_R::new(((self.bits >> 16) & 0x03) as u8)
+        LP_ENABLE_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

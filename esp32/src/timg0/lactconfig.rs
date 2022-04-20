@@ -67,7 +67,7 @@ impl<'a> LACT_RTC_ONLY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> LACT_CPST_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> LACT_LAC_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> LACT_ALARM_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> LACT_LEVEL_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> LACT_EDGE_INT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -316,7 +316,7 @@ impl<'a> LACT_AUTORELOAD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -353,7 +353,7 @@ impl<'a> LACT_INCREASE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -390,7 +390,7 @@ impl<'a> LACT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -398,32 +398,32 @@ impl R {
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn lact_rtc_only(&self) -> LACT_RTC_ONLY_R {
-        LACT_RTC_ONLY_R::new(((self.bits >> 7) & 0x01) != 0)
+        LACT_RTC_ONLY_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn lact_cpst_en(&self) -> LACT_CPST_EN_R {
-        LACT_CPST_EN_R::new(((self.bits >> 8) & 0x01) != 0)
+        LACT_CPST_EN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn lact_lac_en(&self) -> LACT_LAC_EN_R {
-        LACT_LAC_EN_R::new(((self.bits >> 9) & 0x01) != 0)
+        LACT_LAC_EN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn lact_alarm_en(&self) -> LACT_ALARM_EN_R {
-        LACT_ALARM_EN_R::new(((self.bits >> 10) & 0x01) != 0)
+        LACT_ALARM_EN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn lact_level_int_en(&self) -> LACT_LEVEL_INT_EN_R {
-        LACT_LEVEL_INT_EN_R::new(((self.bits >> 11) & 0x01) != 0)
+        LACT_LEVEL_INT_EN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn lact_edge_int_en(&self) -> LACT_EDGE_INT_EN_R {
-        LACT_EDGE_INT_EN_R::new(((self.bits >> 12) & 0x01) != 0)
+        LACT_EDGE_INT_EN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:28"]
     #[inline(always)]
@@ -433,17 +433,17 @@ impl R {
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn lact_autoreload(&self) -> LACT_AUTORELOAD_R {
-        LACT_AUTORELOAD_R::new(((self.bits >> 29) & 0x01) != 0)
+        LACT_AUTORELOAD_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     pub fn lact_increase(&self) -> LACT_INCREASE_R {
-        LACT_INCREASE_R::new(((self.bits >> 30) & 0x01) != 0)
+        LACT_INCREASE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn lact_en(&self) -> LACT_EN_R {
-        LACT_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        LACT_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

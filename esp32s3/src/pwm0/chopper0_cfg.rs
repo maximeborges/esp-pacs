@@ -67,7 +67,7 @@ impl<'a> CHOPPER0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> CHOPPER0_DUTY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
+        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
         self.w
     }
 }
@@ -185,7 +185,7 @@ impl<'a> CHOPPER0_OUT_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -222,7 +222,7 @@ impl<'a> CHOPPER0_IN_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -230,7 +230,7 @@ impl R {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
     pub fn chopper0_en(&self) -> CHOPPER0_EN_R {
-        CHOPPER0_EN_R::new((self.bits & 0x01) != 0)
+        CHOPPER0_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:4 - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
     #[inline(always)]
@@ -240,7 +240,7 @@ impl R {
     #[doc = "Bits 5:7 - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
     #[inline(always)]
     pub fn chopper0_duty(&self) -> CHOPPER0_DUTY_R {
-        CHOPPER0_DUTY_R::new(((self.bits >> 5) & 0x07) as u8)
+        CHOPPER0_DUTY_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bits 8:11 - width of the fist pulse in number of periods of the carrier"]
     #[inline(always)]
@@ -250,12 +250,12 @@ impl R {
     #[doc = "Bit 12 - when set, invert the output of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
     pub fn chopper0_out_invert(&self) -> CHOPPER0_OUT_INVERT_R {
-        CHOPPER0_OUT_INVERT_R::new(((self.bits >> 12) & 0x01) != 0)
+        CHOPPER0_OUT_INVERT_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - when set, invert the input of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
     pub fn chopper0_in_invert(&self) -> CHOPPER0_IN_INVERT_R {
-        CHOPPER0_IN_INVERT_R::new(((self.bits >> 13) & 0x01) != 0)
+        CHOPPER0_IN_INVERT_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {

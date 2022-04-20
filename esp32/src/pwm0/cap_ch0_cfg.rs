@@ -67,7 +67,7 @@ impl<'a> CAP0_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> CAP0_MODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u32 & 0x03) << 1);
+        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
         self.w
     }
 }
@@ -158,7 +158,7 @@ impl<'a> CAP0_IN_INVERT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -180,7 +180,7 @@ impl<'a> CAP0_SW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -188,12 +188,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn cap0_en(&self) -> CAP0_EN_R {
-        CAP0_EN_R::new((self.bits & 0x01) != 0)
+        CAP0_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     pub fn cap0_mode(&self) -> CAP0_MODE_R {
-        CAP0_MODE_R::new(((self.bits >> 1) & 0x03) as u8)
+        CAP0_MODE_R::new(((self.bits >> 1) & 3) as u8)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
@@ -203,7 +203,7 @@ impl R {
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn cap0_in_invert(&self) -> CAP0_IN_INVERT_R {
-        CAP0_IN_INVERT_R::new(((self.bits >> 11) & 0x01) != 0)
+        CAP0_IN_INVERT_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

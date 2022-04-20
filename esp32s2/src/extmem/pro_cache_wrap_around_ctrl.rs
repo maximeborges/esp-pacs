@@ -67,7 +67,7 @@ impl<'a> PRO_CACHE_FLASH_WRAP_AROUND_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> PRO_CACHE_SRAM_RD_WRAP_AROUND_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
     pub fn pro_cache_flash_wrap_around(&self) -> PRO_CACHE_FLASH_WRAP_AROUND_R {
-        PRO_CACHE_FLASH_WRAP_AROUND_R::new((self.bits & 0x01) != 0)
+        PRO_CACHE_FLASH_WRAP_AROUND_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The bit is used to enable wrap around mode when read data from spiram."]
     #[inline(always)]
     pub fn pro_cache_sram_rd_wrap_around(&self) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_R {
-        PRO_CACHE_SRAM_RD_WRAP_AROUND_R::new(((self.bits >> 1) & 0x01) != 0)
+        PRO_CACHE_SRAM_RD_WRAP_AROUND_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

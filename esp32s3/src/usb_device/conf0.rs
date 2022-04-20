@@ -67,7 +67,7 @@ impl<'a> PHY_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> EXCHG_PINS_OVERRIDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> EXCHG_PINS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> VREFH_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 3)) | ((value as u32 & 0x03) << 3);
+        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
         self.w
     }
 }
@@ -195,7 +195,7 @@ impl<'a> VREFL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 5)) | ((value as u32 & 0x03) << 5);
+        self.w.bits = (self.w.bits & !(3 << 5)) | ((value as u32 & 3) << 5);
         self.w
     }
 }
@@ -232,7 +232,7 @@ impl<'a> VREF_OVERRIDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -269,7 +269,7 @@ impl<'a> PAD_PULL_OVERRIDE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -306,7 +306,7 @@ impl<'a> DP_PULLUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> DP_PULLDOWN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> DM_PULLUP_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -417,7 +417,7 @@ impl<'a> DM_PULLDOWN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -454,7 +454,7 @@ impl<'a> PULLUP_VALUE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -491,7 +491,7 @@ impl<'a> USB_PAD_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -528,7 +528,7 @@ impl<'a> PHY_TX_EDGE_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -565,7 +565,7 @@ impl<'a> USB_JTAG_BRIDGE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -573,77 +573,77 @@ impl R {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
     pub fn phy_sel(&self) -> PHY_SEL_R {
-        PHY_SEL_R::new((self.bits & 0x01) != 0)
+        PHY_SEL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
     #[inline(always)]
     pub fn exchg_pins_override(&self) -> EXCHG_PINS_OVERRIDE_R {
-        EXCHG_PINS_OVERRIDE_R::new(((self.bits >> 1) & 0x01) != 0)
+        EXCHG_PINS_OVERRIDE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USB D+ D- exchange"]
     #[inline(always)]
     pub fn exchg_pins(&self) -> EXCHG_PINS_R {
-        EXCHG_PINS_R::new(((self.bits >> 2) & 0x01) != 0)
+        EXCHG_PINS_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
     pub fn vrefh(&self) -> VREFH_R {
-        VREFH_R::new(((self.bits >> 3) & 0x03) as u8)
+        VREFH_R::new(((self.bits >> 3) & 3) as u8)
     }
     #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
     pub fn vrefl(&self) -> VREFL_R {
-        VREFL_R::new(((self.bits >> 5) & 0x03) as u8)
+        VREFL_R::new(((self.bits >> 5) & 3) as u8)
     }
     #[doc = "Bit 7 - Enable software control input threshold"]
     #[inline(always)]
     pub fn vref_override(&self) -> VREF_OVERRIDE_R {
-        VREF_OVERRIDE_R::new(((self.bits >> 7) & 0x01) != 0)
+        VREF_OVERRIDE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
     #[inline(always)]
     pub fn pad_pull_override(&self) -> PAD_PULL_OVERRIDE_R {
-        PAD_PULL_OVERRIDE_R::new(((self.bits >> 8) & 0x01) != 0)
+        PAD_PULL_OVERRIDE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Control USB D+ pull up."]
     #[inline(always)]
     pub fn dp_pullup(&self) -> DP_PULLUP_R {
-        DP_PULLUP_R::new(((self.bits >> 9) & 0x01) != 0)
+        DP_PULLUP_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Control USB D+ pull down."]
     #[inline(always)]
     pub fn dp_pulldown(&self) -> DP_PULLDOWN_R {
-        DP_PULLDOWN_R::new(((self.bits >> 10) & 0x01) != 0)
+        DP_PULLDOWN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Control USB D- pull up."]
     #[inline(always)]
     pub fn dm_pullup(&self) -> DM_PULLUP_R {
-        DM_PULLUP_R::new(((self.bits >> 11) & 0x01) != 0)
+        DM_PULLUP_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Control USB D- pull down."]
     #[inline(always)]
     pub fn dm_pulldown(&self) -> DM_PULLDOWN_R {
-        DM_PULLDOWN_R::new(((self.bits >> 12) & 0x01) != 0)
+        DM_PULLDOWN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Control pull up value."]
     #[inline(always)]
     pub fn pullup_value(&self) -> PULLUP_VALUE_R {
-        PULLUP_VALUE_R::new(((self.bits >> 13) & 0x01) != 0)
+        PULLUP_VALUE_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Enable USB pad function."]
     #[inline(always)]
     pub fn usb_pad_enable(&self) -> USB_PAD_ENABLE_R {
-        USB_PAD_ENABLE_R::new(((self.bits >> 14) & 0x01) != 0)
+        USB_PAD_ENABLE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
     #[inline(always)]
     pub fn phy_tx_edge_sel(&self) -> PHY_TX_EDGE_SEL_R {
-        PHY_TX_EDGE_SEL_R::new(((self.bits >> 15) & 0x01) != 0)
+        PHY_TX_EDGE_SEL_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
     #[inline(always)]
     pub fn usb_jtag_bridge_en(&self) -> USB_JTAG_BRIDGE_EN_R {
-        USB_JTAG_BRIDGE_EN_R::new(((self.bits >> 16) & 0x01) != 0)
+        USB_JTAG_BRIDGE_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {

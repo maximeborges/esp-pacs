@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro(&self) -> PRO_R {
-        PRO_R::new((self.bits & 0x01) != 0)
+        PRO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn app(&self) -> APP_R {
-        APP_R::new(((self.bits >> 8) & 0x01) != 0)
+        APP_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "\n\nThis register you can [`read`]

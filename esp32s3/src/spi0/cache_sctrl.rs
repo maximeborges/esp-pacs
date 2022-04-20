@@ -67,7 +67,7 @@ impl<'a> CACHE_USR_SCMD_4BYTE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> USR_SRAM_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> USR_SRAM_QIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> USR_WR_SRAM_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> USR_RD_SRAM_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> CACHE_SRAM_USR_RCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -343,7 +343,7 @@ impl<'a> CACHE_SRAM_USR_WCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -380,7 +380,7 @@ impl<'a> SRAM_OCT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -415,32 +415,32 @@ impl R {
     #[doc = "Bit 0 - Set this bit to enable SPI0 read Ext_RAM with 32 bits address. The value of SPI_MEM_SRAM_ADDR_BITLEN should be 31."]
     #[inline(always)]
     pub fn cache_usr_scmd_4byte(&self) -> CACHE_USR_SCMD_4BYTE_R {
-        CACHE_USR_SCMD_4BYTE_R::new((self.bits & 0x01) != 0)
+        CACHE_USR_SCMD_4BYTE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set the bit to enable 2-bm in all the phases of SPI0 Ext_RAM transfer."]
     #[inline(always)]
     pub fn usr_sram_dio(&self) -> USR_SRAM_DIO_R {
-        USR_SRAM_DIO_R::new(((self.bits >> 1) & 0x01) != 0)
+        USR_SRAM_DIO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set the bit to enable QPI mode in all SPI0 Ext_RAM transfer."]
     #[inline(always)]
     pub fn usr_sram_qio(&self) -> USR_SRAM_QIO_R {
-        USR_SRAM_QIO_R::new(((self.bits >> 2) & 0x01) != 0)
+        USR_SRAM_QIO_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - When SPI0 accesses to Ext_RAM, set this bit to enable DUMMY phase in write operations."]
     #[inline(always)]
     pub fn usr_wr_sram_dummy(&self) -> USR_WR_SRAM_DUMMY_R {
-        USR_WR_SRAM_DUMMY_R::new(((self.bits >> 3) & 0x01) != 0)
+        USR_WR_SRAM_DUMMY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - When SPI0 accesses to Ext_RAM, set this bit to enable DUMMY phase in read operations."]
     #[inline(always)]
     pub fn usr_rd_sram_dummy(&self) -> USR_RD_SRAM_DUMMY_R {
-        USR_RD_SRAM_DUMMY_R::new(((self.bits >> 4) & 0x01) != 0)
+        USR_RD_SRAM_DUMMY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - 1: The command value of SPI0 read Ext_RAM is SPI_MEM_CACHE_SRAM_USR_WR_CMD_VALUE. 0: The value is 0x2."]
     #[inline(always)]
     pub fn cache_sram_usr_rcmd(&self) -> CACHE_SRAM_USR_RCMD_R {
-        CACHE_SRAM_USR_RCMD_R::new(((self.bits >> 5) & 0x01) != 0)
+        CACHE_SRAM_USR_RCMD_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:11 - When SPI0 accesses to Ext_RAM, it is the SPI_CLK cycles minus 1 of DUMMY phase in read data transfer."]
     #[inline(always)]
@@ -455,12 +455,12 @@ impl R {
     #[doc = "Bit 20 - 1: The command value of SPI0 write Ext_RAM is SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE. 0: The value is 0x3."]
     #[inline(always)]
     pub fn cache_sram_usr_wcmd(&self) -> CACHE_SRAM_USR_WCMD_R {
-        CACHE_SRAM_USR_WCMD_R::new(((self.bits >> 20) & 0x01) != 0)
+        CACHE_SRAM_USR_WCMD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set the bit to enable OPI mode in all SPI0 Ext_RAM transfer."]
     #[inline(always)]
     pub fn sram_oct(&self) -> SRAM_OCT_R {
-        SRAM_OCT_R::new(((self.bits >> 21) & 0x01) != 0)
+        SRAM_OCT_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bits 22:27 - When SPI0 accesses to Ext_RAM, it is the SPI_CLK cycles minus 1 of DUMMY phase in write data transfer."]
     #[inline(always)]

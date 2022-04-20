@@ -94,7 +94,7 @@ impl<'a> ULP_CP_GPIO_WAKEUP_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -116,7 +116,7 @@ impl<'a> ULP_CP_GPIO_WAKEUP_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -153,7 +153,7 @@ impl<'a> ULP_CP_SLP_TIMER_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -166,12 +166,12 @@ impl R {
     #[doc = "Bit 29 - ULP-coprocessor wakeup by GPIO enable"]
     #[inline(always)]
     pub fn ulp_cp_gpio_wakeup_ena(&self) -> ULP_CP_GPIO_WAKEUP_ENA_R {
-        ULP_CP_GPIO_WAKEUP_ENA_R::new(((self.bits >> 29) & 0x01) != 0)
+        ULP_CP_GPIO_WAKEUP_ENA_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
     pub fn ulp_cp_slp_timer_en(&self) -> ULP_CP_SLP_TIMER_EN_R {
-        ULP_CP_SLP_TIMER_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        ULP_CP_SLP_TIMER_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -82,7 +82,7 @@ impl<'a> RTC_GPIO_WAKEUP_STATUS_CLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -119,7 +119,7 @@ impl<'a> RTC_GPIO_PIN_CLK_GATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -146,7 +146,7 @@ impl<'a> RTC_GPIO_PIN5_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
+        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
         self.w
     }
 }
@@ -173,7 +173,7 @@ impl<'a> RTC_GPIO_PIN4_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 11)) | ((value as u32 & 0x07) << 11);
+        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
         self.w
     }
 }
@@ -200,7 +200,7 @@ impl<'a> RTC_GPIO_PIN3_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 14)) | ((value as u32 & 0x07) << 14);
+        self.w.bits = (self.w.bits & !(7 << 14)) | ((value as u32 & 7) << 14);
         self.w
     }
 }
@@ -227,7 +227,7 @@ impl<'a> RTC_GPIO_PIN2_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 17)) | ((value as u32 & 0x07) << 17);
+        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
         self.w
     }
 }
@@ -254,7 +254,7 @@ impl<'a> RTC_GPIO_PIN1_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 20)) | ((value as u32 & 0x07) << 20);
+        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
         self.w
     }
 }
@@ -281,7 +281,7 @@ impl<'a> RTC_GPIO_PIN0_INT_TYPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 23)) | ((value as u32 & 0x07) << 23);
+        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
         self.w
     }
 }
@@ -318,7 +318,7 @@ impl<'a> RTC_GPIO_PIN5_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -355,7 +355,7 @@ impl<'a> RTC_GPIO_PIN4_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -392,7 +392,7 @@ impl<'a> RTC_GPIO_PIN3_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -429,7 +429,7 @@ impl<'a> RTC_GPIO_PIN2_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
         self.w
     }
 }
@@ -466,7 +466,7 @@ impl<'a> RTC_GPIO_PIN1_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
         self.w
     }
 }
@@ -503,7 +503,7 @@ impl<'a> RTC_GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -516,72 +516,72 @@ impl R {
     #[doc = "Bit 6 - clear rtc gpio wakeup flag"]
     #[inline(always)]
     pub fn rtc_gpio_wakeup_status_clr(&self) -> RTC_GPIO_WAKEUP_STATUS_CLR_R {
-        RTC_GPIO_WAKEUP_STATUS_CLR_R::new(((self.bits >> 6) & 0x01) != 0)
+        RTC_GPIO_WAKEUP_STATUS_CLR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - enable rtc io clk gate"]
     #[inline(always)]
     pub fn rtc_gpio_pin_clk_gate(&self) -> RTC_GPIO_PIN_CLK_GATE_R {
-        RTC_GPIO_PIN_CLK_GATE_R::new(((self.bits >> 7) & 0x01) != 0)
+        RTC_GPIO_PIN_CLK_GATE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:10 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_int_type(&self) -> RTC_GPIO_PIN5_INT_TYPE_R {
-        RTC_GPIO_PIN5_INT_TYPE_R::new(((self.bits >> 8) & 0x07) as u8)
+        RTC_GPIO_PIN5_INT_TYPE_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 11:13 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_int_type(&self) -> RTC_GPIO_PIN4_INT_TYPE_R {
-        RTC_GPIO_PIN4_INT_TYPE_R::new(((self.bits >> 11) & 0x07) as u8)
+        RTC_GPIO_PIN4_INT_TYPE_R::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bits 14:16 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_int_type(&self) -> RTC_GPIO_PIN3_INT_TYPE_R {
-        RTC_GPIO_PIN3_INT_TYPE_R::new(((self.bits >> 14) & 0x07) as u8)
+        RTC_GPIO_PIN3_INT_TYPE_R::new(((self.bits >> 14) & 7) as u8)
     }
     #[doc = "Bits 17:19 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_int_type(&self) -> RTC_GPIO_PIN2_INT_TYPE_R {
-        RTC_GPIO_PIN2_INT_TYPE_R::new(((self.bits >> 17) & 0x07) as u8)
+        RTC_GPIO_PIN2_INT_TYPE_R::new(((self.bits >> 17) & 7) as u8)
     }
     #[doc = "Bits 20:22 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_int_type(&self) -> RTC_GPIO_PIN1_INT_TYPE_R {
-        RTC_GPIO_PIN1_INT_TYPE_R::new(((self.bits >> 20) & 0x07) as u8)
+        RTC_GPIO_PIN1_INT_TYPE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bits 23:25 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_int_type(&self) -> RTC_GPIO_PIN0_INT_TYPE_R {
-        RTC_GPIO_PIN0_INT_TYPE_R::new(((self.bits >> 23) & 0x07) as u8)
+        RTC_GPIO_PIN0_INT_TYPE_R::new(((self.bits >> 23) & 7) as u8)
     }
     #[doc = "Bit 26 - enable wakeup from rtc gpio5"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_wakeup_enable(&self) -> RTC_GPIO_PIN5_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN5_WAKEUP_ENABLE_R::new(((self.bits >> 26) & 0x01) != 0)
+        RTC_GPIO_PIN5_WAKEUP_ENABLE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - enable wakeup from rtc gpio4"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_wakeup_enable(&self) -> RTC_GPIO_PIN4_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN4_WAKEUP_ENABLE_R::new(((self.bits >> 27) & 0x01) != 0)
+        RTC_GPIO_PIN4_WAKEUP_ENABLE_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - enable wakeup from rtc gpio3"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_wakeup_enable(&self) -> RTC_GPIO_PIN3_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN3_WAKEUP_ENABLE_R::new(((self.bits >> 28) & 0x01) != 0)
+        RTC_GPIO_PIN3_WAKEUP_ENABLE_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - enable wakeup from rtc gpio2"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_wakeup_enable(&self) -> RTC_GPIO_PIN2_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN2_WAKEUP_ENABLE_R::new(((self.bits >> 29) & 0x01) != 0)
+        RTC_GPIO_PIN2_WAKEUP_ENABLE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - enable wakeup from rtc gpio1"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_wakeup_enable(&self) -> RTC_GPIO_PIN1_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN1_WAKEUP_ENABLE_R::new(((self.bits >> 30) & 0x01) != 0)
+        RTC_GPIO_PIN1_WAKEUP_ENABLE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - enable wakeup from rtc gpio0"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_wakeup_enable(&self) -> RTC_GPIO_PIN0_WAKEUP_ENABLE_R {
-        RTC_GPIO_PIN0_WAKEUP_ENABLE_R::new(((self.bits >> 31) & 0x01) != 0)
+        RTC_GPIO_PIN0_WAKEUP_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> ICACHE_ATOMIC_OPERATE_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - The bit is used to activate icache atomic operation protection. In this case, sync/lock operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
     #[inline(always)]
     pub fn icache_atomic_operate_ena(&self) -> ICACHE_ATOMIC_OPERATE_ENA_R {
-        ICACHE_ATOMIC_OPERATE_ENA_R::new((self.bits & 0x01) != 0)
+        ICACHE_ATOMIC_OPERATE_ENA_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

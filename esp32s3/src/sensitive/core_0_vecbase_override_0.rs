@@ -67,7 +67,7 @@ impl<'a> CORE_0_VECBASE_WORLD_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set 1 to mask world, then only world0_value will work."]
     #[inline(always)]
     pub fn core_0_vecbase_world_mask(&self) -> CORE_0_VECBASE_WORLD_MASK_R {
-        CORE_0_VECBASE_WORLD_MASK_R::new((self.bits & 0x01) != 0)
+        CORE_0_VECBASE_WORLD_MASK_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

@@ -67,7 +67,7 @@ impl<'a> TI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> RI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> FBE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> DU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -256,7 +256,7 @@ impl<'a> NI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -297,7 +297,7 @@ impl<'a> AI_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -305,41 +305,41 @@ impl R {
     #[doc = "Bit 0 - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
     #[inline(always)]
     pub fn ti(&self) -> TI_R {
-        TI_R::new((self.bits & 0x01) != 0)
+        TI_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Receive Interrupt Enable. When set with Normal Interrupt Summary Enable, Receive Interrupt is enabled. When reset, Receive Interrupt is disabled."]
     #[inline(always)]
     pub fn ri(&self) -> RI_R {
-        RI_R::new(((self.bits >> 1) & 0x01) != 0)
+        RI_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Fatal Bus Error Enable. When set with Abnormal Interrupt Summary Enable, the Fatal Bus Error Interrupt is enabled. When reset, Fatal Bus Error Enable Interrupt is disabled."]
     #[inline(always)]
     pub fn fbe(&self) -> FBE_R {
-        FBE_R::new(((self.bits >> 2) & 0x01) != 0)
+        FBE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 4 - Descriptor Unavailable Interrupt. When set along with Abnormal Interrupt Summary Enable, the DU interrupt is enabled."]
     #[inline(always)]
     pub fn du(&self) -> DU_R {
-        DU_R::new(((self.bits >> 4) & 0x01) != 0)
+        DU_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Card Error summary Interrupt Enable. When set, it enables the Card Interrupt summary."]
     #[inline(always)]
     pub fn ces(&self) -> CES_R {
-        CES_R::new(((self.bits >> 5) & 0x01) != 0)
+        CES_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - Normal Interrupt Summary Enable. When set, a normal interrupt is enabled. When reset, a normal interrupt is disabled. This bit enables the following bits: IDINTEN\\[0\\]
 : Transmit Interrupt; IDINTEN\\[1\\]
 : Receive Interrupt."]
     #[inline(always)]
     pub fn ni(&self) -> NI_R {
-        NI_R::new(((self.bits >> 8) & 0x01) != 0)
+        NI_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Abnormal Interrupt Summary Enable. When set, an abnormal interrupt is enabled. This bit enables the following bits: IDINTEN\\[2\\]
 : Fatal Bus Error Interrupt; IDINTEN\\[4\\]
 : DU Interrupt."]
     #[inline(always)]
     pub fn ai(&self) -> AI_R {
-        AI_R::new(((self.bits >> 9) & 0x01) != 0)
+        AI_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

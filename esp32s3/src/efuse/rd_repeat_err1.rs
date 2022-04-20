@@ -272,77 +272,77 @@ impl R {
     #[doc = "Bits 0:1 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_drefm_err(&self) -> VDD_SPI_DREFM_ERR_R {
-        VDD_SPI_DREFM_ERR_R::new((self.bits & 0x03) as u8)
+        VDD_SPI_DREFM_ERR_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_drefl_err(&self) -> VDD_SPI_DREFL_ERR_R {
-        VDD_SPI_DREFL_ERR_R::new(((self.bits >> 2) & 0x03) as u8)
+        VDD_SPI_DREFL_ERR_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_xpd_err(&self) -> VDD_SPI_XPD_ERR_R {
-        VDD_SPI_XPD_ERR_R::new(((self.bits >> 4) & 0x01) != 0)
+        VDD_SPI_XPD_ERR_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_tieh_err(&self) -> VDD_SPI_TIEH_ERR_R {
-        VDD_SPI_TIEH_ERR_R::new(((self.bits >> 5) & 0x01) != 0)
+        VDD_SPI_TIEH_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_force_err(&self) -> VDD_SPI_FORCE_ERR_R {
-        VDD_SPI_FORCE_ERR_R::new(((self.bits >> 6) & 0x01) != 0)
+        VDD_SPI_FORCE_ERR_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_en_init_err(&self) -> VDD_SPI_EN_INIT_ERR_R {
-        VDD_SPI_EN_INIT_ERR_R::new(((self.bits >> 7) & 0x01) != 0)
+        VDD_SPI_EN_INIT_ERR_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_encurlim_err(&self) -> VDD_SPI_ENCURLIM_ERR_R {
-        VDD_SPI_ENCURLIM_ERR_R::new(((self.bits >> 8) & 0x01) != 0)
+        VDD_SPI_ENCURLIM_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:11 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_dcurlim_err(&self) -> VDD_SPI_DCURLIM_ERR_R {
-        VDD_SPI_DCURLIM_ERR_R::new(((self.bits >> 9) & 0x07) as u8)
+        VDD_SPI_DCURLIM_ERR_R::new(((self.bits >> 9) & 7) as u8)
     }
     #[doc = "Bits 12:13 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_init_err(&self) -> VDD_SPI_INIT_ERR_R {
-        VDD_SPI_INIT_ERR_R::new(((self.bits >> 12) & 0x03) as u8)
+        VDD_SPI_INIT_ERR_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn vdd_spi_dcap_err(&self) -> VDD_SPI_DCAP_ERR_R {
-        VDD_SPI_DCAP_ERR_R::new(((self.bits >> 14) & 0x03) as u8)
+        VDD_SPI_DCAP_ERR_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn wdt_delay_sel_err(&self) -> WDT_DELAY_SEL_ERR_R {
-        WDT_DELAY_SEL_ERR_R::new(((self.bits >> 16) & 0x03) as u8)
+        WDT_DELAY_SEL_ERR_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:20 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn spi_boot_crypt_cnt_err(&self) -> SPI_BOOT_CRYPT_CNT_ERR_R {
-        SPI_BOOT_CRYPT_CNT_ERR_R::new(((self.bits >> 18) & 0x07) as u8)
+        SPI_BOOT_CRYPT_CNT_ERR_R::new(((self.bits >> 18) & 7) as u8)
     }
     #[doc = "Bit 21 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn secure_boot_key_revoke0_err(&self) -> SECURE_BOOT_KEY_REVOKE0_ERR_R {
-        SECURE_BOOT_KEY_REVOKE0_ERR_R::new(((self.bits >> 21) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE0_ERR_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn secure_boot_key_revoke1_err(&self) -> SECURE_BOOT_KEY_REVOKE1_ERR_R {
-        SECURE_BOOT_KEY_REVOKE1_ERR_R::new(((self.bits >> 22) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE1_ERR_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
     pub fn secure_boot_key_revoke2_err(&self) -> SECURE_BOOT_KEY_REVOKE2_ERR_R {
-        SECURE_BOOT_KEY_REVOKE2_ERR_R::new(((self.bits >> 23) & 0x01) != 0)
+        SECURE_BOOT_KEY_REVOKE2_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:27 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]

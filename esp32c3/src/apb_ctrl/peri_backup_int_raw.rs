@@ -47,12 +47,12 @@ impl R {
     #[doc = "Bit 0 - reg_peri_backup_done_int_raw"]
     #[inline(always)]
     pub fn peri_backup_done_int_raw(&self) -> PERI_BACKUP_DONE_INT_RAW_R {
-        PERI_BACKUP_DONE_INT_RAW_R::new((self.bits & 0x01) != 0)
+        PERI_BACKUP_DONE_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_raw"]
     #[inline(always)]
     pub fn peri_backup_err_int_raw(&self) -> PERI_BACKUP_ERR_INT_RAW_R {
-        PERI_BACKUP_ERR_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        PERI_BACKUP_ERR_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "APB_CTRL_PERI_BACKUP_INT_RAW_REG\n\nThis register you can [`read`]

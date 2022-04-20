@@ -88,7 +88,7 @@ impl<'a> SDIO_INT_MASK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
         self.w
     }
 }
@@ -103,7 +103,7 @@ impl R {
  respectively. When masked, SDIO interrupt detection for that card is disabled. 0 masks an interrupt, and 1 enables an interrupt."]
     #[inline(always)]
     pub fn sdio_int_mask(&self) -> SDIO_INT_MASK_R {
-        SDIO_INT_MASK_R::new(((self.bits >> 16) & 0x03) as u8)
+        SDIO_INT_MASK_R::new(((self.bits >> 16) & 3) as u8)
     }
 }
 impl W {

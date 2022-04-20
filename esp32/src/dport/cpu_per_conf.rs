@@ -57,7 +57,7 @@ impl<'a> CPUPERIOD_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | (value as u32 & 0x03);
+        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
         self.w
     }
 }
@@ -94,7 +94,7 @@ impl<'a> LOWSPEED_CLK_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -139,17 +139,17 @@ impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn cpuperiod_sel(&self) -> CPUPERIOD_SEL_R {
-        CPUPERIOD_SEL_R::new((self.bits & 0x03) as u8)
+        CPUPERIOD_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn lowspeed_clk_sel(&self) -> LOWSPEED_CLK_SEL_R {
-        LOWSPEED_CLK_SEL_R::new(((self.bits >> 2) & 0x01) != 0)
+        LOWSPEED_CLK_SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn fast_clk_rtc_sel(&self) -> FAST_CLK_RTC_SEL_R {
-        FAST_CLK_RTC_SEL_R::new(((self.bits >> 3) & 0x01) != 0)
+        FAST_CLK_RTC_SEL_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {

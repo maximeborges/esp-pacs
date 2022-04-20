@@ -67,7 +67,7 @@ impl<'a> EXTMEM_REJECT_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
     pub fn extmem_reject_int_ena(&self) -> EXTMEM_REJECT_INT_ENA_R {
-        EXTMEM_REJECT_INT_ENA_R::new((self.bits & 0x01) != 0)
+        EXTMEM_REJECT_INT_ENA_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

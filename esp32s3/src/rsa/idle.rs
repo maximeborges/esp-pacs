@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bit 0 - The content of this bit is 1 when the RSA accelerator is idle."]
     #[inline(always)]
     pub fn idle(&self) -> IDLE_R {
-        IDLE_R::new((self.bits & 0x01) != 0)
+        IDLE_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RSA idle register\n\nThis register you can [`read`]

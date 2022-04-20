@@ -67,7 +67,7 @@ impl<'a> SEARCH_ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -75,7 +75,7 @@ impl R {
     #[doc = "Bit 0 - Set this bit to 1 to enable the acceleration option of search for modular exponentiation. Set to 0 to disable the acceleration (by default)."]
     #[inline(always)]
     pub fn search_enable(&self) -> SEARCH_ENABLE_R {
-        SEARCH_ENABLE_R::new((self.bits & 0x01) != 0)
+        SEARCH_ENABLE_R::new((self.bits & 1) != 0)
     }
 }
 impl W {

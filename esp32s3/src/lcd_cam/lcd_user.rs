@@ -94,7 +94,7 @@ impl<'a> LCD_ALWAYS_OUT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> LCD_8BITS_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -168,7 +168,7 @@ impl<'a> LCD_UPDATE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -213,7 +213,7 @@ impl<'a> LCD_BIT_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -250,7 +250,7 @@ impl<'a> LCD_BYTE_ORDER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -287,7 +287,7 @@ impl<'a> LCD_2BYTE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | ((value as u32 & 0x01) << 23);
+        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
         self.w
     }
 }
@@ -324,7 +324,7 @@ impl<'a> LCD_DOUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | ((value as u32 & 0x01) << 24);
+        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
         self.w
     }
 }
@@ -361,7 +361,7 @@ impl<'a> LCD_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
+        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
         self.w
     }
 }
@@ -398,7 +398,7 @@ impl<'a> LCD_CMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
         self.w
     }
 }
@@ -435,7 +435,7 @@ impl<'a> LCD_START_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | ((value as u32 & 0x01) << 27);
+        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
         self.w
     }
 }
@@ -457,7 +457,7 @@ impl<'a> LCD_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -484,7 +484,7 @@ impl<'a> LCD_DUMMY_CYCLELEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 29)) | ((value as u32 & 0x03) << 29);
+        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
         self.w
     }
 }
@@ -521,7 +521,7 @@ impl<'a> LCD_CMD_2_CYCLE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -534,17 +534,17 @@ impl R {
     #[doc = "Bit 13 - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
     #[inline(always)]
     pub fn lcd_always_out_en(&self) -> LCD_ALWAYS_OUT_EN_R {
-        LCD_ALWAYS_OUT_EN_R::new(((self.bits >> 13) & 0x01) != 0)
+        LCD_ALWAYS_OUT_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 19 - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
     #[inline(always)]
     pub fn lcd_8bits_order(&self) -> LCD_8BITS_ORDER_R {
-        LCD_8BITS_ORDER_R::new(((self.bits >> 19) & 0x01) != 0)
+        LCD_8BITS_ORDER_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
     #[inline(always)]
     pub fn lcd_update(&self) -> LCD_UPDATE_R {
-        LCD_UPDATE_R::new(((self.bits >> 20) & 0x01) != 0)
+        LCD_UPDATE_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - 1: Change data bit order, change LCD_DATA_out\\[7:0\\]
  to LCD_DATA_out\\[0:7\\]
@@ -553,47 +553,47 @@ impl R {
  in two byte mode. 0: Not change."]
     #[inline(always)]
     pub fn lcd_bit_order(&self) -> LCD_BIT_ORDER_R {
-        LCD_BIT_ORDER_R::new(((self.bits >> 21) & 0x01) != 0)
+        LCD_BIT_ORDER_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
     #[inline(always)]
     pub fn lcd_byte_order(&self) -> LCD_BYTE_ORDER_R {
-        LCD_BYTE_ORDER_R::new(((self.bits >> 22) & 0x01) != 0)
+        LCD_BYTE_ORDER_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
     #[inline(always)]
     pub fn lcd_2byte_en(&self) -> LCD_2BYTE_EN_R {
-        LCD_2BYTE_EN_R::new(((self.bits >> 23) & 0x01) != 0)
+        LCD_2BYTE_EN_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
     pub fn lcd_dout(&self) -> LCD_DOUT_R {
-        LCD_DOUT_R::new(((self.bits >> 24) & 0x01) != 0)
+        LCD_DOUT_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - 1: Enable DUMMY phase in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
     pub fn lcd_dummy(&self) -> LCD_DUMMY_R {
-        LCD_DUMMY_R::new(((self.bits >> 25) & 0x01) != 0)
+        LCD_DUMMY_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
     pub fn lcd_cmd(&self) -> LCD_CMD_R {
-        LCD_CMD_R::new(((self.bits >> 26) & 0x01) != 0)
+        LCD_CMD_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - LCD start sending data enable signal, valid in high level."]
     #[inline(always)]
     pub fn lcd_start(&self) -> LCD_START_R {
-        LCD_START_R::new(((self.bits >> 27) & 0x01) != 0)
+        LCD_START_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bits 29:30 - The dummy cycle length minus 1."]
     #[inline(always)]
     pub fn lcd_dummy_cyclelen(&self) -> LCD_DUMMY_CYCLELEN_R {
-        LCD_DUMMY_CYCLELEN_R::new(((self.bits >> 29) & 0x03) as u8)
+        LCD_DUMMY_CYCLELEN_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31 - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
     #[inline(always)]
     pub fn lcd_cmd_2_cycle_en(&self) -> LCD_CMD_2_CYCLE_EN_R {
-        LCD_CMD_2_CYCLE_EN_R::new(((self.bits >> 31) & 0x01) != 0)
+        LCD_CMD_2_CYCLE_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

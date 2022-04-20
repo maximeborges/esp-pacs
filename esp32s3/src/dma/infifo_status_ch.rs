@@ -227,32 +227,32 @@ impl R {
     #[doc = "Bit 0 - L1 Rx FIFO full signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_full_l1_ch(&self) -> INFIFO_FULL_L1_CH_R {
-        INFIFO_FULL_L1_CH_R::new((self.bits & 0x01) != 0)
+        INFIFO_FULL_L1_CH_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - L1 Rx FIFO empty signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_empty_l1_ch(&self) -> INFIFO_EMPTY_L1_CH_R {
-        INFIFO_EMPTY_L1_CH_R::new(((self.bits >> 1) & 0x01) != 0)
+        INFIFO_EMPTY_L1_CH_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - L2 Rx FIFO full signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_full_l2_ch(&self) -> INFIFO_FULL_L2_CH_R {
-        INFIFO_FULL_L2_CH_R::new(((self.bits >> 2) & 0x01) != 0)
+        INFIFO_FULL_L2_CH_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - L2 Rx FIFO empty signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_empty_l2_ch(&self) -> INFIFO_EMPTY_L2_CH_R {
-        INFIFO_EMPTY_L2_CH_R::new(((self.bits >> 3) & 0x01) != 0)
+        INFIFO_EMPTY_L2_CH_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - L3 Rx FIFO full signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_full_l3_ch(&self) -> INFIFO_FULL_L3_CH_R {
-        INFIFO_FULL_L3_CH_R::new(((self.bits >> 4) & 0x01) != 0)
+        INFIFO_FULL_L3_CH_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - L3 Rx FIFO empty signal for Rx channel 0."]
     #[inline(always)]
     pub fn infifo_empty_l3_ch(&self) -> INFIFO_EMPTY_L3_CH_R {
-        INFIFO_EMPTY_L3_CH_R::new(((self.bits >> 5) & 0x01) != 0)
+        INFIFO_EMPTY_L3_CH_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:11 - The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0."]
     #[inline(always)]
@@ -272,27 +272,27 @@ impl R {
     #[doc = "Bit 24 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_1b_l3_ch(&self) -> IN_REMAIN_UNDER_1B_L3_CH_R {
-        IN_REMAIN_UNDER_1B_L3_CH_R::new(((self.bits >> 24) & 0x01) != 0)
+        IN_REMAIN_UNDER_1B_L3_CH_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_2b_l3_ch(&self) -> IN_REMAIN_UNDER_2B_L3_CH_R {
-        IN_REMAIN_UNDER_2B_L3_CH_R::new(((self.bits >> 25) & 0x01) != 0)
+        IN_REMAIN_UNDER_2B_L3_CH_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_3b_l3_ch(&self) -> IN_REMAIN_UNDER_3B_L3_CH_R {
-        IN_REMAIN_UNDER_3B_L3_CH_R::new(((self.bits >> 26) & 0x01) != 0)
+        IN_REMAIN_UNDER_3B_L3_CH_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - reserved"]
     #[inline(always)]
     pub fn in_remain_under_4b_l3_ch(&self) -> IN_REMAIN_UNDER_4B_L3_CH_R {
-        IN_REMAIN_UNDER_4B_L3_CH_R::new(((self.bits >> 27) & 0x01) != 0)
+        IN_REMAIN_UNDER_4B_L3_CH_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - reserved"]
     #[inline(always)]
     pub fn in_buf_hungry_ch(&self) -> IN_BUF_HUNGRY_CH_R {
-        IN_BUF_HUNGRY_CH_R::new(((self.bits >> 28) & 0x01) != 0)
+        IN_BUF_HUNGRY_CH_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 #[doc = "Receive FIFO status of Rx channel 0\n\nThis register you can [`read`]

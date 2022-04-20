@@ -67,7 +67,7 @@ impl<'a> RTC_ANA_CLK_DIV_VLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | ((value as u32 & 0x01) << 22);
+        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
         self.w
     }
 }
@@ -131,7 +131,7 @@ impl<'a> RTC_SLOW_CLK_NEXT_EDGE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
         self.w
     }
 }
@@ -139,7 +139,7 @@ impl R {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div, then set vld to actually switch the clk"]
     #[inline(always)]
     pub fn rtc_ana_clk_div_vld(&self) -> RTC_ANA_CLK_DIV_VLD_R {
-        RTC_ANA_CLK_DIV_VLD_R::new(((self.bits >> 22) & 0x01) != 0)
+        RTC_ANA_CLK_DIV_VLD_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bits 23:30 - rtc clk div"]
     #[inline(always)]
@@ -149,7 +149,7 @@ impl R {
     #[doc = "Bit 31 - No public"]
     #[inline(always)]
     pub fn rtc_slow_clk_next_edge(&self) -> RTC_SLOW_CLK_NEXT_EDGE_R {
-        RTC_SLOW_CLK_NEXT_EDGE_R::new(((self.bits >> 31) & 0x01) != 0)
+        RTC_SLOW_CLK_NEXT_EDGE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {

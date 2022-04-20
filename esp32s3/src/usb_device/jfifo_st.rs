@@ -157,7 +157,7 @@ impl<'a> IN_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -194,7 +194,7 @@ impl<'a> OUT_FIFO_RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -202,42 +202,42 @@ impl R {
     #[doc = "Bits 0:1 - JTAT in fifo counter."]
     #[inline(always)]
     pub fn in_fifo_cnt(&self) -> IN_FIFO_CNT_R {
-        IN_FIFO_CNT_R::new((self.bits & 0x03) as u8)
+        IN_FIFO_CNT_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - 1: JTAG in fifo is empty."]
     #[inline(always)]
     pub fn in_fifo_empty(&self) -> IN_FIFO_EMPTY_R {
-        IN_FIFO_EMPTY_R::new(((self.bits >> 2) & 0x01) != 0)
+        IN_FIFO_EMPTY_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: JTAG in fifo is full."]
     #[inline(always)]
     pub fn in_fifo_full(&self) -> IN_FIFO_FULL_R {
-        IN_FIFO_FULL_R::new(((self.bits >> 3) & 0x01) != 0)
+        IN_FIFO_FULL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:5 - JTAT out fifo counter."]
     #[inline(always)]
     pub fn out_fifo_cnt(&self) -> OUT_FIFO_CNT_R {
-        OUT_FIFO_CNT_R::new(((self.bits >> 4) & 0x03) as u8)
+        OUT_FIFO_CNT_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - 1: JTAG out fifo is empty."]
     #[inline(always)]
     pub fn out_fifo_empty(&self) -> OUT_FIFO_EMPTY_R {
-        OUT_FIFO_EMPTY_R::new(((self.bits >> 6) & 0x01) != 0)
+        OUT_FIFO_EMPTY_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 1: JTAG out fifo is full."]
     #[inline(always)]
     pub fn out_fifo_full(&self) -> OUT_FIFO_FULL_R {
-        OUT_FIFO_FULL_R::new(((self.bits >> 7) & 0x01) != 0)
+        OUT_FIFO_FULL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
     #[inline(always)]
     pub fn in_fifo_reset(&self) -> IN_FIFO_RESET_R {
-        IN_FIFO_RESET_R::new(((self.bits >> 8) & 0x01) != 0)
+        IN_FIFO_RESET_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
     #[inline(always)]
     pub fn out_fifo_reset(&self) -> OUT_FIFO_RESET_R {
-        OUT_FIFO_RESET_R::new(((self.bits >> 9) & 0x01) != 0)
+        OUT_FIFO_RESET_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {

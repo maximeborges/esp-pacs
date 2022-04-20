@@ -84,7 +84,7 @@ impl<'a> LC_FIFO_TIMEOUT_SHIFT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
+        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
         self.w
     }
 }
@@ -121,7 +121,7 @@ impl<'a> LC_FIFO_TIMEOUT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -134,12 +134,12 @@ impl R {
     #[doc = "Bits 8:10"]
     #[inline(always)]
     pub fn lc_fifo_timeout_shift(&self) -> LC_FIFO_TIMEOUT_SHIFT_R {
-        LC_FIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 8) & 0x07) as u8)
+        LC_FIFO_TIMEOUT_SHIFT_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn lc_fifo_timeout_ena(&self) -> LC_FIFO_TIMEOUT_ENA_R {
-        LC_FIFO_TIMEOUT_ENA_R::new(((self.bits >> 11) & 0x01) != 0)
+        LC_FIFO_TIMEOUT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {

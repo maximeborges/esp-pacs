@@ -67,7 +67,7 @@ impl<'a> DONE_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> ERR_INT_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -112,12 +112,12 @@ impl R {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
     pub fn done_int_ena(&self) -> DONE_INT_ENA_R {
-        DONE_INT_ENA_R::new((self.bits & 0x01) != 0)
+        DONE_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - x"]
     #[inline(always)]
     pub fn err_int_ena(&self) -> ERR_INT_ENA_R {
-        ERR_INT_ENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        ERR_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {

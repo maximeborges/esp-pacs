@@ -152,47 +152,47 @@ impl R {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_touch_done_int_raw(&self) -> COCPU_TOUCH_DONE_INT_RAW_R {
-        COCPU_TOUCH_DONE_INT_RAW_R::new((self.bits & 0x01) != 0)
+        COCPU_TOUCH_DONE_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - TOUCH_INACTIVE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_touch_inactive_int_raw(&self) -> COCPU_TOUCH_INACTIVE_INT_RAW_R {
-        COCPU_TOUCH_INACTIVE_INT_RAW_R::new(((self.bits >> 1) & 0x01) != 0)
+        COCPU_TOUCH_INACTIVE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TOUCH_ACTIVE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_touch_active_int_raw(&self) -> COCPU_TOUCH_ACTIVE_INT_RAW_R {
-        COCPU_TOUCH_ACTIVE_INT_RAW_R::new(((self.bits >> 2) & 0x01) != 0)
+        COCPU_TOUCH_ACTIVE_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SARADC1_DONE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_saradc1_int_raw(&self) -> COCPU_SARADC1_INT_RAW_R {
-        COCPU_SARADC1_INT_RAW_R::new(((self.bits >> 3) & 0x01) != 0)
+        COCPU_SARADC1_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SARADC2_DONE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_saradc2_int_raw(&self) -> COCPU_SARADC2_INT_RAW_R {
-        COCPU_SARADC2_INT_RAW_R::new(((self.bits >> 4) & 0x01) != 0)
+        COCPU_SARADC2_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - TSENS_DONE_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_tsens_int_raw(&self) -> COCPU_TSENS_INT_RAW_R {
-        COCPU_TSENS_INT_RAW_R::new(((self.bits >> 5) & 0x01) != 0)
+        COCPU_TSENS_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RISCV_START_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_start_int_raw(&self) -> COCPU_START_INT_RAW_R {
-        COCPU_START_INT_RAW_R::new(((self.bits >> 6) & 0x01) != 0)
+        COCPU_START_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SW_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_sw_int_raw(&self) -> COCPU_SW_INT_RAW_R {
-        COCPU_SW_INT_RAW_R::new(((self.bits >> 7) & 0x01) != 0)
+        COCPU_SW_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - SWD_INT interrupt raw bit"]
     #[inline(always)]
     pub fn cocpu_swd_int_raw(&self) -> COCPU_SWD_INT_RAW_R {
-        COCPU_SWD_INT_RAW_R::new(((self.bits >> 8) & 0x01) != 0)
+        COCPU_SWD_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "Interrupt raw bit of ULP-RISCV\n\nThis register you can [`read`]

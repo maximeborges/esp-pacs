@@ -67,7 +67,7 @@ impl<'a> FASTMEM_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
+        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> FASTMEM_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> SLOWMEM_FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> SLOWMEM_FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> FORCE_ISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -252,7 +252,7 @@ impl<'a> FORCE_NOISO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -289,7 +289,7 @@ impl<'a> FASTMEM_FOLW_CPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
         self.w
     }
 }
@@ -326,7 +326,7 @@ impl<'a> FASTMEM_FORCE_LPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
         self.w
     }
 }
@@ -363,7 +363,7 @@ impl<'a> FASTMEM_FORCE_LPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
         self.w
     }
 }
@@ -400,7 +400,7 @@ impl<'a> SLOWMEM_FOLW_CPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
         self.w
     }
 }
@@ -437,7 +437,7 @@ impl<'a> SLOWMEM_FORCE_LPD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
         self.w
     }
 }
@@ -474,7 +474,7 @@ impl<'a> SLOWMEM_FORCE_LPU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
         self.w
     }
 }
@@ -511,7 +511,7 @@ impl<'a> FASTMEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
         self.w
     }
 }
@@ -548,7 +548,7 @@ impl<'a> FASTMEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
         self.w
     }
 }
@@ -585,7 +585,7 @@ impl<'a> FASTMEM_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
         self.w
     }
 }
@@ -622,7 +622,7 @@ impl<'a> SLOWMEM_FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
         self.w
     }
 }
@@ -659,7 +659,7 @@ impl<'a> SLOWMEM_FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
         self.w
     }
 }
@@ -696,7 +696,7 @@ impl<'a> SLOWMEM_PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | ((value as u32 & 0x01) << 17);
+        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
         self.w
     }
 }
@@ -733,7 +733,7 @@ impl<'a> FORCE_PD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | ((value as u32 & 0x01) << 18);
+        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
         self.w
     }
 }
@@ -770,7 +770,7 @@ impl<'a> FORCE_PU_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | ((value as u32 & 0x01) << 19);
+        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
         self.w
     }
 }
@@ -807,7 +807,7 @@ impl<'a> PD_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
+        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
         self.w
     }
 }
@@ -844,7 +844,7 @@ impl<'a> PAD_FORCE_HOLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | ((value as u32 & 0x01) << 21);
+        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
         self.w
     }
 }
@@ -852,112 +852,112 @@ impl R {
     #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_noiso(&self) -> FASTMEM_FORCE_NOISO_R {
-        FASTMEM_FORCE_NOISO_R::new((self.bits & 0x01) != 0)
+        FASTMEM_FORCE_NOISO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to force isolate the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_iso(&self) -> FASTMEM_FORCE_ISO_R {
-        FASTMEM_FORCE_ISO_R::new(((self.bits >> 1) & 0x01) != 0)
+        FASTMEM_FORCE_ISO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to disable the force isolation to the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_noiso(&self) -> SLOWMEM_FORCE_NOISO_R {
-        SLOWMEM_FORCE_NOISO_R::new(((self.bits >> 2) & 0x01) != 0)
+        SLOWMEM_FORCE_NOISO_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to force isolate the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_iso(&self) -> SLOWMEM_FORCE_ISO_R {
-        SLOWMEM_FORCE_ISO_R::new(((self.bits >> 3) & 0x01) != 0)
+        SLOWMEM_FORCE_ISO_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to force isolate the RTC peripherals."]
     #[inline(always)]
     pub fn force_iso(&self) -> FORCE_ISO_R {
-        FORCE_ISO_R::new(((self.bits >> 4) & 0x01) != 0)
+        FORCE_ISO_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to disable the force isolation to the RTC peripherals."]
     #[inline(always)]
     pub fn force_noiso(&self) -> FORCE_NOISO_R {
-        FORCE_NOISO_R::new(((self.bits >> 5) & 0x01) != 0)
+        FORCE_NOISO_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn fastmem_folw_cpu(&self) -> FASTMEM_FOLW_CPU_R {
-        FASTMEM_FOLW_CPU_R::new(((self.bits >> 6) & 0x01) != 0)
+        FASTMEM_FOLW_CPU_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to force not retain the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_lpd(&self) -> FASTMEM_FORCE_LPD_R {
-        FASTMEM_FORCE_LPD_R::new(((self.bits >> 7) & 0x01) != 0)
+        FASTMEM_FORCE_LPD_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Set this bit to force retain the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_lpu(&self) -> FASTMEM_FORCE_LPU_R {
-        FASTMEM_FORCE_LPU_R::new(((self.bits >> 8) & 0x01) != 0)
+        FASTMEM_FORCE_LPU_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
     #[inline(always)]
     pub fn slowmem_folw_cpu(&self) -> SLOWMEM_FOLW_CPU_R {
-        SLOWMEM_FOLW_CPU_R::new(((self.bits >> 9) & 0x01) != 0)
+        SLOWMEM_FOLW_CPU_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Set this bit to force not retain the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_lpd(&self) -> SLOWMEM_FORCE_LPD_R {
-        SLOWMEM_FORCE_LPD_R::new(((self.bits >> 10) & 0x01) != 0)
+        SLOWMEM_FORCE_LPD_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Set this bit to force retain the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_lpu(&self) -> SLOWMEM_FORCE_LPU_R {
-        SLOWMEM_FORCE_LPU_R::new(((self.bits >> 11) & 0x01) != 0)
+        SLOWMEM_FORCE_LPU_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Set this bit to FPD the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_pd(&self) -> FASTMEM_FORCE_PD_R {
-        FASTMEM_FORCE_PD_R::new(((self.bits >> 12) & 0x01) != 0)
+        FASTMEM_FORCE_PD_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Set this bit to FPU the RTC fast memory."]
     #[inline(always)]
     pub fn fastmem_force_pu(&self) -> FASTMEM_FORCE_PU_R {
-        FASTMEM_FORCE_PU_R::new(((self.bits >> 13) & 0x01) != 0)
+        FASTMEM_FORCE_PU_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Set this bit to enable PD for the RTC fast memory in sleep."]
     #[inline(always)]
     pub fn fastmem_pd_en(&self) -> FASTMEM_PD_EN_R {
-        FASTMEM_PD_EN_R::new(((self.bits >> 14) & 0x01) != 0)
+        FASTMEM_PD_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Set this bit to FPD the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_pd(&self) -> SLOWMEM_FORCE_PD_R {
-        SLOWMEM_FORCE_PD_R::new(((self.bits >> 15) & 0x01) != 0)
+        SLOWMEM_FORCE_PD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Set this bit to FPU the RTC slow memory."]
     #[inline(always)]
     pub fn slowmem_force_pu(&self) -> SLOWMEM_FORCE_PU_R {
-        SLOWMEM_FORCE_PU_R::new(((self.bits >> 16) & 0x01) != 0)
+        SLOWMEM_FORCE_PU_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Set this bit to enable PD for the RTC slow memory in sleep."]
     #[inline(always)]
     pub fn slowmem_pd_en(&self) -> SLOWMEM_PD_EN_R {
-        SLOWMEM_PD_EN_R::new(((self.bits >> 17) & 0x01) != 0)
+        SLOWMEM_PD_EN_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Set this bit to FPD the RTC peripherals."]
     #[inline(always)]
     pub fn force_pd(&self) -> FORCE_PD_R {
-        FORCE_PD_R::new(((self.bits >> 18) & 0x01) != 0)
+        FORCE_PD_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - Set this bit to FPU the RTC peripherals."]
     #[inline(always)]
     pub fn force_pu(&self) -> FORCE_PU_R {
-        FORCE_PU_R::new(((self.bits >> 19) & 0x01) != 0)
+        FORCE_PU_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set this bit to enable PD for the RTC peripherals in sleep."]
     #[inline(always)]
     pub fn pd_en(&self) -> PD_EN_R {
-        PD_EN_R::new(((self.bits >> 20) & 0x01) != 0)
+        PD_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit the force hold the RTC GPIOs."]
     #[inline(always)]
     pub fn pad_force_hold(&self) -> PAD_FORCE_HOLD_R {
-        PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 0x01) != 0)
+        PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {

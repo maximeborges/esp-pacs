@@ -107,7 +107,7 @@ impl R {
     #[doc = "Bit 0 - RTC calibration timeout indicator"]
     #[inline(always)]
     pub fn rtc_cali_timeout(&self) -> RTC_CALI_TIMEOUT_R {
-        RTC_CALI_TIMEOUT_R::new((self.bits & 0x01) != 0)
+        RTC_CALI_TIMEOUT_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 3:6 - Cycles that release calibration timeout reset"]
     #[inline(always)]

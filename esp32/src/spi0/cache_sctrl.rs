@@ -67,7 +67,7 @@ impl<'a> USR_SRAM_DIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
         self.w
     }
 }
@@ -104,7 +104,7 @@ impl<'a> USR_SRAM_QIO_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
         self.w
     }
 }
@@ -141,7 +141,7 @@ impl<'a> USR_WR_SRAM_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
         self.w
     }
 }
@@ -178,7 +178,7 @@ impl<'a> USR_RD_SRAM_DUMMY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
         self.w
     }
 }
@@ -215,7 +215,7 @@ impl<'a> CACHE_SRAM_USR_RCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
         self.w
     }
 }
@@ -333,7 +333,7 @@ impl<'a> CACHE_SRAM_USR_WCMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
         self.w
     }
 }
@@ -341,27 +341,27 @@ impl R {
     #[doc = "Bit 1 - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
     pub fn usr_sram_dio(&self) -> USR_SRAM_DIO_R {
-        USR_SRAM_DIO_R::new(((self.bits >> 1) & 0x01) != 0)
+        USR_SRAM_DIO_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
     pub fn usr_sram_qio(&self) -> USR_SRAM_QIO_R {
-        USR_SRAM_QIO_R::new(((self.bits >> 2) & 0x01) != 0)
+        USR_SRAM_QIO_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
     #[inline(always)]
     pub fn usr_wr_sram_dummy(&self) -> USR_WR_SRAM_DUMMY_R {
-        USR_WR_SRAM_DUMMY_R::new(((self.bits >> 3) & 0x01) != 0)
+        USR_WR_SRAM_DUMMY_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
     #[inline(always)]
     pub fn usr_rd_sram_dummy(&self) -> USR_RD_SRAM_DUMMY_R {
-        USR_RD_SRAM_DUMMY_R::new(((self.bits >> 4) & 0x01) != 0)
+        USR_RD_SRAM_DUMMY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - For SPI0 In the spi sram mode cache read sram for user define command."]
     #[inline(always)]
     pub fn cache_sram_usr_rcmd(&self) -> CACHE_SRAM_USR_RCMD_R {
-        CACHE_SRAM_USR_RCMD_R::new(((self.bits >> 5) & 0x01) != 0)
+        CACHE_SRAM_USR_RCMD_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 6:13 - For SPI0 In the sram mode it is the byte length of spi read sram data."]
     #[inline(always)]
@@ -381,7 +381,7 @@ impl R {
     #[doc = "Bit 28 - For SPI0 In the spi sram mode cache write sram for user define command"]
     #[inline(always)]
     pub fn cache_sram_usr_wcmd(&self) -> CACHE_SRAM_USR_WCMD_R {
-        CACHE_SRAM_USR_WCMD_R::new(((self.bits >> 28) & 0x01) != 0)
+        CACHE_SRAM_USR_WCMD_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 impl W {
