@@ -35,7 +35,7 @@ impl From<crate::W<SAR_TSENS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TSENS_XPD_WAIT` reader - "]
-pub struct TSENS_XPD_WAIT_R(crate::FieldReader<u16, u16>);
+pub struct TSENS_XPD_WAIT_R(crate::FieldReader<u16>);
 impl TSENS_XPD_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TSENS_XPD_WAIT_R {
     }
 }
 impl core::ops::Deref for TSENS_XPD_WAIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TSENS_XPD_WAIT_W<'a> {
     }
 }
 #[doc = "Field `TSENS_XPD_FORCE` reader - "]
-pub struct TSENS_XPD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_XPD_FORCE_R(crate::FieldReader<bool>);
 impl TSENS_XPD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TSENS_XPD_FORCE_R {
     }
 }
 impl core::ops::Deref for TSENS_XPD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TSENS_XPD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TSENS_CLK_INV` reader - "]
-pub struct TSENS_CLK_INV_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_CLK_INV_R(crate::FieldReader<bool>);
 impl TSENS_CLK_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl TSENS_CLK_INV_R {
     }
 }
 impl core::ops::Deref for TSENS_CLK_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> TSENS_CLK_INV_W<'a> {
     }
 }
 #[doc = "Field `TSENS_CLK_GATED` reader - "]
-pub struct TSENS_CLK_GATED_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_CLK_GATED_R(crate::FieldReader<bool>);
 impl TSENS_CLK_GATED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl TSENS_CLK_GATED_R {
     }
 }
 impl core::ops::Deref for TSENS_CLK_GATED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> TSENS_CLK_GATED_W<'a> {
     }
 }
 #[doc = "Field `TSENS_IN_INV` reader - invert temperature sensor data"]
-pub struct TSENS_IN_INV_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_IN_INV_R(crate::FieldReader<bool>);
 impl TSENS_IN_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl TSENS_IN_INV_R {
     }
 }
 impl core::ops::Deref for TSENS_IN_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> TSENS_IN_INV_W<'a> {
     }
 }
 #[doc = "Field `TSENS_CLK_DIV` reader - temperature sensor clock divider"]
-pub struct TSENS_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct TSENS_CLK_DIV_R(crate::FieldReader<u8>);
 impl TSENS_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl TSENS_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for TSENS_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> TSENS_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `TSENS_POWER_UP` reader - temperature sensor power up"]
-pub struct TSENS_POWER_UP_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_POWER_UP_R(crate::FieldReader<bool>);
 impl TSENS_POWER_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl TSENS_POWER_UP_R {
     }
 }
 impl core::ops::Deref for TSENS_POWER_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> TSENS_POWER_UP_W<'a> {
     }
 }
 #[doc = "Field `TSENS_POWER_UP_FORCE` reader - 1: dump out & power up controlled by SW 0: by FSM"]
-pub struct TSENS_POWER_UP_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_POWER_UP_FORCE_R(crate::FieldReader<bool>);
 impl TSENS_POWER_UP_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl TSENS_POWER_UP_FORCE_R {
     }
 }
 impl core::ops::Deref for TSENS_POWER_UP_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> TSENS_POWER_UP_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TSENS_DUMP_OUT` reader - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
-pub struct TSENS_DUMP_OUT_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_DUMP_OUT_R(crate::FieldReader<bool>);
 impl TSENS_DUMP_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl TSENS_DUMP_OUT_R {
     }
 }
 impl core::ops::Deref for TSENS_DUMP_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -447,25 +447,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_tsens_ctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_tsens_ctrl](index.html) module"]
 pub struct SAR_TSENS_CTRL_SPEC;
 impl crate::RegisterSpec for SAR_TSENS_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_tsens_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_tsens_ctrl::R](R) reader structure"]
 impl crate::Readable for SAR_TSENS_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_tsens_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_tsens_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_TSENS_CTRL_SPEC {
     type Writer = W;
 }

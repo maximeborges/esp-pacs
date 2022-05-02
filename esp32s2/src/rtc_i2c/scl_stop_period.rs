@@ -35,7 +35,7 @@ impl From<crate::W<SCL_STOP_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_STOP_PERIOD` reader - Number of clock cycles to wait before generating a stop condition."]
-pub struct SCL_STOP_PERIOD_R(crate::FieldReader<u32, u32>);
+pub struct SCL_STOP_PERIOD_R(crate::FieldReader<u32>);
 impl SCL_STOP_PERIOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SCL_STOP_PERIOD_R {
     }
 }
 impl core::ops::Deref for SCL_STOP_PERIOD_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure the delay between SDA and SCL positive edge for a stop condition\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_stop_period]
-(index.html) module"]
+#[doc = "Configure the delay between SDA and SCL positive edge for a stop condition\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_stop_period](index.html) module"]
 pub struct SCL_STOP_PERIOD_SPEC;
 impl crate::RegisterSpec for SCL_STOP_PERIOD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_stop_period::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_stop_period::R](R) reader structure"]
 impl crate::Readable for SCL_STOP_PERIOD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_stop_period::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_stop_period::W](W) writer structure"]
 impl crate::Writable for SCL_STOP_PERIOD_SPEC {
     type Writer = W;
 }

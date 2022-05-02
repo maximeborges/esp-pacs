@@ -35,7 +35,7 @@ impl From<crate::W<RINTSTS_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_STATUS_RAW` reader - Setting a bit clears the corresponding interrupt and writing 0 has no effect. Bits are logged regardless of interrupt mask status. Bit 15 (EBE): End-bit error/no CRC error; Bit 14 (ACD): Auto command done; Bit 13 (SBE/BCI): RX Start Bit Error; Bit 12 (HLE): Hardware locked write error; Bit 11 (FRUN): FIFO underrun/overrun error; Bit 10 (HTO): Data starvation by host timeout (HTO); Bit 9 (DTRO): Data read timeout; Bit 8 (RTO): Response timeout; Bit 7 (DCRC): Data CRC error; Bit 6 (RCRC): Response CRC error; Bit 5 (RXDR): Receive FIFO data request; Bit 4 (TXDR): Transmit FIFO data request; Bit 3 (DTO): Data transfer over; Bit 2 (CD): Command done; Bit 1 (RE): Response error; Bit 0 (CD): Card detect."]
-pub struct INT_STATUS_RAW_R(crate::FieldReader<u16, u16>);
+pub struct INT_STATUS_RAW_R(crate::FieldReader<u16>);
 impl INT_STATUS_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl INT_STATUS_RAW_R {
     }
 }
 impl core::ops::Deref for INT_STATUS_RAW_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,9 +61,8 @@ impl<'a> INT_STATUS_RAW_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SDIO_INTERRUPT_RAW` reader - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\]
- correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
-pub struct SDIO_INTERRUPT_RAW_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `SDIO_INTERRUPT_RAW` reader - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
+pub struct SDIO_INTERRUPT_RAW_R(crate::FieldReader<u8>);
 impl SDIO_INTERRUPT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -71,14 +70,13 @@ impl SDIO_INTERRUPT_RAW_R {
     }
 }
 impl core::ops::Deref for SDIO_INTERRUPT_RAW_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SDIO_INTERRUPT_RAW` writer - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\]
- correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
+#[doc = "Field `SDIO_INTERRUPT_RAW` writer - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
 pub struct SDIO_INTERRUPT_RAW_W<'a> {
     w: &'a mut W,
 }
@@ -96,8 +94,7 @@ impl R {
     pub fn int_status_raw(&self) -> INT_STATUS_RAW_R {
         INT_STATUS_RAW_R::new((self.bits & 0xffff) as u16)
     }
-    #[doc = "Bits 16:17 - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\]
- correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
+    #[doc = "Bits 16:17 - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
     #[inline(always)]
     pub fn sdio_interrupt_raw(&self) -> SDIO_INTERRUPT_RAW_R {
         SDIO_INTERRUPT_RAW_R::new(((self.bits >> 16) & 3) as u8)
@@ -109,8 +106,7 @@ impl W {
     pub fn int_status_raw(&mut self) -> INT_STATUS_RAW_W {
         INT_STATUS_RAW_W { w: self }
     }
-    #[doc = "Bits 16:17 - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\]
- correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
+    #[doc = "Bits 16:17 - Interrupt from SDIO card, one bit for each card. Bit\\[17:16\\] correspond to card1 and card0, respectively. Setting a bit clears the corresponding interrupt bit and writing 0 has no effect. 0: No SDIO interrupt from card; 1: SDIO interrupt from card."]
     #[inline(always)]
     pub fn sdio_interrupt_raw(&mut self) -> SDIO_INTERRUPT_RAW_W {
         SDIO_INTERRUPT_RAW_W { w: self }
@@ -122,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Raw interrupt status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rintsts]
-(index.html) module"]
+#[doc = "Raw interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rintsts](index.html) module"]
 pub struct RINTSTS_SPEC;
 impl crate::RegisterSpec for RINTSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rintsts::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rintsts::R](R) reader structure"]
 impl crate::Readable for RINTSTS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rintsts::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rintsts::W](W) writer structure"]
 impl crate::Writable for RINTSTS_SPEC {
     type Writer = W;
 }

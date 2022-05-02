@@ -35,7 +35,7 @@ impl From<crate::W<CLK_OUT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK20_OEN` reader - reg_clk20_oen"]
-pub struct CLK20_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK20_OEN_R(crate::FieldReader<bool>);
 impl CLK20_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK20_OEN_R {
     }
 }
 impl core::ops::Deref for CLK20_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK20_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK22_OEN` reader - reg_clk22_oen"]
-pub struct CLK22_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK22_OEN_R(crate::FieldReader<bool>);
 impl CLK22_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CLK22_OEN_R {
     }
 }
 impl core::ops::Deref for CLK22_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CLK22_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK44_OEN` reader - reg_clk44_oen"]
-pub struct CLK44_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK44_OEN_R(crate::FieldReader<bool>);
 impl CLK44_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CLK44_OEN_R {
     }
 }
 impl core::ops::Deref for CLK44_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CLK44_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK_BB_OEN` reader - reg_clk_bb_oen"]
-pub struct CLK_BB_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_BB_OEN_R(crate::FieldReader<bool>);
 impl CLK_BB_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CLK_BB_OEN_R {
     }
 }
 impl core::ops::Deref for CLK_BB_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CLK_BB_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK80_OEN` reader - reg_clk80_oen"]
-pub struct CLK80_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK80_OEN_R(crate::FieldReader<bool>);
 impl CLK80_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CLK80_OEN_R {
     }
 }
 impl core::ops::Deref for CLK80_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CLK80_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK160_OEN` reader - reg_clk160_oen"]
-pub struct CLK160_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK160_OEN_R(crate::FieldReader<bool>);
 impl CLK160_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CLK160_OEN_R {
     }
 }
 impl core::ops::Deref for CLK160_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CLK160_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK_320M_OEN` reader - reg_clk_320m_oen"]
-pub struct CLK_320M_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_320M_OEN_R(crate::FieldReader<bool>);
 impl CLK_320M_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CLK_320M_OEN_R {
     }
 }
 impl core::ops::Deref for CLK_320M_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CLK_320M_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK_ADC_INF_OEN` reader - reg_clk_adc_inf_oen"]
-pub struct CLK_ADC_INF_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_ADC_INF_OEN_R(crate::FieldReader<bool>);
 impl CLK_ADC_INF_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CLK_ADC_INF_OEN_R {
     }
 }
 impl core::ops::Deref for CLK_ADC_INF_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> CLK_ADC_INF_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK_DAC_CPU_OEN` reader - reg_clk_dac_cpu_oen"]
-pub struct CLK_DAC_CPU_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_DAC_CPU_OEN_R(crate::FieldReader<bool>);
 impl CLK_DAC_CPU_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl CLK_DAC_CPU_OEN_R {
     }
 }
 impl core::ops::Deref for CLK_DAC_CPU_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> CLK_DAC_CPU_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK40X_BB_OEN` reader - reg_clk40x_bb_oen"]
-pub struct CLK40X_BB_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK40X_BB_OEN_R(crate::FieldReader<bool>);
 impl CLK40X_BB_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl CLK40X_BB_OEN_R {
     }
 }
 impl core::ops::Deref for CLK40X_BB_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> CLK40X_BB_OEN_W<'a> {
     }
 }
 #[doc = "Field `CLK_XTAL_OEN` reader - reg_clk_xtal_oen"]
-pub struct CLK_XTAL_OEN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_XTAL_OEN_R(crate::FieldReader<bool>);
 impl CLK_XTAL_OEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl CLK_XTAL_OEN_R {
     }
 }
 impl core::ops::Deref for CLK_XTAL_OEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -561,25 +561,16 @@ impl W {
         self
     }
 }
-#[doc = "APB_CTRL_CLK_OUT_EN_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_out_en]
-(index.html) module"]
+#[doc = "APB_CTRL_CLK_OUT_EN_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_out_en](index.html) module"]
 pub struct CLK_OUT_EN_SPEC;
 impl crate::RegisterSpec for CLK_OUT_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_out_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_out_en::R](R) reader structure"]
 impl crate::Readable for CLK_OUT_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_out_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_out_en::W](W) writer structure"]
 impl crate::Writable for CLK_OUT_EN_SPEC {
     type Writer = W;
 }

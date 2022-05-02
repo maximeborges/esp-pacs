@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_REQUEST_SPEC>> for W {
     }
 }
 #[doc = "Field `BYPASS` reader - The bit is used to disable request recording which could cause performance issue"]
-pub struct BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct BYPASS_R(crate::FieldReader<bool>);
 impl BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BYPASS_R {
     }
 }
 impl core::ops::Deref for BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_request]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_request](index.html) module"]
 pub struct CACHE_REQUEST_SPEC;
 impl crate::RegisterSpec for CACHE_REQUEST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_request::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_request::R](R) reader structure"]
 impl crate::Readable for CACHE_REQUEST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_request::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_request::W](W) writer structure"]
 impl crate::Writable for CACHE_REQUEST_SPEC {
     type Writer = W;
 }

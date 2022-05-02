@@ -35,7 +35,7 @@ impl From<crate::W<STATUS1_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT` reader - GPIO32 ~ 53 interrupt status register."]
-pub struct INTERRUPT_R(crate::FieldReader<u32, u32>);
+pub struct INTERRUPT_R(crate::FieldReader<u32>);
 impl INTERRUPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl INTERRUPT_R {
     }
 }
 impl core::ops::Deref for INTERRUPT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "GPIO32 ~ 53 interrupt status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status1]
-(index.html) module"]
+#[doc = "GPIO32 ~ 53 interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status1](index.html) module"]
 pub struct STATUS1_SPEC;
 impl crate::RegisterSpec for STATUS1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [status1::R](R) reader structure"]
 impl crate::Readable for STATUS1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [status1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [status1::W](W) writer structure"]
 impl crate::Writable for STATUS1_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<DMA_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL_ERR_INT_RAW` reader - 1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data. 0: Others."]
-pub struct DMA_INFIFO_FULL_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct DMA_INFIFO_FULL_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl DMA_INFIFO_FULL_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl DMA_INFIFO_FULL_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for DMA_INFIFO_FULL_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_OUTFIFO_EMPTY_ERR_INT_RAW` reader - 1: The current data rate of DMA TX is smaller than that of SPI. SPI will stop in master mode and send out all 0 in slave mode. 0: Others."]
-pub struct DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_EX_QPI_INT_RAW` reader - The raw bit for SPI slave Ex_QPI interrupt. 1: SPI slave mode Ex_QPI transmission is ended. 0: Others."]
-pub struct SLV_EX_QPI_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_EX_QPI_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_EX_QPI_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl SLV_EX_QPI_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_EX_QPI_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_EN_QPI_INT_RAW` reader - The raw bit for SPI slave En_QPI interrupt. 1: SPI slave mode En_QPI transmission is ended. 0: Others."]
-pub struct SLV_EN_QPI_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_EN_QPI_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_EN_QPI_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl SLV_EN_QPI_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_EN_QPI_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD7_INT_RAW` reader - The raw bit for SPI slave CMD7 interrupt. 1: SPI slave mode CMD7 transmission is ended. 0: Others."]
-pub struct SLV_CMD7_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD7_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_CMD7_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl SLV_CMD7_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_CMD7_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD8_INT_RAW` reader - The raw bit for SPI slave CMD8 interrupt. 1: SPI slave mode CMD8 transmission is ended. 0: Others."]
-pub struct SLV_CMD8_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD8_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_CMD8_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl SLV_CMD8_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_CMD8_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD9_INT_RAW` reader - The raw bit for SPI slave CMD9 interrupt. 1: SPI slave mode CMD9 transmission is ended. 0: Others."]
-pub struct SLV_CMD9_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD9_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_CMD9_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl SLV_CMD9_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_CMD9_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMDA_INT_RAW` reader - The raw bit for SPI slave CMDA interrupt. 1: SPI slave mode CMDA transmission is ended. 0: Others."]
-pub struct SLV_CMDA_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMDA_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_CMDA_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl SLV_CMDA_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_CMDA_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_RD_DMA_DONE_INT_RAW` reader - The raw bit for SPI_SLV_RD_DMA_DONE_INT interrupt. 1: SPI slave mode Rd_DMA transmission is ended. 0: Others."]
-pub struct SLV_RD_DMA_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RD_DMA_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_RD_DMA_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl SLV_RD_DMA_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_RD_DMA_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_WR_DMA_DONE_INT_RAW` reader - The raw bit for SPI_SLV_WR_DMA_DONE_INT interrupt. 1: SPI slave mode Wr_DMA transmission is ended. 0: Others."]
-pub struct SLV_WR_DMA_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WR_DMA_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_WR_DMA_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl SLV_WR_DMA_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_WR_DMA_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_RD_BUF_DONE_INT_RAW` reader - The raw bit for SPI_SLV_RD_BUF_DONE_INT interrupt. 1: SPI slave mode Rd_BUF transmission is ended. 0: Others."]
-pub struct SLV_RD_BUF_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RD_BUF_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_RD_BUF_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl SLV_RD_BUF_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_RD_BUF_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_WR_BUF_DONE_INT_RAW` reader - The raw bit for SPI_SLV_WR_BUF_DONE_INT interrupt. 1: SPI slave mode Wr_BUF transmission is ended. 0: Others."]
-pub struct SLV_WR_BUF_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WR_BUF_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_WR_BUF_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl SLV_WR_BUF_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_WR_BUF_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_DONE_INT_RAW` reader - The raw bit for SPI_TRANS_DONE_INT interrupt. 1: SPI master mode transmission is ended. 0: others."]
-pub struct TRANS_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TRANS_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl TRANS_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TRANS_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_SEG_TRANS_DONE_INT_RAW` reader - The raw bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt. 1: spi master DMA full-duplex/half-duplex seg-conf-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-conf-trans or seg-trans is not ended or not occurred."]
-pub struct DMA_SEG_TRANS_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct DMA_SEG_TRANS_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl DMA_SEG_TRANS_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl DMA_SEG_TRANS_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for DMA_SEG_TRANS_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SEG_MAGIC_ERR_INT_RAW` reader - The raw bit for SPI_SEG_MAGIC_ERR_INT interrupt. 1: The magic value in CONF buffer is error in the DMA seg-conf-trans. 0: others."]
-pub struct SEG_MAGIC_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SEG_MAGIC_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl SEG_MAGIC_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl SEG_MAGIC_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SEG_MAGIC_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_BUF_ADDR_ERR_INT_RAW` reader - The raw bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt. 1: The accessing data address of the current SPI slave mode CPU controlled FD, Wr_BUF or Rd_BUF transmission is bigger than 63. 0: Others."]
-pub struct SLV_BUF_ADDR_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_BUF_ADDR_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_BUF_ADDR_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl SLV_BUF_ADDR_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_BUF_ADDR_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD_ERR_INT_RAW` reader - The raw bit for SPI_SLV_CMD_ERR_INT interrupt. 1: The slave command value in the current SPI slave HD mode transmission is not supported. 0: Others."]
-pub struct SLV_CMD_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl SLV_CMD_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl SLV_CMD_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLV_CMD_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MST_RX_AFIFO_WFULL_ERR_INT_RAW` reader - The raw bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt. 1: There is a RX AFIFO write-full error when SPI inputs data in master mode. 0: Others."]
-pub struct MST_RX_AFIFO_WFULL_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct MST_RX_AFIFO_WFULL_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl MST_RX_AFIFO_WFULL_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl MST_RX_AFIFO_WFULL_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for MST_RX_AFIFO_WFULL_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MST_TX_AFIFO_REMPTY_ERR_INT_RAW` reader - The raw bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt. 1: There is a TX BUF AFIFO read-empty error when SPI outputs data in master mode. 0: Others."]
-pub struct MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,14 +292,14 @@ impl MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP2_INT_RAW` reader - The raw bit for SPI_APP2_INT interrupt. The value is only controlled by software."]
-pub struct APP2_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct APP2_INT_RAW_R(crate::FieldReader<bool>);
 impl APP2_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -307,14 +307,14 @@ impl APP2_INT_RAW_R {
     }
 }
 impl core::ops::Deref for APP2_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP1_INT_RAW` reader - The raw bit for SPI_APP1_INT interrupt. The value is only controlled by software."]
-pub struct APP1_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct APP1_INT_RAW_R(crate::FieldReader<bool>);
 impl APP1_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -322,7 +322,7 @@ impl APP1_INT_RAW_R {
     }
 }
 impl core::ops::Deref for APP1_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -435,16 +435,12 @@ impl R {
         APP1_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
-#[doc = "SPI interrupt raw register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_raw]
-(index.html) module"]
+#[doc = "SPI interrupt raw register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_raw](index.html) module"]
 pub struct DMA_INT_RAW_SPEC;
 impl crate::RegisterSpec for DMA_INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_int_raw::R](R) reader structure"]
 impl crate::Readable for DMA_INT_RAW_SPEC {
     type Reader = R;
 }

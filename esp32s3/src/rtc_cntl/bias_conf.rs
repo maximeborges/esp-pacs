@@ -35,7 +35,7 @@ impl From<crate::W<BIAS_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `BIAS_BUF_IDLE` reader - No public"]
-pub struct BIAS_BUF_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_BUF_IDLE_R(crate::FieldReader<bool>);
 impl BIAS_BUF_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl BIAS_BUF_IDLE_R {
     }
 }
 impl core::ops::Deref for BIAS_BUF_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> BIAS_BUF_IDLE_W<'a> {
     }
 }
 #[doc = "Field `BIAS_BUF_WAKE` reader - No public"]
-pub struct BIAS_BUF_WAKE_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_BUF_WAKE_R(crate::FieldReader<bool>);
 impl BIAS_BUF_WAKE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl BIAS_BUF_WAKE_R {
     }
 }
 impl core::ops::Deref for BIAS_BUF_WAKE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> BIAS_BUF_WAKE_W<'a> {
     }
 }
 #[doc = "Field `BIAS_BUF_DEEP_SLP` reader - No public"]
-pub struct BIAS_BUF_DEEP_SLP_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_BUF_DEEP_SLP_R(crate::FieldReader<bool>);
 impl BIAS_BUF_DEEP_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BIAS_BUF_DEEP_SLP_R {
     }
 }
 impl core::ops::Deref for BIAS_BUF_DEEP_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BIAS_BUF_DEEP_SLP_W<'a> {
     }
 }
 #[doc = "Field `BIAS_BUF_MONITOR` reader - No public"]
-pub struct BIAS_BUF_MONITOR_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_BUF_MONITOR_R(crate::FieldReader<bool>);
 impl BIAS_BUF_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BIAS_BUF_MONITOR_R {
     }
 }
 impl core::ops::Deref for BIAS_BUF_MONITOR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BIAS_BUF_MONITOR_W<'a> {
     }
 }
 #[doc = "Field `PD_CUR_DEEP_SLP` reader - xpd cur when rtc in sleep_state"]
-pub struct PD_CUR_DEEP_SLP_R(crate::FieldReader<bool, bool>);
+pub struct PD_CUR_DEEP_SLP_R(crate::FieldReader<bool>);
 impl PD_CUR_DEEP_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PD_CUR_DEEP_SLP_R {
     }
 }
 impl core::ops::Deref for PD_CUR_DEEP_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PD_CUR_DEEP_SLP_W<'a> {
     }
 }
 #[doc = "Field `PD_CUR_MONITOR` reader - xpd cur when rtc in monitor state"]
-pub struct PD_CUR_MONITOR_R(crate::FieldReader<bool, bool>);
+pub struct PD_CUR_MONITOR_R(crate::FieldReader<bool>);
 impl PD_CUR_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PD_CUR_MONITOR_R {
     }
 }
 impl core::ops::Deref for PD_CUR_MONITOR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PD_CUR_MONITOR_W<'a> {
     }
 }
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` reader - bias_sleep when rtc in sleep_state"]
-pub struct BIAS_SLEEP_DEEP_SLP_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_SLEEP_DEEP_SLP_R(crate::FieldReader<bool>);
 impl BIAS_SLEEP_DEEP_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BIAS_SLEEP_DEEP_SLP_R {
     }
 }
 impl core::ops::Deref for BIAS_SLEEP_DEEP_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BIAS_SLEEP_DEEP_SLP_W<'a> {
     }
 }
 #[doc = "Field `BIAS_SLEEP_MONITOR` reader - bias_sleep when rtc in monitor state"]
-pub struct BIAS_SLEEP_MONITOR_R(crate::FieldReader<bool, bool>);
+pub struct BIAS_SLEEP_MONITOR_R(crate::FieldReader<bool>);
 impl BIAS_SLEEP_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BIAS_SLEEP_MONITOR_R {
     }
 }
 impl core::ops::Deref for BIAS_SLEEP_MONITOR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BIAS_SLEEP_MONITOR_W<'a> {
     }
 }
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` reader - DBG_ATTEN when rtc in sleep state"]
-pub struct DBG_ATTEN_DEEP_SLP_R(crate::FieldReader<u8, u8>);
+pub struct DBG_ATTEN_DEEP_SLP_R(crate::FieldReader<u8>);
 impl DBG_ATTEN_DEEP_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -339,7 +339,7 @@ impl DBG_ATTEN_DEEP_SLP_R {
     }
 }
 impl core::ops::Deref for DBG_ATTEN_DEEP_SLP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> DBG_ATTEN_DEEP_SLP_W<'a> {
     }
 }
 #[doc = "Field `DBG_ATTEN_MONITOR` reader - DBG_ATTEN when rtc in monitor state"]
-pub struct DBG_ATTEN_MONITOR_R(crate::FieldReader<u8, u8>);
+pub struct DBG_ATTEN_MONITOR_R(crate::FieldReader<u8>);
 impl DBG_ATTEN_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -366,7 +366,7 @@ impl DBG_ATTEN_MONITOR_R {
     }
 }
 impl core::ops::Deref for DBG_ATTEN_MONITOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> DBG_ATTEN_MONITOR_W<'a> {
     }
 }
 #[doc = "Field `DBG_ATTEN_WAKEUP` reader - No public"]
-pub struct DBG_ATTEN_WAKEUP_R(crate::FieldReader<u8, u8>);
+pub struct DBG_ATTEN_WAKEUP_R(crate::FieldReader<u8>);
 impl DBG_ATTEN_WAKEUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -393,7 +393,7 @@ impl DBG_ATTEN_WAKEUP_R {
     }
 }
 impl core::ops::Deref for DBG_ATTEN_WAKEUP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -531,25 +531,16 @@ impl W {
         self
     }
 }
-#[doc = "No public\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bias_conf]
-(index.html) module"]
+#[doc = "No public\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bias_conf](index.html) module"]
 pub struct BIAS_CONF_SPEC;
 impl crate::RegisterSpec for BIAS_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bias_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bias_conf::R](R) reader structure"]
 impl crate::Readable for BIAS_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bias_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bias_conf::W](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<REGCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Timer group clock gate register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regclk]
-(index.html) module"]
+#[doc = "Timer group clock gate register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regclk](index.html) module"]
 pub struct REGCLK_SPEC;
 impl crate::RegisterSpec for REGCLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [regclk::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [regclk::R](R) reader structure"]
 impl crate::Readable for REGCLK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [regclk::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [regclk::W](W) writer structure"]
 impl crate::Writable for REGCLK_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<PRO_EXTMEM_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_EXTMEM_REG_DATE` reader - Reserved."]
-pub struct PRO_EXTMEM_REG_DATE_R(crate::FieldReader<u32, u32>);
+pub struct PRO_EXTMEM_REG_DATE_R(crate::FieldReader<u32>);
 impl PRO_EXTMEM_REG_DATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PRO_EXTMEM_REG_DATE_R {
     }
 }
 impl core::ops::Deref for PRO_EXTMEM_REG_DATE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_extmem_reg_date]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_extmem_reg_date](index.html) module"]
 pub struct PRO_EXTMEM_REG_DATE_SPEC;
 impl crate::RegisterSpec for PRO_EXTMEM_REG_DATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_extmem_reg_date::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_extmem_reg_date::R](R) reader structure"]
 impl crate::Readable for PRO_EXTMEM_REG_DATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_extmem_reg_date::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_extmem_reg_date::W](W) writer structure"]
 impl crate::Writable for PRO_EXTMEM_REG_DATE_SPEC {
     type Writer = W;
 }

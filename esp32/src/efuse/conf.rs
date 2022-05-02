@@ -35,7 +35,7 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `OP_CODE` reader - efuse operation code"]
-pub struct OP_CODE_R(crate::FieldReader<u16, u16>);
+pub struct OP_CODE_R(crate::FieldReader<u16>);
 impl OP_CODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl OP_CODE_R {
     }
 }
 impl core::ops::Deref for OP_CODE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OP_CODE_W<'a> {
     }
 }
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
-pub struct FORCE_NO_WR_RD_DIS_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_NO_WR_RD_DIS_R(crate::FieldReader<bool>);
 impl FORCE_NO_WR_RD_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl FORCE_NO_WR_RD_DIS_R {
     }
 }
 impl core::ops::Deref for FORCE_NO_WR_RD_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf](index.html) module"]
 pub struct CONF_SPEC;
 impl crate::RegisterSpec for CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf::R](R) reader structure"]
 impl crate::Readable for CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
 }

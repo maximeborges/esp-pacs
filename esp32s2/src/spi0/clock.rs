@@ -35,7 +35,7 @@ impl From<crate::W<CLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKCNT_L` reader - In the master mode it must be equal to SPI_CLKCNT_N. In the slave mode it must be 0. Can be configured in CONF state."]
-pub struct CLKCNT_L_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_L_R(crate::FieldReader<u8>);
 impl CLKCNT_L_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLKCNT_L_R {
     }
 }
 impl core::ops::Deref for CLKCNT_L_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLKCNT_L_W<'a> {
     }
 }
 #[doc = "Field `CLKCNT_H` reader - In the master mode it must be floor((SPI_CLKCNT_N+1)/2-1). In the slave mode it must be 0. Can be configured in CONF state."]
-pub struct CLKCNT_H_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_H_R(crate::FieldReader<u8>);
 impl CLKCNT_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CLKCNT_H_R {
     }
 }
 impl core::ops::Deref for CLKCNT_H_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CLKCNT_H_W<'a> {
     }
 }
 #[doc = "Field `CLKCNT_N` reader - In the master mode it is the divider of spi_clk. So spi_clk frequency is system/(SPI_CLKDIV_PRE+1)/(SPI_CLKCNT_N+1). Can be configured in CONF state."]
-pub struct CLKCNT_N_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_N_R(crate::FieldReader<u8>);
 impl CLKCNT_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CLKCNT_N_R {
     }
 }
 impl core::ops::Deref for CLKCNT_N_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CLKCNT_N_W<'a> {
     }
 }
 #[doc = "Field `CLKDIV_PRE` reader - In the master mode it is pre-divider of spi_clk. Can be configured in CONF state."]
-pub struct CLKDIV_PRE_R(crate::FieldReader<u16, u16>);
+pub struct CLKDIV_PRE_R(crate::FieldReader<u16>);
 impl CLKDIV_PRE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -124,7 +124,7 @@ impl CLKDIV_PRE_R {
     }
 }
 impl core::ops::Deref for CLKDIV_PRE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CLKDIV_PRE_W<'a> {
     }
 }
 #[doc = "Field `CLK_EQU_SYSCLK` reader - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
-pub struct CLK_EQU_SYSCLK_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EQU_SYSCLK_R(crate::FieldReader<bool>);
 impl CLK_EQU_SYSCLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -151,7 +151,7 @@ impl CLK_EQU_SYSCLK_R {
     }
 }
 impl core::ops::Deref for CLK_EQU_SYSCLK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -239,25 +239,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI clock control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock]
-(index.html) module"]
+#[doc = "SPI clock control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock](index.html) module"]
 pub struct CLOCK_SPEC;
 impl crate::RegisterSpec for CLOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clock::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clock::R](R) reader structure"]
 impl crate::Readable for CLOCK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clock::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clock::W](W) writer structure"]
 impl crate::Writable for CLOCK_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<CAP_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CAP0_EDGE` reader - Edge of last capture trigger on channel 0, 0: posedge, 1: negedge"]
-pub struct CAP0_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CAP0_EDGE_R(crate::FieldReader<bool>);
 impl CAP0_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CAP0_EDGE_R {
     }
 }
 impl core::ops::Deref for CAP0_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAP1_EDGE` reader - Edge of last capture trigger on channel 1, 0: posedge, 1: negedge"]
-pub struct CAP1_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CAP1_EDGE_R(crate::FieldReader<bool>);
 impl CAP1_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CAP1_EDGE_R {
     }
 }
 impl core::ops::Deref for CAP1_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAP2_EDGE` reader - Edge of last capture trigger on channel 2, 0: posedge, 1: negedge"]
-pub struct CAP2_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CAP2_EDGE_R(crate::FieldReader<bool>);
 impl CAP2_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl CAP2_EDGE_R {
     }
 }
 impl core::ops::Deref for CAP2_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         CAP2_EDGE_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "Edge of last capture trigger\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_status]
-(index.html) module"]
+#[doc = "Edge of last capture trigger\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_status](index.html) module"]
 pub struct CAP_STATUS_SPEC;
 impl crate::RegisterSpec for CAP_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cap_status::R](R) reader structure"]
 impl crate::Readable for CAP_STATUS_SPEC {
     type Reader = R;
 }

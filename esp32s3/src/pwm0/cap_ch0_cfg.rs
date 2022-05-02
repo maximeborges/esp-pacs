@@ -35,7 +35,7 @@ impl From<crate::W<CAP_CH0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP0_EN` reader - When set, capture on channel 0 is enabled"]
-pub struct CAP0_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAP0_EN_R(crate::FieldReader<bool>);
 impl CAP0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CAP0_EN_R {
     }
 }
 impl core::ops::Deref for CAP0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CAP0_EN_W<'a> {
     }
 }
 #[doc = "Field `CAP0_MODE` reader - Edge of capture on channel 0 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
-pub struct CAP0_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CAP0_MODE_R(crate::FieldReader<u8>);
 impl CAP0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CAP0_MODE_R {
     }
 }
 impl core::ops::Deref for CAP0_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CAP0_MODE_W<'a> {
     }
 }
 #[doc = "Field `CAP0_PRESCALE` reader - Value of prescaling on possitive edge of CAP0. Prescale value = PWM_CAP0_PRESCALE + 1"]
-pub struct CAP0_PRESCALE_R(crate::FieldReader<u8, u8>);
+pub struct CAP0_PRESCALE_R(crate::FieldReader<u8>);
 impl CAP0_PRESCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl CAP0_PRESCALE_R {
     }
 }
 impl core::ops::Deref for CAP0_PRESCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> CAP0_PRESCALE_W<'a> {
     }
 }
 #[doc = "Field `CAP0_IN_INVERT` reader - when set, CAP0 form GPIO matrix is inverted before prescale"]
-pub struct CAP0_IN_INVERT_R(crate::FieldReader<bool, bool>);
+pub struct CAP0_IN_INVERT_R(crate::FieldReader<bool>);
 impl CAP0_IN_INVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl CAP0_IN_INVERT_R {
     }
 }
 impl core::ops::Deref for CAP0_IN_INVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -239,25 +239,16 @@ impl W {
         self
     }
 }
-#[doc = "Capture channel 0 configuration and enable\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_ch0_cfg]
-(index.html) module"]
+#[doc = "Capture channel 0 configuration and enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_ch0_cfg](index.html) module"]
 pub struct CAP_CH0_CFG_SPEC;
 impl crate::RegisterSpec for CAP_CH0_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_ch0_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cap_ch0_cfg::R](R) reader structure"]
 impl crate::Readable for CAP_CH0_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cap_ch0_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cap_ch0_cfg::W](W) writer structure"]
 impl crate::Writable for CAP_CH0_CFG_SPEC {
     type Writer = W;
 }

@@ -270,18 +270,12 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_token_con]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_token_con](index.html) module"]
 pub struct HOST_SLCHOST_TOKEN_CON_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_TOKEN_CON_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [host_slchost_token_con::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_slchost_token_con::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_TOKEN_CON_SPEC {
     type Writer = W;
 }

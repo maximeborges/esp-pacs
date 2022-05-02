@@ -35,7 +35,7 @@ impl From<crate::W<UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_VALUE_VALID` reader - Check if it is valid to read out timer value from registers. 0: Not ready to read timer value from registers; 1: Ready to read timer value from registers"]
-pub struct TIMER_VALUE_VALID_R(crate::FieldReader<bool, bool>);
+pub struct TIMER_VALUE_VALID_R(crate::FieldReader<bool>);
 impl TIMER_VALUE_VALID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_VALUE_VALID_R {
     }
 }
 impl core::ops::Deref for TIMER_VALUE_VALID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Read out system timer value\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [update]
-(index.html) module"]
+#[doc = "Read out system timer value\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [update](index.html) module"]
 pub struct UPDATE_SPEC;
 impl crate::RegisterSpec for UPDATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [update::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [update::R](R) reader structure"]
 impl crate::Readable for UPDATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [update::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [update::W](W) writer structure"]
 impl crate::Writable for UPDATE_SPEC {
     type Writer = W;
 }

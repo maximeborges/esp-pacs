@@ -35,7 +35,7 @@ impl From<crate::W<SEARCH_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `SEARCH_ENABLE` reader - Set this bit to 1 to enable the acceleration option of search for modular exponentiation. Set to 0 to disable the acceleration (by default)."]
-pub struct SEARCH_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SEARCH_ENABLE_R(crate::FieldReader<bool>);
 impl SEARCH_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SEARCH_ENABLE_R {
     }
 }
 impl core::ops::Deref for SEARCH_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "The search option\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [search_enable]
-(index.html) module"]
+#[doc = "The search option\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [search_enable](index.html) module"]
 pub struct SEARCH_ENABLE_SPEC;
 impl crate::RegisterSpec for SEARCH_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [search_enable::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [search_enable::R](R) reader structure"]
 impl crate::Readable for SEARCH_ENABLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [search_enable::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [search_enable::W](W) writer structure"]
 impl crate::Writable for SEARCH_ENABLE_SPEC {
     type Writer = W;
 }

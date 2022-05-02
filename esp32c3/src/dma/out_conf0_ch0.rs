@@ -35,7 +35,7 @@ impl From<crate::W<OUT_CONF0_CH0_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_RST_CH0` reader - This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer."]
-pub struct OUT_RST_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUT_RST_CH0_R(crate::FieldReader<bool>);
 impl OUT_RST_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl OUT_RST_CH0_R {
     }
 }
 impl core::ops::Deref for OUT_RST_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> OUT_RST_CH0_W<'a> {
     }
 }
 #[doc = "Field `OUT_LOOP_TEST_CH0` reader - reserved"]
-pub struct OUT_LOOP_TEST_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUT_LOOP_TEST_CH0_R(crate::FieldReader<bool>);
 impl OUT_LOOP_TEST_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl OUT_LOOP_TEST_CH0_R {
     }
 }
 impl core::ops::Deref for OUT_LOOP_TEST_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> OUT_LOOP_TEST_CH0_W<'a> {
     }
 }
 #[doc = "Field `OUT_AUTO_WRBACK_CH0` reader - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub struct OUT_AUTO_WRBACK_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUT_AUTO_WRBACK_CH0_R(crate::FieldReader<bool>);
 impl OUT_AUTO_WRBACK_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl OUT_AUTO_WRBACK_CH0_R {
     }
 }
 impl core::ops::Deref for OUT_AUTO_WRBACK_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> OUT_AUTO_WRBACK_CH0_W<'a> {
     }
 }
 #[doc = "Field `OUT_EOF_MODE_CH0` reader - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 0 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub struct OUT_EOF_MODE_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUT_EOF_MODE_CH0_R(crate::FieldReader<bool>);
 impl OUT_EOF_MODE_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl OUT_EOF_MODE_CH0_R {
     }
 }
 impl core::ops::Deref for OUT_EOF_MODE_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> OUT_EOF_MODE_CH0_W<'a> {
     }
 }
 #[doc = "Field `OUTDSCR_BURST_EN_CH0` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM."]
-pub struct OUTDSCR_BURST_EN_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUTDSCR_BURST_EN_CH0_R(crate::FieldReader<bool>);
 impl OUTDSCR_BURST_EN_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl OUTDSCR_BURST_EN_CH0_R {
     }
 }
 impl core::ops::Deref for OUTDSCR_BURST_EN_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> OUTDSCR_BURST_EN_CH0_W<'a> {
     }
 }
 #[doc = "Field `OUT_DATA_BURST_EN_CH0` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 transmitting data when accessing internal SRAM."]
-pub struct OUT_DATA_BURST_EN_CH0_R(crate::FieldReader<bool, bool>);
+pub struct OUT_DATA_BURST_EN_CH0_R(crate::FieldReader<bool>);
 impl OUT_DATA_BURST_EN_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl OUT_DATA_BURST_EN_CH0_R {
     }
 }
 impl core::ops::Deref for OUT_DATA_BURST_EN_CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA_OUT_CONF0_CH0_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_conf0_ch0]
-(index.html) module"]
+#[doc = "DMA_OUT_CONF0_CH0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_conf0_ch0](index.html) module"]
 pub struct OUT_CONF0_CH0_SPEC;
 impl crate::RegisterSpec for OUT_CONF0_CH0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_conf0_ch0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [out_conf0_ch0::R](R) reader structure"]
 impl crate::Readable for OUT_CONF0_CH0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [out_conf0_ch0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out_conf0_ch0::W](W) writer structure"]
 impl crate::Writable for OUT_CONF0_CH0_SPEC {
     type Writer = W;
 }

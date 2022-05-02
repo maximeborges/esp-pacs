@@ -35,7 +35,7 @@ impl From<crate::W<OUT_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL0` reader - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL0_R(crate::FieldReader<bool, bool>);
+pub struct SEL0_R(crate::FieldReader<bool>);
 impl SEL0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SEL0_R {
     }
 }
 impl core::ops::Deref for SEL0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SEL0_W<'a> {
     }
 }
 #[doc = "Field `SEL1` reader - Select GPIO out value configured by registers or CPU instructions for channel 1. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL1_R(crate::FieldReader<bool, bool>);
+pub struct SEL1_R(crate::FieldReader<bool>);
 impl SEL1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SEL1_R {
     }
 }
 impl core::ops::Deref for SEL1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SEL1_W<'a> {
     }
 }
 #[doc = "Field `SEL2` reader - Select GPIO out value configured by registers or CPU instructions for channel 2. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL2_R(crate::FieldReader<bool, bool>);
+pub struct SEL2_R(crate::FieldReader<bool>);
 impl SEL2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SEL2_R {
     }
 }
 impl core::ops::Deref for SEL2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SEL2_W<'a> {
     }
 }
 #[doc = "Field `SEL3` reader - Select GPIO out value configured by registers or CPU instructions for channel 3. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL3_R(crate::FieldReader<bool, bool>);
+pub struct SEL3_R(crate::FieldReader<bool>);
 impl SEL3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SEL3_R {
     }
 }
 impl core::ops::Deref for SEL3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SEL3_W<'a> {
     }
 }
 #[doc = "Field `SEL4` reader - Select GPIO out value configured by registers or CPU instructions for channel 4. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL4_R(crate::FieldReader<bool, bool>);
+pub struct SEL4_R(crate::FieldReader<bool>);
 impl SEL4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SEL4_R {
     }
 }
 impl core::ops::Deref for SEL4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SEL4_W<'a> {
     }
 }
 #[doc = "Field `SEL5` reader - Select GPIO out value configured by registers or CPU instructions for channel 5. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL5_R(crate::FieldReader<bool, bool>);
+pub struct SEL5_R(crate::FieldReader<bool>);
 impl SEL5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SEL5_R {
     }
 }
 impl core::ops::Deref for SEL5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SEL5_W<'a> {
     }
 }
 #[doc = "Field `SEL6` reader - Select GPIO out value configured by registers or CPU instructions for channel 6. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL6_R(crate::FieldReader<bool, bool>);
+pub struct SEL6_R(crate::FieldReader<bool>);
 impl SEL6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SEL6_R {
     }
 }
 impl core::ops::Deref for SEL6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SEL6_W<'a> {
     }
 }
 #[doc = "Field `SEL7` reader - Select GPIO out value configured by registers or CPU instructions for channel 7. 0: Configured by registers. 1: configured by CPU instructions."]
-pub struct SEL7_R(crate::FieldReader<bool, bool>);
+pub struct SEL7_R(crate::FieldReader<bool>);
 impl SEL7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SEL7_R {
     }
 }
 impl core::ops::Deref for SEL7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "Dedicated GPIO output mode selection register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_cpu]
-(index.html) module"]
+#[doc = "Dedicated GPIO output mode selection register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_cpu](index.html) module"]
 pub struct OUT_CPU_SPEC;
 impl crate::RegisterSpec for OUT_CPU_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_cpu::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [out_cpu::R](R) reader structure"]
 impl crate::Readable for OUT_CPU_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [out_cpu::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out_cpu::W](W) writer structure"]
 impl crate::Writable for OUT_CPU_SPEC {
     type Writer = W;
 }

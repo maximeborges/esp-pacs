@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS_WAIT2_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR_SW` reader - "]
-pub struct FORCE_XPD_SAR_SW_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_XPD_SAR_SW_R(crate::FieldReader<bool>);
 impl FORCE_XPD_SAR_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FORCE_XPD_SAR_SW_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_SAR_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FORCE_XPD_SAR_SW_W<'a> {
     }
 }
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
-pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16, u16>);
+pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16>);
 impl SAR_AMP_WAIT3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -80,7 +80,7 @@ impl SAR_AMP_WAIT3_R {
     }
 }
 impl core::ops::Deref for SAR_AMP_WAIT3_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SAR_AMP_WAIT3_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
-pub struct FORCE_XPD_AMP_R(crate::FieldReader<u8, u8>);
+pub struct FORCE_XPD_AMP_R(crate::FieldReader<u8>);
 impl FORCE_XPD_AMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl FORCE_XPD_AMP_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_AMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> FORCE_XPD_AMP_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8, u8>);
+pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
 impl FORCE_XPD_SAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl FORCE_XPD_SAR_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> FORCE_XPD_SAR_W<'a> {
     }
 }
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8>);
 impl SAR2_RSTB_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl SAR2_RSTB_WAIT_R {
     }
 }
 impl core::ops::Deref for SAR2_RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -239,25 +239,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas_wait2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas_wait2](index.html) module"]
 pub struct SAR_MEAS_WAIT2_SPEC;
 impl crate::RegisterSpec for SAR_MEAS_WAIT2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_meas_wait2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_meas_wait2::R](R) reader structure"]
 impl crate::Readable for SAR_MEAS_WAIT2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_meas_wait2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_meas_wait2::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS_WAIT2_SPEC {
     type Writer = W;
 }

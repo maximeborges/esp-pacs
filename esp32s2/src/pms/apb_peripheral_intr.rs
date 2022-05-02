@@ -35,7 +35,7 @@ impl From<crate::W<APB_PERIPHERAL_INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` reader - The clear signal for APB peripheral interrupt."]
-pub struct APB_PERI_BYTE_ERROR_CLR_R(crate::FieldReader<bool, bool>);
+pub struct APB_PERI_BYTE_ERROR_CLR_R(crate::FieldReader<bool>);
 impl APB_PERI_BYTE_ERROR_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APB_PERI_BYTE_ERROR_CLR_R {
     }
 }
 impl core::ops::Deref for APB_PERI_BYTE_ERROR_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> APB_PERI_BYTE_ERROR_CLR_W<'a> {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` reader - The enable signal for APB peripheral access interrupt."]
-pub struct APB_PERI_BYTE_ERROR_EN_R(crate::FieldReader<bool, bool>);
+pub struct APB_PERI_BYTE_ERROR_EN_R(crate::FieldReader<bool>);
 impl APB_PERI_BYTE_ERROR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl APB_PERI_BYTE_ERROR_EN_R {
     }
 }
 impl core::ops::Deref for APB_PERI_BYTE_ERROR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> APB_PERI_BYTE_ERROR_EN_W<'a> {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_INTR` reader - APB peripheral access interrupt signal."]
-pub struct APB_PERI_BYTE_ERROR_INTR_R(crate::FieldReader<bool, bool>);
+pub struct APB_PERI_BYTE_ERROR_INTR_R(crate::FieldReader<bool>);
 impl APB_PERI_BYTE_ERROR_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl APB_PERI_BYTE_ERROR_INTR_R {
     }
 }
 impl core::ops::Deref for APB_PERI_BYTE_ERROR_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "PeribBus2 permission control register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_peripheral_intr]
-(index.html) module"]
+#[doc = "PeribBus2 permission control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_peripheral_intr](index.html) module"]
 pub struct APB_PERIPHERAL_INTR_SPEC;
 impl crate::RegisterSpec for APB_PERIPHERAL_INTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_peripheral_intr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [apb_peripheral_intr::R](R) reader structure"]
 impl crate::Readable for APB_PERIPHERAL_INTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_peripheral_intr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [apb_peripheral_intr::W](W) writer structure"]
 impl crate::Writable for APB_PERIPHERAL_INTR_SPEC {
     type Writer = W;
 }

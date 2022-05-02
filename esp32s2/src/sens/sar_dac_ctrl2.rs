@@ -35,7 +35,7 @@ impl From<crate::W<SAR_DAC_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_DC1` reader - DC offset for DAC1 CW generator."]
-pub struct DAC_DC1_R(crate::FieldReader<u8, u8>);
+pub struct DAC_DC1_R(crate::FieldReader<u8>);
 impl DAC_DC1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DAC_DC1_R {
     }
 }
 impl core::ops::Deref for DAC_DC1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DAC_DC1_W<'a> {
     }
 }
 #[doc = "Field `DAC_DC2` reader - DC offset for DAC2 CW generator."]
-pub struct DAC_DC2_R(crate::FieldReader<u8, u8>);
+pub struct DAC_DC2_R(crate::FieldReader<u8>);
 impl DAC_DC2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DAC_DC2_R {
     }
 }
 impl core::ops::Deref for DAC_DC2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DAC_DC2_W<'a> {
     }
 }
 #[doc = "Field `DAC_SCALE1` reader - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
-pub struct DAC_SCALE1_R(crate::FieldReader<u8, u8>);
+pub struct DAC_SCALE1_R(crate::FieldReader<u8>);
 impl DAC_SCALE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DAC_SCALE1_R {
     }
 }
 impl core::ops::Deref for DAC_SCALE1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DAC_SCALE1_W<'a> {
     }
 }
 #[doc = "Field `DAC_SCALE2` reader - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
-pub struct DAC_SCALE2_R(crate::FieldReader<u8, u8>);
+pub struct DAC_SCALE2_R(crate::FieldReader<u8>);
 impl DAC_SCALE2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DAC_SCALE2_R {
     }
 }
 impl core::ops::Deref for DAC_SCALE2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DAC_SCALE2_W<'a> {
     }
 }
 #[doc = "Field `DAC_INV1` reader - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
-pub struct DAC_INV1_R(crate::FieldReader<u8, u8>);
+pub struct DAC_INV1_R(crate::FieldReader<u8>);
 impl DAC_INV1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DAC_INV1_R {
     }
 }
 impl core::ops::Deref for DAC_INV1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DAC_INV1_W<'a> {
     }
 }
 #[doc = "Field `DAC_INV2` reader - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
-pub struct DAC_INV2_R(crate::FieldReader<u8, u8>);
+pub struct DAC_INV2_R(crate::FieldReader<u8>);
 impl DAC_INV2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DAC_INV2_R {
     }
 }
 impl core::ops::Deref for DAC_INV2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DAC_INV2_W<'a> {
     }
 }
 #[doc = "Field `DAC_CW_EN1` reader - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
-pub struct DAC_CW_EN1_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CW_EN1_R(crate::FieldReader<bool>);
 impl DAC_CW_EN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -205,7 +205,7 @@ impl DAC_CW_EN1_R {
     }
 }
 impl core::ops::Deref for DAC_CW_EN1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -234,7 +234,7 @@ impl<'a> DAC_CW_EN1_W<'a> {
     }
 }
 #[doc = "Field `DAC_CW_EN2` reader - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
-pub struct DAC_CW_EN2_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CW_EN2_R(crate::FieldReader<bool>);
 impl DAC_CW_EN2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -242,7 +242,7 @@ impl DAC_CW_EN2_R {
     }
 }
 impl core::ops::Deref for DAC_CW_EN2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -360,25 +360,16 @@ impl W {
         self
     }
 }
-#[doc = "DAC output control\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_dac_ctrl2]
-(index.html) module"]
+#[doc = "DAC output control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_dac_ctrl2](index.html) module"]
 pub struct SAR_DAC_CTRL2_SPEC;
 impl crate::RegisterSpec for SAR_DAC_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_dac_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_dac_ctrl2::R](R) reader structure"]
 impl crate::Readable for SAR_DAC_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_dac_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_dac_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_DAC_CTRL2_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ST` reader - This is the status bit for rxfifo_full_int_raw when rxfifo_full_int_ena is set to 1."]
-pub struct RXFIFO_FULL_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_FULL_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_FULL_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RXFIFO_FULL_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_INT_ST` reader - This is the status bit for txfifo_empty_int_raw when txfifo_empty_int_ena is set to 1."]
-pub struct TXFIFO_EMPTY_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_EMPTY_INT_ST_R(crate::FieldReader<bool>);
 impl TXFIFO_EMPTY_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TXFIFO_EMPTY_INT_ST_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PARITY_ERR_INT_ST` reader - This is the status bit for parity_err_int_raw when parity_err_int_ena is set to 1."]
-pub struct PARITY_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct PARITY_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl PARITY_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl PARITY_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for PARITY_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FRM_ERR_INT_ST` reader - This is the status bit for frm_err_int_raw when frm_err_int_ena is set to 1."]
-pub struct FRM_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct FRM_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl FRM_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl FRM_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for FRM_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - This is the status bit for rxfifo_ovf_int_raw when rxfifo_ovf_int_ena is set to 1."]
-pub struct RXFIFO_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl RXFIFO_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DSR_CHG_INT_ST` reader - This is the status bit for dsr_chg_int_raw when dsr_chg_int_ena is set to 1."]
-pub struct DSR_CHG_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DSR_CHG_INT_ST_R(crate::FieldReader<bool>);
 impl DSR_CHG_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl DSR_CHG_INT_ST_R {
     }
 }
 impl core::ops::Deref for DSR_CHG_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CTS_CHG_INT_ST` reader - This is the status bit for cts_chg_int_raw when cts_chg_int_ena is set to 1."]
-pub struct CTS_CHG_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct CTS_CHG_INT_ST_R(crate::FieldReader<bool>);
 impl CTS_CHG_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl CTS_CHG_INT_ST_R {
     }
 }
 impl core::ops::Deref for CTS_CHG_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BRK_DET_INT_ST` reader - This is the status bit for brk_det_int_raw when brk_det_int_ena is set to 1."]
-pub struct BRK_DET_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct BRK_DET_INT_ST_R(crate::FieldReader<bool>);
 impl BRK_DET_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl BRK_DET_INT_ST_R {
     }
 }
 impl core::ops::Deref for BRK_DET_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_TOUT_INT_ST` reader - This is the status bit for rxfifo_tout_int_raw when rxfifo_tout_int_ena is set to 1."]
-pub struct RXFIFO_TOUT_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_TOUT_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_TOUT_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl RXFIFO_TOUT_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TOUT_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SW_XON_INT_ST` reader - This is the status bit for sw_xon_int_raw when sw_xon_int_ena is set to 1."]
-pub struct SW_XON_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SW_XON_INT_ST_R(crate::FieldReader<bool>);
 impl SW_XON_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl SW_XON_INT_ST_R {
     }
 }
 impl core::ops::Deref for SW_XON_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SW_XOFF_INT_ST` reader - This is the status bit for sw_xoff_int_raw when sw_xoff_int_ena is set to 1."]
-pub struct SW_XOFF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SW_XOFF_INT_ST_R(crate::FieldReader<bool>);
 impl SW_XOFF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl SW_XOFF_INT_ST_R {
     }
 }
 impl core::ops::Deref for SW_XOFF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `GLITCH_DET_INT_ST` reader - This is the status bit for glitch_det_int_raw when glitch_det_int_ena is set to 1."]
-pub struct GLITCH_DET_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_DET_INT_ST_R(crate::FieldReader<bool>);
 impl GLITCH_DET_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl GLITCH_DET_INT_ST_R {
     }
 }
 impl core::ops::Deref for GLITCH_DET_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_BRK_DONE_INT_ST` reader - This is the status bit for tx_brk_done_int_raw when tx_brk_done_int_ena is set to 1."]
-pub struct TX_BRK_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl TX_BRK_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl TX_BRK_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TX_BRK_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ST` reader - This is the stauts bit for tx_brk_idle_done_int_raw when tx_brk_idle_done_int_ena is set to 1."]
-pub struct TX_BRK_IDLE_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_IDLE_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl TX_BRK_IDLE_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl TX_BRK_IDLE_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TX_BRK_IDLE_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_DONE_INT_ST` reader - This is the status bit for tx_done_int_raw when tx_done_int_ena is set to 1."]
-pub struct TX_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl TX_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl TX_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TX_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_PARITY_ERR_INT_ST` reader - This is the status bit for rs485_parity_err_int_raw when rs485_parity_int_ena is set to 1."]
-pub struct RS485_PARITY_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RS485_PARITY_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl RS485_PARITY_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl RS485_PARITY_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for RS485_PARITY_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_FRM_ERR_INT_ST` reader - This is the status bit for rs485_frm_err_int_raw when rs485_fm_err_int_ena is set to 1."]
-pub struct RS485_FRM_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RS485_FRM_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl RS485_FRM_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl RS485_FRM_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for RS485_FRM_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_CLASH_INT_ST` reader - This is the status bit for rs485_clash_int_raw when rs485_clash_int_ena is set to 1."]
-pub struct RS485_CLASH_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RS485_CLASH_INT_ST_R(crate::FieldReader<bool>);
 impl RS485_CLASH_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl RS485_CLASH_INT_ST_R {
     }
 }
 impl core::ops::Deref for RS485_CLASH_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ST` reader - This is the status bit for at_cmd_det_int_raw when at_cmd_char_det_int_ena is set to 1."]
-pub struct AT_CMD_CHAR_DET_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct AT_CMD_CHAR_DET_INT_ST_R(crate::FieldReader<bool>);
 impl AT_CMD_CHAR_DET_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,14 +292,14 @@ impl AT_CMD_CHAR_DET_INT_ST_R {
     }
 }
 impl core::ops::Deref for AT_CMD_CHAR_DET_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WAKEUP_INT_ST` reader - This is the status bit for uart_wakeup_int_raw when uart_wakeup_int_ena is set to 1."]
-pub struct WAKEUP_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct WAKEUP_INT_ST_R(crate::FieldReader<bool>);
 impl WAKEUP_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -307,7 +307,7 @@ impl WAKEUP_INT_ST_R {
     }
 }
 impl core::ops::Deref for WAKEUP_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -415,16 +415,12 @@ impl R {
         WAKEUP_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
-#[doc = "Masked interrupt status\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st]
-(index.html) module"]
+#[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_st::R](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {
     type Reader = R;
 }

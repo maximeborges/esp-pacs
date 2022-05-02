@@ -35,7 +35,7 @@ impl From<crate::W<APB_SARADC_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` reader - "]
-pub struct SARADC_MEAS_NUM_LIMIT_R(crate::FieldReader<bool, bool>);
+pub struct SARADC_MEAS_NUM_LIMIT_R(crate::FieldReader<bool>);
 impl SARADC_MEAS_NUM_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SARADC_MEAS_NUM_LIMIT_R {
     }
 }
 impl core::ops::Deref for SARADC_MEAS_NUM_LIMIT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SARADC_MEAS_NUM_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `SARADC_MAX_MEAS_NUM` reader - max conversion number"]
-pub struct SARADC_MAX_MEAS_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SARADC_MAX_MEAS_NUM_R(crate::FieldReader<u8>);
 impl SARADC_MAX_MEAS_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl SARADC_MAX_MEAS_NUM_R {
     }
 }
 impl core::ops::Deref for SARADC_MAX_MEAS_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SARADC_MAX_MEAS_NUM_W<'a> {
     }
 }
 #[doc = "Field `SARADC_SAR1_INV` reader - 1: data to DIG ADC1 CTRL is inverted otherwise not"]
-pub struct SARADC_SAR1_INV_R(crate::FieldReader<bool, bool>);
+pub struct SARADC_SAR1_INV_R(crate::FieldReader<bool>);
 impl SARADC_SAR1_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl SARADC_SAR1_INV_R {
     }
 }
 impl core::ops::Deref for SARADC_SAR1_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> SARADC_SAR1_INV_W<'a> {
     }
 }
 #[doc = "Field `SARADC_SAR2_INV` reader - 1: data to DIG ADC2 CTRL is inverted otherwise not"]
-pub struct SARADC_SAR2_INV_R(crate::FieldReader<bool, bool>);
+pub struct SARADC_SAR2_INV_R(crate::FieldReader<bool>);
 impl SARADC_SAR2_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl SARADC_SAR2_INV_R {
     }
 }
 impl core::ops::Deref for SARADC_SAR2_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_saradc_ctrl2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_saradc_ctrl2](index.html) module"]
 pub struct APB_SARADC_CTRL2_SPEC;
 impl crate::RegisterSpec for APB_SARADC_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_saradc_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [apb_saradc_ctrl2::R](R) reader structure"]
 impl crate::Readable for APB_SARADC_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_saradc_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [apb_saradc_ctrl2::W](W) writer structure"]
 impl crate::Writable for APB_SARADC_CTRL2_SPEC {
     type Writer = W;
 }

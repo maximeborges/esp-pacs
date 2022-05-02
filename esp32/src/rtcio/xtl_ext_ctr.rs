@@ -35,7 +35,7 @@ impl From<crate::W<XTL_EXT_CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - select the external xtl power source Ó0Ó select GPIO0 Ó1Ó select GPIO2 ...Ò17Ó select GPIO17"]
-pub struct SEL_R(crate::FieldReader<u8, u8>);
+pub struct SEL_R(crate::FieldReader<u8>);
 impl SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SEL_R {
     }
 }
 impl core::ops::Deref for SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtl_ext_ctr]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtl_ext_ctr](index.html) module"]
 pub struct XTL_EXT_CTR_SPEC;
 impl crate::RegisterSpec for XTL_EXT_CTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtl_ext_ctr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [xtl_ext_ctr::R](R) reader structure"]
 impl crate::Readable for XTL_EXT_CTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [xtl_ext_ctr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [xtl_ext_ctr::W](W) writer structure"]
 impl crate::Writable for XTL_EXT_CTR_SPEC {
     type Writer = W;
 }

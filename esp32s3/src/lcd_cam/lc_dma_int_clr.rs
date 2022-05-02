@@ -135,18 +135,12 @@ impl W {
         self
     }
 }
-#[doc = "LCD_camera DMA inturrupt clear register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_clr]
-(index.html) module"]
+#[doc = "LCD_camera DMA inturrupt clear register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_clr](index.html) module"]
 pub struct LC_DMA_INT_CLR_SPEC;
 impl crate::RegisterSpec for LC_DMA_INT_CLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [lc_dma_int_clr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lc_dma_int_clr::W](W) writer structure"]
 impl crate::Writable for LC_DMA_INT_CLR_SPEC {
     type Writer = W;
 }

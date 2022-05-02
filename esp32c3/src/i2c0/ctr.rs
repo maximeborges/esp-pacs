@@ -35,7 +35,7 @@ impl From<crate::W<CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - reg_sda_force_out"]
-pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool, bool>);
+pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool>);
 impl SDA_FORCE_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SDA_FORCE_OUT_R {
     }
 }
 impl core::ops::Deref for SDA_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SDA_FORCE_OUT_W<'a> {
     }
 }
 #[doc = "Field `SCL_FORCE_OUT` reader - reg_scl_force_out"]
-pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool, bool>);
+pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool>);
 impl SCL_FORCE_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SCL_FORCE_OUT_R {
     }
 }
 impl core::ops::Deref for SCL_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SCL_FORCE_OUT_W<'a> {
     }
 }
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - reg_sample_scl_level"]
-pub struct SAMPLE_SCL_LEVEL_R(crate::FieldReader<bool, bool>);
+pub struct SAMPLE_SCL_LEVEL_R(crate::FieldReader<bool>);
 impl SAMPLE_SCL_LEVEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SAMPLE_SCL_LEVEL_R {
     }
 }
 impl core::ops::Deref for SAMPLE_SCL_LEVEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SAMPLE_SCL_LEVEL_W<'a> {
     }
 }
 #[doc = "Field `RX_FULL_ACK_LEVEL` reader - reg_rx_full_ack_level"]
-pub struct RX_FULL_ACK_LEVEL_R(crate::FieldReader<bool, bool>);
+pub struct RX_FULL_ACK_LEVEL_R(crate::FieldReader<bool>);
 impl RX_FULL_ACK_LEVEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RX_FULL_ACK_LEVEL_R {
     }
 }
 impl core::ops::Deref for RX_FULL_ACK_LEVEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RX_FULL_ACK_LEVEL_W<'a> {
     }
 }
 #[doc = "Field `MS_MODE` reader - reg_ms_mode"]
-pub struct MS_MODE_R(crate::FieldReader<bool, bool>);
+pub struct MS_MODE_R(crate::FieldReader<bool>);
 impl MS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MS_MODE_R {
     }
 }
 impl core::ops::Deref for MS_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -242,7 +242,7 @@ impl<'a> TRANS_START_W<'a> {
     }
 }
 #[doc = "Field `TX_LSB_FIRST` reader - reg_tx_lsb_first"]
-pub struct TX_LSB_FIRST_R(crate::FieldReader<bool, bool>);
+pub struct TX_LSB_FIRST_R(crate::FieldReader<bool>);
 impl TX_LSB_FIRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -250,7 +250,7 @@ impl TX_LSB_FIRST_R {
     }
 }
 impl core::ops::Deref for TX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,7 +279,7 @@ impl<'a> TX_LSB_FIRST_W<'a> {
     }
 }
 #[doc = "Field `RX_LSB_FIRST` reader - reg_rx_lsb_first"]
-pub struct RX_LSB_FIRST_R(crate::FieldReader<bool, bool>);
+pub struct RX_LSB_FIRST_R(crate::FieldReader<bool>);
 impl RX_LSB_FIRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -287,7 +287,7 @@ impl RX_LSB_FIRST_R {
     }
 }
 impl core::ops::Deref for RX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,7 +316,7 @@ impl<'a> RX_LSB_FIRST_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - reg_clk_en"]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -324,7 +324,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,7 +353,7 @@ impl<'a> CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `ARBITRATION_EN` reader - reg_arbitration_en"]
-pub struct ARBITRATION_EN_R(crate::FieldReader<bool, bool>);
+pub struct ARBITRATION_EN_R(crate::FieldReader<bool>);
 impl ARBITRATION_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -361,7 +361,7 @@ impl ARBITRATION_EN_R {
     }
 }
 impl core::ops::Deref for ARBITRATION_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -434,7 +434,7 @@ impl<'a> CONF_UPGATE_W<'a> {
     }
 }
 #[doc = "Field `SLV_TX_AUTO_START_EN` reader - reg_slv_tx_auto_start_en"]
-pub struct SLV_TX_AUTO_START_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_TX_AUTO_START_EN_R(crate::FieldReader<bool>);
 impl SLV_TX_AUTO_START_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -442,7 +442,7 @@ impl SLV_TX_AUTO_START_EN_R {
     }
 }
 impl core::ops::Deref for SLV_TX_AUTO_START_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -471,7 +471,7 @@ impl<'a> SLV_TX_AUTO_START_EN_W<'a> {
     }
 }
 #[doc = "Field `ADDR_10BIT_RW_CHECK_EN` reader - reg_addr_10bit_rw_check_en"]
-pub struct ADDR_10BIT_RW_CHECK_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADDR_10BIT_RW_CHECK_EN_R(crate::FieldReader<bool>);
 impl ADDR_10BIT_RW_CHECK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -479,7 +479,7 @@ impl ADDR_10BIT_RW_CHECK_EN_R {
     }
 }
 impl core::ops::Deref for ADDR_10BIT_RW_CHECK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -508,7 +508,7 @@ impl<'a> ADDR_10BIT_RW_CHECK_EN_W<'a> {
     }
 }
 #[doc = "Field `ADDR_BROADCASTING_EN` reader - reg_addr_broadcasting_en"]
-pub struct ADDR_BROADCASTING_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADDR_BROADCASTING_EN_R(crate::FieldReader<bool>);
 impl ADDR_BROADCASTING_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -516,7 +516,7 @@ impl ADDR_BROADCASTING_EN_R {
     }
 }
 impl core::ops::Deref for ADDR_BROADCASTING_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -689,25 +689,16 @@ impl W {
         self
     }
 }
-#[doc = "I2C_CTR_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctr]
-(index.html) module"]
+#[doc = "I2C_CTR_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctr](index.html) module"]
 pub struct CTR_SPEC;
 impl crate::RegisterSpec for CTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctr::R](R) reader structure"]
 impl crate::Readable for CTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctr::W](W) writer structure"]
 impl crate::Writable for CTR_SPEC {
     type Writer = W;
 }

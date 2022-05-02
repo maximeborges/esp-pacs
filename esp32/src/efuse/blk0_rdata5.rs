@@ -14,7 +14,7 @@ impl From<crate::R<BLK0_RDATA5_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_SPI_PAD_CONFIG_CLK` reader - read for SPI_pad_config_clk"]
-pub struct RD_SPI_PAD_CONFIG_CLK_R(crate::FieldReader<u8, u8>);
+pub struct RD_SPI_PAD_CONFIG_CLK_R(crate::FieldReader<u8>);
 impl RD_SPI_PAD_CONFIG_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl RD_SPI_PAD_CONFIG_CLK_R {
     }
 }
 impl core::ops::Deref for RD_SPI_PAD_CONFIG_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SPI_PAD_CONFIG_Q` reader - read for SPI_pad_config_q"]
-pub struct RD_SPI_PAD_CONFIG_Q_R(crate::FieldReader<u8, u8>);
+pub struct RD_SPI_PAD_CONFIG_Q_R(crate::FieldReader<u8>);
 impl RD_SPI_PAD_CONFIG_Q_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl RD_SPI_PAD_CONFIG_Q_R {
     }
 }
 impl core::ops::Deref for RD_SPI_PAD_CONFIG_Q_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SPI_PAD_CONFIG_D` reader - read for SPI_pad_config_d"]
-pub struct RD_SPI_PAD_CONFIG_D_R(crate::FieldReader<u8, u8>);
+pub struct RD_SPI_PAD_CONFIG_D_R(crate::FieldReader<u8>);
 impl RD_SPI_PAD_CONFIG_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl RD_SPI_PAD_CONFIG_D_R {
     }
 }
 impl core::ops::Deref for RD_SPI_PAD_CONFIG_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SPI_PAD_CONFIG_CS0` reader - read for SPI_pad_config_cs0"]
-pub struct RD_SPI_PAD_CONFIG_CS0_R(crate::FieldReader<u8, u8>);
+pub struct RD_SPI_PAD_CONFIG_CS0_R(crate::FieldReader<u8>);
 impl RD_SPI_PAD_CONFIG_CS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,14 +67,14 @@ impl RD_SPI_PAD_CONFIG_CS0_R {
     }
 }
 impl core::ops::Deref for RD_SPI_PAD_CONFIG_CS0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_CHIP_VER_REV2` reader - "]
-pub struct RD_CHIP_VER_REV2_R(crate::FieldReader<bool, bool>);
+pub struct RD_CHIP_VER_REV2_R(crate::FieldReader<bool>);
 impl RD_CHIP_VER_REV2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl RD_CHIP_VER_REV2_R {
     }
 }
 impl core::ops::Deref for RD_CHIP_VER_REV2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_VOL_LEVEL_HP_INV` reader - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (RO)"]
-pub struct RD_VOL_LEVEL_HP_INV_R(crate::FieldReader<u8, u8>);
+pub struct RD_VOL_LEVEL_HP_INV_R(crate::FieldReader<u8>);
 impl RD_VOL_LEVEL_HP_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,14 +97,14 @@ impl RD_VOL_LEVEL_HP_INV_R {
     }
 }
 impl core::ops::Deref for RD_VOL_LEVEL_HP_INV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_DIG_VOL_L6` reader - "]
-pub struct RD_DIG_VOL_L6_R(crate::FieldReader<u8, u8>);
+pub struct RD_DIG_VOL_L6_R(crate::FieldReader<u8>);
 impl RD_DIG_VOL_L6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,14 +112,14 @@ impl RD_DIG_VOL_L6_R {
     }
 }
 impl core::ops::Deref for RD_DIG_VOL_L6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_FLASH_CRYPT_CONFIG` reader - read for flash_crypt_config"]
-pub struct RD_FLASH_CRYPT_CONFIG_R(crate::FieldReader<u8, u8>);
+pub struct RD_FLASH_CRYPT_CONFIG_R(crate::FieldReader<u8>);
 impl RD_FLASH_CRYPT_CONFIG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,7 +127,7 @@ impl RD_FLASH_CRYPT_CONFIG_R {
     }
 }
 impl core::ops::Deref for RD_FLASH_CRYPT_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,16 +175,12 @@ impl R {
         RD_FLASH_CRYPT_CONFIG_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata5]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata5](index.html) module"]
 pub struct BLK0_RDATA5_SPEC;
 impl crate::RegisterSpec for BLK0_RDATA5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_rdata5::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_rdata5::R](R) reader structure"]
 impl crate::Readable for BLK0_RDATA5_SPEC {
     type Reader = R;
 }

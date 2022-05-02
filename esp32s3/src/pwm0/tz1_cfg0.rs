@@ -35,7 +35,7 @@ impl From<crate::W<TZ1_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `TZ1_SW_CBC` reader - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub struct TZ1_SW_CBC_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_SW_CBC_R(crate::FieldReader<bool>);
 impl TZ1_SW_CBC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TZ1_SW_CBC_R {
     }
 }
 impl core::ops::Deref for TZ1_SW_CBC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TZ1_SW_CBC_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F2_CBC` reader - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub struct TZ1_F2_CBC_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F2_CBC_R(crate::FieldReader<bool>);
 impl TZ1_F2_CBC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TZ1_F2_CBC_R {
     }
 }
 impl core::ops::Deref for TZ1_F2_CBC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TZ1_F2_CBC_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F1_CBC` reader - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub struct TZ1_F1_CBC_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F1_CBC_R(crate::FieldReader<bool>);
 impl TZ1_F1_CBC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TZ1_F1_CBC_R {
     }
 }
 impl core::ops::Deref for TZ1_F1_CBC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TZ1_F1_CBC_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F0_CBC` reader - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub struct TZ1_F0_CBC_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F0_CBC_R(crate::FieldReader<bool>);
 impl TZ1_F0_CBC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TZ1_F0_CBC_R {
     }
 }
 impl core::ops::Deref for TZ1_F0_CBC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TZ1_F0_CBC_W<'a> {
     }
 }
 #[doc = "Field `TZ1_SW_OST` reader - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
-pub struct TZ1_SW_OST_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_SW_OST_R(crate::FieldReader<bool>);
 impl TZ1_SW_OST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TZ1_SW_OST_R {
     }
 }
 impl core::ops::Deref for TZ1_SW_OST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TZ1_SW_OST_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F2_OST` reader - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub struct TZ1_F2_OST_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F2_OST_R(crate::FieldReader<bool>);
 impl TZ1_F2_OST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TZ1_F2_OST_R {
     }
 }
 impl core::ops::Deref for TZ1_F2_OST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TZ1_F2_OST_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F1_OST` reader - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub struct TZ1_F1_OST_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F1_OST_R(crate::FieldReader<bool>);
 impl TZ1_F1_OST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl TZ1_F1_OST_R {
     }
 }
 impl core::ops::Deref for TZ1_F1_OST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> TZ1_F1_OST_W<'a> {
     }
 }
 #[doc = "Field `TZ1_F0_OST` reader - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub struct TZ1_F0_OST_R(crate::FieldReader<bool, bool>);
+pub struct TZ1_F0_OST_R(crate::FieldReader<bool>);
 impl TZ1_F0_OST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl TZ1_F0_OST_R {
     }
 }
 impl core::ops::Deref for TZ1_F0_OST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> TZ1_F0_OST_W<'a> {
     }
 }
 #[doc = "Field `TZ1_A_CBC_D` reader - Cycle-by-cycle mode action on PWM1A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_A_CBC_D_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_A_CBC_D_R(crate::FieldReader<u8>);
 impl TZ1_A_CBC_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -339,7 +339,7 @@ impl TZ1_A_CBC_D_R {
     }
 }
 impl core::ops::Deref for TZ1_A_CBC_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> TZ1_A_CBC_D_W<'a> {
     }
 }
 #[doc = "Field `TZ1_A_CBC_U` reader - Cycle-by-cycle mode action on PWM1A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_A_CBC_U_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_A_CBC_U_R(crate::FieldReader<u8>);
 impl TZ1_A_CBC_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -366,7 +366,7 @@ impl TZ1_A_CBC_U_R {
     }
 }
 impl core::ops::Deref for TZ1_A_CBC_U_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> TZ1_A_CBC_U_W<'a> {
     }
 }
 #[doc = "Field `TZ1_A_OST_D` reader - One-shot mode action on PWM1A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_A_OST_D_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_A_OST_D_R(crate::FieldReader<u8>);
 impl TZ1_A_OST_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -393,7 +393,7 @@ impl TZ1_A_OST_D_R {
     }
 }
 impl core::ops::Deref for TZ1_A_OST_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -412,7 +412,7 @@ impl<'a> TZ1_A_OST_D_W<'a> {
     }
 }
 #[doc = "Field `TZ1_A_OST_U` reader - One-shot mode action on PWM1A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_A_OST_U_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_A_OST_U_R(crate::FieldReader<u8>);
 impl TZ1_A_OST_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -420,7 +420,7 @@ impl TZ1_A_OST_U_R {
     }
 }
 impl core::ops::Deref for TZ1_A_OST_U_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -439,7 +439,7 @@ impl<'a> TZ1_A_OST_U_W<'a> {
     }
 }
 #[doc = "Field `TZ1_B_CBC_D` reader - Cycle-by-cycle mode action on PWM1B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_B_CBC_D_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_B_CBC_D_R(crate::FieldReader<u8>);
 impl TZ1_B_CBC_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -447,7 +447,7 @@ impl TZ1_B_CBC_D_R {
     }
 }
 impl core::ops::Deref for TZ1_B_CBC_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -466,7 +466,7 @@ impl<'a> TZ1_B_CBC_D_W<'a> {
     }
 }
 #[doc = "Field `TZ1_B_CBC_U` reader - Cycle-by-cycle mode action on PWM1B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_B_CBC_U_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_B_CBC_U_R(crate::FieldReader<u8>);
 impl TZ1_B_CBC_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -474,7 +474,7 @@ impl TZ1_B_CBC_U_R {
     }
 }
 impl core::ops::Deref for TZ1_B_CBC_U_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -493,7 +493,7 @@ impl<'a> TZ1_B_CBC_U_W<'a> {
     }
 }
 #[doc = "Field `TZ1_B_OST_D` reader - One-shot mode action on PWM1B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_B_OST_D_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_B_OST_D_R(crate::FieldReader<u8>);
 impl TZ1_B_OST_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -501,7 +501,7 @@ impl TZ1_B_OST_D_R {
     }
 }
 impl core::ops::Deref for TZ1_B_OST_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -520,7 +520,7 @@ impl<'a> TZ1_B_OST_D_W<'a> {
     }
 }
 #[doc = "Field `TZ1_B_OST_U` reader - One-shot mode action on PWM1B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub struct TZ1_B_OST_U_R(crate::FieldReader<u8, u8>);
+pub struct TZ1_B_OST_U_R(crate::FieldReader<u8>);
 impl TZ1_B_OST_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -528,7 +528,7 @@ impl TZ1_B_OST_U_R {
     }
 }
 impl core::ops::Deref for TZ1_B_OST_U_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -716,25 +716,16 @@ impl W {
         self
     }
 }
-#[doc = "Actions on PWM1A and PWM1B trip events\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tz1_cfg0]
-(index.html) module"]
+#[doc = "Actions on PWM1A and PWM1B trip events\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tz1_cfg0](index.html) module"]
 pub struct TZ1_CFG0_SPEC;
 impl crate::RegisterSpec for TZ1_CFG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tz1_cfg0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tz1_cfg0::R](R) reader structure"]
 impl crate::Readable for TZ1_CFG0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tz1_cfg0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tz1_cfg0::W](W) writer structure"]
 impl crate::Writable for TZ1_CFG0_SPEC {
     type Writer = W;
 }

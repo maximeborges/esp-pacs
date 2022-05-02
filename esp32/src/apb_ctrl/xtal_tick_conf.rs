@@ -35,7 +35,7 @@ impl From<crate::W<XTAL_TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL_TICK_NUM` reader - "]
-pub struct XTAL_TICK_NUM_R(crate::FieldReader<u8, u8>);
+pub struct XTAL_TICK_NUM_R(crate::FieldReader<u8>);
 impl XTAL_TICK_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl XTAL_TICK_NUM_R {
     }
 }
 impl core::ops::Deref for XTAL_TICK_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal_tick_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal_tick_conf](index.html) module"]
 pub struct XTAL_TICK_CONF_SPEC;
 impl crate::RegisterSpec for XTAL_TICK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtal_tick_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [xtal_tick_conf::R](R) reader structure"]
 impl crate::Readable for XTAL_TICK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [xtal_tick_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [xtal_tick_conf::W](W) writer structure"]
 impl crate::Writable for XTAL_TICK_CONF_SPEC {
     type Writer = W;
 }

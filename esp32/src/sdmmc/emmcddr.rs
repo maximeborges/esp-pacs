@@ -35,7 +35,7 @@ impl From<crate::W<EMMCDDR_SPEC>> for W {
     }
 }
 #[doc = "Field `HALFSTARTBIT` reader - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
-pub struct HALFSTARTBIT_R(crate::FieldReader<u8, u8>);
+pub struct HALFSTARTBIT_R(crate::FieldReader<u8>);
 impl HALFSTARTBIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl HALFSTARTBIT_R {
     }
 }
 impl core::ops::Deref for HALFSTARTBIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> HALFSTARTBIT_W<'a> {
     }
 }
 #[doc = "Field `HS400_MODE` reader - Set 1 to enable HS400 mode."]
-pub struct HS400_MODE_R(crate::FieldReader<bool, bool>);
+pub struct HS400_MODE_R(crate::FieldReader<bool>);
 impl HS400_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl HS400_MODE_R {
     }
 }
 impl core::ops::Deref for HS400_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "eMMC DDR register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [emmcddr]
-(index.html) module"]
+#[doc = "eMMC DDR register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [emmcddr](index.html) module"]
 pub struct EMMCDDR_SPEC;
 impl crate::RegisterSpec for EMMCDDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [emmcddr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [emmcddr::R](R) reader structure"]
 impl crate::Readable for EMMCDDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [emmcddr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [emmcddr::W](W) writer structure"]
 impl crate::Writable for EMMCDDR_SPEC {
     type Writer = W;
 }

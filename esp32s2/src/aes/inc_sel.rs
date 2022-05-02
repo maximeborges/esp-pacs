@@ -35,7 +35,7 @@ impl From<crate::W<INC_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `INC_SEL` reader - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
-pub struct INC_SEL_R(crate::FieldReader<bool, bool>);
+pub struct INC_SEL_R(crate::FieldReader<bool>);
 impl INC_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl INC_SEL_R {
     }
 }
 impl core::ops::Deref for INC_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Standard incrementing function register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inc_sel]
-(index.html) module"]
+#[doc = "Standard incrementing function register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inc_sel](index.html) module"]
 pub struct INC_SEL_SPEC;
 impl crate::RegisterSpec for INC_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [inc_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [inc_sel::R](R) reader structure"]
 impl crate::Readable for INC_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [inc_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [inc_sel::W](W) writer structure"]
 impl crate::Writable for INC_SEL_SPEC {
     type Writer = W;
 }

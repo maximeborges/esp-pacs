@@ -35,7 +35,7 @@ impl From<crate::W<SAR_IO_MUX_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IOMUX_RESET` reader - Reset IO MUX by software"]
-pub struct IOMUX_RESET_R(crate::FieldReader<bool, bool>);
+pub struct IOMUX_RESET_R(crate::FieldReader<bool>);
 impl IOMUX_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl IOMUX_RESET_R {
     }
 }
 impl core::ops::Deref for IOMUX_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> IOMUX_RESET_W<'a> {
     }
 }
 #[doc = "Field `IOMUX_CLK_GATE_EN` reader - IO MUX clock gate enable bit"]
-pub struct IOMUX_CLK_GATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct IOMUX_CLK_GATE_EN_R(crate::FieldReader<bool>);
 impl IOMUX_CLK_GATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl IOMUX_CLK_GATE_EN_R {
     }
 }
 impl core::ops::Deref for IOMUX_CLK_GATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure and reset IO MUX\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_io_mux_conf]
-(index.html) module"]
+#[doc = "Configure and reset IO MUX\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_io_mux_conf](index.html) module"]
 pub struct SAR_IO_MUX_CONF_SPEC;
 impl crate::RegisterSpec for SAR_IO_MUX_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_io_mux_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_io_mux_conf::R](R) reader structure"]
 impl crate::Readable for SAR_IO_MUX_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_io_mux_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_io_mux_conf::W](W) writer structure"]
 impl crate::Writable for SAR_IO_MUX_CONF_SPEC {
     type Writer = W;
 }

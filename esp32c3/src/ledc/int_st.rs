@@ -14,7 +14,7 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LSTIMER0_OVF_INT_ST` reader - reg_lstimer0_ovf_int_st."]
-pub struct LSTIMER0_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER0_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl LSTIMER0_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl LSTIMER0_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for LSTIMER0_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LSTIMER1_OVF_INT_ST` reader - reg_lstimer1_ovf_int_st."]
-pub struct LSTIMER1_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER1_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl LSTIMER1_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl LSTIMER1_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for LSTIMER1_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LSTIMER2_OVF_INT_ST` reader - reg_lstimer2_ovf_int_st."]
-pub struct LSTIMER2_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER2_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl LSTIMER2_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl LSTIMER2_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for LSTIMER2_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LSTIMER3_OVF_INT_ST` reader - reg_lstimer3_ovf_int_st."]
-pub struct LSTIMER3_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER3_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl LSTIMER3_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl LSTIMER3_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for LSTIMER3_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ST` reader - reg_duty_chng_end_lsch0_int_st."]
-pub struct DUTY_CHNG_END_LSCH0_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH0_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH0_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl DUTY_CHNG_END_LSCH0_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH0_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ST` reader - reg_duty_chng_end_lsch1_int_st."]
-pub struct DUTY_CHNG_END_LSCH1_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH1_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH1_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl DUTY_CHNG_END_LSCH1_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH1_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ST` reader - reg_duty_chng_end_lsch2_int_st."]
-pub struct DUTY_CHNG_END_LSCH2_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH2_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH2_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl DUTY_CHNG_END_LSCH2_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH2_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ST` reader - reg_duty_chng_end_lsch3_int_st."]
-pub struct DUTY_CHNG_END_LSCH3_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH3_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH3_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl DUTY_CHNG_END_LSCH3_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH3_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ST` reader - reg_duty_chng_end_lsch4_int_st."]
-pub struct DUTY_CHNG_END_LSCH4_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH4_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH4_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl DUTY_CHNG_END_LSCH4_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH4_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ST` reader - reg_duty_chng_end_lsch5_int_st."]
-pub struct DUTY_CHNG_END_LSCH5_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH5_INT_ST_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH5_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl DUTY_CHNG_END_LSCH5_INT_ST_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH5_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH0_INT_ST` reader - reg_ovf_cnt_lsch0_int_st."]
-pub struct OVF_CNT_LSCH0_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH0_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH0_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl OVF_CNT_LSCH0_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH0_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH1_INT_ST` reader - reg_ovf_cnt_lsch1_int_st."]
-pub struct OVF_CNT_LSCH1_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH1_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH1_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl OVF_CNT_LSCH1_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH1_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH2_INT_ST` reader - reg_ovf_cnt_lsch2_int_st."]
-pub struct OVF_CNT_LSCH2_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH2_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH2_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl OVF_CNT_LSCH2_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH2_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH3_INT_ST` reader - reg_ovf_cnt_lsch3_int_st."]
-pub struct OVF_CNT_LSCH3_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH3_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH3_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl OVF_CNT_LSCH3_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH3_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH4_INT_ST` reader - reg_ovf_cnt_lsch4_int_st."]
-pub struct OVF_CNT_LSCH4_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH4_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH4_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl OVF_CNT_LSCH4_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH4_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVF_CNT_LSCH5_INT_ST` reader - reg_ovf_cnt_lsch5_int_st."]
-pub struct OVF_CNT_LSCH5_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_LSCH5_INT_ST_R(crate::FieldReader<bool>);
 impl OVF_CNT_LSCH5_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,7 +247,7 @@ impl OVF_CNT_LSCH5_INT_ST_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_LSCH5_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -335,16 +335,12 @@ impl R {
         OVF_CNT_LSCH5_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
-#[doc = "LEDC_INT_ST.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st]
-(index.html) module"]
+#[doc = "LEDC_INT_ST.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_st::R](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {
     type Reader = R;
 }

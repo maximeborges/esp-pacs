@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `JTAG_IN_FLUSH_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
-pub struct JTAG_IN_FLUSH_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct JTAG_IN_FLUSH_INT_ENA_R(crate::FieldReader<bool>);
 impl JTAG_IN_FLUSH_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl JTAG_IN_FLUSH_INT_ENA_R {
     }
 }
 impl core::ops::Deref for JTAG_IN_FLUSH_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> JTAG_IN_FLUSH_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SOF_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
-pub struct SOF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SOF_INT_ENA_R(crate::FieldReader<bool>);
 impl SOF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SOF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SOF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SOF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
-pub struct SERIAL_OUT_RECV_PKT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SERIAL_OUT_RECV_PKT_INT_ENA_R(crate::FieldReader<bool>);
 impl SERIAL_OUT_RECV_PKT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SERIAL_OUT_RECV_PKT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SERIAL_OUT_RECV_PKT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SERIAL_OUT_RECV_PKT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SERIAL_IN_EMPTY_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
-pub struct SERIAL_IN_EMPTY_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SERIAL_IN_EMPTY_INT_ENA_R(crate::FieldReader<bool>);
 impl SERIAL_IN_EMPTY_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SERIAL_IN_EMPTY_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SERIAL_IN_EMPTY_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SERIAL_IN_EMPTY_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `PID_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
-pub struct PID_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PID_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl PID_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PID_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for PID_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PID_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CRC5_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
-pub struct CRC5_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CRC5_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl CRC5_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CRC5_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CRC5_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CRC5_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CRC16_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
-pub struct CRC16_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CRC16_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl CRC16_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CRC16_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CRC16_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CRC16_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `STUFF_ERR_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
-pub struct STUFF_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct STUFF_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl STUFF_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl STUFF_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for STUFF_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> STUFF_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
-pub struct IN_TOKEN_REC_IN_EP1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IN_TOKEN_REC_IN_EP1_INT_ENA_R(crate::FieldReader<bool>);
 impl IN_TOKEN_REC_IN_EP1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl IN_TOKEN_REC_IN_EP1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IN_TOKEN_REC_IN_EP1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> IN_TOKEN_REC_IN_EP1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `USB_BUS_RESET_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
-pub struct USB_BUS_RESET_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct USB_BUS_RESET_INT_ENA_R(crate::FieldReader<bool>);
 impl USB_BUS_RESET_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl USB_BUS_RESET_INT_ENA_R {
     }
 }
 impl core::ops::Deref for USB_BUS_RESET_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> USB_BUS_RESET_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
-pub struct OUT_EP1_ZERO_PAYLOAD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct OUT_EP1_ZERO_PAYLOAD_INT_ENA_R(crate::FieldReader<bool>);
 impl OUT_EP1_ZERO_PAYLOAD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl OUT_EP1_ZERO_PAYLOAD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for OUT_EP1_ZERO_PAYLOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_ENA` reader - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
-pub struct OUT_EP2_ZERO_PAYLOAD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct OUT_EP2_ZERO_PAYLOAD_INT_ENA_R(crate::FieldReader<bool>);
 impl OUT_EP2_ZERO_PAYLOAD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl OUT_EP2_ZERO_PAYLOAD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for OUT_EP2_ZERO_PAYLOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -608,25 +608,16 @@ impl W {
         self
     }
 }
-#[doc = "USB_DEVICE_INT_ENA_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena]
-(index.html) module"]
+#[doc = "USB_DEVICE_INT_ENA_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
 impl crate::Readable for INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
 }

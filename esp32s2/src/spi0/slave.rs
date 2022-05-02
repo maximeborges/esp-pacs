@@ -35,7 +35,7 @@ impl From<crate::W<SLAVE_SPEC>> for W {
     }
 }
 #[doc = "Field `TRANS_DONE` reader - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
-pub struct TRANS_DONE_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_DONE_R(crate::FieldReader<bool>);
 impl TRANS_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TRANS_DONE_R {
     }
 }
 impl core::ops::Deref for TRANS_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TRANS_DONE_W<'a> {
     }
 }
 #[doc = "Field `INT_RD_BUF_DONE_EN` reader - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_RD_BUF_DONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_RD_BUF_DONE_EN_R(crate::FieldReader<bool>);
 impl INT_RD_BUF_DONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl INT_RD_BUF_DONE_EN_R {
     }
 }
 impl core::ops::Deref for INT_RD_BUF_DONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> INT_RD_BUF_DONE_EN_W<'a> {
     }
 }
 #[doc = "Field `INT_WR_BUF_DONE_EN` reader - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_WR_BUF_DONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_WR_BUF_DONE_EN_R(crate::FieldReader<bool>);
 impl INT_WR_BUF_DONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl INT_WR_BUF_DONE_EN_R {
     }
 }
 impl core::ops::Deref for INT_WR_BUF_DONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> INT_WR_BUF_DONE_EN_W<'a> {
     }
 }
 #[doc = "Field `INT_RD_DMA_DONE_EN` reader - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_RD_DMA_DONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_RD_DMA_DONE_EN_R(crate::FieldReader<bool>);
 impl INT_RD_DMA_DONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl INT_RD_DMA_DONE_EN_R {
     }
 }
 impl core::ops::Deref for INT_RD_DMA_DONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> INT_RD_DMA_DONE_EN_W<'a> {
     }
 }
 #[doc = "Field `INT_WR_DMA_DONE_EN` reader - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_WR_DMA_DONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_WR_DMA_DONE_EN_R(crate::FieldReader<bool>);
 impl INT_WR_DMA_DONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl INT_WR_DMA_DONE_EN_R {
     }
 }
 impl core::ops::Deref for INT_WR_DMA_DONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> INT_WR_DMA_DONE_EN_W<'a> {
     }
 }
 #[doc = "Field `INT_TRANS_DONE_EN` reader - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_TRANS_DONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_TRANS_DONE_EN_R(crate::FieldReader<bool>);
 impl INT_TRANS_DONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl INT_TRANS_DONE_EN_R {
     }
 }
 impl core::ops::Deref for INT_TRANS_DONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> INT_TRANS_DONE_EN_W<'a> {
     }
 }
 #[doc = "Field `INT_DMA_SEG_TRANS_EN` reader - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct INT_DMA_SEG_TRANS_EN_R(crate::FieldReader<bool, bool>);
+pub struct INT_DMA_SEG_TRANS_EN_R(crate::FieldReader<bool>);
 impl INT_DMA_SEG_TRANS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl INT_DMA_SEG_TRANS_EN_R {
     }
 }
 impl core::ops::Deref for INT_DMA_SEG_TRANS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> INT_DMA_SEG_TRANS_EN_W<'a> {
     }
 }
 #[doc = "Field `SEG_MAGIC_ERR_INT_EN` reader - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
-pub struct SEG_MAGIC_ERR_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct SEG_MAGIC_ERR_INT_EN_R(crate::FieldReader<bool>);
 impl SEG_MAGIC_ERR_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SEG_MAGIC_ERR_INT_EN_R {
     }
 }
 impl core::ops::Deref for SEG_MAGIC_ERR_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SEG_MAGIC_ERR_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `TRANS_CNT` reader - The operations counter in both the master mode and the slave mode."]
-pub struct TRANS_CNT_R(crate::FieldReader<u8, u8>);
+pub struct TRANS_CNT_R(crate::FieldReader<u8>);
 impl TRANS_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -339,14 +339,14 @@ impl TRANS_CNT_R {
     }
 }
 impl core::ops::Deref for TRANS_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_DONE_AUTO_CLR_EN` reader - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
-pub struct TRANS_DONE_AUTO_CLR_EN_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_DONE_AUTO_CLR_EN_R(crate::FieldReader<bool>);
 impl TRANS_DONE_AUTO_CLR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -354,7 +354,7 @@ impl TRANS_DONE_AUTO_CLR_EN_R {
     }
 }
 impl core::ops::Deref for TRANS_DONE_AUTO_CLR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -383,7 +383,7 @@ impl<'a> TRANS_DONE_AUTO_CLR_EN_W<'a> {
     }
 }
 #[doc = "Field `MODE` reader - Set SPI work mode. 1: slave mode 0: master mode."]
-pub struct MODE_R(crate::FieldReader<bool, bool>);
+pub struct MODE_R(crate::FieldReader<bool>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -391,7 +391,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,7 +420,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `SOFT_RESET` reader - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
-pub struct SOFT_RESET_R(crate::FieldReader<bool, bool>);
+pub struct SOFT_RESET_R(crate::FieldReader<bool>);
 impl SOFT_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -428,7 +428,7 @@ impl SOFT_RESET_R {
     }
 }
 impl core::ops::Deref for SOFT_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -581,25 +581,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI slave control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave]
-(index.html) module"]
+#[doc = "SPI slave control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave](index.html) module"]
 pub struct SLAVE_SPEC;
 impl crate::RegisterSpec for SLAVE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slave::R](R) reader structure"]
 impl crate::Readable for SLAVE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slave::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slave::W](W) writer structure"]
 impl crate::Writable for SLAVE_SPEC {
     type Writer = W;
 }

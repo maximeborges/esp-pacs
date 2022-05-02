@@ -35,7 +35,7 @@ impl From<crate::W<CAM_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CAM_REC_DATA_BYTELEN` reader - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
-pub struct CAM_REC_DATA_BYTELEN_R(crate::FieldReader<u16, u16>);
+pub struct CAM_REC_DATA_BYTELEN_R(crate::FieldReader<u16>);
 impl CAM_REC_DATA_BYTELEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CAM_REC_DATA_BYTELEN_R {
     }
 }
 impl core::ops::Deref for CAM_REC_DATA_BYTELEN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CAM_REC_DATA_BYTELEN_W<'a> {
     }
 }
 #[doc = "Field `CAM_LINE_INT_NUM` reader - The line number minus 1 to generate cam_hs_int."]
-pub struct CAM_LINE_INT_NUM_R(crate::FieldReader<u8, u8>);
+pub struct CAM_LINE_INT_NUM_R(crate::FieldReader<u8>);
 impl CAM_LINE_INT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CAM_LINE_INT_NUM_R {
     }
 }
 impl core::ops::Deref for CAM_LINE_INT_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CAM_LINE_INT_NUM_W<'a> {
     }
 }
 #[doc = "Field `CAM_CLK_INV` reader - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
-pub struct CAM_CLK_INV_R(crate::FieldReader<bool, bool>);
+pub struct CAM_CLK_INV_R(crate::FieldReader<bool>);
 impl CAM_CLK_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl CAM_CLK_INV_R {
     }
 }
 impl core::ops::Deref for CAM_CLK_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> CAM_CLK_INV_W<'a> {
     }
 }
 #[doc = "Field `CAM_VSYNC_FILTER_EN` reader - 1: Enable CAM_VSYNC filter function. 0: bypass."]
-pub struct CAM_VSYNC_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAM_VSYNC_FILTER_EN_R(crate::FieldReader<bool>);
 impl CAM_VSYNC_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl CAM_VSYNC_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for CAM_VSYNC_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> CAM_VSYNC_FILTER_EN_W<'a> {
     }
 }
 #[doc = "Field `CAM_2BYTE_EN` reader - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
-pub struct CAM_2BYTE_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAM_2BYTE_EN_R(crate::FieldReader<bool>);
 impl CAM_2BYTE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl CAM_2BYTE_EN_R {
     }
 }
 impl core::ops::Deref for CAM_2BYTE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> CAM_2BYTE_EN_W<'a> {
     }
 }
 #[doc = "Field `CAM_DE_INV` reader - CAM_DE invert enable signal, valid in high level."]
-pub struct CAM_DE_INV_R(crate::FieldReader<bool, bool>);
+pub struct CAM_DE_INV_R(crate::FieldReader<bool>);
 impl CAM_DE_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl CAM_DE_INV_R {
     }
 }
 impl core::ops::Deref for CAM_DE_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> CAM_DE_INV_W<'a> {
     }
 }
 #[doc = "Field `CAM_HSYNC_INV` reader - CAM_HSYNC invert enable signal, valid in high level."]
-pub struct CAM_HSYNC_INV_R(crate::FieldReader<bool, bool>);
+pub struct CAM_HSYNC_INV_R(crate::FieldReader<bool>);
 impl CAM_HSYNC_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl CAM_HSYNC_INV_R {
     }
 }
 impl core::ops::Deref for CAM_HSYNC_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> CAM_HSYNC_INV_W<'a> {
     }
 }
 #[doc = "Field `CAM_VSYNC_INV` reader - CAM_VSYNC invert enable signal, valid in high level."]
-pub struct CAM_VSYNC_INV_R(crate::FieldReader<bool, bool>);
+pub struct CAM_VSYNC_INV_R(crate::FieldReader<bool>);
 impl CAM_VSYNC_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl CAM_VSYNC_INV_R {
     }
 }
 impl core::ops::Deref for CAM_VSYNC_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> CAM_VSYNC_INV_W<'a> {
     }
 }
 #[doc = "Field `CAM_VH_DE_MODE_EN` reader - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
-pub struct CAM_VH_DE_MODE_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAM_VH_DE_MODE_EN_R(crate::FieldReader<bool>);
 impl CAM_VH_DE_MODE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl CAM_VH_DE_MODE_EN_R {
     }
 }
 impl core::ops::Deref for CAM_VH_DE_MODE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> CAM_VH_DE_MODE_EN_W<'a> {
     }
 }
 #[doc = "Field `CAM_START` reader - Camera module start signal."]
-pub struct CAM_START_R(crate::FieldReader<bool, bool>);
+pub struct CAM_START_R(crate::FieldReader<bool>);
 impl CAM_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl CAM_START_R {
     }
 }
 impl core::ops::Deref for CAM_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -548,25 +548,16 @@ impl W {
         self
     }
 }
-#[doc = "Camera configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cam_ctrl1]
-(index.html) module"]
+#[doc = "Camera configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cam_ctrl1](index.html) module"]
 pub struct CAM_CTRL1_SPEC;
 impl crate::RegisterSpec for CAM_CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cam_ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cam_ctrl1::R](R) reader structure"]
 impl crate::Readable for CAM_CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cam_ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cam_ctrl1::W](W) writer structure"]
 impl crate::Writable for CAM_CTRL1_SPEC {
     type Writer = W;
 }

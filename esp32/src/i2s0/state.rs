@@ -14,7 +14,7 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_IDLE` reader - "]
-pub struct TX_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct TX_IDLE_R(crate::FieldReader<bool>);
 impl TX_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl TX_IDLE_R {
     }
 }
 impl core::ops::Deref for TX_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_FIFO_RESET_BACK` reader - "]
-pub struct TX_FIFO_RESET_BACK_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_RESET_BACK_R(crate::FieldReader<bool>);
 impl TX_FIFO_RESET_BACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TX_FIFO_RESET_BACK_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_RESET_BACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_FIFO_RESET_BACK` reader - "]
-pub struct RX_FIFO_RESET_BACK_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_RESET_BACK_R(crate::FieldReader<bool>);
 impl RX_FIFO_RESET_BACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl RX_FIFO_RESET_BACK_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_RESET_BACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         RX_FIFO_RESET_BACK_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state](index.html) module"]
 pub struct STATE_SPEC;
 impl crate::RegisterSpec for STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [state::R](R) reader structure"]
 impl crate::Readable for STATE_SPEC {
     type Reader = R;
 }

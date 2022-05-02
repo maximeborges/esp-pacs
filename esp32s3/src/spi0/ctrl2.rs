@@ -35,7 +35,7 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
-pub struct CS_SETUP_TIME_R(crate::FieldReader<u8, u8>);
+pub struct CS_SETUP_TIME_R(crate::FieldReader<u8>);
 impl CS_SETUP_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CS_SETUP_TIME_R {
     }
 }
 impl core::ops::Deref for CS_SETUP_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CS_SETUP_TIME_W<'a> {
     }
 }
 #[doc = "Field `CS_HOLD_TIME` reader - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
-pub struct CS_HOLD_TIME_R(crate::FieldReader<u8, u8>);
+pub struct CS_HOLD_TIME_R(crate::FieldReader<u8>);
 impl CS_HOLD_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CS_HOLD_TIME_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CS_HOLD_TIME_W<'a> {
     }
 }
 #[doc = "Field `ECC_CS_HOLD_TIME` reader - SPI_MEM_CS_HOLD_TIME + SPI_MEM_ECC_CS_HOLD_TIME is the SPI_CS hold cycle in ECC mode when accessed flash."]
-pub struct ECC_CS_HOLD_TIME_R(crate::FieldReader<u8, u8>);
+pub struct ECC_CS_HOLD_TIME_R(crate::FieldReader<u8>);
 impl ECC_CS_HOLD_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl ECC_CS_HOLD_TIME_R {
     }
 }
 impl core::ops::Deref for ECC_CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> ECC_CS_HOLD_TIME_W<'a> {
     }
 }
 #[doc = "Field `ECC_SKIP_PAGE_CORNER` reader - 1: MSPI skips page corner when accesses flash. 0: Not skip page corner when accesses flash."]
-pub struct ECC_SKIP_PAGE_CORNER_R(crate::FieldReader<bool, bool>);
+pub struct ECC_SKIP_PAGE_CORNER_R(crate::FieldReader<bool>);
 impl ECC_SKIP_PAGE_CORNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl ECC_SKIP_PAGE_CORNER_R {
     }
 }
 impl core::ops::Deref for ECC_SKIP_PAGE_CORNER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> ECC_SKIP_PAGE_CORNER_W<'a> {
     }
 }
 #[doc = "Field `ECC_16TO18_BYTE_EN` reader - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses flash."]
-pub struct ECC_16TO18_BYTE_EN_R(crate::FieldReader<bool, bool>);
+pub struct ECC_16TO18_BYTE_EN_R(crate::FieldReader<bool>);
 impl ECC_16TO18_BYTE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl ECC_16TO18_BYTE_EN_R {
     }
 }
 impl core::ops::Deref for ECC_16TO18_BYTE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -189,9 +189,8 @@ impl<'a> ECC_16TO18_BYTE_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\]
- + 1) MSPI core clock cycles."]
-pub struct CS_HOLD_DELAY_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
+pub struct CS_HOLD_DELAY_R(crate::FieldReader<u8>);
 impl CS_HOLD_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -199,14 +198,13 @@ impl CS_HOLD_DELAY_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\]
- + 1) MSPI core clock cycles."]
+#[doc = "Field `CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
 pub struct CS_HOLD_DELAY_W<'a> {
     w: &'a mut W,
 }
@@ -219,7 +217,7 @@ impl<'a> CS_HOLD_DELAY_W<'a> {
     }
 }
 #[doc = "Field `SYNC_RESET` reader - The FSM will be reset."]
-pub struct SYNC_RESET_R(crate::FieldReader<bool, bool>);
+pub struct SYNC_RESET_R(crate::FieldReader<bool>);
 impl SYNC_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -227,7 +225,7 @@ impl SYNC_RESET_R {
     }
 }
 impl core::ops::Deref for SYNC_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -281,8 +279,7 @@ impl R {
     pub fn ecc_16to18_byte_en(&self) -> ECC_16TO18_BYTE_EN_R {
         ECC_16TO18_BYTE_EN_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\]
- + 1) MSPI core clock cycles."]
+    #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
     pub fn cs_hold_delay(&self) -> CS_HOLD_DELAY_R {
         CS_HOLD_DELAY_R::new(((self.bits >> 25) & 0x3f) as u8)
@@ -319,8 +316,7 @@ impl W {
     pub fn ecc_16to18_byte_en(&mut self) -> ECC_16TO18_BYTE_EN_W {
         ECC_16TO18_BYTE_EN_W { w: self }
     }
-    #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\]
- + 1) MSPI core clock cycles."]
+    #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
     pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W {
         CS_HOLD_DELAY_W { w: self }
@@ -337,25 +333,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 control 2 register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl2]
-(index.html) module"]
+#[doc = "SPI0 control 2 register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl2](index.html) module"]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl2::R](R) reader structure"]
 impl crate::Readable for CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl2::W](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Writer = W;
 }

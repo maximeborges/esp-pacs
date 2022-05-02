@@ -35,7 +35,7 @@ impl From<crate::W<BLK0_WDATA5_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_CLK` reader - program for SPI_pad_config_clk"]
-pub struct SPI_PAD_CONFIG_CLK_R(crate::FieldReader<u8, u8>);
+pub struct SPI_PAD_CONFIG_CLK_R(crate::FieldReader<u8>);
 impl SPI_PAD_CONFIG_CLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SPI_PAD_CONFIG_CLK_R {
     }
 }
 impl core::ops::Deref for SPI_PAD_CONFIG_CLK_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SPI_PAD_CONFIG_CLK_W<'a> {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_Q` reader - program for SPI_pad_config_q"]
-pub struct SPI_PAD_CONFIG_Q_R(crate::FieldReader<u8, u8>);
+pub struct SPI_PAD_CONFIG_Q_R(crate::FieldReader<u8>);
 impl SPI_PAD_CONFIG_Q_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SPI_PAD_CONFIG_Q_R {
     }
 }
 impl core::ops::Deref for SPI_PAD_CONFIG_Q_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SPI_PAD_CONFIG_Q_W<'a> {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_D` reader - program for SPI_pad_config_d"]
-pub struct SPI_PAD_CONFIG_D_R(crate::FieldReader<u8, u8>);
+pub struct SPI_PAD_CONFIG_D_R(crate::FieldReader<u8>);
 impl SPI_PAD_CONFIG_D_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SPI_PAD_CONFIG_D_R {
     }
 }
 impl core::ops::Deref for SPI_PAD_CONFIG_D_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> SPI_PAD_CONFIG_D_W<'a> {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_CS0` reader - program for SPI_pad_config_cs0"]
-pub struct SPI_PAD_CONFIG_CS0_R(crate::FieldReader<u8, u8>);
+pub struct SPI_PAD_CONFIG_CS0_R(crate::FieldReader<u8>);
 impl SPI_PAD_CONFIG_CS0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl SPI_PAD_CONFIG_CS0_R {
     }
 }
 impl core::ops::Deref for SPI_PAD_CONFIG_CS0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> SPI_PAD_CONFIG_CS0_W<'a> {
     }
 }
 #[doc = "Field `INST_CONFIG` reader - "]
-pub struct INST_CONFIG_R(crate::FieldReader<u8, u8>);
+pub struct INST_CONFIG_R(crate::FieldReader<u8>);
 impl INST_CONFIG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl INST_CONFIG_R {
     }
 }
 impl core::ops::Deref for INST_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> INST_CONFIG_W<'a> {
     }
 }
 #[doc = "Field `VOL_LEVEL_HP_INV` reader - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)"]
-pub struct VOL_LEVEL_HP_INV_R(crate::FieldReader<u8, u8>);
+pub struct VOL_LEVEL_HP_INV_R(crate::FieldReader<u8>);
 impl VOL_LEVEL_HP_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl VOL_LEVEL_HP_INV_R {
     }
 }
 impl core::ops::Deref for VOL_LEVEL_HP_INV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> VOL_LEVEL_HP_INV_W<'a> {
     }
 }
 #[doc = "Field `DIG_VOL_L6` reader - "]
-pub struct DIG_VOL_L6_R(crate::FieldReader<u8, u8>);
+pub struct DIG_VOL_L6_R(crate::FieldReader<u8>);
 impl DIG_VOL_L6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DIG_VOL_L6_R {
     }
 }
 impl core::ops::Deref for DIG_VOL_L6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DIG_VOL_L6_W<'a> {
     }
 }
 #[doc = "Field `FLASH_CRYPT_CONFIG` reader - program for flash_crypt_config"]
-pub struct FLASH_CRYPT_CONFIG_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_CRYPT_CONFIG_R(crate::FieldReader<u8>);
 impl FLASH_CRYPT_CONFIG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl FLASH_CRYPT_CONFIG_R {
     }
 }
 impl core::ops::Deref for FLASH_CRYPT_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -340,25 +340,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata5]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata5](index.html) module"]
 pub struct BLK0_WDATA5_SPEC;
 impl crate::RegisterSpec for BLK0_WDATA5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_wdata5::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_wdata5::R](R) reader structure"]
 impl crate::Readable for BLK0_WDATA5_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk0_wdata5::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk0_wdata5::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA5_SPEC {
     type Writer = W;
 }

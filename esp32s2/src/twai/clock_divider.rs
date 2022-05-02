@@ -35,7 +35,7 @@ impl From<crate::W<CLOCK_DIVIDER_SPEC>> for W {
     }
 }
 #[doc = "Field `CD` reader - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
-pub struct CD_R(crate::FieldReader<u8, u8>);
+pub struct CD_R(crate::FieldReader<u8>);
 impl CD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CD_R {
     }
 }
 impl core::ops::Deref for CD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CD_W<'a> {
     }
 }
 #[doc = "Field `CLOCK_OFF` reader - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
-pub struct CLOCK_OFF_R(crate::FieldReader<bool, bool>);
+pub struct CLOCK_OFF_R(crate::FieldReader<bool>);
 impl CLOCK_OFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl CLOCK_OFF_R {
     }
 }
 impl core::ops::Deref for CLOCK_OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Clock Divider register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock_divider]
-(index.html) module"]
+#[doc = "Clock Divider register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock_divider](index.html) module"]
 pub struct CLOCK_DIVIDER_SPEC;
 impl crate::RegisterSpec for CLOCK_DIVIDER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clock_divider::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clock_divider::R](R) reader structure"]
 impl crate::Readable for CLOCK_DIVIDER_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clock_divider::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clock_divider::W](W) writer structure"]
 impl crate::Writable for CLOCK_DIVIDER_SPEC {
     type Writer = W;
 }

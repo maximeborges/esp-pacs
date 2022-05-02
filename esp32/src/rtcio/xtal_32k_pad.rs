@@ -35,7 +35,7 @@ impl From<crate::W<XTAL_32K_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `DBIAS_XTAL_32K` reader - 32K XTAL self-bias reference control."]
-pub struct DBIAS_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DBIAS_XTAL_32K_R(crate::FieldReader<u8>);
 impl DBIAS_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DBIAS_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DBIAS_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DBIAS_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DRES_XTAL_32K` reader - 32K XTAL resistor bias control."]
-pub struct DRES_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DRES_XTAL_32K_R(crate::FieldReader<u8>);
 impl DRES_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DRES_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DRES_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DRES_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `X32P_FUN_IE` reader - the input enable of the pad"]
-pub struct X32P_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_FUN_IE_R(crate::FieldReader<bool>);
 impl X32P_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl X32P_FUN_IE_R {
     }
 }
 impl core::ops::Deref for X32P_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> X32P_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `X32P_SLP_OE` reader - the output enable of the pad in sleep status"]
-pub struct X32P_SLP_OE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_SLP_OE_R(crate::FieldReader<bool>);
 impl X32P_SLP_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl X32P_SLP_OE_R {
     }
 }
 impl core::ops::Deref for X32P_SLP_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> X32P_SLP_OE_W<'a> {
     }
 }
 #[doc = "Field `X32P_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct X32P_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_SLP_IE_R(crate::FieldReader<bool>);
 impl X32P_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl X32P_SLP_IE_R {
     }
 }
 impl core::ops::Deref for X32P_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> X32P_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `X32P_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct X32P_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct X32P_SLP_SEL_R(crate::FieldReader<bool>);
 impl X32P_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl X32P_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for X32P_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> X32P_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `X32P_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct X32P_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct X32P_FUN_SEL_R(crate::FieldReader<u8>);
 impl X32P_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -245,7 +245,7 @@ impl X32P_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for X32P_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> X32P_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `X32N_FUN_IE` reader - the input enable of the pad"]
-pub struct X32N_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_FUN_IE_R(crate::FieldReader<bool>);
 impl X32N_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -272,7 +272,7 @@ impl X32N_FUN_IE_R {
     }
 }
 impl core::ops::Deref for X32N_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl<'a> X32N_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `X32N_SLP_OE` reader - the output enable of the pad in sleep status"]
-pub struct X32N_SLP_OE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_SLP_OE_R(crate::FieldReader<bool>);
 impl X32N_SLP_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -309,7 +309,7 @@ impl X32N_SLP_OE_R {
     }
 }
 impl core::ops::Deref for X32N_SLP_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> X32N_SLP_OE_W<'a> {
     }
 }
 #[doc = "Field `X32N_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct X32N_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_SLP_IE_R(crate::FieldReader<bool>);
 impl X32N_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -346,7 +346,7 @@ impl X32N_SLP_IE_R {
     }
 }
 impl core::ops::Deref for X32N_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -375,7 +375,7 @@ impl<'a> X32N_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `X32N_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct X32N_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct X32N_SLP_SEL_R(crate::FieldReader<bool>);
 impl X32N_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -383,7 +383,7 @@ impl X32N_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for X32N_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -412,7 +412,7 @@ impl<'a> X32N_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `X32N_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct X32N_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct X32N_FUN_SEL_R(crate::FieldReader<u8>);
 impl X32N_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -420,7 +420,7 @@ impl X32N_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for X32N_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -439,7 +439,7 @@ impl<'a> X32N_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `X32P_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct X32P_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct X32P_MUX_SEL_R(crate::FieldReader<bool>);
 impl X32P_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -447,7 +447,7 @@ impl X32P_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for X32P_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -476,7 +476,7 @@ impl<'a> X32P_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `X32N_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct X32N_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct X32N_MUX_SEL_R(crate::FieldReader<bool>);
 impl X32N_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -484,7 +484,7 @@ impl X32N_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for X32N_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -513,7 +513,7 @@ impl<'a> X32N_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `XPD_XTAL_32K` reader - Power up 32kHz crystal oscillator"]
-pub struct XPD_XTAL_32K_R(crate::FieldReader<bool, bool>);
+pub struct XPD_XTAL_32K_R(crate::FieldReader<bool>);
 impl XPD_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -521,7 +521,7 @@ impl XPD_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for XPD_XTAL_32K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -550,7 +550,7 @@ impl<'a> XPD_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DAC_XTAL_32K` reader - 32K XTAL bias current DAC."]
-pub struct DAC_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DAC_XTAL_32K_R(crate::FieldReader<u8>);
 impl DAC_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -558,7 +558,7 @@ impl DAC_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DAC_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -577,7 +577,7 @@ impl<'a> DAC_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `X32P_RUE` reader - the pull up enable of the pad"]
-pub struct X32P_RUE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_RUE_R(crate::FieldReader<bool>);
 impl X32P_RUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -585,7 +585,7 @@ impl X32P_RUE_R {
     }
 }
 impl core::ops::Deref for X32P_RUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -614,7 +614,7 @@ impl<'a> X32P_RUE_W<'a> {
     }
 }
 #[doc = "Field `X32P_RDE` reader - the pull down enable of the pad"]
-pub struct X32P_RDE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_RDE_R(crate::FieldReader<bool>);
 impl X32P_RDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -622,7 +622,7 @@ impl X32P_RDE_R {
     }
 }
 impl core::ops::Deref for X32P_RDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -651,7 +651,7 @@ impl<'a> X32P_RDE_W<'a> {
     }
 }
 #[doc = "Field `X32P_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct X32P_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct X32P_HOLD_R(crate::FieldReader<bool>);
 impl X32P_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -659,7 +659,7 @@ impl X32P_HOLD_R {
     }
 }
 impl core::ops::Deref for X32P_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -688,7 +688,7 @@ impl<'a> X32P_HOLD_W<'a> {
     }
 }
 #[doc = "Field `X32P_DRV` reader - the driver strength of the pad"]
-pub struct X32P_DRV_R(crate::FieldReader<u8, u8>);
+pub struct X32P_DRV_R(crate::FieldReader<u8>);
 impl X32P_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -696,7 +696,7 @@ impl X32P_DRV_R {
     }
 }
 impl core::ops::Deref for X32P_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -715,7 +715,7 @@ impl<'a> X32P_DRV_W<'a> {
     }
 }
 #[doc = "Field `X32N_RUE` reader - the pull up enable of the pad"]
-pub struct X32N_RUE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_RUE_R(crate::FieldReader<bool>);
 impl X32N_RUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -723,7 +723,7 @@ impl X32N_RUE_R {
     }
 }
 impl core::ops::Deref for X32N_RUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -752,7 +752,7 @@ impl<'a> X32N_RUE_W<'a> {
     }
 }
 #[doc = "Field `X32N_RDE` reader - the pull down enable of the pad"]
-pub struct X32N_RDE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_RDE_R(crate::FieldReader<bool>);
 impl X32N_RDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -760,7 +760,7 @@ impl X32N_RDE_R {
     }
 }
 impl core::ops::Deref for X32N_RDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -789,7 +789,7 @@ impl<'a> X32N_RDE_W<'a> {
     }
 }
 #[doc = "Field `X32N_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct X32N_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct X32N_HOLD_R(crate::FieldReader<bool>);
 impl X32N_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -797,7 +797,7 @@ impl X32N_HOLD_R {
     }
 }
 impl core::ops::Deref for X32N_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -826,7 +826,7 @@ impl<'a> X32N_HOLD_W<'a> {
     }
 }
 #[doc = "Field `X32N_DRV` reader - the driver strength of the pad"]
-pub struct X32N_DRV_R(crate::FieldReader<u8, u8>);
+pub struct X32N_DRV_R(crate::FieldReader<u8>);
 impl X32N_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -834,7 +834,7 @@ impl X32N_DRV_R {
     }
 }
 impl core::ops::Deref for X32N_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1102,25 +1102,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal_32k_pad]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal_32k_pad](index.html) module"]
 pub struct XTAL_32K_PAD_SPEC;
 impl crate::RegisterSpec for XTAL_32K_PAD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtal_32k_pad::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [xtal_32k_pad::R](R) reader structure"]
 impl crate::Readable for XTAL_32K_PAD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [xtal_32k_pad::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [xtal_32k_pad::W](W) writer structure"]
 impl crate::Writable for XTAL_32K_PAD_SPEC {
     type Writer = W;
 }

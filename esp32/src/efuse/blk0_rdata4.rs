@@ -35,7 +35,7 @@ impl From<crate::W<BLK0_RDATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_CK8M_FREQ` reader - "]
-pub struct RD_CK8M_FREQ_R(crate::FieldReader<u8, u8>);
+pub struct RD_CK8M_FREQ_R(crate::FieldReader<u8>);
 impl RD_CK8M_FREQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl RD_CK8M_FREQ_R {
     }
 }
 impl core::ops::Deref for RD_CK8M_FREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_ADC_VREF` reader - True ADC reference voltage"]
-pub struct RD_ADC_VREF_R(crate::FieldReader<u8, u8>);
+pub struct RD_ADC_VREF_R(crate::FieldReader<u8>);
 impl RD_ADC_VREF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl RD_ADC_VREF_R {
     }
 }
 impl core::ops::Deref for RD_ADC_VREF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -77,7 +77,7 @@ impl<'a> RD_ADC_VREF_W<'a> {
     }
 }
 #[doc = "Field `RD_SDIO_DREFH` reader - "]
-pub struct RD_SDIO_DREFH_R(crate::FieldReader<u8, u8>);
+pub struct RD_SDIO_DREFH_R(crate::FieldReader<u8>);
 impl RD_SDIO_DREFH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,14 +85,14 @@ impl RD_SDIO_DREFH_R {
     }
 }
 impl core::ops::Deref for RD_SDIO_DREFH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SDIO_DREFM` reader - "]
-pub struct RD_SDIO_DREFM_R(crate::FieldReader<u8, u8>);
+pub struct RD_SDIO_DREFM_R(crate::FieldReader<u8>);
 impl RD_SDIO_DREFM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -100,14 +100,14 @@ impl RD_SDIO_DREFM_R {
     }
 }
 impl core::ops::Deref for RD_SDIO_DREFM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SDIO_DREFL` reader - "]
-pub struct RD_SDIO_DREFL_R(crate::FieldReader<u8, u8>);
+pub struct RD_SDIO_DREFL_R(crate::FieldReader<u8>);
 impl RD_SDIO_DREFL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -115,14 +115,14 @@ impl RD_SDIO_DREFL_R {
     }
 }
 impl core::ops::Deref for RD_SDIO_DREFL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_XPD_SDIO` reader - read for XPD_SDIO_REG"]
-pub struct RD_XPD_SDIO_R(crate::FieldReader<bool, bool>);
+pub struct RD_XPD_SDIO_R(crate::FieldReader<bool>);
 impl RD_XPD_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -130,14 +130,14 @@ impl RD_XPD_SDIO_R {
     }
 }
 impl core::ops::Deref for RD_XPD_SDIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SDIO_TIEH` reader - read for SDIO_TIEH"]
-pub struct RD_SDIO_TIEH_R(crate::FieldReader<bool, bool>);
+pub struct RD_SDIO_TIEH_R(crate::FieldReader<bool>);
 impl RD_SDIO_TIEH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -145,14 +145,14 @@ impl RD_SDIO_TIEH_R {
     }
 }
 impl core::ops::Deref for RD_SDIO_TIEH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_SDIO_FORCE` reader - read for sdio_force"]
-pub struct RD_SDIO_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct RD_SDIO_FORCE_R(crate::FieldReader<bool>);
 impl RD_SDIO_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -160,7 +160,7 @@ impl RD_SDIO_FORCE_R {
     }
 }
 impl core::ops::Deref for RD_SDIO_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -221,25 +221,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata4]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata4](index.html) module"]
 pub struct BLK0_RDATA4_SPEC;
 impl crate::RegisterSpec for BLK0_RDATA4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_rdata4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_rdata4::R](R) reader structure"]
 impl crate::Readable for BLK0_RDATA4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk0_rdata4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk0_rdata4::W](W) writer structure"]
 impl crate::Writable for BLK0_RDATA4_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<IRQ_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT_ENA` reader - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
-pub struct INTERRUPT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct INTERRUPT_ENA_R(crate::FieldReader<bool>);
 impl INTERRUPT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl INTERRUPT_ENA_R {
     }
 }
 impl core::ops::Deref for INTERRUPT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt enable register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irq_ena]
-(index.html) module"]
+#[doc = "Interrupt enable register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [irq_ena](index.html) module"]
 pub struct IRQ_ENA_SPEC;
 impl crate::RegisterSpec for IRQ_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irq_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [irq_ena::R](R) reader structure"]
 impl crate::Readable for IRQ_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [irq_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [irq_ena::W](W) writer structure"]
 impl crate::Writable for IRQ_ENA_SPEC {
     type Writer = W;
 }

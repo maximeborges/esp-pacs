@@ -35,7 +35,7 @@ impl From<crate::W<DMA_IN_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_ADDR` reader - The address of the first inlink descriptor."]
-pub struct INLINK_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct INLINK_ADDR_R(crate::FieldReader<u32>);
 impl INLINK_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl INLINK_ADDR_R {
     }
 }
 impl core::ops::Deref for INLINK_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> INLINK_ADDR_W<'a> {
     }
 }
 #[doc = "Field `INLINK_AUTO_RET` reader - when the bit is set, the inlink descriptor returns to the first link node when a packet is error."]
-pub struct INLINK_AUTO_RET_R(crate::FieldReader<bool, bool>);
+pub struct INLINK_AUTO_RET_R(crate::FieldReader<bool>);
 impl INLINK_AUTO_RET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl INLINK_AUTO_RET_R {
     }
 }
 impl core::ops::Deref for INLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> INLINK_AUTO_RET_W<'a> {
     }
 }
 #[doc = "Field `INLINK_STOP` reader - Set the bit to stop to use inlink descriptor."]
-pub struct INLINK_STOP_R(crate::FieldReader<bool, bool>);
+pub struct INLINK_STOP_R(crate::FieldReader<bool>);
 impl INLINK_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl INLINK_STOP_R {
     }
 }
 impl core::ops::Deref for INLINK_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> INLINK_STOP_W<'a> {
     }
 }
 #[doc = "Field `INLINK_START` reader - Set the bit to start to use inlink descriptor."]
-pub struct INLINK_START_R(crate::FieldReader<bool, bool>);
+pub struct INLINK_START_R(crate::FieldReader<bool>);
 impl INLINK_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl INLINK_START_R {
     }
 }
 impl core::ops::Deref for INLINK_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> INLINK_START_W<'a> {
     }
 }
 #[doc = "Field `INLINK_RESTART` reader - Set the bit to mount on new inlink descriptors."]
-pub struct INLINK_RESTART_R(crate::FieldReader<bool, bool>);
+pub struct INLINK_RESTART_R(crate::FieldReader<bool>);
 impl INLINK_RESTART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl INLINK_RESTART_R {
     }
 }
 impl core::ops::Deref for INLINK_RESTART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> INLINK_RESTART_W<'a> {
     }
 }
 #[doc = "Field `DMA_RX_ENA` reader - SPI DMA read data status bit."]
-pub struct DMA_RX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RX_ENA_R(crate::FieldReader<bool>);
 impl DMA_RX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl DMA_RX_ENA_R {
     }
 }
 impl core::ops::Deref for DMA_RX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI DMA RX link configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_in_link]
-(index.html) module"]
+#[doc = "SPI DMA RX link configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_in_link](index.html) module"]
 pub struct DMA_IN_LINK_SPEC;
 impl crate::RegisterSpec for DMA_IN_LINK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_in_link::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_in_link::R](R) reader structure"]
 impl crate::Readable for DMA_IN_LINK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_in_link::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_in_link::W](W) writer structure"]
 impl crate::Writable for DMA_IN_LINK_SPEC {
     type Writer = W;
 }

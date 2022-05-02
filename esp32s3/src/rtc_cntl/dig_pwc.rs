@@ -35,7 +35,7 @@ impl From<crate::W<DIG_PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `LSLP_MEM_FORCE_PD` reader - memories in digital core force PD in sleep"]
-pub struct LSLP_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct LSLP_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl LSLP_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl LSLP_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for LSLP_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> LSLP_MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `LSLP_MEM_FORCE_PU` reader - memories in digital core force no PD in sleep"]
-pub struct LSLP_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct LSLP_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl LSLP_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LSLP_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for LSLP_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LSLP_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `BT_FORCE_PD` reader - internal SRAM 2 force power down"]
-pub struct BT_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct BT_FORCE_PD_R(crate::FieldReader<bool>);
 impl BT_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl BT_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for BT_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> BT_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `BT_FORCE_PU` reader - internal SRAM 2 force power up"]
-pub struct BT_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct BT_FORCE_PU_R(crate::FieldReader<bool>);
 impl BT_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl BT_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for BT_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> BT_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `DG_PERI_FORCE_PD` reader - internal SRAM 3 force power down"]
-pub struct DG_PERI_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DG_PERI_FORCE_PD_R(crate::FieldReader<bool>);
 impl DG_PERI_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DG_PERI_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DG_PERI_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DG_PERI_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DG_PERI_FORCE_PU` reader - internal SRAM 3 force power up"]
-pub struct DG_PERI_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DG_PERI_FORCE_PU_R(crate::FieldReader<bool>);
 impl DG_PERI_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DG_PERI_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DG_PERI_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DG_PERI_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `WIFI_FORCE_PD` reader - wifi force power down"]
-pub struct WIFI_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct WIFI_FORCE_PD_R(crate::FieldReader<bool>);
 impl WIFI_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl WIFI_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for WIFI_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> WIFI_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `WIFI_FORCE_PU` reader - wifi force power up"]
-pub struct WIFI_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct WIFI_FORCE_PU_R(crate::FieldReader<bool>);
 impl WIFI_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl WIFI_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for WIFI_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> WIFI_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_PD` reader - digital core force power down"]
-pub struct DG_WRAP_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_PD_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl DG_WRAP_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> DG_WRAP_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_PU` reader - digital core force power up"]
-pub struct DG_WRAP_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_PU_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl DG_WRAP_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> DG_WRAP_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `CPU_TOP_FORCE_PD` reader - digital dcdc force power down"]
-pub struct CPU_TOP_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct CPU_TOP_FORCE_PD_R(crate::FieldReader<bool>);
 impl CPU_TOP_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl CPU_TOP_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for CPU_TOP_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> CPU_TOP_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `CPU_TOP_FORCE_PU` reader - digital dcdc force power up"]
-pub struct CPU_TOP_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct CPU_TOP_FORCE_PU_R(crate::FieldReader<bool>);
 impl CPU_TOP_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl CPU_TOP_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for CPU_TOP_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> CPU_TOP_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `BT_PD_EN` reader - enable power down internal SRAM 2 in sleep"]
-pub struct BT_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct BT_PD_EN_R(crate::FieldReader<bool>);
 impl BT_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl BT_PD_EN_R {
     }
 }
 impl core::ops::Deref for BT_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> BT_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `DG_PERI_PD_EN` reader - enable power down internal SRAM 3 in sleep"]
-pub struct DG_PERI_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct DG_PERI_PD_EN_R(crate::FieldReader<bool>);
 impl DG_PERI_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl DG_PERI_PD_EN_R {
     }
 }
 impl core::ops::Deref for DG_PERI_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> DG_PERI_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `CPU_TOP_PD_EN` reader - enable power down internal SRAM 4 in sleep"]
-pub struct CPU_TOP_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct CPU_TOP_PD_EN_R(crate::FieldReader<bool>);
 impl CPU_TOP_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl CPU_TOP_PD_EN_R {
     }
 }
 impl core::ops::Deref for CPU_TOP_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> CPU_TOP_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `WIFI_PD_EN` reader - enable power down wifi in sleep"]
-pub struct WIFI_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct WIFI_PD_EN_R(crate::FieldReader<bool>);
 impl WIFI_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl WIFI_PD_EN_R {
     }
 }
 impl core::ops::Deref for WIFI_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> WIFI_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_PD_EN` reader - enable power down all digital logic"]
-pub struct DG_WRAP_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_PD_EN_R(crate::FieldReader<bool>);
 impl DG_WRAP_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl DG_WRAP_PD_EN_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -843,25 +843,16 @@ impl W {
         self
     }
 }
-#[doc = "configure digital power\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dig_pwc]
-(index.html) module"]
+#[doc = "configure digital power\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dig_pwc](index.html) module"]
 pub struct DIG_PWC_SPEC;
 impl crate::RegisterSpec for DIG_PWC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dig_pwc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dig_pwc::R](R) reader structure"]
 impl crate::Readable for DIG_PWC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dig_pwc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dig_pwc::W](W) writer structure"]
 impl crate::Writable for DIG_PWC_SPEC {
     type Writer = W;
 }

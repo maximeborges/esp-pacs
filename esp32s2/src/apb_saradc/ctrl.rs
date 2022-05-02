@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `START_FORCE` reader - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
-pub struct START_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct START_FORCE_R(crate::FieldReader<bool>);
 impl START_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl START_FORCE_R {
     }
 }
 impl core::ops::Deref for START_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> START_FORCE_W<'a> {
     }
 }
 #[doc = "Field `START` reader - Start SAR ADC by software."]
-pub struct START_R(crate::FieldReader<bool, bool>);
+pub struct START_R(crate::FieldReader<bool>);
 impl START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl START_R {
     }
 }
 impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> START_W<'a> {
     }
 }
 #[doc = "Field `WORK_MODE` reader - 0: single-channel scan mode. 1: double-channel scan mode. 2: alternate-channel scan mode."]
-pub struct WORK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct WORK_MODE_R(crate::FieldReader<u8>);
 impl WORK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl WORK_MODE_R {
     }
 }
 impl core::ops::Deref for WORK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> WORK_MODE_W<'a> {
     }
 }
 #[doc = "Field `SAR_SEL` reader - 0: select SAR ADC1. 1: select SAR ADC2, only work for single-channel scan mode."]
-pub struct SAR_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SAR_SEL_R(crate::FieldReader<bool>);
 impl SAR_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl SAR_SEL_R {
     }
 }
 impl core::ops::Deref for SAR_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> SAR_SEL_W<'a> {
     }
 }
 #[doc = "Field `SAR_CLK_GATED` reader - SAR clock gate enable bit."]
-pub struct SAR_CLK_GATED_R(crate::FieldReader<bool, bool>);
+pub struct SAR_CLK_GATED_R(crate::FieldReader<bool>);
 impl SAR_CLK_GATED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl SAR_CLK_GATED_R {
     }
 }
 impl core::ops::Deref for SAR_CLK_GATED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> SAR_CLK_GATED_W<'a> {
     }
 }
 #[doc = "Field `SAR_CLK_DIV` reader - SAR clock divider"]
-pub struct SAR_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct SAR_CLK_DIV_R(crate::FieldReader<u8>);
 impl SAR_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl SAR_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for SAR_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> SAR_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `SAR1_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
-pub struct SAR1_PATT_LEN_R(crate::FieldReader<u8, u8>);
+pub struct SAR1_PATT_LEN_R(crate::FieldReader<u8>);
 impl SAR1_PATT_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -245,7 +245,7 @@ impl SAR1_PATT_LEN_R {
     }
 }
 impl core::ops::Deref for SAR1_PATT_LEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> SAR1_PATT_LEN_W<'a> {
     }
 }
 #[doc = "Field `SAR2_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
-pub struct SAR2_PATT_LEN_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_PATT_LEN_R(crate::FieldReader<u8>);
 impl SAR2_PATT_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -272,7 +272,7 @@ impl SAR2_PATT_LEN_R {
     }
 }
 impl core::ops::Deref for SAR2_PATT_LEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> SAR2_PATT_LEN_W<'a> {
     }
 }
 #[doc = "Field `SAR1_PATT_P_CLEAR` reader - Clear the pointer of pattern table for DIG ADC1 CTRL."]
-pub struct SAR1_PATT_P_CLEAR_R(crate::FieldReader<bool, bool>);
+pub struct SAR1_PATT_P_CLEAR_R(crate::FieldReader<bool>);
 impl SAR1_PATT_P_CLEAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -299,7 +299,7 @@ impl SAR1_PATT_P_CLEAR_R {
     }
 }
 impl core::ops::Deref for SAR1_PATT_P_CLEAR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -328,7 +328,7 @@ impl<'a> SAR1_PATT_P_CLEAR_W<'a> {
     }
 }
 #[doc = "Field `SAR2_PATT_P_CLEAR` reader - Clear the pointer of pattern table for DIG ADC2 CTRL."]
-pub struct SAR2_PATT_P_CLEAR_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_PATT_P_CLEAR_R(crate::FieldReader<bool>);
 impl SAR2_PATT_P_CLEAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +336,7 @@ impl SAR2_PATT_P_CLEAR_R {
     }
 }
 impl core::ops::Deref for SAR2_PATT_P_CLEAR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> SAR2_PATT_P_CLEAR_W<'a> {
     }
 }
 #[doc = "Field `DATA_SAR_SEL` reader - 1: sar_sel will be coded to the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
-pub struct DATA_SAR_SEL_R(crate::FieldReader<bool, bool>);
+pub struct DATA_SAR_SEL_R(crate::FieldReader<bool>);
 impl DATA_SAR_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -373,7 +373,7 @@ impl DATA_SAR_SEL_R {
     }
 }
 impl core::ops::Deref for DATA_SAR_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -402,7 +402,7 @@ impl<'a> DATA_SAR_SEL_W<'a> {
     }
 }
 #[doc = "Field `DATA_TO_I2S` reader - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
-pub struct DATA_TO_I2S_R(crate::FieldReader<bool, bool>);
+pub struct DATA_TO_I2S_R(crate::FieldReader<bool>);
 impl DATA_TO_I2S_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -410,7 +410,7 @@ impl DATA_TO_I2S_R {
     }
 }
 impl core::ops::Deref for DATA_TO_I2S_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -439,7 +439,7 @@ impl<'a> DATA_TO_I2S_W<'a> {
     }
 }
 #[doc = "Field `XPD_SAR_FORCE` reader - Force option to xpd sar blocks."]
-pub struct XPD_SAR_FORCE_R(crate::FieldReader<u8, u8>);
+pub struct XPD_SAR_FORCE_R(crate::FieldReader<u8>);
 impl XPD_SAR_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -447,7 +447,7 @@ impl XPD_SAR_FORCE_R {
     }
 }
 impl core::ops::Deref for XPD_SAR_FORCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -466,7 +466,7 @@ impl<'a> XPD_SAR_FORCE_W<'a> {
     }
 }
 #[doc = "Field `WAIT_ARB_CYCLE` reader - Wait arbit signal stable after sar_done."]
-pub struct WAIT_ARB_CYCLE_R(crate::FieldReader<u8, u8>);
+pub struct WAIT_ARB_CYCLE_R(crate::FieldReader<u8>);
 impl WAIT_ARB_CYCLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -474,7 +474,7 @@ impl WAIT_ARB_CYCLE_R {
     }
 }
 impl core::ops::Deref for WAIT_ARB_CYCLE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -642,25 +642,16 @@ impl W {
         self
     }
 }
-#[doc = "DIG ADC common configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "DIG ADC common configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

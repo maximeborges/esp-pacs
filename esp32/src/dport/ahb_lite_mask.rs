@@ -35,7 +35,7 @@ impl From<crate::W<AHB_LITE_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO` reader - "]
-pub struct PRO_R(crate::FieldReader<bool, bool>);
+pub struct PRO_R(crate::FieldReader<bool>);
 impl PRO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_R {
     }
 }
 impl core::ops::Deref for PRO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_W<'a> {
     }
 }
 #[doc = "Field `APP` reader - "]
-pub struct APP_R(crate::FieldReader<bool, bool>);
+pub struct APP_R(crate::FieldReader<bool>);
 impl APP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl APP_R {
     }
 }
 impl core::ops::Deref for APP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> APP_W<'a> {
     }
 }
 #[doc = "Field `SDIO` reader - "]
-pub struct SDIO_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_R(crate::FieldReader<bool>);
 impl SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SDIO_R {
     }
 }
 impl core::ops::Deref for SDIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SDIO_W<'a> {
     }
 }
 #[doc = "Field `PRODPORT` reader - "]
-pub struct PRODPORT_R(crate::FieldReader<bool, bool>);
+pub struct PRODPORT_R(crate::FieldReader<bool>);
 impl PRODPORT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PRODPORT_R {
     }
 }
 impl core::ops::Deref for PRODPORT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PRODPORT_W<'a> {
     }
 }
 #[doc = "Field `APPDPORT` reader - "]
-pub struct APPDPORT_R(crate::FieldReader<bool, bool>);
+pub struct APPDPORT_R(crate::FieldReader<bool>);
 impl APPDPORT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl APPDPORT_R {
     }
 }
 impl core::ops::Deref for APPDPORT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> APPDPORT_W<'a> {
     }
 }
 #[doc = "Field `AHB_LITE_SDHOST_PID` reader - "]
-pub struct AHB_LITE_SDHOST_PID_R(crate::FieldReader<u8, u8>);
+pub struct AHB_LITE_SDHOST_PID_R(crate::FieldReader<u8>);
 impl AHB_LITE_SDHOST_PID_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl AHB_LITE_SDHOST_PID_R {
     }
 }
 impl core::ops::Deref for AHB_LITE_SDHOST_PID_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ahb_lite_mask]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ahb_lite_mask](index.html) module"]
 pub struct AHB_LITE_MASK_SPEC;
 impl crate::RegisterSpec for AHB_LITE_MASK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ahb_lite_mask::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ahb_lite_mask::R](R) reader structure"]
 impl crate::Readable for AHB_LITE_MASK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ahb_lite_mask::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ahb_lite_mask::W](W) writer structure"]
 impl crate::Writable for AHB_LITE_MASK_SPEC {
     type Writer = W;
 }

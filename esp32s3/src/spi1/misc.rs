@@ -35,7 +35,7 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CS0_DIS` reader - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub struct CS0_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS0_DIS_R(crate::FieldReader<bool>);
 impl CS0_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CS0_DIS_R {
     }
 }
 impl core::ops::Deref for CS0_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CS0_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS1_DIS` reader - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub struct CS1_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS1_DIS_R(crate::FieldReader<bool>);
 impl CS1_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CS1_DIS_R {
     }
 }
 impl core::ops::Deref for CS1_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CS1_DIS_W<'a> {
     }
 }
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
 impl CK_IDLE_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CK_IDLE_EDGE_R {
     }
 }
 impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     }
 }
 #[doc = "Field `CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
 impl CS_KEEP_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CS_KEEP_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CS_KEEP_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `AUTO_PER` reader - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
-pub struct AUTO_PER_R(crate::FieldReader<bool, bool>);
+pub struct AUTO_PER_R(crate::FieldReader<bool>);
 impl AUTO_PER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl AUTO_PER_R {
     }
 }
 impl core::ops::Deref for AUTO_PER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 misc register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc]
-(index.html) module"]
+#[doc = "SPI1 misc register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc](index.html) module"]
 pub struct MISC_SPEC;
 impl crate::RegisterSpec for MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [misc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [misc::R](R) reader structure"]
 impl crate::Readable for MISC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [misc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
     type Writer = W;
 }

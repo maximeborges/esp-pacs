@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_PAD8_SPEC>> for W {
     }
 }
 #[doc = "Field `FUN_IE` reader - input enable in work mode"]
-pub struct FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct FUN_IE_R(crate::FieldReader<bool>);
 impl FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FUN_IE_R {
     }
 }
 impl core::ops::Deref for FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SLP_OE` reader - output enable in sleep mode"]
-pub struct SLP_OE_R(crate::FieldReader<bool, bool>);
+pub struct SLP_OE_R(crate::FieldReader<bool>);
 impl SLP_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLP_OE_R {
     }
 }
 impl core::ops::Deref for SLP_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLP_OE_W<'a> {
     }
 }
 #[doc = "Field `SLP_IE` reader - input enable in sleep mode"]
-pub struct SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SLP_IE_R(crate::FieldReader<bool>);
 impl SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SLP_IE_R {
     }
 }
 impl core::ops::Deref for SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub struct SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLP_SEL_R(crate::FieldReader<bool>);
 impl SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `FUN_SEL` reader - function sel"]
-pub struct FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct FUN_SEL_R(crate::FieldReader<u8>);
 impl FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl FUN_SEL_R {
     }
 }
 impl core::ops::Deref for FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `MUX_SEL` reader - 1: use RTC GPIO,0: use digital GPIO"]
-pub struct MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct MUX_SEL_R(crate::FieldReader<bool>);
 impl MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl MUX_SEL_R {
     }
 }
 impl core::ops::Deref for MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `XPD` reader - TOUCH_XPD"]
-pub struct XPD_R(crate::FieldReader<bool, bool>);
+pub struct XPD_R(crate::FieldReader<bool>);
 impl XPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl XPD_R {
     }
 }
 impl core::ops::Deref for XPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> XPD_W<'a> {
     }
 }
 #[doc = "Field `TIE_OPT` reader - TOUCH_TIE_OPT"]
-pub struct TIE_OPT_R(crate::FieldReader<bool, bool>);
+pub struct TIE_OPT_R(crate::FieldReader<bool>);
 impl TIE_OPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl TIE_OPT_R {
     }
 }
 impl core::ops::Deref for TIE_OPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> TIE_OPT_W<'a> {
     }
 }
 #[doc = "Field `START` reader - TOUCH_START"]
-pub struct START_R(crate::FieldReader<bool, bool>);
+pub struct START_R(crate::FieldReader<bool>);
 impl START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl START_R {
     }
 }
 impl core::ops::Deref for START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> START_W<'a> {
     }
 }
 #[doc = "Field `RUE` reader - RUE"]
-pub struct RUE_R(crate::FieldReader<bool, bool>);
+pub struct RUE_R(crate::FieldReader<bool>);
 impl RUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl RUE_R {
     }
 }
 impl core::ops::Deref for RUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> RUE_W<'a> {
     }
 }
 #[doc = "Field `RDE` reader - RDE"]
-pub struct RDE_R(crate::FieldReader<bool, bool>);
+pub struct RDE_R(crate::FieldReader<bool>);
 impl RDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl RDE_R {
     }
 }
 impl core::ops::Deref for RDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> RDE_W<'a> {
     }
 }
 #[doc = "Field `DRV` reader - DRV"]
-pub struct DRV_R(crate::FieldReader<u8, u8>);
+pub struct DRV_R(crate::FieldReader<u8>);
 impl DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -440,7 +440,7 @@ impl DRV_R {
     }
 }
 impl core::ops::Deref for DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -588,25 +588,16 @@ impl W {
         self
     }
 }
-#[doc = "configure RTC PAD8\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_pad8]
-(index.html) module"]
+#[doc = "configure RTC PAD8\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_pad8](index.html) module"]
 pub struct TOUCH_PAD8_SPEC;
 impl crate::RegisterSpec for TOUCH_PAD8_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_pad8::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_pad8::R](R) reader structure"]
 impl crate::Readable for TOUCH_PAD8_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_pad8::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_pad8::W](W) writer structure"]
 impl crate::Writable for TOUCH_PAD8_SPEC {
     type Writer = W;
 }

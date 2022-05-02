@@ -35,7 +35,7 @@ impl From<crate::W<TX_PCM2PDM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_HP_BYPASS` reader - I2S TX PDM bypass hp filter or not. The option has been removed."]
-pub struct TX_PDM_HP_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_HP_BYPASS_R(crate::FieldReader<bool>);
 impl TX_PDM_HP_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_PDM_HP_BYPASS_R {
     }
 }
 impl core::ops::Deref for TX_PDM_HP_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_PDM_HP_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SINC_OSR2` reader - I2S TX PDM OSR2 value"]
-pub struct TX_PDM_SINC_OSR2_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SINC_OSR2_R(crate::FieldReader<u8>);
 impl TX_PDM_SINC_OSR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl TX_PDM_SINC_OSR2_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SINC_OSR2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TX_PDM_SINC_OSR2_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_PRESCALE` reader - I2S TX PDM prescale for sigmadelta"]
-pub struct TX_PDM_PRESCALE_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_PRESCALE_R(crate::FieldReader<u8>);
 impl TX_PDM_PRESCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl TX_PDM_PRESCALE_R {
     }
 }
 impl core::ops::Deref for TX_PDM_PRESCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> TX_PDM_PRESCALE_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_HP_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_HP_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_HP_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl TX_PDM_HP_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_HP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> TX_PDM_HP_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_LP_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_LP_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_LP_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl TX_PDM_LP_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_LP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> TX_PDM_LP_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_SINC_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -188,7 +188,7 @@ impl TX_PDM_SINC_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SINC_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -207,7 +207,7 @@ impl<'a> TX_PDM_SINC_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_SIGMADELTA_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -215,7 +215,7 @@ impl TX_PDM_SIGMADELTA_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SIGMADELTA_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -234,7 +234,7 @@ impl<'a> TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER2` reader - I2S TX PDM sigmadelta dither2 value"]
-pub struct TX_PDM_SIGMADELTA_DITHER2_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_SIGMADELTA_DITHER2_R(crate::FieldReader<bool>);
 impl TX_PDM_SIGMADELTA_DITHER2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -242,7 +242,7 @@ impl TX_PDM_SIGMADELTA_DITHER2_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SIGMADELTA_DITHER2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -271,7 +271,7 @@ impl<'a> TX_PDM_SIGMADELTA_DITHER2_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER` reader - I2S TX PDM sigmadelta dither value"]
-pub struct TX_PDM_SIGMADELTA_DITHER_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_SIGMADELTA_DITHER_R(crate::FieldReader<bool>);
 impl TX_PDM_SIGMADELTA_DITHER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -279,7 +279,7 @@ impl TX_PDM_SIGMADELTA_DITHER_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SIGMADELTA_DITHER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -308,7 +308,7 @@ impl<'a> TX_PDM_SIGMADELTA_DITHER_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_DAC_2OUT_EN` reader - I2S TX PDM dac mode enable"]
-pub struct TX_PDM_DAC_2OUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_DAC_2OUT_EN_R(crate::FieldReader<bool>);
 impl TX_PDM_DAC_2OUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -316,7 +316,7 @@ impl TX_PDM_DAC_2OUT_EN_R {
     }
 }
 impl core::ops::Deref for TX_PDM_DAC_2OUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -345,7 +345,7 @@ impl<'a> TX_PDM_DAC_2OUT_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_DAC_MODE_EN` reader - I2S TX PDM dac 2channel enable"]
-pub struct TX_PDM_DAC_MODE_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_DAC_MODE_EN_R(crate::FieldReader<bool>);
 impl TX_PDM_DAC_MODE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -353,7 +353,7 @@ impl TX_PDM_DAC_MODE_EN_R {
     }
 }
 impl core::ops::Deref for TX_PDM_DAC_MODE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -382,7 +382,7 @@ impl<'a> TX_PDM_DAC_MODE_EN_W<'a> {
     }
 }
 #[doc = "Field `PCM2PDM_CONV_EN` reader - I2S TX PDM Converter enable"]
-pub struct PCM2PDM_CONV_EN_R(crate::FieldReader<bool, bool>);
+pub struct PCM2PDM_CONV_EN_R(crate::FieldReader<bool>);
 impl PCM2PDM_CONV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -390,7 +390,7 @@ impl PCM2PDM_CONV_EN_R {
     }
 }
 impl core::ops::Deref for PCM2PDM_CONV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -548,25 +548,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S TX PCM2PDM configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_pcm2pdm_conf]
-(index.html) module"]
+#[doc = "I2S TX PCM2PDM configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_pcm2pdm_conf](index.html) module"]
 pub struct TX_PCM2PDM_CONF_SPEC;
 impl crate::RegisterSpec for TX_PCM2PDM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_pcm2pdm_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tx_pcm2pdm_conf::R](R) reader structure"]
 impl crate::Readable for TX_PCM2PDM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tx_pcm2pdm_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tx_pcm2pdm_conf::W](W) writer structure"]
 impl crate::Writable for TX_PCM2PDM_CONF_SPEC {
     type Writer = W;
 }

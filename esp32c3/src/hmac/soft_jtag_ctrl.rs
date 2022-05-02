@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "Jtag register 0.\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [soft_jtag_ctrl]
-(index.html) module"]
+#[doc = "Jtag register 0.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [soft_jtag_ctrl](index.html) module"]
 pub struct SOFT_JTAG_CTRL_SPEC;
 impl crate::RegisterSpec for SOFT_JTAG_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [soft_jtag_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [soft_jtag_ctrl::W](W) writer structure"]
 impl crate::Writable for SOFT_JTAG_CTRL_SPEC {
     type Writer = W;
 }

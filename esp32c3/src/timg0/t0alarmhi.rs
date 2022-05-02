@@ -35,7 +35,7 @@ impl From<crate::W<T0ALARMHI_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_ALARM_HI` reader - reg_t0_alarm_hi."]
-pub struct T0_ALARM_HI_R(crate::FieldReader<u32, u32>);
+pub struct T0_ALARM_HI_R(crate::FieldReader<u32>);
 impl T0_ALARM_HI_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl T0_ALARM_HI_R {
     }
 }
 impl core::ops::Deref for T0_ALARM_HI_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "TIMG_T0ALARMHI_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0alarmhi]
-(index.html) module"]
+#[doc = "TIMG_T0ALARMHI_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0alarmhi](index.html) module"]
 pub struct T0ALARMHI_SPEC;
 impl crate::RegisterSpec for T0ALARMHI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0alarmhi::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t0alarmhi::R](R) reader structure"]
 impl crate::Readable for T0ALARMHI_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [t0alarmhi::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [t0alarmhi::W](W) writer structure"]
 impl crate::Writable for T0ALARMHI_SPEC {
     type Writer = W;
 }

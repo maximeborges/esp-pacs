@@ -35,7 +35,7 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CS0_DIS` reader - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin. Can be configured in CONF state."]
-pub struct CS0_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS0_DIS_R(crate::FieldReader<bool>);
 impl CS0_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CS0_DIS_R {
     }
 }
 impl core::ops::Deref for CS0_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CS0_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS1_DIS` reader - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin. Can be configured in CONF state."]
-pub struct CS1_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS1_DIS_R(crate::FieldReader<bool>);
 impl CS1_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CS1_DIS_R {
     }
 }
 impl core::ops::Deref for CS1_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CS1_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS2_DIS` reader - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin. Can be configured in CONF state."]
-pub struct CS2_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS2_DIS_R(crate::FieldReader<bool>);
 impl CS2_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CS2_DIS_R {
     }
 }
 impl core::ops::Deref for CS2_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CS2_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS3_DIS` reader - SPI CS3 pin enable, 1: disable CS3, 0: spi_cs3 signal is from/to CS3 pin. Can be configured in CONF state."]
-pub struct CS3_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS3_DIS_R(crate::FieldReader<bool>);
 impl CS3_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CS3_DIS_R {
     }
 }
 impl core::ops::Deref for CS3_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CS3_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS4_DIS` reader - SPI CS4 pin enable, 1: disable CS4, 0: spi_cs4 signal is from/to CS4 pin. Can be configured in CONF state."]
-pub struct CS4_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS4_DIS_R(crate::FieldReader<bool>);
 impl CS4_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CS4_DIS_R {
     }
 }
 impl core::ops::Deref for CS4_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CS4_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS5_DIS` reader - SPI CS5 pin enable, 1: disable CS5, 0: spi_cs5 signal is from/to CS5 pin. Can be configured in CONF state."]
-pub struct CS5_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS5_DIS_R(crate::FieldReader<bool>);
 impl CS5_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CS5_DIS_R {
     }
 }
 impl core::ops::Deref for CS5_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CS5_DIS_W<'a> {
     }
 }
 #[doc = "Field `CK_DIS` reader - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
-pub struct CK_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CK_DIS_R(crate::FieldReader<bool>);
 impl CK_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CK_DIS_R {
     }
 }
 impl core::ops::Deref for CK_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CK_DIS_W<'a> {
     }
 }
 #[doc = "Field `MASTER_CS_POL` reader - In the master mode the bits are the polarity of spi cs line, the value is equivalent to spi_cs ^ spi_master_cs_pol. Can be configured in CONF state."]
-pub struct MASTER_CS_POL_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_CS_POL_R(crate::FieldReader<u8>);
 impl MASTER_CS_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -302,7 +302,7 @@ impl MASTER_CS_POL_R {
     }
 }
 impl core::ops::Deref for MASTER_CS_POL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> MASTER_CS_POL_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_CS_POL` reader - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
-pub struct SLAVE_CS_POL_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_CS_POL_R(crate::FieldReader<bool>);
 impl SLAVE_CS_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl SLAVE_CS_POL_R {
     }
 }
 impl core::ops::Deref for SLAVE_CS_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> SLAVE_CS_POL_W<'a> {
     }
 }
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
 impl CK_IDLE_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl CK_IDLE_EDGE_R {
     }
 }
 impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     }
 }
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set. Can be configured in CONF state."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
 impl CS_KEEP_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl CS_KEEP_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> CS_KEEP_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `QUAD_DIN_PIN_SWAP` reader - 1: spi quad input swap enable 0: spi quad input swap disable. Can be configured in CONF state."]
-pub struct QUAD_DIN_PIN_SWAP_R(crate::FieldReader<bool, bool>);
+pub struct QUAD_DIN_PIN_SWAP_R(crate::FieldReader<bool>);
 impl QUAD_DIN_PIN_SWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -440,7 +440,7 @@ impl QUAD_DIN_PIN_SWAP_R {
     }
 }
 impl core::ops::Deref for QUAD_DIN_PIN_SWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -598,25 +598,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI misc register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc]
-(index.html) module"]
+#[doc = "SPI misc register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc](index.html) module"]
 pub struct MISC_SPEC;
 impl crate::RegisterSpec for MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [misc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [misc::R](R) reader structure"]
 impl crate::Readable for MISC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [misc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
     type Writer = W;
 }

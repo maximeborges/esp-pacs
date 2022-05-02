@@ -35,7 +35,7 @@ impl From<crate::W<FIFO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_START_ADDR` reader - This is the offset address of the last received data, as described in I2C_NONFIFO_RX_THRES."]
-pub struct RXFIFO_START_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_START_ADDR_R(crate::FieldReader<u8>);
 impl RXFIFO_START_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl RXFIFO_START_ADDR_R {
     }
 }
 impl core::ops::Deref for RXFIFO_START_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_END_ADDR` reader - This is the offset address of the last received data, as described in I2C_NONFIFO_RX_THRES. This value refreshes when an I2C_RXFIFO_UDF_INT or I2C_TRANS_COMPLETE_INT interrupt is generated."]
-pub struct RXFIFO_END_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_END_ADDR_R(crate::FieldReader<u8>);
 impl RXFIFO_END_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,14 +58,14 @@ impl RXFIFO_END_ADDR_R {
     }
 }
 impl core::ops::Deref for RXFIFO_END_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_START_ADDR` reader - This is the offset address of the first sent data, as described in I2C_NONFIFO_TX_THRES."]
-pub struct TXFIFO_START_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_START_ADDR_R(crate::FieldReader<u8>);
 impl TXFIFO_START_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -73,14 +73,14 @@ impl TXFIFO_START_ADDR_R {
     }
 }
 impl core::ops::Deref for TXFIFO_START_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_END_ADDR` reader - This is the offset address of the last sent data, as described in I2C_NONFIFO_TX_THRES. The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interrupt is generated."]
-pub struct TXFIFO_END_ADDR_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_END_ADDR_R(crate::FieldReader<u8>);
 impl TXFIFO_END_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -88,7 +88,7 @@ impl TXFIFO_END_ADDR_R {
     }
 }
 impl core::ops::Deref for TXFIFO_END_ADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -139,7 +139,7 @@ impl<'a> TX_UPDATE_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_RW_POINT` reader - The received data in I2C slave mode."]
-pub struct SLAVE_RW_POINT_R(crate::FieldReader<u8, u8>);
+pub struct SLAVE_RW_POINT_R(crate::FieldReader<u8>);
 impl SLAVE_RW_POINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -147,7 +147,7 @@ impl SLAVE_RW_POINT_R {
     }
 }
 impl core::ops::Deref for SLAVE_RW_POINT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -198,25 +198,16 @@ impl W {
         self
     }
 }
-#[doc = "FIFO status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_st]
-(index.html) module"]
+#[doc = "FIFO status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_st](index.html) module"]
 pub struct FIFO_ST_SPEC;
 impl crate::RegisterSpec for FIFO_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fifo_st::R](R) reader structure"]
 impl crate::Readable for FIFO_ST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [fifo_st::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [fifo_st::W](W) writer structure"]
 impl crate::Writable for FIFO_ST_SPEC {
     type Writer = W;
 }

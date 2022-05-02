@@ -35,7 +35,7 @@ impl From<crate::W<INTERNAL_SRAM_USAGE_4_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_LOG_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
-pub struct INTERNAL_SRAM_LOG_USAGE_R(crate::FieldReader<u8, u8>);
+pub struct INTERNAL_SRAM_LOG_USAGE_R(crate::FieldReader<u8>);
 impl INTERNAL_SRAM_LOG_USAGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl INTERNAL_SRAM_LOG_USAGE_R {
     }
 }
 impl core::ops::Deref for INTERNAL_SRAM_LOG_USAGE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Internal SRAM configuration register 4.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [internal_sram_usage_4]
-(index.html) module"]
+#[doc = "Internal SRAM configuration register 4.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [internal_sram_usage_4](index.html) module"]
 pub struct INTERNAL_SRAM_USAGE_4_SPEC;
 impl crate::RegisterSpec for INTERNAL_SRAM_USAGE_4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [internal_sram_usage_4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [internal_sram_usage_4::R](R) reader structure"]
 impl crate::Readable for INTERNAL_SRAM_USAGE_4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [internal_sram_usage_4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [internal_sram_usage_4::W](W) writer structure"]
 impl crate::Writable for INTERNAL_SRAM_USAGE_4_SPEC {
     type Writer = W;
 }

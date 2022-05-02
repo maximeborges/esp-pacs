@@ -35,7 +35,7 @@ impl From<crate::W<SLAVE_SPI_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_SPI_MASK_PRO` reader - "]
-pub struct SLAVE_SPI_MASK_PRO_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_SPI_MASK_PRO_R(crate::FieldReader<bool>);
 impl SLAVE_SPI_MASK_PRO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_SPI_MASK_PRO_R {
     }
 }
 impl core::ops::Deref for SLAVE_SPI_MASK_PRO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLAVE_SPI_MASK_PRO_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_SPI_MASK_APP` reader - "]
-pub struct SLAVE_SPI_MASK_APP_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_SPI_MASK_APP_R(crate::FieldReader<bool>);
 impl SLAVE_SPI_MASK_APP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLAVE_SPI_MASK_APP_R {
     }
 }
 impl core::ops::Deref for SLAVE_SPI_MASK_APP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLAVE_SPI_MASK_APP_W<'a> {
     }
 }
 #[doc = "Field `SPI_ENCRYPT_ENABLE` reader - "]
-pub struct SPI_ENCRYPT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_ENCRYPT_ENABLE_R(crate::FieldReader<bool>);
 impl SPI_ENCRYPT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SPI_ENCRYPT_ENABLE_R {
     }
 }
 impl core::ops::Deref for SPI_ENCRYPT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SPI_ENCRYPT_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `SPI_DECRYPT_ENABLE` reader - "]
-pub struct SPI_DECRYPT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_DECRYPT_ENABLE_R(crate::FieldReader<bool>);
 impl SPI_DECRYPT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SPI_DECRYPT_ENABLE_R {
     }
 }
 impl core::ops::Deref for SPI_DECRYPT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave_spi_config]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave_spi_config](index.html) module"]
 pub struct SLAVE_SPI_CONFIG_SPEC;
 impl crate::RegisterSpec for SLAVE_SPI_CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave_spi_config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slave_spi_config::R](R) reader structure"]
 impl crate::Readable for SLAVE_SPI_CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slave_spi_config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slave_spi_config::W](W) writer structure"]
 impl crate::Writable for SLAVE_SPI_CONFIG_SPEC {
     type Writer = W;
 }

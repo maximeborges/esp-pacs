@@ -35,7 +35,7 @@ impl From<crate::W<REGULATOR_DRV_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_REGULATOR_DRV_B_MONITOR` reader - No public"]
-pub struct RTC_REGULATOR_DRV_B_MONITOR_R(crate::FieldReader<u8, u8>);
+pub struct RTC_REGULATOR_DRV_B_MONITOR_R(crate::FieldReader<u8>);
 impl RTC_REGULATOR_DRV_B_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RTC_REGULATOR_DRV_B_MONITOR_R {
     }
 }
 impl core::ops::Deref for RTC_REGULATOR_DRV_B_MONITOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RTC_REGULATOR_DRV_B_MONITOR_W<'a> {
     }
 }
 #[doc = "Field `RTC_REGULATOR_DRV_B_SLP` reader - No public"]
-pub struct RTC_REGULATOR_DRV_B_SLP_R(crate::FieldReader<u8, u8>);
+pub struct RTC_REGULATOR_DRV_B_SLP_R(crate::FieldReader<u8>);
 impl RTC_REGULATOR_DRV_B_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RTC_REGULATOR_DRV_B_SLP_R {
     }
 }
 impl core::ops::Deref for RTC_REGULATOR_DRV_B_SLP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> RTC_REGULATOR_DRV_B_SLP_W<'a> {
     }
 }
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - No public"]
-pub struct DG_VDD_DRV_B_SLP_R(crate::FieldReader<u8, u8>);
+pub struct DG_VDD_DRV_B_SLP_R(crate::FieldReader<u8>);
 impl DG_VDD_DRV_B_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DG_VDD_DRV_B_SLP_R {
     }
 }
 impl core::ops::Deref for DG_VDD_DRV_B_SLP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DG_VDD_DRV_B_SLP_W<'a> {
     }
 }
 #[doc = "Field `DG_VDD_DRV_B_MONITOR` reader - No public"]
-pub struct DG_VDD_DRV_B_MONITOR_R(crate::FieldReader<u8, u8>);
+pub struct DG_VDD_DRV_B_MONITOR_R(crate::FieldReader<u8>);
 impl DG_VDD_DRV_B_MONITOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DG_VDD_DRV_B_MONITOR_R {
     }
 }
 impl core::ops::Deref for DG_VDD_DRV_B_MONITOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "No public\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regulator_drv_ctrl]
-(index.html) module"]
+#[doc = "No public\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regulator_drv_ctrl](index.html) module"]
 pub struct REGULATOR_DRV_CTRL_SPEC;
 impl crate::RegisterSpec for REGULATOR_DRV_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [regulator_drv_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [regulator_drv_ctrl::R](R) reader structure"]
 impl crate::Readable for REGULATOR_DRV_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [regulator_drv_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [regulator_drv_ctrl::W](W) writer structure"]
 impl crate::Writable for REGULATOR_DRV_CTRL_SPEC {
     type Writer = W;
 }

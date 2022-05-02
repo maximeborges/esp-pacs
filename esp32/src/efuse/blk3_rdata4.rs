@@ -35,7 +35,7 @@ impl From<crate::W<BLK3_RDATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `BLK3_DOUT4` reader - read for BLOCK3"]
-pub struct BLK3_DOUT4_R(crate::FieldReader<u32, u32>);
+pub struct BLK3_DOUT4_R(crate::FieldReader<u32>);
 impl BLK3_DOUT4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,14 +43,14 @@ impl BLK3_DOUT4_R {
     }
 }
 impl core::ops::Deref for BLK3_DOUT4_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RD_CAL_RESERVED` reader - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_CAL_RESERVED_R(crate::FieldReader<u16, u16>);
+pub struct RD_CAL_RESERVED_R(crate::FieldReader<u16>);
 impl RD_CAL_RESERVED_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -58,7 +58,7 @@ impl RD_CAL_RESERVED_R {
     }
 }
 impl core::ops::Deref for RD_CAL_RESERVED_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,25 +101,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk3_rdata4]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk3_rdata4](index.html) module"]
 pub struct BLK3_RDATA4_SPEC;
 impl crate::RegisterSpec for BLK3_RDATA4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk3_rdata4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk3_rdata4::R](R) reader structure"]
 impl crate::Readable for BLK3_RDATA4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk3_rdata4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk3_rdata4::W](W) writer structure"]
 impl crate::Writable for BLK3_RDATA4_SPEC {
     type Writer = W;
 }

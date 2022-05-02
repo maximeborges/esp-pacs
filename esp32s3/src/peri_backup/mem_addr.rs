@@ -35,7 +35,7 @@ impl From<crate::W<MEM_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_START_ADDR` reader - x"]
-pub struct MEM_START_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct MEM_START_ADDR_R(crate::FieldReader<u32>);
 impl MEM_START_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl MEM_START_ADDR_R {
     }
 }
 impl core::ops::Deref for MEM_START_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "x\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_addr]
-(index.html) module"]
+#[doc = "x\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_addr](index.html) module"]
 pub struct MEM_ADDR_SPEC;
 impl crate::RegisterSpec for MEM_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mem_addr::R](R) reader structure"]
 impl crate::Readable for MEM_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mem_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mem_addr::W](W) writer structure"]
 impl crate::Writable for MEM_ADDR_SPEC {
     type Writer = W;
 }

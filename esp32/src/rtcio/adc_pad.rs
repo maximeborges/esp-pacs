@@ -35,7 +35,7 @@ impl From<crate::W<ADC_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_FUN_IE` reader - the input enable of the pad"]
-pub struct ADC2_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_FUN_IE_R(crate::FieldReader<bool>);
 impl ADC2_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ADC2_FUN_IE_R {
     }
 }
 impl core::ops::Deref for ADC2_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ADC2_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `ADC2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct ADC2_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_SLP_IE_R(crate::FieldReader<bool>);
 impl ADC2_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC2_SLP_IE_R {
     }
 }
 impl core::ops::Deref for ADC2_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC2_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `ADC2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct ADC2_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_SLP_SEL_R(crate::FieldReader<bool>);
 impl ADC2_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ADC2_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for ADC2_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ADC2_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct ADC2_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct ADC2_FUN_SEL_R(crate::FieldReader<u8>);
 impl ADC2_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl ADC2_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for ADC2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ADC2_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC1_FUN_IE` reader - the input enable of the pad"]
-pub struct ADC1_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_FUN_IE_R(crate::FieldReader<bool>);
 impl ADC1_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl ADC1_FUN_IE_R {
     }
 }
 impl core::ops::Deref for ADC1_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> ADC1_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `ADC1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct ADC1_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_SLP_IE_R(crate::FieldReader<bool>);
 impl ADC1_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl ADC1_SLP_IE_R {
     }
 }
 impl core::ops::Deref for ADC1_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> ADC1_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `ADC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct ADC1_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_SLP_SEL_R(crate::FieldReader<bool>);
 impl ADC1_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl ADC1_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for ADC1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> ADC1_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct ADC1_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct ADC1_FUN_SEL_R(crate::FieldReader<u8>);
 impl ADC1_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl ADC1_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for ADC1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> ADC1_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC2_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_MUX_SEL_R(crate::FieldReader<bool>);
 impl ADC2_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl ADC2_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for ADC2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> ADC2_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC1_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_MUX_SEL_R(crate::FieldReader<bool>);
 impl ADC1_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl ADC1_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for ADC1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> ADC1_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `ADC2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC2_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_HOLD_R(crate::FieldReader<bool>);
 impl ADC2_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl ADC2_HOLD_R {
     }
 }
 impl core::ops::Deref for ADC2_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> ADC2_HOLD_W<'a> {
     }
 }
 #[doc = "Field `ADC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_HOLD_R(crate::FieldReader<bool>);
 impl ADC1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -430,7 +430,7 @@ impl ADC1_HOLD_R {
     }
 }
 impl core::ops::Deref for ADC1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -588,25 +588,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adc_pad]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adc_pad](index.html) module"]
 pub struct ADC_PAD_SPEC;
 impl crate::RegisterSpec for ADC_PAD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [adc_pad::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [adc_pad::R](R) reader structure"]
 impl crate::Readable for ADC_PAD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [adc_pad::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [adc_pad::W](W) writer structure"]
 impl crate::Writable for ADC_PAD_SPEC {
     type Writer = W;
 }

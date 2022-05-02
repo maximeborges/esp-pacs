@@ -35,7 +35,7 @@ impl From<crate::W<ULP_CP_TIMER_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_PC_INIT` reader - ULP coprocessor PC initial address"]
-pub struct ULP_CP_PC_INIT_R(crate::FieldReader<u16, u16>);
+pub struct ULP_CP_PC_INIT_R(crate::FieldReader<u16>);
 impl ULP_CP_PC_INIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl ULP_CP_PC_INIT_R {
     }
 }
 impl core::ops::Deref for ULP_CP_PC_INIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ULP_CP_PC_INIT_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` reader - Enable the option of ULP coprocessor woken up by RTC GPIO"]
-pub struct ULP_CP_GPIO_WAKEUP_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_GPIO_WAKEUP_ENA_R(crate::FieldReader<bool>);
 impl ULP_CP_GPIO_WAKEUP_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl ULP_CP_GPIO_WAKEUP_ENA_R {
     }
 }
 impl core::ops::Deref for ULP_CP_GPIO_WAKEUP_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -121,7 +121,7 @@ impl<'a> ULP_CP_GPIO_WAKEUP_CLR_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` reader - ULP coprocessor timer enable bit. 0: Disable hardware Timer. 1: Enable hardware timer"]
-pub struct ULP_CP_SLP_TIMER_EN_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_SLP_TIMER_EN_R(crate::FieldReader<bool>);
 impl ULP_CP_SLP_TIMER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -129,7 +129,7 @@ impl ULP_CP_SLP_TIMER_EN_R {
     }
 }
 impl core::ops::Deref for ULP_CP_SLP_TIMER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure coprocessor timer\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ulp_cp_timer]
-(index.html) module"]
+#[doc = "Configure coprocessor timer\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ulp_cp_timer](index.html) module"]
 pub struct ULP_CP_TIMER_SPEC;
 impl crate::RegisterSpec for ULP_CP_TIMER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ulp_cp_timer::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ulp_cp_timer::R](R) reader structure"]
 impl crate::Readable for ULP_CP_TIMER_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ulp_cp_timer::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ulp_cp_timer::W](W) writer structure"]
 impl crate::Writable for ULP_CP_TIMER_SPEC {
     type Writer = W;
 }

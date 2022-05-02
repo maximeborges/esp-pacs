@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_PRELOAD_INT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by icache pre-load done."]
-pub struct ICACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool>);
 impl ICACHE_PRELOAD_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,14 +43,14 @@ impl ICACHE_PRELOAD_INT_ST_R {
     }
 }
 impl core::ops::Deref for ICACHE_PRELOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ICACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by icache pre-load done."]
-pub struct ICACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_PRELOAD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,7 +58,7 @@ impl ICACHE_PRELOAD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_PRELOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ICACHE_PRELOAD_INT_CLR_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by dcache pre-load done."]
-pub struct DCACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool>);
 impl DCACHE_PRELOAD_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,14 +117,14 @@ impl DCACHE_PRELOAD_INT_ST_R {
     }
 }
 impl core::ops::Deref for DCACHE_PRELOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DCACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by dcache pre-load done."]
-pub struct DCACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_PRELOAD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,7 +132,7 @@ impl DCACHE_PRELOAD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_PRELOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_preload_int_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_preload_int_ctrl](index.html) module"]
 pub struct CACHE_PRELOAD_INT_CTRL_SPEC;
 impl crate::RegisterSpec for CACHE_PRELOAD_INT_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_preload_int_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_preload_int_ctrl::R](R) reader structure"]
 impl crate::Readable for CACHE_PRELOAD_INT_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_preload_int_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_preload_int_ctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_PRELOAD_INT_CTRL_SPEC {
     type Writer = W;
 }

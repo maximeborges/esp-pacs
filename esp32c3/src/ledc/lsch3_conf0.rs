@@ -35,7 +35,7 @@ impl From<crate::W<LSCH3_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL_LSCH3` reader - reg_timer_sel_lsch3."]
-pub struct TIMER_SEL_LSCH3_R(crate::FieldReader<u8, u8>);
+pub struct TIMER_SEL_LSCH3_R(crate::FieldReader<u8>);
 impl TIMER_SEL_LSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_SEL_LSCH3_R {
     }
 }
 impl core::ops::Deref for TIMER_SEL_LSCH3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIMER_SEL_LSCH3_W<'a> {
     }
 }
 #[doc = "Field `SIG_OUT_EN_LSCH3` reader - reg_sig_out_en_lsch3."]
-pub struct SIG_OUT_EN_LSCH3_R(crate::FieldReader<bool, bool>);
+pub struct SIG_OUT_EN_LSCH3_R(crate::FieldReader<bool>);
 impl SIG_OUT_EN_LSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SIG_OUT_EN_LSCH3_R {
     }
 }
 impl core::ops::Deref for SIG_OUT_EN_LSCH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SIG_OUT_EN_LSCH3_W<'a> {
     }
 }
 #[doc = "Field `IDLE_LV_LSCH3` reader - reg_idle_lv_lsch3."]
-pub struct IDLE_LV_LSCH3_R(crate::FieldReader<bool, bool>);
+pub struct IDLE_LV_LSCH3_R(crate::FieldReader<bool>);
 impl IDLE_LV_LSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl IDLE_LV_LSCH3_R {
     }
 }
 impl core::ops::Deref for IDLE_LV_LSCH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,7 +158,7 @@ impl<'a> PARA_UP_LSCH3_W<'a> {
     }
 }
 #[doc = "Field `OVF_NUM_LSCH3` reader - reg_ovf_num_lsch3."]
-pub struct OVF_NUM_LSCH3_R(crate::FieldReader<u16, u16>);
+pub struct OVF_NUM_LSCH3_R(crate::FieldReader<u16>);
 impl OVF_NUM_LSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -166,7 +166,7 @@ impl OVF_NUM_LSCH3_R {
     }
 }
 impl core::ops::Deref for OVF_NUM_LSCH3_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,7 +185,7 @@ impl<'a> OVF_NUM_LSCH3_W<'a> {
     }
 }
 #[doc = "Field `OVF_CNT_EN_LSCH3` reader - reg_ovf_cnt_en_lsch3."]
-pub struct OVF_CNT_EN_LSCH3_R(crate::FieldReader<bool, bool>);
+pub struct OVF_CNT_EN_LSCH3_R(crate::FieldReader<bool>);
 impl OVF_CNT_EN_LSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -193,7 +193,7 @@ impl OVF_CNT_EN_LSCH3_R {
     }
 }
 impl core::ops::Deref for OVF_CNT_EN_LSCH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -313,25 +313,16 @@ impl W {
         self
     }
 }
-#[doc = "LEDC_LSCH3_CONF0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch3_conf0]
-(index.html) module"]
+#[doc = "LEDC_LSCH3_CONF0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch3_conf0](index.html) module"]
 pub struct LSCH3_CONF0_SPEC;
 impl crate::RegisterSpec for LSCH3_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lsch3_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lsch3_conf0::R](R) reader structure"]
 impl crate::Readable for LSCH3_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lsch3_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lsch3_conf0::W](W) writer structure"]
 impl crate::Writable for LSCH3_CONF0_SPEC {
     type Writer = W;
 }

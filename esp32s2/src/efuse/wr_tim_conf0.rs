@@ -35,7 +35,7 @@ impl From<crate::W<WR_TIM_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `THP_A` reader - Configures the hold time of programming operation."]
-pub struct THP_A_R(crate::FieldReader<u8, u8>);
+pub struct THP_A_R(crate::FieldReader<u8>);
 impl THP_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl THP_A_R {
     }
 }
 impl core::ops::Deref for THP_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> THP_A_W<'a> {
     }
 }
 #[doc = "Field `TPGM_INACTIVE` reader - Configures the length of pulse during programming 0 to eFuse."]
-pub struct TPGM_INACTIVE_R(crate::FieldReader<u8, u8>);
+pub struct TPGM_INACTIVE_R(crate::FieldReader<u8>);
 impl TPGM_INACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TPGM_INACTIVE_R {
     }
 }
 impl core::ops::Deref for TPGM_INACTIVE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TPGM_INACTIVE_W<'a> {
     }
 }
 #[doc = "Field `TPGM` reader - Configures the length of pulse during programming 1 to eFuse."]
-pub struct TPGM_R(crate::FieldReader<u16, u16>);
+pub struct TPGM_R(crate::FieldReader<u16>);
 impl TPGM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl TPGM_R {
     }
 }
 impl core::ops::Deref for TPGM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register 0 of eFuse programming timing parameters.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wr_tim_conf0]
-(index.html) module"]
+#[doc = "Configuration register 0 of eFuse programming timing parameters.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wr_tim_conf0](index.html) module"]
 pub struct WR_TIM_CONF0_SPEC;
 impl crate::RegisterSpec for WR_TIM_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wr_tim_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [wr_tim_conf0::R](R) reader structure"]
 impl crate::Readable for WR_TIM_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [wr_tim_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [wr_tim_conf0::W](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF0_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<HUNG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TXFIFO_TIMEOUT` reader - This register stores the timeout value. It will produce the UHCI_TX_HUNG_INT interrupt when DMA takes more time to receive data."]
-pub struct TXFIFO_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_TIMEOUT_R(crate::FieldReader<u8>);
 impl TXFIFO_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TXFIFO_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TXFIFO_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TXFIFO_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - This register is used to configure the tick count maximum value."]
-pub struct TXFIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8>);
 impl TXFIFO_TIMEOUT_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TXFIFO_TIMEOUT_SHIFT_R {
     }
 }
 impl core::ops::Deref for TXFIFO_TIMEOUT_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TXFIFO_TIMEOUT_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - This is the enable bit for Tx-FIFO receive-data timeout."]
-pub struct TXFIFO_TIMEOUT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_TIMEOUT_ENA_R(crate::FieldReader<bool>);
 impl TXFIFO_TIMEOUT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl TXFIFO_TIMEOUT_ENA_R {
     }
 }
 impl core::ops::Deref for TXFIFO_TIMEOUT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> TXFIFO_TIMEOUT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_TIMEOUT` reader - This register stores the timeout value. It will produce the UHCI_RX_HUNG_INT interrupt when DMA takes more time to read data from RAM."]
-pub struct RXFIFO_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_TIMEOUT_R(crate::FieldReader<u8>);
 impl RXFIFO_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl RXFIFO_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> RXFIFO_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - This register is used to configure the tick count maximum value."]
-pub struct RXFIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8>);
 impl RXFIFO_TIMEOUT_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl RXFIFO_TIMEOUT_SHIFT_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TIMEOUT_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> RXFIFO_TIMEOUT_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - This is the enable bit for DMA send-data timeout."]
-pub struct RXFIFO_TIMEOUT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_TIMEOUT_ENA_R(crate::FieldReader<bool>);
 impl RXFIFO_TIMEOUT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl RXFIFO_TIMEOUT_ENA_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TIMEOUT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -286,25 +286,16 @@ impl W {
         self
     }
 }
-#[doc = "Timeout configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hung_conf]
-(index.html) module"]
+#[doc = "Timeout configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hung_conf](index.html) module"]
 pub struct HUNG_CONF_SPEC;
 impl crate::RegisterSpec for HUNG_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hung_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [hung_conf::R](R) reader structure"]
 impl crate::Readable for HUNG_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [hung_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [hung_conf::W](W) writer structure"]
 impl crate::Writable for HUNG_CONF_SPEC {
     type Writer = W;
 }

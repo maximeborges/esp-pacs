@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DRANGE` reader - TOUCH_DRANGE"]
-pub struct TOUCH_DRANGE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DRANGE_R(crate::FieldReader<u8>);
 impl TOUCH_DRANGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_DRANGE_R {
     }
 }
 impl core::ops::Deref for TOUCH_DRANGE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TOUCH_DRANGE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DREFL` reader - TOUCH_DREFL"]
-pub struct TOUCH_DREFL_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DREFL_R(crate::FieldReader<u8>);
 impl TOUCH_DREFL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TOUCH_DREFL_R {
     }
 }
 impl core::ops::Deref for TOUCH_DREFL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TOUCH_DREFL_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DREFH` reader - TOUCH_DREFH"]
-pub struct TOUCH_DREFH_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DREFH_R(crate::FieldReader<u8>);
 impl TOUCH_DREFH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TOUCH_DREFH_R {
     }
 }
 impl core::ops::Deref for TOUCH_DREFH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TOUCH_DREFH_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_XPD_BIAS` reader - TOUCH_XPD_BIAS"]
-pub struct TOUCH_XPD_BIAS_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_XPD_BIAS_R(crate::FieldReader<bool>);
 impl TOUCH_XPD_BIAS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl TOUCH_XPD_BIAS_R {
     }
 }
 impl core::ops::Deref for TOUCH_XPD_BIAS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> TOUCH_XPD_BIAS_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_REFC` reader - TOUCH pad0 reference cap"]
-pub struct TOUCH_REFC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_REFC_R(crate::FieldReader<u8>);
 impl TOUCH_REFC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl TOUCH_REFC_R {
     }
 }
 impl core::ops::Deref for TOUCH_REFC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> TOUCH_REFC_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DBIAS` reader - 1:use self bias 0:use bandgap bias"]
-pub struct TOUCH_DBIAS_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_DBIAS_R(crate::FieldReader<bool>);
 impl TOUCH_DBIAS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl TOUCH_DBIAS_R {
     }
 }
 impl core::ops::Deref for TOUCH_DBIAS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> TOUCH_DBIAS_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SLP_TIMER_EN` reader - touch timer enable bit"]
-pub struct TOUCH_SLP_TIMER_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_SLP_TIMER_EN_R(crate::FieldReader<bool>);
 impl TOUCH_SLP_TIMER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -225,7 +225,7 @@ impl TOUCH_SLP_TIMER_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_SLP_TIMER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -254,7 +254,7 @@ impl<'a> TOUCH_SLP_TIMER_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm"]
-pub struct TOUCH_START_FSM_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_START_FSM_EN_R(crate::FieldReader<bool>);
 impl TOUCH_START_FSM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,7 +262,7 @@ impl TOUCH_START_FSM_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_START_FSM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> TOUCH_START_FSM_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm"]
-pub struct TOUCH_START_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_START_EN_R(crate::FieldReader<bool>);
 impl TOUCH_START_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -299,7 +299,7 @@ impl TOUCH_START_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_START_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -328,7 +328,7 @@ impl<'a> TOUCH_START_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_START_FORCE` reader - 1: to start touch fsm by SW"]
-pub struct TOUCH_START_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_START_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_START_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +336,7 @@ impl TOUCH_START_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_START_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> TOUCH_START_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub struct TOUCH_XPD_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_XPD_WAIT_R(crate::FieldReader<u8>);
 impl TOUCH_XPD_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -373,7 +373,7 @@ impl TOUCH_XPD_WAIT_R {
     }
 }
 impl core::ops::Deref for TOUCH_XPD_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -392,7 +392,7 @@ impl<'a> TOUCH_XPD_WAIT_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SLP_CYC_DIV` reader - when a touch pad is active sleep cycle could be divided by this number"]
-pub struct TOUCH_SLP_CYC_DIV_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_SLP_CYC_DIV_R(crate::FieldReader<u8>);
 impl TOUCH_SLP_CYC_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -400,7 +400,7 @@ impl TOUCH_SLP_CYC_DIV_R {
     }
 }
 impl core::ops::Deref for TOUCH_SLP_CYC_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -419,7 +419,7 @@ impl<'a> TOUCH_SLP_CYC_DIV_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_TIMER_FORCE_DONE` reader - force touch timer done"]
-pub struct TOUCH_TIMER_FORCE_DONE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_TIMER_FORCE_DONE_R(crate::FieldReader<u8>);
 impl TOUCH_TIMER_FORCE_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -427,7 +427,7 @@ impl TOUCH_TIMER_FORCE_DONE_R {
     }
 }
 impl core::ops::Deref for TOUCH_TIMER_FORCE_DONE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -446,7 +446,7 @@ impl<'a> TOUCH_TIMER_FORCE_DONE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_RESET` reader - reset upgrade touch"]
-pub struct TOUCH_RESET_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_RESET_R(crate::FieldReader<bool>);
 impl TOUCH_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -454,7 +454,7 @@ impl TOUCH_RESET_R {
     }
 }
 impl core::ops::Deref for TOUCH_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -483,7 +483,7 @@ impl<'a> TOUCH_RESET_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_CLK_FO` reader - touch clock force on"]
-pub struct TOUCH_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_CLK_FO_R(crate::FieldReader<bool>);
 impl TOUCH_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -491,7 +491,7 @@ impl TOUCH_CLK_FO_R {
     }
 }
 impl core::ops::Deref for TOUCH_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -520,7 +520,7 @@ impl<'a> TOUCH_CLK_FO_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_CLKGATE_EN` reader - touch clock enable"]
-pub struct TOUCH_CLKGATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_CLKGATE_EN_R(crate::FieldReader<bool>);
 impl TOUCH_CLKGATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -528,7 +528,7 @@ impl TOUCH_CLKGATE_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_CLKGATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -726,25 +726,16 @@ impl W {
         self
     }
 }
-#[doc = "configure touch controller\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_ctrl2]
-(index.html) module"]
+#[doc = "configure touch controller\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_ctrl2](index.html) module"]
 pub struct TOUCH_CTRL2_SPEC;
 impl crate::RegisterSpec for TOUCH_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_ctrl2::R](R) reader structure"]
 impl crate::Readable for TOUCH_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_ctrl2::W](W) writer structure"]
 impl crate::Writable for TOUCH_CTRL2_SPEC {
     type Writer = W;
 }

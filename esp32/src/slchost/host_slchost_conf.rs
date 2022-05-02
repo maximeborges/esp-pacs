@@ -35,7 +35,7 @@ impl From<crate::W<HOST_SLCHOST_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_FRC_SDIO11` reader - "]
-pub struct HOST_FRC_SDIO11_R(crate::FieldReader<u8, u8>);
+pub struct HOST_FRC_SDIO11_R(crate::FieldReader<u8>);
 impl HOST_FRC_SDIO11_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl HOST_FRC_SDIO11_R {
     }
 }
 impl core::ops::Deref for HOST_FRC_SDIO11_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> HOST_FRC_SDIO11_W<'a> {
     }
 }
 #[doc = "Field `HOST_FRC_SDIO20` reader - "]
-pub struct HOST_FRC_SDIO20_R(crate::FieldReader<u8, u8>);
+pub struct HOST_FRC_SDIO20_R(crate::FieldReader<u8>);
 impl HOST_FRC_SDIO20_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl HOST_FRC_SDIO20_R {
     }
 }
 impl core::ops::Deref for HOST_FRC_SDIO20_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> HOST_FRC_SDIO20_W<'a> {
     }
 }
 #[doc = "Field `HOST_FRC_NEG_SAMP` reader - "]
-pub struct HOST_FRC_NEG_SAMP_R(crate::FieldReader<u8, u8>);
+pub struct HOST_FRC_NEG_SAMP_R(crate::FieldReader<u8>);
 impl HOST_FRC_NEG_SAMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl HOST_FRC_NEG_SAMP_R {
     }
 }
 impl core::ops::Deref for HOST_FRC_NEG_SAMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> HOST_FRC_NEG_SAMP_W<'a> {
     }
 }
 #[doc = "Field `HOST_FRC_POS_SAMP` reader - "]
-pub struct HOST_FRC_POS_SAMP_R(crate::FieldReader<u8, u8>);
+pub struct HOST_FRC_POS_SAMP_R(crate::FieldReader<u8>);
 impl HOST_FRC_POS_SAMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl HOST_FRC_POS_SAMP_R {
     }
 }
 impl core::ops::Deref for HOST_FRC_POS_SAMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> HOST_FRC_POS_SAMP_W<'a> {
     }
 }
 #[doc = "Field `HOST_FRC_QUICK_IN` reader - "]
-pub struct HOST_FRC_QUICK_IN_R(crate::FieldReader<u8, u8>);
+pub struct HOST_FRC_QUICK_IN_R(crate::FieldReader<u8>);
 impl HOST_FRC_QUICK_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl HOST_FRC_QUICK_IN_R {
     }
 }
 impl core::ops::Deref for HOST_FRC_QUICK_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> HOST_FRC_QUICK_IN_W<'a> {
     }
 }
 #[doc = "Field `HOST_SDIO20_INT_DELAY` reader - "]
-pub struct HOST_SDIO20_INT_DELAY_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SDIO20_INT_DELAY_R(crate::FieldReader<bool>);
 impl HOST_SDIO20_INT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -178,7 +178,7 @@ impl HOST_SDIO20_INT_DELAY_R {
     }
 }
 impl core::ops::Deref for HOST_SDIO20_INT_DELAY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -207,7 +207,7 @@ impl<'a> HOST_SDIO20_INT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `HOST_SDIO_PAD_PULLUP` reader - "]
-pub struct HOST_SDIO_PAD_PULLUP_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SDIO_PAD_PULLUP_R(crate::FieldReader<bool>);
 impl HOST_SDIO_PAD_PULLUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -215,7 +215,7 @@ impl HOST_SDIO_PAD_PULLUP_R {
     }
 }
 impl core::ops::Deref for HOST_SDIO_PAD_PULLUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -244,7 +244,7 @@ impl<'a> HOST_SDIO_PAD_PULLUP_W<'a> {
     }
 }
 #[doc = "Field `HOST_HSPEED_CON_EN` reader - "]
-pub struct HOST_HSPEED_CON_EN_R(crate::FieldReader<bool, bool>);
+pub struct HOST_HSPEED_CON_EN_R(crate::FieldReader<bool>);
 impl HOST_HSPEED_CON_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -252,7 +252,7 @@ impl HOST_HSPEED_CON_EN_R {
     }
 }
 impl core::ops::Deref for HOST_HSPEED_CON_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -370,25 +370,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_conf](index.html) module"]
 pub struct HOST_SLCHOST_CONF_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slchost_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_slchost_conf::R](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [host_slchost_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_slchost_conf::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_SPEC {
     type Writer = W;
 }

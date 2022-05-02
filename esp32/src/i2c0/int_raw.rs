@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_RAW` reader - The raw interrupt status bit for rxfifo full when use apb fifo access."]
-pub struct RXFIFO_FULL_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_FULL_INT_RAW_R(crate::FieldReader<bool>);
 impl RXFIFO_FULL_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RXFIFO_FULL_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_INT_RAW` reader - The raw interrupt status bit for txfifo empty when use apb fifo access."]
-pub struct TXFIFO_EMPTY_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_EMPTY_INT_RAW_R(crate::FieldReader<bool>);
 impl TXFIFO_EMPTY_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TXFIFO_EMPTY_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_OVF_INT_RAW` reader - The raw interrupt status bit for receiving data overflow when use apb fifo access."]
-pub struct RXFIFO_OVF_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_OVF_INT_RAW_R(crate::FieldReader<bool>);
 impl RXFIFO_OVF_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl RXFIFO_OVF_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RXFIFO_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `END_DETECT_INT_RAW` reader - The raw interrupt status bit for end_detect_int interrupt. when I2C deals with the END command it will produce end_detect_int interrupt."]
-pub struct END_DETECT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct END_DETECT_INT_RAW_R(crate::FieldReader<bool>);
 impl END_DETECT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl END_DETECT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for END_DETECT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLAVE_TRAN_COMP_INT_RAW` reader - The raw interrupt status bit for slave_tran_comp_int interrupt. when I2C Slave detectsthe STOP bit it will produce slave_tran_comp_int interrupt."]
-pub struct SLAVE_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool>);
 impl SLAVE_TRAN_COMP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl SLAVE_TRAN_COMP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLAVE_TRAN_COMP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - The raw interrupt status bit for arbitration_lost_int interrupt.when I2C lost the usage right of I2C BUS it will produce arbitration_lost_int interrupt."]
-pub struct ARBITRATION_LOST_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct ARBITRATION_LOST_INT_RAW_R(crate::FieldReader<bool>);
 impl ARBITRATION_LOST_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl ARBITRATION_LOST_INT_RAW_R {
     }
 }
 impl core::ops::Deref for ARBITRATION_LOST_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MASTER_TRAN_COMP_INT_RAW` reader - The raw interrupt status bit for master_tra_comp_int interrupt. when I2C Master sends or receives a byte it will produce master_tran_comp_int interrupt."]
-pub struct MASTER_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool>);
 impl MASTER_TRAN_COMP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl MASTER_TRAN_COMP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for MASTER_TRAN_COMP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - The raw interrupt status bit for trans_complete_int interrupt. when I2C Master finished STOP command it will produce trans_complete_int interrupt."]
-pub struct TRANS_COMPLETE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_COMPLETE_INT_RAW_R(crate::FieldReader<bool>);
 impl TRANS_COMPLETE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl TRANS_COMPLETE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TRANS_COMPLETE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIME_OUT_INT_RAW` reader - The raw interrupt status bit for time_out_int interrupt. when I2C takes a lot of time to receive a data it will produce time_out_int interrupt."]
-pub struct TIME_OUT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIME_OUT_INT_RAW_R(crate::FieldReader<bool>);
 impl TIME_OUT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl TIME_OUT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIME_OUT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_START_INT_RAW` reader - The raw interrupt status bit for trans_start_int interrupt. when I2C sends the START bit it will produce trans_start_int interrupt."]
-pub struct TRANS_START_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_START_INT_RAW_R(crate::FieldReader<bool>);
 impl TRANS_START_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl TRANS_START_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TRANS_START_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ACK_ERR_INT_RAW` reader - The raw interrupt status bit for ack_err_int interrupt. when I2C receives a wrong ACK bit it will produce ack_err_int interrupt.."]
-pub struct ACK_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct ACK_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl ACK_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl ACK_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for ACK_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_REC_FULL_INT_RAW` reader - The raw interrupt status bit for rx_rec_full_int interrupt. when I2C receives more data than nonfifo_rx_thres it will produce rx_rec_full_int interrupt."]
-pub struct RX_REC_FULL_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RX_REC_FULL_INT_RAW_R(crate::FieldReader<bool>);
 impl RX_REC_FULL_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl RX_REC_FULL_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RX_REC_FULL_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_SEND_EMPTY_INT_RAW` reader - The raw interrupt status bit for tx_send_empty_int interrupt.when I2C sends more data than nonfifo_tx_thres it will produce tx_send_empty_int interrupt.."]
-pub struct TX_SEND_EMPTY_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TX_SEND_EMPTY_INT_RAW_R(crate::FieldReader<bool>);
 impl TX_SEND_EMPTY_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,7 +202,7 @@ impl TX_SEND_EMPTY_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TX_SEND_EMPTY_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -275,16 +275,12 @@ impl R {
         TX_SEND_EMPTY_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
 }

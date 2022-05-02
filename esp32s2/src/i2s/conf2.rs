@@ -35,7 +35,7 @@ impl From<crate::W<CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CAMERA_EN` reader - Set this bit to enable camera mode."]
-pub struct CAMERA_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAMERA_EN_R(crate::FieldReader<bool>);
 impl CAMERA_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CAMERA_EN_R {
     }
 }
 impl core::ops::Deref for CAMERA_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CAMERA_EN_W<'a> {
     }
 }
 #[doc = "Field `LCD_TX_WRX2_EN` reader - LCD WR double for one datum."]
-pub struct LCD_TX_WRX2_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TX_WRX2_EN_R(crate::FieldReader<bool>);
 impl LCD_TX_WRX2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LCD_TX_WRX2_EN_R {
     }
 }
 impl core::ops::Deref for LCD_TX_WRX2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LCD_TX_WRX2_EN_W<'a> {
     }
 }
 #[doc = "Field `LCD_TX_SDX2_EN` reader - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
-pub struct LCD_TX_SDX2_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TX_SDX2_EN_R(crate::FieldReader<bool>);
 impl LCD_TX_SDX2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl LCD_TX_SDX2_EN_R {
     }
 }
 impl core::ops::Deref for LCD_TX_SDX2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> LCD_TX_SDX2_EN_W<'a> {
     }
 }
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - for debug camera mode enable"]
-pub struct DATA_ENABLE_TEST_EN_R(crate::FieldReader<bool, bool>);
+pub struct DATA_ENABLE_TEST_EN_R(crate::FieldReader<bool>);
 impl DATA_ENABLE_TEST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DATA_ENABLE_TEST_EN_R {
     }
 }
 impl core::ops::Deref for DATA_ENABLE_TEST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DATA_ENABLE_TEST_EN_W<'a> {
     }
 }
 #[doc = "Field `DATA_ENABLE` reader - for debug camera mode enable"]
-pub struct DATA_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct DATA_ENABLE_R(crate::FieldReader<bool>);
 impl DATA_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DATA_ENABLE_R {
     }
 }
 impl core::ops::Deref for DATA_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DATA_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `LCD_EN` reader - Set this bit to enable LCD mode."]
-pub struct LCD_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_EN_R(crate::FieldReader<bool>);
 impl LCD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl LCD_EN_R {
     }
 }
 impl core::ops::Deref for LCD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> LCD_EN_W<'a> {
     }
 }
 #[doc = "Field `EXT_ADC_START_EN` reader - Set this bit to enable the function that ADC mode is triggered by external signal."]
-pub struct EXT_ADC_START_EN_R(crate::FieldReader<bool, bool>);
+pub struct EXT_ADC_START_EN_R(crate::FieldReader<bool>);
 impl EXT_ADC_START_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl EXT_ADC_START_EN_R {
     }
 }
 impl core::ops::Deref for EXT_ADC_START_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> EXT_ADC_START_EN_W<'a> {
     }
 }
 #[doc = "Field `INTER_VALID_EN` reader - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
-pub struct INTER_VALID_EN_R(crate::FieldReader<bool, bool>);
+pub struct INTER_VALID_EN_R(crate::FieldReader<bool>);
 impl INTER_VALID_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl INTER_VALID_EN_R {
     }
 }
 impl core::ops::Deref for INTER_VALID_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> INTER_VALID_EN_W<'a> {
     }
 }
 #[doc = "Field `CAM_SYNC_FIFO_RESET` reader - Set this bit to reset FIFO in camera mode."]
-pub struct CAM_SYNC_FIFO_RESET_R(crate::FieldReader<bool, bool>);
+pub struct CAM_SYNC_FIFO_RESET_R(crate::FieldReader<bool>);
 impl CAM_SYNC_FIFO_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl CAM_SYNC_FIFO_RESET_R {
     }
 }
 impl core::ops::Deref for CAM_SYNC_FIFO_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> CAM_SYNC_FIFO_RESET_W<'a> {
     }
 }
 #[doc = "Field `CAM_CLK_LOOPBACK` reader - Set this bit to loopback PCLK from I2S0I_WS_out."]
-pub struct CAM_CLK_LOOPBACK_R(crate::FieldReader<bool, bool>);
+pub struct CAM_CLK_LOOPBACK_R(crate::FieldReader<bool>);
 impl CAM_CLK_LOOPBACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl CAM_CLK_LOOPBACK_R {
     }
 }
 impl core::ops::Deref for CAM_CLK_LOOPBACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> CAM_CLK_LOOPBACK_W<'a> {
     }
 }
 #[doc = "Field `VSYNC_FILTER_EN` reader - Set this bit to enable I2S VSYNC filter function."]
-pub struct VSYNC_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct VSYNC_FILTER_EN_R(crate::FieldReader<bool>);
 impl VSYNC_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl VSYNC_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for VSYNC_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> VSYNC_FILTER_EN_W<'a> {
     }
 }
 #[doc = "Field `VSYNC_FILTER_THRES` reader - Configure the I2S VSYNC filter threshold value."]
-pub struct VSYNC_FILTER_THRES_R(crate::FieldReader<u8, u8>);
+pub struct VSYNC_FILTER_THRES_R(crate::FieldReader<u8>);
 impl VSYNC_FILTER_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -450,7 +450,7 @@ impl VSYNC_FILTER_THRES_R {
     }
 }
 impl core::ops::Deref for VSYNC_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -598,25 +598,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S configuration register 2\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2]
-(index.html) module"]
+#[doc = "I2S configuration register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2](index.html) module"]
 pub struct CONF2_SPEC;
 impl crate::RegisterSpec for CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf2::R](R) reader structure"]
 impl crate::Readable for CONF2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf2::W](W) writer structure"]
 impl crate::Writable for CONF2_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` reader - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub struct DMA_SLV_SEG_TRANS_EN_R(crate::FieldReader<bool, bool>);
+pub struct DMA_SLV_SEG_TRANS_EN_R(crate::FieldReader<bool>);
 impl DMA_SLV_SEG_TRANS_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_SLV_SEG_TRANS_EN_R {
     }
 }
 impl core::ops::Deref for DMA_SLV_SEG_TRANS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DMA_SLV_SEG_TRANS_EN_W<'a> {
     }
 }
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
-pub struct SLV_RX_SEG_TRANS_CLR_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RX_SEG_TRANS_CLR_EN_R(crate::FieldReader<bool>);
 impl SLV_RX_SEG_TRANS_CLR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLV_RX_SEG_TRANS_CLR_EN_R {
     }
 }
 impl core::ops::Deref for SLV_RX_SEG_TRANS_CLR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLV_RX_SEG_TRANS_CLR_EN_W<'a> {
     }
 }
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
-pub struct SLV_TX_SEG_TRANS_CLR_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_TX_SEG_TRANS_CLR_EN_R(crate::FieldReader<bool>);
 impl SLV_TX_SEG_TRANS_CLR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SLV_TX_SEG_TRANS_CLR_EN_R {
     }
 }
 impl core::ops::Deref for SLV_TX_SEG_TRANS_CLR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -145,9 +145,8 @@ impl<'a> SLV_TX_SEG_TRANS_CLR_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `RX_EOF_EN` reader - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\]
- in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
-pub struct RX_EOF_EN_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `RX_EOF_EN` reader - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
+pub struct RX_EOF_EN_R(crate::FieldReader<bool>);
 impl RX_EOF_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -155,14 +154,13 @@ impl RX_EOF_EN_R {
     }
 }
 impl core::ops::Deref for RX_EOF_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `RX_EOF_EN` writer - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\]
- in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
+#[doc = "Field `RX_EOF_EN` writer - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
 pub struct RX_EOF_EN_W<'a> {
     w: &'a mut W,
 }
@@ -185,7 +183,7 @@ impl<'a> RX_EOF_EN_W<'a> {
     }
 }
 #[doc = "Field `DMA_RX_ENA` reader - Set this bit to enable SPI DMA controlled receive data mode."]
-pub struct DMA_RX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RX_ENA_R(crate::FieldReader<bool>);
 impl DMA_RX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -193,7 +191,7 @@ impl DMA_RX_ENA_R {
     }
 }
 impl core::ops::Deref for DMA_RX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,7 +220,7 @@ impl<'a> DMA_RX_ENA_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_ENA` reader - Set this bit to enable SPI DMA controlled send data mode."]
-pub struct DMA_TX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_ENA_R(crate::FieldReader<bool>);
 impl DMA_TX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -230,7 +228,7 @@ impl DMA_TX_ENA_R {
     }
 }
 impl core::ops::Deref for DMA_TX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -340,8 +338,7 @@ impl R {
     pub fn slv_tx_seg_trans_clr_en(&self) -> SLV_TX_SEG_TRANS_CLR_EN_R {
         SLV_TX_SEG_TRANS_CLR_EN_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\]
- in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
+    #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
     #[inline(always)]
     pub fn rx_eof_en(&self) -> RX_EOF_EN_R {
         RX_EOF_EN_R::new(((self.bits >> 21) & 1) != 0)
@@ -373,8 +370,7 @@ impl W {
     pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W {
         SLV_TX_SEG_TRANS_CLR_EN_W { w: self }
     }
-    #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\]
- in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
+    #[doc = "Bit 21 - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
     #[inline(always)]
     pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W {
         RX_EOF_EN_W { w: self }
@@ -411,25 +407,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI DMA control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_conf]
-(index.html) module"]
+#[doc = "SPI DMA control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_conf](index.html) module"]
 pub struct DMA_CONF_SPEC;
 impl crate::RegisterSpec for DMA_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_conf::R](R) reader structure"]
 impl crate::Readable for DMA_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_conf::W](W) writer structure"]
 impl crate::Writable for DMA_CONF_SPEC {
     type Writer = W;
 }

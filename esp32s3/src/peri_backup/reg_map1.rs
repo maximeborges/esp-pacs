@@ -35,7 +35,7 @@ impl From<crate::W<REG_MAP1_SPEC>> for W {
     }
 }
 #[doc = "Field `MAP1` reader - x"]
-pub struct MAP1_R(crate::FieldReader<u32, u32>);
+pub struct MAP1_R(crate::FieldReader<u32>);
 impl MAP1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl MAP1_R {
     }
 }
 impl core::ops::Deref for MAP1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "x\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_map1]
-(index.html) module"]
+#[doc = "x\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reg_map1](index.html) module"]
 pub struct REG_MAP1_SPEC;
 impl crate::RegisterSpec for REG_MAP1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reg_map1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [reg_map1::R](R) reader structure"]
 impl crate::Readable for REG_MAP1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [reg_map1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [reg_map1::W](W) writer structure"]
 impl crate::Writable for REG_MAP1_SPEC {
     type Writer = W;
 }

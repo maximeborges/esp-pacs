@@ -79,7 +79,7 @@ impl<'a> SLP_REJECT_CAUSE_CLR_W<'a> {
     }
 }
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge 0: APB to RTC using sync"]
-pub struct APB2RTC_BRIDGE_SEL_R(crate::FieldReader<bool, bool>);
+pub struct APB2RTC_BRIDGE_SEL_R(crate::FieldReader<bool>);
 impl APB2RTC_BRIDGE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -87,7 +87,7 @@ impl APB2RTC_BRIDGE_SEL_R {
     }
 }
 impl core::ops::Deref for APB2RTC_BRIDGE_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> APB2RTC_BRIDGE_SEL_W<'a> {
     }
 }
 #[doc = "Field `SDIO_ACTIVE_IND` reader - Indicates the SDIO is active."]
-pub struct SDIO_ACTIVE_IND_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_ACTIVE_IND_R(crate::FieldReader<bool>);
 impl SDIO_ACTIVE_IND_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,14 +124,14 @@ impl SDIO_ACTIVE_IND_R {
     }
 }
 impl core::ops::Deref for SDIO_ACTIVE_IND_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLP_WAKEUP` reader - Sleep wakeup bit."]
-pub struct SLP_WAKEUP_R(crate::FieldReader<bool, bool>);
+pub struct SLP_WAKEUP_R(crate::FieldReader<bool>);
 impl SLP_WAKEUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -139,7 +139,7 @@ impl SLP_WAKEUP_R {
     }
 }
 impl core::ops::Deref for SLP_WAKEUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -168,7 +168,7 @@ impl<'a> SLP_WAKEUP_W<'a> {
     }
 }
 #[doc = "Field `SLP_REJECT` reader - Sleep reject bit."]
-pub struct SLP_REJECT_R(crate::FieldReader<bool, bool>);
+pub struct SLP_REJECT_R(crate::FieldReader<bool>);
 impl SLP_REJECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -176,7 +176,7 @@ impl SLP_REJECT_R {
     }
 }
 impl core::ops::Deref for SLP_REJECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -205,7 +205,7 @@ impl<'a> SLP_REJECT_W<'a> {
     }
 }
 #[doc = "Field `SLEEP_EN` reader - Sends the chip to sleep."]
-pub struct SLEEP_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLEEP_EN_R(crate::FieldReader<bool>);
 impl SLEEP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -213,7 +213,7 @@ impl SLEEP_EN_R {
     }
 }
 impl core::ops::Deref for SLEEP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,25 +306,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures the sleep / reject / wakeup state\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0]
-(index.html) module"]
+#[doc = "Configures the sleep / reject / wakeup state\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0](index.html) module"]
 pub struct STATE0_SPEC;
 impl crate::RegisterSpec for STATE0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [state0::R](R) reader structure"]
 impl crate::Readable for STATE0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [state0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [state0::W](W) writer structure"]
 impl crate::Writable for STATE0_SPEC {
     type Writer = W;
 }

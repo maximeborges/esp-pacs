@@ -14,7 +14,7 @@ impl From<crate::R<LC_DMA_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_ST` reader - The status bit for LCD frame end interrupt."]
-pub struct LCD_VSYNC_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LCD_VSYNC_INT_ST_R(crate::FieldReader<bool>);
 impl LCD_VSYNC_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl LCD_VSYNC_INT_ST_R {
     }
 }
 impl core::ops::Deref for LCD_VSYNC_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `LCD_TRANS_DONE_INT_ST` reader - The status bit for lcd transfer end interrupt."]
-pub struct LCD_TRANS_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TRANS_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl LCD_TRANS_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl LCD_TRANS_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for LCD_TRANS_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAM_VSYNC_INT_ST` reader - The status bit for Camera frame end interrupt."]
-pub struct CAM_VSYNC_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct CAM_VSYNC_INT_ST_R(crate::FieldReader<bool>);
 impl CAM_VSYNC_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CAM_VSYNC_INT_ST_R {
     }
 }
 impl core::ops::Deref for CAM_VSYNC_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAM_HS_INT_ST` reader - The status bit for Camera transfer end interrupt."]
-pub struct CAM_HS_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct CAM_HS_INT_ST_R(crate::FieldReader<bool>);
 impl CAM_HS_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl CAM_HS_INT_ST_R {
     }
 }
 impl core::ops::Deref for CAM_HS_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         CAM_HS_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
-#[doc = "LCD_camera DMA masked inturrupt status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_st]
-(index.html) module"]
+#[doc = "LCD_camera DMA masked inturrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_st](index.html) module"]
 pub struct LC_DMA_INT_ST_SPEC;
 impl crate::RegisterSpec for LC_DMA_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_dma_int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lc_dma_int_st::R](R) reader structure"]
 impl crate::Readable for LC_DMA_INT_ST_SPEC {
     type Reader = R;
 }

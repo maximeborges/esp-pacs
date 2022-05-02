@@ -35,7 +35,7 @@ impl From<crate::W<BLOCK_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_MODE` reader - Those bits decides which block mode will be used. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: GCM, 0x7: reserved."]
-pub struct BLOCK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct BLOCK_MODE_R(crate::FieldReader<u8>);
 impl BLOCK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BLOCK_MODE_R {
     }
 }
 impl core::ops::Deref for BLOCK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "AES cipher block mode register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [block_mode]
-(index.html) module"]
+#[doc = "AES cipher block mode register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [block_mode](index.html) module"]
 pub struct BLOCK_MODE_SPEC;
 impl crate::RegisterSpec for BLOCK_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [block_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [block_mode::R](R) reader structure"]
 impl crate::Readable for BLOCK_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [block_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [block_mode::W](W) writer structure"]
 impl crate::Writable for BLOCK_MODE_SPEC {
     type Writer = W;
 }

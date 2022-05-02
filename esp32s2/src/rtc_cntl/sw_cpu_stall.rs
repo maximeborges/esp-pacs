@@ -34,10 +34,8 @@ impl From<crate::W<SW_CPU_STALL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\]
- reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
-pub struct SW_STALL_APPCPU_C1_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+pub struct SW_STALL_APPCPU_C1_R(crate::FieldReader<u8>);
 impl SW_STALL_APPCPU_C1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -45,15 +43,13 @@ impl SW_STALL_APPCPU_C1_R {
     }
 }
 impl core::ops::Deref for SW_STALL_APPCPU_C1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\]
- reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+#[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
 pub struct SW_STALL_APPCPU_C1_W<'a> {
     w: &'a mut W,
 }
@@ -66,7 +62,7 @@ impl<'a> SW_STALL_APPCPU_C1_W<'a> {
     }
 }
 #[doc = "Field `SW_STALL_PROCPU_C1` reader - Set this bit to allow the SW to be able to send the CPU into stalling."]
-pub struct SW_STALL_PROCPU_C1_R(crate::FieldReader<u8, u8>);
+pub struct SW_STALL_PROCPU_C1_R(crate::FieldReader<u8>);
 impl SW_STALL_PROCPU_C1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -74,7 +70,7 @@ impl SW_STALL_PROCPU_C1_R {
     }
 }
 impl core::ops::Deref for SW_STALL_PROCPU_C1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -93,9 +89,7 @@ impl<'a> SW_STALL_PROCPU_C1_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
- reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&self) -> SW_STALL_APPCPU_C1_R {
         SW_STALL_APPCPU_C1_R::new(((self.bits >> 20) & 0x3f) as u8)
@@ -107,9 +101,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
- reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W {
         SW_STALL_APPCPU_C1_W { w: self }
@@ -126,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "CPU stall configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sw_cpu_stall]
-(index.html) module"]
+#[doc = "CPU stall configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sw_cpu_stall](index.html) module"]
 pub struct SW_CPU_STALL_SPEC;
 impl crate::RegisterSpec for SW_CPU_STALL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sw_cpu_stall::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sw_cpu_stall::R](R) reader structure"]
 impl crate::Readable for SW_CPU_STALL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sw_cpu_stall::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sw_cpu_stall::W](W) writer structure"]
 impl crate::Writable for SW_CPU_STALL_SPEC {
     type Writer = W;
 }

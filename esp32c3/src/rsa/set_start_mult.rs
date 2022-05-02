@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "RSA normal multiplication trigger register.\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_start_mult]
-(index.html) module"]
+#[doc = "RSA normal multiplication trigger register.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_start_mult](index.html) module"]
 pub struct SET_START_MULT_SPEC;
 impl crate::RegisterSpec for SET_START_MULT_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_start_mult::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_start_mult::W](W) writer structure"]
 impl crate::Writable for SET_START_MULT_SPEC {
     type Writer = W;
 }

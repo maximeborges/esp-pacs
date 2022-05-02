@@ -35,7 +35,7 @@ impl From<crate::W<DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK` reader - Set 1 to lock lc dma permission Configuration Register."]
-pub struct DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK_R(crate::FieldReader<bool, bool>);
+pub struct DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK_R(crate::FieldReader<bool>);
 impl DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_LC_PMS_CONSTRAIN_LOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "lc dma permission configuration register 0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_apbperi_lc_pms_constrain_0]
-(index.html) module"]
+#[doc = "lc dma permission configuration register 0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_apbperi_lc_pms_constrain_0](index.html) module"]
 pub struct DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC;
 impl crate::RegisterSpec for DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_apbperi_lc_pms_constrain_0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_apbperi_lc_pms_constrain_0::R](R) reader structure"]
 impl crate::Readable for DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_apbperi_lc_pms_constrain_0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_apbperi_lc_pms_constrain_0::W](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC {
     type Writer = W;
 }

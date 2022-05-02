@@ -14,7 +14,7 @@ impl From<crate::R<IBUS0_ABANDON_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IBUS0_ABANDON_CNT` reader - The bits are used to count the number of the abandoned ibus0 access."]
-pub struct IBUS0_ABANDON_CNT_R(crate::FieldReader<u16, u16>);
+pub struct IBUS0_ABANDON_CNT_R(crate::FieldReader<u16>);
 impl IBUS0_ABANDON_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl IBUS0_ABANDON_CNT_R {
     }
 }
 impl core::ops::Deref for IBUS0_ABANDON_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         IBUS0_ABANDON_CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ibus0_abandon_cnt]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ibus0_abandon_cnt](index.html) module"]
 pub struct IBUS0_ABANDON_CNT_SPEC;
 impl crate::RegisterSpec for IBUS0_ABANDON_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ibus0_abandon_cnt::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ibus0_abandon_cnt::R](R) reader structure"]
 impl crate::Readable for IBUS0_ABANDON_CNT_SPEC {
     type Reader = R;
 }

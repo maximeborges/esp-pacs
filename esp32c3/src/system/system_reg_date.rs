@@ -35,7 +35,7 @@ impl From<crate::W<SYSTEM_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SYSTEM_REG_DATE` reader - reg_system_reg_date"]
-pub struct SYSTEM_REG_DATE_R(crate::FieldReader<u32, u32>);
+pub struct SYSTEM_REG_DATE_R(crate::FieldReader<u32>);
 impl SYSTEM_REG_DATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SYSTEM_REG_DATE_R {
     }
 }
 impl core::ops::Deref for SYSTEM_REG_DATE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Version register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [system_reg_date]
-(index.html) module"]
+#[doc = "Version register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [system_reg_date](index.html) module"]
 pub struct SYSTEM_REG_DATE_SPEC;
 impl crate::RegisterSpec for SYSTEM_REG_DATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [system_reg_date::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [system_reg_date::R](R) reader structure"]
 impl crate::Readable for SYSTEM_REG_DATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [system_reg_date::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [system_reg_date::W](W) writer structure"]
 impl crate::Writable for SYSTEM_REG_DATE_SPEC {
     type Writer = W;
 }

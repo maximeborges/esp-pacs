@@ -35,7 +35,7 @@ impl From<crate::W<PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_PAD_FORCE_HOLD` reader - rtc pad force hold"]
-pub struct RTC_PAD_FORCE_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PAD_FORCE_HOLD_R(crate::FieldReader<bool>);
 impl RTC_PAD_FORCE_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_PAD_FORCE_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_PAD_FORCE_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwc]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwc](index.html) module"]
 pub struct PWC_SPEC;
 impl crate::RegisterSpec for PWC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pwc::R](R) reader structure"]
 impl crate::Readable for PWC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pwc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pwc::W](W) writer structure"]
 impl crate::Writable for PWC_SPEC {
     type Writer = W;
 }

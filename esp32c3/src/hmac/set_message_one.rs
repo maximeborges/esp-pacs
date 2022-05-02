@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "Process control register 1.\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_message_one]
-(index.html) module"]
+#[doc = "Process control register 1.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_message_one](index.html) module"]
 pub struct SET_MESSAGE_ONE_SPEC;
 impl crate::RegisterSpec for SET_MESSAGE_ONE_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_message_one::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_message_one::W](W) writer structure"]
 impl crate::Writable for SET_MESSAGE_ONE_SPEC {
     type Writer = W;
 }

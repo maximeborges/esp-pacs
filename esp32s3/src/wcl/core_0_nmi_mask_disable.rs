@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "Core_0 NMI mask disable register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_nmi_mask_disable]
-(index.html) module"]
+#[doc = "Core_0 NMI mask disable register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_nmi_mask_disable](index.html) module"]
 pub struct CORE_0_NMI_MASK_DISABLE_SPEC;
 impl crate::RegisterSpec for CORE_0_NMI_MASK_DISABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_nmi_mask_disable::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_nmi_mask_disable::W](W) writer structure"]
 impl crate::Writable for CORE_0_NMI_MASK_DISABLE_SPEC {
     type Writer = W;
 }

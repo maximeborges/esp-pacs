@@ -35,7 +35,7 @@ impl From<crate::W<SRAM_DRD_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_VALUE` reader - For SPI0 When cache mode is enable it is the read command value of command phase for SRAM."]
-pub struct CACHE_SRAM_USR_RD_CMD_VALUE_R(crate::FieldReader<u16, u16>);
+pub struct CACHE_SRAM_USR_RD_CMD_VALUE_R(crate::FieldReader<u16>);
 impl CACHE_SRAM_USR_RD_CMD_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_SRAM_USR_RD_CMD_VALUE_R {
     }
 }
 impl core::ops::Deref for CACHE_SRAM_USR_RD_CMD_VALUE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CACHE_SRAM_USR_RD_CMD_VALUE_W<'a> {
     }
 }
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_BITLEN` reader - For SPI0 When cache mode is enable it is the length in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
-pub struct CACHE_SRAM_USR_RD_CMD_BITLEN_R(crate::FieldReader<u8, u8>);
+pub struct CACHE_SRAM_USR_RD_CMD_BITLEN_R(crate::FieldReader<u8>);
 impl CACHE_SRAM_USR_RD_CMD_BITLEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CACHE_SRAM_USR_RD_CMD_BITLEN_R {
     }
 }
 impl core::ops::Deref for CACHE_SRAM_USR_RD_CMD_BITLEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_drd_cmd]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_drd_cmd](index.html) module"]
 pub struct SRAM_DRD_CMD_SPEC;
 impl crate::RegisterSpec for SRAM_DRD_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sram_drd_cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sram_drd_cmd::R](R) reader structure"]
 impl crate::Readable for SRAM_DRD_CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sram_drd_cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sram_drd_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_DRD_CMD_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<OCCUPY_2_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_MAC_DUMP` reader - Configure whether SRAM Block 18-21 is used as mac dump."]
-pub struct OCCUPY_MAC_DUMP_R(crate::FieldReader<u8, u8>);
+pub struct OCCUPY_MAC_DUMP_R(crate::FieldReader<u8>);
 impl OCCUPY_MAC_DUMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl OCCUPY_MAC_DUMP_R {
     }
 }
 impl core::ops::Deref for OCCUPY_MAC_DUMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Occupy permission control register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [occupy_2]
-(index.html) module"]
+#[doc = "Occupy permission control register 2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [occupy_2](index.html) module"]
 pub struct OCCUPY_2_SPEC;
 impl crate::RegisterSpec for OCCUPY_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [occupy_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [occupy_2::R](R) reader structure"]
 impl crate::Readable for OCCUPY_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [occupy_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [occupy_2::W](W) writer structure"]
 impl crate::Writable for OCCUPY_2_SPEC {
     type Writer = W;
 }

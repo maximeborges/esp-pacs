@@ -35,7 +35,7 @@ impl From<crate::W<PRO_AHB_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_SPLTADDR` reader - Configure the split address of RTCSlow_1 for PeriBus2 access."]
-pub struct PRO_AHB_RTCSLOW_1_SPLTADDR_R(crate::FieldReader<u16, u16>);
+pub struct PRO_AHB_RTCSLOW_1_SPLTADDR_R(crate::FieldReader<u16>);
 impl PRO_AHB_RTCSLOW_1_SPLTADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PRO_AHB_RTCSLOW_1_SPLTADDR_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_SPLTADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_SPLTADDR_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_L_F` reader - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_1 low address region."]
-pub struct PRO_AHB_RTCSLOW_1_L_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_L_F_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_L_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl PRO_AHB_RTCSLOW_1_L_F_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_L_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_L_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_L_R` reader - Setting to 1 grants PeriBus2 permission to read RTCSlow_1 low address region."]
-pub struct PRO_AHB_RTCSLOW_1_L_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_L_R_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_L_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl PRO_AHB_RTCSLOW_1_L_R_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_L_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_L_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_L_W` reader - Setting to 1 grants PeriBus2 permission to write RTCSlow_1 low address region."]
-pub struct PRO_AHB_RTCSLOW_1_L_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_L_W_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_L_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl PRO_AHB_RTCSLOW_1_L_W_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_L_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_L_W_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_H_F` reader - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_1 high address region."]
-pub struct PRO_AHB_RTCSLOW_1_H_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_H_F_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_H_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl PRO_AHB_RTCSLOW_1_H_F_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_H_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_H_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_H_R` reader - Setting to 1 grants PeriBus2 permission to read RTCSlow_1 high address region."]
-pub struct PRO_AHB_RTCSLOW_1_H_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_H_R_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_H_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl PRO_AHB_RTCSLOW_1_H_R_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_H_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> PRO_AHB_RTCSLOW_1_H_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_H_W` reader - Setting to 1 grants PeriBus2 permission to write RTCSlow_1 high address region."]
-pub struct PRO_AHB_RTCSLOW_1_H_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_AHB_RTCSLOW_1_H_W_R(crate::FieldReader<bool>);
 impl PRO_AHB_RTCSLOW_1_H_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl PRO_AHB_RTCSLOW_1_H_W_R {
     }
 }
 impl core::ops::Deref for PRO_AHB_RTCSLOW_1_H_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -363,25 +363,16 @@ impl W {
         self
     }
 }
-#[doc = "PeriBus2 permission control register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_ahb_2]
-(index.html) module"]
+#[doc = "PeriBus2 permission control register 2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_ahb_2](index.html) module"]
 pub struct PRO_AHB_2_SPEC;
 impl crate::RegisterSpec for PRO_AHB_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_ahb_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_ahb_2::R](R) reader structure"]
 impl crate::Readable for PRO_AHB_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_ahb_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_ahb_2::W](W) writer structure"]
 impl crate::Writable for PRO_AHB_2_SPEC {
     type Writer = W;
 }

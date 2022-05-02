@@ -35,7 +35,7 @@ impl From<crate::W<WDTCONFIG0_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_PAUSE_IN_SLP` reader - pause WDT in sleep"]
-pub struct WDT_PAUSE_IN_SLP_R(crate::FieldReader<bool, bool>);
+pub struct WDT_PAUSE_IN_SLP_R(crate::FieldReader<bool>);
 impl WDT_PAUSE_IN_SLP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl WDT_PAUSE_IN_SLP_R {
     }
 }
 impl core::ops::Deref for WDT_PAUSE_IN_SLP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> WDT_PAUSE_IN_SLP_W<'a> {
     }
 }
 #[doc = "Field `WDT_APPCPU_RESET_EN` reader - enable WDT reset APP CPU"]
-pub struct WDT_APPCPU_RESET_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_APPCPU_RESET_EN_R(crate::FieldReader<bool>);
 impl WDT_APPCPU_RESET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl WDT_APPCPU_RESET_EN_R {
     }
 }
 impl core::ops::Deref for WDT_APPCPU_RESET_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> WDT_APPCPU_RESET_EN_W<'a> {
     }
 }
 #[doc = "Field `WDT_PROCPU_RESET_EN` reader - enable WDT reset PRO CPU"]
-pub struct WDT_PROCPU_RESET_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_PROCPU_RESET_EN_R(crate::FieldReader<bool>);
 impl WDT_PROCPU_RESET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl WDT_PROCPU_RESET_EN_R {
     }
 }
 impl core::ops::Deref for WDT_PROCPU_RESET_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> WDT_PROCPU_RESET_EN_W<'a> {
     }
 }
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - enable WDT in flash boot"]
-pub struct WDT_FLASHBOOT_MOD_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_FLASHBOOT_MOD_EN_R(crate::FieldReader<bool>);
 impl WDT_FLASHBOOT_MOD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl WDT_FLASHBOOT_MOD_EN_R {
     }
 }
 impl core::ops::Deref for WDT_FLASHBOOT_MOD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> WDT_FLASHBOOT_MOD_EN_W<'a> {
     }
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - system reset counter length"]
-pub struct WDT_SYS_RESET_LENGTH_R(crate::FieldReader<u8, u8>);
+pub struct WDT_SYS_RESET_LENGTH_R(crate::FieldReader<u8>);
 impl WDT_SYS_RESET_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl WDT_SYS_RESET_LENGTH_R {
     }
 }
 impl core::ops::Deref for WDT_SYS_RESET_LENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> WDT_SYS_RESET_LENGTH_W<'a> {
     }
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - CPU reset counter length"]
-pub struct WDT_CPU_RESET_LENGTH_R(crate::FieldReader<u8, u8>);
+pub struct WDT_CPU_RESET_LENGTH_R(crate::FieldReader<u8>);
 impl WDT_CPU_RESET_LENGTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl WDT_CPU_RESET_LENGTH_R {
     }
 }
 impl core::ops::Deref for WDT_CPU_RESET_LENGTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> WDT_CPU_RESET_LENGTH_W<'a> {
     }
 }
 #[doc = "Field `WDT_LEVEL_INT_EN` reader - N/A"]
-pub struct WDT_LEVEL_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_LEVEL_INT_EN_R(crate::FieldReader<bool>);
 impl WDT_LEVEL_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl WDT_LEVEL_INT_EN_R {
     }
 }
 impl core::ops::Deref for WDT_LEVEL_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> WDT_LEVEL_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `WDT_EDGE_INT_EN` reader - N/A"]
-pub struct WDT_EDGE_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_EDGE_INT_EN_R(crate::FieldReader<bool>);
 impl WDT_EDGE_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl WDT_EDGE_INT_EN_R {
     }
 }
 impl core::ops::Deref for WDT_EDGE_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> WDT_EDGE_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `WDT_STG3` reader - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
-pub struct WDT_STG3_R(crate::FieldReader<u8, u8>);
+pub struct WDT_STG3_R(crate::FieldReader<u8>);
 impl WDT_STG3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -319,7 +319,7 @@ impl WDT_STG3_R {
     }
 }
 impl core::ops::Deref for WDT_STG3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> WDT_STG3_W<'a> {
     }
 }
 #[doc = "Field `WDT_STG2` reader - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
-pub struct WDT_STG2_R(crate::FieldReader<u8, u8>);
+pub struct WDT_STG2_R(crate::FieldReader<u8>);
 impl WDT_STG2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -346,7 +346,7 @@ impl WDT_STG2_R {
     }
 }
 impl core::ops::Deref for WDT_STG2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> WDT_STG2_W<'a> {
     }
 }
 #[doc = "Field `WDT_STG1` reader - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
-pub struct WDT_STG1_R(crate::FieldReader<u8, u8>);
+pub struct WDT_STG1_R(crate::FieldReader<u8>);
 impl WDT_STG1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -373,7 +373,7 @@ impl WDT_STG1_R {
     }
 }
 impl core::ops::Deref for WDT_STG1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -392,7 +392,7 @@ impl<'a> WDT_STG1_W<'a> {
     }
 }
 #[doc = "Field `WDT_STG0` reader - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
-pub struct WDT_STG0_R(crate::FieldReader<u8, u8>);
+pub struct WDT_STG0_R(crate::FieldReader<u8>);
 impl WDT_STG0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -400,7 +400,7 @@ impl WDT_STG0_R {
     }
 }
 impl core::ops::Deref for WDT_STG0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -419,7 +419,7 @@ impl<'a> WDT_STG0_W<'a> {
     }
 }
 #[doc = "Field `WDT_EN` reader - enable RTC WDT"]
-pub struct WDT_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDT_EN_R(crate::FieldReader<bool>);
 impl WDT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -427,7 +427,7 @@ impl WDT_EN_R {
     }
 }
 impl core::ops::Deref for WDT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -595,25 +595,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdtconfig0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdtconfig0](index.html) module"]
 pub struct WDTCONFIG0_SPEC;
 impl crate::RegisterSpec for WDTCONFIG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wdtconfig0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [wdtconfig0::R](R) reader structure"]
 impl crate::Readable for WDTCONFIG0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [wdtconfig0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
     type Writer = W;
 }

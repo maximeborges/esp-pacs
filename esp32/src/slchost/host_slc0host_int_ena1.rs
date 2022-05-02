@@ -35,7 +35,7 @@ impl From<crate::W<HOST_SLC0HOST_INT_ENA1_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT0_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT0_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT0_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT0_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl HOST_SLC0_TOHOST_BIT0_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT0_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT0_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT1_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT1_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT1_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT1_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl HOST_SLC0_TOHOST_BIT1_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT1_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT1_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT2_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT2_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT2_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT2_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl HOST_SLC0_TOHOST_BIT2_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT2_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT2_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT3_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT3_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT3_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT3_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl HOST_SLC0_TOHOST_BIT3_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT3_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT3_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT4_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT4_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT4_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT4_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl HOST_SLC0_TOHOST_BIT4_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT4_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT4_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT5_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT5_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT5_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT5_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl HOST_SLC0_TOHOST_BIT5_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT5_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT5_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT6_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT6_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT6_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT6_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl HOST_SLC0_TOHOST_BIT6_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT6_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT6_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT7_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOHOST_BIT7_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOHOST_BIT7_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOHOST_BIT7_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl HOST_SLC0_TOHOST_BIT7_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOHOST_BIT7_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> HOST_SLC0_TOHOST_BIT7_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOKEN0_1TO0_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOKEN0_1TO0_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOKEN0_1TO0_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOKEN0_1TO0_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl HOST_SLC0_TOKEN0_1TO0_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOKEN0_1TO0_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> HOST_SLC0_TOKEN0_1TO0_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOKEN1_1TO0_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOKEN1_1TO0_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOKEN1_1TO0_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOKEN1_1TO0_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl HOST_SLC0_TOKEN1_1TO0_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOKEN1_1TO0_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> HOST_SLC0_TOKEN1_1TO0_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOKEN0_0TO1_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOKEN0_0TO1_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOKEN0_0TO1_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOKEN0_0TO1_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl HOST_SLC0_TOKEN0_0TO1_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOKEN0_0TO1_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> HOST_SLC0_TOKEN0_0TO1_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TOKEN1_0TO1_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TOKEN1_0TO1_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TOKEN1_0TO1_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TOKEN1_0TO1_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl HOST_SLC0_TOKEN1_0TO1_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TOKEN1_0TO1_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> HOST_SLC0_TOKEN1_0TO1_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0HOST_RX_SOF_INT_ENA1` reader - "]
-pub struct HOST_SLC0HOST_RX_SOF_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0HOST_RX_SOF_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0HOST_RX_SOF_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl HOST_SLC0HOST_RX_SOF_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0HOST_RX_SOF_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> HOST_SLC0HOST_RX_SOF_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0HOST_RX_EOF_INT_ENA1` reader - "]
-pub struct HOST_SLC0HOST_RX_EOF_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0HOST_RX_EOF_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0HOST_RX_EOF_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl HOST_SLC0HOST_RX_EOF_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0HOST_RX_EOF_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> HOST_SLC0HOST_RX_EOF_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0HOST_RX_START_INT_ENA1` reader - "]
-pub struct HOST_SLC0HOST_RX_START_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0HOST_RX_START_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0HOST_RX_START_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl HOST_SLC0HOST_RX_START_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0HOST_RX_START_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> HOST_SLC0HOST_RX_START_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0HOST_TX_START_INT_ENA1` reader - "]
-pub struct HOST_SLC0HOST_TX_START_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0HOST_TX_START_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0HOST_TX_START_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl HOST_SLC0HOST_TX_START_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0HOST_TX_START_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> HOST_SLC0HOST_TX_START_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_RX_UDF_INT_ENA1` reader - "]
-pub struct HOST_SLC0_RX_UDF_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_RX_UDF_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_RX_UDF_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl HOST_SLC0_RX_UDF_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_RX_UDF_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> HOST_SLC0_RX_UDF_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_TX_OVF_INT_ENA1` reader - "]
-pub struct HOST_SLC0_TX_OVF_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_TX_OVF_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_TX_OVF_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl HOST_SLC0_TX_OVF_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_TX_OVF_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> HOST_SLC0_TX_OVF_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_RX_PF_VALID_INT_ENA1` reader - "]
-pub struct HOST_SLC0_RX_PF_VALID_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_RX_PF_VALID_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_RX_PF_VALID_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl HOST_SLC0_RX_PF_VALID_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_RX_PF_VALID_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> HOST_SLC0_RX_PF_VALID_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_EXT_BIT0_INT_ENA1` reader - "]
-pub struct HOST_SLC0_EXT_BIT0_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_EXT_BIT0_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_EXT_BIT0_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl HOST_SLC0_EXT_BIT0_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_EXT_BIT0_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> HOST_SLC0_EXT_BIT0_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_EXT_BIT1_INT_ENA1` reader - "]
-pub struct HOST_SLC0_EXT_BIT1_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_EXT_BIT1_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_EXT_BIT1_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl HOST_SLC0_EXT_BIT1_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_EXT_BIT1_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> HOST_SLC0_EXT_BIT1_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_EXT_BIT2_INT_ENA1` reader - "]
-pub struct HOST_SLC0_EXT_BIT2_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_EXT_BIT2_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_EXT_BIT2_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl HOST_SLC0_EXT_BIT2_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_EXT_BIT2_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> HOST_SLC0_EXT_BIT2_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_EXT_BIT3_INT_ENA1` reader - "]
-pub struct HOST_SLC0_EXT_BIT3_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_EXT_BIT3_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_EXT_BIT3_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl HOST_SLC0_EXT_BIT3_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_EXT_BIT3_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> HOST_SLC0_EXT_BIT3_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_RX_NEW_PACKET_INT_ENA1` reader - "]
-pub struct HOST_SLC0_RX_NEW_PACKET_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_RX_NEW_PACKET_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_RX_NEW_PACKET_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl HOST_SLC0_RX_NEW_PACKET_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_RX_NEW_PACKET_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -923,7 +923,7 @@ impl<'a> HOST_SLC0_RX_NEW_PACKET_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLC0_HOST_RD_RETRY_INT_ENA1` reader - "]
-pub struct HOST_SLC0_HOST_RD_RETRY_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC0_HOST_RD_RETRY_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_SLC0_HOST_RD_RETRY_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -931,7 +931,7 @@ impl HOST_SLC0_HOST_RD_RETRY_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_SLC0_HOST_RD_RETRY_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -960,7 +960,7 @@ impl<'a> HOST_SLC0_HOST_RD_RETRY_INT_ENA1_W<'a> {
     }
 }
 #[doc = "Field `HOST_GPIO_SDIO_INT_ENA1` reader - "]
-pub struct HOST_GPIO_SDIO_INT_ENA1_R(crate::FieldReader<bool, bool>);
+pub struct HOST_GPIO_SDIO_INT_ENA1_R(crate::FieldReader<bool>);
 impl HOST_GPIO_SDIO_INT_ENA1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -968,7 +968,7 @@ impl HOST_GPIO_SDIO_INT_ENA1_R {
     }
 }
 impl core::ops::Deref for HOST_GPIO_SDIO_INT_ENA1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1266,25 +1266,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slc0host_int_ena1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slc0host_int_ena1](index.html) module"]
 pub struct HOST_SLC0HOST_INT_ENA1_SPEC;
 impl crate::RegisterSpec for HOST_SLC0HOST_INT_ENA1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slc0host_int_ena1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_slc0host_int_ena1::R](R) reader structure"]
 impl crate::Readable for HOST_SLC0HOST_INT_ENA1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [host_slc0host_int_ena1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_slc0host_int_ena1::W](W) writer structure"]
 impl crate::Writable for HOST_SLC0HOST_INT_ENA1_SPEC {
     type Writer = W;
 }

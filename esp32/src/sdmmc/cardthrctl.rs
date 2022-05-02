@@ -35,7 +35,7 @@ impl From<crate::W<CARDTHRCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `CARDRDTHREN` reader - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
-pub struct CARDRDTHREN_R(crate::FieldReader<bool, bool>);
+pub struct CARDRDTHREN_R(crate::FieldReader<bool>);
 impl CARDRDTHREN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CARDRDTHREN_R {
     }
 }
 impl core::ops::Deref for CARDRDTHREN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CARDRDTHREN_W<'a> {
     }
 }
 #[doc = "Field `CARDCLRINTEN` reader - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
-pub struct CARDCLRINTEN_R(crate::FieldReader<bool, bool>);
+pub struct CARDCLRINTEN_R(crate::FieldReader<bool>);
 impl CARDCLRINTEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CARDCLRINTEN_R {
     }
 }
 impl core::ops::Deref for CARDCLRINTEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CARDCLRINTEN_W<'a> {
     }
 }
 #[doc = "Field `CARDWRTHREN` reader - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
-pub struct CARDWRTHREN_R(crate::FieldReader<bool, bool>);
+pub struct CARDWRTHREN_R(crate::FieldReader<bool>);
 impl CARDWRTHREN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CARDWRTHREN_R {
     }
 }
 impl core::ops::Deref for CARDWRTHREN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CARDWRTHREN_W<'a> {
     }
 }
 #[doc = "Field `CARDTHRESHOLD` reader - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
-pub struct CARDTHRESHOLD_R(crate::FieldReader<u16, u16>);
+pub struct CARDTHRESHOLD_R(crate::FieldReader<u16>);
 impl CARDTHRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -154,7 +154,7 @@ impl CARDTHRESHOLD_R {
     }
 }
 impl core::ops::Deref for CARDTHRESHOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "Card Threshold Control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cardthrctl]
-(index.html) module"]
+#[doc = "Card Threshold Control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cardthrctl](index.html) module"]
 pub struct CARDTHRCTL_SPEC;
 impl crate::RegisterSpec for CARDTHRCTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cardthrctl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cardthrctl::R](R) reader structure"]
 impl crate::Readable for CARDTHRCTL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cardthrctl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cardthrctl::W](W) writer structure"]
 impl crate::Writable for CARDTHRCTL_SPEC {
     type Writer = W;
 }

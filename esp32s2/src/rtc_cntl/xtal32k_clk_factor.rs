@@ -35,7 +35,7 @@ impl From<crate::W<XTAL32K_CLK_FACTOR_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_CLK_FACTOR` reader - Configures the divider factor for the 32 kHz crystal oscillator."]
-pub struct XTAL32K_CLK_FACTOR_R(crate::FieldReader<u32, u32>);
+pub struct XTAL32K_CLK_FACTOR_R(crate::FieldReader<u32>);
 impl XTAL32K_CLK_FACTOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl XTAL32K_CLK_FACTOR_R {
     }
 }
 impl core::ops::Deref for XTAL32K_CLK_FACTOR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures the divider factor for the backup clock of 32 kHz crystal oscillator\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k_clk_factor]
-(index.html) module"]
+#[doc = "Configures the divider factor for the backup clock of 32 kHz crystal oscillator\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k_clk_factor](index.html) module"]
 pub struct XTAL32K_CLK_FACTOR_SPEC;
 impl crate::RegisterSpec for XTAL32K_CLK_FACTOR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtal32k_clk_factor::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [xtal32k_clk_factor::R](R) reader structure"]
 impl crate::Readable for XTAL32K_CLK_FACTOR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [xtal32k_clk_factor::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [xtal32k_clk_factor::W](W) writer structure"]
 impl crate::Writable for XTAL32K_CLK_FACTOR_SPEC {
     type Writer = W;
 }

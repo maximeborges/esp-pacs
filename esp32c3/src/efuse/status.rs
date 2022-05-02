@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `STATE` reader - Indicates the state of the eFuse state machine."]
-pub struct STATE_R(crate::FieldReader<u8, u8>);
+pub struct STATE_R(crate::FieldReader<u8>);
 impl STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl STATE_R {
     }
 }
 impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_LOAD_SW` reader - The value of OTP_LOAD_SW."]
-pub struct OTP_LOAD_SW_R(crate::FieldReader<bool, bool>);
+pub struct OTP_LOAD_SW_R(crate::FieldReader<bool>);
 impl OTP_LOAD_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl OTP_LOAD_SW_R {
     }
 }
 impl core::ops::Deref for OTP_LOAD_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_VDDQ_C_SYNC2` reader - The value of OTP_VDDQ_C_SYNC2."]
-pub struct OTP_VDDQ_C_SYNC2_R(crate::FieldReader<bool, bool>);
+pub struct OTP_VDDQ_C_SYNC2_R(crate::FieldReader<bool>);
 impl OTP_VDDQ_C_SYNC2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl OTP_VDDQ_C_SYNC2_R {
     }
 }
 impl core::ops::Deref for OTP_VDDQ_C_SYNC2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_STROBE_SW` reader - The value of OTP_STROBE_SW."]
-pub struct OTP_STROBE_SW_R(crate::FieldReader<bool, bool>);
+pub struct OTP_STROBE_SW_R(crate::FieldReader<bool>);
 impl OTP_STROBE_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl OTP_STROBE_SW_R {
     }
 }
 impl core::ops::Deref for OTP_STROBE_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_CSB_SW` reader - The value of OTP_CSB_SW."]
-pub struct OTP_CSB_SW_R(crate::FieldReader<bool, bool>);
+pub struct OTP_CSB_SW_R(crate::FieldReader<bool>);
 impl OTP_CSB_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl OTP_CSB_SW_R {
     }
 }
 impl core::ops::Deref for OTP_CSB_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_PGENB_SW` reader - The value of OTP_PGENB_SW."]
-pub struct OTP_PGENB_SW_R(crate::FieldReader<bool, bool>);
+pub struct OTP_PGENB_SW_R(crate::FieldReader<bool>);
 impl OTP_PGENB_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl OTP_PGENB_SW_R {
     }
 }
 impl core::ops::Deref for OTP_PGENB_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OTP_VDDQ_IS_SW` reader - The value of OTP_VDDQ_IS_SW."]
-pub struct OTP_VDDQ_IS_SW_R(crate::FieldReader<bool, bool>);
+pub struct OTP_VDDQ_IS_SW_R(crate::FieldReader<bool>);
 impl OTP_VDDQ_IS_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl OTP_VDDQ_IS_SW_R {
     }
 }
 impl core::ops::Deref for OTP_VDDQ_IS_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `REPEAT_ERR_CNT` reader - Indicates the number of error bits during programming BLOCK0."]
-pub struct REPEAT_ERR_CNT_R(crate::FieldReader<u8, u8>);
+pub struct REPEAT_ERR_CNT_R(crate::FieldReader<u8>);
 impl REPEAT_ERR_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,7 +127,7 @@ impl REPEAT_ERR_CNT_R {
     }
 }
 impl core::ops::Deref for REPEAT_ERR_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,16 +175,12 @@ impl R {
         REPEAT_ERR_CNT_R::new(((self.bits >> 10) & 0xff) as u8)
     }
 }
-#[doc = "eFuse status register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status]
-(index.html) module"]
+#[doc = "eFuse status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [status::R](R) reader structure"]
 impl crate::Readable for STATUS_SPEC {
     type Reader = R;
 }

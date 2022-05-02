@@ -35,7 +35,7 @@ impl From<crate::W<LSCH0_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_SCALE_LSCH0` reader - reg_duty_scale_lsch0."]
-pub struct DUTY_SCALE_LSCH0_R(crate::FieldReader<u16, u16>);
+pub struct DUTY_SCALE_LSCH0_R(crate::FieldReader<u16>);
 impl DUTY_SCALE_LSCH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl DUTY_SCALE_LSCH0_R {
     }
 }
 impl core::ops::Deref for DUTY_SCALE_LSCH0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DUTY_SCALE_LSCH0_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CYCLE_LSCH0` reader - reg_duty_cycle_lsch0."]
-pub struct DUTY_CYCLE_LSCH0_R(crate::FieldReader<u16, u16>);
+pub struct DUTY_CYCLE_LSCH0_R(crate::FieldReader<u16>);
 impl DUTY_CYCLE_LSCH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl DUTY_CYCLE_LSCH0_R {
     }
 }
 impl core::ops::Deref for DUTY_CYCLE_LSCH0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DUTY_CYCLE_LSCH0_W<'a> {
     }
 }
 #[doc = "Field `DUTY_NUM_LSCH0` reader - reg_duty_num_lsch0."]
-pub struct DUTY_NUM_LSCH0_R(crate::FieldReader<u16, u16>);
+pub struct DUTY_NUM_LSCH0_R(crate::FieldReader<u16>);
 impl DUTY_NUM_LSCH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl DUTY_NUM_LSCH0_R {
     }
 }
 impl core::ops::Deref for DUTY_NUM_LSCH0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DUTY_NUM_LSCH0_W<'a> {
     }
 }
 #[doc = "Field `DUTY_INC_LSCH0` reader - reg_duty_inc_lsch0."]
-pub struct DUTY_INC_LSCH0_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_INC_LSCH0_R(crate::FieldReader<bool>);
 impl DUTY_INC_LSCH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl DUTY_INC_LSCH0_R {
     }
 }
 impl core::ops::Deref for DUTY_INC_LSCH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> DUTY_INC_LSCH0_W<'a> {
     }
 }
 #[doc = "Field `DUTY_START_LSCH0` reader - reg_duty_start_lsch0."]
-pub struct DUTY_START_LSCH0_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_START_LSCH0_R(crate::FieldReader<bool>);
 impl DUTY_START_LSCH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl DUTY_START_LSCH0_R {
     }
 }
 impl core::ops::Deref for DUTY_START_LSCH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -249,25 +249,16 @@ impl W {
         self
     }
 }
-#[doc = "LEDC_LSCH0_CONF1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch0_conf1]
-(index.html) module"]
+#[doc = "LEDC_LSCH0_CONF1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch0_conf1](index.html) module"]
 pub struct LSCH0_CONF1_SPEC;
 impl crate::RegisterSpec for LSCH0_CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lsch0_conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lsch0_conf1::R](R) reader structure"]
 impl crate::Readable for LSCH0_CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lsch0_conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lsch0_conf1::W](W) writer structure"]
 impl crate::Writable for LSCH0_CONF1_SPEC {
     type Writer = W;
 }

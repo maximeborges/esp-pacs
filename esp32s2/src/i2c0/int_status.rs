@@ -14,7 +14,7 @@ impl From<crate::R<INT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_WM_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_WM_INT interrupt."]
-pub struct RXFIFO_WM_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_WM_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_WM_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RXFIFO_WM_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_WM_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_WM_INT_ST` reader - The masked interrupt status bit for I2C_TXFIFO_WM_INT interrupt."]
-pub struct TXFIFO_WM_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_WM_INT_ST_R(crate::FieldReader<bool>);
 impl TXFIFO_WM_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TXFIFO_WM_INT_ST_R {
     }
 }
 impl core::ops::Deref for TXFIFO_WM_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_OVF_INT interrupt."]
-pub struct RXFIFO_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl RXFIFO_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `END_DETECT_INT_ST` reader - The masked interrupt status bit for the I2C_END_DETECT_INT interrupt."]
-pub struct END_DETECT_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct END_DETECT_INT_ST_R(crate::FieldReader<bool>);
 impl END_DETECT_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl END_DETECT_INT_ST_R {
     }
 }
 impl core::ops::Deref for END_DETECT_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BYTE_TRANS_DONE_INT_ST` reader - The masked interrupt status bit for the I2C_END_DETECT_INT interrupt."]
-pub struct BYTE_TRANS_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct BYTE_TRANS_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl BYTE_TRANS_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl BYTE_TRANS_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for BYTE_TRANS_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ARBITRATION_LOST_INT_ST` reader - The masked interrupt status bit for the I2C_ARBITRATION_LOST_INT interrupt."]
-pub struct ARBITRATION_LOST_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ARBITRATION_LOST_INT_ST_R(crate::FieldReader<bool>);
 impl ARBITRATION_LOST_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl ARBITRATION_LOST_INT_ST_R {
     }
 }
 impl core::ops::Deref for ARBITRATION_LOST_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MST_TXFIFO_UDF_INT_ST` reader - The masked interrupt status bit for I2C_TRANS_COMPLETE_INT interrupt."]
-pub struct MST_TXFIFO_UDF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct MST_TXFIFO_UDF_INT_ST_R(crate::FieldReader<bool>);
 impl MST_TXFIFO_UDF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl MST_TXFIFO_UDF_INT_ST_R {
     }
 }
 impl core::ops::Deref for MST_TXFIFO_UDF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_COMPLETE_INT_ST` reader - The masked interrupt status bit for the I2C_TRANS_COMPLETE_INT interrupt."]
-pub struct TRANS_COMPLETE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_COMPLETE_INT_ST_R(crate::FieldReader<bool>);
 impl TRANS_COMPLETE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl TRANS_COMPLETE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TRANS_COMPLETE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIME_OUT_INT_ST` reader - The masked interrupt status bit for the I2C_TIME_OUT_INT interrupt."]
-pub struct TIME_OUT_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TIME_OUT_INT_ST_R(crate::FieldReader<bool>);
 impl TIME_OUT_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl TIME_OUT_INT_ST_R {
     }
 }
 impl core::ops::Deref for TIME_OUT_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_START_INT_ST` reader - The masked interrupt status bit for the I2C_TRANS_START_INT interrupt."]
-pub struct TRANS_START_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_START_INT_ST_R(crate::FieldReader<bool>);
 impl TRANS_START_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl TRANS_START_INT_ST_R {
     }
 }
 impl core::ops::Deref for TRANS_START_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `NACK_INT_ST` reader - The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt."]
-pub struct NACK_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct NACK_INT_ST_R(crate::FieldReader<bool>);
 impl NACK_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl NACK_INT_ST_R {
     }
 }
 impl core::ops::Deref for NACK_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_OVF_INT_ST` reader - The masked interrupt status bit for I2C_TXFIFO_OVF_INT interrupt."]
-pub struct TXFIFO_OVF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_OVF_INT_ST_R(crate::FieldReader<bool>);
 impl TXFIFO_OVF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl TXFIFO_OVF_INT_ST_R {
     }
 }
 impl core::ops::Deref for TXFIFO_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_UDF_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_UDF_INT interrupt."]
-pub struct RXFIFO_UDF_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_UDF_INT_ST_R(crate::FieldReader<bool>);
 impl RXFIFO_UDF_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl RXFIFO_UDF_INT_ST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_UDF_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SCL_ST_TO_INT_ST` reader - The masked interrupt status bit for I2C_SCL_ST_TO_INT interrupt."]
-pub struct SCL_ST_TO_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SCL_ST_TO_INT_ST_R(crate::FieldReader<bool>);
 impl SCL_ST_TO_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl SCL_ST_TO_INT_ST_R {
     }
 }
 impl core::ops::Deref for SCL_ST_TO_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SCL_MAIN_ST_TO_INT_ST` reader - The masked interrupt status bit for I2C_SCL_MAIN_ST_TO_INT interrupt."]
-pub struct SCL_MAIN_ST_TO_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SCL_MAIN_ST_TO_INT_ST_R(crate::FieldReader<bool>);
 impl SCL_MAIN_ST_TO_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl SCL_MAIN_ST_TO_INT_ST_R {
     }
 }
 impl core::ops::Deref for SCL_MAIN_ST_TO_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DET_START_INT_ST` reader - The masked interrupt status bit for I2C_DET_START_INT interrupt."]
-pub struct DET_START_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DET_START_INT_ST_R(crate::FieldReader<bool>);
 impl DET_START_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl DET_START_INT_ST_R {
     }
 }
 impl core::ops::Deref for DET_START_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLAVE_STRETCH_INT_ST` reader - The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt."]
-pub struct SLAVE_STRETCH_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_STRETCH_INT_ST_R(crate::FieldReader<bool>);
 impl SLAVE_STRETCH_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,7 +262,7 @@ impl SLAVE_STRETCH_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLAVE_STRETCH_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -355,16 +355,12 @@ impl R {
         SLAVE_STRETCH_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
-#[doc = "Status of captured I2C communication events\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_status]
-(index.html) module"]
+#[doc = "Status of captured I2C communication events\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_status](index.html) module"]
 pub struct INT_STATUS_SPEC;
 impl crate::RegisterSpec for INT_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_status::R](R) reader structure"]
 impl crate::Readable for INT_STATUS_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_DAC1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD14_DAC` reader - configure touch pad dac14"]
-pub struct TOUCH_PAD14_DAC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD14_DAC_R(crate::FieldReader<u8>);
 impl TOUCH_PAD14_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_PAD14_DAC_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD14_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TOUCH_PAD14_DAC_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD13_DAC` reader - configure touch pad dac13"]
-pub struct TOUCH_PAD13_DAC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD13_DAC_R(crate::FieldReader<u8>);
 impl TOUCH_PAD13_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TOUCH_PAD13_DAC_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD13_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TOUCH_PAD13_DAC_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD12_DAC` reader - configure touch pad dac12"]
-pub struct TOUCH_PAD12_DAC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD12_DAC_R(crate::FieldReader<u8>);
 impl TOUCH_PAD12_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TOUCH_PAD12_DAC_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD12_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TOUCH_PAD12_DAC_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD11_DAC` reader - configure touch pad dac11"]
-pub struct TOUCH_PAD11_DAC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD11_DAC_R(crate::FieldReader<u8>);
 impl TOUCH_PAD11_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl TOUCH_PAD11_DAC_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD11_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> TOUCH_PAD11_DAC_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD10_DAC` reader - configure touch pad dac10"]
-pub struct TOUCH_PAD10_DAC_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD10_DAC_R(crate::FieldReader<u8>);
 impl TOUCH_PAD10_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl TOUCH_PAD10_DAC_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD10_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -229,25 +229,16 @@ impl W {
         self
     }
 }
-#[doc = "configure touch dac\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_dac1]
-(index.html) module"]
+#[doc = "configure touch dac\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_dac1](index.html) module"]
 pub struct TOUCH_DAC1_SPEC;
 impl crate::RegisterSpec for TOUCH_DAC1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_dac1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_dac1::R](R) reader structure"]
 impl crate::Readable for TOUCH_DAC1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_dac1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_dac1::W](W) writer structure"]
 impl crate::Writable for TOUCH_DAC1_SPEC {
     type Writer = W;
 }

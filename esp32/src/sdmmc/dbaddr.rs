@@ -34,9 +34,8 @@ impl From<crate::W<DBADDR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
- are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
-pub struct DBADDR_R(crate::FieldReader<u32, u32>);
+#[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+pub struct DBADDR_R(crate::FieldReader<u32>);
 impl DBADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -44,14 +43,13 @@ impl DBADDR_R {
     }
 }
 impl core::ops::Deref for DBADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
- are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+#[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
 pub struct DBADDR_W<'a> {
     w: &'a mut W,
 }
@@ -64,16 +62,14 @@ impl<'a> DBADDR_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
- are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
     pub fn dbaddr(&self) -> DBADDR_R {
         DBADDR_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
- are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
     pub fn dbaddr(&mut self) -> DBADDR_W {
         DBADDR_W { w: self }
@@ -85,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Descriptor base address register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbaddr]
-(index.html) module"]
+#[doc = "Descriptor base address register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbaddr](index.html) module"]
 pub struct DBADDR_SPEC;
 impl crate::RegisterSpec for DBADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dbaddr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dbaddr::R](R) reader structure"]
 impl crate::Readable for DBADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dbaddr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dbaddr::W](W) writer structure"]
 impl crate::Writable for DBADDR_SPEC {
     type Writer = W;
 }

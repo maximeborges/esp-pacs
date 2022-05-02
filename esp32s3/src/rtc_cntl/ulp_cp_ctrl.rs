@@ -35,7 +35,7 @@ impl From<crate::W<ULP_CP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` reader - No public"]
-pub struct ULP_CP_MEM_ADDR_INIT_R(crate::FieldReader<u16, u16>);
+pub struct ULP_CP_MEM_ADDR_INIT_R(crate::FieldReader<u16>);
 impl ULP_CP_MEM_ADDR_INIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl ULP_CP_MEM_ADDR_INIT_R {
     }
 }
 impl core::ops::Deref for ULP_CP_MEM_ADDR_INIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ULP_CP_MEM_ADDR_INIT_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` reader - No public"]
-pub struct ULP_CP_MEM_ADDR_SIZE_R(crate::FieldReader<u16, u16>);
+pub struct ULP_CP_MEM_ADDR_SIZE_R(crate::FieldReader<u16>);
 impl ULP_CP_MEM_ADDR_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl ULP_CP_MEM_ADDR_SIZE_R {
     }
 }
 impl core::ops::Deref for ULP_CP_MEM_ADDR_SIZE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -111,7 +111,7 @@ impl<'a> ULP_CP_MEM_OFFST_CLR_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_CLK_FO` reader - ulp coprocessor clk force on"]
-pub struct ULP_CP_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_CLK_FO_R(crate::FieldReader<bool>);
 impl ULP_CP_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -119,7 +119,7 @@ impl ULP_CP_CLK_FO_R {
     }
 }
 impl core::ops::Deref for ULP_CP_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -148,7 +148,7 @@ impl<'a> ULP_CP_CLK_FO_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_RESET` reader - ulp coprocessor clk software reset"]
-pub struct ULP_CP_RESET_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_RESET_R(crate::FieldReader<bool>);
 impl ULP_CP_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -156,7 +156,7 @@ impl ULP_CP_RESET_R {
     }
 }
 impl core::ops::Deref for ULP_CP_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,7 +185,7 @@ impl<'a> ULP_CP_RESET_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW"]
-pub struct ULP_CP_FORCE_START_TOP_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_FORCE_START_TOP_R(crate::FieldReader<bool>);
 impl ULP_CP_FORCE_START_TOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -193,7 +193,7 @@ impl ULP_CP_FORCE_START_TOP_R {
     }
 }
 impl core::ops::Deref for ULP_CP_FORCE_START_TOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,7 +222,7 @@ impl<'a> ULP_CP_FORCE_START_TOP_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor"]
-pub struct ULP_CP_START_TOP_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_START_TOP_R(crate::FieldReader<bool>);
 impl ULP_CP_START_TOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -230,7 +230,7 @@ impl ULP_CP_START_TOP_R {
     }
 }
 impl core::ops::Deref for ULP_CP_START_TOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -333,25 +333,16 @@ impl W {
         self
     }
 }
-#[doc = "configure ulp\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ulp_cp_ctrl]
-(index.html) module"]
+#[doc = "configure ulp\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ulp_cp_ctrl](index.html) module"]
 pub struct ULP_CP_CTRL_SPEC;
 impl crate::RegisterSpec for ULP_CP_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ulp_cp_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ulp_cp_ctrl::R](R) reader structure"]
 impl crate::Readable for ULP_CP_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ulp_cp_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ulp_cp_ctrl::W](W) writer structure"]
 impl crate::Writable for ULP_CP_CTRL_SPEC {
     type Writer = W;
 }

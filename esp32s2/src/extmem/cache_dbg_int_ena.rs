@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_DBG_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_DBG_EN` reader - The bit is used to activate the cache track function. 1: enable, 0: disable."]
-pub struct CACHE_DBG_EN_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_DBG_EN_R(crate::FieldReader<bool>);
 impl CACHE_DBG_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_DBG_EN_R {
     }
 }
 impl core::ops::Deref for CACHE_DBG_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CACHE_DBG_EN_W<'a> {
     }
 }
 #[doc = "Field `IBUS_ACS_MSK_IC_INT_ENA` reader - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
-pub struct IBUS_ACS_MSK_IC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IBUS_ACS_MSK_IC_INT_ENA_R(crate::FieldReader<bool>);
 impl IBUS_ACS_MSK_IC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl IBUS_ACS_MSK_IC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IBUS_ACS_MSK_IC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> IBUS_ACS_MSK_IC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `IBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by ibus counter overflow."]
-pub struct IBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl IBUS_CNT_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl IBUS_CNT_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IBUS_CNT_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> IBUS_CNT_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `IC_SYNC_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual sync configurations fault."]
-pub struct IC_SYNC_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IC_SYNC_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl IC_SYNC_SIZE_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl IC_SYNC_SIZE_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IC_SYNC_SIZE_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> IC_SYNC_SIZE_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `IC_PRELOAD_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual pre-load configurations fault."]
-pub struct IC_PRELOAD_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IC_PRELOAD_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl IC_PRELOAD_SIZE_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl IC_PRELOAD_SIZE_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IC_PRELOAD_SIZE_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> IC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
-pub struct ICACHE_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_REJECT_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_REJECT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl ICACHE_REJECT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> ICACHE_REJECT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_SET_PRELOAD_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub struct ICACHE_SET_PRELOAD_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_SET_PRELOAD_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_SET_PRELOAD_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl ICACHE_SET_PRELOAD_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_SET_PRELOAD_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> ICACHE_SET_PRELOAD_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_SET_SYNC_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub struct ICACHE_SET_SYNC_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_SET_SYNC_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_SET_SYNC_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl ICACHE_SET_SYNC_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_SET_SYNC_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> ICACHE_SET_SYNC_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_SET_LOCK_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
-pub struct ICACHE_SET_LOCK_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_SET_LOCK_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_SET_LOCK_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl ICACHE_SET_LOCK_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_SET_LOCK_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> ICACHE_SET_LOCK_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DBUS_ACS_MSK_DC_INT_ENA` reader - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
-pub struct DBUS_ACS_MSK_DC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DBUS_ACS_MSK_DC_INT_ENA_R(crate::FieldReader<bool>);
 impl DBUS_ACS_MSK_DC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl DBUS_ACS_MSK_DC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DBUS_ACS_MSK_DC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> DBUS_ACS_MSK_DC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by dbus counter overflow."]
-pub struct DBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl DBUS_CNT_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl DBUS_CNT_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DBUS_CNT_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> DBUS_CNT_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DC_SYNC_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual sync configurations fault."]
-pub struct DC_SYNC_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DC_SYNC_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl DC_SYNC_SIZE_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl DC_SYNC_SIZE_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DC_SYNC_SIZE_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> DC_SYNC_SIZE_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DC_PRELOAD_SIZE_FAULT_INT_ENA` reader - The bit is used to enable interrupt by manual pre-load configurations fault."]
-pub struct DC_PRELOAD_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DC_PRELOAD_SIZE_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl DC_PRELOAD_SIZE_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl DC_PRELOAD_SIZE_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DC_PRELOAD_SIZE_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> DC_PRELOAD_SIZE_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_WRITE_FLASH_INT_ENA` reader - The bit is used to enable interrupt by dcache trying to write flash."]
-pub struct DCACHE_WRITE_FLASH_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_WRITE_FLASH_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_WRITE_FLASH_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl DCACHE_WRITE_FLASH_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_WRITE_FLASH_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> DCACHE_WRITE_FLASH_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
-pub struct DCACHE_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_REJECT_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_REJECT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl DCACHE_REJECT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> DCACHE_REJECT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_SET_PRELOAD_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing preload registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
-pub struct DCACHE_SET_PRELOAD_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_SET_PRELOAD_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_SET_PRELOAD_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl DCACHE_SET_PRELOAD_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_SET_PRELOAD_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> DCACHE_SET_PRELOAD_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_SET_SYNC_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing sync registers of dcache while dcache is busy to issue lock,sync and pre-load operations."]
-pub struct DCACHE_SET_SYNC_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_SET_SYNC_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_SET_SYNC_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl DCACHE_SET_SYNC_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_SET_SYNC_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> DCACHE_SET_SYNC_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_SET_LOCK_ILG_INT_ENA` reader - The bit is used to enable interrupt by illegal writing lock registers of dcache while dcache is busy to issue lock,sync or pre-load operations."]
-pub struct DCACHE_SET_LOCK_ILG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_SET_LOCK_ILG_INT_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_SET_LOCK_ILG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl DCACHE_SET_LOCK_ILG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_SET_LOCK_ILG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> DCACHE_SET_LOCK_ILG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `MMU_ENTRY_FAULT_INT_ENA` reader - The bit is used to enable interrupt by mmu entry fault."]
-pub struct MMU_ENTRY_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct MMU_ENTRY_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl MMU_ENTRY_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl MMU_ENTRY_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for MMU_ENTRY_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -937,25 +937,16 @@ impl W {
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_dbg_int_ena]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_dbg_int_ena](index.html) module"]
 pub struct CACHE_DBG_INT_ENA_SPEC;
 impl crate::RegisterSpec for CACHE_DBG_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_dbg_int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_dbg_int_ena::R](R) reader structure"]
 impl crate::Readable for CACHE_DBG_INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_dbg_int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_dbg_int_ena::W](W) writer structure"]
 impl crate::Writable for CACHE_DBG_INT_ENA_SPEC {
     type Writer = W;
 }

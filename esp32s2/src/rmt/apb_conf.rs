@@ -35,7 +35,7 @@ impl From<crate::W<APB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub struct APB_FIFO_MASK_R(crate::FieldReader<bool, bool>);
+pub struct APB_FIFO_MASK_R(crate::FieldReader<bool>);
 impl APB_FIFO_MASK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APB_FIFO_MASK_R {
     }
 }
 impl core::ops::Deref for APB_FIFO_MASK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> APB_FIFO_MASK_W<'a> {
     }
 }
 #[doc = "Field `MEM_TX_WRAP_EN` reader - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool, bool>);
+pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool>);
 impl MEM_TX_WRAP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MEM_TX_WRAP_EN_R {
     }
 }
 impl core::ops::Deref for MEM_TX_WRAP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MEM_TX_WRAP_EN_W<'a> {
     }
 }
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit to enable the clock for RMT memory."]
-pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool>);
 impl MEM_CLK_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MEM_CLK_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for MEM_CLK_FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MEM_CLK_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
-pub struct MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub struct MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "RMT apb configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_conf]
-(index.html) module"]
+#[doc = "RMT apb configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_conf](index.html) module"]
 pub struct APB_CONF_SPEC;
 impl crate::RegisterSpec for APB_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [apb_conf::R](R) reader structure"]
 impl crate::Readable for APB_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [apb_conf::W](W) writer structure"]
 impl crate::Writable for APB_CONF_SPEC {
     type Writer = W;
 }

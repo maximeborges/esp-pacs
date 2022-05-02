@@ -35,7 +35,7 @@ impl From<crate::W<CORE_CLK_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_CLK_SEL` reader - When the digital system clock selects PLL clock and the frequency of PLL clock is 480MHz, the value of SPI_MEM_CORE_CLK_SEL: 0: SPI0/1 module clock (MSPI_CORE_CLK) is 80MHz. 1: MSPI_CORE_CLK is 120MHz. 2: MSPI_CORE_CLK is 160MHz. 3: MSPI_CORE_CLK is 240MHz. When the digital system clock selects PLL clock and the frequency of PLL clock is 320MHz, the value of SPI_MEM_CORE_CLK_SEL: 0: MSPI_CORE_CLK is 80MHz. 1: MSPI_CORE_CLK is 80MHz. 2: MSPI_CORE_CLK 160MHz. 3: Not used."]
-pub struct CORE_CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CORE_CLK_SEL_R(crate::FieldReader<u8>);
 impl CORE_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for CORE_CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 module clock select register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_clk_sel]
-(index.html) module"]
+#[doc = "SPI0 module clock select register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_clk_sel](index.html) module"]
 pub struct CORE_CLK_SEL_SPEC;
 impl crate::RegisterSpec for CORE_CLK_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_clk_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_clk_sel::R](R) reader structure"]
 impl crate::Readable for CORE_CLK_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_clk_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_clk_sel::W](W) writer structure"]
 impl crate::Writable for CORE_CLK_SEL_SPEC {
     type Writer = W;
 }

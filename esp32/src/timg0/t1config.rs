@@ -35,7 +35,7 @@ impl From<crate::W<T1CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `T1_ALARM_EN` reader - When set alarm is enabled"]
-pub struct T1_ALARM_EN_R(crate::FieldReader<bool, bool>);
+pub struct T1_ALARM_EN_R(crate::FieldReader<bool>);
 impl T1_ALARM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl T1_ALARM_EN_R {
     }
 }
 impl core::ops::Deref for T1_ALARM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> T1_ALARM_EN_W<'a> {
     }
 }
 #[doc = "Field `T1_LEVEL_INT_EN` reader - When set level type interrupt will be generated during alarm"]
-pub struct T1_LEVEL_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct T1_LEVEL_INT_EN_R(crate::FieldReader<bool>);
 impl T1_LEVEL_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl T1_LEVEL_INT_EN_R {
     }
 }
 impl core::ops::Deref for T1_LEVEL_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> T1_LEVEL_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `T1_EDGE_INT_EN` reader - When set edge type interrupt will be generated during alarm"]
-pub struct T1_EDGE_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct T1_EDGE_INT_EN_R(crate::FieldReader<bool>);
 impl T1_EDGE_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl T1_EDGE_INT_EN_R {
     }
 }
 impl core::ops::Deref for T1_EDGE_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> T1_EDGE_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `T1_DIVIDER` reader - Timer 1 clock (T1_clk) prescale value."]
-pub struct T1_DIVIDER_R(crate::FieldReader<u16, u16>);
+pub struct T1_DIVIDER_R(crate::FieldReader<u16>);
 impl T1_DIVIDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -154,7 +154,7 @@ impl T1_DIVIDER_R {
     }
 }
 impl core::ops::Deref for T1_DIVIDER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> T1_DIVIDER_W<'a> {
     }
 }
 #[doc = "Field `T1_AUTORELOAD` reader - When set timer 1 auto-reload at alarming is enabled"]
-pub struct T1_AUTORELOAD_R(crate::FieldReader<bool, bool>);
+pub struct T1_AUTORELOAD_R(crate::FieldReader<bool>);
 impl T1_AUTORELOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl T1_AUTORELOAD_R {
     }
 }
 impl core::ops::Deref for T1_AUTORELOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> T1_AUTORELOAD_W<'a> {
     }
 }
 #[doc = "Field `T1_INCREASE` reader - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
-pub struct T1_INCREASE_R(crate::FieldReader<bool, bool>);
+pub struct T1_INCREASE_R(crate::FieldReader<bool>);
 impl T1_INCREASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl T1_INCREASE_R {
     }
 }
 impl core::ops::Deref for T1_INCREASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> T1_INCREASE_W<'a> {
     }
 }
 #[doc = "Field `T1_EN` reader - When set timer 1 time-base counter is enabled"]
-pub struct T1_EN_R(crate::FieldReader<bool, bool>);
+pub struct T1_EN_R(crate::FieldReader<bool>);
 impl T1_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl T1_EN_R {
     }
 }
 impl core::ops::Deref for T1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -363,25 +363,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t1config]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t1config](index.html) module"]
 pub struct T1CONFIG_SPEC;
 impl crate::RegisterSpec for T1CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t1config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t1config::R](R) reader structure"]
 impl crate::Readable for T1CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [t1config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [t1config::W](W) writer structure"]
 impl crate::Writable for T1CONFIG_SPEC {
     type Writer = W;
 }

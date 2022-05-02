@@ -35,7 +35,7 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PER` reader - program erase resume bit program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PER_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PER_R(crate::FieldReader<bool>);
 impl FLASH_PER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FLASH_PER_R {
     }
 }
 impl core::ops::Deref for FLASH_PER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FLASH_PER_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PES` reader - program erase suspend bit program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PES_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PES_R(crate::FieldReader<bool>);
 impl FLASH_PES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FLASH_PES_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FLASH_PES_W<'a> {
     }
 }
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct USR_R(crate::FieldReader<bool, bool>);
+pub struct USR_R(crate::FieldReader<bool>);
 impl USR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl USR_R {
     }
 }
 impl core::ops::Deref for USR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> USR_W<'a> {
     }
 }
 #[doc = "Field `FLASH_HPM` reader - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_HPM_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_HPM_R(crate::FieldReader<bool>);
 impl FLASH_HPM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FLASH_HPM_R {
     }
 }
 impl core::ops::Deref for FLASH_HPM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FLASH_HPM_W<'a> {
     }
 }
 #[doc = "Field `FLASH_RES` reader - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_RES_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_RES_R(crate::FieldReader<bool>);
 impl FLASH_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FLASH_RES_R {
     }
 }
 impl core::ops::Deref for FLASH_RES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FLASH_RES_W<'a> {
     }
 }
 #[doc = "Field `FLASH_DP` reader - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_DP_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_DP_R(crate::FieldReader<bool>);
 impl FLASH_DP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FLASH_DP_R {
     }
 }
 impl core::ops::Deref for FLASH_DP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> FLASH_DP_W<'a> {
     }
 }
 #[doc = "Field `FLASH_CE` reader - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_CE_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_CE_R(crate::FieldReader<bool>);
 impl FLASH_CE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl FLASH_CE_R {
     }
 }
 impl core::ops::Deref for FLASH_CE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> FLASH_CE_W<'a> {
     }
 }
 #[doc = "Field `FLASH_BE` reader - Block erase enable. A 64KB block is erased via SPI command D8H. Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_BE_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_BE_R(crate::FieldReader<bool>);
 impl FLASH_BE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl FLASH_BE_R {
     }
 }
 impl core::ops::Deref for FLASH_BE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> FLASH_BE_W<'a> {
     }
 }
 #[doc = "Field `FLASH_SE` reader - Sector erase enable. A 4KB sector is erased via SPI command 20H. Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_SE_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_SE_R(crate::FieldReader<bool>);
 impl FLASH_SE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl FLASH_SE_R {
     }
 }
 impl core::ops::Deref for FLASH_SE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> FLASH_SE_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PP` reader - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub struct FLASH_PP_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PP_R(crate::FieldReader<bool>);
 impl FLASH_PP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl FLASH_PP_R {
     }
 }
 impl core::ops::Deref for FLASH_PP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> FLASH_PP_W<'a> {
     }
 }
 #[doc = "Field `FLASH_WRSR` reader - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_WRSR_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_WRSR_R(crate::FieldReader<bool>);
 impl FLASH_WRSR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl FLASH_WRSR_R {
     }
 }
 impl core::ops::Deref for FLASH_WRSR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> FLASH_WRSR_W<'a> {
     }
 }
 #[doc = "Field `FLASH_RDSR` reader - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_RDSR_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_RDSR_R(crate::FieldReader<bool>);
 impl FLASH_RDSR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl FLASH_RDSR_R {
     }
 }
 impl core::ops::Deref for FLASH_RDSR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> FLASH_RDSR_W<'a> {
     }
 }
 #[doc = "Field `FLASH_RDID` reader - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub struct FLASH_RDID_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_RDID_R(crate::FieldReader<bool>);
 impl FLASH_RDID_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl FLASH_RDID_R {
     }
 }
 impl core::ops::Deref for FLASH_RDID_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> FLASH_RDID_W<'a> {
     }
 }
 #[doc = "Field `FLASH_WRDI` reader - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub struct FLASH_WRDI_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_WRDI_R(crate::FieldReader<bool>);
 impl FLASH_WRDI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl FLASH_WRDI_R {
     }
 }
 impl core::ops::Deref for FLASH_WRDI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> FLASH_WRDI_W<'a> {
     }
 }
 #[doc = "Field `FLASH_WREN` reader - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub struct FLASH_WREN_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_WREN_R(crate::FieldReader<bool>);
 impl FLASH_WREN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl FLASH_WREN_R {
     }
 }
 impl core::ops::Deref for FLASH_WREN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> FLASH_WREN_W<'a> {
     }
 }
 #[doc = "Field `FLASH_READ` reader - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub struct FLASH_READ_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_READ_R(crate::FieldReader<bool>);
 impl FLASH_READ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl FLASH_READ_R {
     }
 }
 impl core::ops::Deref for FLASH_READ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -796,25 +796,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd](index.html) module"]
 pub struct CMD_SPEC;
 impl crate::RegisterSpec for CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmd::R](R) reader structure"]
 impl crate::Readable for CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
 }

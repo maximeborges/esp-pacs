@@ -14,7 +14,7 @@ impl From<crate::R<CALI_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CALI_VALUE_SYNC2` reader - "]
-pub struct CALI_VALUE_SYNC2_R(crate::FieldReader<u32, u32>);
+pub struct CALI_VALUE_SYNC2_R(crate::FieldReader<u32>);
 impl CALI_VALUE_SYNC2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl CALI_VALUE_SYNC2_R {
     }
 }
 impl core::ops::Deref for CALI_VALUE_SYNC2_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CALI_RDY_REAL` reader - "]
-pub struct CALI_RDY_REAL_R(crate::FieldReader<bool, bool>);
+pub struct CALI_RDY_REAL_R(crate::FieldReader<bool>);
 impl CALI_RDY_REAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CALI_RDY_REAL_R {
     }
 }
 impl core::ops::Deref for CALI_RDY_REAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CALI_RDY_SYNC2` reader - "]
-pub struct CALI_RDY_SYNC2_R(crate::FieldReader<bool, bool>);
+pub struct CALI_RDY_SYNC2_R(crate::FieldReader<bool>);
 impl CALI_RDY_SYNC2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl CALI_RDY_SYNC2_R {
     }
 }
 impl core::ops::Deref for CALI_RDY_SYNC2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         CALI_RDY_SYNC2_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cali_data]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cali_data](index.html) module"]
 pub struct CALI_DATA_SPEC;
 impl crate::RegisterSpec for CALI_DATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cali_data::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cali_data::R](R) reader structure"]
 impl crate::Readable for CALI_DATA_SPEC {
     type Reader = R;
 }

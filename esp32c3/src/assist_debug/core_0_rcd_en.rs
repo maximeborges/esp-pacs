@@ -35,7 +35,7 @@ impl From<crate::W<CORE_0_RCD_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_RCD_RECORDEN` reader - reg_core_0_rcd_recorden"]
-pub struct CORE_0_RCD_RECORDEN_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_RCD_RECORDEN_R(crate::FieldReader<bool>);
 impl CORE_0_RCD_RECORDEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_RCD_RECORDEN_R {
     }
 }
 impl core::ops::Deref for CORE_0_RCD_RECORDEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CORE_0_RCD_RECORDEN_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_RCD_PDEBUGEN` reader - reg_core_0_rcd_pdebugen"]
-pub struct CORE_0_RCD_PDEBUGEN_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_RCD_PDEBUGEN_R(crate::FieldReader<bool>);
 impl CORE_0_RCD_PDEBUGEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CORE_0_RCD_PDEBUGEN_R {
     }
 }
 impl core::ops::Deref for CORE_0_RCD_PDEBUGEN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "ASSIST_DEBUG_CORE_0_RCD_EN_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_rcd_en]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_CORE_0_RCD_EN_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_rcd_en](index.html) module"]
 pub struct CORE_0_RCD_EN_SPEC;
 impl crate::RegisterSpec for CORE_0_RCD_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_rcd_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_rcd_en::R](R) reader structure"]
 impl crate::Readable for CORE_0_RCD_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_rcd_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_rcd_en::W](W) writer structure"]
 impl crate::Writable for CORE_0_RCD_EN_SPEC {
     type Writer = W;
 }

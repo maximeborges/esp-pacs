@@ -35,7 +35,7 @@ impl From<crate::W<SLEEP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ACTIVE_THRESHOLD` reader - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
-pub struct ACTIVE_THRESHOLD_R(crate::FieldReader<u16, u16>);
+pub struct ACTIVE_THRESHOLD_R(crate::FieldReader<u16>);
 impl ACTIVE_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl ACTIVE_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for ACTIVE_THRESHOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sleep_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sleep_conf](index.html) module"]
 pub struct SLEEP_CONF_SPEC;
 impl crate::RegisterSpec for SLEEP_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sleep_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sleep_conf::R](R) reader structure"]
 impl crate::Readable for SLEEP_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sleep_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sleep_conf::W](W) writer structure"]
 impl crate::Writable for SLEEP_CONF_SPEC {
     type Writer = W;
 }

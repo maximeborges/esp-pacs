@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_TAG_ACCESS_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_TAG_ACCESS_LOCK` reader - Lock register. Setting to 1 locks cache tag permission control registers."]
-pub struct CACHE_TAG_ACCESS_LOCK_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_TAG_ACCESS_LOCK_R(crate::FieldReader<bool>);
 impl CACHE_TAG_ACCESS_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_TAG_ACCESS_LOCK_R {
     }
 }
 impl core::ops::Deref for CACHE_TAG_ACCESS_LOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Cache tag permission control register 0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_access_0]
-(index.html) module"]
+#[doc = "Cache tag permission control register 0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_access_0](index.html) module"]
 pub struct CACHE_TAG_ACCESS_0_SPEC;
 impl crate::RegisterSpec for CACHE_TAG_ACCESS_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_tag_access_0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_tag_access_0::R](R) reader structure"]
 impl crate::Readable for CACHE_TAG_ACCESS_0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_tag_access_0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_tag_access_0::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_ACCESS_0_SPEC {
     type Writer = W;
 }

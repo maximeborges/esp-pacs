@@ -35,7 +35,7 @@ impl From<crate::W<PGM_CHECK_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `PGM_RS_DATA_0` reader - The content of the %sth 32-bit RS code to be programmed."]
-pub struct PGM_RS_DATA_0_R(crate::FieldReader<u32, u32>);
+pub struct PGM_RS_DATA_0_R(crate::FieldReader<u32>);
 impl PGM_RS_DATA_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl PGM_RS_DATA_0_R {
     }
 }
 impl core::ops::Deref for PGM_RS_DATA_0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Register %s that stores the RS code to be programmed.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pgm_check_value]
-(index.html) module"]
+#[doc = "Register %s that stores the RS code to be programmed.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pgm_check_value](index.html) module"]
 pub struct PGM_CHECK_VALUE_SPEC;
 impl crate::RegisterSpec for PGM_CHECK_VALUE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pgm_check_value::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pgm_check_value::R](R) reader structure"]
 impl crate::Readable for PGM_CHECK_VALUE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pgm_check_value::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pgm_check_value::W](W) writer structure"]
 impl crate::Writable for PGM_CHECK_VALUE_SPEC {
     type Writer = W;
 }

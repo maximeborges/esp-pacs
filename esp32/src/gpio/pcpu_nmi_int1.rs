@@ -14,7 +14,7 @@ impl From<crate::R<PCPU_NMI_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_NMI_INT_H` reader - GPIO32~39 PRO CPU non-maskable interrupt status"]
-pub struct PROCPU_NMI_INT_H_R(crate::FieldReader<u8, u8>);
+pub struct PROCPU_NMI_INT_H_R(crate::FieldReader<u8>);
 impl PROCPU_NMI_INT_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl PROCPU_NMI_INT_H_R {
     }
 }
 impl core::ops::Deref for PROCPU_NMI_INT_H_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         PROCPU_NMI_INT_H_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcpu_nmi_int1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcpu_nmi_int1](index.html) module"]
 pub struct PCPU_NMI_INT1_SPEC;
 impl crate::RegisterSpec for PCPU_NMI_INT1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pcpu_nmi_int1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pcpu_nmi_int1::R](R) reader structure"]
 impl crate::Readable for PCPU_NMI_INT1_SPEC {
     type Reader = R;
 }

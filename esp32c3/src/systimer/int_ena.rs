@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET0_INT_ENA` reader - interupt0 enable"]
-pub struct TARGET0_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TARGET0_INT_ENA_R(crate::FieldReader<bool>);
 impl TARGET0_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TARGET0_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TARGET0_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TARGET0_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TARGET1_INT_ENA` reader - interupt1 enable"]
-pub struct TARGET1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TARGET1_INT_ENA_R(crate::FieldReader<bool>);
 impl TARGET1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TARGET1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TARGET1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TARGET1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TARGET2_INT_ENA` reader - interupt2 enable"]
-pub struct TARGET2_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TARGET2_INT_ENA_R(crate::FieldReader<bool>);
 impl TARGET2_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TARGET2_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TARGET2_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "SYSTIMER_INT_ENA.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena]
-(index.html) module"]
+#[doc = "SYSTIMER_INT_ENA.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
 impl crate::Readable for INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
 }

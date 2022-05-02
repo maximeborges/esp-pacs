@@ -35,7 +35,7 @@ impl From<crate::W<RTC_FASTMEM_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_START` reader - Set 1 to start the CRC of RTC memory"]
-pub struct RTC_MEM_CRC_START_R(crate::FieldReader<bool, bool>);
+pub struct RTC_MEM_CRC_START_R(crate::FieldReader<bool>);
 impl RTC_MEM_CRC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_MEM_CRC_START_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_MEM_CRC_START_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - This field is used to set address of RTC memory for CRC."]
-pub struct RTC_MEM_CRC_ADDR_R(crate::FieldReader<u16, u16>);
+pub struct RTC_MEM_CRC_ADDR_R(crate::FieldReader<u16>);
 impl RTC_MEM_CRC_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -80,7 +80,7 @@ impl RTC_MEM_CRC_ADDR_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_ADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> RTC_MEM_CRC_ADDR_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - This field is used to set length of RTC memory for CRC based on start address."]
-pub struct RTC_MEM_CRC_LEN_R(crate::FieldReader<u16, u16>);
+pub struct RTC_MEM_CRC_LEN_R(crate::FieldReader<u16>);
 impl RTC_MEM_CRC_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -107,7 +107,7 @@ impl RTC_MEM_CRC_LEN_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_LEN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> RTC_MEM_CRC_LEN_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - This bit stores the status of RTC memory CRC.1 means finished."]
-pub struct RTC_MEM_CRC_FINISH_R(crate::FieldReader<bool, bool>);
+pub struct RTC_MEM_CRC_FINISH_R(crate::FieldReader<bool>);
 impl RTC_MEM_CRC_FINISH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl RTC_MEM_CRC_FINISH_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_FINISH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC fast memory configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_fastmem_config]
-(index.html) module"]
+#[doc = "RTC fast memory configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_fastmem_config](index.html) module"]
 pub struct RTC_FASTMEM_CONFIG_SPEC;
 impl crate::RegisterSpec for RTC_FASTMEM_CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_fastmem_config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_fastmem_config::R](R) reader structure"]
 impl crate::Readable for RTC_FASTMEM_CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_fastmem_config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_fastmem_config::W](W) writer structure"]
 impl crate::Writable for RTC_FASTMEM_CONFIG_SPEC {
     type Writer = W;
 }

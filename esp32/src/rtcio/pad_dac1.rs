@@ -35,7 +35,7 @@ impl From<crate::W<PAD_DAC1_SPEC>> for W {
     }
 }
 #[doc = "Field `PDAC1_DAC_XPD_FORCE` reader - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_DAC_XPD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_DAC_XPD_FORCE_R(crate::FieldReader<bool>);
 impl PDAC1_DAC_XPD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PDAC1_DAC_XPD_FORCE_R {
     }
 }
 impl core::ops::Deref for PDAC1_DAC_XPD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PDAC1_DAC_XPD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_FUN_IE` reader - the input enable of the pad"]
-pub struct PDAC1_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_FUN_IE_R(crate::FieldReader<bool>);
 impl PDAC1_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PDAC1_FUN_IE_R {
     }
 }
 impl core::ops::Deref for PDAC1_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PDAC1_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_SLP_OE` reader - the output enable of the pad in sleep status"]
-pub struct PDAC1_SLP_OE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_SLP_OE_R(crate::FieldReader<bool>);
 impl PDAC1_SLP_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PDAC1_SLP_OE_R {
     }
 }
 impl core::ops::Deref for PDAC1_SLP_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PDAC1_SLP_OE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct PDAC1_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_SLP_IE_R(crate::FieldReader<bool>);
 impl PDAC1_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PDAC1_SLP_IE_R {
     }
 }
 impl core::ops::Deref for PDAC1_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PDAC1_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct PDAC1_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_SLP_SEL_R(crate::FieldReader<bool>);
 impl PDAC1_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PDAC1_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for PDAC1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PDAC1_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct PDAC1_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct PDAC1_FUN_SEL_R(crate::FieldReader<u8>);
 impl PDAC1_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl PDAC1_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for PDAC1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> PDAC1_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct PDAC1_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_MUX_SEL_R(crate::FieldReader<bool>);
 impl PDAC1_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl PDAC1_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for PDAC1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> PDAC1_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_XPD_DAC` reader - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_XPD_DAC_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_XPD_DAC_R(crate::FieldReader<bool>);
 impl PDAC1_XPD_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl PDAC1_XPD_DAC_R {
     }
 }
 impl core::ops::Deref for PDAC1_XPD_DAC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> PDAC1_XPD_DAC_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_DAC` reader - PAD DAC1 control code."]
-pub struct PDAC1_DAC_R(crate::FieldReader<u8, u8>);
+pub struct PDAC1_DAC_R(crate::FieldReader<u8>);
 impl PDAC1_DAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -329,7 +329,7 @@ impl PDAC1_DAC_R {
     }
 }
 impl core::ops::Deref for PDAC1_DAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> PDAC1_DAC_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_RUE` reader - the pull up enable of the pad"]
-pub struct PDAC1_RUE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_RUE_R(crate::FieldReader<bool>);
 impl PDAC1_RUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl PDAC1_RUE_R {
     }
 }
 impl core::ops::Deref for PDAC1_RUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> PDAC1_RUE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_RDE` reader - the pull down enable of the pad"]
-pub struct PDAC1_RDE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_RDE_R(crate::FieldReader<bool>);
 impl PDAC1_RDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl PDAC1_RDE_R {
     }
 }
 impl core::ops::Deref for PDAC1_RDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> PDAC1_RDE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct PDAC1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_HOLD_R(crate::FieldReader<bool>);
 impl PDAC1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -430,7 +430,7 @@ impl PDAC1_HOLD_R {
     }
 }
 impl core::ops::Deref for PDAC1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -459,7 +459,7 @@ impl<'a> PDAC1_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_DRV` reader - the driver strength of the pad"]
-pub struct PDAC1_DRV_R(crate::FieldReader<u8, u8>);
+pub struct PDAC1_DRV_R(crate::FieldReader<u8>);
 impl PDAC1_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -467,7 +467,7 @@ impl PDAC1_DRV_R {
     }
 }
 impl core::ops::Deref for PDAC1_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -625,25 +625,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_dac1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_dac1](index.html) module"]
 pub struct PAD_DAC1_SPEC;
 impl crate::RegisterSpec for PAD_DAC1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pad_dac1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pad_dac1::R](R) reader structure"]
 impl crate::Readable for PAD_DAC1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pad_dac1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pad_dac1::W](W) writer structure"]
 impl crate::Writable for PAD_DAC1_SPEC {
     type Writer = W;
 }

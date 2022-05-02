@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_DATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY_PURPOSE_2` reader - Purpose of KEY2. Refer to Table Key Purpose Values."]
-pub struct KEY_PURPOSE_2_R(crate::FieldReader<u8, u8>);
+pub struct KEY_PURPOSE_2_R(crate::FieldReader<u8>);
 impl KEY_PURPOSE_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl KEY_PURPOSE_2_R {
     }
 }
 impl core::ops::Deref for KEY_PURPOSE_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY_PURPOSE_3` reader - Purpose of KEY3. Refer to Table Key Purpose Values."]
-pub struct KEY_PURPOSE_3_R(crate::FieldReader<u8, u8>);
+pub struct KEY_PURPOSE_3_R(crate::FieldReader<u8>);
 impl KEY_PURPOSE_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl KEY_PURPOSE_3_R {
     }
 }
 impl core::ops::Deref for KEY_PURPOSE_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY_PURPOSE_4` reader - Purpose of KEY4. Refer to Table Key Purpose Values."]
-pub struct KEY_PURPOSE_4_R(crate::FieldReader<u8, u8>);
+pub struct KEY_PURPOSE_4_R(crate::FieldReader<u8>);
 impl KEY_PURPOSE_4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl KEY_PURPOSE_4_R {
     }
 }
 impl core::ops::Deref for KEY_PURPOSE_4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY_PURPOSE_5` reader - Purpose of KEY5. Refer to Table Key Purpose Values."]
-pub struct KEY_PURPOSE_5_R(crate::FieldReader<u8, u8>);
+pub struct KEY_PURPOSE_5_R(crate::FieldReader<u8>);
 impl KEY_PURPOSE_5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,14 +67,14 @@ impl KEY_PURPOSE_5_R {
     }
 }
 impl core::ops::Deref for KEY_PURPOSE_5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY_PURPOSE_6` reader - Purpose of KEY6. Refer to Table Key Purpose Values."]
-pub struct KEY_PURPOSE_6_R(crate::FieldReader<u8, u8>);
+pub struct KEY_PURPOSE_6_R(crate::FieldReader<u8>);
 impl KEY_PURPOSE_6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,14 +82,14 @@ impl KEY_PURPOSE_6_R {
     }
 }
 impl core::ops::Deref for KEY_PURPOSE_6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SECURE_BOOT_EN` reader - Set this bit to enable secure boot."]
-pub struct SECURE_BOOT_EN_R(crate::FieldReader<bool, bool>);
+pub struct SECURE_BOOT_EN_R(crate::FieldReader<bool>);
 impl SECURE_BOOT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl SECURE_BOOT_EN_R {
     }
 }
 impl core::ops::Deref for SECURE_BOOT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE` reader - Set this bit to enable aggressive secure boot key revocation mode."]
-pub struct SECURE_BOOT_AGGRESSIVE_REVOKE_R(crate::FieldReader<bool, bool>);
+pub struct SECURE_BOOT_AGGRESSIVE_REVOKE_R(crate::FieldReader<bool>);
 impl SECURE_BOOT_AGGRESSIVE_REVOKE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl SECURE_BOOT_AGGRESSIVE_REVOKE_R {
     }
 }
 impl core::ops::Deref for SECURE_BOOT_AGGRESSIVE_REVOKE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RPT4_RESERVED1` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED1_R(crate::FieldReader<u8, u8>);
+pub struct RPT4_RESERVED1_R(crate::FieldReader<u8>);
 impl RPT4_RESERVED1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,14 +127,14 @@ impl RPT4_RESERVED1_R {
     }
 }
 impl core::ops::Deref for RPT4_RESERVED1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_TPUW` reader - Configures flash startup delay after SoC power-up, in unit of (ms/2). When the value is 15, delay is 7.5 ms."]
-pub struct FLASH_TPUW_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_TPUW_R(crate::FieldReader<u8>);
 impl FLASH_TPUW_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -142,7 +142,7 @@ impl FLASH_TPUW_R {
     }
 }
 impl core::ops::Deref for FLASH_TPUW_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -195,16 +195,12 @@ impl R {
         FLASH_TPUW_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
-#[doc = "Register 3 of BLOCK0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data2]
-(index.html) module"]
+#[doc = "Register 3 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data2](index.html) module"]
 pub struct RD_REPEAT_DATA2_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_data2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_repeat_data2::R](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA2_SPEC {
     type Reader = R;
 }

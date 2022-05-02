@@ -35,7 +35,7 @@ impl From<crate::W<FRONT_END_MEM_PD_SPEC>> for W {
     }
 }
 #[doc = "Field `AGC_MEM_FORCE_PU` reader - reg_agc_mem_force_pu"]
-pub struct AGC_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct AGC_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl AGC_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl AGC_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for AGC_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> AGC_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `AGC_MEM_FORCE_PD` reader - reg_agc_mem_force_pd"]
-pub struct AGC_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct AGC_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl AGC_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl AGC_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for AGC_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> AGC_MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `PBUS_MEM_FORCE_PU` reader - reg_pbus_mem_force_pu"]
-pub struct PBUS_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct PBUS_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl PBUS_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PBUS_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for PBUS_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PBUS_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `PBUS_MEM_FORCE_PD` reader - reg_pbus_mem_force_pd"]
-pub struct PBUS_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct PBUS_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl PBUS_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PBUS_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for PBUS_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PBUS_MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DC_MEM_FORCE_PU` reader - reg_dc_mem_force_pu"]
-pub struct DC_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DC_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl DC_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DC_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DC_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DC_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `DC_MEM_FORCE_PD` reader - reg_dc_mem_force_pd"]
-pub struct DC_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DC_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl DC_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DC_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DC_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "APB_CTRL_FRONT_END_MEM_PD_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [front_end_mem_pd]
-(index.html) module"]
+#[doc = "APB_CTRL_FRONT_END_MEM_PD_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [front_end_mem_pd](index.html) module"]
 pub struct FRONT_END_MEM_PD_SPEC;
 impl crate::RegisterSpec for FRONT_END_MEM_PD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [front_end_mem_pd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [front_end_mem_pd::R](R) reader structure"]
 impl crate::Readable for FRONT_END_MEM_PD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [front_end_mem_pd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [front_end_mem_pd::W](W) writer structure"]
 impl crate::Writable for FRONT_END_MEM_PD_SPEC {
     type Writer = W;
 }

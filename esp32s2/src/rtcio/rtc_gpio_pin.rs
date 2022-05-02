@@ -35,7 +35,7 @@ impl From<crate::W<RTC_GPIO_PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_PIN0_PAD_DRIVER` reader - Pad driver selection. 0: normal output. 1: open drain."]
-pub struct GPIO_PIN0_PAD_DRIVER_R(crate::FieldReader<bool, bool>);
+pub struct GPIO_PIN0_PAD_DRIVER_R(crate::FieldReader<bool>);
 impl GPIO_PIN0_PAD_DRIVER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl GPIO_PIN0_PAD_DRIVER_R {
     }
 }
 impl core::ops::Deref for GPIO_PIN0_PAD_DRIVER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> GPIO_PIN0_PAD_DRIVER_W<'a> {
     }
 }
 #[doc = "Field `GPIO_PIN0_INT_TYPE` reader - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
-pub struct GPIO_PIN0_INT_TYPE_R(crate::FieldReader<u8, u8>);
+pub struct GPIO_PIN0_INT_TYPE_R(crate::FieldReader<u8>);
 impl GPIO_PIN0_INT_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl GPIO_PIN0_INT_TYPE_R {
     }
 }
 impl core::ops::Deref for GPIO_PIN0_INT_TYPE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> GPIO_PIN0_INT_TYPE_W<'a> {
     }
 }
 #[doc = "Field `GPIO_PIN0_WAKEUP_ENABLE` reader - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
-pub struct GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
 impl GPIO_PIN0_WAKEUP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl GPIO_PIN0_WAKEUP_ENABLE_R {
     }
 }
 impl core::ops::Deref for GPIO_PIN0_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC configuration for pin %s\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_pin]
-(index.html) module"]
+#[doc = "RTC configuration for pin %s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_pin](index.html) module"]
 pub struct RTC_GPIO_PIN_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_PIN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_gpio_pin::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_gpio_pin::R](R) reader structure"]
 impl crate::Readable for RTC_GPIO_PIN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_gpio_pin::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_gpio_pin::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_PIN_SPEC {
     type Writer = W;
 }

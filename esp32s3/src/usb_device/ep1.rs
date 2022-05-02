@@ -35,7 +35,7 @@ impl From<crate::W<EP1_SPEC>> for W {
     }
 }
 #[doc = "Field `RDWR_BYTE` reader - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
-pub struct RDWR_BYTE_R(crate::FieldReader<u8, u8>);
+pub struct RDWR_BYTE_R(crate::FieldReader<u8>);
 impl RDWR_BYTE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RDWR_BYTE_R {
     }
 }
 impl core::ops::Deref for RDWR_BYTE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Endpoint 1 FIFO register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep1]
-(index.html) module"]
+#[doc = "Endpoint 1 FIFO register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep1](index.html) module"]
 pub struct EP1_SPEC;
 impl crate::RegisterSpec for EP1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ep1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ep1::R](R) reader structure"]
 impl crate::Readable for EP1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ep1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ep1::W](W) writer structure"]
 impl crate::Writable for EP1_SPEC {
     type Writer = W;
 }

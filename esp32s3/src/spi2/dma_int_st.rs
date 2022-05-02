@@ -14,7 +14,7 @@ impl From<crate::R<DMA_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL_ERR_INT_ST` reader - The status bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
-pub struct DMA_INFIFO_FULL_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DMA_INFIFO_FULL_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl DMA_INFIFO_FULL_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl DMA_INFIFO_FULL_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for DMA_INFIFO_FULL_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_OUTFIFO_EMPTY_ERR_INT_ST` reader - The status bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
-pub struct DMA_OUTFIFO_EMPTY_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DMA_OUTFIFO_EMPTY_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl DMA_OUTFIFO_EMPTY_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl DMA_OUTFIFO_EMPTY_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for DMA_OUTFIFO_EMPTY_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_EX_QPI_INT_ST` reader - The status bit for SPI slave Ex_QPI interrupt."]
-pub struct SLV_EX_QPI_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_EX_QPI_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_EX_QPI_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl SLV_EX_QPI_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_EX_QPI_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_EN_QPI_INT_ST` reader - The status bit for SPI slave En_QPI interrupt."]
-pub struct SLV_EN_QPI_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_EN_QPI_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_EN_QPI_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl SLV_EN_QPI_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_EN_QPI_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD7_INT_ST` reader - The status bit for SPI slave CMD7 interrupt."]
-pub struct SLV_CMD7_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD7_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_CMD7_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl SLV_CMD7_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_CMD7_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD8_INT_ST` reader - The status bit for SPI slave CMD8 interrupt."]
-pub struct SLV_CMD8_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD8_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_CMD8_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl SLV_CMD8_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_CMD8_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD9_INT_ST` reader - The status bit for SPI slave CMD9 interrupt."]
-pub struct SLV_CMD9_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD9_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_CMD9_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl SLV_CMD9_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_CMD9_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMDA_INT_ST` reader - The status bit for SPI slave CMDA interrupt."]
-pub struct SLV_CMDA_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMDA_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_CMDA_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl SLV_CMDA_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_CMDA_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_RD_DMA_DONE_INT_ST` reader - The status bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
-pub struct SLV_RD_DMA_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RD_DMA_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_RD_DMA_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl SLV_RD_DMA_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_RD_DMA_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_WR_DMA_DONE_INT_ST` reader - The status bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
-pub struct SLV_WR_DMA_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WR_DMA_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_WR_DMA_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl SLV_WR_DMA_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_WR_DMA_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_RD_BUF_DONE_INT_ST` reader - The status bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
-pub struct SLV_RD_BUF_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RD_BUF_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_RD_BUF_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl SLV_RD_BUF_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_RD_BUF_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_WR_BUF_DONE_INT_ST` reader - The status bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
-pub struct SLV_WR_BUF_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WR_BUF_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_WR_BUF_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl SLV_WR_BUF_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_WR_BUF_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TRANS_DONE_INT_ST` reader - The status bit for SPI_TRANS_DONE_INT interrupt."]
-pub struct TRANS_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl TRANS_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl TRANS_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TRANS_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_SEG_TRANS_DONE_INT_ST` reader - The status bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
-pub struct DMA_SEG_TRANS_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct DMA_SEG_TRANS_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl DMA_SEG_TRANS_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl DMA_SEG_TRANS_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for DMA_SEG_TRANS_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SEG_MAGIC_ERR_INT_ST` reader - The status bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
-pub struct SEG_MAGIC_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SEG_MAGIC_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl SEG_MAGIC_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl SEG_MAGIC_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for SEG_MAGIC_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_BUF_ADDR_ERR_INT_ST` reader - The status bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
-pub struct SLV_BUF_ADDR_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_BUF_ADDR_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_BUF_ADDR_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl SLV_BUF_ADDR_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_BUF_ADDR_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLV_CMD_ERR_INT_ST` reader - The status bit for SPI_SLV_CMD_ERR_INT interrupt."]
-pub struct SLV_CMD_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct SLV_CMD_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl SLV_CMD_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl SLV_CMD_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for SLV_CMD_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MST_RX_AFIFO_WFULL_ERR_INT_ST` reader - The status bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
-pub struct MST_RX_AFIFO_WFULL_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct MST_RX_AFIFO_WFULL_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl MST_RX_AFIFO_WFULL_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl MST_RX_AFIFO_WFULL_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for MST_RX_AFIFO_WFULL_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MST_TX_AFIFO_REMPTY_ERR_INT_ST` reader - The status bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
-pub struct MST_TX_AFIFO_REMPTY_ERR_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct MST_TX_AFIFO_REMPTY_ERR_INT_ST_R(crate::FieldReader<bool>);
 impl MST_TX_AFIFO_REMPTY_ERR_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,14 +292,14 @@ impl MST_TX_AFIFO_REMPTY_ERR_INT_ST_R {
     }
 }
 impl core::ops::Deref for MST_TX_AFIFO_REMPTY_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP2_INT_ST` reader - The status bit for SPI_APP2_INT interrupt."]
-pub struct APP2_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APP2_INT_ST_R(crate::FieldReader<bool>);
 impl APP2_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -307,14 +307,14 @@ impl APP2_INT_ST_R {
     }
 }
 impl core::ops::Deref for APP2_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP1_INT_ST` reader - The status bit for SPI_APP1_INT interrupt."]
-pub struct APP1_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APP1_INT_ST_R(crate::FieldReader<bool>);
 impl APP1_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -322,7 +322,7 @@ impl APP1_INT_ST_R {
     }
 }
 impl core::ops::Deref for APP1_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -435,16 +435,12 @@ impl R {
         APP1_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
-#[doc = "SPI interrupt status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_st]
-(index.html) module"]
+#[doc = "SPI interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_st](index.html) module"]
 pub struct DMA_INT_ST_SPEC;
 impl crate::RegisterSpec for DMA_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_int_st::R](R) reader structure"]
 impl crate::Readable for DMA_INT_ST_SPEC {
     type Reader = R;
 }

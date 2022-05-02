@@ -14,7 +14,7 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_DONE_INT_ST` reader - The masked interrupt status bit for the i2s_rx_done_int interrupt"]
-pub struct RX_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RX_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl RX_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RX_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for RX_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_DONE_INT_ST` reader - The masked interrupt status bit for the i2s_tx_done_int interrupt"]
-pub struct TX_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl TX_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TX_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for TX_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_HUNG_INT_ST` reader - The masked interrupt status bit for the i2s_rx_hung_int interrupt"]
-pub struct RX_HUNG_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct RX_HUNG_INT_ST_R(crate::FieldReader<bool>);
 impl RX_HUNG_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl RX_HUNG_INT_ST_R {
     }
 }
 impl core::ops::Deref for RX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_HUNG_INT_ST` reader - The masked interrupt status bit for the i2s_tx_hung_int interrupt"]
-pub struct TX_HUNG_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_HUNG_INT_ST_R(crate::FieldReader<bool>);
 impl TX_HUNG_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl TX_HUNG_INT_ST_R {
     }
 }
 impl core::ops::Deref for TX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         TX_HUNG_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
-#[doc = "I2S interrupt status register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st]
-(index.html) module"]
+#[doc = "I2S interrupt status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_st::R](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {
     type Reader = R;
 }

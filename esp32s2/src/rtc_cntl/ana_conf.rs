@@ -35,7 +35,7 @@ impl From<crate::W<ANA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_RESET_POR_FORCE_PD` reader - SLEEP_I2CPOR force pd"]
-pub struct I2C_RESET_POR_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct I2C_RESET_POR_FORCE_PD_R(crate::FieldReader<bool>);
 impl I2C_RESET_POR_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl I2C_RESET_POR_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for I2C_RESET_POR_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> I2C_RESET_POR_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `I2C_RESET_POR_FORCE_PU` reader - SLEEP_I2CPOR force pu"]
-pub struct I2C_RESET_POR_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct I2C_RESET_POR_FORCE_PU_R(crate::FieldReader<bool>);
 impl I2C_RESET_POR_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl I2C_RESET_POR_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for I2C_RESET_POR_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> I2C_RESET_POR_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `GLITCH_RST_EN` reader - Set this bit to enable a reset when the system detects a glitch."]
-pub struct GLITCH_RST_EN_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_RST_EN_R(crate::FieldReader<bool>);
 impl GLITCH_RST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl GLITCH_RST_EN_R {
     }
 }
 impl core::ops::Deref for GLITCH_RST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> GLITCH_RST_EN_W<'a> {
     }
 }
 #[doc = "Field `SAR_I2C_FORCE_PD` reader - Sets this bit to FPD the SAR_I2C."]
-pub struct SAR_I2C_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct SAR_I2C_FORCE_PD_R(crate::FieldReader<bool>);
 impl SAR_I2C_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SAR_I2C_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for SAR_I2C_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SAR_I2C_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `SAR_I2C_FORCE_PU` reader - Sets this bit to FPU the SAR_I2C."]
-pub struct SAR_I2C_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct SAR_I2C_FORCE_PU_R(crate::FieldReader<bool>);
 impl SAR_I2C_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SAR_I2C_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for SAR_I2C_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SAR_I2C_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `PLLA_FORCE_PD` reader - Sets this bit to FPD the PLLA."]
-pub struct PLLA_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct PLLA_FORCE_PD_R(crate::FieldReader<bool>);
 impl PLLA_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PLLA_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for PLLA_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PLLA_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `PLLA_FORCE_PU` reader - Sets this bit to FPU the PLLA."]
-pub struct PLLA_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct PLLA_FORCE_PU_R(crate::FieldReader<bool>);
 impl PLLA_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PLLA_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for PLLA_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PLLA_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `BBPLL_CAL_SLP_START` reader - start BBPLL calibration during sleep"]
-pub struct BBPLL_CAL_SLP_START_R(crate::FieldReader<bool, bool>);
+pub struct BBPLL_CAL_SLP_START_R(crate::FieldReader<bool>);
 impl BBPLL_CAL_SLP_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BBPLL_CAL_SLP_START_R {
     }
 }
 impl core::ops::Deref for BBPLL_CAL_SLP_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BBPLL_CAL_SLP_START_W<'a> {
     }
 }
 #[doc = "Field `PVTMON_PU` reader - 1: PVTMON power up , otherwise power down"]
-pub struct PVTMON_PU_R(crate::FieldReader<bool, bool>);
+pub struct PVTMON_PU_R(crate::FieldReader<bool>);
 impl PVTMON_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PVTMON_PU_R {
     }
 }
 impl core::ops::Deref for PVTMON_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PVTMON_PU_W<'a> {
     }
 }
 #[doc = "Field `TXRF_I2C_PU` reader - 1: TXRF_I2C power up , otherwise power down"]
-pub struct TXRF_I2C_PU_R(crate::FieldReader<bool, bool>);
+pub struct TXRF_I2C_PU_R(crate::FieldReader<bool>);
 impl TXRF_I2C_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl TXRF_I2C_PU_R {
     }
 }
 impl core::ops::Deref for TXRF_I2C_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> TXRF_I2C_PU_W<'a> {
     }
 }
 #[doc = "Field `RFRX_PBUS_PU` reader - 1: RFRX_PBUS power up , otherwise power down"]
-pub struct RFRX_PBUS_PU_R(crate::FieldReader<bool, bool>);
+pub struct RFRX_PBUS_PU_R(crate::FieldReader<bool>);
 impl RFRX_PBUS_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl RFRX_PBUS_PU_R {
     }
 }
 impl core::ops::Deref for RFRX_PBUS_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> RFRX_PBUS_PU_W<'a> {
     }
 }
 #[doc = "Field `CKGEN_I2C_PU` reader - 1: CKGEN_I2C power up , otherwise power down"]
-pub struct CKGEN_I2C_PU_R(crate::FieldReader<bool, bool>);
+pub struct CKGEN_I2C_PU_R(crate::FieldReader<bool>);
 impl CKGEN_I2C_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl CKGEN_I2C_PU_R {
     }
 }
 impl core::ops::Deref for CKGEN_I2C_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> CKGEN_I2C_PU_W<'a> {
     }
 }
 #[doc = "Field `PLL_I2C_PU` reader - 1. PLL_I2C power up ,otherwise power down"]
-pub struct PLL_I2C_PU_R(crate::FieldReader<bool, bool>);
+pub struct PLL_I2C_PU_R(crate::FieldReader<bool>);
 impl PLL_I2C_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl PLL_I2C_PU_R {
     }
 }
 impl core::ops::Deref for PLL_I2C_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -655,25 +655,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures the power options for I2C and PLLA\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ana_conf]
-(index.html) module"]
+#[doc = "Configures the power options for I2C and PLLA\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ana_conf](index.html) module"]
 pub struct ANA_CONF_SPEC;
 impl crate::RegisterSpec for ANA_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ana_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ana_conf::R](R) reader structure"]
 impl crate::Readable for ANA_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ana_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ana_conf::W](W) writer structure"]
 impl crate::Writable for ANA_CONF_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<LC_HUNG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LC_FIFO_TIMEOUT` reader - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
-pub struct LC_FIFO_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct LC_FIFO_TIMEOUT_R(crate::FieldReader<u8>);
 impl LC_FIFO_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LC_FIFO_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for LC_FIFO_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LC_FIFO_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `LC_FIFO_TIMEOUT_SHIFT` reader - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
-pub struct LC_FIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct LC_FIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8>);
 impl LC_FIFO_TIMEOUT_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl LC_FIFO_TIMEOUT_SHIFT_R {
     }
 }
 impl core::ops::Deref for LC_FIFO_TIMEOUT_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> LC_FIFO_TIMEOUT_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `LC_FIFO_TIMEOUT_ENA` reader - The enable bit for FIFO timeout"]
-pub struct LC_FIFO_TIMEOUT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LC_FIFO_TIMEOUT_ENA_R(crate::FieldReader<bool>);
 impl LC_FIFO_TIMEOUT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl LC_FIFO_TIMEOUT_ENA_R {
     }
 }
 impl core::ops::Deref for LC_FIFO_TIMEOUT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S HUNG configure register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_hung_conf]
-(index.html) module"]
+#[doc = "I2S HUNG configure register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_hung_conf](index.html) module"]
 pub struct LC_HUNG_CONF_SPEC;
 impl crate::RegisterSpec for LC_HUNG_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_hung_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lc_hung_conf::R](R) reader structure"]
 impl crate::Readable for LC_HUNG_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lc_hung_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lc_hung_conf::W](W) writer structure"]
 impl crate::Writable for LC_HUNG_CONF_SPEC {
     type Writer = W;
 }

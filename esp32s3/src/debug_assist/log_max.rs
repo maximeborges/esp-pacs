@@ -35,7 +35,7 @@ impl From<crate::W<LOG_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MAX` reader - check region max addr"]
-pub struct LOG_MAX_R(crate::FieldReader<u32, u32>);
+pub struct LOG_MAX_R(crate::FieldReader<u32>);
 impl LOG_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl LOG_MAX_R {
     }
 }
 impl core::ops::Deref for LOG_MAX_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "log check region configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_max]
-(index.html) module"]
+#[doc = "log check region configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_max](index.html) module"]
 pub struct LOG_MAX_SPEC;
 impl crate::RegisterSpec for LOG_MAX_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_max::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [log_max::R](R) reader structure"]
 impl crate::Readable for LOG_MAX_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [log_max::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [log_max::W](W) writer structure"]
 impl crate::Writable for LOG_MAX_SPEC {
     type Writer = W;
 }

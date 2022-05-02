@@ -35,7 +35,7 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub struct IN_RST_R(crate::FieldReader<bool, bool>);
+pub struct IN_RST_R(crate::FieldReader<bool>);
 impl IN_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl IN_RST_R {
     }
 }
 impl core::ops::Deref for IN_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> IN_RST_W<'a> {
     }
 }
 #[doc = "Field `OUT_RST` reader - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub struct OUT_RST_R(crate::FieldReader<bool, bool>);
+pub struct OUT_RST_R(crate::FieldReader<bool>);
 impl OUT_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl OUT_RST_R {
     }
 }
 impl core::ops::Deref for OUT_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> OUT_RST_W<'a> {
     }
 }
 #[doc = "Field `AHBM_FIFO_RST` reader - reset spi dma ahb master fifo pointer."]
-pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool, bool>);
+pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool>);
 impl AHBM_FIFO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl AHBM_FIFO_RST_R {
     }
 }
 impl core::ops::Deref for AHBM_FIFO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> AHBM_FIFO_RST_W<'a> {
     }
 }
 #[doc = "Field `AHBM_RST` reader - reset spi dma ahb master."]
-pub struct AHBM_RST_R(crate::FieldReader<bool, bool>);
+pub struct AHBM_RST_R(crate::FieldReader<bool>);
 impl AHBM_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl AHBM_RST_R {
     }
 }
 impl core::ops::Deref for AHBM_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> AHBM_RST_W<'a> {
     }
 }
 #[doc = "Field `IN_LOOP_TEST` reader - Set bit to test in link."]
-pub struct IN_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct IN_LOOP_TEST_R(crate::FieldReader<bool>);
 impl IN_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl IN_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for IN_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> IN_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `OUT_LOOP_TEST` reader - Set bit to test out link."]
-pub struct OUT_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct OUT_LOOP_TEST_R(crate::FieldReader<bool>);
 impl OUT_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl OUT_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for OUT_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> OUT_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when the link is empty jump to next automatically."]
-pub struct OUT_AUTO_WRBACK_R(crate::FieldReader<bool, bool>);
+pub struct OUT_AUTO_WRBACK_R(crate::FieldReader<bool>);
 impl OUT_AUTO_WRBACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl OUT_AUTO_WRBACK_R {
     }
 }
 impl core::ops::Deref for OUT_AUTO_WRBACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> OUT_AUTO_WRBACK_W<'a> {
     }
 }
 #[doc = "Field `OUT_EOF_MODE` reader - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub struct OUT_EOF_MODE_R(crate::FieldReader<bool, bool>);
+pub struct OUT_EOF_MODE_R(crate::FieldReader<bool>);
 impl OUT_EOF_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl OUT_EOF_MODE_R {
     }
 }
 impl core::ops::Deref for OUT_EOF_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> OUT_EOF_MODE_W<'a> {
     }
 }
 #[doc = "Field `OUTDSCR_BURST_EN` reader - read descriptor use burst mode when read data for memory."]
-pub struct OUTDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct OUTDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl OUTDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl OUTDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for OUTDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> OUTDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `INDSCR_BURST_EN` reader - read descriptor use burst mode when write data to memory."]
-pub struct INDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct INDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl INDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl INDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for INDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> INDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `OUT_DATA_BURST_EN` reader - spi dma read data from memory in burst mode."]
-pub struct OUT_DATA_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct OUT_DATA_BURST_EN_R(crate::FieldReader<bool>);
 impl OUT_DATA_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl OUT_DATA_BURST_EN_R {
     }
 }
 impl core::ops::Deref for OUT_DATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> OUT_DATA_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `DMA_RX_STOP` reader - spi dma read data stop when in continue tx/rx mode."]
-pub struct DMA_RX_STOP_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RX_STOP_R(crate::FieldReader<bool>);
 impl DMA_RX_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl DMA_RX_STOP_R {
     }
 }
 impl core::ops::Deref for DMA_RX_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> DMA_RX_STOP_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_STOP` reader - spi dma write data stop when in continue tx/rx mode."]
-pub struct DMA_TX_STOP_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_STOP_R(crate::FieldReader<bool>);
 impl DMA_TX_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl DMA_TX_STOP_R {
     }
 }
 impl core::ops::Deref for DMA_TX_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> DMA_TX_STOP_W<'a> {
     }
 }
 #[doc = "Field `DMA_CONTINUE` reader - spi dma continue tx/rx data."]
-pub struct DMA_CONTINUE_R(crate::FieldReader<bool, bool>);
+pub struct DMA_CONTINUE_R(crate::FieldReader<bool>);
 impl DMA_CONTINUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl DMA_CONTINUE_R {
     }
 }
 impl core::ops::Deref for DMA_CONTINUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -702,25 +702,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_conf](index.html) module"]
 pub struct DMA_CONF_SPEC;
 impl crate::RegisterSpec for DMA_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_conf::R](R) reader structure"]
 impl crate::Readable for DMA_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_conf::W](W) writer structure"]
 impl crate::Writable for DMA_CONF_SPEC {
     type Writer = W;
 }

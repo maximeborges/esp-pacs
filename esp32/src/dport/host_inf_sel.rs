@@ -35,7 +35,7 @@ impl From<crate::W<HOST_INF_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IO_SWAP` reader - "]
-pub struct PERI_IO_SWAP_R(crate::FieldReader<u8, u8>);
+pub struct PERI_IO_SWAP_R(crate::FieldReader<u8>);
 impl PERI_IO_SWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PERI_IO_SWAP_R {
     }
 }
 impl core::ops::Deref for PERI_IO_SWAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PERI_IO_SWAP_W<'a> {
     }
 }
 #[doc = "Field `LINK_DEVICE_SEL` reader - "]
-pub struct LINK_DEVICE_SEL_R(crate::FieldReader<u8, u8>);
+pub struct LINK_DEVICE_SEL_R(crate::FieldReader<u8>);
 impl LINK_DEVICE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl LINK_DEVICE_SEL_R {
     }
 }
 impl core::ops::Deref for LINK_DEVICE_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_inf_sel]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_inf_sel](index.html) module"]
 pub struct HOST_INF_SEL_SPEC;
 impl crate::RegisterSpec for HOST_INF_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_inf_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_inf_sel::R](R) reader structure"]
 impl crate::Readable for HOST_INF_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [host_inf_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_inf_sel::W](W) writer structure"]
 impl crate::Writable for HOST_INF_SEL_SPEC {
     type Writer = W;
 }

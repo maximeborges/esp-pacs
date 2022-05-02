@@ -14,7 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` reader - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
-pub struct EXTMEM_REJECT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct EXTMEM_REJECT_INT_RAW_R(crate::FieldReader<bool>);
 impl EXTMEM_REJECT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl EXTMEM_REJECT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for EXTMEM_REJECT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         EXTMEM_REJECT_INT_RAW_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Raw interrupt status of external RAM permission\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extmem_reject_int_raw]
-(index.html) module"]
+#[doc = "Raw interrupt status of external RAM permission\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extmem_reject_int_raw](index.html) module"]
 pub struct EXTMEM_REJECT_INT_RAW_SPEC;
 impl crate::RegisterSpec for EXTMEM_REJECT_INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [extmem_reject_int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [extmem_reject_int_raw::R](R) reader structure"]
 impl crate::Readable for EXTMEM_REJECT_INT_RAW_SPEC {
     type Reader = R;
 }

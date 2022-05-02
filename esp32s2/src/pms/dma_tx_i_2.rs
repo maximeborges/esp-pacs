@@ -35,7 +35,7 @@ impl From<crate::W<DMA_TX_I_2_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_TX_I_ILG_CLR` reader - The clear signal for TX Copy DMA access interrupt."]
-pub struct DMA_TX_I_ILG_CLR_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_ILG_CLR_R(crate::FieldReader<bool>);
 impl DMA_TX_I_ILG_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_TX_I_ILG_CLR_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_ILG_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DMA_TX_I_ILG_CLR_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_ILG_EN` reader - The enable signal for TX Copy DMA access interrupt."]
-pub struct DMA_TX_I_ILG_EN_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_ILG_EN_R(crate::FieldReader<bool>);
 impl DMA_TX_I_ILG_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DMA_TX_I_ILG_EN_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_ILG_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DMA_TX_I_ILG_EN_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_ILG_INTR` reader - TX Copy DMA access interrupt signal."]
-pub struct DMA_TX_I_ILG_INTR_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_ILG_INTR_R(crate::FieldReader<bool>);
 impl DMA_TX_I_ILG_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DMA_TX_I_ILG_INTR_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_ILG_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "TX Copy DMA permission control register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_2]
-(index.html) module"]
+#[doc = "TX Copy DMA permission control register 2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_2](index.html) module"]
 pub struct DMA_TX_I_2_SPEC;
 impl crate::RegisterSpec for DMA_TX_I_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_tx_i_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_tx_i_2::R](R) reader structure"]
 impl crate::Readable for DMA_TX_I_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_tx_i_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_tx_i_2::W](W) writer structure"]
 impl crate::Writable for DMA_TX_I_2_SPEC {
     type Writer = W;
 }

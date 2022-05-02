@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_CNT` reader - Stores the number of valid data bytes in RX FIFO."]
-pub struct RXFIFO_CNT_R(crate::FieldReader<u16, u16>);
+pub struct RXFIFO_CNT_R(crate::FieldReader<u16>);
 impl RXFIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl RXFIFO_CNT_R {
     }
 }
 impl core::ops::Deref for RXFIFO_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DSRN` reader - This register represents the level of the internal UART DSR signal."]
-pub struct DSRN_R(crate::FieldReader<bool, bool>);
+pub struct DSRN_R(crate::FieldReader<bool>);
 impl DSRN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl DSRN_R {
     }
 }
 impl core::ops::Deref for DSRN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CTSN` reader - This register represents the level of the internal UART CTS signal."]
-pub struct CTSN_R(crate::FieldReader<bool, bool>);
+pub struct CTSN_R(crate::FieldReader<bool>);
 impl CTSN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CTSN_R {
     }
 }
 impl core::ops::Deref for CTSN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXD` reader - This register represents the level of the internal UART RXD signal."]
-pub struct RXD_R(crate::FieldReader<bool, bool>);
+pub struct RXD_R(crate::FieldReader<bool>);
 impl RXD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl RXD_R {
     }
 }
 impl core::ops::Deref for RXD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_CNT` reader - Stores the number of data bytes in TX FIFO."]
-pub struct TXFIFO_CNT_R(crate::FieldReader<u16, u16>);
+pub struct TXFIFO_CNT_R(crate::FieldReader<u16>);
 impl TXFIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -82,14 +82,14 @@ impl TXFIFO_CNT_R {
     }
 }
 impl core::ops::Deref for TXFIFO_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DTRN` reader - This bit represents the level of the internal UART DTR signal."]
-pub struct DTRN_R(crate::FieldReader<bool, bool>);
+pub struct DTRN_R(crate::FieldReader<bool>);
 impl DTRN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl DTRN_R {
     }
 }
 impl core::ops::Deref for DTRN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RTSN` reader - This bit represents the level of the internal UART RTS signal."]
-pub struct RTSN_R(crate::FieldReader<bool, bool>);
+pub struct RTSN_R(crate::FieldReader<bool>);
 impl RTSN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl RTSN_R {
     }
 }
 impl core::ops::Deref for RTSN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXD` reader - This bit represents the level of the internal UART TXD signal."]
-pub struct TXD_R(crate::FieldReader<bool, bool>);
+pub struct TXD_R(crate::FieldReader<bool>);
 impl TXD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,7 +127,7 @@ impl TXD_R {
     }
 }
 impl core::ops::Deref for TXD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,16 +175,12 @@ impl R {
         TXD_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "UART status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status]
-(index.html) module"]
+#[doc = "UART status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [status::R](R) reader structure"]
 impl crate::Readable for STATUS_SPEC {
     type Reader = R;
 }

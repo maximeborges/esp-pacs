@@ -35,7 +35,7 @@ impl From<crate::W<PERIP_RST_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_BACKUP_RST` reader - Set 1 to let BACKUP reset"]
-pub struct PERI_BACKUP_RST_R(crate::FieldReader<bool, bool>);
+pub struct PERI_BACKUP_RST_R(crate::FieldReader<bool>);
 impl PERI_BACKUP_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PERI_BACKUP_RST_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PERI_BACKUP_RST_W<'a> {
     }
 }
 #[doc = "Field `CRYPTO_AES_RST` reader - Set 1 to let CRYPTO_AES reset"]
-pub struct CRYPTO_AES_RST_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_AES_RST_R(crate::FieldReader<bool>);
 impl CRYPTO_AES_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CRYPTO_AES_RST_R {
     }
 }
 impl core::ops::Deref for CRYPTO_AES_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CRYPTO_AES_RST_W<'a> {
     }
 }
 #[doc = "Field `CRYPTO_SHA_RST` reader - Set 1 to let CRYPTO_SHA reset"]
-pub struct CRYPTO_SHA_RST_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_SHA_RST_R(crate::FieldReader<bool>);
 impl CRYPTO_SHA_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CRYPTO_SHA_RST_R {
     }
 }
 impl core::ops::Deref for CRYPTO_SHA_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CRYPTO_SHA_RST_W<'a> {
     }
 }
 #[doc = "Field `CRYPTO_RSA_RST` reader - Set 1 to let CRYPTO_RSA reset"]
-pub struct CRYPTO_RSA_RST_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_RSA_RST_R(crate::FieldReader<bool>);
 impl CRYPTO_RSA_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CRYPTO_RSA_RST_R {
     }
 }
 impl core::ops::Deref for CRYPTO_RSA_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CRYPTO_RSA_RST_W<'a> {
     }
 }
 #[doc = "Field `CRYPTO_DS_RST` reader - Set 1 to let CRYPTO_DS reset"]
-pub struct CRYPTO_DS_RST_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_DS_RST_R(crate::FieldReader<bool>);
 impl CRYPTO_DS_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CRYPTO_DS_RST_R {
     }
 }
 impl core::ops::Deref for CRYPTO_DS_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CRYPTO_DS_RST_W<'a> {
     }
 }
 #[doc = "Field `CRYPTO_HMAC_RST` reader - Set 1 to let CRYPTO_HMAC reset"]
-pub struct CRYPTO_HMAC_RST_R(crate::FieldReader<bool, bool>);
+pub struct CRYPTO_HMAC_RST_R(crate::FieldReader<bool>);
 impl CRYPTO_HMAC_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CRYPTO_HMAC_RST_R {
     }
 }
 impl core::ops::Deref for CRYPTO_HMAC_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CRYPTO_HMAC_RST_W<'a> {
     }
 }
 #[doc = "Field `DMA_RST` reader - Set 1 to let DMA reset"]
-pub struct DMA_RST_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RST_R(crate::FieldReader<bool>);
 impl DMA_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DMA_RST_R {
     }
 }
 impl core::ops::Deref for DMA_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> DMA_RST_W<'a> {
     }
 }
 #[doc = "Field `SDIO_HOST_RST` reader - Set 1 to let SDIO_HOST reset"]
-pub struct SDIO_HOST_RST_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_HOST_RST_R(crate::FieldReader<bool>);
 impl SDIO_HOST_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SDIO_HOST_RST_R {
     }
 }
 impl core::ops::Deref for SDIO_HOST_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SDIO_HOST_RST_W<'a> {
     }
 }
 #[doc = "Field `LCD_CAM_RST` reader - Set 1 to let LCD_CAM reset"]
-pub struct LCD_CAM_RST_R(crate::FieldReader<bool, bool>);
+pub struct LCD_CAM_RST_R(crate::FieldReader<bool>);
 impl LCD_CAM_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl LCD_CAM_RST_R {
     }
 }
 impl core::ops::Deref for LCD_CAM_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> LCD_CAM_RST_W<'a> {
     }
 }
 #[doc = "Field `UART2_RST` reader - Set 1 to let UART2 reset"]
-pub struct UART2_RST_R(crate::FieldReader<bool, bool>);
+pub struct UART2_RST_R(crate::FieldReader<bool>);
 impl UART2_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl UART2_RST_R {
     }
 }
 impl core::ops::Deref for UART2_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> UART2_RST_W<'a> {
     }
 }
 #[doc = "Field `USB_DEVICE_RST` reader - Set 1 to let USB_DEVICE reset"]
-pub struct USB_DEVICE_RST_R(crate::FieldReader<bool, bool>);
+pub struct USB_DEVICE_RST_R(crate::FieldReader<bool>);
 impl USB_DEVICE_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl USB_DEVICE_RST_R {
     }
 }
 impl core::ops::Deref for USB_DEVICE_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -561,25 +561,16 @@ impl W {
         self
     }
 }
-#[doc = "peripheral reset configuration regsiter 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_rst_en1]
-(index.html) module"]
+#[doc = "peripheral reset configuration regsiter 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_rst_en1](index.html) module"]
 pub struct PERIP_RST_EN1_SPEC;
 impl crate::RegisterSpec for PERIP_RST_EN1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [perip_rst_en1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [perip_rst_en1::R](R) reader structure"]
 impl crate::Readable for PERIP_RST_EN1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [perip_rst_en1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [perip_rst_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN1_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFO_RDATA` reader - The register represent the byte data read from rxfifo when use apb fifo access"]
-pub struct FIFO_RDATA_R(crate::FieldReader<u8, u8>);
+pub struct FIFO_RDATA_R(crate::FieldReader<u8>);
 impl FIFO_RDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl FIFO_RDATA_R {
     }
 }
 impl core::ops::Deref for FIFO_RDATA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         FIFO_RDATA_R::new((self.bits & 0xff) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data](index.html) module"]
 pub struct DATA_SPEC;
 impl crate::RegisterSpec for DATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [data::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [data::R](R) reader structure"]
 impl crate::Readable for DATA_SPEC {
     type Reader = R;
 }

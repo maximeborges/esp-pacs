@@ -35,7 +35,7 @@ impl From<crate::W<SRAM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_MODE` reader - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
-pub struct SCLK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_MODE_R(crate::FieldReader<u8>);
 impl SCLK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SCLK_MODE_R {
     }
 }
 impl core::ops::Deref for SCLK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SCLK_MODE_W<'a> {
     }
 }
 #[doc = "Field `SWB_MODE` reader - Mode bits when SPI0 accesses to Ext_RAM."]
-pub struct SWB_MODE_R(crate::FieldReader<u8, u8>);
+pub struct SWB_MODE_R(crate::FieldReader<u8>);
 impl SWB_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SWB_MODE_R {
     }
 }
 impl core::ops::Deref for SWB_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SWB_MODE_W<'a> {
     }
 }
 #[doc = "Field `SDIN_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
-pub struct SDIN_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct SDIN_DUAL_R(crate::FieldReader<bool>);
 impl SDIN_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SDIN_DUAL_R {
     }
 }
 impl core::ops::Deref for SDIN_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SDIN_DUAL_W<'a> {
     }
 }
 #[doc = "Field `SDOUT_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
-pub struct SDOUT_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct SDOUT_DUAL_R(crate::FieldReader<bool>);
 impl SDOUT_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl SDOUT_DUAL_R {
     }
 }
 impl core::ops::Deref for SDOUT_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> SDOUT_DUAL_W<'a> {
     }
 }
 #[doc = "Field `SADDR_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
-pub struct SADDR_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct SADDR_DUAL_R(crate::FieldReader<bool>);
 impl SADDR_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl SADDR_DUAL_R {
     }
 }
 impl core::ops::Deref for SADDR_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> SADDR_DUAL_W<'a> {
     }
 }
 #[doc = "Field `SCMD_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
-pub struct SCMD_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct SCMD_DUAL_R(crate::FieldReader<bool>);
 impl SCMD_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl SCMD_DUAL_R {
     }
 }
 impl core::ops::Deref for SCMD_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> SCMD_DUAL_W<'a> {
     }
 }
 #[doc = "Field `SDIN_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
-pub struct SDIN_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct SDIN_QUAD_R(crate::FieldReader<bool>);
 impl SDIN_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl SDIN_QUAD_R {
     }
 }
 impl core::ops::Deref for SDIN_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> SDIN_QUAD_W<'a> {
     }
 }
 #[doc = "Field `SDOUT_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
-pub struct SDOUT_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct SDOUT_QUAD_R(crate::FieldReader<bool>);
 impl SDOUT_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl SDOUT_QUAD_R {
     }
 }
 impl core::ops::Deref for SDOUT_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> SDOUT_QUAD_W<'a> {
     }
 }
 #[doc = "Field `SADDR_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
-pub struct SADDR_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct SADDR_QUAD_R(crate::FieldReader<bool>);
 impl SADDR_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl SADDR_QUAD_R {
     }
 }
 impl core::ops::Deref for SADDR_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> SADDR_QUAD_W<'a> {
     }
 }
 #[doc = "Field `SCMD_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
-pub struct SCMD_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct SCMD_QUAD_R(crate::FieldReader<bool>);
 impl SCMD_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl SCMD_QUAD_R {
     }
 }
 impl core::ops::Deref for SCMD_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> SCMD_QUAD_W<'a> {
     }
 }
 #[doc = "Field `SDIN_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
-pub struct SDIN_OCT_R(crate::FieldReader<bool, bool>);
+pub struct SDIN_OCT_R(crate::FieldReader<bool>);
 impl SDIN_OCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl SDIN_OCT_R {
     }
 }
 impl core::ops::Deref for SDIN_OCT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> SDIN_OCT_W<'a> {
     }
 }
 #[doc = "Field `SDOUT_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
-pub struct SDOUT_OCT_R(crate::FieldReader<bool, bool>);
+pub struct SDOUT_OCT_R(crate::FieldReader<bool>);
 impl SDOUT_OCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -430,7 +430,7 @@ impl SDOUT_OCT_R {
     }
 }
 impl core::ops::Deref for SDOUT_OCT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -459,7 +459,7 @@ impl<'a> SDOUT_OCT_W<'a> {
     }
 }
 #[doc = "Field `SADDR_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
-pub struct SADDR_OCT_R(crate::FieldReader<bool, bool>);
+pub struct SADDR_OCT_R(crate::FieldReader<bool>);
 impl SADDR_OCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -467,7 +467,7 @@ impl SADDR_OCT_R {
     }
 }
 impl core::ops::Deref for SADDR_OCT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -496,7 +496,7 @@ impl<'a> SADDR_OCT_W<'a> {
     }
 }
 #[doc = "Field `SCMD_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
-pub struct SCMD_OCT_R(crate::FieldReader<bool, bool>);
+pub struct SCMD_OCT_R(crate::FieldReader<bool>);
 impl SCMD_OCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -504,7 +504,7 @@ impl SCMD_OCT_R {
     }
 }
 impl core::ops::Deref for SCMD_OCT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -533,7 +533,7 @@ impl<'a> SCMD_OCT_W<'a> {
     }
 }
 #[doc = "Field `SDUMMY_OUT` reader - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
-pub struct SDUMMY_OUT_R(crate::FieldReader<bool, bool>);
+pub struct SDUMMY_OUT_R(crate::FieldReader<bool>);
 impl SDUMMY_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -541,7 +541,7 @@ impl SDUMMY_OUT_R {
     }
 }
 impl core::ops::Deref for SDUMMY_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -729,25 +729,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 external RAM mode control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_cmd]
-(index.html) module"]
+#[doc = "SPI0 external RAM mode control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_cmd](index.html) module"]
 pub struct SRAM_CMD_SPEC;
 impl crate::RegisterSpec for SRAM_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sram_cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sram_cmd::R](R) reader structure"]
 impl crate::Readable for SRAM_CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sram_cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sram_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_CMD_SPEC {
     type Writer = W;
 }

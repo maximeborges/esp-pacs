@@ -35,7 +35,7 @@ impl From<crate::W<CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKM_DIV_NUM` reader - Integral DIG_ADC clock divider value"]
-pub struct CLKM_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct CLKM_DIV_NUM_R(crate::FieldReader<u8>);
 impl CLKM_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLKM_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for CLKM_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLKM_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `CLKM_DIV_B` reader - Fractional clock divider numerator value"]
-pub struct CLKM_DIV_B_R(crate::FieldReader<u8, u8>);
+pub struct CLKM_DIV_B_R(crate::FieldReader<u8>);
 impl CLKM_DIV_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CLKM_DIV_B_R {
     }
 }
 impl core::ops::Deref for CLKM_DIV_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CLKM_DIV_B_W<'a> {
     }
 }
 #[doc = "Field `CLKM_DIV_A` reader - Fractional clock divider denominator value"]
-pub struct CLKM_DIV_A_R(crate::FieldReader<u8, u8>);
+pub struct CLKM_DIV_A_R(crate::FieldReader<u8>);
 impl CLKM_DIV_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CLKM_DIV_A_R {
     }
 }
 impl core::ops::Deref for CLKM_DIV_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CLKM_DIV_A_W<'a> {
     }
 }
 #[doc = "Field `CLK_SEL` reader - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
-pub struct CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CLK_SEL_R(crate::FieldReader<u8>);
 impl CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CLK_SEL_R {
     }
 }
 impl core::ops::Deref for CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure DIG ADC clock\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkm_conf]
-(index.html) module"]
+#[doc = "Configure DIG ADC clock\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkm_conf](index.html) module"]
 pub struct CLKM_CONF_SPEC;
 impl crate::RegisterSpec for CLKM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clkm_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clkm_conf::R](R) reader structure"]
 impl crate::Readable for CLKM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clkm_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clkm_conf::W](W) writer structure"]
 impl crate::Writable for CLKM_CONF_SPEC {
     type Writer = W;
 }

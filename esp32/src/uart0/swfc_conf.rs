@@ -35,7 +35,7 @@ impl From<crate::W<SWFC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XON_THRESHOLD` reader - when the data amount in receiver's fifo is more than this register value. it will send a xoff char with uart_sw_flow_con_en set to 1."]
-pub struct XON_THRESHOLD_R(crate::FieldReader<u8, u8>);
+pub struct XON_THRESHOLD_R(crate::FieldReader<u8>);
 impl XON_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl XON_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for XON_THRESHOLD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> XON_THRESHOLD_W<'a> {
     }
 }
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in receiver's fifo is less than this register value. it will send a xon char with uart_sw_flow_con_en set to 1."]
-pub struct XOFF_THRESHOLD_R(crate::FieldReader<u8, u8>);
+pub struct XOFF_THRESHOLD_R(crate::FieldReader<u8>);
 impl XOFF_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl XOFF_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for XOFF_THRESHOLD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> XOFF_THRESHOLD_W<'a> {
     }
 }
 #[doc = "Field `XON_CHAR` reader - This register stores the xon flow control char."]
-pub struct XON_CHAR_R(crate::FieldReader<u8, u8>);
+pub struct XON_CHAR_R(crate::FieldReader<u8>);
 impl XON_CHAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl XON_CHAR_R {
     }
 }
 impl core::ops::Deref for XON_CHAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> XON_CHAR_W<'a> {
     }
 }
 #[doc = "Field `XOFF_CHAR` reader - This register stores the xoff flow control char."]
-pub struct XOFF_CHAR_R(crate::FieldReader<u8, u8>);
+pub struct XOFF_CHAR_R(crate::FieldReader<u8>);
 impl XOFF_CHAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl XOFF_CHAR_R {
     }
 }
 impl core::ops::Deref for XOFF_CHAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf](index.html) module"]
 pub struct SWFC_CONF_SPEC;
 impl crate::RegisterSpec for SWFC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swfc_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [swfc_conf::R](R) reader structure"]
 impl crate::Readable for SWFC_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [swfc_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [swfc_conf::W](W) writer structure"]
 impl crate::Writable for SWFC_CONF_SPEC {
     type Writer = W;
 }

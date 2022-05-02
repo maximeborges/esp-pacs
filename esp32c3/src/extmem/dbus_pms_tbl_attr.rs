@@ -35,7 +35,7 @@ impl From<crate::W<DBUS_PMS_TBL_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `DBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT1_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct DBUS_PMS_SCT1_ATTR_R(crate::FieldReader<u8>);
 impl DBUS_PMS_SCT1_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DBUS_PMS_SCT1_ATTR_R {
     }
 }
 impl core::ops::Deref for DBUS_PMS_SCT1_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DBUS_PMS_SCT1_ATTR_W<'a> {
     }
 }
 #[doc = "Field `DBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT2_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct DBUS_PMS_SCT2_ATTR_R(crate::FieldReader<u8>);
 impl DBUS_PMS_SCT2_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DBUS_PMS_SCT2_ATTR_R {
     }
 }
 impl core::ops::Deref for DBUS_PMS_SCT2_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbus_pms_tbl_attr]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbus_pms_tbl_attr](index.html) module"]
 pub struct DBUS_PMS_TBL_ATTR_SPEC;
 impl crate::RegisterSpec for DBUS_PMS_TBL_ATTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dbus_pms_tbl_attr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dbus_pms_tbl_attr::R](R) reader structure"]
 impl crate::Readable for DBUS_PMS_TBL_ATTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dbus_pms_tbl_attr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dbus_pms_tbl_attr::W](W) writer structure"]
 impl crate::Writable for DBUS_PMS_TBL_ATTR_SPEC {
     type Writer = W;
 }

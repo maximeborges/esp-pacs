@@ -35,7 +35,7 @@ impl From<crate::W<U4_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `FILTER_THRES_U4` reader - This register is used to filter pluse whose width is smaller than this value for unit4."]
-pub struct FILTER_THRES_U4_R(crate::FieldReader<u16, u16>);
+pub struct FILTER_THRES_U4_R(crate::FieldReader<u16>);
 impl FILTER_THRES_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl FILTER_THRES_U4_R {
     }
 }
 impl core::ops::Deref for FILTER_THRES_U4_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FILTER_THRES_U4_W<'a> {
     }
 }
 #[doc = "Field `FILTER_EN_U4` reader - This is the enable bit for filtering input signals for unit4."]
-pub struct FILTER_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct FILTER_EN_U4_R(crate::FieldReader<bool>);
 impl FILTER_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl FILTER_EN_U4_R {
     }
 }
 impl core::ops::Deref for FILTER_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> FILTER_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `THR_ZERO_EN_U4` reader - This is the enable bit for comparing unit4's count with 0 value."]
-pub struct THR_ZERO_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct THR_ZERO_EN_U4_R(crate::FieldReader<bool>);
 impl THR_ZERO_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl THR_ZERO_EN_U4_R {
     }
 }
 impl core::ops::Deref for THR_ZERO_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> THR_ZERO_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `THR_H_LIM_EN_U4` reader - This is the enable bit for comparing unit4's count with thr_h_lim value."]
-pub struct THR_H_LIM_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct THR_H_LIM_EN_U4_R(crate::FieldReader<bool>);
 impl THR_H_LIM_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl THR_H_LIM_EN_U4_R {
     }
 }
 impl core::ops::Deref for THR_H_LIM_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> THR_H_LIM_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `THR_L_LIM_EN_U4` reader - This is the enable bit for comparing unit4's count with thr_l_lim value."]
-pub struct THR_L_LIM_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct THR_L_LIM_EN_U4_R(crate::FieldReader<bool>);
 impl THR_L_LIM_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl THR_L_LIM_EN_U4_R {
     }
 }
 impl core::ops::Deref for THR_L_LIM_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> THR_L_LIM_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `THR_THRES0_EN_U4` reader - This is the enable bit for comparing unit4's count with thres0 value."]
-pub struct THR_THRES0_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct THR_THRES0_EN_U4_R(crate::FieldReader<bool>);
 impl THR_THRES0_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl THR_THRES0_EN_U4_R {
     }
 }
 impl core::ops::Deref for THR_THRES0_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> THR_THRES0_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `THR_THRES1_EN_U4` reader - This is the enable bit for comparing unit4's count with thres1 value ."]
-pub struct THR_THRES1_EN_U4_R(crate::FieldReader<bool, bool>);
+pub struct THR_THRES1_EN_U4_R(crate::FieldReader<bool>);
 impl THR_THRES1_EN_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl THR_THRES1_EN_U4_R {
     }
 }
 impl core::ops::Deref for THR_THRES1_EN_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> THR_THRES1_EN_U4_W<'a> {
     }
 }
 #[doc = "Field `CH0_NEG_MODE_U4` reader - This register is used to control the mode of channel0's input negedge signal for unit4. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
-pub struct CH0_NEG_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH0_NEG_MODE_U4_R(crate::FieldReader<u8>);
 impl CH0_NEG_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl CH0_NEG_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH0_NEG_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> CH0_NEG_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH0_POS_MODE_U4` reader - This register is used to control the mode of channel0's input posedge signal for unit4. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
-pub struct CH0_POS_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH0_POS_MODE_U4_R(crate::FieldReader<u8>);
 impl CH0_POS_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -319,7 +319,7 @@ impl CH0_POS_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH0_POS_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> CH0_POS_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH0_HCTRL_MODE_U4` reader - This register is used to control the mode of channel0's high control signal for unit4. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
-pub struct CH0_HCTRL_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH0_HCTRL_MODE_U4_R(crate::FieldReader<u8>);
 impl CH0_HCTRL_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -346,7 +346,7 @@ impl CH0_HCTRL_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH0_HCTRL_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> CH0_HCTRL_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH0_LCTRL_MODE_U4` reader - This register is used to control the mode of channel0's low control signal for unit4. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
-pub struct CH0_LCTRL_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH0_LCTRL_MODE_U4_R(crate::FieldReader<u8>);
 impl CH0_LCTRL_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -373,7 +373,7 @@ impl CH0_LCTRL_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH0_LCTRL_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -392,7 +392,7 @@ impl<'a> CH0_LCTRL_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH1_NEG_MODE_U4` reader - This register is used to control the mode of channel1's input negedge signal for unit4. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
-pub struct CH1_NEG_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH1_NEG_MODE_U4_R(crate::FieldReader<u8>);
 impl CH1_NEG_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -400,7 +400,7 @@ impl CH1_NEG_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH1_NEG_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -419,7 +419,7 @@ impl<'a> CH1_NEG_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH1_POS_MODE_U4` reader - This register is used to control the mode of channel1's input posedge signal for unit4. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
-pub struct CH1_POS_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH1_POS_MODE_U4_R(crate::FieldReader<u8>);
 impl CH1_POS_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -427,7 +427,7 @@ impl CH1_POS_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH1_POS_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -446,7 +446,7 @@ impl<'a> CH1_POS_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH1_HCTRL_MODE_U4` reader - This register is used to control the mode of channel1's high control signal for unit4. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
-pub struct CH1_HCTRL_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH1_HCTRL_MODE_U4_R(crate::FieldReader<u8>);
 impl CH1_HCTRL_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -454,7 +454,7 @@ impl CH1_HCTRL_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH1_HCTRL_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -473,7 +473,7 @@ impl<'a> CH1_HCTRL_MODE_U4_W<'a> {
     }
 }
 #[doc = "Field `CH1_LCTRL_MODE_U4` reader - This register is used to control the mode of channel1's low control signal for unit4. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
-pub struct CH1_LCTRL_MODE_U4_R(crate::FieldReader<u8, u8>);
+pub struct CH1_LCTRL_MODE_U4_R(crate::FieldReader<u8>);
 impl CH1_LCTRL_MODE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -481,7 +481,7 @@ impl CH1_LCTRL_MODE_U4_R {
     }
 }
 impl core::ops::Deref for CH1_LCTRL_MODE_U4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -659,25 +659,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u4_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u4_conf0](index.html) module"]
 pub struct U4_CONF0_SPEC;
 impl crate::RegisterSpec for U4_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u4_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [u4_conf0::R](R) reader structure"]
 impl crate::Readable for U4_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [u4_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [u4_conf0::W](W) writer structure"]
 impl crate::Writable for U4_CONF0_SPEC {
     type Writer = W;
 }

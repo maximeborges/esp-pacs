@@ -35,7 +35,7 @@ impl From<crate::W<PRO_IRAM0_4_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_IRAM0_ILG_CLR` reader - The clear signal for IBUS access interrupt."]
-pub struct PRO_IRAM0_ILG_CLR_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_ILG_CLR_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_ILG_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_IRAM0_ILG_CLR_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_ILG_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_IRAM0_ILG_CLR_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_ILG_EN` reader - The enable signal for IBUS access interrupt."]
-pub struct PRO_IRAM0_ILG_EN_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_ILG_EN_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_ILG_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRO_IRAM0_ILG_EN_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_ILG_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PRO_IRAM0_ILG_EN_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_ILG_INTR` reader - IBUS access interrupt signal."]
-pub struct PRO_IRAM0_ILG_INTR_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_ILG_INTR_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_ILG_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PRO_IRAM0_ILG_INTR_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_ILG_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "IBUS permission control register 4.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_iram0_4]
-(index.html) module"]
+#[doc = "IBUS permission control register 4.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_iram0_4](index.html) module"]
 pub struct PRO_IRAM0_4_SPEC;
 impl crate::RegisterSpec for PRO_IRAM0_4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_iram0_4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_iram0_4::R](R) reader structure"]
 impl crate::Readable for PRO_IRAM0_4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_iram0_4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_iram0_4::W](W) writer structure"]
 impl crate::Writable for PRO_IRAM0_4_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<U0_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_STATUS_U0` reader - "]
-pub struct CORE_STATUS_U0_R(crate::FieldReader<u32, u32>);
+pub struct CORE_STATUS_U0_R(crate::FieldReader<u32>);
 impl CORE_STATUS_U0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,14 +43,14 @@ impl CORE_STATUS_U0_R {
     }
 }
 impl core::ops::Deref for CORE_STATUS_U0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `STATUS_CNT_MODE` reader - "]
-pub struct STATUS_CNT_MODE_R(crate::FieldReader<u8, u8>);
+pub struct STATUS_CNT_MODE_R(crate::FieldReader<u8>);
 impl STATUS_CNT_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl STATUS_CNT_MODE_R {
     }
 }
 impl core::ops::Deref for STATUS_CNT_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -77,7 +77,7 @@ impl<'a> STATUS_CNT_MODE_W<'a> {
     }
 }
 #[doc = "Field `STATUS_THRES1` reader - "]
-pub struct STATUS_THRES1_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_THRES1_R(crate::FieldReader<bool>);
 impl STATUS_THRES1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -85,7 +85,7 @@ impl STATUS_THRES1_R {
     }
 }
 impl core::ops::Deref for STATUS_THRES1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -114,7 +114,7 @@ impl<'a> STATUS_THRES1_W<'a> {
     }
 }
 #[doc = "Field `STATUS_THRES0` reader - "]
-pub struct STATUS_THRES0_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_THRES0_R(crate::FieldReader<bool>);
 impl STATUS_THRES0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -122,7 +122,7 @@ impl STATUS_THRES0_R {
     }
 }
 impl core::ops::Deref for STATUS_THRES0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -151,7 +151,7 @@ impl<'a> STATUS_THRES0_W<'a> {
     }
 }
 #[doc = "Field `STATUS_L_LIM` reader - "]
-pub struct STATUS_L_LIM_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_L_LIM_R(crate::FieldReader<bool>);
 impl STATUS_L_LIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -159,7 +159,7 @@ impl STATUS_L_LIM_R {
     }
 }
 impl core::ops::Deref for STATUS_L_LIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -188,7 +188,7 @@ impl<'a> STATUS_L_LIM_W<'a> {
     }
 }
 #[doc = "Field `STATUS_H_LIM` reader - "]
-pub struct STATUS_H_LIM_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_H_LIM_R(crate::FieldReader<bool>);
 impl STATUS_H_LIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -196,7 +196,7 @@ impl STATUS_H_LIM_R {
     }
 }
 impl core::ops::Deref for STATUS_H_LIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -225,7 +225,7 @@ impl<'a> STATUS_H_LIM_W<'a> {
     }
 }
 #[doc = "Field `STATUS_ZERO` reader - "]
-pub struct STATUS_ZERO_R(crate::FieldReader<bool, bool>);
+pub struct STATUS_ZERO_R(crate::FieldReader<bool>);
 impl STATUS_ZERO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -233,7 +233,7 @@ impl STATUS_ZERO_R {
     }
 }
 impl core::ops::Deref for STATUS_ZERO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -336,25 +336,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u0_status]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u0_status](index.html) module"]
 pub struct U0_STATUS_SPEC;
 impl crate::RegisterSpec for U0_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u0_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [u0_status::R](R) reader structure"]
 impl crate::Readable for U0_STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [u0_status::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [u0_status::W](W) writer structure"]
 impl crate::Writable for U0_STATUS_SPEC {
     type Writer = W;
 }

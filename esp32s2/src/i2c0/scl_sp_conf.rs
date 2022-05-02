@@ -34,9 +34,8 @@ impl From<crate::W<SCL_SP_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SCL_RST_SLV_EN` reader - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]
-."]
-pub struct SCL_RST_SLV_EN_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `SCL_RST_SLV_EN` reader - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]."]
+pub struct SCL_RST_SLV_EN_R(crate::FieldReader<bool>);
 impl SCL_RST_SLV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -44,14 +43,13 @@ impl SCL_RST_SLV_EN_R {
     }
 }
 impl core::ops::Deref for SCL_RST_SLV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SCL_RST_SLV_EN` writer - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]
-."]
+#[doc = "Field `SCL_RST_SLV_EN` writer - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]."]
 pub struct SCL_RST_SLV_EN_W<'a> {
     w: &'a mut W,
 }
@@ -74,7 +72,7 @@ impl<'a> SCL_RST_SLV_EN_W<'a> {
     }
 }
 #[doc = "Field `SCL_RST_SLV_NUM` reader - Configure the pulses of SCL generated in I2C master mode. Valid when I2C_SCL_RST_SLV_EN is 1."]
-pub struct SCL_RST_SLV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SCL_RST_SLV_NUM_R(crate::FieldReader<u8>);
 impl SCL_RST_SLV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,7 +80,7 @@ impl SCL_RST_SLV_NUM_R {
     }
 }
 impl core::ops::Deref for SCL_RST_SLV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,7 +99,7 @@ impl<'a> SCL_RST_SLV_NUM_W<'a> {
     }
 }
 #[doc = "Field `SCL_PD_EN` reader - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set I2C_SCL_FORCE_OUT and I2C_SCL_PD_EN to 1 to stretch SCL low."]
-pub struct SCL_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCL_PD_EN_R(crate::FieldReader<bool>);
 impl SCL_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -109,7 +107,7 @@ impl SCL_PD_EN_R {
     }
 }
 impl core::ops::Deref for SCL_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,7 +136,7 @@ impl<'a> SCL_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `SDA_PD_EN` reader - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set I2C_SDA_FORCE_OUT and I2C_SDA_PD_EN to 1 to stretch SDA low."]
-pub struct SDA_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct SDA_PD_EN_R(crate::FieldReader<bool>);
 impl SDA_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -146,7 +144,7 @@ impl SDA_PD_EN_R {
     }
 }
 impl core::ops::Deref for SDA_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,8 +173,7 @@ impl<'a> SDA_PD_EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]
-."]
+    #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]."]
     #[inline(always)]
     pub fn scl_rst_slv_en(&self) -> SCL_RST_SLV_EN_R {
         SCL_RST_SLV_EN_R::new((self.bits & 1) != 0)
@@ -198,8 +195,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]
-."]
+    #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]."]
     #[inline(always)]
     pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W {
         SCL_RST_SLV_EN_W { w: self }
@@ -226,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "Power configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_sp_conf]
-(index.html) module"]
+#[doc = "Power configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_sp_conf](index.html) module"]
 pub struct SCL_SP_CONF_SPEC;
 impl crate::RegisterSpec for SCL_SP_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_sp_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_sp_conf::R](R) reader structure"]
 impl crate::Readable for SCL_SP_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_sp_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_sp_conf::W](W) writer structure"]
 impl crate::Writable for SCL_SP_CONF_SPEC {
     type Writer = W;
 }

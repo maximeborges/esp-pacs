@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_REQ_EN` reader - For SPI0 Cache access enable 1: enable 0:disable."]
-pub struct CACHE_REQ_EN_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_REQ_EN_R(crate::FieldReader<bool>);
 impl CACHE_REQ_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_REQ_EN_R {
     }
 }
 impl core::ops::Deref for CACHE_REQ_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CACHE_REQ_EN_W<'a> {
     }
 }
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool>);
 impl CACHE_USR_CMD_4BYTE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CACHE_USR_CMD_4BYTE_R {
     }
 }
 impl core::ops::Deref for CACHE_USR_CMD_4BYTE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
     }
 }
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub struct CACHE_FLASH_USR_CMD_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_FLASH_USR_CMD_R(crate::FieldReader<bool>);
 impl CACHE_FLASH_USR_CMD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CACHE_FLASH_USR_CMD_R {
     }
 }
 impl core::ops::Deref for CACHE_FLASH_USR_CMD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CACHE_FLASH_USR_CMD_W<'a> {
     }
 }
 #[doc = "Field `CACHE_FLASH_PES_EN` reader - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub struct CACHE_FLASH_PES_EN_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_FLASH_PES_EN_R(crate::FieldReader<bool>);
 impl CACHE_FLASH_PES_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CACHE_FLASH_PES_EN_R {
     }
 }
 impl core::ops::Deref for CACHE_FLASH_PES_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_fctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_fctrl](index.html) module"]
 pub struct CACHE_FCTRL_SPEC;
 impl crate::RegisterSpec for CACHE_FCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_fctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_fctrl::R](R) reader structure"]
 impl crate::Readable for CACHE_FCTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_fctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_fctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_FCTRL_SPEC {
     type Writer = W;
 }

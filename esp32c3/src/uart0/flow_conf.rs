@@ -35,7 +35,7 @@ impl From<crate::W<FLOW_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
-pub struct SW_FLOW_CON_EN_R(crate::FieldReader<bool, bool>);
+pub struct SW_FLOW_CON_EN_R(crate::FieldReader<bool>);
 impl SW_FLOW_CON_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SW_FLOW_CON_EN_R {
     }
 }
 impl core::ops::Deref for SW_FLOW_CON_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SW_FLOW_CON_EN_W<'a> {
     }
 }
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control char from the received data."]
-pub struct XONOFF_DEL_R(crate::FieldReader<bool, bool>);
+pub struct XONOFF_DEL_R(crate::FieldReader<bool>);
 impl XONOFF_DEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl XONOFF_DEL_R {
     }
 }
 impl core::ops::Deref for XONOFF_DEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> XONOFF_DEL_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XON` reader - Set this bit to enable the transmitter to go on sending data."]
-pub struct FORCE_XON_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_XON_R(crate::FieldReader<bool>);
 impl FORCE_XON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FORCE_XON_R {
     }
 }
 impl core::ops::Deref for FORCE_XON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FORCE_XON_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to stop the transmitter from sending data."]
-pub struct FORCE_XOFF_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_XOFF_R(crate::FieldReader<bool>);
 impl FORCE_XOFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FORCE_XOFF_R {
     }
 }
 impl core::ops::Deref for FORCE_XOFF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FORCE_XOFF_W<'a> {
     }
 }
 #[doc = "Field `SEND_XON` reader - Set this bit to send Xon char. It is cleared by hardware automatically."]
-pub struct SEND_XON_R(crate::FieldReader<bool, bool>);
+pub struct SEND_XON_R(crate::FieldReader<bool>);
 impl SEND_XON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SEND_XON_R {
     }
 }
 impl core::ops::Deref for SEND_XON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SEND_XON_W<'a> {
     }
 }
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send Xoff char. It is cleared by hardware automatically."]
-pub struct SEND_XOFF_R(crate::FieldReader<bool, bool>);
+pub struct SEND_XOFF_R(crate::FieldReader<bool>);
 impl SEND_XOFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SEND_XOFF_R {
     }
 }
 impl core::ops::Deref for SEND_XOFF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "Software flow-control configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flow_conf]
-(index.html) module"]
+#[doc = "Software flow-control configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flow_conf](index.html) module"]
 pub struct FLOW_CONF_SPEC;
 impl crate::RegisterSpec for FLOW_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [flow_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [flow_conf::R](R) reader structure"]
 impl crate::Readable for FLOW_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [flow_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [flow_conf::W](W) writer structure"]
 impl crate::Writable for FLOW_CONF_SPEC {
     type Writer = W;
 }

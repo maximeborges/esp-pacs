@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CACHE_STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_ICACHE_STATE` reader - The bit is used to indicate icache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub struct PRO_ICACHE_STATE_R(crate::FieldReader<u16, u16>);
+pub struct PRO_ICACHE_STATE_R(crate::FieldReader<u16>);
 impl PRO_ICACHE_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl PRO_ICACHE_STATE_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_STATE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PRO_DCACHE_STATE` reader - The bit is used to indicate dcache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub struct PRO_DCACHE_STATE_R(crate::FieldReader<u16, u16>);
+pub struct PRO_DCACHE_STATE_R(crate::FieldReader<u16>);
 impl PRO_DCACHE_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl PRO_DCACHE_STATE_R {
     }
 }
 impl core::ops::Deref for PRO_DCACHE_STATE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         PRO_DCACHE_STATE_R::new(((self.bits >> 12) & 0x0fff) as u16)
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_state]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_state](index.html) module"]
 pub struct PRO_CACHE_STATE_SPEC;
 impl crate::RegisterSpec for PRO_CACHE_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_cache_state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_cache_state::R](R) reader structure"]
 impl crate::Readable for PRO_CACHE_STATE_SPEC {
     type Reader = R;
 }

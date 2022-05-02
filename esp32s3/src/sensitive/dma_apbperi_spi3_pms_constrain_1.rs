@@ -35,7 +35,7 @@ impl From<crate::W<DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0` reader - spi3's permission(store,load) in data region0 of SRAM"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1` reader - spi3's permission(store,load) in data region1 of SRAM"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_W<'a> {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2` reader - spi3's permission(store,load) in data region2 of SRAM"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_W<'a> {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3` reader - spi3's permission(store,load) in data region3 of SRAM"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_W<'a> {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` reader - spi3's permission(store,load) in dcache data sram block0"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` reader - spi3's permission(store,load) in dcache data sram block1"]
-pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R(crate::FieldReader<u8, u8>);
+pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R(crate::FieldReader<u8>);
 impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R {
     }
 }
 impl core::ops::Deref for DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,25 +294,16 @@ impl W {
         self
     }
 }
-#[doc = "spi3 dma permission configuration register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_apbperi_spi3_pms_constrain_1]
-(index.html) module"]
+#[doc = "spi3 dma permission configuration register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_apbperi_spi3_pms_constrain_1](index.html) module"]
 pub struct DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC;
 impl crate::RegisterSpec for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_apbperi_spi3_pms_constrain_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_apbperi_spi3_pms_constrain_1::R](R) reader structure"]
 impl crate::Readable for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_apbperi_spi3_pms_constrain_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_apbperi_spi3_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
 }

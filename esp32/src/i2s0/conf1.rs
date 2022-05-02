@@ -35,7 +35,7 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PCM_CONF` reader - "]
-pub struct TX_PCM_CONF_R(crate::FieldReader<u8, u8>);
+pub struct TX_PCM_CONF_R(crate::FieldReader<u8>);
 impl TX_PCM_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_PCM_CONF_R {
     }
 }
 impl core::ops::Deref for TX_PCM_CONF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_PCM_CONF_W<'a> {
     }
 }
 #[doc = "Field `TX_PCM_BYPASS` reader - "]
-pub struct TX_PCM_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct TX_PCM_BYPASS_R(crate::FieldReader<bool>);
 impl TX_PCM_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TX_PCM_BYPASS_R {
     }
 }
 impl core::ops::Deref for TX_PCM_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TX_PCM_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `RX_PCM_CONF` reader - "]
-pub struct RX_PCM_CONF_R(crate::FieldReader<u8, u8>);
+pub struct RX_PCM_CONF_R(crate::FieldReader<u8>);
 impl RX_PCM_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl RX_PCM_CONF_R {
     }
 }
 impl core::ops::Deref for RX_PCM_CONF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> RX_PCM_CONF_W<'a> {
     }
 }
 #[doc = "Field `RX_PCM_BYPASS` reader - "]
-pub struct RX_PCM_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct RX_PCM_BYPASS_R(crate::FieldReader<bool>);
 impl RX_PCM_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl RX_PCM_BYPASS_R {
     }
 }
 impl core::ops::Deref for RX_PCM_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> RX_PCM_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `TX_STOP_EN` reader - "]
-pub struct TX_STOP_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_STOP_EN_R(crate::FieldReader<bool>);
 impl TX_STOP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl TX_STOP_EN_R {
     }
 }
 impl core::ops::Deref for TX_STOP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> TX_STOP_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_ZEROS_RM_EN` reader - "]
-pub struct TX_ZEROS_RM_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_ZEROS_RM_EN_R(crate::FieldReader<bool>);
 impl TX_ZEROS_RM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl TX_ZEROS_RM_EN_R {
     }
 }
 impl core::ops::Deref for TX_ZEROS_RM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,25 +306,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf1::R](R) reader structure"]
 impl crate::Readable for CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
 }

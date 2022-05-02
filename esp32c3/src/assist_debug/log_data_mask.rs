@@ -35,7 +35,7 @@ impl From<crate::W<LOG_DATA_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_DATA_SIZE` reader - reg_log_data_size"]
-pub struct LOG_DATA_SIZE_R(crate::FieldReader<u16, u16>);
+pub struct LOG_DATA_SIZE_R(crate::FieldReader<u16>);
 impl LOG_DATA_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl LOG_DATA_SIZE_R {
     }
 }
 impl core::ops::Deref for LOG_DATA_SIZE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "ASSIST_DEBUG_LOG_DATA_MASK_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_data_mask]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_LOG_DATA_MASK_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_data_mask](index.html) module"]
 pub struct LOG_DATA_MASK_SPEC;
 impl crate::RegisterSpec for LOG_DATA_MASK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_data_mask::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [log_data_mask::R](R) reader structure"]
 impl crate::Readable for LOG_DATA_MASK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [log_data_mask::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [log_data_mask::W](W) writer structure"]
 impl crate::Writable for LOG_DATA_MASK_SPEC {
     type Writer = W;
 }

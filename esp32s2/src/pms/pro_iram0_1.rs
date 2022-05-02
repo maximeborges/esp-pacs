@@ -35,7 +35,7 @@ impl From<crate::W<PRO_IRAM0_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_0_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
-pub struct PRO_IRAM0_SRAM_0_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_0_F_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_0_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_IRAM0_SRAM_0_F_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_0_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_IRAM0_SRAM_0_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_0_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 0."]
-pub struct PRO_IRAM0_SRAM_0_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_0_R_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_0_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRO_IRAM0_SRAM_0_R_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_0_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PRO_IRAM0_SRAM_0_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_0_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 0."]
-pub struct PRO_IRAM0_SRAM_0_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_0_W_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_0_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PRO_IRAM0_SRAM_0_W_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_0_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PRO_IRAM0_SRAM_0_W_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_1_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 1."]
-pub struct PRO_IRAM0_SRAM_1_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_1_F_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_1_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PRO_IRAM0_SRAM_1_F_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_1_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PRO_IRAM0_SRAM_1_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_1_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 1."]
-pub struct PRO_IRAM0_SRAM_1_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_1_R_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_1_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PRO_IRAM0_SRAM_1_R_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_1_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PRO_IRAM0_SRAM_1_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_1_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 1."]
-pub struct PRO_IRAM0_SRAM_1_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_1_W_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_1_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PRO_IRAM0_SRAM_1_W_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_1_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> PRO_IRAM0_SRAM_1_W_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_2_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 2."]
-pub struct PRO_IRAM0_SRAM_2_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_2_F_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_2_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PRO_IRAM0_SRAM_2_F_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_2_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PRO_IRAM0_SRAM_2_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_2_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 2."]
-pub struct PRO_IRAM0_SRAM_2_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_2_R_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_2_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl PRO_IRAM0_SRAM_2_R_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_2_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> PRO_IRAM0_SRAM_2_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_2_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 2."]
-pub struct PRO_IRAM0_SRAM_2_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_2_W_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_2_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PRO_IRAM0_SRAM_2_W_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_2_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PRO_IRAM0_SRAM_2_W_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_3_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 3."]
-pub struct PRO_IRAM0_SRAM_3_F_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_3_F_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_3_F_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl PRO_IRAM0_SRAM_3_F_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_3_F_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> PRO_IRAM0_SRAM_3_F_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_3_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 3."]
-pub struct PRO_IRAM0_SRAM_3_R_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_3_R_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_3_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl PRO_IRAM0_SRAM_3_R_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_3_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> PRO_IRAM0_SRAM_3_R_W<'a> {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_3_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 3."]
-pub struct PRO_IRAM0_SRAM_3_W_R(crate::FieldReader<bool, bool>);
+pub struct PRO_IRAM0_SRAM_3_W_R(crate::FieldReader<bool>);
 impl PRO_IRAM0_SRAM_3_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl PRO_IRAM0_SRAM_3_W_R {
     }
 }
 impl core::ops::Deref for PRO_IRAM0_SRAM_3_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -608,25 +608,16 @@ impl W {
         self
     }
 }
-#[doc = "IBUS permission control register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_iram0_1]
-(index.html) module"]
+#[doc = "IBUS permission control register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_iram0_1](index.html) module"]
 pub struct PRO_IRAM0_1_SPEC;
 impl crate::RegisterSpec for PRO_IRAM0_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_iram0_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_iram0_1::R](R) reader structure"]
 impl crate::Readable for PRO_IRAM0_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_iram0_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_iram0_1::W](W) writer structure"]
 impl crate::Writable for PRO_IRAM0_1_SPEC {
     type Writer = W;
 }

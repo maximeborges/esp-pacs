@@ -35,7 +35,7 @@ impl From<crate::W<SPI_SMEM_TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` reader - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
-pub struct SPI_SMEM_TIMING_CLK_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_TIMING_CLK_ENA_R(crate::FieldReader<bool>);
 impl SPI_SMEM_TIMING_CLK_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SPI_SMEM_TIMING_CLK_ENA_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_TIMING_CLK_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SPI_SMEM_TIMING_CLK_ENA_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub struct SPI_SMEM_TIMING_CALI_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_TIMING_CALI_R(crate::FieldReader<bool>);
 impl SPI_SMEM_TIMING_CALI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SPI_SMEM_TIMING_CALI_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_TIMING_CALI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SPI_SMEM_TIMING_CALI_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
-pub struct SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader<u8, u8>);
+pub struct SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
 impl SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 Ext_RAM timing compensation register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_timing_cali]
-(index.html) module"]
+#[doc = "SPI0 Ext_RAM timing compensation register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_timing_cali](index.html) module"]
 pub struct SPI_SMEM_TIMING_CALI_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_TIMING_CALI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_smem_timing_cali::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [spi_smem_timing_cali::R](R) reader structure"]
 impl crate::Readable for SPI_SMEM_TIMING_CALI_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [spi_smem_timing_cali::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [spi_smem_timing_cali::W](W) writer structure"]
 impl crate::Writable for SPI_SMEM_TIMING_CALI_SPEC {
     type Writer = W;
 }

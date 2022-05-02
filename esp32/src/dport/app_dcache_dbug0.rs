@@ -35,7 +35,7 @@ impl From<crate::W<APP_DCACHE_DBUG0_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_SLAVE_WDATA` reader - "]
-pub struct APP_SLAVE_WDATA_R(crate::FieldReader<bool, bool>);
+pub struct APP_SLAVE_WDATA_R(crate::FieldReader<bool>);
 impl APP_SLAVE_WDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APP_SLAVE_WDATA_R {
     }
 }
 impl core::ops::Deref for APP_SLAVE_WDATA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> APP_SLAVE_WDATA_W<'a> {
     }
 }
 #[doc = "Field `APP_CACHE_MMU_IA` reader - "]
-pub struct APP_CACHE_MMU_IA_R(crate::FieldReader<bool, bool>);
+pub struct APP_CACHE_MMU_IA_R(crate::FieldReader<bool>);
 impl APP_CACHE_MMU_IA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,14 +80,14 @@ impl APP_CACHE_MMU_IA_R {
     }
 }
 impl core::ops::Deref for APP_CACHE_MMU_IA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_CACHE_IA` reader - "]
-pub struct APP_CACHE_IA_R(crate::FieldReader<u8, u8>);
+pub struct APP_CACHE_IA_R(crate::FieldReader<u8>);
 impl APP_CACHE_IA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -95,14 +95,14 @@ impl APP_CACHE_IA_R {
     }
 }
 impl core::ops::Deref for APP_CACHE_IA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_CACHE_STATE` reader - "]
-pub struct APP_CACHE_STATE_R(crate::FieldReader<u16, u16>);
+pub struct APP_CACHE_STATE_R(crate::FieldReader<u16>);
 impl APP_CACHE_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -110,14 +110,14 @@ impl APP_CACHE_STATE_R {
     }
 }
 impl core::ops::Deref for APP_CACHE_STATE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_WR_BAK_TO_READ` reader - "]
-pub struct APP_WR_BAK_TO_READ_R(crate::FieldReader<bool, bool>);
+pub struct APP_WR_BAK_TO_READ_R(crate::FieldReader<bool>);
 impl APP_WR_BAK_TO_READ_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -125,14 +125,14 @@ impl APP_WR_BAK_TO_READ_R {
     }
 }
 impl core::ops::Deref for APP_WR_BAK_TO_READ_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_TX_END` reader - "]
-pub struct APP_TX_END_R(crate::FieldReader<bool, bool>);
+pub struct APP_TX_END_R(crate::FieldReader<bool>);
 impl APP_TX_END_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -140,14 +140,14 @@ impl APP_TX_END_R {
     }
 }
 impl core::ops::Deref for APP_TX_END_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_SLAVE_WR` reader - "]
-pub struct APP_SLAVE_WR_R(crate::FieldReader<bool, bool>);
+pub struct APP_SLAVE_WR_R(crate::FieldReader<bool>);
 impl APP_SLAVE_WR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -155,14 +155,14 @@ impl APP_SLAVE_WR_R {
     }
 }
 impl core::ops::Deref for APP_SLAVE_WR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_SLAVE_WDATA_V` reader - "]
-pub struct APP_SLAVE_WDATA_V_R(crate::FieldReader<bool, bool>);
+pub struct APP_SLAVE_WDATA_V_R(crate::FieldReader<bool>);
 impl APP_SLAVE_WDATA_V_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -170,14 +170,14 @@ impl APP_SLAVE_WDATA_V_R {
     }
 }
 impl core::ops::Deref for APP_SLAVE_WDATA_V_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP_RX_END` reader - "]
-pub struct APP_RX_END_R(crate::FieldReader<bool, bool>);
+pub struct APP_RX_END_R(crate::FieldReader<bool>);
 impl APP_RX_END_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -185,7 +185,7 @@ impl APP_RX_END_R {
     }
 }
 impl core::ops::Deref for APP_RX_END_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,25 +251,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug0](index.html) module"]
 pub struct APP_DCACHE_DBUG0_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [app_dcache_dbug0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [app_dcache_dbug0::R](R) reader structure"]
 impl crate::Readable for APP_DCACHE_DBUG0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [app_dcache_dbug0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [app_dcache_dbug0::W](W) writer structure"]
 impl crate::Writable for APP_DCACHE_DBUG0_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<UPDATE_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `GLOBAL_UP_EN` reader - The global enable of update of all active registers in MCPWM module"]
-pub struct GLOBAL_UP_EN_R(crate::FieldReader<bool, bool>);
+pub struct GLOBAL_UP_EN_R(crate::FieldReader<bool>);
 impl GLOBAL_UP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl GLOBAL_UP_EN_R {
     }
 }
 impl core::ops::Deref for GLOBAL_UP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> GLOBAL_UP_EN_W<'a> {
     }
 }
 #[doc = "Field `GLOBAL_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of all active registers in MCPWM module"]
-pub struct GLOBAL_FORCE_UP_R(crate::FieldReader<bool, bool>);
+pub struct GLOBAL_FORCE_UP_R(crate::FieldReader<bool>);
 impl GLOBAL_FORCE_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl GLOBAL_FORCE_UP_R {
     }
 }
 impl core::ops::Deref for GLOBAL_FORCE_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> GLOBAL_FORCE_UP_W<'a> {
     }
 }
 #[doc = "Field `OP0_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 0 are enabled"]
-pub struct OP0_UP_EN_R(crate::FieldReader<bool, bool>);
+pub struct OP0_UP_EN_R(crate::FieldReader<bool>);
 impl OP0_UP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl OP0_UP_EN_R {
     }
 }
 impl core::ops::Deref for OP0_UP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> OP0_UP_EN_W<'a> {
     }
 }
 #[doc = "Field `OP0_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 0"]
-pub struct OP0_FORCE_UP_R(crate::FieldReader<bool, bool>);
+pub struct OP0_FORCE_UP_R(crate::FieldReader<bool>);
 impl OP0_FORCE_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl OP0_FORCE_UP_R {
     }
 }
 impl core::ops::Deref for OP0_FORCE_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> OP0_FORCE_UP_W<'a> {
     }
 }
 #[doc = "Field `OP1_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 1 are enabled"]
-pub struct OP1_UP_EN_R(crate::FieldReader<bool, bool>);
+pub struct OP1_UP_EN_R(crate::FieldReader<bool>);
 impl OP1_UP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl OP1_UP_EN_R {
     }
 }
 impl core::ops::Deref for OP1_UP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> OP1_UP_EN_W<'a> {
     }
 }
 #[doc = "Field `OP1_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 1"]
-pub struct OP1_FORCE_UP_R(crate::FieldReader<bool, bool>);
+pub struct OP1_FORCE_UP_R(crate::FieldReader<bool>);
 impl OP1_FORCE_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl OP1_FORCE_UP_R {
     }
 }
 impl core::ops::Deref for OP1_FORCE_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> OP1_FORCE_UP_W<'a> {
     }
 }
 #[doc = "Field `OP2_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 2 are enabled"]
-pub struct OP2_UP_EN_R(crate::FieldReader<bool, bool>);
+pub struct OP2_UP_EN_R(crate::FieldReader<bool>);
 impl OP2_UP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl OP2_UP_EN_R {
     }
 }
 impl core::ops::Deref for OP2_UP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> OP2_UP_EN_W<'a> {
     }
 }
 #[doc = "Field `OP2_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 2"]
-pub struct OP2_FORCE_UP_R(crate::FieldReader<bool, bool>);
+pub struct OP2_FORCE_UP_R(crate::FieldReader<bool>);
 impl OP2_FORCE_UP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl OP2_FORCE_UP_R {
     }
 }
 impl core::ops::Deref for OP2_FORCE_UP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "Enable update.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [update_cfg]
-(index.html) module"]
+#[doc = "Enable update.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [update_cfg](index.html) module"]
 pub struct UPDATE_CFG_SPEC;
 impl crate::RegisterSpec for UPDATE_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [update_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [update_cfg::R](R) reader structure"]
 impl crate::Readable for UPDATE_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [update_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [update_cfg::W](W) writer structure"]
 impl crate::Writable for UPDATE_CFG_SPEC {
     type Writer = W;
 }

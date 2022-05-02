@@ -35,7 +35,7 @@ impl From<crate::W<APP_CPU_RECORD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CPU_RECORD_ENABLE` reader - "]
-pub struct APP_CPU_RECORD_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct APP_CPU_RECORD_ENABLE_R(crate::FieldReader<bool>);
 impl APP_CPU_RECORD_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APP_CPU_RECORD_ENABLE_R {
     }
 }
 impl core::ops::Deref for APP_CPU_RECORD_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> APP_CPU_RECORD_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `APP_CPU_RECORD_DISABLE` reader - "]
-pub struct APP_CPU_RECORD_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct APP_CPU_RECORD_DISABLE_R(crate::FieldReader<bool>);
 impl APP_CPU_RECORD_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl APP_CPU_RECORD_DISABLE_R {
     }
 }
 impl core::ops::Deref for APP_CPU_RECORD_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> APP_CPU_RECORD_DISABLE_W<'a> {
     }
 }
 #[doc = "Field `APP_CPU_PDEBUG_ENABLE` reader - "]
-pub struct APP_CPU_PDEBUG_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct APP_CPU_PDEBUG_ENABLE_R(crate::FieldReader<bool>);
 impl APP_CPU_PDEBUG_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl APP_CPU_PDEBUG_ENABLE_R {
     }
 }
 impl core::ops::Deref for APP_CPU_PDEBUG_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_cpu_record_ctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_cpu_record_ctrl](index.html) module"]
 pub struct APP_CPU_RECORD_CTRL_SPEC;
 impl crate::RegisterSpec for APP_CPU_RECORD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [app_cpu_record_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [app_cpu_record_ctrl::R](R) reader structure"]
 impl crate::Readable for APP_CPU_RECORD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [app_cpu_record_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [app_cpu_record_ctrl::W](W) writer structure"]
 impl crate::Writable for APP_CPU_RECORD_CTRL_SPEC {
     type Writer = W;
 }

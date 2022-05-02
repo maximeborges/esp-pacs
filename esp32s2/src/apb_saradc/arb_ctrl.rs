@@ -35,7 +35,7 @@ impl From<crate::W<ARB_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC_ARB_APB_FORCE` reader - ADC2 arbiter forces to enable DIG ADC2 CTRL."]
-pub struct ADC_ARB_APB_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ARB_APB_FORCE_R(crate::FieldReader<bool>);
 impl ADC_ARB_APB_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ADC_ARB_APB_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_APB_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ADC_ARB_APB_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_RTC_FORCE` reader - ADC2 arbiter forces to enable RTC ADC2 CTRL."]
-pub struct ADC_ARB_RTC_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ARB_RTC_FORCE_R(crate::FieldReader<bool>);
 impl ADC_ARB_RTC_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC_ARB_RTC_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_RTC_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC_ARB_RTC_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_WIFI_FORCE` reader - ADC2 arbiter forces to enable PWDET/PKDET CTRL."]
-pub struct ADC_ARB_WIFI_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ARB_WIFI_FORCE_R(crate::FieldReader<bool>);
 impl ADC_ARB_WIFI_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ADC_ARB_WIFI_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_WIFI_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ADC_ARB_WIFI_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_GRANT_FORCE` reader - ADC2 arbiter force grant."]
-pub struct ADC_ARB_GRANT_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ARB_GRANT_FORCE_R(crate::FieldReader<bool>);
 impl ADC_ARB_GRANT_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ADC_ARB_GRANT_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_GRANT_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> ADC_ARB_GRANT_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_APB_PRIORITY` reader - Set DIG ADC2 CTRL priority."]
-pub struct ADC_ARB_APB_PRIORITY_R(crate::FieldReader<u8, u8>);
+pub struct ADC_ARB_APB_PRIORITY_R(crate::FieldReader<u8>);
 impl ADC_ARB_APB_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl ADC_ARB_APB_PRIORITY_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_APB_PRIORITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> ADC_ARB_APB_PRIORITY_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` reader - Set RTC ADC2 CTRL priority."]
-pub struct ADC_ARB_RTC_PRIORITY_R(crate::FieldReader<u8, u8>);
+pub struct ADC_ARB_RTC_PRIORITY_R(crate::FieldReader<u8>);
 impl ADC_ARB_RTC_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl ADC_ARB_RTC_PRIORITY_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_RTC_PRIORITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> ADC_ARB_RTC_PRIORITY_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` reader - Set PWDET/PKDET CTRL priority."]
-pub struct ADC_ARB_WIFI_PRIORITY_R(crate::FieldReader<u8, u8>);
+pub struct ADC_ARB_WIFI_PRIORITY_R(crate::FieldReader<u8>);
 impl ADC_ARB_WIFI_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -245,7 +245,7 @@ impl ADC_ARB_WIFI_PRIORITY_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_WIFI_PRIORITY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> ADC_ARB_WIFI_PRIORITY_W<'a> {
     }
 }
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` reader - ADC2 arbiter uses fixed priority."]
-pub struct ADC_ARB_FIX_PRIORITY_R(crate::FieldReader<bool, bool>);
+pub struct ADC_ARB_FIX_PRIORITY_R(crate::FieldReader<bool>);
 impl ADC_ARB_FIX_PRIORITY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -272,7 +272,7 @@ impl ADC_ARB_FIX_PRIORITY_R {
     }
 }
 impl core::ops::Deref for ADC_ARB_FIX_PRIORITY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -390,25 +390,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure the settings of DIG ADC2 arbiter\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [arb_ctrl]
-(index.html) module"]
+#[doc = "Configure the settings of DIG ADC2 arbiter\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [arb_ctrl](index.html) module"]
 pub struct ARB_CTRL_SPEC;
 impl crate::RegisterSpec for ARB_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [arb_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [arb_ctrl::R](R) reader structure"]
 impl crate::Readable for ARB_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [arb_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [arb_ctrl::W](W) writer structure"]
 impl crate::Writable for ARB_CTRL_SPEC {
     type Writer = W;
 }

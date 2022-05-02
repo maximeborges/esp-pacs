@@ -35,7 +35,7 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_TAG_MODE` reader - No public"]
-pub struct RETENTION_TAG_MODE_R(crate::FieldReader<u8, u8>);
+pub struct RETENTION_TAG_MODE_R(crate::FieldReader<u8>);
 impl RETENTION_TAG_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RETENTION_TAG_MODE_R {
     }
 }
 impl core::ops::Deref for RETENTION_TAG_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RETENTION_TAG_MODE_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_TARGET` reader - congfigure retention target cpu and/or tag"]
-pub struct RETENTION_TARGET_R(crate::FieldReader<u8, u8>);
+pub struct RETENTION_TARGET_R(crate::FieldReader<u8>);
 impl RETENTION_TARGET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RETENTION_TARGET_R {
     }
 }
 impl core::ops::Deref for RETENTION_TARGET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> RETENTION_TARGET_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_CLK_SEL` reader - No public"]
-pub struct RETENTION_CLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RETENTION_CLK_SEL_R(crate::FieldReader<bool>);
 impl RETENTION_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl RETENTION_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for RETENTION_CLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> RETENTION_CLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_DONE_WAIT` reader - wait retention done cycle"]
-pub struct RETENTION_DONE_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct RETENTION_DONE_WAIT_R(crate::FieldReader<u8>);
 impl RETENTION_DONE_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl RETENTION_DONE_WAIT_R {
     }
 }
 impl core::ops::Deref for RETENTION_DONE_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> RETENTION_DONE_WAIT_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_CLKOFF_WAIT` reader - wait clk off cycle"]
-pub struct RETENTION_CLKOFF_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct RETENTION_CLKOFF_WAIT_R(crate::FieldReader<u8>);
 impl RETENTION_CLKOFF_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl RETENTION_CLKOFF_WAIT_R {
     }
 }
 impl core::ops::Deref for RETENTION_CLKOFF_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> RETENTION_CLKOFF_WAIT_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_EN` reader - enable retention"]
-pub struct RETENTION_EN_R(crate::FieldReader<bool, bool>);
+pub struct RETENTION_EN_R(crate::FieldReader<bool>);
 impl RETENTION_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl RETENTION_EN_R {
     }
 }
 impl core::ops::Deref for RETENTION_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> RETENTION_EN_W<'a> {
     }
 }
 #[doc = "Field `RETENTION_WAIT` reader - wait cycles for rention operation"]
-pub struct RETENTION_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct RETENTION_WAIT_R(crate::FieldReader<u8>);
 impl RETENTION_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -225,7 +225,7 @@ impl RETENTION_WAIT_R {
     }
 }
 impl core::ops::Deref for RETENTION_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -323,25 +323,16 @@ impl W {
         self
     }
 }
-#[doc = "configure retention\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl]
-(index.html) module"]
+#[doc = "configure retention\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl](index.html) module"]
 pub struct RETENTION_CTRL_SPEC;
 impl crate::RegisterSpec for RETENTION_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [retention_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [retention_ctrl::R](R) reader structure"]
 impl crate::Readable for RETENTION_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [retention_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [retention_ctrl::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL_SPEC {
     type Writer = W;
 }

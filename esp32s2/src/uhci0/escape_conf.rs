@@ -35,7 +35,7 @@ impl From<crate::W<ESCAPE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_C0_ESC_EN` reader - Set this bit to decode character 0xC0 when DMA receives data."]
-pub struct TX_C0_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_C0_ESC_EN_R(crate::FieldReader<bool>);
 impl TX_C0_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_C0_ESC_EN_R {
     }
 }
 impl core::ops::Deref for TX_C0_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_C0_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_DB_ESC_EN` reader - Set this bit to decode character 0xDB when DMA receives data."]
-pub struct TX_DB_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_DB_ESC_EN_R(crate::FieldReader<bool>);
 impl TX_DB_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_DB_ESC_EN_R {
     }
 }
 impl core::ops::Deref for TX_DB_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_DB_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_11_ESC_EN` reader - Set this bit to decode flow control character 0x11 when DMA receives data."]
-pub struct TX_11_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_11_ESC_EN_R(crate::FieldReader<bool>);
 impl TX_11_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_11_ESC_EN_R {
     }
 }
 impl core::ops::Deref for TX_11_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_11_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_13_ESC_EN` reader - Set this bit to decode flow control character 0x13 when DMA receives data."]
-pub struct TX_13_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_13_ESC_EN_R(crate::FieldReader<bool>);
 impl TX_13_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TX_13_ESC_EN_R {
     }
 }
 impl core::ops::Deref for TX_13_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TX_13_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_C0_ESC_EN` reader - Set this bit to replace 0xC0 by special characters when DMA sends data."]
-pub struct RX_C0_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_C0_ESC_EN_R(crate::FieldReader<bool>);
 impl RX_C0_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RX_C0_ESC_EN_R {
     }
 }
 impl core::ops::Deref for RX_C0_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RX_C0_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_DB_ESC_EN` reader - Set this bit to replace 0xDB by special characters when DMA sends data."]
-pub struct RX_DB_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_DB_ESC_EN_R(crate::FieldReader<bool>);
 impl RX_DB_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RX_DB_ESC_EN_R {
     }
 }
 impl core::ops::Deref for RX_DB_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RX_DB_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_11_ESC_EN` reader - Set this bit to replace flow control character 0x11 by special characters when DMA sends data."]
-pub struct RX_11_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_11_ESC_EN_R(crate::FieldReader<bool>);
 impl RX_11_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RX_11_ESC_EN_R {
     }
 }
 impl core::ops::Deref for RX_11_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RX_11_ESC_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_13_ESC_EN` reader - Set this bit to replace flow control character 0x13 by special characters when DMA sends data."]
-pub struct RX_13_ESC_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_13_ESC_EN_R(crate::FieldReader<bool>);
 impl RX_13_ESC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RX_13_ESC_EN_R {
     }
 }
 impl core::ops::Deref for RX_13_ESC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "Escape character configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [escape_conf]
-(index.html) module"]
+#[doc = "Escape character configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [escape_conf](index.html) module"]
 pub struct ESCAPE_CONF_SPEC;
 impl crate::RegisterSpec for ESCAPE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [escape_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [escape_conf::R](R) reader structure"]
 impl crate::Readable for ESCAPE_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [escape_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [escape_conf::W](W) writer structure"]
 impl crate::Writable for ESCAPE_CONF_SPEC {
     type Writer = W;
 }

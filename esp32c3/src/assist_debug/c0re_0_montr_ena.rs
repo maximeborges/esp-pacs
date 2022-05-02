@@ -35,7 +35,7 @@ impl From<crate::W<C0RE_0_MONTR_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_0_RD_ENA` reader - reg_core_0_area_dram0_0_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_0_RD_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_DRAM0_0_RD_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_DRAM0_0_RD_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_AREA_DRAM0_0_RD_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_DRAM0_0_RD_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_RD_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_0_WR_ENA` reader - reg_core_0_area_dram0_0_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_0_WR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_DRAM0_0_WR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_DRAM0_0_WR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CORE_0_AREA_DRAM0_0_WR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_DRAM0_0_WR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CORE_0_AREA_DRAM0_0_WR_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_1_RD_ENA` reader - reg_core_0_area_dram0_1_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_1_RD_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_DRAM0_1_RD_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_DRAM0_1_RD_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CORE_0_AREA_DRAM0_1_RD_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_DRAM0_1_RD_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_RD_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_1_WR_ENA` reader - reg_core_0_area_dram0_1_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_1_WR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_DRAM0_1_WR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_DRAM0_1_WR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CORE_0_AREA_DRAM0_1_WR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_DRAM0_1_WR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CORE_0_AREA_DRAM0_1_WR_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_PIF_0_RD_ENA` reader - reg_core_0_area_pif_0_rd_ena"]
-pub struct CORE_0_AREA_PIF_0_RD_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_PIF_0_RD_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_PIF_0_RD_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CORE_0_AREA_PIF_0_RD_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_PIF_0_RD_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CORE_0_AREA_PIF_0_RD_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_PIF_0_WR_ENA` reader - reg_core_0_area_pif_0_wr_ena"]
-pub struct CORE_0_AREA_PIF_0_WR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_PIF_0_WR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_PIF_0_WR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CORE_0_AREA_PIF_0_WR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_PIF_0_WR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CORE_0_AREA_PIF_0_WR_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_PIF_1_RD_ENA` reader - reg_core_0_area_pif_1_rd_ena"]
-pub struct CORE_0_AREA_PIF_1_RD_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_PIF_1_RD_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_PIF_1_RD_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CORE_0_AREA_PIF_1_RD_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_PIF_1_RD_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CORE_0_AREA_PIF_1_RD_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_AREA_PIF_1_WR_ENA` reader - reg_core_0_area_pif_1_wr_ena"]
-pub struct CORE_0_AREA_PIF_1_WR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_AREA_PIF_1_WR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_AREA_PIF_1_WR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CORE_0_AREA_PIF_1_WR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_AREA_PIF_1_WR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> CORE_0_AREA_PIF_1_WR_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` reader - reg_core_0_sp_spill_min_ena"]
-pub struct CORE_0_SP_SPILL_MIN_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_SP_SPILL_MIN_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_SP_SPILL_MIN_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl CORE_0_SP_SPILL_MIN_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_SP_SPILL_MIN_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> CORE_0_SP_SPILL_MIN_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` reader - reg_core_0_sp_spill_max_ena"]
-pub struct CORE_0_SP_SPILL_MAX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_SP_SPILL_MAX_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_SP_SPILL_MAX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl CORE_0_SP_SPILL_MAX_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_SP_SPILL_MAX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> CORE_0_SP_SPILL_MAX_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_ENA` reader - reg_core_0_iram0_exception_monitor_ena"]
-pub struct CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_ENA` reader - reg_core_0_dram0_exception_monitor_ena"]
-pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool>);
 impl CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
     }
 }
 impl core::ops::Deref for CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -608,25 +608,16 @@ impl W {
         self
     }
 }
-#[doc = "ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [c0re_0_montr_ena]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [c0re_0_montr_ena](index.html) module"]
 pub struct C0RE_0_MONTR_ENA_SPEC;
 impl crate::RegisterSpec for C0RE_0_MONTR_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [c0re_0_montr_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [c0re_0_montr_ena::R](R) reader structure"]
 impl crate::Readable for C0RE_0_MONTR_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [c0re_0_montr_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [c0re_0_montr_ena::W](W) writer structure"]
 impl crate::Writable for C0RE_0_MONTR_ENA_SPEC {
     type Writer = W;
 }

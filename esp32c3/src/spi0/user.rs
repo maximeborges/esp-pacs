@@ -35,7 +35,7 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD` reader - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
-pub struct CS_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct CS_HOLD_R(crate::FieldReader<bool>);
 impl CS_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CS_HOLD_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CS_HOLD_W<'a> {
     }
 }
 #[doc = "Field `CS_SETUP` reader - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
-pub struct CS_SETUP_R(crate::FieldReader<bool, bool>);
+pub struct CS_SETUP_R(crate::FieldReader<bool>);
 impl CS_SETUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CS_SETUP_R {
     }
 }
 impl core::ops::Deref for CS_SETUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CS_SETUP_W<'a> {
     }
 }
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub struct CK_OUT_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CK_OUT_EDGE_R(crate::FieldReader<bool>);
 impl CK_OUT_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CK_OUT_EDGE_R {
     }
 }
 impl core::ops::Deref for CK_OUT_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CK_OUT_EDGE_W<'a> {
     }
 }
 #[doc = "Field `USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable."]
-pub struct USR_DUMMY_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct USR_DUMMY_IDLE_R(crate::FieldReader<bool>);
 impl USR_DUMMY_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl USR_DUMMY_IDLE_R {
     }
 }
 impl core::ops::Deref for USR_DUMMY_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> USR_DUMMY_IDLE_W<'a> {
     }
 }
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
-pub struct USR_DUMMY_R(crate::FieldReader<bool, bool>);
+pub struct USR_DUMMY_R(crate::FieldReader<bool>);
 impl USR_DUMMY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl USR_DUMMY_R {
     }
 }
 impl core::ops::Deref for USR_DUMMY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 user register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user]
-(index.html) module"]
+#[doc = "SPI0 user register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user](index.html) module"]
 pub struct USER_SPEC;
 impl crate::RegisterSpec for USER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [user::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [user::R](R) reader structure"]
 impl crate::Readable for USER_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [user::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
 }

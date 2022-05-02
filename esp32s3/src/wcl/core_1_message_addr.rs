@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_MESSAGE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_MESSAGE_ADDR` reader - This field is used to set address that need to write when enter WORLD0"]
-pub struct CORE_1_MESSAGE_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct CORE_1_MESSAGE_ADDR_R(crate::FieldReader<u32>);
 impl CORE_1_MESSAGE_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_MESSAGE_ADDR_R {
     }
 }
 impl core::ops::Deref for CORE_1_MESSAGE_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Clear writer_buffer write address configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_addr]
-(index.html) module"]
+#[doc = "Clear writer_buffer write address configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_addr](index.html) module"]
 pub struct CORE_1_MESSAGE_ADDR_SPEC;
 impl crate::RegisterSpec for CORE_1_MESSAGE_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_message_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_message_addr::R](R) reader structure"]
 impl crate::Readable for CORE_1_MESSAGE_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_message_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_message_addr::W](W) writer structure"]
 impl crate::Writable for CORE_1_MESSAGE_ADDR_SPEC {
     type Writer = W;
 }

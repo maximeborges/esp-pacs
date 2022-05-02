@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CK8M_DIV_SEL_VLD` reader - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
-pub struct CK8M_DIV_SEL_VLD_R(crate::FieldReader<bool, bool>);
+pub struct CK8M_DIV_SEL_VLD_R(crate::FieldReader<bool>);
 impl CK8M_DIV_SEL_VLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CK8M_DIV_SEL_VLD_R {
     }
 }
 impl core::ops::Deref for CK8M_DIV_SEL_VLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CK8M_DIV_SEL_VLD_W<'a> {
     }
 }
 #[doc = "Field `CK8M_DIV` reader - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
-pub struct CK8M_DIV_R(crate::FieldReader<u8, u8>);
+pub struct CK8M_DIV_R(crate::FieldReader<u8>);
 impl CK8M_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CK8M_DIV_R {
     }
 }
 impl core::ops::Deref for CK8M_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CK8M_DIV_W<'a> {
     }
 }
 #[doc = "Field `ENB_CK8M` reader - Set this bit to disable CK8M and CK8M_D256_OUT."]
-pub struct ENB_CK8M_R(crate::FieldReader<bool, bool>);
+pub struct ENB_CK8M_R(crate::FieldReader<bool>);
 impl ENB_CK8M_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl ENB_CK8M_R {
     }
 }
 impl core::ops::Deref for ENB_CK8M_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> ENB_CK8M_W<'a> {
     }
 }
 #[doc = "Field `ENB_CK8M_DIV` reader - Selects the CK8M_D256_OUT. 1: CK8M 0: CK8M divided by 256."]
-pub struct ENB_CK8M_DIV_R(crate::FieldReader<bool, bool>);
+pub struct ENB_CK8M_DIV_R(crate::FieldReader<bool>);
 impl ENB_CK8M_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl ENB_CK8M_DIV_R {
     }
 }
 impl core::ops::Deref for ENB_CK8M_DIV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ENB_CK8M_DIV_W<'a> {
     }
 }
 #[doc = "Field `DIG_XTAL32K_EN` reader - Set this bit to enable CK_XTAL_32K clock for the digital core."]
-pub struct DIG_XTAL32K_EN_R(crate::FieldReader<bool, bool>);
+pub struct DIG_XTAL32K_EN_R(crate::FieldReader<bool>);
 impl DIG_XTAL32K_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl DIG_XTAL32K_EN_R {
     }
 }
 impl core::ops::Deref for DIG_XTAL32K_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> DIG_XTAL32K_EN_W<'a> {
     }
 }
 #[doc = "Field `DIG_CLK8M_D256_EN` reader - Set this bit to enable CK8M_D256_OUT clock for the digital core."]
-pub struct DIG_CLK8M_D256_EN_R(crate::FieldReader<bool, bool>);
+pub struct DIG_CLK8M_D256_EN_R(crate::FieldReader<bool>);
 impl DIG_CLK8M_D256_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl DIG_CLK8M_D256_EN_R {
     }
 }
 impl core::ops::Deref for DIG_CLK8M_D256_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> DIG_CLK8M_D256_EN_W<'a> {
     }
 }
 #[doc = "Field `DIG_CLK8M_EN` reader - Set this bit to enable 8 MHz clock for the digital core."]
-pub struct DIG_CLK8M_EN_R(crate::FieldReader<bool, bool>);
+pub struct DIG_CLK8M_EN_R(crate::FieldReader<bool>);
 impl DIG_CLK8M_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl DIG_CLK8M_EN_R {
     }
 }
 impl core::ops::Deref for DIG_CLK8M_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> DIG_CLK8M_EN_W<'a> {
     }
 }
 #[doc = "Field `CK8M_DIV_SEL` reader - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
-pub struct CK8M_DIV_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CK8M_DIV_SEL_R(crate::FieldReader<u8>);
 impl CK8M_DIV_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl CK8M_DIV_SEL_R {
     }
 }
 impl core::ops::Deref for CK8M_DIV_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> CK8M_DIV_SEL_W<'a> {
     }
 }
 #[doc = "Field `XTAL_FORCE_NOGATING` reader - Set this bit to force no gating to crystal during sleep"]
-pub struct XTAL_FORCE_NOGATING_R(crate::FieldReader<bool, bool>);
+pub struct XTAL_FORCE_NOGATING_R(crate::FieldReader<bool>);
 impl XTAL_FORCE_NOGATING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl XTAL_FORCE_NOGATING_R {
     }
 }
 impl core::ops::Deref for XTAL_FORCE_NOGATING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> XTAL_FORCE_NOGATING_W<'a> {
     }
 }
 #[doc = "Field `CK8M_FORCE_NOGATING` reader - Set this bit to disable force gating to 8 MHz crystal during sleep."]
-pub struct CK8M_FORCE_NOGATING_R(crate::FieldReader<bool, bool>);
+pub struct CK8M_FORCE_NOGATING_R(crate::FieldReader<bool>);
 impl CK8M_FORCE_NOGATING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl CK8M_FORCE_NOGATING_R {
     }
 }
 impl core::ops::Deref for CK8M_FORCE_NOGATING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> CK8M_FORCE_NOGATING_W<'a> {
     }
 }
 #[doc = "Field `CK8M_DFREQ` reader - CK8M_DFREQ"]
-pub struct CK8M_DFREQ_R(crate::FieldReader<u8, u8>);
+pub struct CK8M_DFREQ_R(crate::FieldReader<u8>);
 impl CK8M_DFREQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -393,7 +393,7 @@ impl CK8M_DFREQ_R {
     }
 }
 impl core::ops::Deref for CK8M_DFREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -412,7 +412,7 @@ impl<'a> CK8M_DFREQ_W<'a> {
     }
 }
 #[doc = "Field `CK8M_FORCE_PD` reader - Set this bit to FPD the 8 MHz clock."]
-pub struct CK8M_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct CK8M_FORCE_PD_R(crate::FieldReader<bool>);
 impl CK8M_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -420,7 +420,7 @@ impl CK8M_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for CK8M_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -449,7 +449,7 @@ impl<'a> CK8M_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `CK8M_FORCE_PU` reader - Set this bit to FPU the 8 MHz clock."]
-pub struct CK8M_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct CK8M_FORCE_PU_R(crate::FieldReader<bool>);
 impl CK8M_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -457,7 +457,7 @@ impl CK8M_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for CK8M_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -486,7 +486,7 @@ impl<'a> CK8M_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - Set this bit to select the RTC fast clock. 0: XTAL div 4, 1: CK8M."]
-pub struct FAST_CLK_RTC_SEL_R(crate::FieldReader<bool, bool>);
+pub struct FAST_CLK_RTC_SEL_R(crate::FieldReader<bool>);
 impl FAST_CLK_RTC_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -494,7 +494,7 @@ impl FAST_CLK_RTC_SEL_R {
     }
 }
 impl core::ops::Deref for FAST_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -523,7 +523,7 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
     }
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
-pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8, u8>);
+pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8>);
 impl ANA_CLK_RTC_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -531,7 +531,7 @@ impl ANA_CLK_RTC_SEL_R {
     }
 }
 impl core::ops::Deref for ANA_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -709,25 +709,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC clock configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf]
-(index.html) module"]
+#[doc = "RTC clock configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf](index.html) module"]
 pub struct CLK_CONF_SPEC;
 impl crate::RegisterSpec for CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_conf::R](R) reader structure"]
 impl crate::Readable for CLK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
 }

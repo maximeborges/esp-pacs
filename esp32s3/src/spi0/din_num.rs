@@ -35,7 +35,7 @@ impl From<crate::W<DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DIN0_NUM` reader - SPI_D input delay number."]
-pub struct DIN0_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN0_NUM_R(crate::FieldReader<u8>);
 impl DIN0_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DIN0_NUM_R {
     }
 }
 impl core::ops::Deref for DIN0_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DIN0_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN1_NUM` reader - SPI_Q input delay number."]
-pub struct DIN1_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN1_NUM_R(crate::FieldReader<u8>);
 impl DIN1_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DIN1_NUM_R {
     }
 }
 impl core::ops::Deref for DIN1_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DIN1_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN2_NUM` reader - SPI_WP input delay number."]
-pub struct DIN2_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN2_NUM_R(crate::FieldReader<u8>);
 impl DIN2_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DIN2_NUM_R {
     }
 }
 impl core::ops::Deref for DIN2_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DIN2_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN3_NUM` reader - SPI_HD input delay number."]
-pub struct DIN3_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN3_NUM_R(crate::FieldReader<u8>);
 impl DIN3_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DIN3_NUM_R {
     }
 }
 impl core::ops::Deref for DIN3_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DIN3_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN4_NUM` reader - SPI_IO4 input delay number."]
-pub struct DIN4_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN4_NUM_R(crate::FieldReader<u8>);
 impl DIN4_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DIN4_NUM_R {
     }
 }
 impl core::ops::Deref for DIN4_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DIN4_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN5_NUM` reader - SPI_IO5 input delay number."]
-pub struct DIN5_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN5_NUM_R(crate::FieldReader<u8>);
 impl DIN5_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DIN5_NUM_R {
     }
 }
 impl core::ops::Deref for DIN5_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DIN5_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN6_NUM` reader - SPI_IO6 input delay number."]
-pub struct DIN6_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN6_NUM_R(crate::FieldReader<u8>);
 impl DIN6_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DIN6_NUM_R {
     }
 }
 impl core::ops::Deref for DIN6_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DIN6_NUM_W<'a> {
     }
 }
 #[doc = "Field `DIN7_NUM` reader - SPI_IO7 input delay number."]
-pub struct DIN7_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DIN7_NUM_R(crate::FieldReader<u8>);
 impl DIN7_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DIN7_NUM_R {
     }
 }
 impl core::ops::Deref for DIN7_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> DIN7_NUM_W<'a> {
     }
 }
 #[doc = "Field `DINS_NUM` reader - SPI_DQS input delay number."]
-pub struct DINS_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DINS_NUM_R(crate::FieldReader<u8>);
 impl DINS_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl DINS_NUM_R {
     }
 }
 impl core::ops::Deref for DINS_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -377,25 +377,16 @@ impl W {
         self
     }
 }
-#[doc = "MSPI input timing delay number control register when accesses to flash.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_num]
-(index.html) module"]
+#[doc = "MSPI input timing delay number control register when accesses to flash.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_num](index.html) module"]
 pub struct DIN_NUM_SPEC;
 impl crate::RegisterSpec for DIN_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [din_num::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [din_num::R](R) reader structure"]
 impl crate::Readable for DIN_NUM_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [din_num::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [din_num::W](W) writer structure"]
 impl crate::Writable for DIN_NUM_SPEC {
     type Writer = W;
 }

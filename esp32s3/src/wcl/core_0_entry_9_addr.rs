@@ -35,7 +35,7 @@ impl From<crate::W<CORE_0_ENTRY_9_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_ENTRY_9_ADDR` reader - Core_0 Entry 9 address from WORLD1 to WORLD0"]
-pub struct CORE_0_ENTRY_9_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct CORE_0_ENTRY_9_ADDR_R(crate::FieldReader<u32>);
 impl CORE_0_ENTRY_9_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_ENTRY_9_ADDR_R {
     }
 }
 impl core::ops::Deref for CORE_0_ENTRY_9_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Core_0 Entry 9 address configuration Register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_entry_9_addr]
-(index.html) module"]
+#[doc = "Core_0 Entry 9 address configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_entry_9_addr](index.html) module"]
 pub struct CORE_0_ENTRY_9_ADDR_SPEC;
 impl crate::RegisterSpec for CORE_0_ENTRY_9_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_entry_9_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_entry_9_addr::R](R) reader structure"]
 impl crate::Readable for CORE_0_ENTRY_9_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_entry_9_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_entry_9_addr::W](W) writer structure"]
 impl crate::Writable for CORE_0_ENTRY_9_ADDR_SPEC {
     type Writer = W;
 }

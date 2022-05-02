@@ -35,7 +35,7 @@ impl From<crate::W<TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_STALL_EN` reader - CPU stall enable bit"]
-pub struct CPU_STALL_EN_R(crate::FieldReader<bool, bool>);
+pub struct CPU_STALL_EN_R(crate::FieldReader<bool>);
 impl CPU_STALL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CPU_STALL_EN_R {
     }
 }
 impl core::ops::Deref for CPU_STALL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CPU_STALL_EN_W<'a> {
     }
 }
 #[doc = "Field `CPU_STALL_WAIT` reader - CPU stall wait cycles in fast_clk_rtc"]
-pub struct CPU_STALL_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct CPU_STALL_WAIT_R(crate::FieldReader<u8>);
 impl CPU_STALL_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CPU_STALL_WAIT_R {
     }
 }
 impl core::ops::Deref for CPU_STALL_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CPU_STALL_WAIT_W<'a> {
     }
 }
 #[doc = "Field `CK8M_WAIT` reader - CK8M wait cycles in slow_clk_rtc"]
-pub struct CK8M_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct CK8M_WAIT_R(crate::FieldReader<u8>);
 impl CK8M_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl CK8M_WAIT_R {
     }
 }
 impl core::ops::Deref for CK8M_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> CK8M_WAIT_W<'a> {
     }
 }
 #[doc = "Field `XTL_BUF_WAIT` reader - XTAL wait cycles in slow_clk_rtc"]
-pub struct XTL_BUF_WAIT_R(crate::FieldReader<u16, u16>);
+pub struct XTL_BUF_WAIT_R(crate::FieldReader<u16>);
 impl XTL_BUF_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -134,7 +134,7 @@ impl XTL_BUF_WAIT_R {
     }
 }
 impl core::ops::Deref for XTL_BUF_WAIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> XTL_BUF_WAIT_W<'a> {
     }
 }
 #[doc = "Field `PLL_BUF_WAIT` reader - PLL wait cycles in slow_clk_rtc"]
-pub struct PLL_BUF_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct PLL_BUF_WAIT_R(crate::FieldReader<u8>);
 impl PLL_BUF_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl PLL_BUF_WAIT_R {
     }
 }
 impl core::ops::Deref for PLL_BUF_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -239,25 +239,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer1]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer1](index.html) module"]
 pub struct TIMER1_SPEC;
 impl crate::RegisterSpec for TIMER1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer1::R](R) reader structure"]
 impl crate::Readable for TIMER1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer1::W](W) writer structure"]
 impl crate::Writable for TIMER1_SPEC {
     type Writer = W;
 }

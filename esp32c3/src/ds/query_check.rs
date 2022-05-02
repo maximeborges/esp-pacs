@@ -14,7 +14,7 @@ impl From<crate::R<QUERY_CHECK_SPEC>> for R {
     }
 }
 #[doc = "Field `MD_ERROR` reader - MD checkout result. 1'b0: MD check pass, 1'b1: MD check fail"]
-pub struct MD_ERROR_R(crate::FieldReader<bool, bool>);
+pub struct MD_ERROR_R(crate::FieldReader<bool>);
 impl MD_ERROR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl MD_ERROR_R {
     }
 }
 impl core::ops::Deref for MD_ERROR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PADDING_BAD` reader - padding checkout result. 1'b0: a good padding, 1'b1: a bad padding"]
-pub struct PADDING_BAD_R(crate::FieldReader<bool, bool>);
+pub struct PADDING_BAD_R(crate::FieldReader<bool>);
 impl PADDING_BAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl PADDING_BAD_R {
     }
 }
 impl core::ops::Deref for PADDING_BAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         PADDING_BAD_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
-#[doc = "DS query check result register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_check]
-(index.html) module"]
+#[doc = "DS query check result register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_check](index.html) module"]
 pub struct QUERY_CHECK_SPEC;
 impl crate::RegisterSpec for QUERY_CHECK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [query_check::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [query_check::R](R) reader structure"]
 impl crate::Readable for QUERY_CHECK_SPEC {
     type Reader = R;
 }

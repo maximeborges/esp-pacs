@@ -35,7 +35,7 @@ impl From<crate::W<INTR_RLS_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO0_INT_ENA` reader - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub struct GPIO0_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO0_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO0_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl GPIO0_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO0_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> GPIO0_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO1_INT_ENA` reader - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub struct GPIO1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO1_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl GPIO1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> GPIO1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO2_INT_ENA` reader - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub struct GPIO2_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO2_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO2_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl GPIO2_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO2_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> GPIO2_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO3_INT_ENA` reader - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub struct GPIO3_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO3_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO3_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl GPIO3_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO3_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> GPIO3_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO4_INT_ENA` reader - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub struct GPIO4_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO4_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO4_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl GPIO4_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO4_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> GPIO4_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO5_INT_ENA` reader - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub struct GPIO5_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO5_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO5_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl GPIO5_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO5_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> GPIO5_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO6_INT_ENA` reader - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub struct GPIO6_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO6_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO6_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl GPIO6_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO6_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> GPIO6_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO7_INT_ENA` reader - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub struct GPIO7_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GPIO7_INT_ENA_R(crate::FieldReader<bool>);
 impl GPIO7_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl GPIO7_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GPIO7_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_rls]
-(index.html) module"]
+#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_rls](index.html) module"]
 pub struct INTR_RLS_SPEC;
 impl crate::RegisterSpec for INTR_RLS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [intr_rls::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [intr_rls::R](R) reader structure"]
 impl crate::Readable for INTR_RLS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [intr_rls::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [intr_rls::W](W) writer structure"]
 impl crate::Writable for INTR_RLS_SPEC {
     type Writer = W;
 }

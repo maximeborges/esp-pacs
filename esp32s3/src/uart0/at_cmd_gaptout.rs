@@ -35,7 +35,7 @@ impl From<crate::W<AT_CMD_GAPTOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_GAP_TOUT` reader - This register is used to configure the duration time between the at_cmd chars."]
-pub struct RX_GAP_TOUT_R(crate::FieldReader<u16, u16>);
+pub struct RX_GAP_TOUT_R(crate::FieldReader<u16>);
 impl RX_GAP_TOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl RX_GAP_TOUT_R {
     }
 }
 impl core::ops::Deref for RX_GAP_TOUT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Timeout configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [at_cmd_gaptout]
-(index.html) module"]
+#[doc = "Timeout configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [at_cmd_gaptout](index.html) module"]
 pub struct AT_CMD_GAPTOUT_SPEC;
 impl crate::RegisterSpec for AT_CMD_GAPTOUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [at_cmd_gaptout::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [at_cmd_gaptout::R](R) reader structure"]
 impl crate::Readable for AT_CMD_GAPTOUT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [at_cmd_gaptout::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [at_cmd_gaptout::W](W) writer structure"]
 impl crate::Writable for AT_CMD_GAPTOUT_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<PLC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `GOOD_PACK_MAX` reader - "]
-pub struct GOOD_PACK_MAX_R(crate::FieldReader<u8, u8>);
+pub struct GOOD_PACK_MAX_R(crate::FieldReader<u8>);
 impl GOOD_PACK_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl GOOD_PACK_MAX_R {
     }
 }
 impl core::ops::Deref for GOOD_PACK_MAX_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> GOOD_PACK_MAX_W<'a> {
     }
 }
 #[doc = "Field `N_ERR_SEG` reader - "]
-pub struct N_ERR_SEG_R(crate::FieldReader<u8, u8>);
+pub struct N_ERR_SEG_R(crate::FieldReader<u8>);
 impl N_ERR_SEG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl N_ERR_SEG_R {
     }
 }
 impl core::ops::Deref for N_ERR_SEG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> N_ERR_SEG_W<'a> {
     }
 }
 #[doc = "Field `SHIFT_RATE` reader - "]
-pub struct SHIFT_RATE_R(crate::FieldReader<u8, u8>);
+pub struct SHIFT_RATE_R(crate::FieldReader<u8>);
 impl SHIFT_RATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SHIFT_RATE_R {
     }
 }
 impl core::ops::Deref for SHIFT_RATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> SHIFT_RATE_W<'a> {
     }
 }
 #[doc = "Field `MAX_SLIDE_SAMPLE` reader - "]
-pub struct MAX_SLIDE_SAMPLE_R(crate::FieldReader<u8, u8>);
+pub struct MAX_SLIDE_SAMPLE_R(crate::FieldReader<u8>);
 impl MAX_SLIDE_SAMPLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl MAX_SLIDE_SAMPLE_R {
     }
 }
 impl core::ops::Deref for MAX_SLIDE_SAMPLE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> MAX_SLIDE_SAMPLE_W<'a> {
     }
 }
 #[doc = "Field `PACK_LEN_8K` reader - "]
-pub struct PACK_LEN_8K_R(crate::FieldReader<u8, u8>);
+pub struct PACK_LEN_8K_R(crate::FieldReader<u8>);
 impl PACK_LEN_8K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl PACK_LEN_8K_R {
     }
 }
 impl core::ops::Deref for PACK_LEN_8K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> PACK_LEN_8K_W<'a> {
     }
 }
 #[doc = "Field `N_MIN_ERR` reader - "]
-pub struct N_MIN_ERR_R(crate::FieldReader<u8, u8>);
+pub struct N_MIN_ERR_R(crate::FieldReader<u8>);
 impl N_MIN_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl N_MIN_ERR_R {
     }
 }
 impl core::ops::Deref for N_MIN_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -266,25 +266,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [plc_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [plc_conf0](index.html) module"]
 pub struct PLC_CONF0_SPEC;
 impl crate::RegisterSpec for PLC_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [plc_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [plc_conf0::R](R) reader structure"]
 impl crate::Readable for PLC_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [plc_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [plc_conf0::W](W) writer structure"]
 impl crate::Writable for PLC_CONF0_SPEC {
     type Writer = W;
 }

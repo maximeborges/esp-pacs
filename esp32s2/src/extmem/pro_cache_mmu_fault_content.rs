@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CACHE_MMU_FAULT_CONTENT_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CACHE_MMU_FAULT_CONTENT` reader - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
-pub struct PRO_CACHE_MMU_FAULT_CONTENT_R(crate::FieldReader<u32, u32>);
+pub struct PRO_CACHE_MMU_FAULT_CONTENT_R(crate::FieldReader<u32>);
 impl PRO_CACHE_MMU_FAULT_CONTENT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl PRO_CACHE_MMU_FAULT_CONTENT_R {
     }
 }
 impl core::ops::Deref for PRO_CACHE_MMU_FAULT_CONTENT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PRO_CACHE_MMU_FAULT_CODE` reader - The bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: flush, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx"]
-pub struct PRO_CACHE_MMU_FAULT_CODE_R(crate::FieldReader<u8, u8>);
+pub struct PRO_CACHE_MMU_FAULT_CODE_R(crate::FieldReader<u8>);
 impl PRO_CACHE_MMU_FAULT_CODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,7 +37,7 @@ impl PRO_CACHE_MMU_FAULT_CODE_R {
     }
 }
 impl core::ops::Deref for PRO_CACHE_MMU_FAULT_CODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         PRO_CACHE_MMU_FAULT_CODE_R::new(((self.bits >> 17) & 7) as u8)
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_mmu_fault_content]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_mmu_fault_content](index.html) module"]
 pub struct PRO_CACHE_MMU_FAULT_CONTENT_SPEC;
 impl crate::RegisterSpec for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_cache_mmu_fault_content::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_cache_mmu_fault_content::R](R) reader structure"]
 impl crate::Readable for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
     type Reader = R;
 }

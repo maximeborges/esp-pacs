@@ -35,7 +35,7 @@ impl From<crate::W<SAR_SLAVE_ADDR2_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR3` reader - RTC I2C slave address 3"]
-pub struct I2C_SLAVE_ADDR3_R(crate::FieldReader<u16, u16>);
+pub struct I2C_SLAVE_ADDR3_R(crate::FieldReader<u16>);
 impl I2C_SLAVE_ADDR3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl I2C_SLAVE_ADDR3_R {
     }
 }
 impl core::ops::Deref for I2C_SLAVE_ADDR3_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> I2C_SLAVE_ADDR3_W<'a> {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR2` reader - RTC I2C slave address 2"]
-pub struct I2C_SLAVE_ADDR2_R(crate::FieldReader<u16, u16>);
+pub struct I2C_SLAVE_ADDR2_R(crate::FieldReader<u16>);
 impl I2C_SLAVE_ADDR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl I2C_SLAVE_ADDR2_R {
     }
 }
 impl core::ops::Deref for I2C_SLAVE_ADDR2_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure slave addresses 2-3 of RTC I2C\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_slave_addr2]
-(index.html) module"]
+#[doc = "Configure slave addresses 2-3 of RTC I2C\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_slave_addr2](index.html) module"]
 pub struct SAR_SLAVE_ADDR2_SPEC;
 impl crate::RegisterSpec for SAR_SLAVE_ADDR2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_slave_addr2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_slave_addr2::R](R) reader structure"]
 impl crate::Readable for SAR_SLAVE_ADDR2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_slave_addr2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_slave_addr2::W](W) writer structure"]
 impl crate::Writable for SAR_SLAVE_ADDR2_SPEC {
     type Writer = W;
 }

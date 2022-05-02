@@ -35,7 +35,7 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SIZE` reader - This register is used to configure the amount of RAM allocated for RX FIFO. The default number is 128 bytes."]
-pub struct RX_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct RX_SIZE_R(crate::FieldReader<u8>);
 impl RX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RX_SIZE_R {
     }
 }
 impl core::ops::Deref for RX_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RX_SIZE_W<'a> {
     }
 }
 #[doc = "Field `TX_SIZE` reader - This register is used to configure the amount of RAM allocated for TX FIFO. The default number is 128 bytes."]
-pub struct TX_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct TX_SIZE_R(crate::FieldReader<u8>);
 impl TX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TX_SIZE_R {
     }
 }
 impl core::ops::Deref for TX_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TX_SIZE_W<'a> {
     }
 }
 #[doc = "Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data bytes that can be received when hardware flow control works."]
-pub struct RX_FLOW_THRHD_R(crate::FieldReader<u16, u16>);
+pub struct RX_FLOW_THRHD_R(crate::FieldReader<u16>);
 impl RX_FLOW_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl RX_FLOW_THRHD_R {
     }
 }
 impl core::ops::Deref for RX_FLOW_THRHD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> RX_FLOW_THRHD_W<'a> {
     }
 }
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that the receiver takes to receive one byte, in the unit of bit time (the time it takes to transfer one bit). The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes more time to receive one byte with UART RX_TOUT_EN set to 1."]
-pub struct RX_TOUT_THRHD_R(crate::FieldReader<u16, u16>);
+pub struct RX_TOUT_THRHD_R(crate::FieldReader<u16>);
 impl RX_TOUT_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -124,7 +124,7 @@ impl RX_TOUT_THRHD_R {
     }
 }
 impl core::ops::Deref for RX_TOUT_THRHD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> RX_TOUT_THRHD_W<'a> {
     }
 }
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART RAM."]
-pub struct MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -151,7 +151,7 @@ impl MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART RAM."]
-pub struct MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -286,25 +286,16 @@ impl W {
         self
     }
 }
-#[doc = "UART threshold and allocation configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf]
-(index.html) module"]
+#[doc = "UART threshold and allocation configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf](index.html) module"]
 pub struct MEM_CONF_SPEC;
 impl crate::RegisterSpec for MEM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mem_conf::R](R) reader structure"]
 impl crate::Readable for MEM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mem_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
     type Writer = W;
 }

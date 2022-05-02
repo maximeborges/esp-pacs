@@ -35,7 +35,7 @@ impl From<crate::W<BBPD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DC_EST_FORCE_PD` reader - "]
-pub struct DC_EST_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DC_EST_FORCE_PD_R(crate::FieldReader<bool>);
 impl DC_EST_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DC_EST_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DC_EST_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DC_EST_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DC_EST_FORCE_PU` reader - "]
-pub struct DC_EST_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DC_EST_FORCE_PU_R(crate::FieldReader<bool>);
 impl DC_EST_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DC_EST_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DC_EST_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DC_EST_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `FFT_FORCE_PD` reader - "]
-pub struct FFT_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct FFT_FORCE_PD_R(crate::FieldReader<bool>);
 impl FFT_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FFT_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for FFT_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FFT_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `FFT_FORCE_PU` reader - "]
-pub struct FFT_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct FFT_FORCE_PU_R(crate::FieldReader<bool>);
 impl FFT_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FFT_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for FFT_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "Baseband control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bbpd_ctrl]
-(index.html) module"]
+#[doc = "Baseband control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bbpd_ctrl](index.html) module"]
 pub struct BBPD_CTRL_SPEC;
 impl crate::RegisterSpec for BBPD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bbpd_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bbpd_ctrl::R](R) reader structure"]
 impl crate::Readable for BBPD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bbpd_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bbpd_ctrl::W](W) writer structure"]
 impl crate::Writable for BBPD_CTRL_SPEC {
     type Writer = W;
 }

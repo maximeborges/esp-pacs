@@ -34,12 +34,8 @@ impl From<crate::W<CLKSRC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLKSRC` reader - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\]
- are assigned for card 0, bit\\[3:2\\]
- are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\]
- outputs to cclk_out\\[1:0\\]
- pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
-pub struct CLKSRC_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `CLKSRC` reader - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\] are assigned for card 0, bit\\[3:2\\] are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\] outputs to cclk_out\\[1:0\\] pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
+pub struct CLKSRC_R(crate::FieldReader<u8>);
 impl CLKSRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -47,17 +43,13 @@ impl CLKSRC_R {
     }
 }
 impl core::ops::Deref for CLKSRC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CLKSRC` writer - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\]
- are assigned for card 0, bit\\[3:2\\]
- are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\]
- outputs to cclk_out\\[1:0\\]
- pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
+#[doc = "Field `CLKSRC` writer - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\] are assigned for card 0, bit\\[3:2\\] are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\] outputs to cclk_out\\[1:0\\] pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
 pub struct CLKSRC_W<'a> {
     w: &'a mut W,
 }
@@ -70,22 +62,14 @@ impl<'a> CLKSRC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:3 - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\]
- are assigned for card 0, bit\\[3:2\\]
- are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\]
- outputs to cclk_out\\[1:0\\]
- pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
+    #[doc = "Bits 0:3 - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\] are assigned for card 0, bit\\[3:2\\] are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\] outputs to cclk_out\\[1:0\\] pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
     #[inline(always)]
     pub fn clksrc(&self) -> CLKSRC_R {
         CLKSRC_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\]
- are assigned for card 0, bit\\[3:2\\]
- are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\]
- outputs to cclk_out\\[1:0\\]
- pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
+    #[doc = "Bits 0:3 - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\] are assigned for card 0, bit\\[3:2\\] are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\] outputs to cclk_out\\[1:0\\] pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
     #[inline(always)]
     pub fn clksrc(&mut self) -> CLKSRC_W {
         CLKSRC_W { w: self }
@@ -97,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Clock source selection register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clksrc]
-(index.html) module"]
+#[doc = "Clock source selection register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clksrc](index.html) module"]
 pub struct CLKSRC_SPEC;
 impl crate::RegisterSpec for CLKSRC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clksrc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clksrc::R](R) reader structure"]
 impl crate::Readable for CLKSRC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clksrc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clksrc::W](W) writer structure"]
 impl crate::Writable for CLKSRC_SPEC {
     type Writer = W;
 }

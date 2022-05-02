@@ -14,7 +14,7 @@ impl From<crate::R<SAR_TOUCH_OUT1_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_MEAS_OUT1` reader - the counter for touch pad 1"]
-pub struct TOUCH_MEAS_OUT1_R(crate::FieldReader<u16, u16>);
+pub struct TOUCH_MEAS_OUT1_R(crate::FieldReader<u16>);
 impl TOUCH_MEAS_OUT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,14 +22,14 @@ impl TOUCH_MEAS_OUT1_R {
     }
 }
 impl core::ops::Deref for TOUCH_MEAS_OUT1_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_MEAS_OUT0` reader - the counter for touch pad 0"]
-pub struct TOUCH_MEAS_OUT0_R(crate::FieldReader<u16, u16>);
+pub struct TOUCH_MEAS_OUT0_R(crate::FieldReader<u16>);
 impl TOUCH_MEAS_OUT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl TOUCH_MEAS_OUT0_R {
     }
 }
 impl core::ops::Deref for TOUCH_MEAS_OUT0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         TOUCH_MEAS_OUT0_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_out1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_out1](index.html) module"]
 pub struct SAR_TOUCH_OUT1_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_OUT1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_out1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_touch_out1::R](R) reader structure"]
 impl crate::Readable for SAR_TOUCH_OUT1_SPEC {
     type Reader = R;
 }

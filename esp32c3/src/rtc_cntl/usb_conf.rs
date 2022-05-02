@@ -35,7 +35,7 @@ impl From<crate::W<USB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IO_MUX_RESET_DISABLE` reader - disable io_mux reset"]
-pub struct IO_MUX_RESET_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct IO_MUX_RESET_DISABLE_R(crate::FieldReader<bool>);
 impl IO_MUX_RESET_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl IO_MUX_RESET_DISABLE_R {
     }
 }
 impl core::ops::Deref for IO_MUX_RESET_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usb_conf]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usb_conf](index.html) module"]
 pub struct USB_CONF_SPEC;
 impl crate::RegisterSpec for USB_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [usb_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [usb_conf::R](R) reader structure"]
 impl crate::Readable for USB_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [usb_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [usb_conf::W](W) writer structure"]
 impl crate::Writable for USB_CONF_SPEC {
     type Writer = W;
 }

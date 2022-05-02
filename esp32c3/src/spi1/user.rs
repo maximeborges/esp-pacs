@@ -35,7 +35,7 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub struct CK_OUT_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CK_OUT_EDGE_R(crate::FieldReader<bool>);
 impl CK_OUT_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CK_OUT_EDGE_R {
     }
 }
 impl core::ops::Deref for CK_OUT_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CK_OUT_EDGE_W<'a> {
     }
 }
 #[doc = "Field `FWRITE_DUAL` reader - In the write operations read-data phase apply 2 signals"]
-pub struct FWRITE_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FWRITE_DUAL_R(crate::FieldReader<bool>);
 impl FWRITE_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FWRITE_DUAL_R {
     }
 }
 impl core::ops::Deref for FWRITE_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FWRITE_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FWRITE_QUAD` reader - In the write operations read-data phase apply 4 signals"]
-pub struct FWRITE_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FWRITE_QUAD_R(crate::FieldReader<bool>);
 impl FWRITE_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FWRITE_QUAD_R {
     }
 }
 impl core::ops::Deref for FWRITE_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FWRITE_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FWRITE_DIO` reader - In the write operations address phase and read-data phase apply 2 signals."]
-pub struct FWRITE_DIO_R(crate::FieldReader<bool, bool>);
+pub struct FWRITE_DIO_R(crate::FieldReader<bool>);
 impl FWRITE_DIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FWRITE_DIO_R {
     }
 }
 impl core::ops::Deref for FWRITE_DIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FWRITE_DIO_W<'a> {
     }
 }
 #[doc = "Field `FWRITE_QIO` reader - In the write operations address phase and read-data phase apply 4 signals."]
-pub struct FWRITE_QIO_R(crate::FieldReader<bool, bool>);
+pub struct FWRITE_QIO_R(crate::FieldReader<bool>);
 impl FWRITE_QIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FWRITE_QIO_R {
     }
 }
 impl core::ops::Deref for FWRITE_QIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FWRITE_QIO_W<'a> {
     }
 }
 #[doc = "Field `USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub struct USR_MISO_HIGHPART_R(crate::FieldReader<bool, bool>);
+pub struct USR_MISO_HIGHPART_R(crate::FieldReader<bool>);
 impl USR_MISO_HIGHPART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl USR_MISO_HIGHPART_R {
     }
 }
 impl core::ops::Deref for USR_MISO_HIGHPART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> USR_MISO_HIGHPART_W<'a> {
     }
 }
 #[doc = "Field `USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub struct USR_MOSI_HIGHPART_R(crate::FieldReader<bool, bool>);
+pub struct USR_MOSI_HIGHPART_R(crate::FieldReader<bool>);
 impl USR_MOSI_HIGHPART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl USR_MOSI_HIGHPART_R {
     }
 }
 impl core::ops::Deref for USR_MOSI_HIGHPART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> USR_MOSI_HIGHPART_W<'a> {
     }
 }
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI clock is disable in dummy phase when the bit is enable."]
-pub struct USR_DUMMY_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct USR_DUMMY_IDLE_R(crate::FieldReader<bool>);
 impl USR_DUMMY_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl USR_DUMMY_IDLE_R {
     }
 }
 impl core::ops::Deref for USR_DUMMY_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> USR_DUMMY_IDLE_W<'a> {
     }
 }
 #[doc = "Field `USR_MOSI` reader - This bit enable the write-data phase of an operation."]
-pub struct USR_MOSI_R(crate::FieldReader<bool, bool>);
+pub struct USR_MOSI_R(crate::FieldReader<bool>);
 impl USR_MOSI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl USR_MOSI_R {
     }
 }
 impl core::ops::Deref for USR_MOSI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> USR_MOSI_W<'a> {
     }
 }
 #[doc = "Field `USR_MISO` reader - This bit enable the read-data phase of an operation."]
-pub struct USR_MISO_R(crate::FieldReader<bool, bool>);
+pub struct USR_MISO_R(crate::FieldReader<bool>);
 impl USR_MISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl USR_MISO_R {
     }
 }
 impl core::ops::Deref for USR_MISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> USR_MISO_W<'a> {
     }
 }
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
-pub struct USR_DUMMY_R(crate::FieldReader<bool, bool>);
+pub struct USR_DUMMY_R(crate::FieldReader<bool>);
 impl USR_DUMMY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl USR_DUMMY_R {
     }
 }
 impl core::ops::Deref for USR_DUMMY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> USR_DUMMY_W<'a> {
     }
 }
 #[doc = "Field `USR_ADDR` reader - This bit enable the address phase of an operation."]
-pub struct USR_ADDR_R(crate::FieldReader<bool, bool>);
+pub struct USR_ADDR_R(crate::FieldReader<bool>);
 impl USR_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl USR_ADDR_R {
     }
 }
 impl core::ops::Deref for USR_ADDR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> USR_ADDR_W<'a> {
     }
 }
 #[doc = "Field `USR_COMMAND` reader - This bit enable the command phase of an operation."]
-pub struct USR_COMMAND_R(crate::FieldReader<bool, bool>);
+pub struct USR_COMMAND_R(crate::FieldReader<bool>);
 impl USR_COMMAND_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl USR_COMMAND_R {
     }
 }
 impl core::ops::Deref for USR_COMMAND_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -655,25 +655,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 user register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user]
-(index.html) module"]
+#[doc = "SPI1 user register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user](index.html) module"]
 pub struct USER_SPEC;
 impl crate::RegisterSpec for USER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [user::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [user::R](R) reader structure"]
 impl crate::Readable for USER_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [user::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
 }

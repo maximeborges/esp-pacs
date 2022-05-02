@@ -35,7 +35,7 @@ impl From<crate::W<SIGMADELTA_SPEC>> for W {
     }
 }
 #[doc = "Field `SD0_IN` reader - This field is used to configure the duty cycle of sigma delta modulation output."]
-pub struct SD0_IN_R(crate::FieldReader<u8, u8>);
+pub struct SD0_IN_R(crate::FieldReader<u8>);
 impl SD0_IN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SD0_IN_R {
     }
 }
 impl core::ops::Deref for SD0_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SD0_IN_W<'a> {
     }
 }
 #[doc = "Field `SD0_PRESCALE` reader - This field is used to set a divider value to divide APB clock."]
-pub struct SD0_PRESCALE_R(crate::FieldReader<u8, u8>);
+pub struct SD0_PRESCALE_R(crate::FieldReader<u8>);
 impl SD0_PRESCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SD0_PRESCALE_R {
     }
 }
 impl core::ops::Deref for SD0_PRESCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Duty Cycle Configure Register of SDM%s\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta]
-(index.html) module"]
+#[doc = "Duty Cycle Configure Register of SDM%s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta](index.html) module"]
 pub struct SIGMADELTA_SPEC;
 impl crate::RegisterSpec for SIGMADELTA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sigmadelta::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sigmadelta::R](R) reader structure"]
 impl crate::Readable for SIGMADELTA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sigmadelta::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sigmadelta::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA_SPEC {
     type Writer = W;
 }

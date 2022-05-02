@@ -35,7 +35,7 @@ impl From<crate::W<NRXPD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DEMAP_FORCE_PD` reader - "]
-pub struct DEMAP_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DEMAP_FORCE_PD_R(crate::FieldReader<bool>);
 impl DEMAP_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DEMAP_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DEMAP_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DEMAP_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DEMAP_FORCE_PU` reader - "]
-pub struct DEMAP_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DEMAP_FORCE_PU_R(crate::FieldReader<bool>);
 impl DEMAP_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DEMAP_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DEMAP_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DEMAP_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `VIT_FORCE_PD` reader - "]
-pub struct VIT_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct VIT_FORCE_PD_R(crate::FieldReader<bool>);
 impl VIT_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl VIT_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for VIT_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> VIT_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `VIT_FORCE_PU` reader - "]
-pub struct VIT_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct VIT_FORCE_PU_R(crate::FieldReader<bool>);
 impl VIT_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl VIT_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for VIT_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> VIT_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `RX_ROT_FORCE_PD` reader - "]
-pub struct RX_ROT_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct RX_ROT_FORCE_PD_R(crate::FieldReader<bool>);
 impl RX_ROT_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RX_ROT_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for RX_ROT_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RX_ROT_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `RX_ROT_FORCE_PU` reader - "]
-pub struct RX_ROT_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct RX_ROT_FORCE_PU_R(crate::FieldReader<bool>);
 impl RX_ROT_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RX_ROT_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for RX_ROT_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RX_ROT_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `CHAN_EST_FORCE_PD` reader - "]
-pub struct CHAN_EST_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct CHAN_EST_FORCE_PD_R(crate::FieldReader<bool>);
 impl CHAN_EST_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CHAN_EST_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for CHAN_EST_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CHAN_EST_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `CHAN_EST_FORCE_PU` reader - "]
-pub struct CHAN_EST_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct CHAN_EST_FORCE_PU_R(crate::FieldReader<bool>);
 impl CHAN_EST_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CHAN_EST_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for CHAN_EST_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "WiFi RX control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nrxpd_ctrl]
-(index.html) module"]
+#[doc = "WiFi RX control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nrxpd_ctrl](index.html) module"]
 pub struct NRXPD_CTRL_SPEC;
 impl crate::RegisterSpec for NRXPD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [nrxpd_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [nrxpd_ctrl::R](R) reader structure"]
 impl crate::Readable for NRXPD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [nrxpd_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [nrxpd_ctrl::W](W) writer structure"]
 impl crate::Writable for NRXPD_CTRL_SPEC {
     type Writer = W;
 }

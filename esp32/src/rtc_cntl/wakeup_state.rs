@@ -35,7 +35,7 @@ impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `WAKEUP_CAUSE` reader - wakeup cause"]
-pub struct WAKEUP_CAUSE_R(crate::FieldReader<u16, u16>);
+pub struct WAKEUP_CAUSE_R(crate::FieldReader<u16>);
 impl WAKEUP_CAUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,14 +43,14 @@ impl WAKEUP_CAUSE_R {
     }
 }
 impl core::ops::Deref for WAKEUP_CAUSE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WAKEUP_ENA` reader - wakeup enable bitmap"]
-pub struct WAKEUP_ENA_R(crate::FieldReader<u16, u16>);
+pub struct WAKEUP_ENA_R(crate::FieldReader<u16>);
 impl WAKEUP_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -58,7 +58,7 @@ impl WAKEUP_ENA_R {
     }
 }
 impl core::ops::Deref for WAKEUP_ENA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -77,7 +77,7 @@ impl<'a> WAKEUP_ENA_W<'a> {
     }
 }
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - enable filter for gpio wakeup event"]
-pub struct GPIO_WAKEUP_FILTER_R(crate::FieldReader<bool, bool>);
+pub struct GPIO_WAKEUP_FILTER_R(crate::FieldReader<bool>);
 impl GPIO_WAKEUP_FILTER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -85,7 +85,7 @@ impl GPIO_WAKEUP_FILTER_R {
     }
 }
 impl core::ops::Deref for GPIO_WAKEUP_FILTER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -148,25 +148,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wakeup_state]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wakeup_state](index.html) module"]
 pub struct WAKEUP_STATE_SPEC;
 impl crate::RegisterSpec for WAKEUP_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wakeup_state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [wakeup_state::R](R) reader structure"]
 impl crate::Readable for WAKEUP_STATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [wakeup_state::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [wakeup_state::W](W) writer structure"]
 impl crate::Writable for WAKEUP_STATE_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<ERR_WARNING_LIMIT_SPEC>> for W {
     }
 }
 #[doc = "Field `ERR_WARNING_LIMIT` reader - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
-pub struct ERR_WARNING_LIMIT_R(crate::FieldReader<u8, u8>);
+pub struct ERR_WARNING_LIMIT_R(crate::FieldReader<u8>);
 impl ERR_WARNING_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ERR_WARNING_LIMIT_R {
     }
 }
 impl core::ops::Deref for ERR_WARNING_LIMIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Error Warning Limit Register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [err_warning_limit]
-(index.html) module"]
+#[doc = "Error Warning Limit Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [err_warning_limit](index.html) module"]
 pub struct ERR_WARNING_LIMIT_SPEC;
 impl crate::RegisterSpec for ERR_WARNING_LIMIT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [err_warning_limit::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [err_warning_limit::R](R) reader structure"]
 impl crate::Readable for ERR_WARNING_LIMIT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [err_warning_limit::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [err_warning_limit::W](W) writer structure"]
 impl crate::Writable for ERR_WARNING_LIMIT_SPEC {
     type Writer = W;
 }

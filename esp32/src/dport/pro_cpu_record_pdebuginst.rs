@@ -35,7 +35,7 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGINST_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGINST` reader - "]
-pub struct RECORD_PRO_PDEBUGINST_R(crate::FieldReader<u32, u32>);
+pub struct RECORD_PRO_PDEBUGINST_R(crate::FieldReader<u32>);
 impl RECORD_PRO_PDEBUGINST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,14 +43,14 @@ impl RECORD_PRO_PDEBUGINST_R {
     }
 }
 impl core::ops::Deref for RECORD_PRO_PDEBUGINST_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RECORD_PDEBUGINST_SZ` reader - "]
-pub struct RECORD_PDEBUGINST_SZ_R(crate::FieldReader<u8, u8>);
+pub struct RECORD_PDEBUGINST_SZ_R(crate::FieldReader<u8>);
 impl RECORD_PDEBUGINST_SZ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl RECORD_PDEBUGINST_SZ_R {
     }
 }
 impl core::ops::Deref for RECORD_PDEBUGINST_SZ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -77,7 +77,7 @@ impl<'a> RECORD_PDEBUGINST_SZ_W<'a> {
     }
 }
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` reader - "]
-pub struct RECORD_PDEBUGINST_ISRC_R(crate::FieldReader<u8, u8>);
+pub struct RECORD_PDEBUGINST_ISRC_R(crate::FieldReader<u8>);
 impl RECORD_PDEBUGINST_ISRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -85,7 +85,7 @@ impl RECORD_PDEBUGINST_ISRC_R {
     }
 }
 impl core::ops::Deref for RECORD_PDEBUGINST_ISRC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -104,7 +104,7 @@ impl<'a> RECORD_PDEBUGINST_ISRC_W<'a> {
     }
 }
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` reader - "]
-pub struct RECORD_PDEBUGINST_CINTL_R(crate::FieldReader<u8, u8>);
+pub struct RECORD_PDEBUGINST_CINTL_R(crate::FieldReader<u8>);
 impl RECORD_PDEBUGINST_CINTL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,7 +112,7 @@ impl RECORD_PDEBUGINST_CINTL_R {
     }
 }
 impl core::ops::Deref for RECORD_PDEBUGINST_CINTL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cpu_record_pdebuginst]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cpu_record_pdebuginst](index.html) module"]
 pub struct PRO_CPU_RECORD_PDEBUGINST_SPEC;
 impl crate::RegisterSpec for PRO_CPU_RECORD_PDEBUGINST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_cpu_record_pdebuginst::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_cpu_record_pdebuginst::R](R) reader structure"]
 impl crate::Readable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebuginst::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebuginst::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
     type Writer = W;
 }

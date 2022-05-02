@@ -35,7 +35,7 @@ impl From<crate::W<CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core0/core1's permission of instruction region0 of SRAM in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core0/core1's permission of instruction region1 of SRAM in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core0/core1's permission of instruction region2 of SRAM in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core0/core1's permission of instruction region3 of SRAM in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,9 +143,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` reader - core0/core1's permission of icache data sram block0 in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R(
-    crate::FieldReader<u8, u8>,
-);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -155,7 +153,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -174,9 +172,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1` reader - core0/core1's permission of icache data sram block1 in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R(
-    crate::FieldReader<u8, u8>,
-);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -186,7 +182,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -205,7 +201,7 @@ impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core0/core1's permission of rom in world1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -213,7 +209,7 @@ impl CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -343,25 +339,16 @@ impl W {
         self
     }
 }
-#[doc = "corex iram0 permission configuration register 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_iram0_pms_constrain_2]
-(index.html) module"]
+#[doc = "corex iram0 permission configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_iram0_pms_constrain_2](index.html) module"]
 pub struct CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC;
 impl crate::RegisterSpec for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_x_iram0_pms_constrain_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_x_iram0_pms_constrain_2::R](R) reader structure"]
 impl crate::Readable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_x_iram0_pms_constrain_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_x_iram0_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<T0UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_UPDATE` reader - t0_update"]
-pub struct T0_UPDATE_R(crate::FieldReader<bool, bool>);
+pub struct T0_UPDATE_R(crate::FieldReader<bool>);
 impl T0_UPDATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl T0_UPDATE_R {
     }
 }
 impl core::ops::Deref for T0_UPDATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "TIMG_T0UPDATE_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0update]
-(index.html) module"]
+#[doc = "TIMG_T0UPDATE_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0update](index.html) module"]
 pub struct T0UPDATE_SPEC;
 impl crate::RegisterSpec for T0UPDATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0update::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t0update::R](R) reader structure"]
 impl crate::Readable for T0UPDATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [t0update::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [t0update::W](W) writer structure"]
 impl crate::Writable for T0UPDATE_SPEC {
     type Writer = W;
 }

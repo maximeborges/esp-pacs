@@ -35,7 +35,7 @@ impl From<crate::W<ENDIAN_SPEC>> for W {
     }
 }
 #[doc = "Field `ENDIAN` reader - Endianness selection register. See Table 22-2 for details."]
-pub struct ENDIAN_R(crate::FieldReader<u8, u8>);
+pub struct ENDIAN_R(crate::FieldReader<u8>);
 impl ENDIAN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ENDIAN_R {
     }
 }
 impl core::ops::Deref for ENDIAN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [endian]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [endian](index.html) module"]
 pub struct ENDIAN_SPEC;
 impl crate::RegisterSpec for ENDIAN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [endian::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [endian::R](R) reader structure"]
 impl crate::Readable for ENDIAN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [endian::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [endian::W](W) writer structure"]
 impl crate::Writable for ENDIAN_SPEC {
     type Writer = W;
 }

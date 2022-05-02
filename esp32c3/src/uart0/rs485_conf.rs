@@ -35,7 +35,7 @@ impl From<crate::W<RS485_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RS485_EN` reader - Set this bit to choose the rs485 mode."]
-pub struct RS485_EN_R(crate::FieldReader<bool, bool>);
+pub struct RS485_EN_R(crate::FieldReader<bool>);
 impl RS485_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RS485_EN_R {
     }
 }
 impl core::ops::Deref for RS485_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RS485_EN_W<'a> {
     }
 }
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL0_EN_R(crate::FieldReader<bool, bool>);
+pub struct DL0_EN_R(crate::FieldReader<bool>);
 impl DL0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DL0_EN_R {
     }
 }
 impl core::ops::Deref for DL0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DL0_EN_W<'a> {
     }
 }
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL1_EN_R(crate::FieldReader<bool, bool>);
+pub struct DL1_EN_R(crate::FieldReader<bool>);
 impl DL1_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DL1_EN_R {
     }
 }
 impl core::ops::Deref for DL1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DL1_EN_W<'a> {
     }
 }
 #[doc = "Field `RS485TX_RX_EN` reader - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
-pub struct RS485TX_RX_EN_R(crate::FieldReader<bool, bool>);
+pub struct RS485TX_RX_EN_R(crate::FieldReader<bool>);
 impl RS485TX_RX_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RS485TX_RX_EN_R {
     }
 }
 impl core::ops::Deref for RS485TX_RX_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RS485TX_RX_EN_W<'a> {
     }
 }
 #[doc = "Field `RS485RXBY_TX_EN` reader - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
-pub struct RS485RXBY_TX_EN_R(crate::FieldReader<bool, bool>);
+pub struct RS485RXBY_TX_EN_R(crate::FieldReader<bool>);
 impl RS485RXBY_TX_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RS485RXBY_TX_EN_R {
     }
 }
 impl core::ops::Deref for RS485RXBY_TX_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RS485RXBY_TX_EN_W<'a> {
     }
 }
 #[doc = "Field `RS485_RX_DLY_NUM` reader - This register is used to delay the receiver's internal data signal."]
-pub struct RS485_RX_DLY_NUM_R(crate::FieldReader<bool, bool>);
+pub struct RS485_RX_DLY_NUM_R(crate::FieldReader<bool>);
 impl RS485_RX_DLY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RS485_RX_DLY_NUM_R {
     }
 }
 impl core::ops::Deref for RS485_RX_DLY_NUM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RS485_RX_DLY_NUM_W<'a> {
     }
 }
 #[doc = "Field `RS485_TX_DLY_NUM` reader - This register is used to delay the transmitter's internal data signal."]
-pub struct RS485_TX_DLY_NUM_R(crate::FieldReader<u8, u8>);
+pub struct RS485_TX_DLY_NUM_R(crate::FieldReader<u8>);
 impl RS485_TX_DLY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -265,7 +265,7 @@ impl RS485_TX_DLY_NUM_R {
     }
 }
 impl core::ops::Deref for RS485_TX_DLY_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -363,25 +363,16 @@ impl W {
         self
     }
 }
-#[doc = "RS485 mode configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rs485_conf]
-(index.html) module"]
+#[doc = "RS485 mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rs485_conf](index.html) module"]
 pub struct RS485_CONF_SPEC;
 impl crate::RegisterSpec for RS485_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rs485_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rs485_conf::R](R) reader structure"]
 impl crate::Readable for RS485_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rs485_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rs485_conf::W](W) writer structure"]
 impl crate::Writable for RS485_CONF_SPEC {
     type Writer = W;
 }

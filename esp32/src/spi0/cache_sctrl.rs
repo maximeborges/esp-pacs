@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_SCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_SRAM_DIO` reader - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
-pub struct USR_SRAM_DIO_R(crate::FieldReader<bool, bool>);
+pub struct USR_SRAM_DIO_R(crate::FieldReader<bool>);
 impl USR_SRAM_DIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl USR_SRAM_DIO_R {
     }
 }
 impl core::ops::Deref for USR_SRAM_DIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> USR_SRAM_DIO_W<'a> {
     }
 }
 #[doc = "Field `USR_SRAM_QIO` reader - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
-pub struct USR_SRAM_QIO_R(crate::FieldReader<bool, bool>);
+pub struct USR_SRAM_QIO_R(crate::FieldReader<bool>);
 impl USR_SRAM_QIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl USR_SRAM_QIO_R {
     }
 }
 impl core::ops::Deref for USR_SRAM_QIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> USR_SRAM_QIO_W<'a> {
     }
 }
 #[doc = "Field `USR_WR_SRAM_DUMMY` reader - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
-pub struct USR_WR_SRAM_DUMMY_R(crate::FieldReader<bool, bool>);
+pub struct USR_WR_SRAM_DUMMY_R(crate::FieldReader<bool>);
 impl USR_WR_SRAM_DUMMY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl USR_WR_SRAM_DUMMY_R {
     }
 }
 impl core::ops::Deref for USR_WR_SRAM_DUMMY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> USR_WR_SRAM_DUMMY_W<'a> {
     }
 }
 #[doc = "Field `USR_RD_SRAM_DUMMY` reader - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
-pub struct USR_RD_SRAM_DUMMY_R(crate::FieldReader<bool, bool>);
+pub struct USR_RD_SRAM_DUMMY_R(crate::FieldReader<bool>);
 impl USR_RD_SRAM_DUMMY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl USR_RD_SRAM_DUMMY_R {
     }
 }
 impl core::ops::Deref for USR_RD_SRAM_DUMMY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> USR_RD_SRAM_DUMMY_W<'a> {
     }
 }
 #[doc = "Field `CACHE_SRAM_USR_RCMD` reader - For SPI0 In the spi sram mode cache read sram for user define command."]
-pub struct CACHE_SRAM_USR_RCMD_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_SRAM_USR_RCMD_R(crate::FieldReader<bool>);
 impl CACHE_SRAM_USR_RCMD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CACHE_SRAM_USR_RCMD_R {
     }
 }
 impl core::ops::Deref for CACHE_SRAM_USR_RCMD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> CACHE_SRAM_USR_RCMD_W<'a> {
     }
 }
 #[doc = "Field `SRAM_BYTES_LEN` reader - For SPI0 In the sram mode it is the byte length of spi read sram data."]
-pub struct SRAM_BYTES_LEN_R(crate::FieldReader<u8, u8>);
+pub struct SRAM_BYTES_LEN_R(crate::FieldReader<u8>);
 impl SRAM_BYTES_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl SRAM_BYTES_LEN_R {
     }
 }
 impl core::ops::Deref for SRAM_BYTES_LEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> SRAM_BYTES_LEN_W<'a> {
     }
 }
 #[doc = "Field `SRAM_DUMMY_CYCLELEN` reader - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
-pub struct SRAM_DUMMY_CYCLELEN_R(crate::FieldReader<u8, u8>);
+pub struct SRAM_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
 impl SRAM_DUMMY_CYCLELEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -255,7 +255,7 @@ impl SRAM_DUMMY_CYCLELEN_R {
     }
 }
 impl core::ops::Deref for SRAM_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> SRAM_DUMMY_CYCLELEN_W<'a> {
     }
 }
 #[doc = "Field `SRAM_ADDR_BITLEN` reader - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
-pub struct SRAM_ADDR_BITLEN_R(crate::FieldReader<u8, u8>);
+pub struct SRAM_ADDR_BITLEN_R(crate::FieldReader<u8>);
 impl SRAM_ADDR_BITLEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -282,7 +282,7 @@ impl SRAM_ADDR_BITLEN_R {
     }
 }
 impl core::ops::Deref for SRAM_ADDR_BITLEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl<'a> SRAM_ADDR_BITLEN_W<'a> {
     }
 }
 #[doc = "Field `CACHE_SRAM_USR_WCMD` reader - For SPI0 In the spi sram mode cache write sram for user define command"]
-pub struct CACHE_SRAM_USR_WCMD_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_SRAM_USR_WCMD_R(crate::FieldReader<bool>);
 impl CACHE_SRAM_USR_WCMD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -309,7 +309,7 @@ impl CACHE_SRAM_USR_WCMD_R {
     }
 }
 impl core::ops::Deref for CACHE_SRAM_USR_WCMD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -437,25 +437,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_sctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_sctrl](index.html) module"]
 pub struct CACHE_SCTRL_SPEC;
 impl crate::RegisterSpec for CACHE_SCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_sctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_sctrl::R](R) reader structure"]
 impl crate::Readable for CACHE_SCTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_sctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_sctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_SCTRL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<ICACHE_AUTOLOAD_SCT1_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ADDR` reader - The bits are used to configure the start virtual address of the second section for autoload operation. It should be combined with icache_autoload_sct1_ena."]
-pub struct ICACHE_AUTOLOAD_SCT1_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct ICACHE_AUTOLOAD_SCT1_ADDR_R(crate::FieldReader<u32>);
 impl ICACHE_AUTOLOAD_SCT1_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_AUTOLOAD_SCT1_ADDR_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_SCT1_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_autoload_sct1_addr]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_autoload_sct1_addr](index.html) module"]
 pub struct ICACHE_AUTOLOAD_SCT1_ADDR_SPEC;
 impl crate::RegisterSpec for ICACHE_AUTOLOAD_SCT1_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icache_autoload_sct1_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [icache_autoload_sct1_addr::R](R) reader structure"]
 impl crate::Readable for ICACHE_AUTOLOAD_SCT1_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [icache_autoload_sct1_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [icache_autoload_sct1_addr::W](W) writer structure"]
 impl crate::Writable for ICACHE_AUTOLOAD_SCT1_ADDR_SPEC {
     type Writer = W;
 }

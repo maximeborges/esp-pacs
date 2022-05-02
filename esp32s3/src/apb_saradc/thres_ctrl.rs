@@ -35,7 +35,7 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `THRES_ALL_EN` reader - enable thres0 to monitor all channel"]
-pub struct THRES_ALL_EN_R(crate::FieldReader<bool, bool>);
+pub struct THRES_ALL_EN_R(crate::FieldReader<bool>);
 impl THRES_ALL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl THRES_ALL_EN_R {
     }
 }
 impl core::ops::Deref for THRES_ALL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> THRES_ALL_EN_W<'a> {
     }
 }
 #[doc = "Field `THRES3_EN` reader - no public"]
-pub struct THRES3_EN_R(crate::FieldReader<bool, bool>);
+pub struct THRES3_EN_R(crate::FieldReader<bool>);
 impl THRES3_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl THRES3_EN_R {
     }
 }
 impl core::ops::Deref for THRES3_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> THRES3_EN_W<'a> {
     }
 }
 #[doc = "Field `THRES2_EN` reader - no public"]
-pub struct THRES2_EN_R(crate::FieldReader<bool, bool>);
+pub struct THRES2_EN_R(crate::FieldReader<bool>);
 impl THRES2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl THRES2_EN_R {
     }
 }
 impl core::ops::Deref for THRES2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> THRES2_EN_W<'a> {
     }
 }
 #[doc = "Field `THRES1_EN` reader - enable thres1"]
-pub struct THRES1_EN_R(crate::FieldReader<bool, bool>);
+pub struct THRES1_EN_R(crate::FieldReader<bool>);
 impl THRES1_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl THRES1_EN_R {
     }
 }
 impl core::ops::Deref for THRES1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> THRES1_EN_W<'a> {
     }
 }
 #[doc = "Field `THRES0_EN` reader - enable thres0"]
-pub struct THRES0_EN_R(crate::FieldReader<bool, bool>);
+pub struct THRES0_EN_R(crate::FieldReader<bool>);
 impl THRES0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl THRES0_EN_R {
     }
 }
 impl core::ops::Deref for THRES0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "configure thres monitor enable\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thres_ctrl]
-(index.html) module"]
+#[doc = "configure thres monitor enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thres_ctrl](index.html) module"]
 pub struct THRES_CTRL_SPEC;
 impl crate::RegisterSpec for THRES_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [thres_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [thres_ctrl::R](R) reader structure"]
 impl crate::Readable for THRES_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [thres_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [thres_ctrl::W](W) writer structure"]
 impl crate::Writable for THRES_CTRL_SPEC {
     type Writer = W;
 }

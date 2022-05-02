@@ -35,7 +35,7 @@ impl From<crate::W<DB2_FED_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DB2_FED` reader - Shadow register for FED"]
-pub struct DB2_FED_R(crate::FieldReader<u16, u16>);
+pub struct DB2_FED_R(crate::FieldReader<u16>);
 impl DB2_FED_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl DB2_FED_R {
     }
 }
 impl core::ops::Deref for DB2_FED_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Shadow register for falling edge delay (FED).\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [db2_fed_cfg]
-(index.html) module"]
+#[doc = "Shadow register for falling edge delay (FED).\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [db2_fed_cfg](index.html) module"]
 pub struct DB2_FED_CFG_SPEC;
 impl crate::RegisterSpec for DB2_FED_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [db2_fed_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [db2_fed_cfg::R](R) reader structure"]
 impl crate::Readable for DB2_FED_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [db2_fed_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [db2_fed_cfg::W](W) writer structure"]
 impl crate::Writable for DB2_FED_CFG_SPEC {
     type Writer = W;
 }

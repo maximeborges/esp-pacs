@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE` reader - Set 1 to mask toomanyexception."]
-pub struct CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R(crate::FieldReader<bool, bool>);
+pub struct CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R(crate::FieldReader<bool>);
 impl CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R {
     }
 }
 impl core::ops::Deref for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "core1 toomanyexception override configuration register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_toomanyexceptions_m_override_1]
-(index.html) module"]
+#[doc = "core1 toomanyexception override configuration register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_toomanyexceptions_m_override_1](index.html) module"]
 pub struct CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC;
 impl crate::RegisterSpec for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_toomanyexceptions_m_override_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_toomanyexceptions_m_override_1::R](R) reader structure"]
 impl crate::Readable for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_toomanyexceptions_m_override_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_toomanyexceptions_m_override_1::W](W) writer structure"]
 impl crate::Writable for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
     type Writer = W;
 }

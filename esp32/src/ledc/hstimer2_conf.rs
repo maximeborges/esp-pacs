@@ -34,9 +34,8 @@ impl From<crate::W<HSTIMER2_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `HSTIMER2_DUTY_RES` reader - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\]
- the max bit width for counter is 20."]
-pub struct HSTIMER2_DUTY_RES_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `HSTIMER2_DUTY_RES` reader - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\] the max bit width for counter is 20."]
+pub struct HSTIMER2_DUTY_RES_R(crate::FieldReader<u8>);
 impl HSTIMER2_DUTY_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -44,14 +43,13 @@ impl HSTIMER2_DUTY_RES_R {
     }
 }
 impl core::ops::Deref for HSTIMER2_DUTY_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `HSTIMER2_DUTY_RES` writer - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\]
- the max bit width for counter is 20."]
+#[doc = "Field `HSTIMER2_DUTY_RES` writer - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\] the max bit width for counter is 20."]
 pub struct HSTIMER2_DUTY_RES_W<'a> {
     w: &'a mut W,
 }
@@ -64,7 +62,7 @@ impl<'a> HSTIMER2_DUTY_RES_W<'a> {
     }
 }
 #[doc = "Field `DIV_NUM_HSTIMER2` reader - This register is used to configure parameter for divider in high speed timer2 the least significant eight bits represent the decimal part."]
-pub struct DIV_NUM_HSTIMER2_R(crate::FieldReader<u32, u32>);
+pub struct DIV_NUM_HSTIMER2_R(crate::FieldReader<u32>);
 impl DIV_NUM_HSTIMER2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -72,7 +70,7 @@ impl DIV_NUM_HSTIMER2_R {
     }
 }
 impl core::ops::Deref for DIV_NUM_HSTIMER2_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,7 +89,7 @@ impl<'a> DIV_NUM_HSTIMER2_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER2_PAUSE` reader - This bit is used to pause the counter in high speed timer2"]
-pub struct HSTIMER2_PAUSE_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER2_PAUSE_R(crate::FieldReader<bool>);
 impl HSTIMER2_PAUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -99,7 +97,7 @@ impl HSTIMER2_PAUSE_R {
     }
 }
 impl core::ops::Deref for HSTIMER2_PAUSE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,7 +126,7 @@ impl<'a> HSTIMER2_PAUSE_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER2_RST` reader - This bit is used to reset high speed timer2 the counter will be 0 after reset."]
-pub struct HSTIMER2_RST_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER2_RST_R(crate::FieldReader<bool>);
 impl HSTIMER2_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -136,7 +134,7 @@ impl HSTIMER2_RST_R {
     }
 }
 impl core::ops::Deref for HSTIMER2_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,7 +163,7 @@ impl<'a> HSTIMER2_RST_W<'a> {
     }
 }
 #[doc = "Field `TICK_SEL_HSTIMER2` reader - This bit is used to choose apb_clk or ref_tick for high speed timer2. 1'b1:apb_clk 0:ref_tick"]
-pub struct TICK_SEL_HSTIMER2_R(crate::FieldReader<bool, bool>);
+pub struct TICK_SEL_HSTIMER2_R(crate::FieldReader<bool>);
 impl TICK_SEL_HSTIMER2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -173,7 +171,7 @@ impl TICK_SEL_HSTIMER2_R {
     }
 }
 impl core::ops::Deref for TICK_SEL_HSTIMER2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,7 +200,7 @@ impl<'a> TICK_SEL_HSTIMER2_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER2_LIM` reader - "]
-pub struct HSTIMER2_LIM_R(crate::FieldReader<u8, u8>);
+pub struct HSTIMER2_LIM_R(crate::FieldReader<u8>);
 impl HSTIMER2_LIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -210,7 +208,7 @@ impl HSTIMER2_LIM_R {
     }
 }
 impl core::ops::Deref for HSTIMER2_LIM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -229,8 +227,7 @@ impl<'a> HSTIMER2_LIM_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\]
- the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
     pub fn hstimer2_duty_res(&self) -> HSTIMER2_DUTY_RES_R {
         HSTIMER2_DUTY_RES_R::new((self.bits & 0x1f) as u8)
@@ -262,8 +259,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\]
- the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer2. the counter range is \\[0 2**reg_hstimer2_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
     pub fn hstimer2_duty_res(&mut self) -> HSTIMER2_DUTY_RES_W {
         HSTIMER2_DUTY_RES_W { w: self }
@@ -300,25 +296,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hstimer2_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hstimer2_conf](index.html) module"]
 pub struct HSTIMER2_CONF_SPEC;
 impl crate::RegisterSpec for HSTIMER2_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hstimer2_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [hstimer2_conf::R](R) reader structure"]
 impl crate::Readable for HSTIMER2_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [hstimer2_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [hstimer2_conf::W](W) writer structure"]
 impl crate::Writable for HSTIMER2_CONF_SPEC {
     type Writer = W;
 }

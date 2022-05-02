@@ -34,9 +34,8 @@ impl From<crate::W<FIFO_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RX_DATA_NUM` reader - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]
-. (RX FIFO is almost full threshold.)"]
-pub struct RX_DATA_NUM_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `RX_DATA_NUM` reader - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
+pub struct RX_DATA_NUM_R(crate::FieldReader<u8>);
 impl RX_DATA_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -44,14 +43,13 @@ impl RX_DATA_NUM_R {
     }
 }
 impl core::ops::Deref for RX_DATA_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `RX_DATA_NUM` writer - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]
-. (RX FIFO is almost full threshold.)"]
+#[doc = "Field `RX_DATA_NUM` writer - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
 pub struct RX_DATA_NUM_W<'a> {
     w: &'a mut W,
 }
@@ -63,9 +61,8 @@ impl<'a> RX_DATA_NUM_W<'a> {
         self.w
     }
 }
-#[doc = "Field `TX_DATA_NUM` reader - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]
-. (TX FIFO is almost empty threshold.)"]
-pub struct TX_DATA_NUM_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `TX_DATA_NUM` reader - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
+pub struct TX_DATA_NUM_R(crate::FieldReader<u8>);
 impl TX_DATA_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -73,14 +70,13 @@ impl TX_DATA_NUM_R {
     }
 }
 impl core::ops::Deref for TX_DATA_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `TX_DATA_NUM` writer - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]
-. (TX FIFO is almost empty threshold.)"]
+#[doc = "Field `TX_DATA_NUM` writer - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
 pub struct TX_DATA_NUM_W<'a> {
     w: &'a mut W,
 }
@@ -93,7 +89,7 @@ impl<'a> TX_DATA_NUM_W<'a> {
     }
 }
 #[doc = "Field `DSCR_EN` reader - Set this bit to enable I2S DMA mode."]
-pub struct DSCR_EN_R(crate::FieldReader<bool, bool>);
+pub struct DSCR_EN_R(crate::FieldReader<bool>);
 impl DSCR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -101,7 +97,7 @@ impl DSCR_EN_R {
     }
 }
 impl core::ops::Deref for DSCR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -130,7 +126,7 @@ impl<'a> DSCR_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_FIFO_MOD` reader - Transmitter FIFO mode configuration bits"]
-pub struct TX_FIFO_MOD_R(crate::FieldReader<u8, u8>);
+pub struct TX_FIFO_MOD_R(crate::FieldReader<u8>);
 impl TX_FIFO_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -138,7 +134,7 @@ impl TX_FIFO_MOD_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_MOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -157,7 +153,7 @@ impl<'a> TX_FIFO_MOD_W<'a> {
     }
 }
 #[doc = "Field `RX_FIFO_MOD` reader - Receiver FIFO mode configuration bits"]
-pub struct RX_FIFO_MOD_R(crate::FieldReader<u8, u8>);
+pub struct RX_FIFO_MOD_R(crate::FieldReader<u8>);
 impl RX_FIFO_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -165,7 +161,7 @@ impl RX_FIFO_MOD_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_MOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -184,7 +180,7 @@ impl<'a> RX_FIFO_MOD_W<'a> {
     }
 }
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` reader - The bit should always be set to 1"]
-pub struct TX_FIFO_MOD_FORCE_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_MOD_FORCE_EN_R(crate::FieldReader<bool>);
 impl TX_FIFO_MOD_FORCE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -192,7 +188,7 @@ impl TX_FIFO_MOD_FORCE_EN_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_MOD_FORCE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -221,7 +217,7 @@ impl<'a> TX_FIFO_MOD_FORCE_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` reader - The bit should always be set to 1"]
-pub struct RX_FIFO_MOD_FORCE_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_MOD_FORCE_EN_R(crate::FieldReader<bool>);
 impl RX_FIFO_MOD_FORCE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -229,7 +225,7 @@ impl RX_FIFO_MOD_FORCE_EN_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_MOD_FORCE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -258,7 +254,7 @@ impl<'a> RX_FIFO_MOD_FORCE_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_FIFO_SYNC` reader - force write back rx data to memory"]
-pub struct RX_FIFO_SYNC_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_SYNC_R(crate::FieldReader<bool>);
 impl RX_FIFO_SYNC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -266,7 +262,7 @@ impl RX_FIFO_SYNC_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_SYNC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -295,7 +291,7 @@ impl<'a> RX_FIFO_SYNC_W<'a> {
     }
 }
 #[doc = "Field `RX_24MSB_EN` reader - Only useful in rx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub struct RX_24MSB_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_24MSB_EN_R(crate::FieldReader<bool>);
 impl RX_24MSB_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -303,7 +299,7 @@ impl RX_24MSB_EN_R {
     }
 }
 impl core::ops::Deref for RX_24MSB_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -332,7 +328,7 @@ impl<'a> RX_24MSB_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_24MSB_EN` reader - Only useful in tx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub struct TX_24MSB_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_24MSB_EN_R(crate::FieldReader<bool>);
 impl TX_24MSB_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -340,7 +336,7 @@ impl TX_24MSB_EN_R {
     }
 }
 impl core::ops::Deref for TX_24MSB_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -369,14 +365,12 @@ impl<'a> TX_24MSB_EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]
-. (RX FIFO is almost full threshold.)"]
+    #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
     #[inline(always)]
     pub fn rx_data_num(&self) -> RX_DATA_NUM_R {
         RX_DATA_NUM_R::new((self.bits & 0x3f) as u8)
     }
-    #[doc = "Bits 6:11 - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]
-. (TX FIFO is almost empty threshold.)"]
+    #[doc = "Bits 6:11 - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
     #[inline(always)]
     pub fn tx_data_num(&self) -> TX_DATA_NUM_R {
         TX_DATA_NUM_R::new(((self.bits >> 6) & 0x3f) as u8)
@@ -423,14 +417,12 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]
-. (RX FIFO is almost full threshold.)"]
+    #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
     #[inline(always)]
     pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W {
         RX_DATA_NUM_W { w: self }
     }
-    #[doc = "Bits 6:11 - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]
-. (TX FIFO is almost empty threshold.)"]
+    #[doc = "Bits 6:11 - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
     #[inline(always)]
     pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W {
         TX_DATA_NUM_W { w: self }
@@ -482,25 +474,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S FIFO configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_conf]
-(index.html) module"]
+#[doc = "I2S FIFO configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_conf](index.html) module"]
 pub struct FIFO_CONF_SPEC;
 impl crate::RegisterSpec for FIFO_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fifo_conf::R](R) reader structure"]
 impl crate::Readable for FIFO_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [fifo_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U0` reader - Set this bit to clear unit0's counter."]
-pub struct PLUS_CNT_RST_U0_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U0_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PLUS_CNT_RST_U0_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PLUS_CNT_RST_U0_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U0` reader - Set this bit to pause unit0's counter."]
-pub struct CNT_PAUSE_U0_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U0_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CNT_PAUSE_U0_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CNT_PAUSE_U0_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U1` reader - Set this bit to clear unit1's counter."]
-pub struct PLUS_CNT_RST_U1_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U1_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PLUS_CNT_RST_U1_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PLUS_CNT_RST_U1_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U1` reader - Set this bit to pause unit1's counter."]
-pub struct CNT_PAUSE_U1_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U1_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CNT_PAUSE_U1_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CNT_PAUSE_U1_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U2` reader - Set this bit to clear unit2's counter."]
-pub struct PLUS_CNT_RST_U2_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U2_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PLUS_CNT_RST_U2_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PLUS_CNT_RST_U2_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U2` reader - Set this bit to pause unit2's counter."]
-pub struct CNT_PAUSE_U2_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U2_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CNT_PAUSE_U2_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CNT_PAUSE_U2_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U3` reader - Set this bit to clear unit3's counter."]
-pub struct PLUS_CNT_RST_U3_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U3_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PLUS_CNT_RST_U3_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PLUS_CNT_RST_U3_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U3` reader - Set this bit to pause unit3's counter."]
-pub struct CNT_PAUSE_U3_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U3_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CNT_PAUSE_U3_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> CNT_PAUSE_U3_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U4` reader - Set this bit to clear unit4's counter."]
-pub struct PLUS_CNT_RST_U4_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U4_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PLUS_CNT_RST_U4_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PLUS_CNT_RST_U4_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U4` reader - Set this bit to pause unit4's counter."]
-pub struct CNT_PAUSE_U4_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U4_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U4_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl CNT_PAUSE_U4_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U4_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> CNT_PAUSE_U4_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U5` reader - Set this bit to clear unit5's counter."]
-pub struct PLUS_CNT_RST_U5_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U5_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl PLUS_CNT_RST_U5_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> PLUS_CNT_RST_U5_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U5` reader - Set this bit to pause unit5's counter."]
-pub struct CNT_PAUSE_U5_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U5_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U5_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl CNT_PAUSE_U5_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U5_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> CNT_PAUSE_U5_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U6` reader - Set this bit to clear unit6's counter."]
-pub struct PLUS_CNT_RST_U6_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U6_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl PLUS_CNT_RST_U6_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> PLUS_CNT_RST_U6_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U6` reader - Set this bit to pause unit6's counter."]
-pub struct CNT_PAUSE_U6_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U6_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U6_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl CNT_PAUSE_U6_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U6_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> CNT_PAUSE_U6_W<'a> {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U7` reader - Set this bit to clear unit7's counter."]
-pub struct PLUS_CNT_RST_U7_R(crate::FieldReader<bool, bool>);
+pub struct PLUS_CNT_RST_U7_R(crate::FieldReader<bool>);
 impl PLUS_CNT_RST_U7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl PLUS_CNT_RST_U7_R {
     }
 }
 impl core::ops::Deref for PLUS_CNT_RST_U7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> PLUS_CNT_RST_U7_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U7` reader - Set this bit to pause unit7's counter."]
-pub struct CNT_PAUSE_U7_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U7_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl CNT_PAUSE_U7_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> CNT_PAUSE_U7_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - "]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -843,25 +843,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

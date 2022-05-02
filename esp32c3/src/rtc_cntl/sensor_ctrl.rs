@@ -35,7 +35,7 @@ impl From<crate::W<SENSOR_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - reg_sar2_pwdet_cct"]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
 impl SAR2_PWDET_CCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SAR2_PWDET_CCT_R {
     }
 }
 impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR` reader - force power up SAR"]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8, u8>);
+pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
 impl FORCE_XPD_SAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl FORCE_XPD_SAR_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sensor_ctrl]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sensor_ctrl](index.html) module"]
 pub struct SENSOR_CTRL_SPEC;
 impl crate::RegisterSpec for SENSOR_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sensor_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sensor_ctrl::R](R) reader structure"]
 impl crate::Readable for SENSOR_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sensor_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sensor_ctrl::W](W) writer structure"]
 impl crate::Writable for SENSOR_CTRL_SPEC {
     type Writer = W;
 }

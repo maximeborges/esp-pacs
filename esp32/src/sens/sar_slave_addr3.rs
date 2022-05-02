@@ -35,7 +35,7 @@ impl From<crate::W<SAR_SLAVE_ADDR3_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR5` reader - "]
-pub struct I2C_SLAVE_ADDR5_R(crate::FieldReader<u16, u16>);
+pub struct I2C_SLAVE_ADDR5_R(crate::FieldReader<u16>);
 impl I2C_SLAVE_ADDR5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl I2C_SLAVE_ADDR5_R {
     }
 }
 impl core::ops::Deref for I2C_SLAVE_ADDR5_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> I2C_SLAVE_ADDR5_W<'a> {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR4` reader - "]
-pub struct I2C_SLAVE_ADDR4_R(crate::FieldReader<u16, u16>);
+pub struct I2C_SLAVE_ADDR4_R(crate::FieldReader<u16>);
 impl I2C_SLAVE_ADDR4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl I2C_SLAVE_ADDR4_R {
     }
 }
 impl core::ops::Deref for I2C_SLAVE_ADDR4_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> I2C_SLAVE_ADDR4_W<'a> {
     }
 }
 #[doc = "Field `TSENS_OUT` reader - temperature sensor data out"]
-pub struct TSENS_OUT_R(crate::FieldReader<u8, u8>);
+pub struct TSENS_OUT_R(crate::FieldReader<u8>);
 impl TSENS_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,14 +97,14 @@ impl TSENS_OUT_R {
     }
 }
 impl core::ops::Deref for TSENS_OUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TSENS_RDY_OUT` reader - indicate temperature sensor out ready"]
-pub struct TSENS_RDY_OUT_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_RDY_OUT_R(crate::FieldReader<bool>);
 impl TSENS_RDY_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,7 +112,7 @@ impl TSENS_RDY_OUT_R {
     }
 }
 impl core::ops::Deref for TSENS_RDY_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_slave_addr3]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_slave_addr3](index.html) module"]
 pub struct SAR_SLAVE_ADDR3_SPEC;
 impl crate::RegisterSpec for SAR_SLAVE_ADDR3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_slave_addr3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_slave_addr3::R](R) reader structure"]
 impl crate::Readable for SAR_SLAVE_ADDR3_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_slave_addr3::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_slave_addr3::W](W) writer structure"]
 impl crate::Writable for SAR_SLAVE_ADDR3_SPEC {
     type Writer = W;
 }

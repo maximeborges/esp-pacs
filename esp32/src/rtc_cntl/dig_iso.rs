@@ -35,7 +35,7 @@ impl From<crate::W<DIG_ISO_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_OFF` reader - "]
-pub struct FORCE_OFF_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_OFF_R(crate::FieldReader<bool>);
 impl FORCE_OFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FORCE_OFF_R {
     }
 }
 impl core::ops::Deref for FORCE_OFF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FORCE_OFF_W<'a> {
     }
 }
 #[doc = "Field `FORCE_ON` reader - "]
-pub struct FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_ON_R(crate::FieldReader<bool>);
 impl FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FORCE_ON_R {
     }
 }
 impl core::ops::Deref for FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_AUTOHOLD` reader - read only register to indicate digital pad auto-hold status"]
-pub struct DG_PAD_AUTOHOLD_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_AUTOHOLD_R(crate::FieldReader<bool>);
 impl DG_PAD_AUTOHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DG_PAD_AUTOHOLD_R {
     }
 }
 impl core::ops::Deref for DG_PAD_AUTOHOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CLR_DG_PAD_AUTOHOLD_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_AUTOHOLD_EN` reader - digital pad enable auto-hold"]
-pub struct DG_PAD_AUTOHOLD_EN_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_AUTOHOLD_EN_R(crate::FieldReader<bool>);
 impl DG_PAD_AUTOHOLD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DG_PAD_AUTOHOLD_EN_R {
     }
 }
 impl core::ops::Deref for DG_PAD_AUTOHOLD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DG_PAD_AUTOHOLD_EN_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_FORCE_NOISO` reader - digital pad force no ISO"]
-pub struct DG_PAD_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl DG_PAD_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DG_PAD_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for DG_PAD_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DG_PAD_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_FORCE_ISO` reader - digital pad force ISO"]
-pub struct DG_PAD_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_FORCE_ISO_R(crate::FieldReader<bool>);
 impl DG_PAD_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DG_PAD_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for DG_PAD_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DG_PAD_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_FORCE_UNHOLD` reader - digital pad force un-hold"]
-pub struct DG_PAD_FORCE_UNHOLD_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_FORCE_UNHOLD_R(crate::FieldReader<bool>);
 impl DG_PAD_FORCE_UNHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DG_PAD_FORCE_UNHOLD_R {
     }
 }
 impl core::ops::Deref for DG_PAD_FORCE_UNHOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> DG_PAD_FORCE_UNHOLD_W<'a> {
     }
 }
 #[doc = "Field `DG_PAD_FORCE_HOLD` reader - digital pad force hold"]
-pub struct DG_PAD_FORCE_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct DG_PAD_FORCE_HOLD_R(crate::FieldReader<bool>);
 impl DG_PAD_FORCE_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl DG_PAD_FORCE_HOLD_R {
     }
 }
 impl core::ops::Deref for DG_PAD_FORCE_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> DG_PAD_FORCE_HOLD_W<'a> {
     }
 }
 #[doc = "Field `ROM0_FORCE_ISO` reader - ROM force ISO"]
-pub struct ROM0_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct ROM0_FORCE_ISO_R(crate::FieldReader<bool>);
 impl ROM0_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl ROM0_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for ROM0_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> ROM0_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `ROM0_FORCE_NOISO` reader - ROM force no ISO"]
-pub struct ROM0_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct ROM0_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl ROM0_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl ROM0_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for ROM0_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> ROM0_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM0_FORCE_ISO` reader - internal SRAM 0 force ISO"]
-pub struct INTER_RAM0_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM0_FORCE_ISO_R(crate::FieldReader<bool>);
 impl INTER_RAM0_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl INTER_RAM0_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM0_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> INTER_RAM0_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM0_FORCE_NOISO` reader - internal SRAM 0 force no ISO"]
-pub struct INTER_RAM0_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM0_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl INTER_RAM0_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl INTER_RAM0_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM0_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> INTER_RAM0_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM1_FORCE_ISO` reader - internal SRAM 1 force ISO"]
-pub struct INTER_RAM1_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM1_FORCE_ISO_R(crate::FieldReader<bool>);
 impl INTER_RAM1_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl INTER_RAM1_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM1_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> INTER_RAM1_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM1_FORCE_NOISO` reader - internal SRAM 1 force no ISO"]
-pub struct INTER_RAM1_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM1_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl INTER_RAM1_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl INTER_RAM1_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM1_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> INTER_RAM1_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM2_FORCE_ISO` reader - internal SRAM 2 force ISO"]
-pub struct INTER_RAM2_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM2_FORCE_ISO_R(crate::FieldReader<bool>);
 impl INTER_RAM2_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl INTER_RAM2_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM2_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> INTER_RAM2_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM2_FORCE_NOISO` reader - internal SRAM 2 force no ISO"]
-pub struct INTER_RAM2_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM2_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl INTER_RAM2_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl INTER_RAM2_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM2_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> INTER_RAM2_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM3_FORCE_ISO` reader - internal SRAM 3 force ISO"]
-pub struct INTER_RAM3_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM3_FORCE_ISO_R(crate::FieldReader<bool>);
 impl INTER_RAM3_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl INTER_RAM3_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM3_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> INTER_RAM3_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM3_FORCE_NOISO` reader - internal SRAM 3 force no ISO"]
-pub struct INTER_RAM3_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM3_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl INTER_RAM3_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl INTER_RAM3_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM3_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> INTER_RAM3_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM4_FORCE_ISO` reader - internal SRAM 4 force ISO"]
-pub struct INTER_RAM4_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM4_FORCE_ISO_R(crate::FieldReader<bool>);
 impl INTER_RAM4_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl INTER_RAM4_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM4_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> INTER_RAM4_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `INTER_RAM4_FORCE_NOISO` reader - internal SRAM 4 force no ISO"]
-pub struct INTER_RAM4_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct INTER_RAM4_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl INTER_RAM4_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl INTER_RAM4_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for INTER_RAM4_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> INTER_RAM4_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `WIFI_FORCE_ISO` reader - wifi force ISO"]
-pub struct WIFI_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct WIFI_FORCE_ISO_R(crate::FieldReader<bool>);
 impl WIFI_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl WIFI_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for WIFI_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> WIFI_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `WIFI_FORCE_NOISO` reader - wifi force no ISO"]
-pub struct WIFI_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct WIFI_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl WIFI_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl WIFI_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for WIFI_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> WIFI_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_ISO` reader - digital core force ISO"]
-pub struct DG_WRAP_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_ISO_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl DG_WRAP_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> DG_WRAP_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_NOISO` reader - digital core force no ISO"]
-pub struct DG_WRAP_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl DG_WRAP_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1172,25 +1172,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dig_iso]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dig_iso](index.html) module"]
 pub struct DIG_ISO_SPEC;
 impl crate::RegisterSpec for DIG_ISO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dig_iso::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dig_iso::R](R) reader structure"]
 impl crate::Readable for DIG_ISO_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dig_iso::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dig_iso::W](W) writer structure"]
 impl crate::Writable for DIG_ISO_SPEC {
     type Writer = W;
 }

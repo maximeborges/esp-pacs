@@ -35,7 +35,7 @@ impl From<crate::W<LCD_D_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `D_DQS_MODE` reader - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DQS_MODE_R(crate::FieldReader<u8, u8>);
+pub struct D_DQS_MODE_R(crate::FieldReader<u8>);
 impl D_DQS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl D_DQS_MODE_R {
     }
 }
 impl core::ops::Deref for D_DQS_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> D_DQS_MODE_W<'a> {
     }
 }
 #[doc = "Field `D_CD_MODE` reader - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_CD_MODE_R(crate::FieldReader<u8, u8>);
+pub struct D_CD_MODE_R(crate::FieldReader<u8>);
 impl D_CD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl D_CD_MODE_R {
     }
 }
 impl core::ops::Deref for D_CD_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> D_CD_MODE_W<'a> {
     }
 }
 #[doc = "Field `D_DE_MODE` reader - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct D_DE_MODE_R(crate::FieldReader<u8>);
 impl D_DE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl D_DE_MODE_R {
     }
 }
 impl core::ops::Deref for D_DE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> D_DE_MODE_W<'a> {
     }
 }
 #[doc = "Field `D_HSYNC_MODE` reader - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_HSYNC_MODE_R(crate::FieldReader<u8, u8>);
+pub struct D_HSYNC_MODE_R(crate::FieldReader<u8>);
 impl D_HSYNC_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl D_HSYNC_MODE_R {
     }
 }
 impl core::ops::Deref for D_HSYNC_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> D_HSYNC_MODE_W<'a> {
     }
 }
 #[doc = "Field `D_VSYNC_MODE` reader - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_VSYNC_MODE_R(crate::FieldReader<u8, u8>);
+pub struct D_VSYNC_MODE_R(crate::FieldReader<u8>);
 impl D_VSYNC_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl D_VSYNC_MODE_R {
     }
 }
 impl core::ops::Deref for D_VSYNC_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> D_VSYNC_MODE_W<'a> {
     }
 }
 #[doc = "Field `DE_IDLE_POL` reader - It is the idle value of spi_de."]
-pub struct DE_IDLE_POL_R(crate::FieldReader<bool, bool>);
+pub struct DE_IDLE_POL_R(crate::FieldReader<bool>);
 impl DE_IDLE_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -178,7 +178,7 @@ impl DE_IDLE_POL_R {
     }
 }
 impl core::ops::Deref for DE_IDLE_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -207,7 +207,7 @@ impl<'a> DE_IDLE_POL_W<'a> {
     }
 }
 #[doc = "Field `HS_BLANK_EN` reader - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
-pub struct HS_BLANK_EN_R(crate::FieldReader<bool, bool>);
+pub struct HS_BLANK_EN_R(crate::FieldReader<bool>);
 impl HS_BLANK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -215,7 +215,7 @@ impl HS_BLANK_EN_R {
     }
 }
 impl core::ops::Deref for HS_BLANK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -323,25 +323,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD delay number\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_d_mode]
-(index.html) module"]
+#[doc = "LCD delay number\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_d_mode](index.html) module"]
 pub struct LCD_D_MODE_SPEC;
 impl crate::RegisterSpec for LCD_D_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_d_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lcd_d_mode::R](R) reader structure"]
 impl crate::Readable for LCD_D_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lcd_d_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lcd_d_mode::W](W) writer structure"]
 impl crate::Writable for LCD_D_MODE_SPEC {
     type Writer = W;
 }

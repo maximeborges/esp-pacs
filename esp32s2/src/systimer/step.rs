@@ -35,7 +35,7 @@ impl From<crate::W<STEP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_XTAL_STEP` reader - Set system timer increment step when using XTAL_CLK."]
-pub struct TIMER_XTAL_STEP_R(crate::FieldReader<u16, u16>);
+pub struct TIMER_XTAL_STEP_R(crate::FieldReader<u16>);
 impl TIMER_XTAL_STEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_XTAL_STEP_R {
     }
 }
 impl core::ops::Deref for TIMER_XTAL_STEP_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIMER_XTAL_STEP_W<'a> {
     }
 }
 #[doc = "Field `TIMER_PLL_STEP` reader - Set system timer increment step when using PLL_CLK"]
-pub struct TIMER_PLL_STEP_R(crate::FieldReader<u16, u16>);
+pub struct TIMER_PLL_STEP_R(crate::FieldReader<u16>);
 impl TIMER_PLL_STEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl TIMER_PLL_STEP_R {
     }
 }
 impl core::ops::Deref for TIMER_PLL_STEP_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "System timer accumulation step\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [step]
-(index.html) module"]
+#[doc = "System timer accumulation step\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [step](index.html) module"]
 pub struct STEP_SPEC;
 impl crate::RegisterSpec for STEP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [step::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [step::R](R) reader structure"]
 impl crate::Readable for STEP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [step::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [step::W](W) writer structure"]
 impl crate::Writable for STEP_SPEC {
     type Writer = W;
 }

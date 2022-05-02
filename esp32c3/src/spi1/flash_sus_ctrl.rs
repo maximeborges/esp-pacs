@@ -35,7 +35,7 @@ impl From<crate::W<FLASH_SUS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PER` reader - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PER_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PER_R(crate::FieldReader<bool>);
 impl FLASH_PER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FLASH_PER_R {
     }
 }
 impl core::ops::Deref for FLASH_PER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FLASH_PER_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PES` reader - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PES_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PES_R(crate::FieldReader<bool>);
 impl FLASH_PES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FLASH_PES_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -108,9 +108,8 @@ impl<'a> FLASH_PES_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FLASH_PER_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
-pub struct FLASH_PER_WAIT_EN_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `FLASH_PER_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
+pub struct FLASH_PER_WAIT_EN_R(crate::FieldReader<bool>);
 impl FLASH_PER_WAIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -118,14 +117,13 @@ impl FLASH_PER_WAIT_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_PER_WAIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `FLASH_PER_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
+#[doc = "Field `FLASH_PER_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
 pub struct FLASH_PER_WAIT_EN_W<'a> {
     w: &'a mut W,
 }
@@ -147,9 +145,8 @@ impl<'a> FLASH_PER_WAIT_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `FLASH_PES_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
-pub struct FLASH_PES_WAIT_EN_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `FLASH_PES_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
+pub struct FLASH_PES_WAIT_EN_R(crate::FieldReader<bool>);
 impl FLASH_PES_WAIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +154,13 @@ impl FLASH_PES_WAIT_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_WAIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `FLASH_PES_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
+#[doc = "Field `FLASH_PES_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
 pub struct FLASH_PES_WAIT_EN_W<'a> {
     w: &'a mut W,
 }
@@ -187,7 +183,7 @@ impl<'a> FLASH_PES_WAIT_EN_W<'a> {
     }
 }
 #[doc = "Field `PES_PER_EN` reader - Set this bit to enable PES end triggers PER transfer option. If this bit is 0, application should send PER after PES is done."]
-pub struct PES_PER_EN_R(crate::FieldReader<bool, bool>);
+pub struct PES_PER_EN_R(crate::FieldReader<bool>);
 impl PES_PER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -195,7 +191,7 @@ impl PES_PER_EN_R {
     }
 }
 impl core::ops::Deref for PES_PER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +220,7 @@ impl<'a> PES_PER_EN_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PES_EN` reader - Set this bit to enable Auto-suspending function."]
-pub struct FLASH_PES_EN_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PES_EN_R(crate::FieldReader<bool>);
 impl FLASH_PES_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,7 +228,7 @@ impl FLASH_PES_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -260,13 +256,8 @@ impl<'a> FLASH_PES_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `PESR_END_MSK` reader - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\]
-(only status_in\\[7:0\\]
- is valid when only one byte of data is read out, status_in\\[15:0\\]
- is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]
-^ SPI_MEM_PESR_END_MSK\\[15:0\\]
-."]
-pub struct PESR_END_MSK_R(crate::FieldReader<u16, u16>);
+#[doc = "Field `PESR_END_MSK` reader - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
+pub struct PESR_END_MSK_R(crate::FieldReader<u16>);
 impl PESR_END_MSK_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -274,18 +265,13 @@ impl PESR_END_MSK_R {
     }
 }
 impl core::ops::Deref for PESR_END_MSK_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `PESR_END_MSK` writer - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\]
-(only status_in\\[7:0\\]
- is valid when only one byte of data is read out, status_in\\[15:0\\]
- is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]
-^ SPI_MEM_PESR_END_MSK\\[15:0\\]
-."]
+#[doc = "Field `PESR_END_MSK` writer - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
 pub struct PESR_END_MSK_W<'a> {
     w: &'a mut W,
 }
@@ -298,7 +284,7 @@ impl<'a> PESR_END_MSK_W<'a> {
     }
 }
 #[doc = "Field `RD_SUS_2B` reader - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
-pub struct RD_SUS_2B_R(crate::FieldReader<bool, bool>);
+pub struct RD_SUS_2B_R(crate::FieldReader<bool>);
 impl RD_SUS_2B_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -306,7 +292,7 @@ impl RD_SUS_2B_R {
     }
 }
 impl core::ops::Deref for RD_SUS_2B_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -335,7 +321,7 @@ impl<'a> RD_SUS_2B_W<'a> {
     }
 }
 #[doc = "Field `PER_END_EN` reader - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
-pub struct PER_END_EN_R(crate::FieldReader<bool, bool>);
+pub struct PER_END_EN_R(crate::FieldReader<bool>);
 impl PER_END_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -343,7 +329,7 @@ impl PER_END_EN_R {
     }
 }
 impl core::ops::Deref for PER_END_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -372,7 +358,7 @@ impl<'a> PER_END_EN_W<'a> {
     }
 }
 #[doc = "Field `PES_END_EN` reader - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the suspend status of flash. 0: Only need to check WIP is 0."]
-pub struct PES_END_EN_R(crate::FieldReader<bool, bool>);
+pub struct PES_END_EN_R(crate::FieldReader<bool>);
 impl PES_END_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -380,7 +366,7 @@ impl PES_END_EN_R {
     }
 }
 impl core::ops::Deref for PES_END_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -408,9 +394,8 @@ impl<'a> PES_END_EN_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SUS_TIMEOUT_CNT` reader - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\]
- times, it will be treated as check pass."]
-pub struct SUS_TIMEOUT_CNT_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `SUS_TIMEOUT_CNT` reader - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
+pub struct SUS_TIMEOUT_CNT_R(crate::FieldReader<u8>);
 impl SUS_TIMEOUT_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -418,14 +403,13 @@ impl SUS_TIMEOUT_CNT_R {
     }
 }
 impl core::ops::Deref for SUS_TIMEOUT_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SUS_TIMEOUT_CNT` writer - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\]
- times, it will be treated as check pass."]
+#[doc = "Field `SUS_TIMEOUT_CNT` writer - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
 pub struct SUS_TIMEOUT_CNT_W<'a> {
     w: &'a mut W,
 }
@@ -448,14 +432,12 @@ impl R {
     pub fn flash_pes(&self) -> FLASH_PES_R {
         FLASH_PES_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
+    #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
     #[inline(always)]
     pub fn flash_per_wait_en(&self) -> FLASH_PER_WAIT_EN_R {
         FLASH_PER_WAIT_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
+    #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
     #[inline(always)]
     pub fn flash_pes_wait_en(&self) -> FLASH_PES_WAIT_EN_R {
         FLASH_PES_WAIT_EN_R::new(((self.bits >> 3) & 1) != 0)
@@ -470,12 +452,7 @@ impl R {
     pub fn flash_pes_en(&self) -> FLASH_PES_EN_R {
         FLASH_PES_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\]
-(only status_in\\[7:0\\]
- is valid when only one byte of data is read out, status_in\\[15:0\\]
- is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]
-^ SPI_MEM_PESR_END_MSK\\[15:0\\]
-."]
+    #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
     #[inline(always)]
     pub fn pesr_end_msk(&self) -> PESR_END_MSK_R {
         PESR_END_MSK_R::new(((self.bits >> 6) & 0xffff) as u16)
@@ -495,8 +472,7 @@ impl R {
     pub fn pes_end_en(&self) -> PES_END_EN_R {
         PES_END_EN_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\]
- times, it will be treated as check pass."]
+    #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
     #[inline(always)]
     pub fn sus_timeout_cnt(&self) -> SUS_TIMEOUT_CNT_R {
         SUS_TIMEOUT_CNT_R::new(((self.bits >> 25) & 0x7f) as u8)
@@ -513,14 +489,12 @@ impl W {
     pub fn flash_pes(&mut self) -> FLASH_PES_W {
         FLASH_PES_W { w: self }
     }
-    #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
+    #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
     #[inline(always)]
     pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W {
         FLASH_PER_WAIT_EN_W { w: self }
     }
-    #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
+    #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
     #[inline(always)]
     pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W {
         FLASH_PES_WAIT_EN_W { w: self }
@@ -535,12 +509,7 @@ impl W {
     pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W {
         FLASH_PES_EN_W { w: self }
     }
-    #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\]
-(only status_in\\[7:0\\]
- is valid when only one byte of data is read out, status_in\\[15:0\\]
- is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]
-^ SPI_MEM_PESR_END_MSK\\[15:0\\]
-."]
+    #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
     #[inline(always)]
     pub fn pesr_end_msk(&mut self) -> PESR_END_MSK_W {
         PESR_END_MSK_W { w: self }
@@ -560,8 +529,7 @@ impl W {
     pub fn pes_end_en(&mut self) -> PES_END_EN_W {
         PES_END_EN_W { w: self }
     }
-    #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\]
- times, it will be treated as check pass."]
+    #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
     #[inline(always)]
     pub fn sus_timeout_cnt(&mut self) -> SUS_TIMEOUT_CNT_W {
         SUS_TIMEOUT_CNT_W { w: self }
@@ -573,25 +541,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 flash suspend control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flash_sus_ctrl]
-(index.html) module"]
+#[doc = "SPI1 flash suspend control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flash_sus_ctrl](index.html) module"]
 pub struct FLASH_SUS_CTRL_SPEC;
 impl crate::RegisterSpec for FLASH_SUS_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [flash_sus_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [flash_sus_ctrl::R](R) reader structure"]
 impl crate::Readable for FLASH_SUS_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [flash_sus_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [flash_sus_ctrl::W](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CTRL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<BT_LPCK_DIV_FRAC_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_B` reader - This field is lower power clock frequent division factor b"]
-pub struct BT_LPCK_DIV_B_R(crate::FieldReader<u16, u16>);
+pub struct BT_LPCK_DIV_B_R(crate::FieldReader<u16>);
 impl BT_LPCK_DIV_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl BT_LPCK_DIV_B_R {
     }
 }
 impl core::ops::Deref for BT_LPCK_DIV_B_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> BT_LPCK_DIV_B_W<'a> {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_A` reader - This field is lower power clock frequent division factor a"]
-pub struct BT_LPCK_DIV_A_R(crate::FieldReader<u16, u16>);
+pub struct BT_LPCK_DIV_A_R(crate::FieldReader<u16>);
 impl BT_LPCK_DIV_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl BT_LPCK_DIV_A_R {
     }
 }
 impl core::ops::Deref for BT_LPCK_DIV_A_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> BT_LPCK_DIV_A_W<'a> {
     }
 }
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - Set 1 to select rtc-slow clock as rtc low power clock"]
-pub struct LPCLK_SEL_RTC_SLOW_R(crate::FieldReader<bool, bool>);
+pub struct LPCLK_SEL_RTC_SLOW_R(crate::FieldReader<bool>);
 impl LPCLK_SEL_RTC_SLOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl LPCLK_SEL_RTC_SLOW_R {
     }
 }
 impl core::ops::Deref for LPCLK_SEL_RTC_SLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> LPCLK_SEL_RTC_SLOW_W<'a> {
     }
 }
 #[doc = "Field `LPCLK_SEL_8M` reader - Set 1 to select 8m clock as rtc low power clock"]
-pub struct LPCLK_SEL_8M_R(crate::FieldReader<bool, bool>);
+pub struct LPCLK_SEL_8M_R(crate::FieldReader<bool>);
 impl LPCLK_SEL_8M_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl LPCLK_SEL_8M_R {
     }
 }
 impl core::ops::Deref for LPCLK_SEL_8M_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> LPCLK_SEL_8M_W<'a> {
     }
 }
 #[doc = "Field `LPCLK_SEL_XTAL` reader - Set 1 to select xtal clock as rtc low power clock"]
-pub struct LPCLK_SEL_XTAL_R(crate::FieldReader<bool, bool>);
+pub struct LPCLK_SEL_XTAL_R(crate::FieldReader<bool>);
 impl LPCLK_SEL_XTAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl LPCLK_SEL_XTAL_R {
     }
 }
 impl core::ops::Deref for LPCLK_SEL_XTAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> LPCLK_SEL_XTAL_W<'a> {
     }
 }
 #[doc = "Field `LPCLK_SEL_XTAL32K` reader - Set 1 to select xtal32k clock as low power clock"]
-pub struct LPCLK_SEL_XTAL32K_R(crate::FieldReader<bool, bool>);
+pub struct LPCLK_SEL_XTAL32K_R(crate::FieldReader<bool>);
 impl LPCLK_SEL_XTAL32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl LPCLK_SEL_XTAL32K_R {
     }
 }
 impl core::ops::Deref for LPCLK_SEL_XTAL32K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> LPCLK_SEL_XTAL32K_W<'a> {
     }
 }
 #[doc = "Field `LPCLK_RTC_EN` reader - Set 1 to enable RTC low power clock"]
-pub struct LPCLK_RTC_EN_R(crate::FieldReader<bool, bool>);
+pub struct LPCLK_RTC_EN_R(crate::FieldReader<bool>);
 impl LPCLK_RTC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl LPCLK_RTC_EN_R {
     }
 }
 impl core::ops::Deref for LPCLK_RTC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,25 +353,16 @@ impl W {
         self
     }
 }
-#[doc = "low power clock configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bt_lpck_div_frac]
-(index.html) module"]
+#[doc = "low power clock configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bt_lpck_div_frac](index.html) module"]
 pub struct BT_LPCK_DIV_FRAC_SPEC;
 impl crate::RegisterSpec for BT_LPCK_DIV_FRAC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bt_lpck_div_frac::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bt_lpck_div_frac::R](R) reader structure"]
 impl crate::Readable for BT_LPCK_DIV_FRAC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bt_lpck_div_frac::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bt_lpck_div_frac::W](W) writer structure"]
 impl crate::Writable for BT_LPCK_DIV_FRAC_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `EFUSE_MEM_FORCE_PD` reader - If set, forces eFuse SRAM into power-saving mode."]
-pub struct EFUSE_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct EFUSE_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl EFUSE_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl EFUSE_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for EFUSE_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> EFUSE_MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - If set, forces to activate clock signal of eFuse SRAM."]
-pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool>);
 impl MEM_CLK_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MEM_CLK_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for MEM_CLK_FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MEM_CLK_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `EFUSE_MEM_FORCE_PU` reader - If set, forces eFuse SRAM into working mode."]
-pub struct EFUSE_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct EFUSE_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl EFUSE_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl EFUSE_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for EFUSE_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> EFUSE_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - If set, forces to enable clock signal of eFuse memory."]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "eFuse clock configuration register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk]
-(index.html) module"]
+#[doc = "eFuse clock configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk](index.html) module"]
 pub struct CLK_SPEC;
 impl crate::RegisterSpec for CLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk::R](R) reader structure"]
 impl crate::Readable for CLK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk::W](W) writer structure"]
 impl crate::Writable for CLK_SPEC {
     type Writer = W;
 }

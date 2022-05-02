@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `HSTIMER0_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
-pub struct HSTIMER0_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER0_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl HSTIMER0_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl HSTIMER0_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for HSTIMER0_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> HSTIMER0_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER1_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel1 counter overflow interrupt."]
-pub struct HSTIMER1_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER1_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl HSTIMER1_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl HSTIMER1_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for HSTIMER1_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> HSTIMER1_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER2_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel2 counter overflow interrupt."]
-pub struct HSTIMER2_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER2_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl HSTIMER2_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl HSTIMER2_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for HSTIMER2_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> HSTIMER2_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `HSTIMER3_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel3 counter overflow interrupt."]
-pub struct HSTIMER3_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct HSTIMER3_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl HSTIMER3_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl HSTIMER3_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for HSTIMER3_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> HSTIMER3_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER0_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel0 counter overflow interrupt."]
-pub struct LSTIMER0_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER0_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl LSTIMER0_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl LSTIMER0_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LSTIMER0_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> LSTIMER0_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER1_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel1 counter overflow interrupt."]
-pub struct LSTIMER1_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER1_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl LSTIMER1_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl LSTIMER1_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LSTIMER1_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> LSTIMER1_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER2_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel2 counter overflow interrupt."]
-pub struct LSTIMER2_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER2_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl LSTIMER2_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl LSTIMER2_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LSTIMER2_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> LSTIMER2_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER3_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel3 counter overflow interrupt."]
-pub struct LSTIMER3_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER3_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl LSTIMER3_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl LSTIMER3_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LSTIMER3_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> LSTIMER3_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH0_INT_ENA` reader - The interrupt enable bit for high speed channel 0 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH0_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH0_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH0_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl DUTY_CHNG_END_HSCH0_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH0_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> DUTY_CHNG_END_HSCH0_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH1_INT_ENA` reader - The interrupt enable bit for high speed channel 1 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH1_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl DUTY_CHNG_END_HSCH1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> DUTY_CHNG_END_HSCH1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH2_INT_ENA` reader - The interrupt enable bit for high speed channel 2 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH2_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH2_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH2_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl DUTY_CHNG_END_HSCH2_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH2_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> DUTY_CHNG_END_HSCH2_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH3_INT_ENA` reader - The interrupt enable bit for high speed channel 3 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH3_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH3_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH3_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl DUTY_CHNG_END_HSCH3_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH3_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> DUTY_CHNG_END_HSCH3_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH4_INT_ENA` reader - The interrupt enable bit for high speed channel 4 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH4_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH4_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH4_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl DUTY_CHNG_END_HSCH4_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH4_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> DUTY_CHNG_END_HSCH4_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH5_INT_ENA` reader - The interrupt enable bit for high speed channel 5 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH5_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH5_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH5_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl DUTY_CHNG_END_HSCH5_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH5_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> DUTY_CHNG_END_HSCH5_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH6_INT_ENA` reader - The interrupt enable bit for high speed channel 6 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH6_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH6_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH6_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl DUTY_CHNG_END_HSCH6_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH6_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> DUTY_CHNG_END_HSCH6_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_HSCH7_INT_ENA` reader - The interrupt enable bit for high speed channel 7 duty change done interrupt."]
-pub struct DUTY_CHNG_END_HSCH7_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_HSCH7_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_HSCH7_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl DUTY_CHNG_END_HSCH7_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_HSCH7_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> DUTY_CHNG_END_HSCH7_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ENA` reader - The interrupt enable bit for low speed channel 0 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH0_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH0_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH0_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl DUTY_CHNG_END_LSCH0_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH0_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> DUTY_CHNG_END_LSCH0_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ENA` reader - The interrupt enable bit for low speed channel 1 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH1_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl DUTY_CHNG_END_LSCH1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> DUTY_CHNG_END_LSCH1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ENA` reader - The interrupt enable bit for low speed channel 2 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH2_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH2_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH2_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl DUTY_CHNG_END_LSCH2_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH2_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> DUTY_CHNG_END_LSCH2_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ENA` reader - The interrupt enable bit for low speed channel 3 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH3_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH3_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH3_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl DUTY_CHNG_END_LSCH3_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH3_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> DUTY_CHNG_END_LSCH3_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ENA` reader - The interrupt enable bit for low speed channel 4 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH4_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH4_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH4_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl DUTY_CHNG_END_LSCH4_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH4_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> DUTY_CHNG_END_LSCH4_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ENA` reader - The interrupt enable bit for low speed channel 5 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH5_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH5_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH5_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl DUTY_CHNG_END_LSCH5_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH5_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> DUTY_CHNG_END_LSCH5_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH6_INT_ENA` reader - The interrupt enable bit for low speed channel 6 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH6_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH6_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH6_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl DUTY_CHNG_END_LSCH6_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH6_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> DUTY_CHNG_END_LSCH6_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DUTY_CHNG_END_LSCH7_INT_ENA` reader - The interrupt enable bit for low speed channel 7 duty change done interrupt."]
-pub struct DUTY_CHNG_END_LSCH7_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DUTY_CHNG_END_LSCH7_INT_ENA_R(crate::FieldReader<bool>);
 impl DUTY_CHNG_END_LSCH7_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl DUTY_CHNG_END_LSCH7_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DUTY_CHNG_END_LSCH7_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1172,25 +1172,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
 impl crate::Readable for INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<RX_DSCR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TOKEN_NO_REPLACE` reader - "]
-pub struct SLC0_TOKEN_NO_REPLACE_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TOKEN_NO_REPLACE_R(crate::FieldReader<bool>);
 impl SLC0_TOKEN_NO_REPLACE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLC0_TOKEN_NO_REPLACE_R {
     }
 }
 impl core::ops::Deref for SLC0_TOKEN_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLC0_TOKEN_NO_REPLACE_W<'a> {
     }
 }
 #[doc = "Field `SLC0_INFOR_NO_REPLACE` reader - "]
-pub struct SLC0_INFOR_NO_REPLACE_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_INFOR_NO_REPLACE_R(crate::FieldReader<bool>);
 impl SLC0_INFOR_NO_REPLACE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLC0_INFOR_NO_REPLACE_R {
     }
 }
 impl core::ops::Deref for SLC0_INFOR_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLC0_INFOR_NO_REPLACE_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_FILL_MODE` reader - "]
-pub struct SLC0_RX_FILL_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_FILL_MODE_R(crate::FieldReader<bool>);
 impl SLC0_RX_FILL_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SLC0_RX_FILL_MODE_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_FILL_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SLC0_RX_FILL_MODE_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_EOF_MODE` reader - "]
-pub struct SLC0_RX_EOF_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_EOF_MODE_R(crate::FieldReader<bool>);
 impl SLC0_RX_EOF_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SLC0_RX_EOF_MODE_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_EOF_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SLC0_RX_EOF_MODE_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_FILL_EN` reader - "]
-pub struct SLC0_RX_FILL_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_FILL_EN_R(crate::FieldReader<bool>);
 impl SLC0_RX_FILL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SLC0_RX_FILL_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_FILL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SLC0_RX_FILL_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` reader - "]
-pub struct SLC0_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16, u16>);
+pub struct SLC0_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16>);
 impl SLC0_RD_RETRY_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -228,7 +228,7 @@ impl SLC0_RD_RETRY_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for SLC0_RD_RETRY_THRESHOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> SLC0_RD_RETRY_THRESHOLD_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` reader - "]
-pub struct SLC1_TOKEN_NO_REPLACE_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TOKEN_NO_REPLACE_R(crate::FieldReader<bool>);
 impl SLC1_TOKEN_NO_REPLACE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl SLC1_TOKEN_NO_REPLACE_R {
     }
 }
 impl core::ops::Deref for SLC1_TOKEN_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> SLC1_TOKEN_NO_REPLACE_W<'a> {
     }
 }
 #[doc = "Field `SLC1_INFOR_NO_REPLACE` reader - "]
-pub struct SLC1_INFOR_NO_REPLACE_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_INFOR_NO_REPLACE_R(crate::FieldReader<bool>);
 impl SLC1_INFOR_NO_REPLACE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl SLC1_INFOR_NO_REPLACE_R {
     }
 }
 impl core::ops::Deref for SLC1_INFOR_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> SLC1_INFOR_NO_REPLACE_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_FILL_MODE` reader - "]
-pub struct SLC1_RX_FILL_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_FILL_MODE_R(crate::FieldReader<bool>);
 impl SLC1_RX_FILL_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl SLC1_RX_FILL_MODE_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_FILL_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> SLC1_RX_FILL_MODE_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_EOF_MODE` reader - "]
-pub struct SLC1_RX_EOF_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_EOF_MODE_R(crate::FieldReader<bool>);
 impl SLC1_RX_EOF_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl SLC1_RX_EOF_MODE_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_EOF_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> SLC1_RX_EOF_MODE_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_FILL_EN` reader - "]
-pub struct SLC1_RX_FILL_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_FILL_EN_R(crate::FieldReader<bool>);
 impl SLC1_RX_FILL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl SLC1_RX_FILL_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_FILL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> SLC1_RX_FILL_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` reader - "]
-pub struct SLC1_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16, u16>);
+pub struct SLC1_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16>);
 impl SLC1_RD_RETRY_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -440,7 +440,7 @@ impl SLC1_RD_RETRY_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for SLC1_RD_RETRY_THRESHOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -588,25 +588,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_dscr_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_dscr_conf](index.html) module"]
 pub struct RX_DSCR_CONF_SPEC;
 impl crate::RegisterSpec for RX_DSCR_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rx_dscr_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rx_dscr_conf::R](R) reader structure"]
 impl crate::Readable for RX_DSCR_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rx_dscr_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rx_dscr_conf::W](W) writer structure"]
 impl crate::Writable for RX_DSCR_CONF_SPEC {
     type Writer = W;
 }

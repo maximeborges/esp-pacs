@@ -35,7 +35,7 @@ impl From<crate::W<I2S_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_RX_DONE_INT_ENA` reader - The interrupt enable bit for the i2s_rx_done_int interrupt"]
-pub struct I2S_RX_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl I2S_RX_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl I2S_RX_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for I2S_RX_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> I2S_RX_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `I2S_TX_DONE_INT_ENA` reader - The interrupt enable bit for the i2s_tx_done_int interrupt"]
-pub struct I2S_TX_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct I2S_TX_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl I2S_TX_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl I2S_TX_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for I2S_TX_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> I2S_TX_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_HUNG_INT_ENA` reader - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
-pub struct I2S_RX_HUNG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_HUNG_INT_ENA_R(crate::FieldReader<bool>);
 impl I2S_RX_HUNG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl I2S_RX_HUNG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for I2S_RX_HUNG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> I2S_RX_HUNG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `I2S_TX_HUNG_INT_ENA` reader - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
-pub struct I2S_TX_HUNG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct I2S_TX_HUNG_INT_ENA_R(crate::FieldReader<bool>);
 impl I2S_TX_HUNG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl I2S_TX_HUNG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for I2S_TX_HUNG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S interrupt enable register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_int_ena]
-(index.html) module"]
+#[doc = "I2S interrupt enable register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_int_ena](index.html) module"]
 pub struct I2S_INT_ENA_SPEC;
 impl crate::RegisterSpec for I2S_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2s_int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [i2s_int_ena::R](R) reader structure"]
 impl crate::Readable for I2S_INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [i2s_int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [i2s_int_ena::W](W) writer structure"]
 impl crate::Writable for I2S_INT_ENA_SPEC {
     type Writer = W;
 }

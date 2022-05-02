@@ -14,7 +14,7 @@ impl From<crate::R<DEC_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DEC_WARNINGS` reader - the decode result of 3/4 coding scheme has warning"]
-pub struct DEC_WARNINGS_R(crate::FieldReader<u16, u16>);
+pub struct DEC_WARNINGS_R(crate::FieldReader<u16>);
 impl DEC_WARNINGS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl DEC_WARNINGS_R {
     }
 }
 impl core::ops::Deref for DEC_WARNINGS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         DEC_WARNINGS_R::new((self.bits & 0x0fff) as u16)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dec_status]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dec_status](index.html) module"]
 pub struct DEC_STATUS_SPEC;
 impl crate::RegisterSpec for DEC_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dec_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dec_status::R](R) reader structure"]
 impl crate::Readable for DEC_STATUS_SPEC {
     type Reader = R;
 }

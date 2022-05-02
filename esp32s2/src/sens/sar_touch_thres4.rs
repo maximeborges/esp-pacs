@@ -35,7 +35,7 @@ impl From<crate::W<SAR_TOUCH_THRES4_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_OUT_TH4` reader - Finger threshold for touch pad 4"]
-pub struct TOUCH_OUT_TH4_R(crate::FieldReader<u32, u32>);
+pub struct TOUCH_OUT_TH4_R(crate::FieldReader<u32>);
 impl TOUCH_OUT_TH4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_OUT_TH4_R {
     }
 }
 impl core::ops::Deref for TOUCH_OUT_TH4_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Finger threshold for touch pad 4\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_thres4]
-(index.html) module"]
+#[doc = "Finger threshold for touch pad 4\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_thres4](index.html) module"]
 pub struct SAR_TOUCH_THRES4_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_THRES4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_thres4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_touch_thres4::R](R) reader structure"]
 impl crate::Readable for SAR_TOUCH_THRES4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_touch_thres4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_touch_thres4::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_THRES4_SPEC {
     type Writer = W;
 }

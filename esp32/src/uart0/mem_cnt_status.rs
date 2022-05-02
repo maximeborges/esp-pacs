@@ -14,7 +14,7 @@ impl From<crate::R<MEM_CNT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_MEM_CNT` reader - refer to the rxfifo_cnt's describtion."]
-pub struct RX_MEM_CNT_R(crate::FieldReader<u8, u8>);
+pub struct RX_MEM_CNT_R(crate::FieldReader<u8>);
 impl RX_MEM_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl RX_MEM_CNT_R {
     }
 }
 impl core::ops::Deref for RX_MEM_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_MEM_CNT` reader - refer to the txfifo_cnt's describtion."]
-pub struct TX_MEM_CNT_R(crate::FieldReader<u8, u8>);
+pub struct TX_MEM_CNT_R(crate::FieldReader<u8>);
 impl TX_MEM_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,7 +37,7 @@ impl TX_MEM_CNT_R {
     }
 }
 impl core::ops::Deref for TX_MEM_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         TX_MEM_CNT_R::new(((self.bits >> 3) & 7) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_cnt_status]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_cnt_status](index.html) module"]
 pub struct MEM_CNT_STATUS_SPEC;
 impl crate::RegisterSpec for MEM_CNT_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_cnt_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mem_cnt_status::R](R) reader structure"]
 impl crate::Readable for MEM_CNT_STATUS_SPEC {
     type Reader = R;
 }

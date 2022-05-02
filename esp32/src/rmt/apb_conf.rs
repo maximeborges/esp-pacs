@@ -35,7 +35,7 @@ impl From<crate::W<APB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - Set this bit to disable apb fifo access"]
-pub struct APB_FIFO_MASK_R(crate::FieldReader<bool, bool>);
+pub struct APB_FIFO_MASK_R(crate::FieldReader<bool>);
 impl APB_FIFO_MASK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APB_FIFO_MASK_R {
     }
 }
 impl core::ops::Deref for APB_FIFO_MASK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> APB_FIFO_MASK_W<'a> {
     }
 }
 #[doc = "Field `MEM_TX_WRAP_EN` reader - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
-pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool, bool>);
+pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool>);
 impl MEM_TX_WRAP_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MEM_TX_WRAP_EN_R {
     }
 }
 impl core::ops::Deref for MEM_TX_WRAP_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_conf](index.html) module"]
 pub struct APB_CONF_SPEC;
 impl crate::RegisterSpec for APB_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [apb_conf::R](R) reader structure"]
 impl crate::Readable for APB_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [apb_conf::W](W) writer structure"]
 impl crate::Writable for APB_CONF_SPEC {
     type Writer = W;
 }

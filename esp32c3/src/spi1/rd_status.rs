@@ -35,7 +35,7 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS` reader - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
-pub struct STATUS_R(crate::FieldReader<u16, u16>);
+pub struct STATUS_R(crate::FieldReader<u16>);
 impl STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl STATUS_R {
     }
 }
 impl core::ops::Deref for STATUS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> STATUS_W<'a> {
     }
 }
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub struct WB_MODE_R(crate::FieldReader<u8, u8>);
+pub struct WB_MODE_R(crate::FieldReader<u8>);
 impl WB_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl WB_MODE_R {
     }
 }
 impl core::ops::Deref for WB_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 status register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_status]
-(index.html) module"]
+#[doc = "SPI1 status register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_status](index.html) module"]
 pub struct RD_STATUS_SPEC;
 impl crate::RegisterSpec for RD_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_status::R](R) reader structure"]
 impl crate::Readable for RD_STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rd_status::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rd_status::W](W) writer structure"]
 impl crate::Writable for RD_STATUS_SPEC {
     type Writer = W;
 }

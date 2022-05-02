@@ -14,7 +14,7 @@ impl From<crate::R<STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_ADDR` reader - This register stores the current receive descriptor's address."]
-pub struct INLINK_DSCR_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct INLINK_DSCR_ADDR_R(crate::FieldReader<u32>);
 impl INLINK_DSCR_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl INLINK_DSCR_ADDR_R {
     }
 }
 impl core::ops::Deref for INLINK_DSCR_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_DSCR_STATE` reader - Reserved."]
-pub struct IN_DSCR_STATE_R(crate::FieldReader<u8, u8>);
+pub struct IN_DSCR_STATE_R(crate::FieldReader<u8>);
 impl IN_DSCR_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl IN_DSCR_STATE_R {
     }
 }
 impl core::ops::Deref for IN_DSCR_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_STATE` reader - Reserved."]
-pub struct IN_STATE_R(crate::FieldReader<u8, u8>);
+pub struct IN_STATE_R(crate::FieldReader<u8>);
 impl IN_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl IN_STATE_R {
     }
 }
 impl core::ops::Deref for IN_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_CNT_DEBUG` reader - This register stores the number of data bytes in RX FIFO."]
-pub struct INFIFO_CNT_DEBUG_R(crate::FieldReader<u8, u8>);
+pub struct INFIFO_CNT_DEBUG_R(crate::FieldReader<u8>);
 impl INFIFO_CNT_DEBUG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,14 +67,14 @@ impl INFIFO_CNT_DEBUG_R {
     }
 }
 impl core::ops::Deref for INFIFO_CNT_DEBUG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DECODE_STATE` reader - UHCI decoder status."]
-pub struct DECODE_STATE_R(crate::FieldReader<u8, u8>);
+pub struct DECODE_STATE_R(crate::FieldReader<u8>);
 impl DECODE_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,7 +82,7 @@ impl DECODE_STATE_R {
     }
 }
 impl core::ops::Deref for DECODE_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -115,16 +115,12 @@ impl R {
         DECODE_STATE_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
-#[doc = "UHCI decoder status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0]
-(index.html) module"]
+#[doc = "UHCI decoder status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0](index.html) module"]
 pub struct STATE0_SPEC;
 impl crate::RegisterSpec for STATE0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [state0::R](R) reader structure"]
 impl crate::Readable for STATE0_SPEC {
     type Reader = R;
 }

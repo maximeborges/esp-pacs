@@ -14,7 +14,7 @@ impl From<crate::R<HCON_SPEC>> for R {
     }
 }
 #[doc = "Field `CARD_TYPE` reader - Hardware support SDIO and MMC."]
-pub struct CARD_TYPE_R(crate::FieldReader<bool, bool>);
+pub struct CARD_TYPE_R(crate::FieldReader<bool>);
 impl CARD_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CARD_TYPE_R {
     }
 }
 impl core::ops::Deref for CARD_TYPE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CARD_NUM` reader - Support card number is 2."]
-pub struct CARD_NUM_R(crate::FieldReader<u8, u8>);
+pub struct CARD_NUM_R(crate::FieldReader<u8>);
 impl CARD_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl CARD_NUM_R {
     }
 }
 impl core::ops::Deref for CARD_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BUS_TYPE` reader - Register config is APB bus."]
-pub struct BUS_TYPE_R(crate::FieldReader<bool, bool>);
+pub struct BUS_TYPE_R(crate::FieldReader<bool>);
 impl BUS_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl BUS_TYPE_R {
     }
 }
 impl core::ops::Deref for BUS_TYPE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DATA_WIDTH` reader - Regisger data widht is 32."]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
 impl DATA_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,14 +67,14 @@ impl DATA_WIDTH_R {
     }
 }
 impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ADDR_WIDTH` reader - Register address width is 32."]
-pub struct ADDR_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct ADDR_WIDTH_R(crate::FieldReader<u8>);
 impl ADDR_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,14 +82,14 @@ impl ADDR_WIDTH_R {
     }
 }
 impl core::ops::Deref for ADDR_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_WIDTH` reader - DMA data witdth is 32."]
-pub struct DMA_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct DMA_WIDTH_R(crate::FieldReader<u8>);
 impl DMA_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,14 +97,14 @@ impl DMA_WIDTH_R {
     }
 }
 impl core::ops::Deref for DMA_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RAM_INDISE` reader - Inside RAM in SDMMC module."]
-pub struct RAM_INDISE_R(crate::FieldReader<bool, bool>);
+pub struct RAM_INDISE_R(crate::FieldReader<bool>);
 impl RAM_INDISE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl RAM_INDISE_R {
     }
 }
 impl core::ops::Deref for RAM_INDISE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `HOLD` reader - Have a hold regiser in data path ."]
-pub struct HOLD_R(crate::FieldReader<bool, bool>);
+pub struct HOLD_R(crate::FieldReader<bool>);
 impl HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl HOLD_R {
     }
 }
 impl core::ops::Deref for HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `NUM_CLK_DIV` reader - Have 4 clk divider in design ."]
-pub struct NUM_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct NUM_CLK_DIV_R(crate::FieldReader<u8>);
 impl NUM_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -142,7 +142,7 @@ impl NUM_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for NUM_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -195,16 +195,12 @@ impl R {
         NUM_CLK_DIV_R::new(((self.bits >> 24) & 3) as u8)
     }
 }
-#[doc = "Hardware feature register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcon]
-(index.html) module"]
+#[doc = "Hardware feature register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcon](index.html) module"]
 pub struct HCON_SPEC;
 impl crate::RegisterSpec for HCON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hcon::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [hcon::R](R) reader structure"]
 impl crate::Readable for HCON_SPEC {
     type Reader = R;
 }

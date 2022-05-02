@@ -35,7 +35,7 @@ impl From<crate::W<TX_TDM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_TDM_CHAN0_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN0_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN0_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_TDM_CHAN0_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_TDM_CHAN0_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN1_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN1_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN1_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN1_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TX_TDM_CHAN1_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TX_TDM_CHAN1_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN2_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN2_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN2_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_TDM_CHAN2_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_TDM_CHAN2_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN3_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN3_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN3_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN3_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TX_TDM_CHAN3_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN3_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TX_TDM_CHAN3_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN4_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN4_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN4_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN4_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TX_TDM_CHAN4_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN4_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TX_TDM_CHAN4_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN5_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN5_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN5_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN5_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TX_TDM_CHAN5_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN5_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TX_TDM_CHAN5_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN6_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN6_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN6_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN6_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl TX_TDM_CHAN6_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN6_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> TX_TDM_CHAN6_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN7_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN7_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN7_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN7_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl TX_TDM_CHAN7_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN7_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> TX_TDM_CHAN7_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN8_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN8_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN8_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN8_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl TX_TDM_CHAN8_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN8_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> TX_TDM_CHAN8_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN9_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN9_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN9_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN9_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl TX_TDM_CHAN9_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN9_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> TX_TDM_CHAN9_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN10_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN10_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN10_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN10_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl TX_TDM_CHAN10_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN10_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> TX_TDM_CHAN10_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN11_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN11_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN11_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN11_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TX_TDM_CHAN11_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN11_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TX_TDM_CHAN11_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN12_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN12_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN12_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN12_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TX_TDM_CHAN12_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN12_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TX_TDM_CHAN12_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN13_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN13_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN13_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN13_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TX_TDM_CHAN13_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN13_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TX_TDM_CHAN13_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN14_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN14_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN14_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN14_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl TX_TDM_CHAN14_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN14_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> TX_TDM_CHAN14_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_CHAN15_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
-pub struct TX_TDM_CHAN15_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_CHAN15_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_CHAN15_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl TX_TDM_CHAN15_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_CHAN15_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> TX_TDM_CHAN15_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_TOT_CHAN_NUM` reader - The total channel number of I2S TX TDM mode."]
-pub struct TX_TDM_TOT_CHAN_NUM_R(crate::FieldReader<u8, u8>);
+pub struct TX_TDM_TOT_CHAN_NUM_R(crate::FieldReader<u8>);
 impl TX_TDM_TOT_CHAN_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -635,7 +635,7 @@ impl TX_TDM_TOT_CHAN_NUM_R {
     }
 }
 impl core::ops::Deref for TX_TDM_TOT_CHAN_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -654,7 +654,7 @@ impl<'a> TX_TDM_TOT_CHAN_NUM_W<'a> {
     }
 }
 #[doc = "Field `TX_TDM_SKIP_MSK_EN` reader - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
-pub struct TX_TDM_SKIP_MSK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_TDM_SKIP_MSK_EN_R(crate::FieldReader<bool>);
 impl TX_TDM_SKIP_MSK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -662,7 +662,7 @@ impl TX_TDM_SKIP_MSK_EN_R {
     }
 }
 impl core::ops::Deref for TX_TDM_SKIP_MSK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -880,25 +880,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S TX TDM mode control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_tdm_ctrl]
-(index.html) module"]
+#[doc = "I2S TX TDM mode control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_tdm_ctrl](index.html) module"]
 pub struct TX_TDM_CTRL_SPEC;
 impl crate::RegisterSpec for TX_TDM_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_tdm_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tx_tdm_ctrl::R](R) reader structure"]
 impl crate::Readable for TX_TDM_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tx_tdm_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tx_tdm_ctrl::W](W) writer structure"]
 impl crate::Writable for TX_TDM_CTRL_SPEC {
     type Writer = W;
 }

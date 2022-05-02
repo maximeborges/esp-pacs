@@ -35,7 +35,7 @@ impl From<crate::W<LOG_MEM_FULL_FLAG_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_FULL_FLAG` reader - reg_log_mem_full_flag"]
-pub struct LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool, bool>);
+pub struct LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool>);
 impl LOG_MEM_FULL_FLAG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,14 +43,14 @@ impl LOG_MEM_FULL_FLAG_R {
     }
 }
 impl core::ops::Deref for LOG_MEM_FULL_FLAG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CLR_LOG_MEM_FULL_FLAG` reader - reg_clr_log_mem_full_flag"]
-pub struct CLR_LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool, bool>);
+pub struct CLR_LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool>);
 impl CLR_LOG_MEM_FULL_FLAG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,7 +58,7 @@ impl CLR_LOG_MEM_FULL_FLAG_R {
     }
 }
 impl core::ops::Deref for CLR_LOG_MEM_FULL_FLAG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -111,25 +111,16 @@ impl W {
         self
     }
 }
-#[doc = "ASSIST_DEBUG_LOG_MEM_FULL_FLAG_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_mem_full_flag]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_LOG_MEM_FULL_FLAG_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_mem_full_flag](index.html) module"]
 pub struct LOG_MEM_FULL_FLAG_SPEC;
 impl crate::RegisterSpec for LOG_MEM_FULL_FLAG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_mem_full_flag::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [log_mem_full_flag::R](R) reader structure"]
 impl crate::Readable for LOG_MEM_FULL_FLAG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [log_mem_full_flag::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [log_mem_full_flag::W](W) writer structure"]
 impl crate::Writable for LOG_MEM_FULL_FLAG_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_B` reader - The denominator of the frequency divider factor."]
-pub struct SCLK_DIV_B_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_B_R(crate::FieldReader<u8>);
 impl SCLK_DIV_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SCLK_DIV_B_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SCLK_DIV_B_W<'a> {
     }
 }
 #[doc = "Field `SCLK_DIV_A` reader - The numerator of the frequency divider factor."]
-pub struct SCLK_DIV_A_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_A_R(crate::FieldReader<u8>);
 impl SCLK_DIV_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SCLK_DIV_A_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SCLK_DIV_A_W<'a> {
     }
 }
 #[doc = "Field `SCLK_DIV_NUM` reader - The integral part of the frequency divider factor."]
-pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8>);
 impl SCLK_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SCLK_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> SCLK_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `SCLK_SEL` reader - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
-pub struct SCLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_SEL_R(crate::FieldReader<u8>);
 impl SCLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl SCLK_SEL_R {
     }
 }
 impl core::ops::Deref for SCLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> SCLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `SCLK_EN` reader - Set this bit to enable UART Tx/Rx clock."]
-pub struct SCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCLK_EN_R(crate::FieldReader<bool>);
 impl SCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -151,7 +151,7 @@ impl SCLK_EN_R {
     }
 }
 impl core::ops::Deref for SCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> SCLK_EN_W<'a> {
     }
 }
 #[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
-pub struct RST_CORE_R(crate::FieldReader<bool, bool>);
+pub struct RST_CORE_R(crate::FieldReader<bool>);
 impl RST_CORE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl RST_CORE_R {
     }
 }
 impl core::ops::Deref for RST_CORE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> RST_CORE_W<'a> {
     }
 }
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
-pub struct TX_SCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_SCLK_EN_R(crate::FieldReader<bool>);
 impl TX_SCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -225,7 +225,7 @@ impl TX_SCLK_EN_R {
     }
 }
 impl core::ops::Deref for TX_SCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -254,7 +254,7 @@ impl<'a> TX_SCLK_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_SCLK_EN` reader - Set this bit to enable UART Rx clock."]
-pub struct RX_SCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_SCLK_EN_R(crate::FieldReader<bool>);
 impl RX_SCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,7 +262,7 @@ impl RX_SCLK_EN_R {
     }
 }
 impl core::ops::Deref for RX_SCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> RX_SCLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Tx."]
-pub struct TX_RST_CORE_R(crate::FieldReader<bool, bool>);
+pub struct TX_RST_CORE_R(crate::FieldReader<bool>);
 impl TX_RST_CORE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -299,7 +299,7 @@ impl TX_RST_CORE_R {
     }
 }
 impl core::ops::Deref for TX_RST_CORE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -328,7 +328,7 @@ impl<'a> TX_RST_CORE_W<'a> {
     }
 }
 #[doc = "Field `RX_RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Rx."]
-pub struct RX_RST_CORE_R(crate::FieldReader<bool, bool>);
+pub struct RX_RST_CORE_R(crate::FieldReader<bool>);
 impl RX_RST_CORE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +336,7 @@ impl RX_RST_CORE_R {
     }
 }
 impl core::ops::Deref for RX_RST_CORE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -474,25 +474,16 @@ impl W {
         self
     }
 }
-#[doc = "UART core clock configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf]
-(index.html) module"]
+#[doc = "UART core clock configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf](index.html) module"]
 pub struct CLK_CONF_SPEC;
 impl crate::RegisterSpec for CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_conf::R](R) reader structure"]
 impl crate::Readable for CLK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
 }

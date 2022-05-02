@@ -35,7 +35,7 @@ impl From<crate::W<GEN1_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN1_CFG_UPMETHOD` reader - Update method for PWM generator 1's active register of configuration. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1:"]
-pub struct GEN1_CFG_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct GEN1_CFG_UPMETHOD_R(crate::FieldReader<u8>);
 impl GEN1_CFG_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl GEN1_CFG_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for GEN1_CFG_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> GEN1_CFG_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `GEN1_T0_SEL` reader - Source selection for PWM generator 1 event_t0, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
-pub struct GEN1_T0_SEL_R(crate::FieldReader<u8, u8>);
+pub struct GEN1_T0_SEL_R(crate::FieldReader<u8>);
 impl GEN1_T0_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl GEN1_T0_SEL_R {
     }
 }
 impl core::ops::Deref for GEN1_T0_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> GEN1_T0_SEL_W<'a> {
     }
 }
 #[doc = "Field `GEN1_T1_SEL` reader - Source selection for PWM generator 1 event_t1, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
-pub struct GEN1_T1_SEL_R(crate::FieldReader<u8, u8>);
+pub struct GEN1_T1_SEL_R(crate::FieldReader<u8>);
 impl GEN1_T1_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl GEN1_T1_SEL_R {
     }
 }
 impl core::ops::Deref for GEN1_T1_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "Fault event T0 and T1 handling\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_cfg0]
-(index.html) module"]
+#[doc = "Fault event T0 and T1 handling\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_cfg0](index.html) module"]
 pub struct GEN1_CFG0_SPEC;
 impl crate::RegisterSpec for GEN1_CFG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gen1_cfg0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gen1_cfg0::R](R) reader structure"]
 impl crate::Readable for GEN1_CFG0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gen1_cfg0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gen1_cfg0::W](W) writer structure"]
 impl crate::Writable for GEN1_CFG0_SPEC {
     type Writer = W;
 }

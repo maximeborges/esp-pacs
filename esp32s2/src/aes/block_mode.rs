@@ -35,7 +35,7 @@ impl From<crate::W<BLOCK_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_MODE` reader - Defines the operation type of the AES Accelerator operating under the DMA-AES working mode. For details, see Table 8. & 3'h0(BLOCK_MODE_ECB): ECB # 3'h1(BLOCK_MODE_CBC): CBC # 3'h2(BLOCK_MODE_OFB): OFB # 3'h3(BLOCK_MODE_CTR): CTR # 3'h4(BLOCK_MODE_CFB8): CFB-8 # 3'h5(BLOCK_MODE_CFB128): CFB-128 # 3'h6(BLOCK_MODE_GCM): GCM &"]
-pub struct BLOCK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct BLOCK_MODE_R(crate::FieldReader<u8>);
 impl BLOCK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BLOCK_MODE_R {
     }
 }
 impl core::ops::Deref for BLOCK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Block operation type register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [block_mode]
-(index.html) module"]
+#[doc = "Block operation type register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [block_mode](index.html) module"]
 pub struct BLOCK_MODE_SPEC;
 impl crate::RegisterSpec for BLOCK_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [block_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [block_mode::R](R) reader structure"]
 impl crate::Readable for BLOCK_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [block_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [block_mode::W](W) writer structure"]
 impl crate::Writable for BLOCK_MODE_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<BLK0_WDATA3_SPEC>> for W {
     }
 }
 #[doc = "Field `CHIP_VER_DIS_APP_CPU` reader - "]
-pub struct CHIP_VER_DIS_APP_CPU_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_VER_DIS_APP_CPU_R(crate::FieldReader<bool>);
 impl CHIP_VER_DIS_APP_CPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CHIP_VER_DIS_APP_CPU_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_DIS_APP_CPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CHIP_VER_DIS_APP_CPU_W<'a> {
     }
 }
 #[doc = "Field `CHIP_VER_DIS_BT` reader - "]
-pub struct CHIP_VER_DIS_BT_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_VER_DIS_BT_R(crate::FieldReader<bool>);
 impl CHIP_VER_DIS_BT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CHIP_VER_DIS_BT_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_DIS_BT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CHIP_VER_DIS_BT_W<'a> {
     }
 }
 #[doc = "Field `CHIP_VER_PKG_4BIT` reader - most significant bit of chip package"]
-pub struct CHIP_VER_PKG_4BIT_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_VER_PKG_4BIT_R(crate::FieldReader<bool>);
 impl CHIP_VER_PKG_4BIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,14 +117,14 @@ impl CHIP_VER_PKG_4BIT_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_PKG_4BIT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CHIP_VER_DIS_CACHE` reader - "]
-pub struct CHIP_VER_DIS_CACHE_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_VER_DIS_CACHE_R(crate::FieldReader<bool>);
 impl CHIP_VER_DIS_CACHE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,7 +132,7 @@ impl CHIP_VER_DIS_CACHE_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_DIS_CACHE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -161,7 +161,7 @@ impl<'a> CHIP_VER_DIS_CACHE_W<'a> {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_HD` reader - program for SPI_pad_config_hd"]
-pub struct SPI_PAD_CONFIG_HD_R(crate::FieldReader<u8, u8>);
+pub struct SPI_PAD_CONFIG_HD_R(crate::FieldReader<u8>);
 impl SPI_PAD_CONFIG_HD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -169,7 +169,7 @@ impl SPI_PAD_CONFIG_HD_R {
     }
 }
 impl core::ops::Deref for SPI_PAD_CONFIG_HD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -188,7 +188,7 @@ impl<'a> SPI_PAD_CONFIG_HD_W<'a> {
     }
 }
 #[doc = "Field `CHIP_VER_PKG` reader - least significant bits of chip package"]
-pub struct CHIP_VER_PKG_R(crate::FieldReader<u8, u8>);
+pub struct CHIP_VER_PKG_R(crate::FieldReader<u8>);
 impl CHIP_VER_PKG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -196,7 +196,7 @@ impl CHIP_VER_PKG_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_PKG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -215,7 +215,7 @@ impl<'a> CHIP_VER_PKG_W<'a> {
     }
 }
 #[doc = "Field `CHIP_CPU_FREQ_LOW` reader - If set alongside EFUSE_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
-pub struct CHIP_CPU_FREQ_LOW_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_CPU_FREQ_LOW_R(crate::FieldReader<bool>);
 impl CHIP_CPU_FREQ_LOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -223,7 +223,7 @@ impl CHIP_CPU_FREQ_LOW_R {
     }
 }
 impl core::ops::Deref for CHIP_CPU_FREQ_LOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -252,7 +252,7 @@ impl<'a> CHIP_CPU_FREQ_LOW_W<'a> {
     }
 }
 #[doc = "Field `CHIP_CPU_FREQ_RATED` reader - If set, the ESP32's maximum CPU frequency has been rated"]
-pub struct CHIP_CPU_FREQ_RATED_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_CPU_FREQ_RATED_R(crate::FieldReader<bool>);
 impl CHIP_CPU_FREQ_RATED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -260,7 +260,7 @@ impl CHIP_CPU_FREQ_RATED_R {
     }
 }
 impl core::ops::Deref for CHIP_CPU_FREQ_RATED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -288,9 +288,8 @@ impl<'a> CHIP_CPU_FREQ_RATED_W<'a> {
         self.w
     }
 }
-#[doc = "Field `BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\]
- is reserved for internal use"]
-pub struct BLK3_PART_RESERVE_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
+pub struct BLK3_PART_RESERVE_R(crate::FieldReader<bool>);
 impl BLK3_PART_RESERVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -298,14 +297,13 @@ impl BLK3_PART_RESERVE_R {
     }
 }
 impl core::ops::Deref for BLK3_PART_RESERVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\]
- is reserved for internal use"]
+#[doc = "Field `BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
 pub struct BLK3_PART_RESERVE_W<'a> {
     w: &'a mut W,
 }
@@ -328,7 +326,7 @@ impl<'a> BLK3_PART_RESERVE_W<'a> {
     }
 }
 #[doc = "Field `CHIP_VER_REV1` reader - "]
-pub struct CHIP_VER_REV1_R(crate::FieldReader<bool, bool>);
+pub struct CHIP_VER_REV1_R(crate::FieldReader<bool>);
 impl CHIP_VER_REV1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +334,7 @@ impl CHIP_VER_REV1_R {
     }
 }
 impl core::ops::Deref for CHIP_VER_REV1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,8 +403,7 @@ impl R {
     pub fn chip_cpu_freq_rated(&self) -> CHIP_CPU_FREQ_RATED_R {
         CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
- is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
     pub fn blk3_part_reserve(&self) -> BLK3_PART_RESERVE_R {
         BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 1) != 0)
@@ -453,8 +450,7 @@ impl W {
     pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W {
         CHIP_CPU_FREQ_RATED_W { w: self }
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
- is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
     pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W {
         BLK3_PART_RESERVE_W { w: self }
@@ -471,25 +467,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata3]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata3](index.html) module"]
 pub struct BLK0_WDATA3_SPEC;
 impl crate::RegisterSpec for BLK0_WDATA3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_wdata3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_wdata3::R](R) reader structure"]
 impl crate::Readable for BLK0_WDATA3_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk0_wdata3::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk0_wdata3::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA3_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CFG_DATA7_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_STATE` reader - "]
-pub struct PIN_STATE_R(crate::FieldReader<u8, u8>);
+pub struct PIN_STATE_R(crate::FieldReader<u8>);
 impl PIN_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PIN_STATE_R {
     }
 }
 impl core::ops::Deref for PIN_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PIN_STATE_W<'a> {
     }
 }
 #[doc = "Field `CHIP_STATE` reader - "]
-pub struct CHIP_STATE_R(crate::FieldReader<u8, u8>);
+pub struct CHIP_STATE_R(crate::FieldReader<u8>);
 impl CHIP_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CHIP_STATE_R {
     }
 }
 impl core::ops::Deref for CHIP_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CHIP_STATE_W<'a> {
     }
 }
 #[doc = "Field `SDIO_RST` reader - "]
-pub struct SDIO_RST_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_RST_R(crate::FieldReader<bool>);
 impl SDIO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SDIO_RST_R {
     }
 }
 impl core::ops::Deref for SDIO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SDIO_RST_W<'a> {
     }
 }
 #[doc = "Field `SDIO_IOREADY0` reader - "]
-pub struct SDIO_IOREADY0_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_IOREADY0_R(crate::FieldReader<bool>);
 impl SDIO_IOREADY0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl SDIO_IOREADY0_R {
     }
 }
 impl core::ops::Deref for SDIO_IOREADY0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_data7]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_data7](index.html) module"]
 pub struct CFG_DATA7_SPEC;
 impl crate::RegisterSpec for CFG_DATA7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cfg_data7::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cfg_data7::R](R) reader structure"]
 impl crate::Readable for CFG_DATA7_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cfg_data7::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cfg_data7::W](W) writer structure"]
 impl crate::Writable for CFG_DATA7_SPEC {
     type Writer = W;
 }

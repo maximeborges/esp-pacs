@@ -35,7 +35,7 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_REJECT_EN` reader - enable GPIO reject"]
-pub struct GPIO_REJECT_EN_R(crate::FieldReader<bool, bool>);
+pub struct GPIO_REJECT_EN_R(crate::FieldReader<bool>);
 impl GPIO_REJECT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl GPIO_REJECT_EN_R {
     }
 }
 impl core::ops::Deref for GPIO_REJECT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> GPIO_REJECT_EN_W<'a> {
     }
 }
 #[doc = "Field `SDIO_REJECT_EN` reader - enable SDIO reject"]
-pub struct SDIO_REJECT_EN_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_REJECT_EN_R(crate::FieldReader<bool>);
 impl SDIO_REJECT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SDIO_REJECT_EN_R {
     }
 }
 impl core::ops::Deref for SDIO_REJECT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SDIO_REJECT_EN_W<'a> {
     }
 }
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
-pub struct LIGHT_SLP_REJECT_EN_R(crate::FieldReader<bool, bool>);
+pub struct LIGHT_SLP_REJECT_EN_R(crate::FieldReader<bool>);
 impl LIGHT_SLP_REJECT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl LIGHT_SLP_REJECT_EN_R {
     }
 }
 impl core::ops::Deref for LIGHT_SLP_REJECT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> LIGHT_SLP_REJECT_EN_W<'a> {
     }
 }
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - enable reject for deep sleep"]
-pub struct DEEP_SLP_REJECT_EN_R(crate::FieldReader<bool, bool>);
+pub struct DEEP_SLP_REJECT_EN_R(crate::FieldReader<bool>);
 impl DEEP_SLP_REJECT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DEEP_SLP_REJECT_EN_R {
     }
 }
 impl core::ops::Deref for DEEP_SLP_REJECT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DEEP_SLP_REJECT_EN_W<'a> {
     }
 }
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub struct REJECT_CAUSE_R(crate::FieldReader<u8, u8>);
+pub struct REJECT_CAUSE_R(crate::FieldReader<u8>);
 impl REJECT_CAUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl REJECT_CAUSE_R {
     }
 }
 impl core::ops::Deref for REJECT_CAUSE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -252,25 +252,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_reject_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_reject_conf](index.html) module"]
 pub struct SLP_REJECT_CONF_SPEC;
 impl crate::RegisterSpec for SLP_REJECT_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slp_reject_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slp_reject_conf::R](R) reader structure"]
 impl crate::Readable for SLP_REJECT_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slp_reject_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slp_reject_conf::W](W) writer structure"]
 impl crate::Writable for SLP_REJECT_CONF_SPEC {
     type Writer = W;
 }

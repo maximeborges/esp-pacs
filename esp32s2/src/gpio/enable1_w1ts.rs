@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "GPIO32 ~ 53 output enable bit set register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [enable1_w1ts]
-(index.html) module"]
+#[doc = "GPIO32 ~ 53 output enable bit set register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [enable1_w1ts](index.html) module"]
 pub struct ENABLE1_W1TS_SPEC;
 impl crate::RegisterSpec for ENABLE1_W1TS_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [enable1_w1ts::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [enable1_w1ts::W](W) writer structure"]
 impl crate::Writable for ENABLE1_W1TS_SPEC {
     type Writer = W;
 }

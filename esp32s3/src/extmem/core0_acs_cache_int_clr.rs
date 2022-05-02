@@ -162,18 +162,12 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core0_acs_cache_int_clr]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core0_acs_cache_int_clr](index.html) module"]
 pub struct CORE0_ACS_CACHE_INT_CLR_SPEC;
 impl crate::RegisterSpec for CORE0_ACS_CACHE_INT_CLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [core0_acs_cache_int_clr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core0_acs_cache_int_clr::W](W) writer structure"]
 impl crate::Writable for CORE0_ACS_CACHE_INT_CLR_SPEC {
     type Writer = W;
 }

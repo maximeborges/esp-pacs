@@ -35,7 +35,7 @@ impl From<crate::W<BRIDGE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TXEOF_ENA` reader - "]
-pub struct TXEOF_ENA_R(crate::FieldReader<u8, u8>);
+pub struct TXEOF_ENA_R(crate::FieldReader<u8>);
 impl TXEOF_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TXEOF_ENA_R {
     }
 }
 impl core::ops::Deref for TXEOF_ENA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TXEOF_ENA_W<'a> {
     }
 }
 #[doc = "Field `FIFO_MAP_ENA` reader - "]
-pub struct FIFO_MAP_ENA_R(crate::FieldReader<u8, u8>);
+pub struct FIFO_MAP_ENA_R(crate::FieldReader<u8>);
 impl FIFO_MAP_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl FIFO_MAP_ENA_R {
     }
 }
 impl core::ops::Deref for FIFO_MAP_ENA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> FIFO_MAP_ENA_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TX_DUMMY_MODE` reader - "]
-pub struct SLC0_TX_DUMMY_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TX_DUMMY_MODE_R(crate::FieldReader<bool>);
 impl SLC0_TX_DUMMY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SLC0_TX_DUMMY_MODE_R {
     }
 }
 impl core::ops::Deref for SLC0_TX_DUMMY_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SLC0_TX_DUMMY_MODE_W<'a> {
     }
 }
 #[doc = "Field `HDA_MAP_128K` reader - "]
-pub struct HDA_MAP_128K_R(crate::FieldReader<bool, bool>);
+pub struct HDA_MAP_128K_R(crate::FieldReader<bool>);
 impl HDA_MAP_128K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl HDA_MAP_128K_R {
     }
 }
 impl core::ops::Deref for HDA_MAP_128K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> HDA_MAP_128K_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TX_DUMMY_MODE` reader - "]
-pub struct SLC1_TX_DUMMY_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TX_DUMMY_MODE_R(crate::FieldReader<bool>);
 impl SLC1_TX_DUMMY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl SLC1_TX_DUMMY_MODE_R {
     }
 }
 impl core::ops::Deref for SLC1_TX_DUMMY_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> SLC1_TX_DUMMY_MODE_W<'a> {
     }
 }
 #[doc = "Field `TX_PUSH_IDLE_NUM` reader - "]
-pub struct TX_PUSH_IDLE_NUM_R(crate::FieldReader<u16, u16>);
+pub struct TX_PUSH_IDLE_NUM_R(crate::FieldReader<u16>);
 impl TX_PUSH_IDLE_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -208,7 +208,7 @@ impl TX_PUSH_IDLE_NUM_R {
     }
 }
 impl core::ops::Deref for TX_PUSH_IDLE_NUM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -296,25 +296,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bridge_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bridge_conf](index.html) module"]
 pub struct BRIDGE_CONF_SPEC;
 impl crate::RegisterSpec for BRIDGE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bridge_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bridge_conf::R](R) reader structure"]
 impl crate::Readable for BRIDGE_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bridge_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bridge_conf::W](W) writer structure"]
 impl crate::Writable for BRIDGE_CONF_SPEC {
     type Writer = W;
 }

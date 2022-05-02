@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_SCAN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_RES` reader - Denoise resolution. 0: 12-bit; 1: 10-bit; 2: 8-bit; 3: 4-bit."]
-pub struct TOUCH_DENOISE_RES_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DENOISE_RES_R(crate::FieldReader<u8>);
 impl TOUCH_DENOISE_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_DENOISE_RES_R {
     }
 }
 impl core::ops::Deref for TOUCH_DENOISE_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TOUCH_DENOISE_RES_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_EN` reader - Touch pad 0 will be used to denoise."]
-pub struct TOUCH_DENOISE_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_DENOISE_EN_R(crate::FieldReader<bool>);
 impl TOUCH_DENOISE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TOUCH_DENOISE_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_DENOISE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TOUCH_DENOISE_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_INACTIVE_CONNECTION` reader - Inactive touch pads connect to 0: HighZ, 1: GND."]
-pub struct TOUCH_INACTIVE_CONNECTION_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_INACTIVE_CONNECTION_R(crate::FieldReader<bool>);
 impl TOUCH_INACTIVE_CONNECTION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl TOUCH_INACTIVE_CONNECTION_R {
     }
 }
 impl core::ops::Deref for TOUCH_INACTIVE_CONNECTION_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> TOUCH_INACTIVE_CONNECTION_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` reader - Touch pad 14 will be used as shield_pad."]
-pub struct TOUCH_SHIELD_PAD_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_SHIELD_PAD_EN_R(crate::FieldReader<bool>);
 impl TOUCH_SHIELD_PAD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl TOUCH_SHIELD_PAD_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_SHIELD_PAD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> TOUCH_SHIELD_PAD_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` reader - Pad enable map for touch scan mode."]
-pub struct TOUCH_SCAN_PAD_MAP_R(crate::FieldReader<u16, u16>);
+pub struct TOUCH_SCAN_PAD_MAP_R(crate::FieldReader<u16>);
 impl TOUCH_SCAN_PAD_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -181,7 +181,7 @@ impl TOUCH_SCAN_PAD_MAP_R {
     }
 }
 impl core::ops::Deref for TOUCH_SCAN_PAD_MAP_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> TOUCH_SCAN_PAD_MAP_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_BUFDRV` reader - Touch 14 buffer driver strength."]
-pub struct TOUCH_BUFDRV_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_BUFDRV_R(crate::FieldReader<u8>);
 impl TOUCH_BUFDRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -208,7 +208,7 @@ impl TOUCH_BUFDRV_R {
     }
 }
 impl core::ops::Deref for TOUCH_BUFDRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> TOUCH_BUFDRV_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_OUT_RING` reader - Select out one pad as guard_ring."]
-pub struct TOUCH_OUT_RING_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_OUT_RING_R(crate::FieldReader<u8>);
 impl TOUCH_OUT_RING_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -235,7 +235,7 @@ impl TOUCH_OUT_RING_R {
     }
 }
 impl core::ops::Deref for TOUCH_OUT_RING_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -333,25 +333,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure touch scan settings\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_scan_ctrl]
-(index.html) module"]
+#[doc = "Configure touch scan settings\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_scan_ctrl](index.html) module"]
 pub struct TOUCH_SCAN_CTRL_SPEC;
 impl crate::RegisterSpec for TOUCH_SCAN_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_scan_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_scan_ctrl::R](R) reader structure"]
 impl crate::Readable for TOUCH_SCAN_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_scan_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_scan_ctrl::W](W) writer structure"]
 impl crate::Writable for TOUCH_SCAN_CTRL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<SAR_I2C_IO_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DEBUG_BIT_SEL` reader - "]
-pub struct SAR_DEBUG_BIT_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SAR_DEBUG_BIT_SEL_R(crate::FieldReader<u8>);
 impl SAR_DEBUG_BIT_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SAR_DEBUG_BIT_SEL_R {
     }
 }
 impl core::ops::Deref for SAR_DEBUG_BIT_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SAR_DEBUG_BIT_SEL_W<'a> {
     }
 }
 #[doc = "Field `SAR_I2C_SCL_SEL` reader - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
-pub struct SAR_I2C_SCL_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SAR_I2C_SCL_SEL_R(crate::FieldReader<u8>);
 impl SAR_I2C_SCL_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SAR_I2C_SCL_SEL_R {
     }
 }
 impl core::ops::Deref for SAR_I2C_SCL_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SAR_I2C_SCL_SEL_W<'a> {
     }
 }
 #[doc = "Field `SAR_I2C_SDA_SEL` reader - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
-pub struct SAR_I2C_SDA_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SAR_I2C_SDA_SEL_R(crate::FieldReader<u8>);
 impl SAR_I2C_SDA_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SAR_I2C_SDA_SEL_R {
     }
 }
 impl core::ops::Deref for SAR_I2C_SDA_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC I2C pad selection\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_i2c_io]
-(index.html) module"]
+#[doc = "RTC I2C pad selection\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_i2c_io](index.html) module"]
 pub struct SAR_I2C_IO_SPEC;
 impl crate::RegisterSpec for SAR_I2C_IO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_i2c_io::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_i2c_io::R](R) reader structure"]
 impl crate::Readable for SAR_I2C_IO_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_i2c_io::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_i2c_io::W](W) writer structure"]
 impl crate::Writable for SAR_I2C_IO_SPEC {
     type Writer = W;
 }

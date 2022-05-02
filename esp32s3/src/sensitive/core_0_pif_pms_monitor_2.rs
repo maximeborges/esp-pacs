@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_PIF_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR` reader - Record core0 illegal access interrupt state."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
 impl CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R {
     }
 }
 impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0` reader - Record hport information when core0 initiate illegal access."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R(crate::FieldReader<bool>);
 impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
     }
 }
 impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE` reader - Record access type when core0 initate illegal access."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8>);
 impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
     }
 }
 impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE` reader - Record access direction when core0 initiate illegal access."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool>);
 impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
     }
 }
 impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD` reader - Record world information when core0 initiate illegal access."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R(crate::FieldReader<u8>);
 impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,7 +82,7 @@ impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
     }
 }
 impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -123,16 +123,12 @@ impl R {
         CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
-#[doc = "Core0 permission report register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_pif_pms_monitor_2]
-(index.html) module"]
+#[doc = "Core0 permission report register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_pif_pms_monitor_2](index.html) module"]
 pub struct CORE_0_PIF_PMS_MONITOR_2_SPEC;
 impl crate::RegisterSpec for CORE_0_PIF_PMS_MONITOR_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_pif_pms_monitor_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_pif_pms_monitor_2::R](R) reader structure"]
 impl crate::Readable for CORE_0_PIF_PMS_MONITOR_2_SPEC {
     type Reader = R;
 }

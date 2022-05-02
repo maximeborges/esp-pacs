@@ -35,7 +35,7 @@ impl From<crate::W<REGION_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_0` reader - region_pms_constrain_world_0_area_0"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_1` reader - region_pms_constrain_world_0_area_1"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_2` reader - region_pms_constrain_world_0_area_2"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_3` reader - region_pms_constrain_world_0_area_3"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_4` reader - region_pms_constrain_world_0_area_4"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_5` reader - region_pms_constrain_world_0_area_5"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<'a> {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_0_AREA_6` reader - region_pms_constrain_world_0_area_6"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R(crate::FieldReader<u8, u8>);
+pub struct REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R(crate::FieldReader<u8>);
 impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R {
     }
 }
 impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -303,25 +303,16 @@ impl W {
         self
     }
 }
-#[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_1_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [region_pms_constrain_1]
-(index.html) module"]
+#[doc = "SENSITIVE_REGION_PMS_CONSTRAIN_1_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [region_pms_constrain_1](index.html) module"]
 pub struct REGION_PMS_CONSTRAIN_1_SPEC;
 impl crate::RegisterSpec for REGION_PMS_CONSTRAIN_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [region_pms_constrain_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [region_pms_constrain_1::R](R) reader structure"]
 impl crate::Readable for REGION_PMS_CONSTRAIN_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [region_pms_constrain_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [region_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for REGION_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
 }

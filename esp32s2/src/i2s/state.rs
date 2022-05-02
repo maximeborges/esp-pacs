@@ -14,7 +14,7 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_IDLE` reader - 1: I2S TX is in idle state. 0: I2S TX is at work."]
-pub struct TX_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct TX_IDLE_R(crate::FieldReader<bool>);
 impl TX_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl TX_IDLE_R {
     }
 }
 impl core::ops::Deref for TX_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         TX_IDLE_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "I2S TX status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state]
-(index.html) module"]
+#[doc = "I2S TX status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state](index.html) module"]
 pub struct STATE_SPEC;
 impl crate::RegisterSpec for STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [state::R](R) reader structure"]
 impl crate::Readable for STATE_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DMA_BLOCK_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_BLOCK_NUM` reader - dma-sha block number"]
-pub struct DMA_BLOCK_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DMA_BLOCK_NUM_R(crate::FieldReader<u8>);
 impl DMA_BLOCK_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DMA_BLOCK_NUM_R {
     }
 }
 impl core::ops::Deref for DMA_BLOCK_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA configuration register 0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_block_num]
-(index.html) module"]
+#[doc = "DMA configuration register 0.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_block_num](index.html) module"]
 pub struct DMA_BLOCK_NUM_SPEC;
 impl crate::RegisterSpec for DMA_BLOCK_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_block_num::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_block_num::R](R) reader structure"]
 impl crate::Readable for DMA_BLOCK_NUM_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_block_num::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_block_num::W](W) writer structure"]
 impl crate::Writable for DMA_BLOCK_NUM_SPEC {
     type Writer = W;
 }

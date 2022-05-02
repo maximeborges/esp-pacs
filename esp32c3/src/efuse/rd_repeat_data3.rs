@@ -13,9 +13,8 @@ impl From<crate::R<RD_REPEAT_DATA3_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `DIS_DOWNLOAD_MODE` reader - Set this bit to disable download mode (boot_mode\\[3:0\\]
- = 0, 1, 2, 3, 6, 7)."]
-pub struct DIS_DOWNLOAD_MODE_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `DIS_DOWNLOAD_MODE` reader - Set this bit to disable download mode (boot_mode\\[3:0\\] = 0, 1, 2, 3, 6, 7)."]
+pub struct DIS_DOWNLOAD_MODE_R(crate::FieldReader<bool>);
 impl DIS_DOWNLOAD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -23,15 +22,14 @@ impl DIS_DOWNLOAD_MODE_R {
     }
 }
 impl core::ops::Deref for DIS_DOWNLOAD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DIS_LEGACY_SPI_BOOT` reader - Set this bit to disable Legacy SPI boot mode (boot_mode\\[3:0\\]
- = 4)."]
-pub struct DIS_LEGACY_SPI_BOOT_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `DIS_LEGACY_SPI_BOOT` reader - Set this bit to disable Legacy SPI boot mode (boot_mode\\[3:0\\] = 4)."]
+pub struct DIS_LEGACY_SPI_BOOT_R(crate::FieldReader<bool>);
 impl DIS_LEGACY_SPI_BOOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -39,14 +37,14 @@ impl DIS_LEGACY_SPI_BOOT_R {
     }
 }
 impl core::ops::Deref for DIS_LEGACY_SPI_BOOT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `UART_PRINT_CHANNEL` reader - Selectes the default UART print channel. 0: UART0. 1: UART1."]
-pub struct UART_PRINT_CHANNEL_R(crate::FieldReader<bool, bool>);
+pub struct UART_PRINT_CHANNEL_R(crate::FieldReader<bool>);
 impl UART_PRINT_CHANNEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -54,14 +52,14 @@ impl UART_PRINT_CHANNEL_R {
     }
 }
 impl core::ops::Deref for UART_PRINT_CHANNEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_ECC_MODE` reader - Set ECC mode in ROM, 0: ROM would Enable Flash ECC 16to18 byte mode. 1:ROM would use 16to17 byte mode."]
-pub struct FLASH_ECC_MODE_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_ECC_MODE_R(crate::FieldReader<bool>);
 impl FLASH_ECC_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -69,14 +67,14 @@ impl FLASH_ECC_MODE_R {
     }
 }
 impl core::ops::Deref for FLASH_ECC_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DIS_USB_DOWNLOAD_MODE` reader - Set this bit to disable UART download mode through USB."]
-pub struct DIS_USB_DOWNLOAD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DIS_USB_DOWNLOAD_MODE_R(crate::FieldReader<bool>);
 impl DIS_USB_DOWNLOAD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -84,14 +82,14 @@ impl DIS_USB_DOWNLOAD_MODE_R {
     }
 }
 impl core::ops::Deref for DIS_USB_DOWNLOAD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD` reader - Set this bit to enable secure UART download mode."]
-pub struct ENABLE_SECURITY_DOWNLOAD_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_SECURITY_DOWNLOAD_R(crate::FieldReader<bool>);
 impl ENABLE_SECURITY_DOWNLOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -99,14 +97,14 @@ impl ENABLE_SECURITY_DOWNLOAD_R {
     }
 }
 impl core::ops::Deref for ENABLE_SECURITY_DOWNLOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `UART_PRINT_CONTROL` reader - Set the default UARTboot message output mode. 00: Enabled. 01: Enabled when GPIO8 is low at reset. 10: Enabled when GPIO8 is high at reset. 11:disabled."]
-pub struct UART_PRINT_CONTROL_R(crate::FieldReader<u8, u8>);
+pub struct UART_PRINT_CONTROL_R(crate::FieldReader<u8>);
 impl UART_PRINT_CONTROL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -114,14 +112,14 @@ impl UART_PRINT_CONTROL_R {
     }
 }
 impl core::ops::Deref for UART_PRINT_CONTROL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PIN_POWER_SELECTION` reader - GPIO33-GPIO37 power supply selection in ROM code. 0: VDD3P3_CPU. 1: VDD_SPI."]
-pub struct PIN_POWER_SELECTION_R(crate::FieldReader<bool, bool>);
+pub struct PIN_POWER_SELECTION_R(crate::FieldReader<bool>);
 impl PIN_POWER_SELECTION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -129,14 +127,14 @@ impl PIN_POWER_SELECTION_R {
     }
 }
 impl core::ops::Deref for PIN_POWER_SELECTION_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_TYPE` reader - Set the maximum lines of SPI flash. 0: four lines. 1: eight lines."]
-pub struct FLASH_TYPE_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_TYPE_R(crate::FieldReader<bool>);
 impl FLASH_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,14 +142,14 @@ impl FLASH_TYPE_R {
     }
 }
 impl core::ops::Deref for FLASH_TYPE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_PAGE_SIZE` reader - Set Flash page size."]
-pub struct FLASH_PAGE_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_PAGE_SIZE_R(crate::FieldReader<u8>);
 impl FLASH_PAGE_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -159,14 +157,14 @@ impl FLASH_PAGE_SIZE_R {
     }
 }
 impl core::ops::Deref for FLASH_PAGE_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_ECC_EN` reader - Set 1 to enable ECC for flash boot."]
-pub struct FLASH_ECC_EN_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_ECC_EN_R(crate::FieldReader<bool>);
 impl FLASH_ECC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -174,14 +172,14 @@ impl FLASH_ECC_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_ECC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FORCE_SEND_RESUME` reader - Set this bit to force ROM code to send a resume command during SPI boot."]
-pub struct FORCE_SEND_RESUME_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_SEND_RESUME_R(crate::FieldReader<bool>);
 impl FORCE_SEND_RESUME_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -189,14 +187,14 @@ impl FORCE_SEND_RESUME_R {
     }
 }
 impl core::ops::Deref for FORCE_SEND_RESUME_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SECURE_VERSION` reader - Secure version (used by ESP-IDF anti-rollback feature)."]
-pub struct SECURE_VERSION_R(crate::FieldReader<u16, u16>);
+pub struct SECURE_VERSION_R(crate::FieldReader<u16>);
 impl SECURE_VERSION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -204,14 +202,14 @@ impl SECURE_VERSION_R {
     }
 }
 impl core::ops::Deref for SECURE_VERSION_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RPT4_RESERVED1` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED1_R(crate::FieldReader<u8, u8>);
+pub struct RPT4_RESERVED1_R(crate::FieldReader<u8>);
 impl RPT4_RESERVED1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -219,21 +217,19 @@ impl RPT4_RESERVED1_R {
     }
 }
 impl core::ops::Deref for RPT4_RESERVED1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 impl R {
-    #[doc = "Bit 0 - Set this bit to disable download mode (boot_mode\\[3:0\\]
- = 0, 1, 2, 3, 6, 7)."]
+    #[doc = "Bit 0 - Set this bit to disable download mode (boot_mode\\[3:0\\] = 0, 1, 2, 3, 6, 7)."]
     #[inline(always)]
     pub fn dis_download_mode(&self) -> DIS_DOWNLOAD_MODE_R {
         DIS_DOWNLOAD_MODE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Set this bit to disable Legacy SPI boot mode (boot_mode\\[3:0\\]
- = 4)."]
+    #[doc = "Bit 1 - Set this bit to disable Legacy SPI boot mode (boot_mode\\[3:0\\] = 4)."]
     #[inline(always)]
     pub fn dis_legacy_spi_boot(&self) -> DIS_LEGACY_SPI_BOOT_R {
         DIS_LEGACY_SPI_BOOT_R::new(((self.bits >> 1) & 1) != 0)
@@ -299,16 +295,12 @@ impl R {
         RPT4_RESERVED1_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
-#[doc = "BLOCK0 data register 4.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data3]
-(index.html) module"]
+#[doc = "BLOCK0 data register 4.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data3](index.html) module"]
 pub struct RD_REPEAT_DATA3_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_data3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_repeat_data3::R](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA3_SPEC {
     type Reader = R;
 }

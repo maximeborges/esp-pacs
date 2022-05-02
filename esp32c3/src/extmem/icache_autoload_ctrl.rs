@@ -35,7 +35,7 @@ impl From<crate::W<ICACHE_AUTOLOAD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the first section for autoload operation."]
-pub struct ICACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_AUTOLOAD_SCT0_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_AUTOLOAD_SCT0_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_SCT0_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ICACHE_AUTOLOAD_SCT0_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the second section for autoload operation."]
-pub struct ICACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_AUTOLOAD_SCT1_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ICACHE_AUTOLOAD_SCT1_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_SCT1_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ICACHE_AUTOLOAD_SCT1_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation. It is combined with icache_autoload_done. 1: enable, 0: disable."]
-pub struct ICACHE_AUTOLOAD_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_AUTOLOAD_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_AUTOLOAD_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ICACHE_AUTOLOAD_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ICACHE_AUTOLOAD_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_DONE` reader - The bit is used to indicate autoload operation is finished."]
-pub struct ICACHE_AUTOLOAD_DONE_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_AUTOLOAD_DONE_R(crate::FieldReader<bool>);
 impl ICACHE_AUTOLOAD_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,14 +154,14 @@ impl ICACHE_AUTOLOAD_DONE_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub struct ICACHE_AUTOLOAD_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_AUTOLOAD_ORDER_R(crate::FieldReader<bool>);
 impl ICACHE_AUTOLOAD_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -169,7 +169,7 @@ impl ICACHE_AUTOLOAD_ORDER_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -198,7 +198,7 @@ impl<'a> ICACHE_AUTOLOAD_ORDER_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub struct ICACHE_AUTOLOAD_RQST_R(crate::FieldReader<u8, u8>);
+pub struct ICACHE_AUTOLOAD_RQST_R(crate::FieldReader<u8>);
 impl ICACHE_AUTOLOAD_RQST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -206,7 +206,7 @@ impl ICACHE_AUTOLOAD_RQST_R {
     }
 }
 impl core::ops::Deref for ICACHE_AUTOLOAD_RQST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -289,25 +289,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_autoload_ctrl]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_autoload_ctrl](index.html) module"]
 pub struct ICACHE_AUTOLOAD_CTRL_SPEC;
 impl crate::RegisterSpec for ICACHE_AUTOLOAD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icache_autoload_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [icache_autoload_ctrl::R](R) reader structure"]
 impl crate::Readable for ICACHE_AUTOLOAD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [icache_autoload_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [icache_autoload_ctrl::W](W) writer structure"]
 impl crate::Writable for ICACHE_AUTOLOAD_CTRL_SPEC {
     type Writer = W;
 }

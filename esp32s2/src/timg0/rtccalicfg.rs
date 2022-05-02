@@ -35,7 +35,7 @@ impl From<crate::W<RTCCALICFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_CALI_START_CYCLING` reader - When set, periodic calibration is enabled."]
-pub struct RTC_CALI_START_CYCLING_R(crate::FieldReader<bool, bool>);
+pub struct RTC_CALI_START_CYCLING_R(crate::FieldReader<bool>);
 impl RTC_CALI_START_CYCLING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_CALI_START_CYCLING_R {
     }
 }
 impl core::ops::Deref for RTC_CALI_START_CYCLING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_CALI_START_CYCLING_W<'a> {
     }
 }
 #[doc = "Field `RTC_CALI_CLK_SEL` reader - Used to select the clock to be calibrated. 0: RTC_CLK. 1: RTC20M_D256_CLK. 2: XTAL32K_CLK."]
-pub struct RTC_CALI_CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_CALI_CLK_SEL_R(crate::FieldReader<u8>);
 impl RTC_CALI_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl RTC_CALI_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_CALI_CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> RTC_CALI_CLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_CALI_RDY` reader - Set this bit to mark the completion of calibration."]
-pub struct RTC_CALI_RDY_R(crate::FieldReader<bool, bool>);
+pub struct RTC_CALI_RDY_R(crate::FieldReader<bool>);
 impl RTC_CALI_RDY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,14 +107,14 @@ impl RTC_CALI_RDY_R {
     }
 }
 impl core::ops::Deref for RTC_CALI_RDY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RTC_CALI_MAX` reader - Calibration time, in cycles of the clock to be calibrated."]
-pub struct RTC_CALI_MAX_R(crate::FieldReader<u16, u16>);
+pub struct RTC_CALI_MAX_R(crate::FieldReader<u16>);
 impl RTC_CALI_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -122,7 +122,7 @@ impl RTC_CALI_MAX_R {
     }
 }
 impl core::ops::Deref for RTC_CALI_MAX_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -141,7 +141,7 @@ impl<'a> RTC_CALI_MAX_W<'a> {
     }
 }
 #[doc = "Field `RTC_CALI_START` reader - Set this bit to starts calibration."]
-pub struct RTC_CALI_START_R(crate::FieldReader<bool, bool>);
+pub struct RTC_CALI_START_R(crate::FieldReader<bool>);
 impl RTC_CALI_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -149,7 +149,7 @@ impl RTC_CALI_START_R {
     }
 }
 impl core::ops::Deref for RTC_CALI_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC calibration configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtccalicfg]
-(index.html) module"]
+#[doc = "RTC calibration configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtccalicfg](index.html) module"]
 pub struct RTCCALICFG_SPEC;
 impl crate::RegisterSpec for RTCCALICFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtccalicfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtccalicfg::R](R) reader structure"]
 impl crate::Readable for RTCCALICFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtccalicfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtccalicfg::W](W) writer structure"]
 impl crate::Writable for RTCCALICFG_SPEC {
     type Writer = W;
 }

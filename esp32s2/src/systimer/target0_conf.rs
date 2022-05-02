@@ -35,7 +35,7 @@ impl From<crate::W<TARGET0_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET0_PERIOD` reader - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
-pub struct TARGET0_PERIOD_R(crate::FieldReader<u32, u32>);
+pub struct TARGET0_PERIOD_R(crate::FieldReader<u32>);
 impl TARGET0_PERIOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TARGET0_PERIOD_R {
     }
 }
 impl core::ops::Deref for TARGET0_PERIOD_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TARGET0_PERIOD_W<'a> {
     }
 }
 #[doc = "Field `TARGET0_PERIOD_MODE` reader - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
-pub struct TARGET0_PERIOD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct TARGET0_PERIOD_MODE_R(crate::FieldReader<bool>);
 impl TARGET0_PERIOD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TARGET0_PERIOD_MODE_R {
     }
 }
 impl core::ops::Deref for TARGET0_PERIOD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TARGET0_PERIOD_MODE_W<'a> {
     }
 }
 #[doc = "Field `TARGET0_WORK_EN` reader - System timer target 0 work enable."]
-pub struct TARGET0_WORK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TARGET0_WORK_EN_R(crate::FieldReader<bool>);
 impl TARGET0_WORK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl TARGET0_WORK_EN_R {
     }
 }
 impl core::ops::Deref for TARGET0_WORK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure work mode for system timer target 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [target0_conf]
-(index.html) module"]
+#[doc = "Configure work mode for system timer target 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [target0_conf](index.html) module"]
 pub struct TARGET0_CONF_SPEC;
 impl crate::RegisterSpec for TARGET0_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [target0_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [target0_conf::R](R) reader structure"]
 impl crate::Readable for TARGET0_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [target0_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [target0_conf::W](W) writer structure"]
 impl crate::Writable for TARGET0_CONF_SPEC {
     type Writer = W;
 }

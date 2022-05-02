@@ -35,7 +35,7 @@ impl From<crate::W<SAR_POWER_XPD_SAR_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8, u8>);
+pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
 impl FORCE_XPD_SAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl FORCE_XPD_SAR_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> FORCE_XPD_SAR_W<'a> {
     }
 }
 #[doc = "Field `SARCLK_EN` reader - "]
-pub struct SARCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SARCLK_EN_R(crate::FieldReader<bool>);
 impl SARCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SARCLK_EN_R {
     }
 }
 impl core::ops::Deref for SARCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "configure saradc’s power by sw\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_power_xpd_sar]
-(index.html) module"]
+#[doc = "configure saradc’s power by sw\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_power_xpd_sar](index.html) module"]
 pub struct SAR_POWER_XPD_SAR_SPEC;
 impl crate::RegisterSpec for SAR_POWER_XPD_SAR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_power_xpd_sar::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_power_xpd_sar::R](R) reader structure"]
 impl crate::Readable for SAR_POWER_XPD_SAR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_power_xpd_sar::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_power_xpd_sar::W](W) writer structure"]
 impl crate::Writable for SAR_POWER_XPD_SAR_SPEC {
     type Writer = W;
 }

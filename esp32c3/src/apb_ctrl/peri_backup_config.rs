@@ -35,7 +35,7 @@ impl From<crate::W<PERI_BACKUP_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_BACKUP_FLOW_ERR` reader - reg_peri_backup_flow_err"]
-pub struct PERI_BACKUP_FLOW_ERR_R(crate::FieldReader<u8, u8>);
+pub struct PERI_BACKUP_FLOW_ERR_R(crate::FieldReader<u8>);
 impl PERI_BACKUP_FLOW_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl PERI_BACKUP_FLOW_ERR_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_FLOW_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` reader - reg_peri_backup_burst_limit"]
-pub struct PERI_BACKUP_BURST_LIMIT_R(crate::FieldReader<u8, u8>);
+pub struct PERI_BACKUP_BURST_LIMIT_R(crate::FieldReader<u8>);
 impl PERI_BACKUP_BURST_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,7 +58,7 @@ impl PERI_BACKUP_BURST_LIMIT_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_BURST_LIMIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -77,7 +77,7 @@ impl<'a> PERI_BACKUP_BURST_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` reader - reg_peri_backup_tout_thres"]
-pub struct PERI_BACKUP_TOUT_THRES_R(crate::FieldReader<u16, u16>);
+pub struct PERI_BACKUP_TOUT_THRES_R(crate::FieldReader<u16>);
 impl PERI_BACKUP_TOUT_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -85,7 +85,7 @@ impl PERI_BACKUP_TOUT_THRES_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_TOUT_THRES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -104,7 +104,7 @@ impl<'a> PERI_BACKUP_TOUT_THRES_W<'a> {
     }
 }
 #[doc = "Field `PERI_BACKUP_SIZE` reader - reg_peri_backup_size"]
-pub struct PERI_BACKUP_SIZE_R(crate::FieldReader<u16, u16>);
+pub struct PERI_BACKUP_SIZE_R(crate::FieldReader<u16>);
 impl PERI_BACKUP_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -112,7 +112,7 @@ impl PERI_BACKUP_SIZE_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_SIZE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> PERI_BACKUP_START_W<'a> {
     }
 }
 #[doc = "Field `PERI_BACKUP_TO_MEM` reader - reg_peri_backup_to_mem"]
-pub struct PERI_BACKUP_TO_MEM_R(crate::FieldReader<bool, bool>);
+pub struct PERI_BACKUP_TO_MEM_R(crate::FieldReader<bool>);
 impl PERI_BACKUP_TO_MEM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl PERI_BACKUP_TO_MEM_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_TO_MEM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> PERI_BACKUP_TO_MEM_W<'a> {
     }
 }
 #[doc = "Field `PERI_BACKUP_ENA` reader - reg_peri_backup_ena"]
-pub struct PERI_BACKUP_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PERI_BACKUP_ENA_R(crate::FieldReader<bool>);
 impl PERI_BACKUP_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl PERI_BACKUP_ENA_R {
     }
 }
 impl core::ops::Deref for PERI_BACKUP_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -296,25 +296,16 @@ impl W {
         self
     }
 }
-#[doc = "APB_CTRL_PERI_BACKUP_CONFIG_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [peri_backup_config]
-(index.html) module"]
+#[doc = "APB_CTRL_PERI_BACKUP_CONFIG_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [peri_backup_config](index.html) module"]
 pub struct PERI_BACKUP_CONFIG_SPEC;
 impl crate::RegisterSpec for PERI_BACKUP_CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [peri_backup_config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [peri_backup_config::R](R) reader structure"]
 impl crate::Readable for PERI_BACKUP_CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [peri_backup_config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [peri_backup_config::W](W) writer structure"]
 impl crate::Writable for PERI_BACKUP_CONFIG_SPEC {
     type Writer = W;
 }

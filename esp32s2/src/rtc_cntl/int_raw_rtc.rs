@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_RTC_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_RAW` reader - Stores the raw interrupt triggered when the chip wakes up from sleep."]
-pub struct SLP_WAKEUP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLP_WAKEUP_INT_RAW_R(crate::FieldReader<bool>);
 impl SLP_WAKEUP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl SLP_WAKEUP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLP_WAKEUP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLP_REJECT_INT_RAW` reader - Stores the raw interrupt triggered when the chip rejects to go to sleep."]
-pub struct SLP_REJECT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SLP_REJECT_INT_RAW_R(crate::FieldReader<bool>);
 impl SLP_REJECT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl SLP_REJECT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SLP_REJECT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - Stores the raw interrupt triggered when the SDIO idles."]
-pub struct SDIO_IDLE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_IDLE_INT_RAW_R(crate::FieldReader<bool>);
 impl SDIO_IDLE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl SDIO_IDLE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SDIO_IDLE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `WDT_INT_RAW` reader - Stores the raw RTC watchdog interrupt."]
-pub struct WDT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct WDT_INT_RAW_R(crate::FieldReader<bool>);
 impl WDT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl WDT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for WDT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_SCAN_DONE_INT_RAW` reader - Stores the raw interrupt triggered upon the completion of a touch scanning."]
-pub struct TOUCH_SCAN_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_SCAN_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TOUCH_SCAN_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl TOUCH_SCAN_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TOUCH_SCAN_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ULP_CP_INT_RAW` reader - Stores the raw ULP co-processor interrupt."]
-pub struct ULP_CP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_INT_RAW_R(crate::FieldReader<bool>);
 impl ULP_CP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl ULP_CP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for ULP_CP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_DONE_INT_RAW` reader - Stores the raw interrupt triggered upon the completion of a single touch."]
-pub struct TOUCH_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TOUCH_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl TOUCH_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TOUCH_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_ACTIVE_INT_RAW` reader - Stores the raw interrupt triggered when a touch is detected."]
-pub struct TOUCH_ACTIVE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_ACTIVE_INT_RAW_R(crate::FieldReader<bool>);
 impl TOUCH_ACTIVE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl TOUCH_ACTIVE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TOUCH_ACTIVE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_INACTIVE_INT_RAW` reader - Stores the raw interrupt triggered when a touch is released."]
-pub struct TOUCH_INACTIVE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_INACTIVE_INT_RAW_R(crate::FieldReader<bool>);
 impl TOUCH_INACTIVE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl TOUCH_INACTIVE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TOUCH_INACTIVE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BROWN_OUT_INT_RAW` reader - Stores the raw brown out interrupt."]
-pub struct BROWN_OUT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct BROWN_OUT_INT_RAW_R(crate::FieldReader<bool>);
 impl BROWN_OUT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl BROWN_OUT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for BROWN_OUT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MAIN_TIMER_INT_RAW` reader - Stores the raw RTC main timer interrupt."]
-pub struct MAIN_TIMER_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct MAIN_TIMER_INT_RAW_R(crate::FieldReader<bool>);
 impl MAIN_TIMER_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl MAIN_TIMER_INT_RAW_R {
     }
 }
 impl core::ops::Deref for MAIN_TIMER_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SARADC1_INT_RAW` reader - Stores the raw SAR ADC 1 interrupt."]
-pub struct SARADC1_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SARADC1_INT_RAW_R(crate::FieldReader<bool>);
 impl SARADC1_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl SARADC1_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SARADC1_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TSENS_INT_RAW` reader - Stores the raw touch sensor interrupt."]
-pub struct TSENS_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_INT_RAW_R(crate::FieldReader<bool>);
 impl TSENS_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl TSENS_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TSENS_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_INT_RAW` reader - Stores the raw ULP-RISCV interrupt."]
-pub struct COCPU_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_INT_RAW_R(crate::FieldReader<bool>);
 impl COCPU_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl COCPU_INT_RAW_R {
     }
 }
 impl core::ops::Deref for COCPU_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SARADC2_INT_RAW` reader - Stores the raw SAR ADC 2 interrupt."]
-pub struct SARADC2_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SARADC2_INT_RAW_R(crate::FieldReader<bool>);
 impl SARADC2_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl SARADC2_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SARADC2_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SWD_INT_RAW` reader - Stores the raw super watchdog interrupt."]
-pub struct SWD_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SWD_INT_RAW_R(crate::FieldReader<bool>);
 impl SWD_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl SWD_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SWD_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `XTAL32K_DEAD_INT_RAW` reader - Stores the raw interrupt triggered when the 32 kHz crystal is dead."]
-pub struct XTAL32K_DEAD_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_DEAD_INT_RAW_R(crate::FieldReader<bool>);
 impl XTAL32K_DEAD_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl XTAL32K_DEAD_INT_RAW_R {
     }
 }
 impl core::ops::Deref for XTAL32K_DEAD_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_TRAP_INT_RAW` reader - Stores the raw interrupt triggered when the ULP-RISCV is trapped."]
-pub struct COCPU_TRAP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_TRAP_INT_RAW_R(crate::FieldReader<bool>);
 impl COCPU_TRAP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl COCPU_TRAP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for COCPU_TRAP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_TIMEOUT_INT_RAW` reader - Stores the raw interrupt triggered when touch sensor times out."]
-pub struct TOUCH_TIMEOUT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_TIMEOUT_INT_RAW_R(crate::FieldReader<bool>);
 impl TOUCH_TIMEOUT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,14 +292,14 @@ impl TOUCH_TIMEOUT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TOUCH_TIMEOUT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `GLITCH_DET_INT_RAW` reader - Stores the raw interrupt triggered when a glitch is detected."]
-pub struct GLITCH_DET_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_DET_INT_RAW_R(crate::FieldReader<bool>);
 impl GLITCH_DET_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -307,7 +307,7 @@ impl GLITCH_DET_INT_RAW_R {
     }
 }
 impl core::ops::Deref for GLITCH_DET_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -415,16 +415,12 @@ impl R {
         GLITCH_DET_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
-#[doc = "RTC interrupt raw register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_rtc]
-(index.html) module"]
+#[doc = "RTC interrupt raw register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_rtc](index.html) module"]
 pub struct INT_RAW_RTC_SPEC;
 impl crate::RegisterSpec for INT_RAW_RTC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw_rtc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw_rtc::R](R) reader structure"]
 impl crate::Readable for INT_RAW_RTC_SPEC {
     type Reader = R;
 }

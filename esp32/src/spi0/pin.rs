@@ -35,7 +35,7 @@ impl From<crate::W<PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `CS0_DIS` reader - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
-pub struct CS0_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS0_DIS_R(crate::FieldReader<bool>);
 impl CS0_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CS0_DIS_R {
     }
 }
 impl core::ops::Deref for CS0_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CS0_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS1_DIS` reader - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin"]
-pub struct CS1_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS1_DIS_R(crate::FieldReader<bool>);
 impl CS1_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CS1_DIS_R {
     }
 }
 impl core::ops::Deref for CS1_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CS1_DIS_W<'a> {
     }
 }
 #[doc = "Field `CS2_DIS` reader - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin"]
-pub struct CS2_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CS2_DIS_R(crate::FieldReader<bool>);
 impl CS2_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CS2_DIS_R {
     }
 }
 impl core::ops::Deref for CS2_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CS2_DIS_W<'a> {
     }
 }
 #[doc = "Field `CK_DIS` reader - 1: spi clk out disable 0: spi clk out enable"]
-pub struct CK_DIS_R(crate::FieldReader<bool, bool>);
+pub struct CK_DIS_R(crate::FieldReader<bool>);
 impl CK_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CK_DIS_R {
     }
 }
 impl core::ops::Deref for CK_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CK_DIS_W<'a> {
     }
 }
 #[doc = "Field `MASTER_CS_POL` reader - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
-pub struct MASTER_CS_POL_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_CS_POL_R(crate::FieldReader<u8>);
 impl MASTER_CS_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl MASTER_CS_POL_R {
     }
 }
 impl core::ops::Deref for MASTER_CS_POL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> MASTER_CS_POL_W<'a> {
     }
 }
 #[doc = "Field `MASTER_CK_SEL` reader - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
-pub struct MASTER_CK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct MASTER_CK_SEL_R(crate::FieldReader<u8>);
 impl MASTER_CK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl MASTER_CK_SEL_R {
     }
 }
 impl core::ops::Deref for MASTER_CK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> MASTER_CK_SEL_W<'a> {
     }
 }
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
 impl CK_IDLE_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl CK_IDLE_EDGE_R {
     }
 }
 impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> CK_IDLE_EDGE_W<'a> {
     }
 }
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
 impl CS_KEEP_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl CS_KEEP_ACTIVE_R {
     }
 }
 impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -400,25 +400,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin](index.html) module"]
 pub struct PIN_SPEC;
 impl crate::RegisterSpec for PIN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pin::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pin::R](R) reader structure"]
 impl crate::Readable for PIN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pin::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
 }

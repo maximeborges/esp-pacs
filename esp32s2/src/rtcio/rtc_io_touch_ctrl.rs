@@ -35,7 +35,7 @@ impl From<crate::W<RTC_IO_TOUCH_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `IO_TOUCH_BUFSEL` reader - "]
-pub struct IO_TOUCH_BUFSEL_R(crate::FieldReader<u8, u8>);
+pub struct IO_TOUCH_BUFSEL_R(crate::FieldReader<u8>);
 impl IO_TOUCH_BUFSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IO_TOUCH_BUFSEL_R {
     }
 }
 impl core::ops::Deref for IO_TOUCH_BUFSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> IO_TOUCH_BUFSEL_W<'a> {
     }
 }
 #[doc = "Field `IO_TOUCH_BUFMODE` reader - "]
-pub struct IO_TOUCH_BUFMODE_R(crate::FieldReader<bool, bool>);
+pub struct IO_TOUCH_BUFMODE_R(crate::FieldReader<bool>);
 impl IO_TOUCH_BUFMODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl IO_TOUCH_BUFMODE_R {
     }
 }
 impl core::ops::Deref for IO_TOUCH_BUFMODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Touch control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_io_touch_ctrl]
-(index.html) module"]
+#[doc = "Touch control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_io_touch_ctrl](index.html) module"]
 pub struct RTC_IO_TOUCH_CTRL_SPEC;
 impl crate::RegisterSpec for RTC_IO_TOUCH_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_io_touch_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_io_touch_ctrl::R](R) reader structure"]
 impl crate::Readable for RTC_IO_TOUCH_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_io_touch_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_io_touch_ctrl::W](W) writer structure"]
 impl crate::Writable for RTC_IO_TOUCH_CTRL_SPEC {
     type Writer = W;
 }

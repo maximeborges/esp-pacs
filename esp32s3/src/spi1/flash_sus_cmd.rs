@@ -35,7 +35,7 @@ impl From<crate::W<FLASH_SUS_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PER` reader - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PER_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PER_R(crate::FieldReader<bool>);
 impl FLASH_PER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FLASH_PER_R {
     }
 }
 impl core::ops::Deref for FLASH_PER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FLASH_PER_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PES` reader - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PES_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PES_R(crate::FieldReader<bool>);
 impl FLASH_PES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FLASH_PES_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FLASH_PES_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PER_WAIT_EN` reader - Set this bit to add delay time after program erase resume(PER) is sent."]
-pub struct FLASH_PER_WAIT_EN_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PER_WAIT_EN_R(crate::FieldReader<bool>);
 impl FLASH_PER_WAIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FLASH_PER_WAIT_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_PER_WAIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FLASH_PER_WAIT_EN_W<'a> {
     }
 }
 #[doc = "Field `FLASH_PES_WAIT_EN` reader - Set this bit to add delay time after program erase suspend(PES) command is sent."]
-pub struct FLASH_PES_WAIT_EN_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_PES_WAIT_EN_R(crate::FieldReader<bool>);
 impl FLASH_PES_WAIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FLASH_PES_WAIT_EN_R {
     }
 }
 impl core::ops::Deref for FLASH_PES_WAIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FLASH_PES_WAIT_EN_W<'a> {
     }
 }
 #[doc = "Field `PES_PER_EN` reader - Set this bit to enable PES transfer trigger PES transfer option."]
-pub struct PES_PER_EN_R(crate::FieldReader<bool, bool>);
+pub struct PES_PER_EN_R(crate::FieldReader<bool>);
 impl PES_PER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PES_PER_EN_R {
     }
 }
 impl core::ops::Deref for PES_PER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PES_PER_EN_W<'a> {
     }
 }
 #[doc = "Field `PESR_IDLE_EN` reader - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
-pub struct PESR_IDLE_EN_R(crate::FieldReader<bool, bool>);
+pub struct PESR_IDLE_EN_R(crate::FieldReader<bool>);
 impl PESR_IDLE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl PESR_IDLE_EN_R {
     }
 }
 impl core::ops::Deref for PESR_IDLE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 flash suspend control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flash_sus_cmd]
-(index.html) module"]
+#[doc = "SPI1 flash suspend control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [flash_sus_cmd](index.html) module"]
 pub struct FLASH_SUS_CMD_SPEC;
 impl crate::RegisterSpec for FLASH_SUS_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [flash_sus_cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [flash_sus_cmd::R](R) reader structure"]
 impl crate::Readable for FLASH_SUS_CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [flash_sus_cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [flash_sus_cmd::W](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CMD_SPEC {
     type Writer = W;
 }

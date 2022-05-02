@@ -35,7 +35,7 @@ impl From<crate::W<FAULT_DETECT_SPEC>> for W {
     }
 }
 #[doc = "Field `F0_EN` reader - "]
-pub struct F0_EN_R(crate::FieldReader<bool, bool>);
+pub struct F0_EN_R(crate::FieldReader<bool>);
 impl F0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl F0_EN_R {
     }
 }
 impl core::ops::Deref for F0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> F0_EN_W<'a> {
     }
 }
 #[doc = "Field `F1_EN` reader - "]
-pub struct F1_EN_R(crate::FieldReader<bool, bool>);
+pub struct F1_EN_R(crate::FieldReader<bool>);
 impl F1_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl F1_EN_R {
     }
 }
 impl core::ops::Deref for F1_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> F1_EN_W<'a> {
     }
 }
 #[doc = "Field `F2_EN` reader - "]
-pub struct F2_EN_R(crate::FieldReader<bool, bool>);
+pub struct F2_EN_R(crate::FieldReader<bool>);
 impl F2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl F2_EN_R {
     }
 }
 impl core::ops::Deref for F2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> F2_EN_W<'a> {
     }
 }
 #[doc = "Field `F0_POLE` reader - "]
-pub struct F0_POLE_R(crate::FieldReader<bool, bool>);
+pub struct F0_POLE_R(crate::FieldReader<bool>);
 impl F0_POLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl F0_POLE_R {
     }
 }
 impl core::ops::Deref for F0_POLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> F0_POLE_W<'a> {
     }
 }
 #[doc = "Field `F1_POLE` reader - "]
-pub struct F1_POLE_R(crate::FieldReader<bool, bool>);
+pub struct F1_POLE_R(crate::FieldReader<bool>);
 impl F1_POLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl F1_POLE_R {
     }
 }
 impl core::ops::Deref for F1_POLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> F1_POLE_W<'a> {
     }
 }
 #[doc = "Field `F2_POLE` reader - "]
-pub struct F2_POLE_R(crate::FieldReader<bool, bool>);
+pub struct F2_POLE_R(crate::FieldReader<bool>);
 impl F2_POLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl F2_POLE_R {
     }
 }
 impl core::ops::Deref for F2_POLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> F2_POLE_W<'a> {
     }
 }
 #[doc = "Field `EVENT_F0` reader - "]
-pub struct EVENT_F0_R(crate::FieldReader<bool, bool>);
+pub struct EVENT_F0_R(crate::FieldReader<bool>);
 impl EVENT_F0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,14 +265,14 @@ impl EVENT_F0_R {
     }
 }
 impl core::ops::Deref for EVENT_F0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `EVENT_F1` reader - "]
-pub struct EVENT_F1_R(crate::FieldReader<bool, bool>);
+pub struct EVENT_F1_R(crate::FieldReader<bool>);
 impl EVENT_F1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -280,14 +280,14 @@ impl EVENT_F1_R {
     }
 }
 impl core::ops::Deref for EVENT_F1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `EVENT_F2` reader - "]
-pub struct EVENT_F2_R(crate::FieldReader<bool, bool>);
+pub struct EVENT_F2_R(crate::FieldReader<bool>);
 impl EVENT_F2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -295,7 +295,7 @@ impl EVENT_F2_R {
     }
 }
 impl core::ops::Deref for EVENT_F2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -386,25 +386,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fault_detect]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fault_detect](index.html) module"]
 pub struct FAULT_DETECT_SPEC;
 impl crate::RegisterSpec for FAULT_DETECT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fault_detect::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fault_detect::R](R) reader structure"]
 impl crate::Readable for FAULT_DETECT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [fault_detect::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [fault_detect::W](W) writer structure"]
 impl crate::Writable for FAULT_DETECT_SPEC {
     type Writer = W;
 }

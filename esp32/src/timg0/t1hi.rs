@@ -14,7 +14,7 @@ impl From<crate::R<T1HI_SPEC>> for R {
     }
 }
 #[doc = "Field `T1_HI` reader - Register to store timer 1 time-base counter current value higher 32 bits."]
-pub struct T1_HI_R(crate::FieldReader<u32, u32>);
+pub struct T1_HI_R(crate::FieldReader<u32>);
 impl T1_HI_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl T1_HI_R {
     }
 }
 impl core::ops::Deref for T1_HI_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         T1_HI_R::new(self.bits)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t1hi]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t1hi](index.html) module"]
 pub struct T1HI_SPEC;
 impl crate::RegisterSpec for T1HI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t1hi::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t1hi::R](R) reader structure"]
 impl crate::Readable for T1HI_SPEC {
     type Reader = R;
 }

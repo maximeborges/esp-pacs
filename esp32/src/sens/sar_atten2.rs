@@ -35,7 +35,7 @@ impl From<crate::W<SAR_ATTEN2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_ATTEN` reader - 2-bit attenuation for each pad 11:1dB 10:6dB 01:3dB 00:0dB"]
-pub struct SAR2_ATTEN_R(crate::FieldReader<u32, u32>);
+pub struct SAR2_ATTEN_R(crate::FieldReader<u32>);
 impl SAR2_ATTEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SAR2_ATTEN_R {
     }
 }
 impl core::ops::Deref for SAR2_ATTEN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_atten2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_atten2](index.html) module"]
 pub struct SAR_ATTEN2_SPEC;
 impl crate::RegisterSpec for SAR_ATTEN2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_atten2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_atten2::R](R) reader structure"]
 impl crate::Readable for SAR_ATTEN2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_atten2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_atten2::W](W) writer structure"]
 impl crate::Writable for SAR_ATTEN2_SPEC {
     type Writer = W;
 }

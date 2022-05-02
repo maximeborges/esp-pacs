@@ -14,7 +14,7 @@ impl From<crate::R<HOST_SLCHOST_STATE_W0_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLCHOST_STATE0` reader - "]
-pub struct HOST_SLCHOST_STATE0_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_STATE0_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_STATE0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl HOST_SLCHOST_STATE0_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_STATE0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `HOST_SLCHOST_STATE1` reader - "]
-pub struct HOST_SLCHOST_STATE1_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_STATE1_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_STATE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl HOST_SLCHOST_STATE1_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_STATE1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `HOST_SLCHOST_STATE2` reader - "]
-pub struct HOST_SLCHOST_STATE2_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_STATE2_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_STATE2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl HOST_SLCHOST_STATE2_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_STATE2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `HOST_SLCHOST_STATE3` reader - "]
-pub struct HOST_SLCHOST_STATE3_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_STATE3_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_STATE3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,7 +67,7 @@ impl HOST_SLCHOST_STATE3_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_STATE3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         HOST_SLCHOST_STATE3_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_state_w0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_state_w0](index.html) module"]
 pub struct HOST_SLCHOST_STATE_W0_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_STATE_W0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slchost_state_w0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_slchost_state_w0::R](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_STATE_W0_SPEC {
     type Reader = R;
 }

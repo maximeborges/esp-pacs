@@ -35,7 +35,7 @@ impl From<crate::W<SAR_AMP_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_DAC_XPD_FSM_IDLE` reader - "]
-pub struct SAR1_DAC_XPD_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct SAR1_DAC_XPD_FSM_IDLE_R(crate::FieldReader<bool>);
 impl SAR1_DAC_XPD_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SAR1_DAC_XPD_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for SAR1_DAC_XPD_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SAR1_DAC_XPD_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `XPD_SAR_AMP_FSM_IDLE` reader - "]
-pub struct XPD_SAR_AMP_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct XPD_SAR_AMP_FSM_IDLE_R(crate::FieldReader<bool>);
 impl XPD_SAR_AMP_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl XPD_SAR_AMP_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for XPD_SAR_AMP_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> XPD_SAR_AMP_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `AMP_RST_FB_FSM_IDLE` reader - "]
-pub struct AMP_RST_FB_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct AMP_RST_FB_FSM_IDLE_R(crate::FieldReader<bool>);
 impl AMP_RST_FB_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl AMP_RST_FB_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for AMP_RST_FB_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> AMP_RST_FB_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `AMP_SHORT_REF_FSM_IDLE` reader - "]
-pub struct AMP_SHORT_REF_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct AMP_SHORT_REF_FSM_IDLE_R(crate::FieldReader<bool>);
 impl AMP_SHORT_REF_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl AMP_SHORT_REF_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for AMP_SHORT_REF_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> AMP_SHORT_REF_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `AMP_SHORT_REF_GND_FSM_IDLE` reader - "]
-pub struct AMP_SHORT_REF_GND_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct AMP_SHORT_REF_GND_FSM_IDLE_R(crate::FieldReader<bool>);
 impl AMP_SHORT_REF_GND_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl AMP_SHORT_REF_GND_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for AMP_SHORT_REF_GND_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> AMP_SHORT_REF_GND_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `XPD_SAR_FSM_IDLE` reader - "]
-pub struct XPD_SAR_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct XPD_SAR_FSM_IDLE_R(crate::FieldReader<bool>);
 impl XPD_SAR_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl XPD_SAR_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for XPD_SAR_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> XPD_SAR_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `SAR_RSTB_FSM_IDLE` reader - "]
-pub struct SAR_RSTB_FSM_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct SAR_RSTB_FSM_IDLE_R(crate::FieldReader<bool>);
 impl SAR_RSTB_FSM_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SAR_RSTB_FSM_IDLE_R {
     }
 }
 impl core::ops::Deref for SAR_RSTB_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SAR_RSTB_FSM_IDLE_W<'a> {
     }
 }
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
-pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16, u16>);
+pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16>);
 impl SAR_AMP_WAIT3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -302,7 +302,7 @@ impl SAR_AMP_WAIT3_R {
     }
 }
 impl core::ops::Deref for SAR_AMP_WAIT3_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -410,25 +410,16 @@ impl W {
         self
     }
 }
-#[doc = "AMP control\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_amp_ctrl2]
-(index.html) module"]
+#[doc = "AMP control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_amp_ctrl2](index.html) module"]
 pub struct SAR_AMP_CTRL2_SPEC;
 impl crate::RegisterSpec for SAR_AMP_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_amp_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_amp_ctrl2::R](R) reader structure"]
 impl crate::Readable for SAR_AMP_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_amp_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_amp_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_AMP_CTRL2_SPEC {
     type Writer = W;
 }

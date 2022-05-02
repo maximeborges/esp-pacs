@@ -79,7 +79,7 @@ impl<'a> I2S_RX_FIFO_RESET_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_START` reader - Set this bit to start receiving data"]
-pub struct I2S_RX_START_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_START_R(crate::FieldReader<bool>);
 impl I2S_RX_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -87,7 +87,7 @@ impl I2S_RX_START_R {
     }
 }
 impl core::ops::Deref for I2S_RX_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> I2S_RX_START_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_SLAVE_MOD` reader - Set this bit to enable slave receiver mode"]
-pub struct I2S_RX_SLAVE_MOD_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_SLAVE_MOD_R(crate::FieldReader<bool>);
 impl I2S_RX_SLAVE_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl I2S_RX_SLAVE_MOD_R {
     }
 }
 impl core::ops::Deref for I2S_RX_SLAVE_MOD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> I2S_RX_SLAVE_MOD_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_MONO` reader - Set this bit to enable receiver in mono mode"]
-pub struct I2S_RX_MONO_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_MONO_R(crate::FieldReader<bool>);
 impl I2S_RX_MONO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl I2S_RX_MONO_R {
     }
 }
 impl core::ops::Deref for I2S_RX_MONO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> I2S_RX_MONO_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_BIG_ENDIAN` reader - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
-pub struct I2S_RX_BIG_ENDIAN_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_BIG_ENDIAN_R(crate::FieldReader<bool>);
 impl I2S_RX_BIG_ENDIAN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl I2S_RX_BIG_ENDIAN_R {
     }
 }
 impl core::ops::Deref for I2S_RX_BIG_ENDIAN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> I2S_RX_BIG_ENDIAN_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_UPDATE` reader - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
-pub struct I2S_RX_UPDATE_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_UPDATE_R(crate::FieldReader<bool>);
 impl I2S_RX_UPDATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl I2S_RX_UPDATE_R {
     }
 }
 impl core::ops::Deref for I2S_RX_UPDATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> I2S_RX_UPDATE_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_MONO_FST_VLD` reader - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
-pub struct I2S_RX_MONO_FST_VLD_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_MONO_FST_VLD_R(crate::FieldReader<bool>);
 impl I2S_RX_MONO_FST_VLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -272,7 +272,7 @@ impl I2S_RX_MONO_FST_VLD_R {
     }
 }
 impl core::ops::Deref for I2S_RX_MONO_FST_VLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl<'a> I2S_RX_MONO_FST_VLD_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_PCM_CONF` reader - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
-pub struct I2S_RX_PCM_CONF_R(crate::FieldReader<u8, u8>);
+pub struct I2S_RX_PCM_CONF_R(crate::FieldReader<u8>);
 impl I2S_RX_PCM_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -309,7 +309,7 @@ impl I2S_RX_PCM_CONF_R {
     }
 }
 impl core::ops::Deref for I2S_RX_PCM_CONF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -328,7 +328,7 @@ impl<'a> I2S_RX_PCM_CONF_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
-pub struct I2S_RX_PCM_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_PCM_BYPASS_R(crate::FieldReader<bool>);
 impl I2S_RX_PCM_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +336,7 @@ impl I2S_RX_PCM_BYPASS_R {
     }
 }
 impl core::ops::Deref for I2S_RX_PCM_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> I2S_RX_PCM_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_STOP_MODE` reader - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
-pub struct I2S_RX_STOP_MODE_R(crate::FieldReader<u8, u8>);
+pub struct I2S_RX_STOP_MODE_R(crate::FieldReader<u8>);
 impl I2S_RX_STOP_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -373,7 +373,7 @@ impl I2S_RX_STOP_MODE_R {
     }
 }
 impl core::ops::Deref for I2S_RX_STOP_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -392,7 +392,7 @@ impl<'a> I2S_RX_STOP_MODE_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_LEFT_ALIGN` reader - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
-pub struct I2S_RX_LEFT_ALIGN_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_LEFT_ALIGN_R(crate::FieldReader<bool>);
 impl I2S_RX_LEFT_ALIGN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -400,7 +400,7 @@ impl I2S_RX_LEFT_ALIGN_R {
     }
 }
 impl core::ops::Deref for I2S_RX_LEFT_ALIGN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -429,7 +429,7 @@ impl<'a> I2S_RX_LEFT_ALIGN_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_24_FILL_EN` reader - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
-pub struct I2S_RX_24_FILL_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_24_FILL_EN_R(crate::FieldReader<bool>);
 impl I2S_RX_24_FILL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -437,7 +437,7 @@ impl I2S_RX_24_FILL_EN_R {
     }
 }
 impl core::ops::Deref for I2S_RX_24_FILL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -466,7 +466,7 @@ impl<'a> I2S_RX_24_FILL_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_WS_IDLE_POL` reader - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
-pub struct I2S_RX_WS_IDLE_POL_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_WS_IDLE_POL_R(crate::FieldReader<bool>);
 impl I2S_RX_WS_IDLE_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -474,7 +474,7 @@ impl I2S_RX_WS_IDLE_POL_R {
     }
 }
 impl core::ops::Deref for I2S_RX_WS_IDLE_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -503,7 +503,7 @@ impl<'a> I2S_RX_WS_IDLE_POL_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_BIT_ORDER` reader - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
-pub struct I2S_RX_BIT_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_BIT_ORDER_R(crate::FieldReader<bool>);
 impl I2S_RX_BIT_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -511,7 +511,7 @@ impl I2S_RX_BIT_ORDER_R {
     }
 }
 impl core::ops::Deref for I2S_RX_BIT_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -540,7 +540,7 @@ impl<'a> I2S_RX_BIT_ORDER_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_TDM_EN` reader - 1: Enable I2S TDM Rx mode . 0: Disable."]
-pub struct I2S_RX_TDM_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_TDM_EN_R(crate::FieldReader<bool>);
 impl I2S_RX_TDM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -548,7 +548,7 @@ impl I2S_RX_TDM_EN_R {
     }
 }
 impl core::ops::Deref for I2S_RX_TDM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -577,7 +577,7 @@ impl<'a> I2S_RX_TDM_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S_RX_PDM_EN` reader - 1: Enable I2S PDM Rx mode . 0: Disable."]
-pub struct I2S_RX_PDM_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S_RX_PDM_EN_R(crate::FieldReader<bool>);
 impl I2S_RX_PDM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -585,7 +585,7 @@ impl I2S_RX_PDM_EN_R {
     }
 }
 impl core::ops::Deref for I2S_RX_PDM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -783,25 +783,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S RX configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_rx_conf]
-(index.html) module"]
+#[doc = "I2S RX configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_rx_conf](index.html) module"]
 pub struct I2S_RX_CONF_SPEC;
 impl crate::RegisterSpec for I2S_RX_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2s_rx_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [i2s_rx_conf::R](R) reader structure"]
 impl crate::Readable for I2S_RX_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [i2s_rx_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [i2s_rx_conf::W](W) writer structure"]
 impl crate::Writable for I2S_RX_CONF_SPEC {
     type Writer = W;
 }

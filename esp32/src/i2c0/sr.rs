@@ -14,7 +14,7 @@ impl From<crate::R<SR_SPEC>> for R {
     }
 }
 #[doc = "Field `ACK_REC` reader - This register stores the value of ACK bit."]
-pub struct ACK_REC_R(crate::FieldReader<bool, bool>);
+pub struct ACK_REC_R(crate::FieldReader<bool>);
 impl ACK_REC_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl ACK_REC_R {
     }
 }
 impl core::ops::Deref for ACK_REC_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLAVE_RW` reader - when in slave mode 1: master read slave 0: master write slave."]
-pub struct SLAVE_RW_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_RW_R(crate::FieldReader<bool>);
 impl SLAVE_RW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl SLAVE_RW_R {
     }
 }
 impl core::ops::Deref for SLAVE_RW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIME_OUT` reader - when I2C takes more than time_out_reg clocks to receive a data then this register changes to high level."]
-pub struct TIME_OUT_R(crate::FieldReader<bool, bool>);
+pub struct TIME_OUT_R(crate::FieldReader<bool>);
 impl TIME_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl TIME_OUT_R {
     }
 }
 impl core::ops::Deref for TIME_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ARB_LOST` reader - when I2C lost control of SDA line this register changes to high level."]
-pub struct ARB_LOST_R(crate::FieldReader<bool, bool>);
+pub struct ARB_LOST_R(crate::FieldReader<bool>);
 impl ARB_LOST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl ARB_LOST_R {
     }
 }
 impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BUS_BUSY` reader - 1:I2C bus is busy transferring data. 0:I2C bus is in idle state."]
-pub struct BUS_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct BUS_BUSY_R(crate::FieldReader<bool>);
 impl BUS_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl BUS_BUSY_R {
     }
 }
 impl core::ops::Deref for BUS_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SLAVE_ADDRESSED` reader - when configured as i2c slave and the address send by master is equal to slave's address then this bit will be high level."]
-pub struct SLAVE_ADDRESSED_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_ADDRESSED_R(crate::FieldReader<bool>);
 impl SLAVE_ADDRESSED_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl SLAVE_ADDRESSED_R {
     }
 }
 impl core::ops::Deref for SLAVE_ADDRESSED_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BYTE_TRANS` reader - This register changes to high level when one byte is transferred."]
-pub struct BYTE_TRANS_R(crate::FieldReader<bool, bool>);
+pub struct BYTE_TRANS_R(crate::FieldReader<bool>);
 impl BYTE_TRANS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl BYTE_TRANS_R {
     }
 }
 impl core::ops::Deref for BYTE_TRANS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_CNT` reader - This register represent the amount of data need to send."]
-pub struct RXFIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_CNT_R(crate::FieldReader<u8>);
 impl RXFIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,14 +127,14 @@ impl RXFIFO_CNT_R {
     }
 }
 impl core::ops::Deref for RXFIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_CNT` reader - This register stores the amount of received data in ram."]
-pub struct TXFIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_CNT_R(crate::FieldReader<u8>);
 impl TXFIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -142,14 +142,14 @@ impl TXFIFO_CNT_R {
     }
 }
 impl core::ops::Deref for TXFIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - This register stores the value of state machine for i2c module. 3'h0: SCL_MAIN_IDLE 3'h1: SCL_ADDRESS_SHIFT 3'h2: SCL_ACK_ADDRESS 3'h3: SCL_RX_DATA 3'h4 SCL_TX_DATA 3'h5:SCL_SEND_ACK 3'h6:SCL_WAIT_ACK"]
-pub struct SCL_MAIN_STATE_LAST_R(crate::FieldReader<u8, u8>);
+pub struct SCL_MAIN_STATE_LAST_R(crate::FieldReader<u8>);
 impl SCL_MAIN_STATE_LAST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -157,14 +157,14 @@ impl SCL_MAIN_STATE_LAST_R {
     }
 }
 impl core::ops::Deref for SCL_MAIN_STATE_LAST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SCL_STATE_LAST` reader - This register stores the value of state machine to produce SCL. 3'h0: SCL_IDLE 3'h1:SCL_START 3'h2:SCL_LOW_EDGE 3'h3: SCL_LOW 3'h4:SCL_HIGH_EDGE 3'h5:SCL_HIGH 3'h6:SCL_STOP"]
-pub struct SCL_STATE_LAST_R(crate::FieldReader<u8, u8>);
+pub struct SCL_STATE_LAST_R(crate::FieldReader<u8>);
 impl SCL_STATE_LAST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -172,7 +172,7 @@ impl SCL_STATE_LAST_R {
     }
 }
 impl core::ops::Deref for SCL_STATE_LAST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -235,16 +235,12 @@ impl R {
         SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]
 pub struct SR_SPEC;
 impl crate::RegisterSpec for SR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sr::R](R) reader structure"]
 impl crate::Readable for SR_SPEC {
     type Reader = R;
 }

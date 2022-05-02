@@ -35,7 +35,7 @@ impl From<crate::W<PIN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_OUT1` reader - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
-pub struct CLK_OUT1_R(crate::FieldReader<u8, u8>);
+pub struct CLK_OUT1_R(crate::FieldReader<u8>);
 impl CLK_OUT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLK_OUT1_R {
     }
 }
 impl core::ops::Deref for CLK_OUT1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLK_OUT1_W<'a> {
     }
 }
 #[doc = "Field `CLK_OUT2` reader - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
-pub struct CLK_OUT2_R(crate::FieldReader<u8, u8>);
+pub struct CLK_OUT2_R(crate::FieldReader<u8>);
 impl CLK_OUT2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CLK_OUT2_R {
     }
 }
 impl core::ops::Deref for CLK_OUT2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CLK_OUT2_W<'a> {
     }
 }
 #[doc = "Field `CLK_OUT3` reader - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
-pub struct CLK_OUT3_R(crate::FieldReader<u8, u8>);
+pub struct CLK_OUT3_R(crate::FieldReader<u8>);
 impl CLK_OUT3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CLK_OUT3_R {
     }
 }
 impl core::ops::Deref for CLK_OUT3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "Clock Output Configuration Register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin_ctrl]
-(index.html) module"]
+#[doc = "Clock Output Configuration Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin_ctrl](index.html) module"]
 pub struct PIN_CTRL_SPEC;
 impl crate::RegisterSpec for PIN_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pin_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pin_ctrl::R](R) reader structure"]
 impl crate::Readable for PIN_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pin_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pin_ctrl::W](W) writer structure"]
 impl crate::Writable for PIN_CTRL_SPEC {
     type Writer = W;
 }

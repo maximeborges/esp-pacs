@@ -35,7 +35,7 @@ impl From<crate::W<LSCH1_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL_LSCH1` reader - There are four low speed timers the two bits are used to select one of them for low speed channel1. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
-pub struct TIMER_SEL_LSCH1_R(crate::FieldReader<u8, u8>);
+pub struct TIMER_SEL_LSCH1_R(crate::FieldReader<u8>);
 impl TIMER_SEL_LSCH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_SEL_LSCH1_R {
     }
 }
 impl core::ops::Deref for TIMER_SEL_LSCH1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIMER_SEL_LSCH1_W<'a> {
     }
 }
 #[doc = "Field `SIG_OUT_EN_LSCH1` reader - This is the output enable control bit for low speed channel1."]
-pub struct SIG_OUT_EN_LSCH1_R(crate::FieldReader<bool, bool>);
+pub struct SIG_OUT_EN_LSCH1_R(crate::FieldReader<bool>);
 impl SIG_OUT_EN_LSCH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SIG_OUT_EN_LSCH1_R {
     }
 }
 impl core::ops::Deref for SIG_OUT_EN_LSCH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SIG_OUT_EN_LSCH1_W<'a> {
     }
 }
 #[doc = "Field `IDLE_LV_LSCH1` reader - This bit is used to control the output value when low speed channel1 is off."]
-pub struct IDLE_LV_LSCH1_R(crate::FieldReader<bool, bool>);
+pub struct IDLE_LV_LSCH1_R(crate::FieldReader<bool>);
 impl IDLE_LV_LSCH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl IDLE_LV_LSCH1_R {
     }
 }
 impl core::ops::Deref for IDLE_LV_LSCH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> IDLE_LV_LSCH1_W<'a> {
     }
 }
 #[doc = "Field `PARA_UP_LSCH1` reader - This bit is used to update register LEDC_LSCH1_HPOINT and LEDC_LSCH1_DUTY for low speed channel1."]
-pub struct PARA_UP_LSCH1_R(crate::FieldReader<bool, bool>);
+pub struct PARA_UP_LSCH1_R(crate::FieldReader<bool>);
 impl PARA_UP_LSCH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl PARA_UP_LSCH1_R {
     }
 }
 impl core::ops::Deref for PARA_UP_LSCH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch1_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch1_conf0](index.html) module"]
 pub struct LSCH1_CONF0_SPEC;
 impl crate::RegisterSpec for LSCH1_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lsch1_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lsch1_conf0::R](R) reader structure"]
 impl crate::Readable for LSCH1_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lsch1_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lsch1_conf0::W](W) writer structure"]
 impl crate::Writable for LSCH1_CONF0_SPEC {
     type Writer = W;
 }

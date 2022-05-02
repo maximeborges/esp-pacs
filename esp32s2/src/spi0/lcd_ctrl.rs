@@ -35,7 +35,7 @@ impl From<crate::W<LCD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_HB_FRONT` reader - It is the horizontal blank front porch of a frame. Can be configured in CONF state."]
-pub struct LCD_HB_FRONT_R(crate::FieldReader<u16, u16>);
+pub struct LCD_HB_FRONT_R(crate::FieldReader<u16>);
 impl LCD_HB_FRONT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl LCD_HB_FRONT_R {
     }
 }
 impl core::ops::Deref for LCD_HB_FRONT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LCD_HB_FRONT_W<'a> {
     }
 }
 #[doc = "Field `LCD_VA_HEIGHT` reader - It is the vertical active height of a frame. Can be configured in CONF state."]
-pub struct LCD_VA_HEIGHT_R(crate::FieldReader<u16, u16>);
+pub struct LCD_VA_HEIGHT_R(crate::FieldReader<u16>);
 impl LCD_VA_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl LCD_VA_HEIGHT_R {
     }
 }
 impl core::ops::Deref for LCD_VA_HEIGHT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> LCD_VA_HEIGHT_W<'a> {
     }
 }
 #[doc = "Field `LCD_VT_HEIGHT` reader - It is the vertical total height of a frame. Can be configured in CONF state."]
-pub struct LCD_VT_HEIGHT_R(crate::FieldReader<u16, u16>);
+pub struct LCD_VT_HEIGHT_R(crate::FieldReader<u16>);
 impl LCD_VT_HEIGHT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl LCD_VT_HEIGHT_R {
     }
 }
 impl core::ops::Deref for LCD_VT_HEIGHT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> LCD_VT_HEIGHT_W<'a> {
     }
 }
 #[doc = "Field `LCD_MODE_EN` reader - 1: Enable LCD mode output vsync, hsync, de. 0: Disable. Can be configured in CONF state."]
-pub struct LCD_MODE_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_MODE_EN_R(crate::FieldReader<bool>);
 impl LCD_MODE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl LCD_MODE_EN_R {
     }
 }
 impl core::ops::Deref for LCD_MODE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD frame control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_ctrl]
-(index.html) module"]
+#[doc = "LCD frame control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_ctrl](index.html) module"]
 pub struct LCD_CTRL_SPEC;
 impl crate::RegisterSpec for LCD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lcd_ctrl::R](R) reader structure"]
 impl crate::Readable for LCD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lcd_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lcd_ctrl::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL_SPEC {
     type Writer = W;
 }

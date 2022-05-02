@@ -35,7 +35,7 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub struct CLK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CLK_MODE_R(crate::FieldReader<u8>);
 impl CLK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLK_MODE_R {
     }
 }
 impl core::ops::Deref for CLK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLK_MODE_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_RST` reader - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
-pub struct RXFIFO_RST_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_RST_R(crate::FieldReader<bool>);
 impl RXFIFO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl RXFIFO_RST_R {
     }
 }
 impl core::ops::Deref for RXFIFO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 control 1 register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1]
-(index.html) module"]
+#[doc = "SPI0 control 1 register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1](index.html) module"]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl1::R](R) reader structure"]
 impl crate::Readable for CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl1::W](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
 }

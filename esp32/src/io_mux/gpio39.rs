@@ -35,7 +35,7 @@ impl From<crate::W<GPIO39_SPEC>> for W {
     }
 }
 #[doc = "Field `MCU_OE` reader - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
-pub struct MCU_OE_R(crate::FieldReader<bool, bool>);
+pub struct MCU_OE_R(crate::FieldReader<bool>);
 impl MCU_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MCU_OE_R {
     }
 }
 impl core::ops::Deref for MCU_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MCU_OE_W<'a> {
     }
 }
 #[doc = "Field `SLP_SEL` reader - Sleep mode selection of this pad. Set to 1 to put the pad in sleep mode."]
-pub struct SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLP_SEL_R(crate::FieldReader<bool>);
 impl SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `MCU_WPD` reader - Pull-down enable of the pad during sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub struct MCU_WPD_R(crate::FieldReader<bool, bool>);
+pub struct MCU_WPD_R(crate::FieldReader<bool>);
 impl MCU_WPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MCU_WPD_R {
     }
 }
 impl core::ops::Deref for MCU_WPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MCU_WPD_W<'a> {
     }
 }
 #[doc = "Field `MCU_WPU` reader - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub struct MCU_WPU_R(crate::FieldReader<bool, bool>);
+pub struct MCU_WPU_R(crate::FieldReader<bool>);
 impl MCU_WPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MCU_WPU_R {
     }
 }
 impl core::ops::Deref for MCU_WPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MCU_WPU_W<'a> {
     }
 }
 #[doc = "Field `MCU_IE` reader - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
-pub struct MCU_IE_R(crate::FieldReader<bool, bool>);
+pub struct MCU_IE_R(crate::FieldReader<bool>);
 impl MCU_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MCU_IE_R {
     }
 }
 impl core::ops::Deref for MCU_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> MCU_IE_W<'a> {
     }
 }
 #[doc = "Field `MCU_DRV` reader - Select the drive strength of the pad during sleep mode. A higher value corresponds with a higher strength."]
-pub struct MCU_DRV_R(crate::FieldReader<u8, u8>);
+pub struct MCU_DRV_R(crate::FieldReader<u8>);
 impl MCU_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl MCU_DRV_R {
     }
 }
 impl core::ops::Deref for MCU_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> MCU_DRV_W<'a> {
     }
 }
 #[doc = "Field `FUN_WPD` reader - Pull-down enable of the pad. 1: internal pull-down enabled, 0: internal pull-down disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull-down circuitry, therefore, their FUN_WPD is always 0."]
-pub struct FUN_WPD_R(crate::FieldReader<bool, bool>);
+pub struct FUN_WPD_R(crate::FieldReader<bool>);
 impl FUN_WPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl FUN_WPD_R {
     }
 }
 impl core::ops::Deref for FUN_WPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> FUN_WPD_W<'a> {
     }
 }
 #[doc = "Field `FUN_WPU` reader - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull- down circuitry, therefore, their FUN_WPU is always 0."]
-pub struct FUN_WPU_R(crate::FieldReader<bool, bool>);
+pub struct FUN_WPU_R(crate::FieldReader<bool>);
 impl FUN_WPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl FUN_WPU_R {
     }
 }
 impl core::ops::Deref for FUN_WPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> FUN_WPU_W<'a> {
     }
 }
 #[doc = "Field `FUN_IE` reader - Input enable of the pad. 1: input enabled; 0: input disabled."]
-pub struct FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct FUN_IE_R(crate::FieldReader<bool>);
 impl FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl FUN_IE_R {
     }
 }
 impl core::ops::Deref for FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `FUN_DRV` reader - Select the drive strength of the pad. A higher value corresponds with a higher strength. For GPIO34-39, FUN_DRV is always 0. For detailed drive strength, please see note 8 in Table ”Notes on ESP32 Pin Lists”, in ESP32 Datasheet."]
-pub struct FUN_DRV_R(crate::FieldReader<u8, u8>);
+pub struct FUN_DRV_R(crate::FieldReader<u8>);
 impl FUN_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -366,7 +366,7 @@ impl FUN_DRV_R {
     }
 }
 impl core::ops::Deref for FUN_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> FUN_DRV_W<'a> {
     }
 }
 #[doc = "Field `MCU_SEL` reader - Select the IO_MUX function for this signal. 0 selects Function 0, 1 selects Function 1, etc."]
-pub struct MCU_SEL_R(crate::FieldReader<u8, u8>);
+pub struct MCU_SEL_R(crate::FieldReader<u8>);
 impl MCU_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -393,7 +393,7 @@ impl MCU_SEL_R {
     }
 }
 impl core::ops::Deref for MCU_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -531,25 +531,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio39]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio39](index.html) module"]
 pub struct GPIO39_SPEC;
 impl crate::RegisterSpec for GPIO39_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio39::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gpio39::R](R) reader structure"]
 impl crate::Readable for GPIO39_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gpio39::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gpio39::W](W) writer structure"]
 impl crate::Writable for GPIO39_SPEC {
     type Writer = W;
 }

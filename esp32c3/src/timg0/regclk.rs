@@ -35,7 +35,7 @@ impl From<crate::W<REGCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_CLK_IS_ACTIVE` reader - reg_wdt_clk_is_active."]
-pub struct WDT_CLK_IS_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct WDT_CLK_IS_ACTIVE_R(crate::FieldReader<bool>);
 impl WDT_CLK_IS_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl WDT_CLK_IS_ACTIVE_R {
     }
 }
 impl core::ops::Deref for WDT_CLK_IS_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> WDT_CLK_IS_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `TIMER_CLK_IS_ACTIVE` reader - reg_timer_clk_is_active."]
-pub struct TIMER_CLK_IS_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct TIMER_CLK_IS_ACTIVE_R(crate::FieldReader<bool>);
 impl TIMER_CLK_IS_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TIMER_CLK_IS_ACTIVE_R {
     }
 }
 impl core::ops::Deref for TIMER_CLK_IS_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TIMER_CLK_IS_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - reg_clk_en."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "TIMG_REGCLK_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regclk]
-(index.html) module"]
+#[doc = "TIMG_REGCLK_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [regclk](index.html) module"]
 pub struct REGCLK_SPEC;
 impl crate::RegisterSpec for REGCLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [regclk::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [regclk::R](R) reader structure"]
 impl crate::Readable for REGCLK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [regclk::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [regclk::W](W) writer structure"]
 impl crate::Writable for REGCLK_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<I2S_TX_CLKM_DIV_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_TX_CLKM_DIV_Z` reader - For b <= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b)."]
-pub struct I2S_TX_CLKM_DIV_Z_R(crate::FieldReader<u16, u16>);
+pub struct I2S_TX_CLKM_DIV_Z_R(crate::FieldReader<u16>);
 impl I2S_TX_CLKM_DIV_Z_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl I2S_TX_CLKM_DIV_Z_R {
     }
 }
 impl core::ops::Deref for I2S_TX_CLKM_DIV_Z_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> I2S_TX_CLKM_DIV_Z_W<'a> {
     }
 }
 #[doc = "Field `I2S_TX_CLKM_DIV_Y` reader - For b <= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b))."]
-pub struct I2S_TX_CLKM_DIV_Y_R(crate::FieldReader<u16, u16>);
+pub struct I2S_TX_CLKM_DIV_Y_R(crate::FieldReader<u16>);
 impl I2S_TX_CLKM_DIV_Y_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl I2S_TX_CLKM_DIV_Y_R {
     }
 }
 impl core::ops::Deref for I2S_TX_CLKM_DIV_Y_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> I2S_TX_CLKM_DIV_Y_W<'a> {
     }
 }
 #[doc = "Field `I2S_TX_CLKM_DIV_X` reader - For b <= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1."]
-pub struct I2S_TX_CLKM_DIV_X_R(crate::FieldReader<u16, u16>);
+pub struct I2S_TX_CLKM_DIV_X_R(crate::FieldReader<u16>);
 impl I2S_TX_CLKM_DIV_X_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl I2S_TX_CLKM_DIV_X_R {
     }
 }
 impl core::ops::Deref for I2S_TX_CLKM_DIV_X_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> I2S_TX_CLKM_DIV_X_W<'a> {
     }
 }
 #[doc = "Field `I2S_TX_CLKM_DIV_YN1` reader - For b <= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1."]
-pub struct I2S_TX_CLKM_DIV_YN1_R(crate::FieldReader<bool, bool>);
+pub struct I2S_TX_CLKM_DIV_YN1_R(crate::FieldReader<bool>);
 impl I2S_TX_CLKM_DIV_YN1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl I2S_TX_CLKM_DIV_YN1_R {
     }
 }
 impl core::ops::Deref for I2S_TX_CLKM_DIV_YN1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S TX module clock divider configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_tx_clkm_div_conf]
-(index.html) module"]
+#[doc = "I2S TX module clock divider configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_tx_clkm_div_conf](index.html) module"]
 pub struct I2S_TX_CLKM_DIV_CONF_SPEC;
 impl crate::RegisterSpec for I2S_TX_CLKM_DIV_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2s_tx_clkm_div_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [i2s_tx_clkm_div_conf::R](R) reader structure"]
 impl crate::Readable for I2S_TX_CLKM_DIV_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [i2s_tx_clkm_div_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [i2s_tx_clkm_div_conf::W](W) writer structure"]
 impl crate::Writable for I2S_TX_CLKM_DIV_CONF_SPEC {
     type Writer = W;
 }

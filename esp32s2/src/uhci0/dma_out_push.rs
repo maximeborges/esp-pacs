@@ -35,7 +35,7 @@ impl From<crate::W<DMA_OUT_PUSH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTFIFO_WDATA` reader - This is the data that need to be pushed into TX FIFO."]
-pub struct OUTFIFO_WDATA_R(crate::FieldReader<u16, u16>);
+pub struct OUTFIFO_WDATA_R(crate::FieldReader<u16>);
 impl OUTFIFO_WDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl OUTFIFO_WDATA_R {
     }
 }
 impl core::ops::Deref for OUTFIFO_WDATA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OUTFIFO_WDATA_W<'a> {
     }
 }
 #[doc = "Field `OUTFIFO_PUSH` reader - Set this bit to push data into TX FIFO."]
-pub struct OUTFIFO_PUSH_R(crate::FieldReader<bool, bool>);
+pub struct OUTFIFO_PUSH_R(crate::FieldReader<bool>);
 impl OUTFIFO_PUSH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl OUTFIFO_PUSH_R {
     }
 }
 impl core::ops::Deref for OUTFIFO_PUSH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Push control register of TX FIFO\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_out_push]
-(index.html) module"]
+#[doc = "Push control register of TX FIFO\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_out_push](index.html) module"]
 pub struct DMA_OUT_PUSH_SPEC;
 impl crate::RegisterSpec for DMA_OUT_PUSH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_out_push::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_out_push::R](R) reader structure"]
 impl crate::Readable for DMA_OUT_PUSH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_out_push::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_out_push::W](W) writer structure"]
 impl crate::Writable for DMA_OUT_PUSH_SPEC {
     type Writer = W;
 }

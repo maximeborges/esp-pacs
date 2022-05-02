@@ -35,7 +35,7 @@ impl From<crate::W<LCD_CLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_CLKCNT_N` reader - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
-pub struct LCD_CLKCNT_N_R(crate::FieldReader<u8, u8>);
+pub struct LCD_CLKCNT_N_R(crate::FieldReader<u8>);
 impl LCD_CLKCNT_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LCD_CLKCNT_N_R {
     }
 }
 impl core::ops::Deref for LCD_CLKCNT_N_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LCD_CLKCNT_N_W<'a> {
     }
 }
 #[doc = "Field `LCD_CLK_EQU_SYSCLK` reader - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
-pub struct LCD_CLK_EQU_SYSCLK_R(crate::FieldReader<bool, bool>);
+pub struct LCD_CLK_EQU_SYSCLK_R(crate::FieldReader<bool>);
 impl LCD_CLK_EQU_SYSCLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl LCD_CLK_EQU_SYSCLK_R {
     }
 }
 impl core::ops::Deref for LCD_CLK_EQU_SYSCLK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> LCD_CLK_EQU_SYSCLK_W<'a> {
     }
 }
 #[doc = "Field `LCD_CK_IDLE_EDGE` reader - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
-pub struct LCD_CK_IDLE_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct LCD_CK_IDLE_EDGE_R(crate::FieldReader<bool>);
 impl LCD_CK_IDLE_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl LCD_CK_IDLE_EDGE_R {
     }
 }
 impl core::ops::Deref for LCD_CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> LCD_CK_IDLE_EDGE_W<'a> {
     }
 }
 #[doc = "Field `LCD_CK_OUT_EDGE` reader - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
-pub struct LCD_CK_OUT_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct LCD_CK_OUT_EDGE_R(crate::FieldReader<bool>);
 impl LCD_CK_OUT_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl LCD_CK_OUT_EDGE_R {
     }
 }
 impl core::ops::Deref for LCD_CK_OUT_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> LCD_CK_OUT_EDGE_W<'a> {
     }
 }
 #[doc = "Field `LCD_CLKM_DIV_NUM` reader - Integral LCD clock divider value"]
-pub struct LCD_CLKM_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct LCD_CLKM_DIV_NUM_R(crate::FieldReader<u8>);
 impl LCD_CLKM_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -181,7 +181,7 @@ impl LCD_CLKM_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for LCD_CLKM_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> LCD_CLKM_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `LCD_CLKM_DIV_B` reader - Fractional clock divider numerator value"]
-pub struct LCD_CLKM_DIV_B_R(crate::FieldReader<u8, u8>);
+pub struct LCD_CLKM_DIV_B_R(crate::FieldReader<u8>);
 impl LCD_CLKM_DIV_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -208,7 +208,7 @@ impl LCD_CLKM_DIV_B_R {
     }
 }
 impl core::ops::Deref for LCD_CLKM_DIV_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> LCD_CLKM_DIV_B_W<'a> {
     }
 }
 #[doc = "Field `LCD_CLKM_DIV_A` reader - Fractional clock divider denominator value"]
-pub struct LCD_CLKM_DIV_A_R(crate::FieldReader<u8, u8>);
+pub struct LCD_CLKM_DIV_A_R(crate::FieldReader<u8>);
 impl LCD_CLKM_DIV_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -235,7 +235,7 @@ impl LCD_CLKM_DIV_A_R {
     }
 }
 impl core::ops::Deref for LCD_CLKM_DIV_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -254,7 +254,7 @@ impl<'a> LCD_CLKM_DIV_A_W<'a> {
     }
 }
 #[doc = "Field `LCD_CLK_SEL` reader - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
-pub struct LCD_CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct LCD_CLK_SEL_R(crate::FieldReader<u8>);
 impl LCD_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -262,7 +262,7 @@ impl LCD_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for LCD_CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -281,7 +281,7 @@ impl<'a> LCD_CLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -289,7 +289,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -417,25 +417,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD clock register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_clock]
-(index.html) module"]
+#[doc = "LCD clock register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_clock](index.html) module"]
 pub struct LCD_CLOCK_SPEC;
 impl crate::RegisterSpec for LCD_CLOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_clock::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lcd_clock::R](R) reader structure"]
 impl crate::Readable for LCD_CLOCK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lcd_clock::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lcd_clock::W](W) writer structure"]
 impl crate::Writable for LCD_CLOCK_SPEC {
     type Writer = W;
 }

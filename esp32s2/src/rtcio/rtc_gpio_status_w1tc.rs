@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "RTC GPIO interrupt status bit clear register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_status_w1tc]
-(index.html) module"]
+#[doc = "RTC GPIO interrupt status bit clear register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_status_w1tc](index.html) module"]
 pub struct RTC_GPIO_STATUS_W1TC_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_STATUS_W1TC_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_gpio_status_w1tc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_gpio_status_w1tc::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_STATUS_W1TC_SPEC {
     type Writer = W;
 }

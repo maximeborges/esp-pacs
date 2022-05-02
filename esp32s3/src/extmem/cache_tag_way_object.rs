@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_TAG_WAY_OBJECT_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_TAG_WAY_OBJECT` reader - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
-pub struct CACHE_TAG_WAY_OBJECT_R(crate::FieldReader<u8, u8>);
+pub struct CACHE_TAG_WAY_OBJECT_R(crate::FieldReader<u8>);
 impl CACHE_TAG_WAY_OBJECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_TAG_WAY_OBJECT_R {
     }
 }
 impl core::ops::Deref for CACHE_TAG_WAY_OBJECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_way_object]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_way_object](index.html) module"]
 pub struct CACHE_TAG_WAY_OBJECT_SPEC;
 impl crate::RegisterSpec for CACHE_TAG_WAY_OBJECT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_tag_way_object::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_tag_way_object::R](R) reader structure"]
 impl crate::Readable for CACHE_TAG_WAY_OBJECT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_tag_way_object::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_tag_way_object::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_WAY_OBJECT_SPEC {
     type Writer = W;
 }

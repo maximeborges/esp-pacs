@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_FILTER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_BYPASS_NEG_NOISE_THRES` reader - bypass neg noise thres"]
-pub struct TOUCH_BYPASS_NEG_NOISE_THRES_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_BYPASS_NEG_NOISE_THRES_R(crate::FieldReader<bool>);
 impl TOUCH_BYPASS_NEG_NOISE_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_BYPASS_NEG_NOISE_THRES_R {
     }
 }
 impl core::ops::Deref for TOUCH_BYPASS_NEG_NOISE_THRES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TOUCH_BYPASS_NEG_NOISE_THRES_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_BYPASS_NOISE_THRES` reader - bypaas noise thres"]
-pub struct TOUCH_BYPASS_NOISE_THRES_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_BYPASS_NOISE_THRES_R(crate::FieldReader<bool>);
 impl TOUCH_BYPASS_NOISE_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TOUCH_BYPASS_NOISE_THRES_R {
     }
 }
 impl core::ops::Deref for TOUCH_BYPASS_NOISE_THRES_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TOUCH_BYPASS_NOISE_THRES_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SMOOTH_LVL` reader - smooth filter factor"]
-pub struct TOUCH_SMOOTH_LVL_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_SMOOTH_LVL_R(crate::FieldReader<u8>);
 impl TOUCH_SMOOTH_LVL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl TOUCH_SMOOTH_LVL_R {
     }
 }
 impl core::ops::Deref for TOUCH_SMOOTH_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> TOUCH_SMOOTH_LVL_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_JITTER_STEP` reader - touch jitter step"]
-pub struct TOUCH_JITTER_STEP_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_JITTER_STEP_R(crate::FieldReader<u8>);
 impl TOUCH_JITTER_STEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl TOUCH_JITTER_STEP_R {
     }
 }
 impl core::ops::Deref for TOUCH_JITTER_STEP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> TOUCH_JITTER_STEP_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_NEG_NOISE_LIMIT` reader - negative threshold counter limit"]
-pub struct TOUCH_NEG_NOISE_LIMIT_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_NEG_NOISE_LIMIT_R(crate::FieldReader<u8>);
 impl TOUCH_NEG_NOISE_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl TOUCH_NEG_NOISE_LIMIT_R {
     }
 }
 impl core::ops::Deref for TOUCH_NEG_NOISE_LIMIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> TOUCH_NEG_NOISE_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_NEG_NOISE_THRES` reader - neg noise thres"]
-pub struct TOUCH_NEG_NOISE_THRES_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_NEG_NOISE_THRES_R(crate::FieldReader<u8>);
 impl TOUCH_NEG_NOISE_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -198,7 +198,7 @@ impl TOUCH_NEG_NOISE_THRES_R {
     }
 }
 impl core::ops::Deref for TOUCH_NEG_NOISE_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> TOUCH_NEG_NOISE_THRES_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_NOISE_THRES` reader - noise thres"]
-pub struct TOUCH_NOISE_THRES_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_NOISE_THRES_R(crate::FieldReader<u8>);
 impl TOUCH_NOISE_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -225,7 +225,7 @@ impl TOUCH_NOISE_THRES_R {
     }
 }
 impl core::ops::Deref for TOUCH_NOISE_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -244,7 +244,7 @@ impl<'a> TOUCH_NOISE_THRES_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_HYSTERESIS` reader - hysteresis"]
-pub struct TOUCH_HYSTERESIS_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_HYSTERESIS_R(crate::FieldReader<u8>);
 impl TOUCH_HYSTERESIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -252,7 +252,7 @@ impl TOUCH_HYSTERESIS_R {
     }
 }
 impl core::ops::Deref for TOUCH_HYSTERESIS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -271,7 +271,7 @@ impl<'a> TOUCH_HYSTERESIS_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DEBOUNCE` reader - debounce counter"]
-pub struct TOUCH_DEBOUNCE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DEBOUNCE_R(crate::FieldReader<u8>);
 impl TOUCH_DEBOUNCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -279,7 +279,7 @@ impl TOUCH_DEBOUNCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_DEBOUNCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -298,7 +298,7 @@ impl<'a> TOUCH_DEBOUNCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_FILTER_MODE` reader - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
-pub struct TOUCH_FILTER_MODE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_FILTER_MODE_R(crate::FieldReader<u8>);
 impl TOUCH_FILTER_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -306,7 +306,7 @@ impl TOUCH_FILTER_MODE_R {
     }
 }
 impl core::ops::Deref for TOUCH_FILTER_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -325,7 +325,7 @@ impl<'a> TOUCH_FILTER_MODE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_FILTER_EN` reader - touch filter enable"]
-pub struct TOUCH_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_FILTER_EN_R(crate::FieldReader<bool>);
 impl TOUCH_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -333,7 +333,7 @@ impl TOUCH_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -481,25 +481,16 @@ impl W {
         self
     }
 }
-#[doc = "configure touch controller\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_filter_ctrl]
-(index.html) module"]
+#[doc = "configure touch controller\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_filter_ctrl](index.html) module"]
 pub struct TOUCH_FILTER_CTRL_SPEC;
 impl crate::RegisterSpec for TOUCH_FILTER_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_filter_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_filter_ctrl::R](R) reader structure"]
 impl crate::Readable for TOUCH_FILTER_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_filter_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_filter_ctrl::W](W) writer structure"]
 impl crate::Writable for TOUCH_FILTER_CTRL_SPEC {
     type Writer = W;
 }

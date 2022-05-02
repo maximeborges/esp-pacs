@@ -35,7 +35,7 @@ impl From<crate::W<CPU_PERIOD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPUSEL_CONF` reader - CPU sel option"]
-pub struct CPUSEL_CONF_R(crate::FieldReader<bool, bool>);
+pub struct CPUSEL_CONF_R(crate::FieldReader<bool>);
 impl CPUSEL_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CPUSEL_CONF_R {
     }
 }
 impl core::ops::Deref for CPUSEL_CONF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CPUSEL_CONF_W<'a> {
     }
 }
 #[doc = "Field `CPUPERIOD_SEL` reader - "]
-pub struct CPUPERIOD_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CPUPERIOD_SEL_R(crate::FieldReader<u8>);
 impl CPUPERIOD_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CPUPERIOD_SEL_R {
     }
 }
 impl core::ops::Deref for CPUPERIOD_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "CPU sel option\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_period_conf]
-(index.html) module"]
+#[doc = "CPU sel option\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_period_conf](index.html) module"]
 pub struct CPU_PERIOD_CONF_SPEC;
 impl crate::RegisterSpec for CPU_PERIOD_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpu_period_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cpu_period_conf::R](R) reader structure"]
 impl crate::Readable for CPU_PERIOD_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cpu_period_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cpu_period_conf::W](W) writer structure"]
 impl crate::Writable for CPU_PERIOD_CONF_SPEC {
     type Writer = W;
 }

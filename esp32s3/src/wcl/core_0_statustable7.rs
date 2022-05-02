@@ -35,7 +35,7 @@ impl From<crate::W<CORE_0_STATUSTABLE7_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_FROM_WORLD_7` reader - This bit is used to confirm world before enter entry 7"]
-pub struct CORE_0_FROM_WORLD_7_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_FROM_WORLD_7_R(crate::FieldReader<bool>);
 impl CORE_0_FROM_WORLD_7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_FROM_WORLD_7_R {
     }
 }
 impl core::ops::Deref for CORE_0_FROM_WORLD_7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CORE_0_FROM_WORLD_7_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_FROM_ENTRY_7` reader - This filed is used to confirm in which entry before enter entry 7"]
-pub struct CORE_0_FROM_ENTRY_7_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_FROM_ENTRY_7_R(crate::FieldReader<u8>);
 impl CORE_0_FROM_ENTRY_7_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl CORE_0_FROM_ENTRY_7_R {
     }
 }
 impl core::ops::Deref for CORE_0_FROM_ENTRY_7_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CORE_0_FROM_ENTRY_7_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_CURRENT_7` reader - This bit is used to confirm whether the current state is in entry 7"]
-pub struct CORE_0_CURRENT_7_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_CURRENT_7_R(crate::FieldReader<bool>);
 impl CORE_0_CURRENT_7_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl CORE_0_CURRENT_7_R {
     }
 }
 impl core::ops::Deref for CORE_0_CURRENT_7_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "Status register of world switch of entry 7\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_statustable7]
-(index.html) module"]
+#[doc = "Status register of world switch of entry 7\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_statustable7](index.html) module"]
 pub struct CORE_0_STATUSTABLE7_SPEC;
 impl crate::RegisterSpec for CORE_0_STATUSTABLE7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_statustable7::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_statustable7::R](R) reader structure"]
 impl crate::Readable for CORE_0_STATUSTABLE7_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_statustable7::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_statustable7::W](W) writer structure"]
 impl crate::Writable for CORE_0_STATUSTABLE7_SPEC {
     type Writer = W;
 }

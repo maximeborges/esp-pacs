@@ -35,7 +35,7 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_CLK_SEL` reader - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
-pub struct APB_CLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct APB_CLK_SEL_R(crate::FieldReader<bool>);
 impl APB_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APB_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for APB_CLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf](index.html) module"]
 pub struct CONF_SPEC;
 impl crate::RegisterSpec for CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf::R](R) reader structure"]
 impl crate::Readable for CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
 }

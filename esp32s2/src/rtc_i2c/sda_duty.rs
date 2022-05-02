@@ -35,7 +35,7 @@ impl From<crate::W<SDA_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `NUM` reader - The number of clock cycles between the SDA switch and the falling edge of SCL."]
-pub struct NUM_R(crate::FieldReader<u32, u32>);
+pub struct NUM_R(crate::FieldReader<u32>);
 impl NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl NUM_R {
     }
 }
 impl core::ops::Deref for NUM_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure the SDA hold time after a negative SCL edge\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_duty]
-(index.html) module"]
+#[doc = "Configure the SDA hold time after a negative SCL edge\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_duty](index.html) module"]
 pub struct SDA_DUTY_SPEC;
 impl crate::RegisterSpec for SDA_DUTY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sda_duty::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sda_duty::R](R) reader structure"]
 impl crate::Readable for SDA_DUTY_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sda_duty::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sda_duty::W](W) writer structure"]
 impl crate::Writable for SDA_DUTY_SPEC {
     type Writer = W;
 }

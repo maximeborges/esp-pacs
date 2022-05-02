@@ -35,7 +35,7 @@ impl From<crate::W<IN_PERI_SEL_CH0_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IN_SEL_CH0` reader - This register is used to select peripheral for Rx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub struct PERI_IN_SEL_CH0_R(crate::FieldReader<u8, u8>);
+pub struct PERI_IN_SEL_CH0_R(crate::FieldReader<u8>);
 impl PERI_IN_SEL_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PERI_IN_SEL_CH0_R {
     }
 }
 impl core::ops::Deref for PERI_IN_SEL_CH0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA_IN_PERI_SEL_CH0_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_peri_sel_ch0]
-(index.html) module"]
+#[doc = "DMA_IN_PERI_SEL_CH0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_peri_sel_ch0](index.html) module"]
 pub struct IN_PERI_SEL_CH0_SPEC;
 impl crate::RegisterSpec for IN_PERI_SEL_CH0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_peri_sel_ch0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [in_peri_sel_ch0::R](R) reader structure"]
 impl crate::Readable for IN_PERI_SEL_CH0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [in_peri_sel_ch0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_peri_sel_ch0::W](W) writer structure"]
 impl crate::Writable for IN_PERI_SEL_CH0_SPEC {
     type Writer = W;
 }

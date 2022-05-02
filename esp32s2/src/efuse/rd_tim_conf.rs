@@ -35,7 +35,7 @@ impl From<crate::W<RD_TIM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `THR_A` reader - Configures the hold time of read operation."]
-pub struct THR_A_R(crate::FieldReader<u8, u8>);
+pub struct THR_A_R(crate::FieldReader<u8>);
 impl THR_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl THR_A_R {
     }
 }
 impl core::ops::Deref for THR_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> THR_A_W<'a> {
     }
 }
 #[doc = "Field `TRD` reader - Configures the length of pulse of read operation."]
-pub struct TRD_R(crate::FieldReader<u8, u8>);
+pub struct TRD_R(crate::FieldReader<u8>);
 impl TRD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TRD_R {
     }
 }
 impl core::ops::Deref for TRD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TRD_W<'a> {
     }
 }
 #[doc = "Field `TSUR_A` reader - Configures the setup time of read operation."]
-pub struct TSUR_A_R(crate::FieldReader<u8, u8>);
+pub struct TSUR_A_R(crate::FieldReader<u8>);
 impl TSUR_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TSUR_A_R {
     }
 }
 impl core::ops::Deref for TSUR_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TSUR_A_W<'a> {
     }
 }
 #[doc = "Field `READ_INIT_NUM` reader - Configures the initial read time of eFuse."]
-pub struct READ_INIT_NUM_R(crate::FieldReader<u8, u8>);
+pub struct READ_INIT_NUM_R(crate::FieldReader<u8>);
 impl READ_INIT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl READ_INIT_NUM_R {
     }
 }
 impl core::ops::Deref for READ_INIT_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures read timing parameters.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_tim_conf]
-(index.html) module"]
+#[doc = "Configures read timing parameters.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_tim_conf](index.html) module"]
 pub struct RD_TIM_CONF_SPEC;
 impl crate::RegisterSpec for RD_TIM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_tim_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_tim_conf::R](R) reader structure"]
 impl crate::Readable for RD_TIM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rd_tim_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rd_tim_conf::W](W) writer structure"]
 impl crate::Writable for RD_TIM_CONF_SPEC {
     type Writer = W;
 }

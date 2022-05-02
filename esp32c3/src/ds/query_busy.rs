@@ -14,7 +14,7 @@ impl From<crate::R<QUERY_BUSY_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_BUSY` reader - digital signature state. 1'b0: idle, 1'b1: busy"]
-pub struct QUERY_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct QUERY_BUSY_R(crate::FieldReader<bool>);
 impl QUERY_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl QUERY_BUSY_R {
     }
 }
 impl core::ops::Deref for QUERY_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         QUERY_BUSY_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "DS query busy register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_busy]
-(index.html) module"]
+#[doc = "DS query busy register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_busy](index.html) module"]
 pub struct QUERY_BUSY_SPEC;
 impl crate::RegisterSpec for QUERY_BUSY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [query_busy::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [query_busy::R](R) reader structure"]
 impl crate::Readable for QUERY_BUSY_SPEC {
     type Reader = R;
 }

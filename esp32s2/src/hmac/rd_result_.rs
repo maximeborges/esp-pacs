@@ -14,7 +14,7 @@ impl From<crate::R<RD_RESULT__SPEC>> for R {
     }
 }
 #[doc = "Field `RDATA` reader - Read the %sth 32-bit of hash result."]
-pub struct RDATA_R(crate::FieldReader<u32, u32>);
+pub struct RDATA_R(crate::FieldReader<u32>);
 impl RDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl RDATA_R {
     }
 }
 impl core::ops::Deref for RDATA_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         RDATA_R::new(self.bits)
     }
 }
-#[doc = "Hash result register %s\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_result_]
-(index.html) module"]
+#[doc = "Hash result register %s\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_result_](index.html) module"]
 pub struct RD_RESULT__SPEC;
 impl crate::RegisterSpec for RD_RESULT__SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_result_::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_result_::R](R) reader structure"]
 impl crate::Readable for RD_RESULT__SPEC {
     type Reader = R;
 }

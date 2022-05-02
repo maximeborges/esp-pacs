@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ENA` reader - This is the enable bit for UART_RXFIFO_FULL_INT."]
-pub struct RXFIFO_FULL_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_FULL_INT_ENA_R(crate::FieldReader<bool>);
 impl RXFIFO_FULL_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RXFIFO_FULL_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RXFIFO_FULL_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` reader - This is the enable bit for UART_TXFIFO_EMPTY_INT."]
-pub struct TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader<bool>);
 impl TXFIFO_EMPTY_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TXFIFO_EMPTY_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TXFIFO_EMPTY_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `PARITY_ERR_INT_ENA` reader - This is the enable bit for UART_PARITY_ERR_INT."]
-pub struct PARITY_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PARITY_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl PARITY_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PARITY_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for PARITY_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PARITY_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `FRM_ERR_INT_ENA` reader - This is the enable bit for UART_FRM_ERR_INT."]
-pub struct FRM_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct FRM_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl FRM_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FRM_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for FRM_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FRM_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - This is the enable bit for UART_RXFIFO_OVF_INT."]
-pub struct RXFIFO_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl RXFIFO_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RXFIFO_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RXFIFO_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RXFIFO_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DSR_CHG_INT_ENA` reader - This is the enable bit for UART_DSR_CHG_INT."]
-pub struct DSR_CHG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DSR_CHG_INT_ENA_R(crate::FieldReader<bool>);
 impl DSR_CHG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DSR_CHG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DSR_CHG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DSR_CHG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CTS_CHG_INT_ENA` reader - This is the enable bit for UART_CTS_CHG_INT."]
-pub struct CTS_CHG_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CTS_CHG_INT_ENA_R(crate::FieldReader<bool>);
 impl CTS_CHG_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl CTS_CHG_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CTS_CHG_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> CTS_CHG_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `BRK_DET_INT_ENA` reader - This is the enable bit for UART_BRK_DET_INT."]
-pub struct BRK_DET_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct BRK_DET_INT_ENA_R(crate::FieldReader<bool>);
 impl BRK_DET_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl BRK_DET_INT_ENA_R {
     }
 }
 impl core::ops::Deref for BRK_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> BRK_DET_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RXFIFO_TOUT_INT_ENA` reader - This is the enable bit for UART_RXFIFO_TOUT_INT."]
-pub struct RXFIFO_TOUT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_TOUT_INT_ENA_R(crate::FieldReader<bool>);
 impl RXFIFO_TOUT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl RXFIFO_TOUT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TOUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> RXFIFO_TOUT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SW_XON_INT_ENA` reader - This is the enable bit for UART_SW_XON_INT."]
-pub struct SW_XON_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SW_XON_INT_ENA_R(crate::FieldReader<bool>);
 impl SW_XON_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl SW_XON_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SW_XON_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> SW_XON_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SW_XOFF_INT_ENA` reader - This is the enable bit for UART_SW_XOFF_INT."]
-pub struct SW_XOFF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SW_XOFF_INT_ENA_R(crate::FieldReader<bool>);
 impl SW_XOFF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl SW_XOFF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SW_XOFF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> SW_XOFF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GLITCH_DET_INT_ENA` reader - This is the enable bit for UART_GLITCH_DET_INT."]
-pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool>);
 impl GLITCH_DET_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl GLITCH_DET_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GLITCH_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> GLITCH_DET_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TX_BRK_DONE_INT_ENA` reader - This is the enable bit for UART_TX_BRK_DONE_INT."]
-pub struct TX_BRK_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl TX_BRK_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TX_BRK_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TX_BRK_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TX_BRK_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ENA` reader - This is the enable bit for UART_TX_BRK_IDLE_DONE_INT."]
-pub struct TX_BRK_IDLE_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_IDLE_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl TX_BRK_IDLE_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TX_BRK_IDLE_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TX_BRK_IDLE_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TX_BRK_IDLE_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TX_DONE_INT_ENA` reader - This is the enable bit for UART_TX_DONE_INT."]
-pub struct TX_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl TX_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl TX_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TX_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> TX_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RS485_PARITY_ERR_INT_ENA` reader - This is the enable bit for UART_RS485_PARITY_ERR_INT."]
-pub struct RS485_PARITY_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RS485_PARITY_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl RS485_PARITY_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl RS485_PARITY_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RS485_PARITY_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> RS485_PARITY_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RS485_FRM_ERR_INT_ENA` reader - This is the enable bit for UART_RS485_PARITY_ERR_INT."]
-pub struct RS485_FRM_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RS485_FRM_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl RS485_FRM_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl RS485_FRM_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RS485_FRM_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> RS485_FRM_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RS485_CLASH_INT_ENA` reader - This is the enable bit for UART_RS485_CLASH_INT."]
-pub struct RS485_CLASH_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RS485_CLASH_INT_ENA_R(crate::FieldReader<bool>);
 impl RS485_CLASH_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl RS485_CLASH_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RS485_CLASH_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> RS485_CLASH_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ENA` reader - This is the enable bit for UART_AT_CMD_CHAR_DET_INT."]
-pub struct AT_CMD_CHAR_DET_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct AT_CMD_CHAR_DET_INT_ENA_R(crate::FieldReader<bool>);
 impl AT_CMD_CHAR_DET_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl AT_CMD_CHAR_DET_INT_ENA_R {
     }
 }
 impl core::ops::Deref for AT_CMD_CHAR_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> AT_CMD_CHAR_DET_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `WAKEUP_INT_ENA` reader - This is the enable bit for UART_WAKEUP_INT."]
-pub struct WAKEUP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct WAKEUP_INT_ENA_R(crate::FieldReader<bool>);
 impl WAKEUP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl WAKEUP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for WAKEUP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -984,25 +984,16 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt enable bits\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena]
-(index.html) module"]
+#[doc = "Interrupt enable bits\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
 impl crate::Readable for INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
 }

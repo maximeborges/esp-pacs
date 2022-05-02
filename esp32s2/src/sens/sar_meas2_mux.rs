@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS2_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
 impl SAR2_PWDET_CCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SAR2_PWDET_CCT_R {
     }
 }
 impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     }
 }
 #[doc = "Field `SAR2_RTC_FORCE` reader - In sleep, force to use RTC to control ADC."]
-pub struct SAR2_RTC_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_RTC_FORCE_R(crate::FieldReader<bool>);
 impl SAR2_RTC_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SAR2_RTC_FORCE_R {
     }
 }
 impl core::ops::Deref for SAR2_RTC_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Select the controller for SAR ADC2\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas2_mux]
-(index.html) module"]
+#[doc = "Select the controller for SAR ADC2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas2_mux](index.html) module"]
 pub struct SAR_MEAS2_MUX_SPEC;
 impl crate::RegisterSpec for SAR_MEAS2_MUX_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_meas2_mux::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_meas2_mux::R](R) reader structure"]
 impl crate::Readable for SAR_MEAS2_MUX_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_meas2_mux::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_meas2_mux::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_MUX_SPEC {
     type Writer = W;
 }

@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buffer_]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buffer_](index.html) module"]
 pub struct BUFFER__SPEC;
 impl crate::RegisterSpec for BUFFER__SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [buffer_::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [buffer_::W](W) writer structure"]
 impl crate::Writable for BUFFER__SPEC {
     type Writer = W;
 }

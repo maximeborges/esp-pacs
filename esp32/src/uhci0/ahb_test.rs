@@ -35,7 +35,7 @@ impl From<crate::W<AHB_TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `AHB_TESTMODE` reader - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
-pub struct AHB_TESTMODE_R(crate::FieldReader<u8, u8>);
+pub struct AHB_TESTMODE_R(crate::FieldReader<u8>);
 impl AHB_TESTMODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl AHB_TESTMODE_R {
     }
 }
 impl core::ops::Deref for AHB_TESTMODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,9 +61,8 @@ impl<'a> AHB_TESTMODE_W<'a> {
         self.w
     }
 }
-#[doc = "Field `AHB_TESTADDR` reader - The two bits represent ahb bus address bit\\[20:19\\]
-"]
-pub struct AHB_TESTADDR_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `AHB_TESTADDR` reader - The two bits represent ahb bus address bit\\[20:19\\]"]
+pub struct AHB_TESTADDR_R(crate::FieldReader<u8>);
 impl AHB_TESTADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -71,14 +70,13 @@ impl AHB_TESTADDR_R {
     }
 }
 impl core::ops::Deref for AHB_TESTADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `AHB_TESTADDR` writer - The two bits represent ahb bus address bit\\[20:19\\]
-"]
+#[doc = "Field `AHB_TESTADDR` writer - The two bits represent ahb bus address bit\\[20:19\\]"]
 pub struct AHB_TESTADDR_W<'a> {
     w: &'a mut W,
 }
@@ -96,8 +94,7 @@ impl R {
     pub fn ahb_testmode(&self) -> AHB_TESTMODE_R {
         AHB_TESTMODE_R::new((self.bits & 7) as u8)
     }
-    #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]
-"]
+    #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]"]
     #[inline(always)]
     pub fn ahb_testaddr(&self) -> AHB_TESTADDR_R {
         AHB_TESTADDR_R::new(((self.bits >> 4) & 3) as u8)
@@ -109,8 +106,7 @@ impl W {
     pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W {
         AHB_TESTMODE_W { w: self }
     }
-    #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]
-"]
+    #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]"]
     #[inline(always)]
     pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W {
         AHB_TESTADDR_W { w: self }
@@ -122,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ahb_test]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ahb_test](index.html) module"]
 pub struct AHB_TEST_SPEC;
 impl crate::RegisterSpec for AHB_TEST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ahb_test::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ahb_test::R](R) reader structure"]
 impl crate::Readable for AHB_TEST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ahb_test::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ahb_test::W](W) writer structure"]
 impl crate::Writable for AHB_TEST_SPEC {
     type Writer = W;
 }

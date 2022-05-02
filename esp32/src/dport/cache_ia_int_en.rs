@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_IA_INT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_IA_INT_EN` reader - Interrupt enable bits for various invalid cache access reasons"]
-pub struct CACHE_IA_INT_EN_R(crate::FieldReader<u32, u32>);
+pub struct CACHE_IA_INT_EN_R(crate::FieldReader<u32>);
 impl CACHE_IA_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_IA_INT_EN_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_EN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CACHE_IA_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_DROM0` reader - APP CPU invalid access to DROM0 when cache is disabled"]
-pub struct CACHE_IA_INT_APP_DROM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_DROM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_DROM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl CACHE_IA_INT_APP_DROM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_DROM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CACHE_IA_INT_APP_DROM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_IRAM0` reader - APP CPU invalid access to IRAM0 when cache is disabled"]
-pub struct CACHE_IA_INT_APP_IRAM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_IRAM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_IRAM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl CACHE_IA_INT_APP_IRAM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_IRAM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> CACHE_IA_INT_APP_IRAM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_IRAM1` reader - APP CPU invalid access to IRAM1 when cache is disabled"]
-pub struct CACHE_IA_INT_APP_IRAM1_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_IRAM1_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_IRAM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl CACHE_IA_INT_APP_IRAM1_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_IRAM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> CACHE_IA_INT_APP_IRAM1_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_IROM0` reader - APP CPU invalid access to IROM0 when cache is disabled"]
-pub struct CACHE_IA_INT_APP_IROM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_IROM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_IROM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl CACHE_IA_INT_APP_IROM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_IROM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> CACHE_IA_INT_APP_IROM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_DRAM1` reader - APP CPU invalid access to DRAM1 when cache is disabled"]
-pub struct CACHE_IA_INT_APP_DRAM1_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_DRAM1_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_DRAM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl CACHE_IA_INT_APP_DRAM1_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_DRAM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> CACHE_IA_INT_APP_DRAM1_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_APP_OPPOSITE` reader - APP CPU invalid access to APP CPU cache when cache disabled"]
-pub struct CACHE_IA_INT_APP_OPPOSITE_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_APP_OPPOSITE_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_APP_OPPOSITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl CACHE_IA_INT_APP_OPPOSITE_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_APP_OPPOSITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> CACHE_IA_INT_APP_OPPOSITE_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_DROM0` reader - PRO CPU invalid access to DROM0 when cache is disabled"]
-pub struct CACHE_IA_INT_PRO_DROM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_DROM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_DROM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl CACHE_IA_INT_PRO_DROM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_DROM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> CACHE_IA_INT_PRO_DROM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM0` reader - PRO CPU invalid access to IRAM0 when cache is disabled"]
-pub struct CACHE_IA_INT_PRO_IRAM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_IRAM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_IRAM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl CACHE_IA_INT_PRO_IRAM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_IRAM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> CACHE_IA_INT_PRO_IRAM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_IRAM1` reader - PRO CPU invalid access to IRAM1 when cache is disabled"]
-pub struct CACHE_IA_INT_PRO_IRAM1_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_IRAM1_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_IRAM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl CACHE_IA_INT_PRO_IRAM1_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_IRAM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> CACHE_IA_INT_PRO_IRAM1_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_IROM0` reader - PRO CPU invalid access to IROM0 when cache is disabled"]
-pub struct CACHE_IA_INT_PRO_IROM0_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_IROM0_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_IROM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl CACHE_IA_INT_PRO_IROM0_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_IROM0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> CACHE_IA_INT_PRO_IROM0_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_DRAM1` reader - PRO CPU invalid access to DRAM1 when cache is disabled"]
-pub struct CACHE_IA_INT_PRO_DRAM1_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_DRAM1_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_DRAM1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -440,7 +440,7 @@ impl CACHE_IA_INT_PRO_DRAM1_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_DRAM1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -469,7 +469,7 @@ impl<'a> CACHE_IA_INT_PRO_DRAM1_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IA_INT_PRO_OPPOSITE` reader - PRO CPU invalid access to APP CPU cache when cache disabled"]
-pub struct CACHE_IA_INT_PRO_OPPOSITE_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IA_INT_PRO_OPPOSITE_R(crate::FieldReader<bool>);
 impl CACHE_IA_INT_PRO_OPPOSITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -477,7 +477,7 @@ impl CACHE_IA_INT_PRO_OPPOSITE_R {
     }
 }
 impl core::ops::Deref for CACHE_IA_INT_PRO_OPPOSITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -645,25 +645,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_ia_int_en]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_ia_int_en](index.html) module"]
 pub struct CACHE_IA_INT_EN_SPEC;
 impl crate::RegisterSpec for CACHE_IA_INT_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_ia_int_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_ia_int_en::R](R) reader structure"]
 impl crate::Readable for CACHE_IA_INT_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_ia_int_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_ia_int_en::W](W) writer structure"]
 impl crate::Writable for CACHE_IA_INT_EN_SPEC {
     type Writer = W;
 }

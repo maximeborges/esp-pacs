@@ -35,7 +35,7 @@ impl From<crate::W<PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_PAD_DRIVER` reader - if set to : normal output if set to 1: open drain"]
-pub struct PIN_PAD_DRIVER_R(crate::FieldReader<bool, bool>);
+pub struct PIN_PAD_DRIVER_R(crate::FieldReader<bool>);
 impl PIN_PAD_DRIVER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PIN_PAD_DRIVER_R {
     }
 }
 impl core::ops::Deref for PIN_PAD_DRIVER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PIN_PAD_DRIVER_W<'a> {
     }
 }
 #[doc = "Field `PIN_INT_TYPE` reader - if set to : GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
-pub struct PIN_INT_TYPE_R(crate::FieldReader<u8, u8>);
+pub struct PIN_INT_TYPE_R(crate::FieldReader<u8>);
 impl PIN_INT_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl PIN_INT_TYPE_R {
     }
 }
 impl core::ops::Deref for PIN_INT_TYPE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> PIN_INT_TYPE_W<'a> {
     }
 }
 #[doc = "Field `PIN_WAKEUP_ENABLE` reader - GPIO wake up enable only available in light sleep"]
-pub struct PIN_WAKEUP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PIN_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
 impl PIN_WAKEUP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl PIN_WAKEUP_ENABLE_R {
     }
 }
 impl core::ops::Deref for PIN_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> PIN_WAKEUP_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `PIN_CONFIG` reader - NA"]
-pub struct PIN_CONFIG_R(crate::FieldReader<u8, u8>);
+pub struct PIN_CONFIG_R(crate::FieldReader<u8>);
 impl PIN_CONFIG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl PIN_CONFIG_R {
     }
 }
 impl core::ops::Deref for PIN_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> PIN_CONFIG_W<'a> {
     }
 }
 #[doc = "Field `PIN_INT_ENA` reader - bit: APP CPU interrupt enable bit1: APP CPU non-maskable interrupt enable bit3: PRO CPU interrupt enable bit4: PRO CPU non-maskable interrupt enable bit5: SDIO's extent interrupt enable"]
-pub struct PIN_INT_ENA_R(crate::FieldReader<u8, u8>);
+pub struct PIN_INT_ENA_R(crate::FieldReader<u8>);
 impl PIN_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl PIN_INT_ENA_R {
     }
 }
 impl core::ops::Deref for PIN_INT_ENA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -249,25 +249,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin](index.html) module"]
 pub struct PIN_SPEC;
 impl crate::RegisterSpec for PIN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pin::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pin::R](R) reader structure"]
 impl crate::Readable for PIN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pin::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
 }

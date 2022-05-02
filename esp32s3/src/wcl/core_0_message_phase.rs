@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_MESSAGE_PHASE_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_MATCH` reader - This bit indicates whether the check is successful"]
-pub struct CORE_0_MESSAGE_MATCH_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_MESSAGE_MATCH_R(crate::FieldReader<bool>);
 impl CORE_0_MESSAGE_MATCH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CORE_0_MESSAGE_MATCH_R {
     }
 }
 impl core::ops::Deref for CORE_0_MESSAGE_MATCH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_EXPECT` reader - This field indicates the data to be written next time"]
-pub struct CORE_0_MESSAGE_EXPECT_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_MESSAGE_EXPECT_R(crate::FieldReader<u8>);
 impl CORE_0_MESSAGE_EXPECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl CORE_0_MESSAGE_EXPECT_R {
     }
 }
 impl core::ops::Deref for CORE_0_MESSAGE_EXPECT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_DATAPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data"]
-pub struct CORE_0_MESSAGE_DATAPHASE_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_MESSAGE_DATAPHASE_R(crate::FieldReader<bool>);
 impl CORE_0_MESSAGE_DATAPHASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CORE_0_MESSAGE_DATAPHASE_R {
     }
 }
 impl core::ops::Deref for CORE_0_MESSAGE_DATAPHASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_ADDRESSPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address."]
-pub struct CORE_0_MESSAGE_ADDRESSPHASE_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_MESSAGE_ADDRESSPHASE_R(crate::FieldReader<bool>);
 impl CORE_0_MESSAGE_ADDRESSPHASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl CORE_0_MESSAGE_ADDRESSPHASE_R {
     }
 }
 impl core::ops::Deref for CORE_0_MESSAGE_ADDRESSPHASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         CORE_0_MESSAGE_ADDRESSPHASE_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "Clear writer_buffer status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_message_phase]
-(index.html) module"]
+#[doc = "Clear writer_buffer status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_message_phase](index.html) module"]
 pub struct CORE_0_MESSAGE_PHASE_SPEC;
 impl crate::RegisterSpec for CORE_0_MESSAGE_PHASE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_message_phase::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_message_phase::R](R) reader structure"]
 impl crate::Readable for CORE_0_MESSAGE_PHASE_SPEC {
     type Reader = R;
 }

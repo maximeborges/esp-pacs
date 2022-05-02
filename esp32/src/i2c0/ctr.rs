@@ -35,7 +35,7 @@ impl From<crate::W<CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
-pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool, bool>);
+pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool>);
 impl SDA_FORCE_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SDA_FORCE_OUT_R {
     }
 }
 impl core::ops::Deref for SDA_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SDA_FORCE_OUT_W<'a> {
     }
 }
 #[doc = "Field `SCL_FORCE_OUT` reader - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
-pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool, bool>);
+pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool>);
 impl SCL_FORCE_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SCL_FORCE_OUT_R {
     }
 }
 impl core::ops::Deref for SCL_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SCL_FORCE_OUT_W<'a> {
     }
 }
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
-pub struct SAMPLE_SCL_LEVEL_R(crate::FieldReader<bool, bool>);
+pub struct SAMPLE_SCL_LEVEL_R(crate::FieldReader<bool>);
 impl SAMPLE_SCL_LEVEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SAMPLE_SCL_LEVEL_R {
     }
 }
 impl core::ops::Deref for SAMPLE_SCL_LEVEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SAMPLE_SCL_LEVEL_W<'a> {
     }
 }
 #[doc = "Field `MS_MODE` reader - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
-pub struct MS_MODE_R(crate::FieldReader<bool, bool>);
+pub struct MS_MODE_R(crate::FieldReader<bool>);
 impl MS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MS_MODE_R {
     }
 }
 impl core::ops::Deref for MS_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MS_MODE_W<'a> {
     }
 }
 #[doc = "Field `TRANS_START` reader - Set this bit to start sending data in txfifo."]
-pub struct TRANS_START_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_START_R(crate::FieldReader<bool>);
 impl TRANS_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TRANS_START_R {
     }
 }
 impl core::ops::Deref for TRANS_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TRANS_START_W<'a> {
     }
 }
 #[doc = "Field `TX_LSB_FIRST` reader - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct TX_LSB_FIRST_R(crate::FieldReader<bool, bool>);
+pub struct TX_LSB_FIRST_R(crate::FieldReader<bool>);
 impl TX_LSB_FIRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TX_LSB_FIRST_R {
     }
 }
 impl core::ops::Deref for TX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TX_LSB_FIRST_W<'a> {
     }
 }
 #[doc = "Field `RX_LSB_FIRST` reader - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct RX_LSB_FIRST_R(crate::FieldReader<bool, bool>);
+pub struct RX_LSB_FIRST_R(crate::FieldReader<bool>);
 impl RX_LSB_FIRST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RX_LSB_FIRST_R {
     }
 }
 impl core::ops::Deref for RX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RX_LSB_FIRST_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - This is the clock gating control bit for reading or writing registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctr]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctr](index.html) module"]
 pub struct CTR_SPEC;
 impl crate::RegisterSpec for CTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctr::R](R) reader structure"]
 impl crate::Readable for CTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctr::W](W) writer structure"]
 impl crate::Writable for CTR_SPEC {
     type Writer = W;
 }

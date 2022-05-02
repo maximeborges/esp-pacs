@@ -14,7 +14,7 @@ impl From<crate::R<ACCESS_CHECK_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO` reader - "]
-pub struct PRO_R(crate::FieldReader<bool, bool>);
+pub struct PRO_R(crate::FieldReader<bool>);
 impl PRO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl PRO_R {
     }
 }
 impl core::ops::Deref for PRO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APP` reader - "]
-pub struct APP_R(crate::FieldReader<bool, bool>);
+pub struct APP_R(crate::FieldReader<bool>);
 impl APP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl APP_R {
     }
 }
 impl core::ops::Deref for APP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         APP_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [access_check]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [access_check](index.html) module"]
 pub struct ACCESS_CHECK_SPEC;
 impl crate::RegisterSpec for ACCESS_CHECK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [access_check::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [access_check::R](R) reader structure"]
 impl crate::Readable for ACCESS_CHECK_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<SCL_RSTART_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure the interval between the positive edge of SCL and the negative edge of SDA for a RESTART condition, in I2C module clock cycles."]
-pub struct TIME_R(crate::FieldReader<u16, u16>);
+pub struct TIME_R(crate::FieldReader<u16>);
 impl TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TIME_R {
     }
 }
 impl core::ops::Deref for TIME_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures the interval between the positive edge of SCL and the negative edge of SDA\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_rstart_setup]
-(index.html) module"]
+#[doc = "Configures the interval between the positive edge of SCL and the negative edge of SDA\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_rstart_setup](index.html) module"]
 pub struct SCL_RSTART_SETUP_SPEC;
 impl crate::RegisterSpec for SCL_RSTART_SETUP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_rstart_setup::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_rstart_setup::R](R) reader structure"]
 impl crate::Readable for SCL_RSTART_SETUP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_rstart_setup::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_rstart_setup::W](W) writer structure"]
 impl crate::Writable for SCL_RSTART_SETUP_SPEC {
     type Writer = W;
 }

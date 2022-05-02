@@ -14,7 +14,7 @@ impl From<crate::R<DMA_INSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INDSCR_ADDR` reader - SPI dma in descriptor address."]
-pub struct DMA_INDSCR_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct DMA_INDSCR_ADDR_R(crate::FieldReader<u32>);
 impl DMA_INDSCR_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl DMA_INDSCR_ADDR_R {
     }
 }
 impl core::ops::Deref for DMA_INDSCR_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_INDSCR_STATE` reader - SPI dma in descriptor state."]
-pub struct DMA_INDSCR_STATE_R(crate::FieldReader<u8, u8>);
+pub struct DMA_INDSCR_STATE_R(crate::FieldReader<u8>);
 impl DMA_INDSCR_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl DMA_INDSCR_STATE_R {
     }
 }
 impl core::ops::Deref for DMA_INDSCR_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_IN_STATE` reader - SPI dma in data state."]
-pub struct DMA_IN_STATE_R(crate::FieldReader<u8, u8>);
+pub struct DMA_IN_STATE_R(crate::FieldReader<u8>);
 impl DMA_IN_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl DMA_IN_STATE_R {
     }
 }
 impl core::ops::Deref for DMA_IN_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_INFIFO_CNT` reader - The remains of SPI dma infifo data."]
-pub struct DMA_INFIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct DMA_INFIFO_CNT_R(crate::FieldReader<u8>);
 impl DMA_INFIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,14 +67,14 @@ impl DMA_INFIFO_CNT_R {
     }
 }
 impl core::ops::Deref for DMA_INFIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL` reader - SPI dma infifo is full."]
-pub struct DMA_INFIFO_FULL_R(crate::FieldReader<bool, bool>);
+pub struct DMA_INFIFO_FULL_R(crate::FieldReader<bool>);
 impl DMA_INFIFO_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl DMA_INFIFO_FULL_R {
     }
 }
 impl core::ops::Deref for DMA_INFIFO_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_INFIFO_EMPTY` reader - SPI dma infifo is empty."]
-pub struct DMA_INFIFO_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct DMA_INFIFO_EMPTY_R(crate::FieldReader<bool>);
 impl DMA_INFIFO_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl DMA_INFIFO_EMPTY_R {
     }
 }
 impl core::ops::Deref for DMA_INFIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -135,16 +135,12 @@ impl R {
         DMA_INFIFO_EMPTY_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "SPI DMA RX status\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_instatus]
-(index.html) module"]
+#[doc = "SPI DMA RX status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_instatus](index.html) module"]
 pub struct DMA_INSTATUS_SPEC;
 impl crate::RegisterSpec for DMA_INSTATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_instatus::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_instatus::R](R) reader structure"]
 impl crate::Readable for DMA_INSTATUS_SPEC {
     type Reader = R;
 }

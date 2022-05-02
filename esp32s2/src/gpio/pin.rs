@@ -35,7 +35,7 @@ impl From<crate::W<PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_SYNC2_BYPASS` reader - For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub struct PIN_SYNC2_BYPASS_R(crate::FieldReader<u8, u8>);
+pub struct PIN_SYNC2_BYPASS_R(crate::FieldReader<u8>);
 impl PIN_SYNC2_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl PIN_SYNC2_BYPASS_R {
     }
 }
 impl core::ops::Deref for PIN_SYNC2_BYPASS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PIN_SYNC2_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `PIN_PAD_DRIVER` reader - Pad driver selection. 0: normal output; 1: open drain output.."]
-pub struct PIN_PAD_DRIVER_R(crate::FieldReader<bool, bool>);
+pub struct PIN_PAD_DRIVER_R(crate::FieldReader<bool>);
 impl PIN_PAD_DRIVER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl PIN_PAD_DRIVER_R {
     }
 }
 impl core::ops::Deref for PIN_PAD_DRIVER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> PIN_PAD_DRIVER_W<'a> {
     }
 }
 #[doc = "Field `PIN_SYNC1_BYPASS` reader - For the first stage synchronization, GPIO input data can be synchro- nized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub struct PIN_SYNC1_BYPASS_R(crate::FieldReader<u8, u8>);
+pub struct PIN_SYNC1_BYPASS_R(crate::FieldReader<u8>);
 impl PIN_SYNC1_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl PIN_SYNC1_BYPASS_R {
     }
 }
 impl core::ops::Deref for PIN_SYNC1_BYPASS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> PIN_SYNC1_BYPASS_W<'a> {
     }
 }
 #[doc = "Field `PIN_INT_TYPE` reader - Interrupt type selection. 0: GPIO interrupt disabled; 1: rising edge trigger; 2: falling edge trigger; 3: any edge trigger; 4: low level trigger; 5: high level trigger. (R/W)"]
-pub struct PIN_INT_TYPE_R(crate::FieldReader<u8, u8>);
+pub struct PIN_INT_TYPE_R(crate::FieldReader<u8>);
 impl PIN_INT_TYPE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl PIN_INT_TYPE_R {
     }
 }
 impl core::ops::Deref for PIN_INT_TYPE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> PIN_INT_TYPE_W<'a> {
     }
 }
 #[doc = "Field `PIN_WAKEUP_ENABLE` reader - GPIO wake-up enable bit, only wakes up the CPU from Light-sleep."]
-pub struct PIN_WAKEUP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct PIN_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
 impl PIN_WAKEUP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl PIN_WAKEUP_ENABLE_R {
     }
 }
 impl core::ops::Deref for PIN_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> PIN_WAKEUP_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `PIN_CONFIG` reader - Reserved"]
-pub struct PIN_CONFIG_R(crate::FieldReader<u8, u8>);
+pub struct PIN_CONFIG_R(crate::FieldReader<u8>);
 impl PIN_CONFIG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -198,7 +198,7 @@ impl PIN_CONFIG_R {
     }
 }
 impl core::ops::Deref for PIN_CONFIG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> PIN_CONFIG_W<'a> {
     }
 }
 #[doc = "Field `PIN_INT_ENA` reader - Interrupt enable bits. bit13: CPU interrupt enabled; bit14: CPU non-maskable interrupt enabled."]
-pub struct PIN_INT_ENA_R(crate::FieldReader<u8, u8>);
+pub struct PIN_INT_ENA_R(crate::FieldReader<u8>);
 impl PIN_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -225,7 +225,7 @@ impl PIN_INT_ENA_R {
     }
 }
 impl core::ops::Deref for PIN_INT_ENA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -323,25 +323,16 @@ impl W {
         self
     }
 }
-#[doc = "Configuration for GPIO pin %s\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin]
-(index.html) module"]
+#[doc = "Configuration for GPIO pin %s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pin](index.html) module"]
 pub struct PIN_SPEC;
 impl crate::RegisterSpec for PIN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pin::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pin::R](R) reader structure"]
 impl crate::Readable for PIN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pin::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
 }

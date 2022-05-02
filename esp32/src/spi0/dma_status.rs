@@ -14,7 +14,7 @@ impl From<crate::R<DMA_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_RX_EN` reader - spi dma read data status bit."]
-pub struct DMA_RX_EN_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RX_EN_R(crate::FieldReader<bool>);
 impl DMA_RX_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl DMA_RX_EN_R {
     }
 }
 impl core::ops::Deref for DMA_RX_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DMA_TX_EN` reader - spi dma write data status bit."]
-pub struct DMA_TX_EN_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_EN_R(crate::FieldReader<bool>);
 impl DMA_TX_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl DMA_TX_EN_R {
     }
 }
 impl core::ops::Deref for DMA_TX_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         DMA_TX_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_status]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_status](index.html) module"]
 pub struct DMA_STATUS_SPEC;
 impl crate::RegisterSpec for DMA_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_status::R](R) reader structure"]
 impl crate::Readable for DMA_STATUS_SPEC {
     type Reader = R;
 }

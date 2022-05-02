@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_CONTROL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_RUNSTALL` reader - Set 1 to stall core1"]
-pub struct CONTROL_CORE_1_RUNSTALL_R(crate::FieldReader<bool, bool>);
+pub struct CONTROL_CORE_1_RUNSTALL_R(crate::FieldReader<bool>);
 impl CONTROL_CORE_1_RUNSTALL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CONTROL_CORE_1_RUNSTALL_R {
     }
 }
 impl core::ops::Deref for CONTROL_CORE_1_RUNSTALL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CONTROL_CORE_1_RUNSTALL_W<'a> {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_CLKGATE_EN` reader - Set 1 to open core1 clock"]
-pub struct CONTROL_CORE_1_CLKGATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct CONTROL_CORE_1_CLKGATE_EN_R(crate::FieldReader<bool>);
 impl CONTROL_CORE_1_CLKGATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CONTROL_CORE_1_CLKGATE_EN_R {
     }
 }
 impl core::ops::Deref for CONTROL_CORE_1_CLKGATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CONTROL_CORE_1_CLKGATE_EN_W<'a> {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_RESETING` reader - Set 1 to let core1 reset"]
-pub struct CONTROL_CORE_1_RESETING_R(crate::FieldReader<bool, bool>);
+pub struct CONTROL_CORE_1_RESETING_R(crate::FieldReader<bool>);
 impl CONTROL_CORE_1_RESETING_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CONTROL_CORE_1_RESETING_R {
     }
 }
 impl core::ops::Deref for CONTROL_CORE_1_RESETING_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "Core0 control regiter 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_control_0]
-(index.html) module"]
+#[doc = "Core0 control regiter 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_control_0](index.html) module"]
 pub struct CORE_1_CONTROL_0_SPEC;
 impl crate::RegisterSpec for CORE_1_CONTROL_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_control_0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_control_0::R](R) reader structure"]
 impl crate::Readable for CORE_1_CONTROL_0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_control_0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_control_0::W](W) writer structure"]
 impl crate::Writable for CORE_1_CONTROL_0_SPEC {
     type Writer = W;
 }

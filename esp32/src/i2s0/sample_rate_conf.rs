@@ -35,7 +35,7 @@ impl From<crate::W<SAMPLE_RATE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BCK_DIV_NUM` reader - "]
-pub struct TX_BCK_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct TX_BCK_DIV_NUM_R(crate::FieldReader<u8>);
 impl TX_BCK_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_BCK_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for TX_BCK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_BCK_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `RX_BCK_DIV_NUM` reader - "]
-pub struct RX_BCK_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct RX_BCK_DIV_NUM_R(crate::FieldReader<u8>);
 impl RX_BCK_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RX_BCK_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for RX_BCK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> RX_BCK_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `TX_BITS_MOD` reader - "]
-pub struct TX_BITS_MOD_R(crate::FieldReader<u8, u8>);
+pub struct TX_BITS_MOD_R(crate::FieldReader<u8>);
 impl TX_BITS_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TX_BITS_MOD_R {
     }
 }
 impl core::ops::Deref for TX_BITS_MOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TX_BITS_MOD_W<'a> {
     }
 }
 #[doc = "Field `RX_BITS_MOD` reader - "]
-pub struct RX_BITS_MOD_R(crate::FieldReader<u8, u8>);
+pub struct RX_BITS_MOD_R(crate::FieldReader<u8>);
 impl RX_BITS_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl RX_BITS_MOD_R {
     }
 }
 impl core::ops::Deref for RX_BITS_MOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sample_rate_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sample_rate_conf](index.html) module"]
 pub struct SAMPLE_RATE_CONF_SPEC;
 impl crate::RegisterSpec for SAMPLE_RATE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sample_rate_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sample_rate_conf::R](R) reader structure"]
 impl crate::Readable for SAMPLE_RATE_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sample_rate_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sample_rate_conf::W](W) writer structure"]
 impl crate::Writable for SAMPLE_RATE_CONF_SPEC {
     type Writer = W;
 }

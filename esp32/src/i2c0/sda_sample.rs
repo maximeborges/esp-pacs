@@ -35,7 +35,7 @@ impl From<crate::W<SDA_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
-pub struct TIME_R(crate::FieldReader<u16, u16>);
+pub struct TIME_R(crate::FieldReader<u16>);
 impl TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl TIME_R {
     }
 }
 impl core::ops::Deref for TIME_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_sample]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sda_sample](index.html) module"]
 pub struct SDA_SAMPLE_SPEC;
 impl crate::RegisterSpec for SDA_SAMPLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sda_sample::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sda_sample::R](R) reader structure"]
 impl crate::Readable for SDA_SAMPLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sda_sample::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sda_sample::W](W) writer structure"]
 impl crate::Writable for SDA_SAMPLE_SPEC {
     type Writer = W;
 }

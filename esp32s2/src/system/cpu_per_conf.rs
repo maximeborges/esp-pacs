@@ -35,7 +35,7 @@ impl From<crate::W<CPU_PER_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPUPERIOD_SEL` reader - This field is used to select the clock frequency of CPU or CPU period."]
-pub struct CPUPERIOD_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CPUPERIOD_SEL_R(crate::FieldReader<u8>);
 impl CPUPERIOD_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CPUPERIOD_SEL_R {
     }
 }
 impl core::ops::Deref for CPUPERIOD_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CPUPERIOD_SEL_W<'a> {
     }
 }
 #[doc = "Field `PLL_FREQ_SEL` reader - This field is used to select the PLL clock frequency based on CPU period."]
-pub struct PLL_FREQ_SEL_R(crate::FieldReader<bool, bool>);
+pub struct PLL_FREQ_SEL_R(crate::FieldReader<bool>);
 impl PLL_FREQ_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl PLL_FREQ_SEL_R {
     }
 }
 impl core::ops::Deref for PLL_FREQ_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> PLL_FREQ_SEL_W<'a> {
     }
 }
 #[doc = "Field `CPU_WAIT_MODE_FORCE_ON` reader - Set this bit to force on CPU wait mode. In this mode, the clock gate of CPU is turned off until any interrupts happen. This mode could also be force on via WAITI instruction."]
-pub struct CPU_WAIT_MODE_FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct CPU_WAIT_MODE_FORCE_ON_R(crate::FieldReader<bool>);
 impl CPU_WAIT_MODE_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl CPU_WAIT_MODE_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for CPU_WAIT_MODE_FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> CPU_WAIT_MODE_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `CPU_WAITI_DELAY_NUM` reader - Sets the number of delay cycles to enter CPU wait mode after a WAITI instruction."]
-pub struct CPU_WAITI_DELAY_NUM_R(crate::FieldReader<u8, u8>);
+pub struct CPU_WAITI_DELAY_NUM_R(crate::FieldReader<u8>);
 impl CPU_WAITI_DELAY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl CPU_WAITI_DELAY_NUM_R {
     }
 }
 impl core::ops::Deref for CPU_WAITI_DELAY_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "CPU peripheral clock configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_per_conf]
-(index.html) module"]
+#[doc = "CPU peripheral clock configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_per_conf](index.html) module"]
 pub struct CPU_PER_CONF_SPEC;
 impl crate::RegisterSpec for CPU_PER_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpu_per_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cpu_per_conf::R](R) reader structure"]
 impl crate::Readable for CPU_PER_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cpu_per_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cpu_per_conf::W](W) writer structure"]
 impl crate::Writable for CPU_PER_CONF_SPEC {
     type Writer = W;
 }

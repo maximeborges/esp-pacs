@@ -14,7 +14,7 @@ impl From<crate::R<QUERY_IDLE_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_IDLE` reader - query rsa idle. 1'b0: busy, 1'b1: idle"]
-pub struct QUERY_IDLE_R(crate::FieldReader<bool, bool>);
+pub struct QUERY_IDLE_R(crate::FieldReader<bool>);
 impl QUERY_IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl QUERY_IDLE_R {
     }
 }
 impl core::ops::Deref for QUERY_IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         QUERY_IDLE_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "RSA query idle register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_idle]
-(index.html) module"]
+#[doc = "RSA query idle register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_idle](index.html) module"]
 pub struct QUERY_IDLE_SPEC;
 impl crate::RegisterSpec for QUERY_IDLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [query_idle::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [query_idle::R](R) reader structure"]
 impl crate::Readable for QUERY_IDLE_SPEC {
     type Reader = R;
 }

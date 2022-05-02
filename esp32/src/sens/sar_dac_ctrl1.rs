@@ -35,7 +35,7 @@ impl From<crate::W<SAR_DAC_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_FSTEP` reader - frequency step for CW generator can be used to adjust the frequency"]
-pub struct SW_FSTEP_R(crate::FieldReader<u16, u16>);
+pub struct SW_FSTEP_R(crate::FieldReader<u16>);
 impl SW_FSTEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl SW_FSTEP_R {
     }
 }
 impl core::ops::Deref for SW_FSTEP_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SW_FSTEP_W<'a> {
     }
 }
 #[doc = "Field `SW_TONE_EN` reader - 1: enable CW generator 0: disable CW generator"]
-pub struct SW_TONE_EN_R(crate::FieldReader<bool, bool>);
+pub struct SW_TONE_EN_R(crate::FieldReader<bool>);
 impl SW_TONE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SW_TONE_EN_R {
     }
 }
 impl core::ops::Deref for SW_TONE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SW_TONE_EN_W<'a> {
     }
 }
 #[doc = "Field `DEBUG_BIT_SEL` reader - "]
-pub struct DEBUG_BIT_SEL_R(crate::FieldReader<u8, u8>);
+pub struct DEBUG_BIT_SEL_R(crate::FieldReader<u8>);
 impl DEBUG_BIT_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl DEBUG_BIT_SEL_R {
     }
 }
 impl core::ops::Deref for DEBUG_BIT_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> DEBUG_BIT_SEL_W<'a> {
     }
 }
 #[doc = "Field `DAC_DIG_FORCE` reader - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
-pub struct DAC_DIG_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct DAC_DIG_FORCE_R(crate::FieldReader<bool>);
 impl DAC_DIG_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl DAC_DIG_FORCE_R {
     }
 }
 impl core::ops::Deref for DAC_DIG_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> DAC_DIG_FORCE_W<'a> {
     }
 }
 #[doc = "Field `DAC_CLK_FORCE_LOW` reader - 1: force PDAC_CLK to low"]
-pub struct DAC_CLK_FORCE_LOW_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CLK_FORCE_LOW_R(crate::FieldReader<bool>);
 impl DAC_CLK_FORCE_LOW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl DAC_CLK_FORCE_LOW_R {
     }
 }
 impl core::ops::Deref for DAC_CLK_FORCE_LOW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> DAC_CLK_FORCE_LOW_W<'a> {
     }
 }
 #[doc = "Field `DAC_CLK_FORCE_HIGH` reader - 1: force PDAC_CLK to high"]
-pub struct DAC_CLK_FORCE_HIGH_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CLK_FORCE_HIGH_R(crate::FieldReader<bool>);
 impl DAC_CLK_FORCE_HIGH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl DAC_CLK_FORCE_HIGH_R {
     }
 }
 impl core::ops::Deref for DAC_CLK_FORCE_HIGH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> DAC_CLK_FORCE_HIGH_W<'a> {
     }
 }
 #[doc = "Field `DAC_CLK_INV` reader - 1: invert PDAC_CLK"]
-pub struct DAC_CLK_INV_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CLK_INV_R(crate::FieldReader<bool>);
 impl DAC_CLK_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl DAC_CLK_INV_R {
     }
 }
 impl core::ops::Deref for DAC_CLK_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,25 +353,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_dac_ctrl1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_dac_ctrl1](index.html) module"]
 pub struct SAR_DAC_CTRL1_SPEC;
 impl crate::RegisterSpec for SAR_DAC_CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_dac_ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_dac_ctrl1::R](R) reader structure"]
 impl crate::Readable for SAR_DAC_CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_dac_ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_dac_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_DAC_CTRL1_SPEC {
     type Writer = W;
 }

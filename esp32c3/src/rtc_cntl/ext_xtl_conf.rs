@@ -35,7 +35,7 @@ impl From<crate::W<EXT_XTL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_WDT_EN` reader - xtal 32k watch dog enable"]
-pub struct XTAL32K_WDT_EN_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_WDT_EN_R(crate::FieldReader<bool>);
 impl XTAL32K_WDT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl XTAL32K_WDT_EN_R {
     }
 }
 impl core::ops::Deref for XTAL32K_WDT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> XTAL32K_WDT_EN_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_WDT_CLK_FO` reader - xtal 32k watch dog clock force on"]
-pub struct XTAL32K_WDT_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_WDT_CLK_FO_R(crate::FieldReader<bool>);
 impl XTAL32K_WDT_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl XTAL32K_WDT_CLK_FO_R {
     }
 }
 impl core::ops::Deref for XTAL32K_WDT_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> XTAL32K_WDT_CLK_FO_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_WDT_RESET` reader - xtal 32k watch dog sw reset"]
-pub struct XTAL32K_WDT_RESET_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_WDT_RESET_R(crate::FieldReader<bool>);
 impl XTAL32K_WDT_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl XTAL32K_WDT_RESET_R {
     }
 }
 impl core::ops::Deref for XTAL32K_WDT_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> XTAL32K_WDT_RESET_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_EXT_CLK_FO` reader - xtal 32k external xtal clock force on"]
-pub struct XTAL32K_EXT_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_EXT_CLK_FO_R(crate::FieldReader<bool>);
 impl XTAL32K_EXT_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl XTAL32K_EXT_CLK_FO_R {
     }
 }
 impl core::ops::Deref for XTAL32K_EXT_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> XTAL32K_EXT_CLK_FO_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_AUTO_BACKUP` reader - xtal 32k switch to back up clock when xtal is dead"]
-pub struct XTAL32K_AUTO_BACKUP_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_AUTO_BACKUP_R(crate::FieldReader<bool>);
 impl XTAL32K_AUTO_BACKUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl XTAL32K_AUTO_BACKUP_R {
     }
 }
 impl core::ops::Deref for XTAL32K_AUTO_BACKUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> XTAL32K_AUTO_BACKUP_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_AUTO_RESTART` reader - xtal 32k restart xtal when xtal is dead"]
-pub struct XTAL32K_AUTO_RESTART_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_AUTO_RESTART_R(crate::FieldReader<bool>);
 impl XTAL32K_AUTO_RESTART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl XTAL32K_AUTO_RESTART_R {
     }
 }
 impl core::ops::Deref for XTAL32K_AUTO_RESTART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> XTAL32K_AUTO_RESTART_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_AUTO_RETURN` reader - xtal 32k switch back xtal when xtal is restarted"]
-pub struct XTAL32K_AUTO_RETURN_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_AUTO_RETURN_R(crate::FieldReader<bool>);
 impl XTAL32K_AUTO_RETURN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl XTAL32K_AUTO_RETURN_R {
     }
 }
 impl core::ops::Deref for XTAL32K_AUTO_RETURN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> XTAL32K_AUTO_RETURN_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_XPD_FORCE` reader - Xtal 32k xpd control by sw or fsm"]
-pub struct XTAL32K_XPD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_XPD_FORCE_R(crate::FieldReader<bool>);
 impl XTAL32K_XPD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl XTAL32K_XPD_FORCE_R {
     }
 }
 impl core::ops::Deref for XTAL32K_XPD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> XTAL32K_XPD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ENCKINIT_XTAL_32K` reader - apply an internal clock to help xtal 32k to start"]
-pub struct ENCKINIT_XTAL_32K_R(crate::FieldReader<bool, bool>);
+pub struct ENCKINIT_XTAL_32K_R(crate::FieldReader<bool>);
 impl ENCKINIT_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl ENCKINIT_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for ENCKINIT_XTAL_32K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> ENCKINIT_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DBUF_XTAL_32K` reader - 0: single-end buffer 1: differential buffer"]
-pub struct DBUF_XTAL_32K_R(crate::FieldReader<bool, bool>);
+pub struct DBUF_XTAL_32K_R(crate::FieldReader<bool>);
 impl DBUF_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl DBUF_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DBUF_XTAL_32K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> DBUF_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DGM_XTAL_32K` reader - xtal_32k gm control"]
-pub struct DGM_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DGM_XTAL_32K_R(crate::FieldReader<u8>);
 impl DGM_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -413,7 +413,7 @@ impl DGM_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DGM_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> DGM_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DRES_XTAL_32K` reader - DRES_XTAL_32K"]
-pub struct DRES_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DRES_XTAL_32K_R(crate::FieldReader<u8>);
 impl DRES_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -440,7 +440,7 @@ impl DRES_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DRES_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -459,7 +459,7 @@ impl<'a> DRES_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `XPD_XTAL_32K` reader - XPD_XTAL_32K"]
-pub struct XPD_XTAL_32K_R(crate::FieldReader<bool, bool>);
+pub struct XPD_XTAL_32K_R(crate::FieldReader<bool>);
 impl XPD_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -467,7 +467,7 @@ impl XPD_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for XPD_XTAL_32K_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -496,7 +496,7 @@ impl<'a> XPD_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `DAC_XTAL_32K` reader - DAC_XTAL_32K"]
-pub struct DAC_XTAL_32K_R(crate::FieldReader<u8, u8>);
+pub struct DAC_XTAL_32K_R(crate::FieldReader<u8>);
 impl DAC_XTAL_32K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -504,7 +504,7 @@ impl DAC_XTAL_32K_R {
     }
 }
 impl core::ops::Deref for DAC_XTAL_32K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -523,7 +523,7 @@ impl<'a> DAC_XTAL_32K_W<'a> {
     }
 }
 #[doc = "Field `RTC_WDT_STATE` reader - state of 32k_wdt"]
-pub struct RTC_WDT_STATE_R(crate::FieldReader<u8, u8>);
+pub struct RTC_WDT_STATE_R(crate::FieldReader<u8>);
 impl RTC_WDT_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -531,14 +531,14 @@ impl RTC_WDT_STATE_R {
     }
 }
 impl core::ops::Deref for RTC_WDT_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RTC_XTAL32K_GPIO_SEL` reader - XTAL_32K sel. 0: external XTAL_32K"]
-pub struct RTC_XTAL32K_GPIO_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_XTAL32K_GPIO_SEL_R(crate::FieldReader<bool>);
 impl RTC_XTAL32K_GPIO_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -546,7 +546,7 @@ impl RTC_XTAL32K_GPIO_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_XTAL32K_GPIO_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -575,7 +575,7 @@ impl<'a> RTC_XTAL32K_GPIO_SEL_W<'a> {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level"]
-pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool, bool>);
+pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool>);
 impl XTL_EXT_CTR_LV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -583,7 +583,7 @@ impl XTL_EXT_CTR_LV_R {
     }
 }
 impl core::ops::Deref for XTL_EXT_CTR_LV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -612,7 +612,7 @@ impl<'a> XTL_EXT_CTR_LV_W<'a> {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_EN` reader - enable gpio configure xtal power on"]
-pub struct XTL_EXT_CTR_EN_R(crate::FieldReader<bool, bool>);
+pub struct XTL_EXT_CTR_EN_R(crate::FieldReader<bool>);
 impl XTL_EXT_CTR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -620,7 +620,7 @@ impl XTL_EXT_CTR_EN_R {
     }
 }
 impl core::ops::Deref for XTL_EXT_CTR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -833,25 +833,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext_xtl_conf]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext_xtl_conf](index.html) module"]
 pub struct EXT_XTL_CONF_SPEC;
 impl crate::RegisterSpec for EXT_XTL_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ext_xtl_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ext_xtl_conf::R](R) reader structure"]
 impl crate::Readable for EXT_XTL_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W](W) writer structure"]
 impl crate::Writable for EXT_XTL_CONF_SPEC {
     type Writer = W;
 }

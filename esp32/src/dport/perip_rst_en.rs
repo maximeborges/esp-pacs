@@ -35,7 +35,7 @@ impl From<crate::W<PERIP_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI01_RST` reader - SPI0 and SPI1 module."]
-pub struct SPI01_RST_R(crate::FieldReader<bool, bool>);
+pub struct SPI01_RST_R(crate::FieldReader<bool>);
 impl SPI01_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SPI01_RST_R {
     }
 }
 impl core::ops::Deref for SPI01_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SPI01_RST_W<'a> {
     }
 }
 #[doc = "Field `UART_RST` reader - UART0 module."]
-pub struct UART_RST_R(crate::FieldReader<bool, bool>);
+pub struct UART_RST_R(crate::FieldReader<bool>);
 impl UART_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl UART_RST_R {
     }
 }
 impl core::ops::Deref for UART_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> UART_RST_W<'a> {
     }
 }
 #[doc = "Field `I2S0_RST` reader - I2S0 module."]
-pub struct I2S0_RST_R(crate::FieldReader<bool, bool>);
+pub struct I2S0_RST_R(crate::FieldReader<bool>);
 impl I2S0_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl I2S0_RST_R {
     }
 }
 impl core::ops::Deref for I2S0_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> I2S0_RST_W<'a> {
     }
 }
 #[doc = "Field `UART1_RST` reader - UART1 module."]
-pub struct UART1_RST_R(crate::FieldReader<bool, bool>);
+pub struct UART1_RST_R(crate::FieldReader<bool>);
 impl UART1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl UART1_RST_R {
     }
 }
 impl core::ops::Deref for UART1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> UART1_RST_W<'a> {
     }
 }
 #[doc = "Field `SPI2_RST` reader - SPI2 module."]
-pub struct SPI2_RST_R(crate::FieldReader<bool, bool>);
+pub struct SPI2_RST_R(crate::FieldReader<bool>);
 impl SPI2_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SPI2_RST_R {
     }
 }
 impl core::ops::Deref for SPI2_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SPI2_RST_W<'a> {
     }
 }
 #[doc = "Field `I2C0_EXT0_RST` reader - I2C0 module."]
-pub struct I2C0_EXT0_RST_R(crate::FieldReader<bool, bool>);
+pub struct I2C0_EXT0_RST_R(crate::FieldReader<bool>);
 impl I2C0_EXT0_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl I2C0_EXT0_RST_R {
     }
 }
 impl core::ops::Deref for I2C0_EXT0_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> I2C0_EXT0_RST_W<'a> {
     }
 }
 #[doc = "Field `UHCI0_RST` reader - UDMA0 module."]
-pub struct UHCI0_RST_R(crate::FieldReader<bool, bool>);
+pub struct UHCI0_RST_R(crate::FieldReader<bool>);
 impl UHCI0_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl UHCI0_RST_R {
     }
 }
 impl core::ops::Deref for UHCI0_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> UHCI0_RST_W<'a> {
     }
 }
 #[doc = "Field `RMT_RST` reader - RMT module."]
-pub struct RMT_RST_R(crate::FieldReader<bool, bool>);
+pub struct RMT_RST_R(crate::FieldReader<bool>);
 impl RMT_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RMT_RST_R {
     }
 }
 impl core::ops::Deref for RMT_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> RMT_RST_W<'a> {
     }
 }
 #[doc = "Field `PCNT_RST` reader - PCNT module."]
-pub struct PCNT_RST_R(crate::FieldReader<bool, bool>);
+pub struct PCNT_RST_R(crate::FieldReader<bool>);
 impl PCNT_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PCNT_RST_R {
     }
 }
 impl core::ops::Deref for PCNT_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PCNT_RST_W<'a> {
     }
 }
 #[doc = "Field `LEDC_RST` reader - LEDC module."]
-pub struct LEDC_RST_R(crate::FieldReader<bool, bool>);
+pub struct LEDC_RST_R(crate::FieldReader<bool>);
 impl LEDC_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl LEDC_RST_R {
     }
 }
 impl core::ops::Deref for LEDC_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> LEDC_RST_W<'a> {
     }
 }
 #[doc = "Field `UHCI1_RST` reader - UDMA1 module."]
-pub struct UHCI1_RST_R(crate::FieldReader<bool, bool>);
+pub struct UHCI1_RST_R(crate::FieldReader<bool>);
 impl UHCI1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl UHCI1_RST_R {
     }
 }
 impl core::ops::Deref for UHCI1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> UHCI1_RST_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP_RST` reader - TIMG0 module."]
-pub struct TIMERGROUP_RST_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP_RST_R(crate::FieldReader<bool>);
 impl TIMERGROUP_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TIMERGROUP_RST_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TIMERGROUP_RST_W<'a> {
     }
 }
 #[doc = "Field `EFUSE_RST` reader - eFuse module."]
-pub struct EFUSE_RST_R(crate::FieldReader<bool, bool>);
+pub struct EFUSE_RST_R(crate::FieldReader<bool>);
 impl EFUSE_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl EFUSE_RST_R {
     }
 }
 impl core::ops::Deref for EFUSE_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> EFUSE_RST_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP1_RST` reader - TIMG1 module."]
-pub struct TIMERGROUP1_RST_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP1_RST_R(crate::FieldReader<bool>);
 impl TIMERGROUP1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TIMERGROUP1_RST_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TIMERGROUP1_RST_W<'a> {
     }
 }
 #[doc = "Field `SPI3_RST` reader - SPI3 module."]
-pub struct SPI3_RST_R(crate::FieldReader<bool, bool>);
+pub struct SPI3_RST_R(crate::FieldReader<bool>);
 impl SPI3_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl SPI3_RST_R {
     }
 }
 impl core::ops::Deref for SPI3_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> SPI3_RST_W<'a> {
     }
 }
 #[doc = "Field `PWM0_RST` reader - PWM0 module."]
-pub struct PWM0_RST_R(crate::FieldReader<bool, bool>);
+pub struct PWM0_RST_R(crate::FieldReader<bool>);
 impl PWM0_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl PWM0_RST_R {
     }
 }
 impl core::ops::Deref for PWM0_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> PWM0_RST_W<'a> {
     }
 }
 #[doc = "Field `I2C_EXT1_RST` reader - I2C1 module."]
-pub struct I2C_EXT1_RST_R(crate::FieldReader<bool, bool>);
+pub struct I2C_EXT1_RST_R(crate::FieldReader<bool>);
 impl I2C_EXT1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl I2C_EXT1_RST_R {
     }
 }
 impl core::ops::Deref for I2C_EXT1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> I2C_EXT1_RST_W<'a> {
     }
 }
 #[doc = "Field `TWAI_RST` reader - TWAI module."]
-pub struct TWAI_RST_R(crate::FieldReader<bool, bool>);
+pub struct TWAI_RST_R(crate::FieldReader<bool>);
 impl TWAI_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl TWAI_RST_R {
     }
 }
 impl core::ops::Deref for TWAI_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> TWAI_RST_W<'a> {
     }
 }
 #[doc = "Field `PWM1_RST` reader - PWM1 module."]
-pub struct PWM1_RST_R(crate::FieldReader<bool, bool>);
+pub struct PWM1_RST_R(crate::FieldReader<bool>);
 impl PWM1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl PWM1_RST_R {
     }
 }
 impl core::ops::Deref for PWM1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> PWM1_RST_W<'a> {
     }
 }
 #[doc = "Field `I2S1_RST` reader - I2S1 module."]
-pub struct I2S1_RST_R(crate::FieldReader<bool, bool>);
+pub struct I2S1_RST_R(crate::FieldReader<bool>);
 impl I2S1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl I2S1_RST_R {
     }
 }
 impl core::ops::Deref for I2S1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> I2S1_RST_W<'a> {
     }
 }
 #[doc = "Field `SPI_DMA_RST` reader - SPI_DMA module."]
-pub struct SPI_DMA_RST_R(crate::FieldReader<bool, bool>);
+pub struct SPI_DMA_RST_R(crate::FieldReader<bool>);
 impl SPI_DMA_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl SPI_DMA_RST_R {
     }
 }
 impl core::ops::Deref for SPI_DMA_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> SPI_DMA_RST_W<'a> {
     }
 }
 #[doc = "Field `UART2_RST` reader - UART2 module."]
-pub struct UART2_RST_R(crate::FieldReader<bool, bool>);
+pub struct UART2_RST_R(crate::FieldReader<bool>);
 impl UART2_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl UART2_RST_R {
     }
 }
 impl core::ops::Deref for UART2_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> UART2_RST_W<'a> {
     }
 }
 #[doc = "Field `UART_MEM_RST` reader - Shared memory of UART0 ~ 2."]
-pub struct UART_MEM_RST_R(crate::FieldReader<bool, bool>);
+pub struct UART_MEM_RST_R(crate::FieldReader<bool>);
 impl UART_MEM_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl UART_MEM_RST_R {
     }
 }
 impl core::ops::Deref for UART_MEM_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1125,25 +1125,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_rst_en]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_rst_en](index.html) module"]
 pub struct PERIP_RST_EN_SPEC;
 impl crate::RegisterSpec for PERIP_RST_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [perip_rst_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [perip_rst_en::R](R) reader structure"]
 impl crate::Readable for PERIP_RST_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [perip_rst_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [perip_rst_en::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN_SPEC {
     type Writer = W;
 }

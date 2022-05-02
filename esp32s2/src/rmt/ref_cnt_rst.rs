@@ -35,7 +35,7 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
     }
 }
 #[doc = "Field `CH0` reader - This register is used to reset the clock divider of CHANNEL0."]
-pub struct CH0_R(crate::FieldReader<bool, bool>);
+pub struct CH0_R(crate::FieldReader<bool>);
 impl CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CH0_R {
     }
 }
 impl core::ops::Deref for CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CH0_W<'a> {
     }
 }
 #[doc = "Field `CH1` reader - This register is used to reset the clock divider of CHANNEL1."]
-pub struct CH1_R(crate::FieldReader<bool, bool>);
+pub struct CH1_R(crate::FieldReader<bool>);
 impl CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CH1_R {
     }
 }
 impl core::ops::Deref for CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CH1_W<'a> {
     }
 }
 #[doc = "Field `CH2` reader - This register is used to reset the clock divider of CHANNEL2."]
-pub struct CH2_R(crate::FieldReader<bool, bool>);
+pub struct CH2_R(crate::FieldReader<bool>);
 impl CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CH2_R {
     }
 }
 impl core::ops::Deref for CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CH2_W<'a> {
     }
 }
 #[doc = "Field `CH3` reader - This register is used to reset the clock divider of CHANNEL3."]
-pub struct CH3_R(crate::FieldReader<bool, bool>);
+pub struct CH3_R(crate::FieldReader<bool>);
 impl CH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CH3_R {
     }
 }
 impl core::ops::Deref for CH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "RMT clock divider reset register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ref_cnt_rst]
-(index.html) module"]
+#[doc = "RMT clock divider reset register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ref_cnt_rst](index.html) module"]
 pub struct REF_CNT_RST_SPEC;
 impl crate::RegisterSpec for REF_CNT_RST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ref_cnt_rst::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ref_cnt_rst::R](R) reader structure"]
 impl crate::Readable for REF_CNT_RST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ref_cnt_rst::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ref_cnt_rst::W](W) writer structure"]
 impl crate::Writable for REF_CNT_RST_SPEC {
     type Writer = W;
 }

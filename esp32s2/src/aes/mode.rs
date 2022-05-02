@@ -35,7 +35,7 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MODE` reader - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. & 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &"]
-pub struct MODE_R(crate::FieldReader<u8, u8>);
+pub struct MODE_R(crate::FieldReader<u8>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "AES working mode configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mode]
-(index.html) module"]
+#[doc = "AES working mode configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mode](index.html) module"]
 pub struct MODE_SPEC;
 impl crate::RegisterSpec for MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mode::R](R) reader structure"]
 impl crate::Readable for MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mode::W](W) writer structure"]
 impl crate::Writable for MODE_SPEC {
     type Writer = W;
 }

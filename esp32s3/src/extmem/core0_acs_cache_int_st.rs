@@ -14,7 +14,7 @@ impl From<crate::R<CORE0_ACS_CACHE_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE0_IBUS_ACS_MSK_ICACHE_ST` reader - The bit is used to indicate interrupt by cpu access icache while the core0_ibus is disabled or icache is disabled which include speculative access."]
-pub struct CORE0_IBUS_ACS_MSK_ICACHE_ST_R(crate::FieldReader<bool, bool>);
+pub struct CORE0_IBUS_ACS_MSK_ICACHE_ST_R(crate::FieldReader<bool>);
 impl CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
     }
 }
 impl core::ops::Deref for CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE0_IBUS_WR_ICACHE_ST` reader - The bit is used to indicate interrupt by ibus trying to write icache"]
-pub struct CORE0_IBUS_WR_ICACHE_ST_R(crate::FieldReader<bool, bool>);
+pub struct CORE0_IBUS_WR_ICACHE_ST_R(crate::FieldReader<bool>);
 impl CORE0_IBUS_WR_ICACHE_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CORE0_IBUS_WR_ICACHE_ST_R {
     }
 }
 impl core::ops::Deref for CORE0_IBUS_WR_ICACHE_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE0_IBUS_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub struct CORE0_IBUS_REJECT_ST_R(crate::FieldReader<bool, bool>);
+pub struct CORE0_IBUS_REJECT_ST_R(crate::FieldReader<bool>);
 impl CORE0_IBUS_REJECT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CORE0_IBUS_REJECT_ST_R {
     }
 }
 impl core::ops::Deref for CORE0_IBUS_REJECT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE0_DBUS_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the core0_dbus is disabled or dcache is disabled which include speculative access."]
-pub struct CORE0_DBUS_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool, bool>);
+pub struct CORE0_DBUS_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool>);
 impl CORE0_DBUS_ACS_MSK_DCACHE_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl CORE0_DBUS_ACS_MSK_DCACHE_ST_R {
     }
 }
 impl core::ops::Deref for CORE0_DBUS_ACS_MSK_DCACHE_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE0_DBUS_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub struct CORE0_DBUS_REJECT_ST_R(crate::FieldReader<bool, bool>);
+pub struct CORE0_DBUS_REJECT_ST_R(crate::FieldReader<bool>);
 impl CORE0_DBUS_REJECT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,7 +82,7 @@ impl CORE0_DBUS_REJECT_ST_R {
     }
 }
 impl core::ops::Deref for CORE0_DBUS_REJECT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -115,16 +115,12 @@ impl R {
         CORE0_DBUS_REJECT_ST_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core0_acs_cache_int_st]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core0_acs_cache_int_st](index.html) module"]
 pub struct CORE0_ACS_CACHE_INT_ST_SPEC;
 impl crate::RegisterSpec for CORE0_ACS_CACHE_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core0_acs_cache_int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core0_acs_cache_int_st::R](R) reader structure"]
 impl crate::Readable for CORE0_ACS_CACHE_INT_ST_SPEC {
     type Reader = R;
 }

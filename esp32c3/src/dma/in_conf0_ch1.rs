@@ -35,7 +35,7 @@ impl From<crate::W<IN_CONF0_CH1_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST_CH1` reader - This bit is used to reset DMA channel 1 Rx FSM and Rx FIFO pointer."]
-pub struct IN_RST_CH1_R(crate::FieldReader<bool, bool>);
+pub struct IN_RST_CH1_R(crate::FieldReader<bool>);
 impl IN_RST_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl IN_RST_CH1_R {
     }
 }
 impl core::ops::Deref for IN_RST_CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> IN_RST_CH1_W<'a> {
     }
 }
 #[doc = "Field `IN_LOOP_TEST_CH1` reader - reserved"]
-pub struct IN_LOOP_TEST_CH1_R(crate::FieldReader<bool, bool>);
+pub struct IN_LOOP_TEST_CH1_R(crate::FieldReader<bool>);
 impl IN_LOOP_TEST_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl IN_LOOP_TEST_CH1_R {
     }
 }
 impl core::ops::Deref for IN_LOOP_TEST_CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> IN_LOOP_TEST_CH1_W<'a> {
     }
 }
 #[doc = "Field `INDSCR_BURST_EN_CH1` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 1 reading link descriptor when accessing internal SRAM."]
-pub struct INDSCR_BURST_EN_CH1_R(crate::FieldReader<bool, bool>);
+pub struct INDSCR_BURST_EN_CH1_R(crate::FieldReader<bool>);
 impl INDSCR_BURST_EN_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl INDSCR_BURST_EN_CH1_R {
     }
 }
 impl core::ops::Deref for INDSCR_BURST_EN_CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> INDSCR_BURST_EN_CH1_W<'a> {
     }
 }
 #[doc = "Field `IN_DATA_BURST_EN_CH1` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 1 receiving data when accessing internal SRAM."]
-pub struct IN_DATA_BURST_EN_CH1_R(crate::FieldReader<bool, bool>);
+pub struct IN_DATA_BURST_EN_CH1_R(crate::FieldReader<bool>);
 impl IN_DATA_BURST_EN_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl IN_DATA_BURST_EN_CH1_R {
     }
 }
 impl core::ops::Deref for IN_DATA_BURST_EN_CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> IN_DATA_BURST_EN_CH1_W<'a> {
     }
 }
 #[doc = "Field `MEM_TRANS_EN_CH1` reader - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub struct MEM_TRANS_EN_CH1_R(crate::FieldReader<bool, bool>);
+pub struct MEM_TRANS_EN_CH1_R(crate::FieldReader<bool>);
 impl MEM_TRANS_EN_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MEM_TRANS_EN_CH1_R {
     }
 }
 impl core::ops::Deref for MEM_TRANS_EN_CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA_IN_CONF0_CH1_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_conf0_ch1]
-(index.html) module"]
+#[doc = "DMA_IN_CONF0_CH1_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_conf0_ch1](index.html) module"]
 pub struct IN_CONF0_CH1_SPEC;
 impl crate::RegisterSpec for IN_CONF0_CH1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_conf0_ch1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [in_conf0_ch1::R](R) reader structure"]
 impl crate::Readable for IN_CONF0_CH1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [in_conf0_ch1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_conf0_ch1::W](W) writer structure"]
 impl crate::Writable for IN_CONF0_CH1_SPEC {
     type Writer = W;
 }

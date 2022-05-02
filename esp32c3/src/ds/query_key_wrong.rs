@@ -14,7 +14,7 @@ impl From<crate::R<QUERY_KEY_WRONG_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_KEY_WRONG` reader - digital signature key wrong counter"]
-pub struct QUERY_KEY_WRONG_R(crate::FieldReader<u8, u8>);
+pub struct QUERY_KEY_WRONG_R(crate::FieldReader<u8>);
 impl QUERY_KEY_WRONG_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl QUERY_KEY_WRONG_R {
     }
 }
 impl core::ops::Deref for QUERY_KEY_WRONG_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         QUERY_KEY_WRONG_R::new((self.bits & 0x0f) as u8)
     }
 }
-#[doc = "DS query key-wrong counter register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_key_wrong]
-(index.html) module"]
+#[doc = "DS query key-wrong counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_key_wrong](index.html) module"]
 pub struct QUERY_KEY_WRONG_SPEC;
 impl crate::RegisterSpec for QUERY_KEY_WRONG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [query_key_wrong::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [query_key_wrong::R](R) reader structure"]
 impl crate::Readable for QUERY_KEY_WRONG_SPEC {
     type Reader = R;
 }

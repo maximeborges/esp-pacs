@@ -35,7 +35,7 @@ impl From<crate::W<T0CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_USE_XTAL` reader - reg_t0_use_xtal."]
-pub struct T0_USE_XTAL_R(crate::FieldReader<bool, bool>);
+pub struct T0_USE_XTAL_R(crate::FieldReader<bool>);
 impl T0_USE_XTAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl T0_USE_XTAL_R {
     }
 }
 impl core::ops::Deref for T0_USE_XTAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> T0_USE_XTAL_W<'a> {
     }
 }
 #[doc = "Field `T0_ALARM_EN` reader - reg_t0_alarm_en."]
-pub struct T0_ALARM_EN_R(crate::FieldReader<bool, bool>);
+pub struct T0_ALARM_EN_R(crate::FieldReader<bool>);
 impl T0_ALARM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl T0_ALARM_EN_R {
     }
 }
 impl core::ops::Deref for T0_ALARM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -131,7 +131,7 @@ impl<'a> T0_DIVCNT_RST_W<'a> {
     }
 }
 #[doc = "Field `T0_DIVIDER` reader - reg_t0_divider."]
-pub struct T0_DIVIDER_R(crate::FieldReader<u16, u16>);
+pub struct T0_DIVIDER_R(crate::FieldReader<u16>);
 impl T0_DIVIDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -139,7 +139,7 @@ impl T0_DIVIDER_R {
     }
 }
 impl core::ops::Deref for T0_DIVIDER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,7 +158,7 @@ impl<'a> T0_DIVIDER_W<'a> {
     }
 }
 #[doc = "Field `T0_AUTORELOAD` reader - reg_t0_autoreload."]
-pub struct T0_AUTORELOAD_R(crate::FieldReader<bool, bool>);
+pub struct T0_AUTORELOAD_R(crate::FieldReader<bool>);
 impl T0_AUTORELOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -166,7 +166,7 @@ impl T0_AUTORELOAD_R {
     }
 }
 impl core::ops::Deref for T0_AUTORELOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -195,7 +195,7 @@ impl<'a> T0_AUTORELOAD_W<'a> {
     }
 }
 #[doc = "Field `T0_INCREASE` reader - reg_t0_increase."]
-pub struct T0_INCREASE_R(crate::FieldReader<bool, bool>);
+pub struct T0_INCREASE_R(crate::FieldReader<bool>);
 impl T0_INCREASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -203,7 +203,7 @@ impl T0_INCREASE_R {
     }
 }
 impl core::ops::Deref for T0_INCREASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,7 +232,7 @@ impl<'a> T0_INCREASE_W<'a> {
     }
 }
 #[doc = "Field `T0_EN` reader - reg_t0_en."]
-pub struct T0_EN_R(crate::FieldReader<bool, bool>);
+pub struct T0_EN_R(crate::FieldReader<bool>);
 impl T0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -240,7 +240,7 @@ impl T0_EN_R {
     }
 }
 impl core::ops::Deref for T0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -343,25 +343,16 @@ impl W {
         self
     }
 }
-#[doc = "TIMG_T0CONFIG_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0config]
-(index.html) module"]
+#[doc = "TIMG_T0CONFIG_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0config](index.html) module"]
 pub struct T0CONFIG_SPEC;
 impl crate::RegisterSpec for T0CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t0config::R](R) reader structure"]
 impl crate::Readable for T0CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [t0config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [t0config::W](W) writer structure"]
 impl crate::Writable for T0CONFIG_SPEC {
     type Writer = W;
 }

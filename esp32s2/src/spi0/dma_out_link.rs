@@ -35,7 +35,7 @@ impl From<crate::W<DMA_OUT_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR` reader - The address of the first outlink descriptor."]
-pub struct OUTLINK_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct OUTLINK_ADDR_R(crate::FieldReader<u32>);
 impl OUTLINK_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl OUTLINK_ADDR_R {
     }
 }
 impl core::ops::Deref for OUTLINK_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OUTLINK_ADDR_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_STOP` reader - Set the bit to stop to use outlink descriptor."]
-pub struct OUTLINK_STOP_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_STOP_R(crate::FieldReader<bool>);
 impl OUTLINK_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl OUTLINK_STOP_R {
     }
 }
 impl core::ops::Deref for OUTLINK_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> OUTLINK_STOP_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_START` reader - Set the bit to start to use outlink descriptor."]
-pub struct OUTLINK_START_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_START_R(crate::FieldReader<bool>);
 impl OUTLINK_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl OUTLINK_START_R {
     }
 }
 impl core::ops::Deref for OUTLINK_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> OUTLINK_START_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_RESTART` reader - Set the bit to mount on new outlink descriptors."]
-pub struct OUTLINK_RESTART_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_RESTART_R(crate::FieldReader<bool>);
 impl OUTLINK_RESTART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl OUTLINK_RESTART_R {
     }
 }
 impl core::ops::Deref for OUTLINK_RESTART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> OUTLINK_RESTART_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_ENA` reader - spi dma write data status bit."]
-pub struct DMA_TX_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_ENA_R(crate::FieldReader<bool>);
 impl DMA_TX_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl DMA_TX_ENA_R {
     }
 }
 impl core::ops::Deref for DMA_TX_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -269,25 +269,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI DMA TX link configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_out_link]
-(index.html) module"]
+#[doc = "SPI DMA TX link configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_out_link](index.html) module"]
 pub struct DMA_OUT_LINK_SPEC;
 impl crate::RegisterSpec for DMA_OUT_LINK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_out_link::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_out_link::R](R) reader structure"]
 impl crate::Readable for DMA_OUT_LINK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_out_link::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_out_link::W](W) writer structure"]
 impl crate::Writable for DMA_OUT_LINK_SPEC {
     type Writer = W;
 }

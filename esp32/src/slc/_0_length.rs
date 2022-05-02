@@ -14,7 +14,7 @@ impl From<crate::R<_0_LENGTH_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_LEN` reader - "]
-pub struct SLC0_LEN_R(crate::FieldReader<u32, u32>);
+pub struct SLC0_LEN_R(crate::FieldReader<u32>);
 impl SLC0_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl SLC0_LEN_R {
     }
 }
 impl core::ops::Deref for SLC0_LEN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         SLC0_LEN_R::new((self.bits & 0x000f_ffff) as u32)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0_length]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0_length](index.html) module"]
 pub struct _0_LENGTH_SPEC;
 impl crate::RegisterSpec for _0_LENGTH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_0_length::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [_0_length::R](R) reader structure"]
 impl crate::Readable for _0_LENGTH_SPEC {
     type Reader = R;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<NEGPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `NEGEDGE_MIN_CNT` reader - This register stores the count of rxd negedge edge. it is used in boudrate-detect process."]
-pub struct NEGEDGE_MIN_CNT_R(crate::FieldReader<u32, u32>);
+pub struct NEGEDGE_MIN_CNT_R(crate::FieldReader<u32>);
 impl NEGEDGE_MIN_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl NEGEDGE_MIN_CNT_R {
     }
 }
 impl core::ops::Deref for NEGEDGE_MIN_CNT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         NEGEDGE_MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [negpulse]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [negpulse](index.html) module"]
 pub struct NEGPULSE_SPEC;
 impl crate::RegisterSpec for NEGPULSE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [negpulse::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [negpulse::R](R) reader structure"]
 impl crate::Readable for NEGPULSE_SPEC {
     type Reader = R;
 }

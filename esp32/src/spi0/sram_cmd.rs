@@ -35,7 +35,7 @@ impl From<crate::W<SRAM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_DIO` reader - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_DIO_R(crate::FieldReader<bool, bool>);
+pub struct SRAM_DIO_R(crate::FieldReader<bool>);
 impl SRAM_DIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SRAM_DIO_R {
     }
 }
 impl core::ops::Deref for SRAM_DIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SRAM_DIO_W<'a> {
     }
 }
 #[doc = "Field `SRAM_QIO` reader - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_QIO_R(crate::FieldReader<bool, bool>);
+pub struct SRAM_QIO_R(crate::FieldReader<bool>);
 impl SRAM_QIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SRAM_QIO_R {
     }
 }
 impl core::ops::Deref for SRAM_QIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SRAM_QIO_W<'a> {
     }
 }
 #[doc = "Field `SRAM_RSTIO` reader - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
-pub struct SRAM_RSTIO_R(crate::FieldReader<bool, bool>);
+pub struct SRAM_RSTIO_R(crate::FieldReader<bool>);
 impl SRAM_RSTIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SRAM_RSTIO_R {
     }
 }
 impl core::ops::Deref for SRAM_RSTIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_cmd]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sram_cmd](index.html) module"]
 pub struct SRAM_CMD_SPEC;
 impl crate::RegisterSpec for SRAM_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sram_cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sram_cmd::R](R) reader structure"]
 impl crate::Readable for SRAM_CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sram_cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sram_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_CMD_SPEC {
     type Writer = W;
 }

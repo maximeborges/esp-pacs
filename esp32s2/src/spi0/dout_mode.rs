@@ -35,7 +35,7 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT0_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT0_MODE_R(crate::FieldReader<u8>);
 impl DOUT0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DOUT0_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT0_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DOUT0_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT1_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT1_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT1_MODE_R(crate::FieldReader<u8>);
 impl DOUT1_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DOUT1_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT1_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DOUT1_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT2_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT2_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT2_MODE_R(crate::FieldReader<u8>);
 impl DOUT2_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DOUT2_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT2_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DOUT2_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT3_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT3_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT3_MODE_R(crate::FieldReader<u8>);
 impl DOUT3_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DOUT3_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT3_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DOUT3_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT4_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT4_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT4_MODE_R(crate::FieldReader<u8>);
 impl DOUT4_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DOUT4_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT4_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DOUT4_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT5_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT5_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT5_MODE_R(crate::FieldReader<u8>);
 impl DOUT5_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DOUT5_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT5_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DOUT5_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT6_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT6_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT6_MODE_R(crate::FieldReader<u8>);
 impl DOUT6_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DOUT6_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT6_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DOUT6_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT7_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT7_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT7_MODE_R(crate::FieldReader<u8>);
 impl DOUT7_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DOUT7_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT7_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -340,25 +340,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI output delay mode configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_mode]
-(index.html) module"]
+#[doc = "SPI output delay mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_mode](index.html) module"]
 pub struct DOUT_MODE_SPEC;
 impl crate::RegisterSpec for DOUT_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dout_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dout_mode::R](R) reader structure"]
 impl crate::Readable for DOUT_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dout_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dout_mode::W](W) writer structure"]
 impl crate::Writable for DOUT_MODE_SPEC {
     type Writer = W;
 }

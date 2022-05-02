@@ -35,7 +35,7 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CHECK_SUM_EN` reader - This is the enable bit to check header checksum when UHCI receives a data packet."]
-pub struct CHECK_SUM_EN_R(crate::FieldReader<bool, bool>);
+pub struct CHECK_SUM_EN_R(crate::FieldReader<bool>);
 impl CHECK_SUM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CHECK_SUM_EN_R {
     }
 }
 impl core::ops::Deref for CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CHECK_SUM_EN_W<'a> {
     }
 }
 #[doc = "Field `CHECK_SEQ_EN` reader - This is the enable bit to check sequence number when UHCI receives a data packet."]
-pub struct CHECK_SEQ_EN_R(crate::FieldReader<bool, bool>);
+pub struct CHECK_SEQ_EN_R(crate::FieldReader<bool>);
 impl CHECK_SEQ_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CHECK_SEQ_EN_R {
     }
 }
 impl core::ops::Deref for CHECK_SEQ_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CHECK_SEQ_EN_W<'a> {
     }
 }
 #[doc = "Field `CRC_DISABLE` reader - Set this bit to support CRC calculation. Data Integrity Check Present bit in UHCI packet frame should be 1."]
-pub struct CRC_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct CRC_DISABLE_R(crate::FieldReader<bool>);
 impl CRC_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CRC_DISABLE_R {
     }
 }
 impl core::ops::Deref for CRC_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CRC_DISABLE_W<'a> {
     }
 }
 #[doc = "Field `SAVE_HEAD` reader - Set this bit to save the packet header when HCI receives a data packet."]
-pub struct SAVE_HEAD_R(crate::FieldReader<bool, bool>);
+pub struct SAVE_HEAD_R(crate::FieldReader<bool>);
 impl SAVE_HEAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SAVE_HEAD_R {
     }
 }
 impl core::ops::Deref for SAVE_HEAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SAVE_HEAD_W<'a> {
     }
 }
 #[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to encode the data packet with a checksum."]
-pub struct TX_CHECK_SUM_RE_R(crate::FieldReader<bool, bool>);
+pub struct TX_CHECK_SUM_RE_R(crate::FieldReader<bool>);
 impl TX_CHECK_SUM_RE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TX_CHECK_SUM_RE_R {
     }
 }
 impl core::ops::Deref for TX_CHECK_SUM_RE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TX_CHECK_SUM_RE_W<'a> {
     }
 }
 #[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to encode the data packet with an acknowledgment when a reliable packet is to be transmit."]
-pub struct TX_ACK_NUM_RE_R(crate::FieldReader<bool, bool>);
+pub struct TX_ACK_NUM_RE_R(crate::FieldReader<bool>);
 impl TX_ACK_NUM_RE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TX_ACK_NUM_RE_R {
     }
 }
 impl core::ops::Deref for TX_ACK_NUM_RE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TX_ACK_NUM_RE_W<'a> {
     }
 }
 #[doc = "Field `WAIT_SW_START` reader - The uhci-encoder will jump to ST_SW_WAIT status if this register is set to 1."]
-pub struct WAIT_SW_START_R(crate::FieldReader<bool, bool>);
+pub struct WAIT_SW_START_R(crate::FieldReader<bool>);
 impl WAIT_SW_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl WAIT_SW_START_R {
     }
 }
 impl core::ops::Deref for WAIT_SW_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> WAIT_SW_START_W<'a> {
     }
 }
 #[doc = "Field `SW_START` reader - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
-pub struct SW_START_R(crate::FieldReader<bool, bool>);
+pub struct SW_START_R(crate::FieldReader<bool>);
 impl SW_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SW_START_R {
     }
 }
 impl core::ops::Deref for SW_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "UHCI configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1]
-(index.html) module"]
+#[doc = "UHCI configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf1::R](R) reader structure"]
 impl crate::Readable for CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
 }

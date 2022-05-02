@@ -57,7 +57,7 @@ impl<'a> TOUCH_SLP_CHANNEL_CLR_W<'a> {
     }
 }
 #[doc = "Field `MEAS_TIME` reader - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
-pub struct MEAS_TIME_R(crate::FieldReader<u8, u8>);
+pub struct MEAS_TIME_R(crate::FieldReader<u8>);
 impl MEAS_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -65,7 +65,7 @@ impl MEAS_TIME_R {
     }
 }
 impl core::ops::Deref for MEAS_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -108,25 +108,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure touch approach settings\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_approach]
-(index.html) module"]
+#[doc = "Configure touch approach settings\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_approach](index.html) module"]
 pub struct TOUCH_APPROACH_SPEC;
 impl crate::RegisterSpec for TOUCH_APPROACH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_approach::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_approach::R](R) reader structure"]
 impl crate::Readable for TOUCH_APPROACH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_approach::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_approach::W](W) writer structure"]
 impl crate::Writable for TOUCH_APPROACH_SPEC {
     type Writer = W;
 }

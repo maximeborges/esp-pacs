@@ -35,7 +35,7 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TX_RST` reader - "]
-pub struct SLC0_TX_RST_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TX_RST_R(crate::FieldReader<bool>);
 impl SLC0_TX_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLC0_TX_RST_R {
     }
 }
 impl core::ops::Deref for SLC0_TX_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLC0_TX_RST_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_RST` reader - "]
-pub struct SLC0_RX_RST_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_RST_R(crate::FieldReader<bool>);
 impl SLC0_RX_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLC0_RX_RST_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLC0_RX_RST_W<'a> {
     }
 }
 #[doc = "Field `AHBM_FIFO_RST` reader - "]
-pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool, bool>);
+pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool>);
 impl AHBM_FIFO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl AHBM_FIFO_RST_R {
     }
 }
 impl core::ops::Deref for AHBM_FIFO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> AHBM_FIFO_RST_W<'a> {
     }
 }
 #[doc = "Field `AHBM_RST` reader - "]
-pub struct AHBM_RST_R(crate::FieldReader<bool, bool>);
+pub struct AHBM_RST_R(crate::FieldReader<bool>);
 impl AHBM_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl AHBM_RST_R {
     }
 }
 impl core::ops::Deref for AHBM_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> AHBM_RST_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TX_LOOP_TEST` reader - "]
-pub struct SLC0_TX_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TX_LOOP_TEST_R(crate::FieldReader<bool>);
 impl SLC0_TX_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SLC0_TX_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for SLC0_TX_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SLC0_TX_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_LOOP_TEST` reader - "]
-pub struct SLC0_RX_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_LOOP_TEST_R(crate::FieldReader<bool>);
 impl SLC0_RX_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SLC0_RX_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SLC0_RX_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_AUTO_WRBACK` reader - "]
-pub struct SLC0_RX_AUTO_WRBACK_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_AUTO_WRBACK_R(crate::FieldReader<bool>);
 impl SLC0_RX_AUTO_WRBACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SLC0_RX_AUTO_WRBACK_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_AUTO_WRBACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SLC0_RX_AUTO_WRBACK_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_NO_RESTART_CLR` reader - "]
-pub struct SLC0_RX_NO_RESTART_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_NO_RESTART_CLR_R(crate::FieldReader<bool>);
 impl SLC0_RX_NO_RESTART_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SLC0_RX_NO_RESTART_CLR_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_NO_RESTART_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SLC0_RX_NO_RESTART_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RXDSCR_BURST_EN` reader - "]
-pub struct SLC0_RXDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RXDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC0_RXDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl SLC0_RXDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_RXDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> SLC0_RXDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RXDATA_BURST_EN` reader - "]
-pub struct SLC0_RXDATA_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RXDATA_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC0_RXDATA_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl SLC0_RXDATA_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_RXDATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> SLC0_RXDATA_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RXLINK_AUTO_RET` reader - "]
-pub struct SLC0_RXLINK_AUTO_RET_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RXLINK_AUTO_RET_R(crate::FieldReader<bool>);
 impl SLC0_RXLINK_AUTO_RET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl SLC0_RXLINK_AUTO_RET_R {
     }
 }
 impl core::ops::Deref for SLC0_RXLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> SLC0_RXLINK_AUTO_RET_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXLINK_AUTO_RET` reader - "]
-pub struct SLC0_TXLINK_AUTO_RET_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXLINK_AUTO_RET_R(crate::FieldReader<bool>);
 impl SLC0_TXLINK_AUTO_RET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl SLC0_TXLINK_AUTO_RET_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> SLC0_TXLINK_AUTO_RET_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXDSCR_BURST_EN` reader - "]
-pub struct SLC0_TXDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC0_TXDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl SLC0_TXDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_TXDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> SLC0_TXDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXDATA_BURST_EN` reader - "]
-pub struct SLC0_TXDATA_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXDATA_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC0_TXDATA_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl SLC0_TXDATA_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_TXDATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> SLC0_TXDATA_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TOKEN_AUTO_CLR` reader - "]
-pub struct SLC0_TOKEN_AUTO_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TOKEN_AUTO_CLR_R(crate::FieldReader<bool>);
 impl SLC0_TOKEN_AUTO_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl SLC0_TOKEN_AUTO_CLR_R {
     }
 }
 impl core::ops::Deref for SLC0_TOKEN_AUTO_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> SLC0_TOKEN_AUTO_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TOKEN_SEL` reader - "]
-pub struct SLC0_TOKEN_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TOKEN_SEL_R(crate::FieldReader<bool>);
 impl SLC0_TOKEN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl SLC0_TOKEN_SEL_R {
     }
 }
 impl core::ops::Deref for SLC0_TOKEN_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> SLC0_TOKEN_SEL_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TX_RST` reader - "]
-pub struct SLC1_TX_RST_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TX_RST_R(crate::FieldReader<bool>);
 impl SLC1_TX_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl SLC1_TX_RST_R {
     }
 }
 impl core::ops::Deref for SLC1_TX_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> SLC1_TX_RST_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_RST` reader - "]
-pub struct SLC1_RX_RST_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_RST_R(crate::FieldReader<bool>);
 impl SLC1_RX_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl SLC1_RX_RST_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> SLC1_RX_RST_W<'a> {
     }
 }
 #[doc = "Field `SLC0_WR_RETRY_MASK_EN` reader - "]
-pub struct SLC0_WR_RETRY_MASK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_WR_RETRY_MASK_EN_R(crate::FieldReader<bool>);
 impl SLC0_WR_RETRY_MASK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl SLC0_WR_RETRY_MASK_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_WR_RETRY_MASK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> SLC0_WR_RETRY_MASK_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_WR_RETRY_MASK_EN` reader - "]
-pub struct SLC1_WR_RETRY_MASK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_WR_RETRY_MASK_EN_R(crate::FieldReader<bool>);
 impl SLC1_WR_RETRY_MASK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl SLC1_WR_RETRY_MASK_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_WR_RETRY_MASK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> SLC1_WR_RETRY_MASK_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TX_LOOP_TEST` reader - "]
-pub struct SLC1_TX_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TX_LOOP_TEST_R(crate::FieldReader<bool>);
 impl SLC1_TX_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl SLC1_TX_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for SLC1_TX_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> SLC1_TX_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_LOOP_TEST` reader - "]
-pub struct SLC1_RX_LOOP_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_LOOP_TEST_R(crate::FieldReader<bool>);
 impl SLC1_RX_LOOP_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl SLC1_RX_LOOP_TEST_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> SLC1_RX_LOOP_TEST_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_AUTO_WRBACK` reader - "]
-pub struct SLC1_RX_AUTO_WRBACK_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_AUTO_WRBACK_R(crate::FieldReader<bool>);
 impl SLC1_RX_AUTO_WRBACK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl SLC1_RX_AUTO_WRBACK_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_AUTO_WRBACK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> SLC1_RX_AUTO_WRBACK_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_NO_RESTART_CLR` reader - "]
-pub struct SLC1_RX_NO_RESTART_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_NO_RESTART_CLR_R(crate::FieldReader<bool>);
 impl SLC1_RX_NO_RESTART_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl SLC1_RX_NO_RESTART_CLR_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_NO_RESTART_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -923,7 +923,7 @@ impl<'a> SLC1_RX_NO_RESTART_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RXDSCR_BURST_EN` reader - "]
-pub struct SLC1_RXDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RXDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC1_RXDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -931,7 +931,7 @@ impl SLC1_RXDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_RXDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -960,7 +960,7 @@ impl<'a> SLC1_RXDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RXDATA_BURST_EN` reader - "]
-pub struct SLC1_RXDATA_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RXDATA_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC1_RXDATA_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -968,7 +968,7 @@ impl SLC1_RXDATA_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_RXDATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -997,7 +997,7 @@ impl<'a> SLC1_RXDATA_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RXLINK_AUTO_RET` reader - "]
-pub struct SLC1_RXLINK_AUTO_RET_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RXLINK_AUTO_RET_R(crate::FieldReader<bool>);
 impl SLC1_RXLINK_AUTO_RET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1005,7 +1005,7 @@ impl SLC1_RXLINK_AUTO_RET_R {
     }
 }
 impl core::ops::Deref for SLC1_RXLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1034,7 +1034,7 @@ impl<'a> SLC1_RXLINK_AUTO_RET_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TXLINK_AUTO_RET` reader - "]
-pub struct SLC1_TXLINK_AUTO_RET_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TXLINK_AUTO_RET_R(crate::FieldReader<bool>);
 impl SLC1_TXLINK_AUTO_RET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1042,7 +1042,7 @@ impl SLC1_TXLINK_AUTO_RET_R {
     }
 }
 impl core::ops::Deref for SLC1_TXLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1071,7 +1071,7 @@ impl<'a> SLC1_TXLINK_AUTO_RET_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TXDSCR_BURST_EN` reader - "]
-pub struct SLC1_TXDSCR_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TXDSCR_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC1_TXDSCR_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1079,7 +1079,7 @@ impl SLC1_TXDSCR_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_TXDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1108,7 +1108,7 @@ impl<'a> SLC1_TXDSCR_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TXDATA_BURST_EN` reader - "]
-pub struct SLC1_TXDATA_BURST_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TXDATA_BURST_EN_R(crate::FieldReader<bool>);
 impl SLC1_TXDATA_BURST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1116,7 +1116,7 @@ impl SLC1_TXDATA_BURST_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_TXDATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1145,7 +1145,7 @@ impl<'a> SLC1_TXDATA_BURST_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TOKEN_AUTO_CLR` reader - "]
-pub struct SLC1_TOKEN_AUTO_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TOKEN_AUTO_CLR_R(crate::FieldReader<bool>);
 impl SLC1_TOKEN_AUTO_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1153,7 +1153,7 @@ impl SLC1_TOKEN_AUTO_CLR_R {
     }
 }
 impl core::ops::Deref for SLC1_TOKEN_AUTO_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1182,7 +1182,7 @@ impl<'a> SLC1_TOKEN_AUTO_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TOKEN_SEL` reader - "]
-pub struct SLC1_TOKEN_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TOKEN_SEL_R(crate::FieldReader<bool>);
 impl SLC1_TOKEN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1190,7 +1190,7 @@ impl SLC1_TOKEN_SEL_R {
     }
 }
 impl core::ops::Deref for SLC1_TOKEN_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1548,25 +1548,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0](index.html) module"]
 pub struct CONF0_SPEC;
 impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf0::R](R) reader structure"]
 impl crate::Readable for CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
 }

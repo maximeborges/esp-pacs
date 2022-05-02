@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` reader - enable slave transit complete interrupt"]
-pub struct SLAVE_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool>);
 impl SLAVE_TRAN_COMP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_TRAN_COMP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SLAVE_TRAN_COMP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLAVE_TRAN_COMP_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - enable arbitration lost interrupt"]
-pub struct ARBITRATION_LOST_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ARBITRATION_LOST_INT_ENA_R(crate::FieldReader<bool>);
 impl ARBITRATION_LOST_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ARBITRATION_LOST_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ARBITRATION_LOST_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ARBITRATION_LOST_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` reader - enable master transit complete interrupt"]
-pub struct MASTER_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool>);
 impl MASTER_TRAN_COMP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MASTER_TRAN_COMP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for MASTER_TRAN_COMP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MASTER_TRAN_COMP_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - enable transit complete interrupt"]
-pub struct TRANS_COMPLETE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_COMPLETE_INT_ENA_R(crate::FieldReader<bool>);
 impl TRANS_COMPLETE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TRANS_COMPLETE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TRANS_COMPLETE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TRANS_COMPLETE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TIME_OUT_INT_ENA` reader - enable time out interrupt"]
-pub struct TIME_OUT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TIME_OUT_INT_ENA_R(crate::FieldReader<bool>);
 impl TIME_OUT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TIME_OUT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TIME_OUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TIME_OUT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ACK_ERR_INT_ENA` reader - enable eack error interrupt"]
-pub struct ACK_ERR_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ACK_ERR_INT_ENA_R(crate::FieldReader<bool>);
 impl ACK_ERR_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl ACK_ERR_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ACK_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> ACK_ERR_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `RX_DATA_INT_ENA` reader - enable receive data interrupt"]
-pub struct RX_DATA_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RX_DATA_INT_ENA_R(crate::FieldReader<bool>);
 impl RX_DATA_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RX_DATA_INT_ENA_R {
     }
 }
 impl core::ops::Deref for RX_DATA_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RX_DATA_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TX_DATA_INT_ENA` reader - enable transit data interrupt"]
-pub struct TX_DATA_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TX_DATA_INT_ENA_R(crate::FieldReader<bool>);
 impl TX_DATA_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl TX_DATA_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TX_DATA_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> TX_DATA_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DETECT_START_INT_ENA` reader - enable detect start interrupt"]
-pub struct DETECT_START_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DETECT_START_INT_ENA_R(crate::FieldReader<bool>);
 impl DETECT_START_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl DETECT_START_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DETECT_START_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -467,25 +467,16 @@ impl W {
         self
     }
 }
-#[doc = "interrupt enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena]
-(index.html) module"]
+#[doc = "interrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena](index.html) module"]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena::R](R) reader structure"]
 impl crate::Readable for INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
 }

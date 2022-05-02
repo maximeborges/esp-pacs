@@ -35,7 +35,7 @@ impl From<crate::W<APPCPU_CTRL_B_SPEC>> for W {
     }
 }
 #[doc = "Field `APPCPU_CLKGATE_EN` reader - "]
-pub struct APPCPU_CLKGATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct APPCPU_CLKGATE_EN_R(crate::FieldReader<bool>);
 impl APPCPU_CLKGATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APPCPU_CLKGATE_EN_R {
     }
 }
 impl core::ops::Deref for APPCPU_CLKGATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [appcpu_ctrl_b]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [appcpu_ctrl_b](index.html) module"]
 pub struct APPCPU_CTRL_B_SPEC;
 impl crate::RegisterSpec for APPCPU_CTRL_B_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [appcpu_ctrl_b::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [appcpu_ctrl_b::R](R) reader structure"]
 impl crate::Readable for APPCPU_CTRL_B_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [appcpu_ctrl_b::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [appcpu_ctrl_b::W](W) writer structure"]
 impl crate::Writable for APPCPU_CTRL_B_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DEBUG_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `ACK_VAL` reader - The value of an acknowledge signal on the bus"]
-pub struct ACK_VAL_R(crate::FieldReader<bool, bool>);
+pub struct ACK_VAL_R(crate::FieldReader<bool>);
 impl ACK_VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ACK_VAL_R {
     }
 }
 impl core::ops::Deref for ACK_VAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ACK_VAL_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_RW` reader - When working as a slave, the value of R/W bit received"]
-pub struct SLAVE_RW_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_RW_R(crate::FieldReader<bool>);
 impl SLAVE_RW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLAVE_RW_R {
     }
 }
 impl core::ops::Deref for SLAVE_RW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLAVE_RW_W<'a> {
     }
 }
 #[doc = "Field `TIMED_OUT` reader - Transfer has timed out"]
-pub struct TIMED_OUT_R(crate::FieldReader<bool, bool>);
+pub struct TIMED_OUT_R(crate::FieldReader<bool>);
 impl TIMED_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TIMED_OUT_R {
     }
 }
 impl core::ops::Deref for TIMED_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TIMED_OUT_W<'a> {
     }
 }
 #[doc = "Field `ARB_LOST` reader - When working as a master, lost control of I2C bus"]
-pub struct ARB_LOST_R(crate::FieldReader<bool, bool>);
+pub struct ARB_LOST_R(crate::FieldReader<bool>);
 impl ARB_LOST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ARB_LOST_R {
     }
 }
 impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> ARB_LOST_W<'a> {
     }
 }
 #[doc = "Field `BUS_BUSY` reader - operation is in progress"]
-pub struct BUS_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct BUS_BUSY_R(crate::FieldReader<bool>);
 impl BUS_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl BUS_BUSY_R {
     }
 }
 impl core::ops::Deref for BUS_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> BUS_BUSY_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_ADDR_MATCH` reader - When working as a slave, whether address was matched"]
-pub struct SLAVE_ADDR_MATCH_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_ADDR_MATCH_R(crate::FieldReader<bool>);
 impl SLAVE_ADDR_MATCH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SLAVE_ADDR_MATCH_R {
     }
 }
 impl core::ops::Deref for SLAVE_ADDR_MATCH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SLAVE_ADDR_MATCH_W<'a> {
     }
 }
 #[doc = "Field `BYTE_TRANS` reader - 8 bit transmit done"]
-pub struct BYTE_TRANS_R(crate::FieldReader<bool, bool>);
+pub struct BYTE_TRANS_R(crate::FieldReader<bool>);
 impl BYTE_TRANS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl BYTE_TRANS_R {
     }
 }
 impl core::ops::Deref for BYTE_TRANS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> BYTE_TRANS_W<'a> {
     }
 }
 #[doc = "Field `MAIN_STATE` reader - state of the main state machine"]
-pub struct MAIN_STATE_R(crate::FieldReader<u8, u8>);
+pub struct MAIN_STATE_R(crate::FieldReader<u8>);
 impl MAIN_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -302,7 +302,7 @@ impl MAIN_STATE_R {
     }
 }
 impl core::ops::Deref for MAIN_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> MAIN_STATE_W<'a> {
     }
 }
 #[doc = "Field `SCL_STATE` reader - state of SCL state machine"]
-pub struct SCL_STATE_R(crate::FieldReader<u8, u8>);
+pub struct SCL_STATE_R(crate::FieldReader<u8>);
 impl SCL_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -329,7 +329,7 @@ impl SCL_STATE_R {
     }
 }
 impl core::ops::Deref for SCL_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -447,25 +447,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [debug_status]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [debug_status](index.html) module"]
 pub struct DEBUG_STATUS_SPEC;
 impl crate::RegisterSpec for DEBUG_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [debug_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [debug_status::R](R) reader structure"]
 impl crate::Readable for DEBUG_STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [debug_status::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [debug_status::W](W) writer structure"]
 impl crate::Writable for DEBUG_STATUS_SPEC {
     type Writer = W;
 }

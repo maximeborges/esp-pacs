@@ -35,7 +35,7 @@ impl From<crate::W<LOG_SETTING_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_ENA` reader - reg_log_ena"]
-pub struct LOG_ENA_R(crate::FieldReader<u8, u8>);
+pub struct LOG_ENA_R(crate::FieldReader<u8>);
 impl LOG_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LOG_ENA_R {
     }
 }
 impl core::ops::Deref for LOG_ENA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LOG_ENA_W<'a> {
     }
 }
 #[doc = "Field `LOG_MODE` reader - reg_log_mode"]
-pub struct LOG_MODE_R(crate::FieldReader<u8, u8>);
+pub struct LOG_MODE_R(crate::FieldReader<u8>);
 impl LOG_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl LOG_MODE_R {
     }
 }
 impl core::ops::Deref for LOG_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> LOG_MODE_W<'a> {
     }
 }
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` reader - reg_log_mem_loop_enable"]
-pub struct LOG_MEM_LOOP_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct LOG_MEM_LOOP_ENABLE_R(crate::FieldReader<bool>);
 impl LOG_MEM_LOOP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl LOG_MEM_LOOP_ENABLE_R {
     }
 }
 impl core::ops::Deref for LOG_MEM_LOOP_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "ASSIST_DEBUG_LOG_SETTING\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_setting]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_LOG_SETTING\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [log_setting](index.html) module"]
 pub struct LOG_SETTING_SPEC;
 impl crate::RegisterSpec for LOG_SETTING_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [log_setting::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [log_setting::R](R) reader structure"]
 impl crate::Readable for LOG_SETTING_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [log_setting::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [log_setting::W](W) writer structure"]
 impl crate::Writable for LOG_SETTING_SPEC {
     type Writer = W;
 }

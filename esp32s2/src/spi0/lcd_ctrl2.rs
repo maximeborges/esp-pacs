@@ -35,7 +35,7 @@ impl From<crate::W<LCD_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
-pub struct LCD_VSYNC_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct LCD_VSYNC_WIDTH_R(crate::FieldReader<u8>);
 impl LCD_VSYNC_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LCD_VSYNC_WIDTH_R {
     }
 }
 impl core::ops::Deref for LCD_VSYNC_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LCD_VSYNC_WIDTH_W<'a> {
     }
 }
 #[doc = "Field `VSYNC_IDLE_POL` reader - It is the idle value of spi_vsync. Can be configured in CONF state."]
-pub struct VSYNC_IDLE_POL_R(crate::FieldReader<bool, bool>);
+pub struct VSYNC_IDLE_POL_R(crate::FieldReader<bool>);
 impl VSYNC_IDLE_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl VSYNC_IDLE_POL_R {
     }
 }
 impl core::ops::Deref for VSYNC_IDLE_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> VSYNC_IDLE_POL_W<'a> {
     }
 }
 #[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub struct LCD_HSYNC_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct LCD_HSYNC_WIDTH_R(crate::FieldReader<u8>);
 impl LCD_HSYNC_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl LCD_HSYNC_WIDTH_R {
     }
 }
 impl core::ops::Deref for LCD_HSYNC_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> LCD_HSYNC_WIDTH_W<'a> {
     }
 }
 #[doc = "Field `HSYNC_IDLE_POL` reader - It is the idle value of spi_hsync. Can be configured in CONF state."]
-pub struct HSYNC_IDLE_POL_R(crate::FieldReader<bool, bool>);
+pub struct HSYNC_IDLE_POL_R(crate::FieldReader<bool>);
 impl HSYNC_IDLE_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl HSYNC_IDLE_POL_R {
     }
 }
 impl core::ops::Deref for HSYNC_IDLE_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> HSYNC_IDLE_POL_W<'a> {
     }
 }
 #[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub struct LCD_HSYNC_POSITION_R(crate::FieldReader<u8, u8>);
+pub struct LCD_HSYNC_POSITION_R(crate::FieldReader<u8>);
 impl LCD_HSYNC_POSITION_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl LCD_HSYNC_POSITION_R {
     }
 }
 impl core::ops::Deref for LCD_HSYNC_POSITION_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -249,25 +249,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD frame control2 register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_ctrl2]
-(index.html) module"]
+#[doc = "LCD frame control2 register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_ctrl2](index.html) module"]
 pub struct LCD_CTRL2_SPEC;
 impl crate::RegisterSpec for LCD_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lcd_ctrl2::R](R) reader structure"]
 impl crate::Readable for LCD_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lcd_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lcd_ctrl2::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL2_SPEC {
     type Writer = W;
 }

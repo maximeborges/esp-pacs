@@ -35,7 +35,7 @@ impl From<crate::W<EDMA_PMS_RMT_SPEC>> for W {
     }
 }
 #[doc = "Field `ATTR1` reader - This field is used to configure the permission of RMT accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR1_R(crate::FieldReader<u8, u8>);
+pub struct ATTR1_R(crate::FieldReader<u8>);
 impl ATTR1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ATTR1_R {
     }
 }
 impl core::ops::Deref for ATTR1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ATTR1_W<'a> {
     }
 }
 #[doc = "Field `ATTR2` reader - This field is used to configure the permission of RMT accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR2_R(crate::FieldReader<u8, u8>);
+pub struct ATTR2_R(crate::FieldReader<u8>);
 impl ATTR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ATTR2_R {
     }
 }
 impl core::ops::Deref for ATTR2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "EDMA-RMT permission control register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [edma_pms_rmt]
-(index.html) module"]
+#[doc = "EDMA-RMT permission control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [edma_pms_rmt](index.html) module"]
 pub struct EDMA_PMS_RMT_SPEC;
 impl crate::RegisterSpec for EDMA_PMS_RMT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [edma_pms_rmt::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [edma_pms_rmt::R](R) reader structure"]
 impl crate::Readable for EDMA_PMS_RMT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [edma_pms_rmt::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [edma_pms_rmt::W](W) writer structure"]
 impl crate::Writable for EDMA_PMS_RMT_SPEC {
     type Writer = W;
 }

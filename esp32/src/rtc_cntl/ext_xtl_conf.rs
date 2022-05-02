@@ -35,7 +35,7 @@ impl From<crate::W<EXT_XTL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level 1: power down XTAL at low level"]
-pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool, bool>);
+pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool>);
 impl XTL_EXT_CTR_LV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl XTL_EXT_CTR_LV_R {
     }
 }
 impl core::ops::Deref for XTL_EXT_CTR_LV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> XTL_EXT_CTR_LV_W<'a> {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_EN` reader - enable control XTAL by external pads"]
-pub struct XTL_EXT_CTR_EN_R(crate::FieldReader<bool, bool>);
+pub struct XTL_EXT_CTR_EN_R(crate::FieldReader<bool>);
 impl XTL_EXT_CTR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl XTL_EXT_CTR_EN_R {
     }
 }
 impl core::ops::Deref for XTL_EXT_CTR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext_xtl_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext_xtl_conf](index.html) module"]
 pub struct EXT_XTL_CONF_SPEC;
 impl crate::RegisterSpec for EXT_XTL_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ext_xtl_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ext_xtl_conf::R](R) reader structure"]
 impl crate::Readable for EXT_XTL_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W](W) writer structure"]
 impl crate::Writable for EXT_XTL_CONF_SPEC {
     type Writer = W;
 }

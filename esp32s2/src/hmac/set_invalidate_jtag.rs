@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "Invalidate JTAG result register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_invalidate_jtag]
-(index.html) module"]
+#[doc = "Invalidate JTAG result register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_invalidate_jtag](index.html) module"]
 pub struct SET_INVALIDATE_JTAG_SPEC;
 impl crate::RegisterSpec for SET_INVALIDATE_JTAG_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_invalidate_jtag::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_invalidate_jtag::W](W) writer structure"]
 impl crate::Writable for SET_INVALIDATE_JTAG_SPEC {
     type Writer = W;
 }

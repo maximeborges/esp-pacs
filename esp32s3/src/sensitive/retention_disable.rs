@@ -35,7 +35,7 @@ impl From<crate::W<RETENTION_DISABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_DISABLE` reader - Set 1 to disable retention function and lock disable state."]
-pub struct RETENTION_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct RETENTION_DISABLE_R(crate::FieldReader<bool>);
 impl RETENTION_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RETENTION_DISABLE_R {
     }
 }
 impl core::ops::Deref for RETENTION_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Retention configuration register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_disable]
-(index.html) module"]
+#[doc = "Retention configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_disable](index.html) module"]
 pub struct RETENTION_DISABLE_SPEC;
 impl crate::RegisterSpec for RETENTION_DISABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [retention_disable::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [retention_disable::R](R) reader structure"]
 impl crate::Readable for RETENTION_DISABLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [retention_disable::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [retention_disable::W](W) writer structure"]
 impl crate::Writable for RETENTION_DISABLE_SPEC {
     type Writer = W;
 }

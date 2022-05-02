@@ -35,7 +35,7 @@ impl From<crate::W<CONSTANT_TIME_SPEC>> for W {
     }
 }
 #[doc = "Field `CONSTANT_TIME` reader - Controls the CONSTANT_TIME option. 0: acceleration. 1: no acceleration(by default)."]
-pub struct CONSTANT_TIME_R(crate::FieldReader<bool, bool>);
+pub struct CONSTANT_TIME_R(crate::FieldReader<bool>);
 impl CONSTANT_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CONSTANT_TIME_R {
     }
 }
 impl core::ops::Deref for CONSTANT_TIME_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "CONSTANT_TIME option control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [constant_time]
-(index.html) module"]
+#[doc = "CONSTANT_TIME option control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [constant_time](index.html) module"]
 pub struct CONSTANT_TIME_SPEC;
 impl crate::RegisterSpec for CONSTANT_TIME_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [constant_time::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [constant_time::R](R) reader structure"]
 impl crate::Readable for CONSTANT_TIME_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [constant_time::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [constant_time::W](W) writer structure"]
 impl crate::Writable for CONSTANT_TIME_SPEC {
     type Writer = W;
 }

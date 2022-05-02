@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_DRAM0_PMS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - recorded core1 dram0 wr status, 1 means store, 0 means load."]
-pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader<bool, bool>);
+pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader<bool>);
 impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
     }
 }
 impl core::ops::Deref for CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN` reader - recorded core1 dram0 byteen status."]
-pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R(crate::FieldReader<u16, u16>);
+pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R(crate::FieldReader<u16>);
 impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -37,7 +37,7 @@ impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
     }
 }
 impl core::ops::Deref for CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -59,16 +59,12 @@ impl R {
         CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R::new(((self.bits >> 1) & 0xffff) as u16)
     }
 }
-#[doc = "core1 dram0 permission monitor configuration register 3.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_dram0_pms_monitor_3]
-(index.html) module"]
+#[doc = "core1 dram0 permission monitor configuration register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_dram0_pms_monitor_3](index.html) module"]
 pub struct CORE_1_DRAM0_PMS_MONITOR_3_SPEC;
 impl crate::RegisterSpec for CORE_1_DRAM0_PMS_MONITOR_3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_dram0_pms_monitor_3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_dram0_pms_monitor_3::R](R) reader structure"]
 impl crate::Readable for CORE_1_DRAM0_PMS_MONITOR_3_SPEC {
     type Reader = R;
 }

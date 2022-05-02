@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DUMMY_OUT` reader - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
-pub struct DUMMY_OUT_R(crate::FieldReader<bool, bool>);
+pub struct DUMMY_OUT_R(crate::FieldReader<bool>);
 impl DUMMY_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DUMMY_OUT_R {
     }
 }
 impl core::ops::Deref for DUMMY_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DUMMY_OUT_W<'a> {
     }
 }
 #[doc = "Field `FADDR_DUAL` reader - Apply 2 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-pub struct FADDR_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FADDR_DUAL_R(crate::FieldReader<bool>);
 impl FADDR_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FADDR_DUAL_R {
     }
 }
 impl core::ops::Deref for FADDR_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FADDR_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FADDR_QUAD` reader - Apply 4 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-pub struct FADDR_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FADDR_QUAD_R(crate::FieldReader<bool>);
 impl FADDR_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FADDR_QUAD_R {
     }
 }
 impl core::ops::Deref for FADDR_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FADDR_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FCMD_DUAL` reader - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-pub struct FCMD_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FCMD_DUAL_R(crate::FieldReader<bool>);
 impl FCMD_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FCMD_DUAL_R {
     }
 }
 impl core::ops::Deref for FCMD_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FCMD_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FCMD_QUAD` reader - Apply 4 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-pub struct FCMD_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FCMD_QUAD_R(crate::FieldReader<bool>);
 impl FCMD_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FCMD_QUAD_R {
     }
 }
 impl core::ops::Deref for FCMD_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FCMD_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FREAD_DUAL` reader - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct FREAD_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_DUAL_R(crate::FieldReader<bool>);
 impl FREAD_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FREAD_DUAL_R {
     }
 }
 impl core::ops::Deref for FREAD_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> FREAD_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FREAD_QUAD` reader - In the read operations read-data phase apply 4 signals. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct FREAD_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_QUAD_R(crate::FieldReader<bool>);
 impl FREAD_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl FREAD_QUAD_R {
     }
 }
 impl core::ops::Deref for FREAD_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> FREAD_QUAD_W<'a> {
     }
 }
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
-pub struct Q_POL_R(crate::FieldReader<bool, bool>);
+pub struct Q_POL_R(crate::FieldReader<bool>);
 impl Q_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl Q_POL_R {
     }
 }
 impl core::ops::Deref for Q_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> Q_POL_W<'a> {
     }
 }
 #[doc = "Field `D_POL` reader - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
-pub struct D_POL_R(crate::FieldReader<bool, bool>);
+pub struct D_POL_R(crate::FieldReader<bool>);
 impl D_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl D_POL_R {
     }
 }
 impl core::ops::Deref for D_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> D_POL_W<'a> {
     }
 }
 #[doc = "Field `HOLD_POL` reader - SPI_HOLD output value when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
-pub struct HOLD_POL_R(crate::FieldReader<bool, bool>);
+pub struct HOLD_POL_R(crate::FieldReader<bool>);
 impl HOLD_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl HOLD_POL_R {
     }
 }
 impl core::ops::Deref for HOLD_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> HOLD_POL_W<'a> {
     }
 }
 #[doc = "Field `WP_POL` reader - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
-pub struct WP_POL_R(crate::FieldReader<bool, bool>);
+pub struct WP_POL_R(crate::FieldReader<bool>);
 impl WP_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl WP_POL_R {
     }
 }
 impl core::ops::Deref for WP_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> WP_POL_W<'a> {
     }
 }
 #[doc = "Field `RD_BIT_ORDER` reader - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
-pub struct RD_BIT_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct RD_BIT_ORDER_R(crate::FieldReader<bool>);
 impl RD_BIT_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl RD_BIT_ORDER_R {
     }
 }
 impl core::ops::Deref for RD_BIT_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> RD_BIT_ORDER_W<'a> {
     }
 }
 #[doc = "Field `WR_BIT_ORDER` reader - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
-pub struct WR_BIT_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct WR_BIT_ORDER_R(crate::FieldReader<bool>);
 impl WR_BIT_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl WR_BIT_ORDER_R {
     }
 }
 impl core::ops::Deref for WR_BIT_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -655,25 +655,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "SPI control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

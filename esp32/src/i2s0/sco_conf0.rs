@@ -35,7 +35,7 @@ impl From<crate::W<SCO_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SCO_WITH_I2S_EN` reader - "]
-pub struct SCO_WITH_I2S_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCO_WITH_I2S_EN_R(crate::FieldReader<bool>);
 impl SCO_WITH_I2S_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SCO_WITH_I2S_EN_R {
     }
 }
 impl core::ops::Deref for SCO_WITH_I2S_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SCO_WITH_I2S_EN_W<'a> {
     }
 }
 #[doc = "Field `SCO_NO_I2S_EN` reader - "]
-pub struct SCO_NO_I2S_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCO_NO_I2S_EN_R(crate::FieldReader<bool>);
 impl SCO_NO_I2S_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SCO_NO_I2S_EN_R {
     }
 }
 impl core::ops::Deref for SCO_NO_I2S_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SCO_NO_I2S_EN_W<'a> {
     }
 }
 #[doc = "Field `CVSD_ENC_START` reader - "]
-pub struct CVSD_ENC_START_R(crate::FieldReader<bool, bool>);
+pub struct CVSD_ENC_START_R(crate::FieldReader<bool>);
 impl CVSD_ENC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CVSD_ENC_START_R {
     }
 }
 impl core::ops::Deref for CVSD_ENC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CVSD_ENC_START_W<'a> {
     }
 }
 #[doc = "Field `CVSD_ENC_RESET` reader - "]
-pub struct CVSD_ENC_RESET_R(crate::FieldReader<bool, bool>);
+pub struct CVSD_ENC_RESET_R(crate::FieldReader<bool>);
 impl CVSD_ENC_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CVSD_ENC_RESET_R {
     }
 }
 impl core::ops::Deref for CVSD_ENC_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sco_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sco_conf0](index.html) module"]
 pub struct SCO_CONF0_SPEC;
 impl crate::RegisterSpec for SCO_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sco_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sco_conf0::R](R) reader structure"]
 impl crate::Readable for SCO_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sco_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sco_conf0::W](W) writer structure"]
 impl crate::Writable for SCO_CONF0_SPEC {
     type Writer = W;
 }

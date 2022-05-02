@@ -35,7 +35,7 @@ impl From<crate::W<CH_HPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `HPOINT_CH0` reader - The output value changes to high when the selected timers has reached the value specified by this register."]
-pub struct HPOINT_CH0_R(crate::FieldReader<u16, u16>);
+pub struct HPOINT_CH0_R(crate::FieldReader<u16>);
 impl HPOINT_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl HPOINT_CH0_R {
     }
 }
 impl core::ops::Deref for HPOINT_CH0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "High point register for channel %s\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_hpoint]
-(index.html) module"]
+#[doc = "High point register for channel %s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_hpoint](index.html) module"]
 pub struct CH_HPOINT_SPEC;
 impl crate::RegisterSpec for CH_HPOINT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch_hpoint::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ch_hpoint::R](R) reader structure"]
 impl crate::Readable for CH_HPOINT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ch_hpoint::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ch_hpoint::W](W) writer structure"]
 impl crate::Writable for CH_HPOINT_SPEC {
     type Writer = W;
 }

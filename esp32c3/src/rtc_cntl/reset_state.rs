@@ -35,7 +35,7 @@ impl From<crate::W<RESET_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
-pub struct RESET_CAUSE_PROCPU_R(crate::FieldReader<u8, u8>);
+pub struct RESET_CAUSE_PROCPU_R(crate::FieldReader<u8>);
 impl RESET_CAUSE_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl RESET_CAUSE_PROCPU_R {
     }
 }
 impl core::ops::Deref for RESET_CAUSE_PROCPU_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RESET_CAUSE_APPCPU` reader - reset cause of APP CPU"]
-pub struct RESET_CAUSE_APPCPU_R(crate::FieldReader<u8, u8>);
+pub struct RESET_CAUSE_APPCPU_R(crate::FieldReader<u8>);
 impl RESET_CAUSE_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -58,14 +58,14 @@ impl RESET_CAUSE_APPCPU_R {
     }
 }
 impl core::ops::Deref for RESET_CAUSE_APPCPU_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `STAT_VECTOR_SEL_APPCPU` reader - APP CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_APPCPU_R(crate::FieldReader<bool, bool>);
+pub struct STAT_VECTOR_SEL_APPCPU_R(crate::FieldReader<bool>);
 impl STAT_VECTOR_SEL_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,7 +73,7 @@ impl STAT_VECTOR_SEL_APPCPU_R {
     }
 }
 impl core::ops::Deref for STAT_VECTOR_SEL_APPCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +102,7 @@ impl<'a> STAT_VECTOR_SEL_APPCPU_W<'a> {
     }
 }
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` reader - PRO CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_PROCPU_R(crate::FieldReader<bool, bool>);
+pub struct STAT_VECTOR_SEL_PROCPU_R(crate::FieldReader<bool>);
 impl STAT_VECTOR_SEL_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -110,7 +110,7 @@ impl STAT_VECTOR_SEL_PROCPU_R {
     }
 }
 impl core::ops::Deref for STAT_VECTOR_SEL_PROCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -139,7 +139,7 @@ impl<'a> STAT_VECTOR_SEL_PROCPU_W<'a> {
     }
 }
 #[doc = "Field `ALL_RESET_FLAG_PROCPU` reader - PRO CPU reset_flag"]
-pub struct ALL_RESET_FLAG_PROCPU_R(crate::FieldReader<bool, bool>);
+pub struct ALL_RESET_FLAG_PROCPU_R(crate::FieldReader<bool>);
 impl ALL_RESET_FLAG_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -147,14 +147,14 @@ impl ALL_RESET_FLAG_PROCPU_R {
     }
 }
 impl core::ops::Deref for ALL_RESET_FLAG_PROCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ALL_RESET_FLAG_APPCPU` reader - APP CPU reset flag"]
-pub struct ALL_RESET_FLAG_APPCPU_R(crate::FieldReader<bool, bool>);
+pub struct ALL_RESET_FLAG_APPCPU_R(crate::FieldReader<bool>);
 impl ALL_RESET_FLAG_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -162,7 +162,7 @@ impl ALL_RESET_FLAG_APPCPU_R {
     }
 }
 impl core::ops::Deref for ALL_RESET_FLAG_APPCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -213,7 +213,7 @@ impl<'a> ALL_RESET_FLAG_CLR_APPCPU_W<'a> {
     }
 }
 #[doc = "Field `OCD_HALT_ON_RESET_APPCPU` reader - APPCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_APPCPU_R(crate::FieldReader<bool, bool>);
+pub struct OCD_HALT_ON_RESET_APPCPU_R(crate::FieldReader<bool>);
 impl OCD_HALT_ON_RESET_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -221,7 +221,7 @@ impl OCD_HALT_ON_RESET_APPCPU_R {
     }
 }
 impl core::ops::Deref for OCD_HALT_ON_RESET_APPCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -250,7 +250,7 @@ impl<'a> OCD_HALT_ON_RESET_APPCPU_W<'a> {
     }
 }
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` reader - PROCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_PROCPU_R(crate::FieldReader<bool, bool>);
+pub struct OCD_HALT_ON_RESET_PROCPU_R(crate::FieldReader<bool>);
 impl OCD_HALT_ON_RESET_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -258,7 +258,7 @@ impl OCD_HALT_ON_RESET_PROCPU_R {
     }
 }
 impl core::ops::Deref for OCD_HALT_ON_RESET_PROCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -287,7 +287,7 @@ impl<'a> OCD_HALT_ON_RESET_PROCPU_W<'a> {
     }
 }
 #[doc = "Field `JTAG_RESET_FLAG_PROCPU` reader - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_PROCPU_R(crate::FieldReader<bool, bool>);
+pub struct JTAG_RESET_FLAG_PROCPU_R(crate::FieldReader<bool>);
 impl JTAG_RESET_FLAG_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -295,14 +295,14 @@ impl JTAG_RESET_FLAG_PROCPU_R {
     }
 }
 impl core::ops::Deref for JTAG_RESET_FLAG_PROCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `JTAG_RESET_FLAG_APPCPU` reader - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_APPCPU_R(crate::FieldReader<bool, bool>);
+pub struct JTAG_RESET_FLAG_APPCPU_R(crate::FieldReader<bool>);
 impl JTAG_RESET_FLAG_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -310,7 +310,7 @@ impl JTAG_RESET_FLAG_APPCPU_R {
     }
 }
 impl core::ops::Deref for JTAG_RESET_FLAG_APPCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -361,7 +361,7 @@ impl<'a> JTAG_RESET_FLAG_CLR_APPCPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_DRESET_MASK_APPCPU` reader - configure dreset configure"]
-pub struct RTC_DRESET_MASK_APPCPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_DRESET_MASK_APPCPU_R(crate::FieldReader<bool>);
 impl RTC_DRESET_MASK_APPCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -369,7 +369,7 @@ impl RTC_DRESET_MASK_APPCPU_R {
     }
 }
 impl core::ops::Deref for RTC_DRESET_MASK_APPCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -398,7 +398,7 @@ impl<'a> RTC_DRESET_MASK_APPCPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_DRESET_MASK_PROCPU` reader - configure dreset configure"]
-pub struct RTC_DRESET_MASK_PROCPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_DRESET_MASK_PROCPU_R(crate::FieldReader<bool>);
 impl RTC_DRESET_MASK_PROCPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -406,7 +406,7 @@ impl RTC_DRESET_MASK_PROCPU_R {
     }
 }
 impl core::ops::Deref for RTC_DRESET_MASK_PROCPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -554,25 +554,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset_state]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [reset_state](index.html) module"]
 pub struct RESET_STATE_SPEC;
 impl crate::RegisterSpec for RESET_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reset_state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [reset_state::R](R) reader structure"]
 impl crate::Readable for RESET_STATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [reset_state::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [reset_state::W](W) writer structure"]
 impl crate::Writable for RESET_STATE_SPEC {
     type Writer = W;
 }

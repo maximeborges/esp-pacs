@@ -35,7 +35,7 @@ impl From<crate::W<IN_SRAM_SIZE_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_SIZE_CH` reader - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub struct IN_SIZE_CH_R(crate::FieldReader<u8, u8>);
+pub struct IN_SIZE_CH_R(crate::FieldReader<u8>);
 impl IN_SIZE_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IN_SIZE_CH_R {
     }
 }
 impl core::ops::Deref for IN_SIZE_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Receive L2 FIFO depth of Rx channel 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_sram_size_ch]
-(index.html) module"]
+#[doc = "Receive L2 FIFO depth of Rx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_sram_size_ch](index.html) module"]
 pub struct IN_SRAM_SIZE_CH_SPEC;
 impl crate::RegisterSpec for IN_SRAM_SIZE_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_sram_size_ch::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [in_sram_size_ch::R](R) reader structure"]
 impl crate::Readable for IN_SRAM_SIZE_CH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [in_sram_size_ch::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_sram_size_ch::W](W) writer structure"]
 impl crate::Writable for IN_SRAM_SIZE_CH_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE` reader - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
-pub struct REG_RTCIO_REG_GPIO_ENABLE_R(crate::FieldReader<u32, u32>);
+pub struct REG_RTCIO_REG_GPIO_ENABLE_R(crate::FieldReader<u32>);
 impl REG_RTCIO_REG_GPIO_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl REG_RTCIO_REG_GPIO_ENABLE_R {
     }
 }
 impl core::ops::Deref for REG_RTCIO_REG_GPIO_ENABLE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC GPIO output enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_enable]
-(index.html) module"]
+#[doc = "RTC GPIO output enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_enable](index.html) module"]
 pub struct RTC_GPIO_ENABLE_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_gpio_enable::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_gpio_enable::R](R) reader structure"]
 impl crate::Readable for RTC_GPIO_ENABLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_gpio_enable::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_gpio_enable::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_ENABLE_SPEC {
     type Writer = W;
 }

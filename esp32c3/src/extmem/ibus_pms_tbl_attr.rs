@@ -35,7 +35,7 @@ impl From<crate::W<IBUS_PMS_TBL_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub struct IBUS_PMS_SCT1_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct IBUS_PMS_SCT1_ATTR_R(crate::FieldReader<u8>);
 impl IBUS_PMS_SCT1_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl IBUS_PMS_SCT1_ATTR_R {
     }
 }
 impl core::ops::Deref for IBUS_PMS_SCT1_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> IBUS_PMS_SCT1_ATTR_W<'a> {
     }
 }
 #[doc = "Field `IBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub struct IBUS_PMS_SCT2_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct IBUS_PMS_SCT2_ATTR_R(crate::FieldReader<u8>);
 impl IBUS_PMS_SCT2_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl IBUS_PMS_SCT2_ATTR_R {
     }
 }
 impl core::ops::Deref for IBUS_PMS_SCT2_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ibus_pms_tbl_attr]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ibus_pms_tbl_attr](index.html) module"]
 pub struct IBUS_PMS_TBL_ATTR_SPEC;
 impl crate::RegisterSpec for IBUS_PMS_TBL_ATTR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ibus_pms_tbl_attr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ibus_pms_tbl_attr::R](R) reader structure"]
 impl crate::Readable for IBUS_PMS_TBL_ATTR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ibus_pms_tbl_attr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ibus_pms_tbl_attr::W](W) writer structure"]
 impl crate::Writable for IBUS_PMS_TBL_ATTR_SPEC {
     type Writer = W;
 }

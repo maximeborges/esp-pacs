@@ -35,7 +35,7 @@ impl From<crate::W<PRO_ICACHE_AUTOLOAD_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_MODE` reader - Reserved."]
-pub struct PRO_ICACHE_AUTOLOAD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct PRO_ICACHE_AUTOLOAD_MODE_R(crate::FieldReader<bool>);
 impl PRO_ICACHE_AUTOLOAD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_ICACHE_AUTOLOAD_MODE_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_MODE_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_STEP` reader - Reserved."]
-pub struct PRO_ICACHE_AUTOLOAD_STEP_R(crate::FieldReader<u8, u8>);
+pub struct PRO_ICACHE_AUTOLOAD_STEP_R(crate::FieldReader<u8>);
 impl PRO_ICACHE_AUTOLOAD_STEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl PRO_ICACHE_AUTOLOAD_STEP_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_STEP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_STEP_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
-pub struct PRO_ICACHE_AUTOLOAD_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct PRO_ICACHE_AUTOLOAD_ORDER_R(crate::FieldReader<bool>);
 impl PRO_ICACHE_AUTOLOAD_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl PRO_ICACHE_AUTOLOAD_ORDER_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_ORDER_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub struct PRO_ICACHE_AUTOLOAD_RQST_R(crate::FieldReader<u8, u8>);
+pub struct PRO_ICACHE_AUTOLOAD_RQST_R(crate::FieldReader<u8>);
 impl PRO_ICACHE_AUTOLOAD_RQST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl PRO_ICACHE_AUTOLOAD_RQST_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_RQST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_RQST_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SIZE` reader - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
-pub struct PRO_ICACHE_AUTOLOAD_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct PRO_ICACHE_AUTOLOAD_SIZE_R(crate::FieldReader<u8>);
 impl PRO_ICACHE_AUTOLOAD_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl PRO_ICACHE_AUTOLOAD_SIZE_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_SIZE_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the second section for conditional pre-load operation."]
-pub struct PRO_ICACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PRO_ICACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader<bool>);
 impl PRO_ICACHE_AUTOLOAD_SCT0_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl PRO_ICACHE_AUTOLOAD_SCT0_ENA_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_SCT0_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the first section for conditional pre-load operation."]
-pub struct PRO_ICACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PRO_ICACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader<bool>);
 impl PRO_ICACHE_AUTOLOAD_SCT1_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl PRO_ICACHE_AUTOLOAD_SCT1_ENA_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_AUTOLOAD_SCT1_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -343,25 +343,16 @@ impl W {
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_icache_autoload_cfg]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_icache_autoload_cfg](index.html) module"]
 pub struct PRO_ICACHE_AUTOLOAD_CFG_SPEC;
 impl crate::RegisterSpec for PRO_ICACHE_AUTOLOAD_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_icache_autoload_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_icache_autoload_cfg::R](R) reader structure"]
 impl crate::Readable for PRO_ICACHE_AUTOLOAD_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_icache_autoload_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_icache_autoload_cfg::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_AUTOLOAD_CFG_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<ESC_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `ESC_SEQ0` reader - a"]
-pub struct ESC_SEQ0_R(crate::FieldReader<u8, u8>);
+pub struct ESC_SEQ0_R(crate::FieldReader<u8>);
 impl ESC_SEQ0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ESC_SEQ0_R {
     }
 }
 impl core::ops::Deref for ESC_SEQ0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ESC_SEQ0_W<'a> {
     }
 }
 #[doc = "Field `ESC_SEQ0_CHAR0` reader - a"]
-pub struct ESC_SEQ0_CHAR0_R(crate::FieldReader<u8, u8>);
+pub struct ESC_SEQ0_CHAR0_R(crate::FieldReader<u8>);
 impl ESC_SEQ0_CHAR0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl ESC_SEQ0_CHAR0_R {
     }
 }
 impl core::ops::Deref for ESC_SEQ0_CHAR0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> ESC_SEQ0_CHAR0_W<'a> {
     }
 }
 #[doc = "Field `ESC_SEQ0_CHAR1` reader - a"]
-pub struct ESC_SEQ0_CHAR1_R(crate::FieldReader<u8, u8>);
+pub struct ESC_SEQ0_CHAR1_R(crate::FieldReader<u8>);
 impl ESC_SEQ0_CHAR1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl ESC_SEQ0_CHAR1_R {
     }
 }
 impl core::ops::Deref for ESC_SEQ0_CHAR1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "a\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [esc_conf1]
-(index.html) module"]
+#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [esc_conf1](index.html) module"]
 pub struct ESC_CONF1_SPEC;
 impl crate::RegisterSpec for ESC_CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [esc_conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [esc_conf1::R](R) reader structure"]
 impl crate::Readable for ESC_CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [esc_conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [esc_conf1::W](W) writer structure"]
 impl crate::Writable for ESC_CONF1_SPEC {
     type Writer = W;
 }

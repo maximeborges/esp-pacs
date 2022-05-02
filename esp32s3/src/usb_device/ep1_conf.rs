@@ -57,7 +57,7 @@ impl<'a> WR_DONE_W<'a> {
     }
 }
 #[doc = "Field `SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
-pub struct SERIAL_IN_EP_DATA_FREE_R(crate::FieldReader<bool, bool>);
+pub struct SERIAL_IN_EP_DATA_FREE_R(crate::FieldReader<bool>);
 impl SERIAL_IN_EP_DATA_FREE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -65,14 +65,14 @@ impl SERIAL_IN_EP_DATA_FREE_R {
     }
 }
 impl core::ops::Deref for SERIAL_IN_EP_DATA_FREE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
-pub struct SERIAL_OUT_EP_DATA_AVAIL_R(crate::FieldReader<bool, bool>);
+pub struct SERIAL_OUT_EP_DATA_AVAIL_R(crate::FieldReader<bool>);
 impl SERIAL_OUT_EP_DATA_AVAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SERIAL_OUT_EP_DATA_AVAIL_R {
     }
 }
 impl core::ops::Deref for SERIAL_OUT_EP_DATA_AVAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -111,25 +111,16 @@ impl W {
         self
     }
 }
-#[doc = "Endpoint 1 configure and status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep1_conf]
-(index.html) module"]
+#[doc = "Endpoint 1 configure and status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep1_conf](index.html) module"]
 pub struct EP1_CONF_SPEC;
 impl crate::RegisterSpec for EP1_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ep1_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ep1_conf::R](R) reader structure"]
 impl crate::Readable for EP1_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ep1_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ep1_conf::W](W) writer structure"]
 impl crate::Writable for EP1_CONF_SPEC {
     type Writer = W;
 }

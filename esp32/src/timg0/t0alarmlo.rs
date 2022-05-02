@@ -35,7 +35,7 @@ impl From<crate::W<T0ALARMLO_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_ALARM_LO` reader - Timer 0 time-base counter value lower 32 bits that will trigger the alarm"]
-pub struct T0_ALARM_LO_R(crate::FieldReader<u32, u32>);
+pub struct T0_ALARM_LO_R(crate::FieldReader<u32>);
 impl T0_ALARM_LO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl T0_ALARM_LO_R {
     }
 }
 impl core::ops::Deref for T0_ALARM_LO_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0alarmlo]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0alarmlo](index.html) module"]
 pub struct T0ALARMLO_SPEC;
 impl crate::RegisterSpec for T0ALARMLO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [t0alarmlo::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [t0alarmlo::R](R) reader structure"]
 impl crate::Readable for T0ALARMLO_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [t0alarmlo::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [t0alarmlo::W](W) writer structure"]
 impl crate::Writable for T0ALARMLO_SPEC {
     type Writer = W;
 }

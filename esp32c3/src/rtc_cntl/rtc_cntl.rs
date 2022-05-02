@@ -35,7 +35,7 @@ impl From<crate::W<RTC_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_REG_CAL_EN` reader - software enable digital regulator cali"]
-pub struct DIG_REG_CAL_EN_R(crate::FieldReader<bool, bool>);
+pub struct DIG_REG_CAL_EN_R(crate::FieldReader<bool>);
 impl DIG_REG_CAL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DIG_REG_CAL_EN_R {
     }
 }
 impl core::ops::Deref for DIG_REG_CAL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DIG_REG_CAL_EN_W<'a> {
     }
 }
 #[doc = "Field `SCK_DCAP` reader - SCK_DCAP"]
-pub struct SCK_DCAP_R(crate::FieldReader<u8, u8>);
+pub struct SCK_DCAP_R(crate::FieldReader<u8>);
 impl SCK_DCAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl SCK_DCAP_R {
     }
 }
 impl core::ops::Deref for SCK_DCAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SCK_DCAP_W<'a> {
     }
 }
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
-pub struct DBOOST_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DBOOST_FORCE_PD_R(crate::FieldReader<bool>);
 impl DBOOST_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl DBOOST_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DBOOST_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> DBOOST_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
-pub struct DBOOST_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DBOOST_FORCE_PU_R(crate::FieldReader<bool>);
 impl DBOOST_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl DBOOST_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DBOOST_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> DBOOST_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `REGULATOR_FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub struct REGULATOR_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct REGULATOR_FORCE_PD_R(crate::FieldReader<bool>);
 impl REGULATOR_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl REGULATOR_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for REGULATOR_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> REGULATOR_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `REGULATOR_FORCE_PU` reader - RTC_REG force power up"]
-pub struct REGULATOR_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct REGULATOR_FORCE_PU_R(crate::FieldReader<bool>);
 impl REGULATOR_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl REGULATOR_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for REGULATOR_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_cntl]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_cntl](index.html) module"]
 pub struct RTC_CNTL_SPEC;
 impl crate::RegisterSpec for RTC_CNTL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_cntl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_cntl::R](R) reader structure"]
 impl crate::Readable for RTC_CNTL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_cntl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_cntl::W](W) writer structure"]
 impl crate::Writable for RTC_CNTL_SPEC {
     type Writer = W;
 }

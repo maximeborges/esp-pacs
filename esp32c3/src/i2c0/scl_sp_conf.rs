@@ -35,7 +35,7 @@ impl From<crate::W<SCL_SP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_RST_SLV_EN` reader - reg_scl_rst_slv_en"]
-pub struct SCL_RST_SLV_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCL_RST_SLV_EN_R(crate::FieldReader<bool>);
 impl SCL_RST_SLV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SCL_RST_SLV_EN_R {
     }
 }
 impl core::ops::Deref for SCL_RST_SLV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SCL_RST_SLV_EN_W<'a> {
     }
 }
 #[doc = "Field `SCL_RST_SLV_NUM` reader - reg_scl_rst_slv_num"]
-pub struct SCL_RST_SLV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SCL_RST_SLV_NUM_R(crate::FieldReader<u8>);
 impl SCL_RST_SLV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl SCL_RST_SLV_NUM_R {
     }
 }
 impl core::ops::Deref for SCL_RST_SLV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SCL_RST_SLV_NUM_W<'a> {
     }
 }
 #[doc = "Field `SCL_PD_EN` reader - reg_scl_pd_en"]
-pub struct SCL_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCL_PD_EN_R(crate::FieldReader<bool>);
 impl SCL_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl SCL_PD_EN_R {
     }
 }
 impl core::ops::Deref for SCL_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> SCL_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `SDA_PD_EN` reader - reg_sda_pd_en"]
-pub struct SDA_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct SDA_PD_EN_R(crate::FieldReader<bool>);
 impl SDA_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl SDA_PD_EN_R {
     }
 }
 impl core::ops::Deref for SDA_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "I2C_SCL_SP_CONF_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_sp_conf]
-(index.html) module"]
+#[doc = "I2C_SCL_SP_CONF_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_sp_conf](index.html) module"]
 pub struct SCL_SP_CONF_SPEC;
 impl crate::RegisterSpec for SCL_SP_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_sp_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_sp_conf::R](R) reader structure"]
 impl crate::Readable for SCL_SP_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_sp_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_sp_conf::W](W) writer structure"]
 impl crate::Writable for SCL_SP_CONF_SPEC {
     type Writer = W;
 }

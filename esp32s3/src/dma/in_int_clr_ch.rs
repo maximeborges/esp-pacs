@@ -297,18 +297,12 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt clear bits of Rx channel 0\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_int_clr_ch]
-(index.html) module"]
+#[doc = "Interrupt clear bits of Rx channel 0\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_int_clr_ch](index.html) module"]
 pub struct IN_INT_CLR_CH_SPEC;
 impl crate::RegisterSpec for IN_INT_CLR_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [in_int_clr_ch::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_int_clr_ch::W](W) writer structure"]
 impl crate::Writable for IN_INT_CLR_CH_SPEC {
     type Writer = W;
 }

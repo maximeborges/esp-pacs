@@ -14,7 +14,7 @@ impl From<crate::R<FRAM_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `SOF_FRAME_INDEX` reader - Frame index of received SOF frame."]
-pub struct SOF_FRAME_INDEX_R(crate::FieldReader<u16, u16>);
+pub struct SOF_FRAME_INDEX_R(crate::FieldReader<u16>);
 impl SOF_FRAME_INDEX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl SOF_FRAME_INDEX_R {
     }
 }
 impl core::ops::Deref for SOF_FRAME_INDEX_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         SOF_FRAME_INDEX_R::new((self.bits & 0x07ff) as u16)
     }
 }
-#[doc = "SOF frame number\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fram_num]
-(index.html) module"]
+#[doc = "SOF frame number\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fram_num](index.html) module"]
 pub struct FRAM_NUM_SPEC;
 impl crate::RegisterSpec for FRAM_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fram_num::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fram_num::R](R) reader structure"]
 impl crate::Readable for FRAM_NUM_SPEC {
     type Reader = R;
 }

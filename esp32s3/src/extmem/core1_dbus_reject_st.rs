@@ -14,7 +14,7 @@ impl From<crate::R<CORE1_DBUS_REJECT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE1_DBUS_TAG_ATTR` reader - The bits are used to indicate the attribute of data from external memory when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
-pub struct CORE1_DBUS_TAG_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct CORE1_DBUS_TAG_ATTR_R(crate::FieldReader<u8>);
 impl CORE1_DBUS_TAG_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl CORE1_DBUS_TAG_ATTR_R {
     }
 }
 impl core::ops::Deref for CORE1_DBUS_TAG_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE1_DBUS_ATTR` reader - The bits are used to indicate the attribute of CPU access dbus when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
-pub struct CORE1_DBUS_ATTR_R(crate::FieldReader<u8, u8>);
+pub struct CORE1_DBUS_ATTR_R(crate::FieldReader<u8>);
 impl CORE1_DBUS_ATTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl CORE1_DBUS_ATTR_R {
     }
 }
 impl core::ops::Deref for CORE1_DBUS_ATTR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE1_DBUS_WORLD` reader - The bit is used to indicate the world of CPU access dbus when authentication fail. 0: WORLD0, 1: WORLD1"]
-pub struct CORE1_DBUS_WORLD_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_DBUS_WORLD_R(crate::FieldReader<bool>);
 impl CORE1_DBUS_WORLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl CORE1_DBUS_WORLD_R {
     }
 }
 impl core::ops::Deref for CORE1_DBUS_WORLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         CORE1_DBUS_WORLD_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core1_dbus_reject_st]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core1_dbus_reject_st](index.html) module"]
 pub struct CORE1_DBUS_REJECT_ST_SPEC;
 impl crate::RegisterSpec for CORE1_DBUS_REJECT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core1_dbus_reject_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core1_dbus_reject_st::R](R) reader structure"]
 impl crate::Readable for CORE1_DBUS_REJECT_ST_SPEC {
     type Reader = R;
 }

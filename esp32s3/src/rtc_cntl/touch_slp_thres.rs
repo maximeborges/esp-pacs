@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_SLP_THRES_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_SLP_TH` reader - the threshold for sleep touch pad"]
-pub struct TOUCH_SLP_TH_R(crate::FieldReader<u32, u32>);
+pub struct TOUCH_SLP_TH_R(crate::FieldReader<u32>);
 impl TOUCH_SLP_TH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_SLP_TH_R {
     }
 }
 impl core::ops::Deref for TOUCH_SLP_TH_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TOUCH_SLP_TH_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` reader - sleep pad approach function enable"]
-pub struct TOUCH_SLP_APPROACH_EN_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_SLP_APPROACH_EN_R(crate::FieldReader<bool>);
 impl TOUCH_SLP_APPROACH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl TOUCH_SLP_APPROACH_EN_R {
     }
 }
 impl core::ops::Deref for TOUCH_SLP_APPROACH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> TOUCH_SLP_APPROACH_EN_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SLP_PAD` reader - configure which pad as slp pad"]
-pub struct TOUCH_SLP_PAD_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_SLP_PAD_R(crate::FieldReader<u8>);
 impl TOUCH_SLP_PAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl TOUCH_SLP_PAD_R {
     }
 }
 impl core::ops::Deref for TOUCH_SLP_PAD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "configure touch controller\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_slp_thres]
-(index.html) module"]
+#[doc = "configure touch controller\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_slp_thres](index.html) module"]
 pub struct TOUCH_SLP_THRES_SPEC;
 impl crate::RegisterSpec for TOUCH_SLP_THRES_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_slp_thres::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_slp_thres::R](R) reader structure"]
 impl crate::Readable for TOUCH_SLP_THRES_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_slp_thres::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_slp_thres::W](W) writer structure"]
 impl crate::Writable for TOUCH_SLP_THRES_SPEC {
     type Writer = W;
 }

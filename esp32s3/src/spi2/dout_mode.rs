@@ -35,7 +35,7 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - The output signal 0 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT0_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT0_MODE_R(crate::FieldReader<bool>);
 impl DOUT0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DOUT0_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT0_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DOUT0_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT1_MODE` reader - The output signal 1 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT1_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT1_MODE_R(crate::FieldReader<bool>);
 impl DOUT1_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DOUT1_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT1_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DOUT1_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT2_MODE` reader - The output signal 2 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT2_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT2_MODE_R(crate::FieldReader<bool>);
 impl DOUT2_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DOUT2_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT2_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DOUT2_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT3_MODE` reader - The output signal 3 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT3_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT3_MODE_R(crate::FieldReader<bool>);
 impl DOUT3_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DOUT3_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT3_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DOUT3_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT4_MODE` reader - The output signal 4 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT4_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT4_MODE_R(crate::FieldReader<bool>);
 impl DOUT4_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DOUT4_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT4_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DOUT4_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT5_MODE` reader - The output signal 5 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT5_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT5_MODE_R(crate::FieldReader<bool>);
 impl DOUT5_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DOUT5_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT5_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DOUT5_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT6_MODE` reader - The output signal 6 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT6_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT6_MODE_R(crate::FieldReader<bool>);
 impl DOUT6_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DOUT6_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT6_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> DOUT6_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT7_MODE` reader - The output signal 7 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct DOUT7_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DOUT7_MODE_R(crate::FieldReader<bool>);
 impl DOUT7_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl DOUT7_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT7_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> DOUT7_MODE_W<'a> {
     }
 }
 #[doc = "Field `D_DQS_MODE` reader - The output signal SPI_DQS is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub struct D_DQS_MODE_R(crate::FieldReader<bool, bool>);
+pub struct D_DQS_MODE_R(crate::FieldReader<bool>);
 impl D_DQS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl D_DQS_MODE_R {
     }
 }
 impl core::ops::Deref for D_DQS_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -467,25 +467,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI output delay mode configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_mode]
-(index.html) module"]
+#[doc = "SPI output delay mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_mode](index.html) module"]
 pub struct DOUT_MODE_SPEC;
 impl crate::RegisterSpec for DOUT_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dout_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dout_mode::R](R) reader structure"]
 impl crate::Readable for DOUT_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dout_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dout_mode::W](W) writer structure"]
 impl crate::Writable for DOUT_MODE_SPEC {
     type Writer = W;
 }

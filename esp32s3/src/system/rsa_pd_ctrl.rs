@@ -35,7 +35,7 @@ impl From<crate::W<RSA_PD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RSA_MEM_PD` reader - Set 1 to power down RSA memory. This bit has the lowest priority.When Digital Signature occupies the RSA, this bit is invalid."]
-pub struct RSA_MEM_PD_R(crate::FieldReader<bool, bool>);
+pub struct RSA_MEM_PD_R(crate::FieldReader<bool>);
 impl RSA_MEM_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RSA_MEM_PD_R {
     }
 }
 impl core::ops::Deref for RSA_MEM_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RSA_MEM_PD_W<'a> {
     }
 }
 #[doc = "Field `RSA_MEM_FORCE_PU` reader - Set 1 to force power up RSA memory, this bit has the second highest priority."]
-pub struct RSA_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct RSA_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl RSA_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RSA_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for RSA_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RSA_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `RSA_MEM_FORCE_PD` reader - Set 1 to force power down RSA memory,this bit has the highest priority."]
-pub struct RSA_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct RSA_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl RSA_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RSA_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for RSA_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "rsa memory power control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsa_pd_ctrl]
-(index.html) module"]
+#[doc = "rsa memory power control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rsa_pd_ctrl](index.html) module"]
 pub struct RSA_PD_CTRL_SPEC;
 impl crate::RegisterSpec for RSA_PD_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rsa_pd_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rsa_pd_ctrl::R](R) reader structure"]
 impl crate::Readable for RSA_PD_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rsa_pd_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rsa_pd_ctrl::W](W) writer structure"]
 impl crate::Writable for RSA_PD_CTRL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<LC_DMA_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_ENA` reader - The enable bit for LCD frame end interrupt."]
-pub struct LCD_VSYNC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LCD_VSYNC_INT_ENA_R(crate::FieldReader<bool>);
 impl LCD_VSYNC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl LCD_VSYNC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LCD_VSYNC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> LCD_VSYNC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `LCD_TRANS_DONE_INT_ENA` reader - The enable bit for lcd transfer end interrupt."]
-pub struct LCD_TRANS_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TRANS_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl LCD_TRANS_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LCD_TRANS_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for LCD_TRANS_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LCD_TRANS_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CAM_VSYNC_INT_ENA` reader - The enable bit for Camera frame end interrupt."]
-pub struct CAM_VSYNC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CAM_VSYNC_INT_ENA_R(crate::FieldReader<bool>);
 impl CAM_VSYNC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CAM_VSYNC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CAM_VSYNC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CAM_VSYNC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CAM_HS_INT_ENA` reader - The enable bit for Camera line interrupt."]
-pub struct CAM_HS_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CAM_HS_INT_ENA_R(crate::FieldReader<bool>);
 impl CAM_HS_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CAM_HS_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CAM_HS_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD_camera DMA inturrupt enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_ena]
-(index.html) module"]
+#[doc = "LCD_camera DMA inturrupt enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_dma_int_ena](index.html) module"]
 pub struct LC_DMA_INT_ENA_SPEC;
 impl crate::RegisterSpec for LC_DMA_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lc_dma_int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lc_dma_int_ena::R](R) reader structure"]
 impl crate::Readable for LC_DMA_INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lc_dma_int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lc_dma_int_ena::W](W) writer structure"]
 impl crate::Writable for LC_DMA_INT_ENA_SPEC {
     type Writer = W;
 }

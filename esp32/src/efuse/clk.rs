@@ -35,7 +35,7 @@ impl From<crate::W<CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL0` reader - efuse timing configure"]
-pub struct SEL0_R(crate::FieldReader<u8, u8>);
+pub struct SEL0_R(crate::FieldReader<u8>);
 impl SEL0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SEL0_R {
     }
 }
 impl core::ops::Deref for SEL0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SEL0_W<'a> {
     }
 }
 #[doc = "Field `SEL1` reader - efuse timing configure"]
-pub struct SEL1_R(crate::FieldReader<u8, u8>);
+pub struct SEL1_R(crate::FieldReader<u8>);
 impl SEL1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SEL1_R {
     }
 }
 impl core::ops::Deref for SEL1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SEL1_W<'a> {
     }
 }
 #[doc = "Field `EN` reader - "]
-pub struct EN_R(crate::FieldReader<bool, bool>);
+pub struct EN_R(crate::FieldReader<bool>);
 impl EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl EN_R {
     }
 }
 impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk](index.html) module"]
 pub struct CLK_SPEC;
 impl crate::RegisterSpec for CLK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk::R](R) reader structure"]
 impl crate::Readable for CLK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk::W](W) writer structure"]
 impl crate::Writable for CLK_SPEC {
     type Writer = W;
 }

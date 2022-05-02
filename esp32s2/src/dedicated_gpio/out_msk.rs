@@ -61,18 +61,12 @@ impl W {
         self
     }
 }
-#[doc = "Dedicated GPIO mask output register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_msk]
-(index.html) module"]
+#[doc = "Dedicated GPIO mask output register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_msk](index.html) module"]
 pub struct OUT_MSK_SPEC;
 impl crate::RegisterSpec for OUT_MSK_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [out_msk::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out_msk::W](W) writer structure"]
 impl crate::Writable for OUT_MSK_SPEC {
     type Writer = W;
 }

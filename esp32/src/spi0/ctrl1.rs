@@ -35,7 +35,7 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD_DELAY_RES` reader - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub struct CS_HOLD_DELAY_RES_R(crate::FieldReader<u16, u16>);
+pub struct CS_HOLD_DELAY_RES_R(crate::FieldReader<u16>);
 impl CS_HOLD_DELAY_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CS_HOLD_DELAY_RES_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_DELAY_RES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CS_HOLD_DELAY_RES_W<'a> {
     }
 }
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles"]
-pub struct CS_HOLD_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct CS_HOLD_DELAY_R(crate::FieldReader<u8>);
 impl CS_HOLD_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CS_HOLD_DELAY_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1](index.html) module"]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl1::R](R) reader structure"]
 impl crate::Readable for CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl1::W](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
 }

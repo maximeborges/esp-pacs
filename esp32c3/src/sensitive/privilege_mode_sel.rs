@@ -35,7 +35,7 @@ impl From<crate::W<PRIVILEGE_MODE_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRIVILEGE_MODE_SEL` reader - privilege_mode_sel"]
-pub struct PRIVILEGE_MODE_SEL_R(crate::FieldReader<bool, bool>);
+pub struct PRIVILEGE_MODE_SEL_R(crate::FieldReader<bool>);
 impl PRIVILEGE_MODE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRIVILEGE_MODE_SEL_R {
     }
 }
 impl core::ops::Deref for PRIVILEGE_MODE_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [privilege_mode_sel]
-(index.html) module"]
+#[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [privilege_mode_sel](index.html) module"]
 pub struct PRIVILEGE_MODE_SEL_SPEC;
 impl crate::RegisterSpec for PRIVILEGE_MODE_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [privilege_mode_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [privilege_mode_sel::R](R) reader structure"]
 impl crate::Readable for PRIVILEGE_MODE_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [privilege_mode_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [privilege_mode_sel::W](W) writer structure"]
 impl crate::Writable for PRIVILEGE_MODE_SEL_SPEC {
     type Writer = W;
 }

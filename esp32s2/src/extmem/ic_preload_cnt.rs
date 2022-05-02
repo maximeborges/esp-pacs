@@ -14,7 +14,7 @@ impl From<crate::R<IC_PRELOAD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IC_PRELOAD_CNT` reader - The bits are used to count the number of issued pre-load which include manual pre-load and conditional pre-load."]
-pub struct IC_PRELOAD_CNT_R(crate::FieldReader<u16, u16>);
+pub struct IC_PRELOAD_CNT_R(crate::FieldReader<u16>);
 impl IC_PRELOAD_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -22,7 +22,7 @@ impl IC_PRELOAD_CNT_R {
     }
 }
 impl core::ops::Deref for IC_PRELOAD_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         IC_PRELOAD_CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ic_preload_cnt]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ic_preload_cnt](index.html) module"]
 pub struct IC_PRELOAD_CNT_SPEC;
 impl crate::RegisterSpec for IC_PRELOAD_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_preload_cnt::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ic_preload_cnt::R](R) reader structure"]
 impl crate::Readable for IC_PRELOAD_CNT_SPEC {
     type Reader = R;
 }

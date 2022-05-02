@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_MESSAGE_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_MESSAGE_MAX` reader - This filed is used to set the max value of clear write_buffer"]
-pub struct CORE_1_MESSAGE_MAX_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_MESSAGE_MAX_R(crate::FieldReader<u8>);
 impl CORE_1_MESSAGE_MAX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_MESSAGE_MAX_R {
     }
 }
 impl core::ops::Deref for CORE_1_MESSAGE_MAX_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Clear writer_buffer write number configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_max]
-(index.html) module"]
+#[doc = "Clear writer_buffer write number configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_max](index.html) module"]
 pub struct CORE_1_MESSAGE_MAX_SPEC;
 impl crate::RegisterSpec for CORE_1_MESSAGE_MAX_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_message_max::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_message_max::R](R) reader structure"]
 impl crate::Readable for CORE_1_MESSAGE_MAX_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_message_max::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_message_max::W](W) writer structure"]
 impl crate::Writable for CORE_1_MESSAGE_MAX_SPEC {
     type Writer = W;
 }

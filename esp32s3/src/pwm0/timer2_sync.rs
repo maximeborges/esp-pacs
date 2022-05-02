@@ -35,7 +35,7 @@ impl From<crate::W<TIMER2_SYNC_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER2_SYNCI_EN` reader - When set, timer reloading with phase on sync input event is enabled."]
-pub struct TIMER2_SYNCI_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMER2_SYNCI_EN_R(crate::FieldReader<bool>);
 impl TIMER2_SYNCI_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMER2_SYNCI_EN_R {
     }
 }
 impl core::ops::Deref for TIMER2_SYNCI_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMER2_SYNCI_EN_W<'a> {
     }
 }
 #[doc = "Field `SW` reader - Toggling this bit will trigger a software sync."]
-pub struct SW_R(crate::FieldReader<bool, bool>);
+pub struct SW_R(crate::FieldReader<bool>);
 impl SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SW_R {
     }
 }
 impl core::ops::Deref for SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SW_W<'a> {
     }
 }
 #[doc = "Field `TIMER2_SYNCO_SEL` reader - PWM timer2 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
-pub struct TIMER2_SYNCO_SEL_R(crate::FieldReader<u8, u8>);
+pub struct TIMER2_SYNCO_SEL_R(crate::FieldReader<u8>);
 impl TIMER2_SYNCO_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl TIMER2_SYNCO_SEL_R {
     }
 }
 impl core::ops::Deref for TIMER2_SYNCO_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> TIMER2_SYNCO_SEL_W<'a> {
     }
 }
 #[doc = "Field `TIMER2_PHASE` reader - phase for timer reload on sync event"]
-pub struct TIMER2_PHASE_R(crate::FieldReader<u32, u32>);
+pub struct TIMER2_PHASE_R(crate::FieldReader<u32>);
 impl TIMER2_PHASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -144,7 +144,7 @@ impl TIMER2_PHASE_R {
     }
 }
 impl core::ops::Deref for TIMER2_PHASE_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "PWM timer2 sync function configuration register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer2_sync]
-(index.html) module"]
+#[doc = "PWM timer2 sync function configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer2_sync](index.html) module"]
 pub struct TIMER2_SYNC_SPEC;
 impl crate::RegisterSpec for TIMER2_SYNC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer2_sync::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer2_sync::R](R) reader structure"]
 impl crate::Readable for TIMER2_SYNC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer2_sync::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer2_sync::W](W) writer structure"]
 impl crate::Writable for TIMER2_SYNC_SPEC {
     type Writer = W;
 }

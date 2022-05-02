@@ -35,7 +35,7 @@ impl From<crate::W<INTR_RCGN_SPEC>> for W {
     }
 }
 #[doc = "Field `INTR_MODE_CH0` reader - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH0_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH0_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl INTR_MODE_CH0_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> INTR_MODE_CH0_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH1` reader - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH1_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH1_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl INTR_MODE_CH1_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> INTR_MODE_CH1_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH2` reader - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH2_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH2_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl INTR_MODE_CH2_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> INTR_MODE_CH2_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH3` reader - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH3_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH3_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl INTR_MODE_CH3_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> INTR_MODE_CH3_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH4` reader - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH4_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH4_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl INTR_MODE_CH4_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> INTR_MODE_CH4_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH5` reader - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH5_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH5_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl INTR_MODE_CH5_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> INTR_MODE_CH5_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH6` reader - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH6_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH6_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl INTR_MODE_CH6_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> INTR_MODE_CH6_W<'a> {
     }
 }
 #[doc = "Field `INTR_MODE_CH7` reader - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub struct INTR_MODE_CH7_R(crate::FieldReader<u8, u8>);
+pub struct INTR_MODE_CH7_R(crate::FieldReader<u8>);
 impl INTR_MODE_CH7_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl INTR_MODE_CH7_R {
     }
 }
 impl core::ops::Deref for INTR_MODE_CH7_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -340,25 +340,16 @@ impl W {
         self
     }
 }
-#[doc = "Dedicated GPIO interrupts generation mode register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_rcgn]
-(index.html) module"]
+#[doc = "Dedicated GPIO interrupts generation mode register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_rcgn](index.html) module"]
 pub struct INTR_RCGN_SPEC;
 impl crate::RegisterSpec for INTR_RCGN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [intr_rcgn::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [intr_rcgn::R](R) reader structure"]
 impl crate::Readable for INTR_RCGN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [intr_rcgn::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [intr_rcgn::W](W) writer structure"]
 impl crate::Writable for INTR_RCGN_SPEC {
     type Writer = W;
 }

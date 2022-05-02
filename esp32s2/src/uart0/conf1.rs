@@ -35,7 +35,7 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - An UART_RXFIFO_FULL_INT interrupt is generated when the receiver receives more data than this register’s value."]
-pub struct RXFIFO_FULL_THRHD_R(crate::FieldReader<u16, u16>);
+pub struct RXFIFO_FULL_THRHD_R(crate::FieldReader<u16>);
 impl RXFIFO_FULL_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl RXFIFO_FULL_THRHD_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_THRHD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RXFIFO_FULL_THRHD_W<'a> {
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - An UART_TXFIFO_EMPTY_INT interrupt is generated when the number of data bytes in TX FIFO is less than this register's value."]
-pub struct TXFIFO_EMPTY_THRHD_R(crate::FieldReader<u16, u16>);
+pub struct TXFIFO_EMPTY_THRHD_R(crate::FieldReader<u16>);
 impl TXFIFO_EMPTY_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl TXFIFO_EMPTY_THRHD_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_THRHD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TXFIFO_EMPTY_THRHD_W<'a> {
     }
 }
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub struct RX_TOUT_FLOW_DIS_R(crate::FieldReader<bool, bool>);
+pub struct RX_TOUT_FLOW_DIS_R(crate::FieldReader<bool>);
 impl RX_TOUT_FLOW_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl RX_TOUT_FLOW_DIS_R {
     }
 }
 impl core::ops::Deref for RX_TOUT_FLOW_DIS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> RX_TOUT_FLOW_DIS_W<'a> {
     }
 }
 #[doc = "Field `RX_FLOW_EN` reader - This is the flow enable bit for UART receiver. 1: Choose software flow control with configuring sw_rts signal. 0: Disable software flow control."]
-pub struct RX_FLOW_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_FLOW_EN_R(crate::FieldReader<bool>);
 impl RX_FLOW_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl RX_FLOW_EN_R {
     }
 }
 impl core::ops::Deref for RX_FLOW_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> RX_FLOW_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_TOUT_EN` reader - This is the enable bit for UART receiver's timeout function."]
-pub struct RX_TOUT_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_TOUT_EN_R(crate::FieldReader<bool>);
 impl RX_TOUT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl RX_TOUT_EN_R {
     }
 }
 impl core::ops::Deref for RX_TOUT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -259,25 +259,16 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1]
-(index.html) module"]
+#[doc = "Configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf1::R](R) reader structure"]
 impl crate::Readable for CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
 }

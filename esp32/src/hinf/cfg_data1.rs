@@ -35,7 +35,7 @@ impl From<crate::W<CFG_DATA1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_ENABLE` reader - "]
-pub struct SDIO_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_ENABLE_R(crate::FieldReader<bool>);
 impl SDIO_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SDIO_ENABLE_R {
     }
 }
 impl core::ops::Deref for SDIO_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SDIO_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `SDIO_IOREADY1` reader - "]
-pub struct SDIO_IOREADY1_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_IOREADY1_R(crate::FieldReader<bool>);
 impl SDIO_IOREADY1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SDIO_IOREADY1_R {
     }
 }
 impl core::ops::Deref for SDIO_IOREADY1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SDIO_IOREADY1_W<'a> {
     }
 }
 #[doc = "Field `HIGHSPEED_ENABLE` reader - "]
-pub struct HIGHSPEED_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct HIGHSPEED_ENABLE_R(crate::FieldReader<bool>);
 impl HIGHSPEED_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl HIGHSPEED_ENABLE_R {
     }
 }
 impl core::ops::Deref for HIGHSPEED_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> HIGHSPEED_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `HIGHSPEED_MODE` reader - "]
-pub struct HIGHSPEED_MODE_R(crate::FieldReader<bool, bool>);
+pub struct HIGHSPEED_MODE_R(crate::FieldReader<bool>);
 impl HIGHSPEED_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,14 +154,14 @@ impl HIGHSPEED_MODE_R {
     }
 }
 impl core::ops::Deref for HIGHSPEED_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SDIO_CD_ENABLE` reader - "]
-pub struct SDIO_CD_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_CD_ENABLE_R(crate::FieldReader<bool>);
 impl SDIO_CD_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -169,7 +169,7 @@ impl SDIO_CD_ENABLE_R {
     }
 }
 impl core::ops::Deref for SDIO_CD_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -198,7 +198,7 @@ impl<'a> SDIO_CD_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `SDIO_IOREADY2` reader - "]
-pub struct SDIO_IOREADY2_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_IOREADY2_R(crate::FieldReader<bool>);
 impl SDIO_IOREADY2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -206,7 +206,7 @@ impl SDIO_IOREADY2_R {
     }
 }
 impl core::ops::Deref for SDIO_IOREADY2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -235,7 +235,7 @@ impl<'a> SDIO_IOREADY2_W<'a> {
     }
 }
 #[doc = "Field `SDIO_INT_MASK` reader - "]
-pub struct SDIO_INT_MASK_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_INT_MASK_R(crate::FieldReader<bool>);
 impl SDIO_INT_MASK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -243,7 +243,7 @@ impl SDIO_INT_MASK_R {
     }
 }
 impl core::ops::Deref for SDIO_INT_MASK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -272,7 +272,7 @@ impl<'a> SDIO_INT_MASK_W<'a> {
     }
 }
 #[doc = "Field `IOENABLE2` reader - "]
-pub struct IOENABLE2_R(crate::FieldReader<bool, bool>);
+pub struct IOENABLE2_R(crate::FieldReader<bool>);
 impl IOENABLE2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -280,14 +280,14 @@ impl IOENABLE2_R {
     }
 }
 impl core::ops::Deref for IOENABLE2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CD_DISABLE` reader - "]
-pub struct CD_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct CD_DISABLE_R(crate::FieldReader<bool>);
 impl CD_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -295,14 +295,14 @@ impl CD_DISABLE_R {
     }
 }
 impl core::ops::Deref for CD_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FUNC1_EPS` reader - "]
-pub struct FUNC1_EPS_R(crate::FieldReader<bool, bool>);
+pub struct FUNC1_EPS_R(crate::FieldReader<bool>);
 impl FUNC1_EPS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -310,14 +310,14 @@ impl FUNC1_EPS_R {
     }
 }
 impl core::ops::Deref for FUNC1_EPS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `EMP` reader - "]
-pub struct EMP_R(crate::FieldReader<bool, bool>);
+pub struct EMP_R(crate::FieldReader<bool>);
 impl EMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -325,14 +325,14 @@ impl EMP_R {
     }
 }
 impl core::ops::Deref for EMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IOENABLE1` reader - "]
-pub struct IOENABLE1_R(crate::FieldReader<bool, bool>);
+pub struct IOENABLE1_R(crate::FieldReader<bool>);
 impl IOENABLE1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -340,14 +340,14 @@ impl IOENABLE1_R {
     }
 }
 impl core::ops::Deref for IOENABLE1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SDIO20_CONF0` reader - "]
-pub struct SDIO20_CONF0_R(crate::FieldReader<u8, u8>);
+pub struct SDIO20_CONF0_R(crate::FieldReader<u8>);
 impl SDIO20_CONF0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -355,7 +355,7 @@ impl SDIO20_CONF0_R {
     }
 }
 impl core::ops::Deref for SDIO20_CONF0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -374,7 +374,7 @@ impl<'a> SDIO20_CONF0_W<'a> {
     }
 }
 #[doc = "Field `SDIO_VER` reader - "]
-pub struct SDIO_VER_R(crate::FieldReader<u16, u16>);
+pub struct SDIO_VER_R(crate::FieldReader<u16>);
 impl SDIO_VER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -382,7 +382,7 @@ impl SDIO_VER_R {
     }
 }
 impl core::ops::Deref for SDIO_VER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -401,7 +401,7 @@ impl<'a> SDIO_VER_W<'a> {
     }
 }
 #[doc = "Field `FUNC2_EPS` reader - "]
-pub struct FUNC2_EPS_R(crate::FieldReader<bool, bool>);
+pub struct FUNC2_EPS_R(crate::FieldReader<bool>);
 impl FUNC2_EPS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -409,14 +409,14 @@ impl FUNC2_EPS_R {
     }
 }
 impl core::ops::Deref for FUNC2_EPS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SDIO20_CONF1` reader - "]
-pub struct SDIO20_CONF1_R(crate::FieldReader<u8, u8>);
+pub struct SDIO20_CONF1_R(crate::FieldReader<u8>);
 impl SDIO20_CONF1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -424,7 +424,7 @@ impl SDIO20_CONF1_R {
     }
 }
 impl core::ops::Deref for SDIO20_CONF1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -577,25 +577,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_data1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfg_data1](index.html) module"]
 pub struct CFG_DATA1_SPEC;
 impl crate::RegisterSpec for CFG_DATA1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cfg_data1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cfg_data1::R](R) reader structure"]
 impl crate::Readable for CFG_DATA1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cfg_data1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cfg_data1::W](W) writer structure"]
 impl crate::Writable for CFG_DATA1_SPEC {
     type Writer = W;
 }

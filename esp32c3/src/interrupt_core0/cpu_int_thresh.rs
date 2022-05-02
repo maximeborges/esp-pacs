@@ -35,7 +35,7 @@ impl From<crate::W<CPU_INT_THRESH_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INT_THRESH` reader - reg_core0_cpu_int_thresh"]
-pub struct CPU_INT_THRESH_R(crate::FieldReader<u8, u8>);
+pub struct CPU_INT_THRESH_R(crate::FieldReader<u8>);
 impl CPU_INT_THRESH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CPU_INT_THRESH_R {
     }
 }
 impl core::ops::Deref for CPU_INT_THRESH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "mac intr map register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_int_thresh]
-(index.html) module"]
+#[doc = "mac intr map register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_int_thresh](index.html) module"]
 pub struct CPU_INT_THRESH_SPEC;
 impl crate::RegisterSpec for CPU_INT_THRESH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpu_int_thresh::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cpu_int_thresh::R](R) reader structure"]
 impl crate::Readable for CPU_INT_THRESH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cpu_int_thresh::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cpu_int_thresh::W](W) writer structure"]
 impl crate::Writable for CPU_INT_THRESH_SPEC {
     type Writer = W;
 }

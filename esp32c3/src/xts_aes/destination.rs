@@ -35,7 +35,7 @@ impl From<crate::W<DESTINATION_SPEC>> for W {
     }
 }
 #[doc = "Field `DESTINATION` reader - This bit stores the destination. 0: flash(default). 1: reserved."]
-pub struct DESTINATION_R(crate::FieldReader<bool, bool>);
+pub struct DESTINATION_R(crate::FieldReader<bool>);
 impl DESTINATION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DESTINATION_R {
     }
 }
 impl core::ops::Deref for DESTINATION_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "XTS-AES destination register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [destination]
-(index.html) module"]
+#[doc = "XTS-AES destination register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [destination](index.html) module"]
 pub struct DESTINATION_SPEC;
 impl crate::RegisterSpec for DESTINATION_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [destination::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [destination::R](R) reader structure"]
 impl crate::Readable for DESTINATION_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [destination::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [destination::W](W) writer structure"]
 impl crate::Writable for DESTINATION_SPEC {
     type Writer = W;
 }

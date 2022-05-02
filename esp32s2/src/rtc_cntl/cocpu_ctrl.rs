@@ -35,7 +35,7 @@ impl From<crate::W<COCPU_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `COCPU_CLK_FO` reader - ULP-RISCV clock force on"]
-pub struct COCPU_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_CLK_FO_R(crate::FieldReader<bool>);
 impl COCPU_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl COCPU_CLK_FO_R {
     }
 }
 impl core::ops::Deref for COCPU_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> COCPU_CLK_FO_W<'a> {
     }
 }
 #[doc = "Field `COCPU_START_2_RESET_DIS` reader - Time from ULP-RISCV startup to pull down reset"]
-pub struct COCPU_START_2_RESET_DIS_R(crate::FieldReader<u8, u8>);
+pub struct COCPU_START_2_RESET_DIS_R(crate::FieldReader<u8>);
 impl COCPU_START_2_RESET_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl COCPU_START_2_RESET_DIS_R {
     }
 }
 impl core::ops::Deref for COCPU_START_2_RESET_DIS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> COCPU_START_2_RESET_DIS_W<'a> {
     }
 }
 #[doc = "Field `COCPU_START_2_INTR_EN` reader - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
-pub struct COCPU_START_2_INTR_EN_R(crate::FieldReader<u8, u8>);
+pub struct COCPU_START_2_INTR_EN_R(crate::FieldReader<u8>);
 impl COCPU_START_2_INTR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl COCPU_START_2_INTR_EN_R {
     }
 }
 impl core::ops::Deref for COCPU_START_2_INTR_EN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> COCPU_START_2_INTR_EN_W<'a> {
     }
 }
 #[doc = "Field `COCPU_SHUT` reader - Shut down ULP-RISCV"]
-pub struct COCPU_SHUT_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_SHUT_R(crate::FieldReader<bool>);
 impl COCPU_SHUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl COCPU_SHUT_R {
     }
 }
 impl core::ops::Deref for COCPU_SHUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> COCPU_SHUT_W<'a> {
     }
 }
 #[doc = "Field `COCPU_SHUT_2_CLK_DIS` reader - Time from shut down ULP-RISCV to disable clock"]
-pub struct COCPU_SHUT_2_CLK_DIS_R(crate::FieldReader<u8, u8>);
+pub struct COCPU_SHUT_2_CLK_DIS_R(crate::FieldReader<u8>);
 impl COCPU_SHUT_2_CLK_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl COCPU_SHUT_2_CLK_DIS_R {
     }
 }
 impl core::ops::Deref for COCPU_SHUT_2_CLK_DIS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> COCPU_SHUT_2_CLK_DIS_W<'a> {
     }
 }
 #[doc = "Field `COCPU_SHUT_RESET_EN` reader - This bit is used to reset ULP-RISCV"]
-pub struct COCPU_SHUT_RESET_EN_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_SHUT_RESET_EN_R(crate::FieldReader<bool>);
 impl COCPU_SHUT_RESET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl COCPU_SHUT_RESET_EN_R {
     }
 }
 impl core::ops::Deref for COCPU_SHUT_RESET_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> COCPU_SHUT_RESET_EN_W<'a> {
     }
 }
 #[doc = "Field `COCPU_SEL` reader - 0: select ULP-RISCV. 1: select ULP-FSM"]
-pub struct COCPU_SEL_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_SEL_R(crate::FieldReader<bool>);
 impl COCPU_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl COCPU_SEL_R {
     }
 }
 impl core::ops::Deref for COCPU_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> COCPU_SEL_W<'a> {
     }
 }
 #[doc = "Field `COCPU_DONE_FORCE` reader - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
-pub struct COCPU_DONE_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_DONE_FORCE_R(crate::FieldReader<bool>);
 impl COCPU_DONE_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -272,7 +272,7 @@ impl COCPU_DONE_FORCE_R {
     }
 }
 impl core::ops::Deref for COCPU_DONE_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -301,7 +301,7 @@ impl<'a> COCPU_DONE_FORCE_W<'a> {
     }
 }
 #[doc = "Field `COCPU_DONE` reader - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
-pub struct COCPU_DONE_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_DONE_R(crate::FieldReader<bool>);
 impl COCPU_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -309,7 +309,7 @@ impl COCPU_DONE_R {
     }
 }
 impl core::ops::Deref for COCPU_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -464,25 +464,16 @@ impl W {
         self
     }
 }
-#[doc = "ULP-RISCV configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cocpu_ctrl]
-(index.html) module"]
+#[doc = "ULP-RISCV configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cocpu_ctrl](index.html) module"]
 pub struct COCPU_CTRL_SPEC;
 impl crate::RegisterSpec for COCPU_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cocpu_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cocpu_ctrl::R](R) reader structure"]
 impl crate::Readable for COCPU_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cocpu_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cocpu_ctrl::W](W) writer structure"]
 impl crate::Writable for COCPU_CTRL_SPEC {
     type Writer = W;
 }

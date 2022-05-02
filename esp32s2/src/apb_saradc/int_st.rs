@@ -14,7 +14,7 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `ADC2_THRES_INT_ST` reader - Status of APB_SARADC_ADC2_THRES_INT interrupt."]
-pub struct ADC2_THRES_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_THRES_INT_ST_R(crate::FieldReader<bool>);
 impl ADC2_THRES_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl ADC2_THRES_INT_ST_R {
     }
 }
 impl core::ops::Deref for ADC2_THRES_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ADC1_THRES_INT_ST` reader - Status of APB_SARADC_ADC1_THRES_INT interrupt."]
-pub struct ADC1_THRES_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_THRES_INT_ST_R(crate::FieldReader<bool>);
 impl ADC1_THRES_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl ADC1_THRES_INT_ST_R {
     }
 }
 impl core::ops::Deref for ADC1_THRES_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ADC2_DONE_INT_ST` reader - Status of APB_SARADC_ADC2_DONE_INT interrupt."]
-pub struct ADC2_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl ADC2_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl ADC2_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for ADC2_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ADC1_DONE_INT_ST` reader - Status of APB_SARADC_ADC1_DONE_INT interrupt."]
-pub struct ADC1_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl ADC1_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl ADC1_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for ADC1_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         ADC1_DONE_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "DIG ADC interrupt status\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st]
-(index.html) module"]
+#[doc = "DIG ADC interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_st::R](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {
     type Reader = R;
 }

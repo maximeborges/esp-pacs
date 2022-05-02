@@ -35,7 +35,7 @@ impl From<crate::W<JFIFO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_FIFO_CNT` reader - JTAT in fifo counter."]
-pub struct IN_FIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct IN_FIFO_CNT_R(crate::FieldReader<u8>);
 impl IN_FIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl IN_FIFO_CNT_R {
     }
 }
 impl core::ops::Deref for IN_FIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_FIFO_EMPTY` reader - 1: JTAG in fifo is empty."]
-pub struct IN_FIFO_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct IN_FIFO_EMPTY_R(crate::FieldReader<bool>);
 impl IN_FIFO_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,14 +58,14 @@ impl IN_FIFO_EMPTY_R {
     }
 }
 impl core::ops::Deref for IN_FIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_FIFO_FULL` reader - 1: JTAG in fifo is full."]
-pub struct IN_FIFO_FULL_R(crate::FieldReader<bool, bool>);
+pub struct IN_FIFO_FULL_R(crate::FieldReader<bool>);
 impl IN_FIFO_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,14 +73,14 @@ impl IN_FIFO_FULL_R {
     }
 }
 impl core::ops::Deref for IN_FIFO_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OUT_FIFO_CNT` reader - JTAT out fifo counter."]
-pub struct OUT_FIFO_CNT_R(crate::FieldReader<u8, u8>);
+pub struct OUT_FIFO_CNT_R(crate::FieldReader<u8>);
 impl OUT_FIFO_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -88,14 +88,14 @@ impl OUT_FIFO_CNT_R {
     }
 }
 impl core::ops::Deref for OUT_FIFO_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OUT_FIFO_EMPTY` reader - 1: JTAG out fifo is empty."]
-pub struct OUT_FIFO_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct OUT_FIFO_EMPTY_R(crate::FieldReader<bool>);
 impl OUT_FIFO_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -103,14 +103,14 @@ impl OUT_FIFO_EMPTY_R {
     }
 }
 impl core::ops::Deref for OUT_FIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OUT_FIFO_FULL` reader - 1: JTAG out fifo is full."]
-pub struct OUT_FIFO_FULL_R(crate::FieldReader<bool, bool>);
+pub struct OUT_FIFO_FULL_R(crate::FieldReader<bool>);
 impl OUT_FIFO_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -118,14 +118,14 @@ impl OUT_FIFO_FULL_R {
     }
 }
 impl core::ops::Deref for OUT_FIFO_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_FIFO_RESET` reader - Write 1 to reset JTAG in fifo."]
-pub struct IN_FIFO_RESET_R(crate::FieldReader<bool, bool>);
+pub struct IN_FIFO_RESET_R(crate::FieldReader<bool>);
 impl IN_FIFO_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -133,7 +133,7 @@ impl IN_FIFO_RESET_R {
     }
 }
 impl core::ops::Deref for IN_FIFO_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -162,7 +162,7 @@ impl<'a> IN_FIFO_RESET_W<'a> {
     }
 }
 #[doc = "Field `OUT_FIFO_RESET` reader - Write 1 to reset JTAG out fifo."]
-pub struct OUT_FIFO_RESET_R(crate::FieldReader<bool, bool>);
+pub struct OUT_FIFO_RESET_R(crate::FieldReader<bool>);
 impl OUT_FIFO_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -170,7 +170,7 @@ impl OUT_FIFO_RESET_R {
     }
 }
 impl core::ops::Deref for OUT_FIFO_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -258,25 +258,16 @@ impl W {
         self
     }
 }
-#[doc = "USB-JTAG FIFO status\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [jfifo_st]
-(index.html) module"]
+#[doc = "USB-JTAG FIFO status\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [jfifo_st](index.html) module"]
 pub struct JFIFO_ST_SPEC;
 impl crate::RegisterSpec for JFIFO_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [jfifo_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [jfifo_st::R](R) reader structure"]
 impl crate::Readable for JFIFO_ST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [jfifo_st::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [jfifo_st::W](W) writer structure"]
 impl crate::Writable for JFIFO_ST_SPEC {
     type Writer = W;
 }

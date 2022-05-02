@@ -35,7 +35,7 @@ impl From<crate::W<SLAVE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
-pub struct CLK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CLK_MODE_R(crate::FieldReader<u8>);
 impl CLK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLK_MODE_R {
     }
 }
 impl core::ops::Deref for CLK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,12 +61,8 @@ impl<'a> CLK_MODE_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CLK_MODE_13` reader - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
-/B\\[7\\]
-. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]
-/B\\[6\\]
-."]
-pub struct CLK_MODE_13_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `CLK_MODE_13` reader - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
+pub struct CLK_MODE_13_R(crate::FieldReader<bool>);
 impl CLK_MODE_13_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -74,17 +70,13 @@ impl CLK_MODE_13_R {
     }
 }
 impl core::ops::Deref for CLK_MODE_13_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CLK_MODE_13` writer - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
-/B\\[7\\]
-. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]
-/B\\[6\\]
-."]
+#[doc = "Field `CLK_MODE_13` writer - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
 pub struct CLK_MODE_13_W<'a> {
     w: &'a mut W,
 }
@@ -107,7 +99,7 @@ impl<'a> CLK_MODE_13_W<'a> {
     }
 }
 #[doc = "Field `RSCK_DATA_OUT` reader - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
-pub struct RSCK_DATA_OUT_R(crate::FieldReader<bool, bool>);
+pub struct RSCK_DATA_OUT_R(crate::FieldReader<bool>);
 impl RSCK_DATA_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -115,7 +107,7 @@ impl RSCK_DATA_OUT_R {
     }
 }
 impl core::ops::Deref for RSCK_DATA_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -144,7 +136,7 @@ impl<'a> RSCK_DATA_OUT_W<'a> {
     }
 }
 #[doc = "Field `SLV_RDDMA_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
-pub struct SLV_RDDMA_BITLEN_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RDDMA_BITLEN_EN_R(crate::FieldReader<bool>);
 impl SLV_RDDMA_BITLEN_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -152,7 +144,7 @@ impl SLV_RDDMA_BITLEN_EN_R {
     }
 }
 impl core::ops::Deref for SLV_RDDMA_BITLEN_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -181,7 +173,7 @@ impl<'a> SLV_RDDMA_BITLEN_EN_W<'a> {
     }
 }
 #[doc = "Field `SLV_WRDMA_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
-pub struct SLV_WRDMA_BITLEN_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WRDMA_BITLEN_EN_R(crate::FieldReader<bool>);
 impl SLV_WRDMA_BITLEN_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -189,7 +181,7 @@ impl SLV_WRDMA_BITLEN_EN_R {
     }
 }
 impl core::ops::Deref for SLV_WRDMA_BITLEN_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -218,7 +210,7 @@ impl<'a> SLV_WRDMA_BITLEN_EN_W<'a> {
     }
 }
 #[doc = "Field `SLV_RDBUF_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
-pub struct SLV_RDBUF_BITLEN_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_RDBUF_BITLEN_EN_R(crate::FieldReader<bool>);
 impl SLV_RDBUF_BITLEN_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -226,7 +218,7 @@ impl SLV_RDBUF_BITLEN_EN_R {
     }
 }
 impl core::ops::Deref for SLV_RDBUF_BITLEN_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -255,7 +247,7 @@ impl<'a> SLV_RDBUF_BITLEN_EN_W<'a> {
     }
 }
 #[doc = "Field `SLV_WRBUF_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
-pub struct SLV_WRBUF_BITLEN_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLV_WRBUF_BITLEN_EN_R(crate::FieldReader<bool>);
 impl SLV_WRBUF_BITLEN_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -263,7 +255,7 @@ impl SLV_WRBUF_BITLEN_EN_R {
     }
 }
 impl core::ops::Deref for SLV_WRBUF_BITLEN_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -292,7 +284,7 @@ impl<'a> SLV_WRBUF_BITLEN_EN_W<'a> {
     }
 }
 #[doc = "Field `DMA_SEG_MAGIC_VALUE` reader - The magic value of BM table in master DMA seg-trans."]
-pub struct DMA_SEG_MAGIC_VALUE_R(crate::FieldReader<u8, u8>);
+pub struct DMA_SEG_MAGIC_VALUE_R(crate::FieldReader<u8>);
 impl DMA_SEG_MAGIC_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -300,7 +292,7 @@ impl DMA_SEG_MAGIC_VALUE_R {
     }
 }
 impl core::ops::Deref for DMA_SEG_MAGIC_VALUE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -319,7 +311,7 @@ impl<'a> DMA_SEG_MAGIC_VALUE_W<'a> {
     }
 }
 #[doc = "Field `MODE` reader - Set SPI work mode. 1: slave mode 0: master mode."]
-pub struct MODE_R(crate::FieldReader<bool, bool>);
+pub struct MODE_R(crate::FieldReader<bool>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -327,7 +319,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -378,7 +370,7 @@ impl<'a> SOFT_RESET_W<'a> {
     }
 }
 #[doc = "Field `USR_CONF` reader - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
-pub struct USR_CONF_R(crate::FieldReader<bool, bool>);
+pub struct USR_CONF_R(crate::FieldReader<bool>);
 impl USR_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -386,7 +378,7 @@ impl USR_CONF_R {
     }
 }
 impl core::ops::Deref for USR_CONF_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,11 +412,7 @@ impl R {
     pub fn clk_mode(&self) -> CLK_MODE_R {
         CLK_MODE_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
-/B\\[7\\]
-. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]
-/B\\[6\\]
-."]
+    #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
     #[inline(always)]
     pub fn clk_mode_13(&self) -> CLK_MODE_13_R {
         CLK_MODE_13_R::new(((self.bits >> 2) & 1) != 0)
@@ -476,11 +464,7 @@ impl W {
     pub fn clk_mode(&mut self) -> CLK_MODE_W {
         CLK_MODE_W { w: self }
     }
-    #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]
-/B\\[7\\]
-. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]
-/B\\[6\\]
-."]
+    #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
     #[inline(always)]
     pub fn clk_mode_13(&mut self) -> CLK_MODE_13_W {
         CLK_MODE_13_W { w: self }
@@ -537,25 +521,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI slave control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave]
-(index.html) module"]
+#[doc = "SPI slave control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave](index.html) module"]
 pub struct SLAVE_SPEC;
 impl crate::RegisterSpec for SLAVE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slave::R](R) reader structure"]
 impl crate::Readable for SLAVE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slave::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slave::W](W) writer structure"]
 impl crate::Writable for SLAVE_SPEC {
     type Writer = W;
 }

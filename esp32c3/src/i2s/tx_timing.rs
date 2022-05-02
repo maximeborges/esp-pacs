@@ -35,7 +35,7 @@ impl From<crate::W<TX_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SD_OUT_DM` reader - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD_OUT_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_SD_OUT_DM_R(crate::FieldReader<u8>);
 impl TX_SD_OUT_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_SD_OUT_DM_R {
     }
 }
 impl core::ops::Deref for TX_SD_OUT_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_SD_OUT_DM_W<'a> {
     }
 }
 #[doc = "Field `TX_SD1_OUT_DM` reader - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD1_OUT_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_SD1_OUT_DM_R(crate::FieldReader<u8>);
 impl TX_SD1_OUT_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TX_SD1_OUT_DM_R {
     }
 }
 impl core::ops::Deref for TX_SD1_OUT_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TX_SD1_OUT_DM_W<'a> {
     }
 }
 #[doc = "Field `TX_WS_OUT_DM` reader - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_OUT_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_WS_OUT_DM_R(crate::FieldReader<u8>);
 impl TX_WS_OUT_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TX_WS_OUT_DM_R {
     }
 }
 impl core::ops::Deref for TX_WS_OUT_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TX_WS_OUT_DM_W<'a> {
     }
 }
 #[doc = "Field `TX_BCK_OUT_DM` reader - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_OUT_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_BCK_OUT_DM_R(crate::FieldReader<u8>);
 impl TX_BCK_OUT_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl TX_BCK_OUT_DM_R {
     }
 }
 impl core::ops::Deref for TX_BCK_OUT_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> TX_BCK_OUT_DM_W<'a> {
     }
 }
 #[doc = "Field `TX_WS_IN_DM` reader - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_IN_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_WS_IN_DM_R(crate::FieldReader<u8>);
 impl TX_WS_IN_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl TX_WS_IN_DM_R {
     }
 }
 impl core::ops::Deref for TX_WS_IN_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> TX_WS_IN_DM_W<'a> {
     }
 }
 #[doc = "Field `TX_BCK_IN_DM` reader - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_IN_DM_R(crate::FieldReader<u8, u8>);
+pub struct TX_BCK_IN_DM_R(crate::FieldReader<u8>);
 impl TX_BCK_IN_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl TX_BCK_IN_DM_R {
     }
 }
 impl core::ops::Deref for TX_BCK_IN_DM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -266,25 +266,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S TX timing control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_timing]
-(index.html) module"]
+#[doc = "I2S TX timing control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_timing](index.html) module"]
 pub struct TX_TIMING_SPEC;
 impl crate::RegisterSpec for TX_TIMING_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tx_timing::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tx_timing::R](R) reader structure"]
 impl crate::Readable for TX_TIMING_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tx_timing::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tx_timing::W](W) writer structure"]
 impl crate::Writable for TX_TIMING_SPEC {
     type Writer = W;
 }

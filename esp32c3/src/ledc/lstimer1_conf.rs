@@ -35,7 +35,7 @@ impl From<crate::W<LSTIMER1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LSTIMER1_DUTY_RES` reader - reg_lstimer1_duty_res."]
-pub struct LSTIMER1_DUTY_RES_R(crate::FieldReader<u8, u8>);
+pub struct LSTIMER1_DUTY_RES_R(crate::FieldReader<u8>);
 impl LSTIMER1_DUTY_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LSTIMER1_DUTY_RES_R {
     }
 }
 impl core::ops::Deref for LSTIMER1_DUTY_RES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> LSTIMER1_DUTY_RES_W<'a> {
     }
 }
 #[doc = "Field `CLK_DIV_LSTIMER1` reader - reg_clk_div_lstimer1."]
-pub struct CLK_DIV_LSTIMER1_R(crate::FieldReader<u32, u32>);
+pub struct CLK_DIV_LSTIMER1_R(crate::FieldReader<u32>);
 impl CLK_DIV_LSTIMER1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -70,7 +70,7 @@ impl CLK_DIV_LSTIMER1_R {
     }
 }
 impl core::ops::Deref for CLK_DIV_LSTIMER1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CLK_DIV_LSTIMER1_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER1_PAUSE` reader - reg_lstimer1_pause."]
-pub struct LSTIMER1_PAUSE_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER1_PAUSE_R(crate::FieldReader<bool>);
 impl LSTIMER1_PAUSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl LSTIMER1_PAUSE_R {
     }
 }
 impl core::ops::Deref for LSTIMER1_PAUSE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> LSTIMER1_PAUSE_W<'a> {
     }
 }
 #[doc = "Field `LSTIMER1_RST` reader - reg_lstimer1_rst."]
-pub struct LSTIMER1_RST_R(crate::FieldReader<bool, bool>);
+pub struct LSTIMER1_RST_R(crate::FieldReader<bool>);
 impl LSTIMER1_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl LSTIMER1_RST_R {
     }
 }
 impl core::ops::Deref for LSTIMER1_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> LSTIMER1_RST_W<'a> {
     }
 }
 #[doc = "Field `TICK_SEL_LSTIMER1` reader - reg_tick_sel_lstimer1."]
-pub struct TICK_SEL_LSTIMER1_R(crate::FieldReader<bool, bool>);
+pub struct TICK_SEL_LSTIMER1_R(crate::FieldReader<bool>);
 impl TICK_SEL_LSTIMER1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl TICK_SEL_LSTIMER1_R {
     }
 }
 impl core::ops::Deref for TICK_SEL_LSTIMER1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -286,25 +286,16 @@ impl W {
         self
     }
 }
-#[doc = "LEDC_LSTIMER1_CONF.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lstimer1_conf]
-(index.html) module"]
+#[doc = "LEDC_LSTIMER1_CONF.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lstimer1_conf](index.html) module"]
 pub struct LSTIMER1_CONF_SPEC;
 impl crate::RegisterSpec for LSTIMER1_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lstimer1_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lstimer1_conf::R](R) reader structure"]
 impl crate::Readable for LSTIMER1_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lstimer1_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lstimer1_conf::W](W) writer structure"]
 impl crate::Writable for LSTIMER1_CONF_SPEC {
     type Writer = W;
 }

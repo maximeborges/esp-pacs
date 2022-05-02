@@ -35,7 +35,7 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP` reader - backup_bus_pms_constrain_usb_wrap"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI` reader - backup_bus_pms_constrain_crypto_peri"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA` reader - backup_bus_pms_constrain_crypto_dma"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_ADC` reader - backup_bus_pms_constrain_apb_adc"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT_PWR` reader - backup_bus_pms_constrain_bt_pwr"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE` reader - backup_bus_pms_constrain_usb_device"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -268,25 +268,16 @@ impl W {
         self
     }
 }
-#[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_4_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_4]
-(index.html) module"]
+#[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_4_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_4](index.html) module"]
 pub struct BACKUP_BUS_PMS_CONSTRAIN_4_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [backup_bus_pms_constrain_4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [backup_bus_pms_constrain_4::R](R) reader structure"]
 impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
 }

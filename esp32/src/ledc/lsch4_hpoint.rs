@@ -34,10 +34,8 @@ impl From<crate::W<LSCH4_HPOINT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `HPOINT_LSCH4` reader - The output value changes to high when lstimerx(x=\\[0 3\\]
-) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]
-"]
-pub struct HPOINT_LSCH4_R(crate::FieldReader<u32, u32>);
+#[doc = "Field `HPOINT_LSCH4` reader - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
+pub struct HPOINT_LSCH4_R(crate::FieldReader<u32>);
 impl HPOINT_LSCH4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -45,15 +43,13 @@ impl HPOINT_LSCH4_R {
     }
 }
 impl core::ops::Deref for HPOINT_LSCH4_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `HPOINT_LSCH4` writer - The output value changes to high when lstimerx(x=\\[0 3\\]
-) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]
-"]
+#[doc = "Field `HPOINT_LSCH4` writer - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
 pub struct HPOINT_LSCH4_W<'a> {
     w: &'a mut W,
 }
@@ -66,18 +62,14 @@ impl<'a> HPOINT_LSCH4_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]
-) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]
-"]
+    #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
     #[inline(always)]
     pub fn hpoint_lsch4(&self) -> HPOINT_LSCH4_R {
         HPOINT_LSCH4_R::new((self.bits & 0x000f_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]
-) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]
-"]
+    #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
     #[inline(always)]
     pub fn hpoint_lsch4(&mut self) -> HPOINT_LSCH4_W {
         HPOINT_LSCH4_W { w: self }
@@ -89,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch4_hpoint]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch4_hpoint](index.html) module"]
 pub struct LSCH4_HPOINT_SPEC;
 impl crate::RegisterSpec for LSCH4_HPOINT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lsch4_hpoint::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lsch4_hpoint::R](R) reader structure"]
 impl crate::Readable for LSCH4_HPOINT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lsch4_hpoint::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lsch4_hpoint::W](W) writer structure"]
 impl crate::Writable for LSCH4_HPOINT_SPEC {
     type Writer = W;
 }

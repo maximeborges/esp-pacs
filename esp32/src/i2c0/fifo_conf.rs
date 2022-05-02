@@ -35,7 +35,7 @@ impl From<crate::W<FIFO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - "]
-pub struct RXFIFO_FULL_THRHD_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_FULL_THRHD_R(crate::FieldReader<u8>);
 impl RXFIFO_FULL_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RXFIFO_FULL_THRHD_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_THRHD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RXFIFO_FULL_THRHD_W<'a> {
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - Config txfifo empty threhd value when using apb fifo access"]
-pub struct TXFIFO_EMPTY_THRHD_R(crate::FieldReader<u8, u8>);
+pub struct TXFIFO_EMPTY_THRHD_R(crate::FieldReader<u8>);
 impl TXFIFO_EMPTY_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TXFIFO_EMPTY_THRHD_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_THRHD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TXFIFO_EMPTY_THRHD_W<'a> {
     }
 }
 #[doc = "Field `NONFIFO_EN` reader - Set this bit to enble apb nonfifo access."]
-pub struct NONFIFO_EN_R(crate::FieldReader<bool, bool>);
+pub struct NONFIFO_EN_R(crate::FieldReader<bool>);
 impl NONFIFO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl NONFIFO_EN_R {
     }
 }
 impl core::ops::Deref for NONFIFO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> NONFIFO_EN_W<'a> {
     }
 }
 #[doc = "Field `FIFO_ADDR_CFG_EN` reader - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
-pub struct FIFO_ADDR_CFG_EN_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_ADDR_CFG_EN_R(crate::FieldReader<bool>);
 impl FIFO_ADDR_CFG_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl FIFO_ADDR_CFG_EN_R {
     }
 }
 impl core::ops::Deref for FIFO_ADDR_CFG_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> FIFO_ADDR_CFG_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_FIFO_RST` reader - Set this bit to reset rx fifo when using apb fifo access."]
-pub struct RX_FIFO_RST_R(crate::FieldReader<bool, bool>);
+pub struct RX_FIFO_RST_R(crate::FieldReader<bool>);
 impl RX_FIFO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl RX_FIFO_RST_R {
     }
 }
 impl core::ops::Deref for RX_FIFO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> RX_FIFO_RST_W<'a> {
     }
 }
 #[doc = "Field `TX_FIFO_RST` reader - Set this bit to reset tx fifo when using apb fifo access."]
-pub struct TX_FIFO_RST_R(crate::FieldReader<bool, bool>);
+pub struct TX_FIFO_RST_R(crate::FieldReader<bool>);
 impl TX_FIFO_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl TX_FIFO_RST_R {
     }
 }
 impl core::ops::Deref for TX_FIFO_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> TX_FIFO_RST_W<'a> {
     }
 }
 #[doc = "Field `NONFIFO_RX_THRES` reader - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
-pub struct NONFIFO_RX_THRES_R(crate::FieldReader<u8, u8>);
+pub struct NONFIFO_RX_THRES_R(crate::FieldReader<u8>);
 impl NONFIFO_RX_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -245,7 +245,7 @@ impl NONFIFO_RX_THRES_R {
     }
 }
 impl core::ops::Deref for NONFIFO_RX_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> NONFIFO_RX_THRES_W<'a> {
     }
 }
 #[doc = "Field `NONFIFO_TX_THRES` reader - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
-pub struct NONFIFO_TX_THRES_R(crate::FieldReader<u8, u8>);
+pub struct NONFIFO_TX_THRES_R(crate::FieldReader<u8>);
 impl NONFIFO_TX_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -272,7 +272,7 @@ impl NONFIFO_TX_THRES_R {
     }
 }
 impl core::ops::Deref for NONFIFO_TX_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -380,25 +380,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_conf](index.html) module"]
 pub struct FIFO_CONF_SPEC;
 impl crate::RegisterSpec for FIFO_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fifo_conf::R](R) reader structure"]
 impl crate::Readable for FIFO_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [fifo_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
 }

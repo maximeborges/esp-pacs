@@ -35,7 +35,7 @@ impl From<crate::W<BROWN_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_MEM_PID_CONF` reader - "]
-pub struct RTC_MEM_PID_CONF_R(crate::FieldReader<u8, u8>);
+pub struct RTC_MEM_PID_CONF_R(crate::FieldReader<u8>);
 impl RTC_MEM_PID_CONF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RTC_MEM_PID_CONF_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_PID_CONF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RTC_MEM_PID_CONF_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_START` reader - "]
-pub struct RTC_MEM_CRC_START_R(crate::FieldReader<bool, bool>);
+pub struct RTC_MEM_CRC_START_R(crate::FieldReader<bool>);
 impl RTC_MEM_CRC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl RTC_MEM_CRC_START_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> RTC_MEM_CRC_START_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - "]
-pub struct RTC_MEM_CRC_ADDR_R(crate::FieldReader<u16, u16>);
+pub struct RTC_MEM_CRC_ADDR_R(crate::FieldReader<u16>);
 impl RTC_MEM_CRC_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -107,7 +107,7 @@ impl RTC_MEM_CRC_ADDR_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_ADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> RTC_MEM_CRC_ADDR_W<'a> {
     }
 }
 #[doc = "Field `CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
-pub struct CLOSE_FLASH_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CLOSE_FLASH_ENA_R(crate::FieldReader<bool>);
 impl CLOSE_FLASH_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl CLOSE_FLASH_ENA_R {
     }
 }
 impl core::ops::Deref for CLOSE_FLASH_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> CLOSE_FLASH_ENA_W<'a> {
     }
 }
 #[doc = "Field `PD_RF_ENA` reader - enable power down RF when brown out happens"]
-pub struct PD_RF_ENA_R(crate::FieldReader<bool, bool>);
+pub struct PD_RF_ENA_R(crate::FieldReader<bool>);
 impl PD_RF_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl PD_RF_ENA_R {
     }
 }
 impl core::ops::Deref for PD_RF_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> PD_RF_ENA_W<'a> {
     }
 }
 #[doc = "Field `RST_WAIT` reader - brown out reset wait cycles"]
-pub struct RST_WAIT_R(crate::FieldReader<u16, u16>);
+pub struct RST_WAIT_R(crate::FieldReader<u16>);
 impl RST_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -208,7 +208,7 @@ impl RST_WAIT_R {
     }
 }
 impl core::ops::Deref for RST_WAIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> RST_WAIT_W<'a> {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - "]
-pub struct RTC_MEM_CRC_LEN_R(crate::FieldReader<u16, u16>);
+pub struct RTC_MEM_CRC_LEN_R(crate::FieldReader<u16>);
 impl RTC_MEM_CRC_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -235,7 +235,7 @@ impl RTC_MEM_CRC_LEN_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_LEN_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -254,7 +254,7 @@ impl<'a> RTC_MEM_CRC_LEN_W<'a> {
     }
 }
 #[doc = "Field `RST_ENA` reader - enable brown out reset"]
-pub struct RST_ENA_R(crate::FieldReader<bool, bool>);
+pub struct RST_ENA_R(crate::FieldReader<bool>);
 impl RST_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,7 +262,7 @@ impl RST_ENA_R {
     }
 }
 impl core::ops::Deref for RST_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> RST_ENA_W<'a> {
     }
 }
 #[doc = "Field `DBROWN_OUT_THRES` reader - brown out threshold"]
-pub struct DBROWN_OUT_THRES_R(crate::FieldReader<u8, u8>);
+pub struct DBROWN_OUT_THRES_R(crate::FieldReader<u8>);
 impl DBROWN_OUT_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -299,7 +299,7 @@ impl DBROWN_OUT_THRES_R {
     }
 }
 impl core::ops::Deref for DBROWN_OUT_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,7 +318,7 @@ impl<'a> DBROWN_OUT_THRES_W<'a> {
     }
 }
 #[doc = "Field `ENA` reader - enable brown out"]
-pub struct ENA_R(crate::FieldReader<bool, bool>);
+pub struct ENA_R(crate::FieldReader<bool>);
 impl ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -326,7 +326,7 @@ impl ENA_R {
     }
 }
 impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -355,7 +355,7 @@ impl<'a> ENA_W<'a> {
     }
 }
 #[doc = "Field `DET` reader - brown out detect"]
-pub struct DET_R(crate::FieldReader<bool, bool>);
+pub struct DET_R(crate::FieldReader<bool>);
 impl DET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -363,14 +363,14 @@ impl DET_R {
     }
 }
 impl core::ops::Deref for DET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - "]
-pub struct RTC_MEM_CRC_FINISH_R(crate::FieldReader<bool, bool>);
+pub struct RTC_MEM_CRC_FINISH_R(crate::FieldReader<bool>);
 impl RTC_MEM_CRC_FINISH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -378,7 +378,7 @@ impl RTC_MEM_CRC_FINISH_R {
     }
 }
 impl core::ops::Deref for RTC_MEM_CRC_FINISH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -531,25 +531,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [brown_out]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [brown_out](index.html) module"]
 pub struct BROWN_OUT_SPEC;
 impl crate::RegisterSpec for BROWN_OUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [brown_out::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [brown_out::R](R) reader structure"]
 impl crate::Readable for BROWN_OUT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [brown_out::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [brown_out::W](W) writer structure"]
 impl crate::Writable for BROWN_OUT_SPEC {
     type Writer = W;
 }

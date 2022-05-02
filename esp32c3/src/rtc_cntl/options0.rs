@@ -34,10 +34,8 @@ impl From<crate::W<OPTIONS0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C0` reader - {reg_sw_stall_appcpu_c1\\[5:0\\]
-, reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
-pub struct SW_STALL_APPCPU_C0_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `SW_STALL_APPCPU_C0` reader - {reg_sw_stall_appcpu_c1\\[5:0\\], reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+pub struct SW_STALL_APPCPU_C0_R(crate::FieldReader<u8>);
 impl SW_STALL_APPCPU_C0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -45,15 +43,13 @@ impl SW_STALL_APPCPU_C0_R {
     }
 }
 impl core::ops::Deref for SW_STALL_APPCPU_C0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C0` writer - {reg_sw_stall_appcpu_c1\\[5:0\\]
-, reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+#[doc = "Field `SW_STALL_APPCPU_C0` writer - {reg_sw_stall_appcpu_c1\\[5:0\\], reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
 pub struct SW_STALL_APPCPU_C0_W<'a> {
     w: &'a mut W,
 }
@@ -65,10 +61,8 @@ impl<'a> SW_STALL_APPCPU_C0_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C0` reader - {reg_sw_stall_procpu_c1\\[5:0\\]
-, reg_sw_stall_procpu_c0\\[1:0\\]
-} == 0x86 will stall PRO CPU"]
-pub struct SW_STALL_PROCPU_C0_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `SW_STALL_PROCPU_C0` reader - {reg_sw_stall_procpu_c1\\[5:0\\], reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
+pub struct SW_STALL_PROCPU_C0_R(crate::FieldReader<u8>);
 impl SW_STALL_PROCPU_C0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -76,15 +70,13 @@ impl SW_STALL_PROCPU_C0_R {
     }
 }
 impl core::ops::Deref for SW_STALL_PROCPU_C0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SW_STALL_PROCPU_C0` writer - {reg_sw_stall_procpu_c1\\[5:0\\]
-, reg_sw_stall_procpu_c0\\[1:0\\]
-} == 0x86 will stall PRO CPU"]
+#[doc = "Field `SW_STALL_PROCPU_C0` writer - {reg_sw_stall_procpu_c1\\[5:0\\], reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
 pub struct SW_STALL_PROCPU_C0_W<'a> {
     w: &'a mut W,
 }
@@ -141,7 +133,7 @@ impl<'a> SW_PROCPU_RST_W<'a> {
     }
 }
 #[doc = "Field `BB_I2C_FORCE_PD` reader - BB_I2C force power down"]
-pub struct BB_I2C_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct BB_I2C_FORCE_PD_R(crate::FieldReader<bool>);
 impl BB_I2C_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -149,7 +141,7 @@ impl BB_I2C_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for BB_I2C_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -178,7 +170,7 @@ impl<'a> BB_I2C_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `BB_I2C_FORCE_PU` reader - BB_I2C force power up"]
-pub struct BB_I2C_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct BB_I2C_FORCE_PU_R(crate::FieldReader<bool>);
 impl BB_I2C_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -186,7 +178,7 @@ impl BB_I2C_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for BB_I2C_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -215,7 +207,7 @@ impl<'a> BB_I2C_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `BBPLL_I2C_FORCE_PD` reader - BB_PLL _I2C force power down"]
-pub struct BBPLL_I2C_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct BBPLL_I2C_FORCE_PD_R(crate::FieldReader<bool>);
 impl BBPLL_I2C_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -223,7 +215,7 @@ impl BBPLL_I2C_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for BBPLL_I2C_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -252,7 +244,7 @@ impl<'a> BBPLL_I2C_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `BBPLL_I2C_FORCE_PU` reader - BB_PLL_I2C force power up"]
-pub struct BBPLL_I2C_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct BBPLL_I2C_FORCE_PU_R(crate::FieldReader<bool>);
 impl BBPLL_I2C_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -260,7 +252,7 @@ impl BBPLL_I2C_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for BBPLL_I2C_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -289,7 +281,7 @@ impl<'a> BBPLL_I2C_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `BBPLL_FORCE_PD` reader - BB_PLL force power down"]
-pub struct BBPLL_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct BBPLL_FORCE_PD_R(crate::FieldReader<bool>);
 impl BBPLL_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -297,7 +289,7 @@ impl BBPLL_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for BBPLL_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,7 +318,7 @@ impl<'a> BBPLL_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `BBPLL_FORCE_PU` reader - BB_PLL force power up"]
-pub struct BBPLL_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct BBPLL_FORCE_PU_R(crate::FieldReader<bool>);
 impl BBPLL_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -334,7 +326,7 @@ impl BBPLL_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for BBPLL_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -363,7 +355,7 @@ impl<'a> BBPLL_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `XTL_FORCE_PD` reader - crystall force power down"]
-pub struct XTL_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct XTL_FORCE_PD_R(crate::FieldReader<bool>);
 impl XTL_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -371,7 +363,7 @@ impl XTL_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for XTL_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -400,7 +392,7 @@ impl<'a> XTL_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `XTL_FORCE_PU` reader - crystall force power up"]
-pub struct XTL_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct XTL_FORCE_PU_R(crate::FieldReader<bool>);
 impl XTL_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -408,7 +400,7 @@ impl XTL_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for XTL_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -437,7 +429,7 @@ impl<'a> XTL_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `XTL_EN_WAIT` reader - wait bias_sleep and current source wakeup"]
-pub struct XTL_EN_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct XTL_EN_WAIT_R(crate::FieldReader<u8>);
 impl XTL_EN_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -445,7 +437,7 @@ impl XTL_EN_WAIT_R {
     }
 }
 impl core::ops::Deref for XTL_EN_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -464,7 +456,7 @@ impl<'a> XTL_EN_WAIT_W<'a> {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_SEL` reader - analog configure"]
-pub struct XTL_EXT_CTR_SEL_R(crate::FieldReader<u8, u8>);
+pub struct XTL_EXT_CTR_SEL_R(crate::FieldReader<u8>);
 impl XTL_EXT_CTR_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -472,7 +464,7 @@ impl XTL_EXT_CTR_SEL_R {
     }
 }
 impl core::ops::Deref for XTL_EXT_CTR_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -491,7 +483,7 @@ impl<'a> XTL_EXT_CTR_SEL_W<'a> {
     }
 }
 #[doc = "Field `XTL_FORCE_ISO` reader - analog configure"]
-pub struct XTL_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct XTL_FORCE_ISO_R(crate::FieldReader<bool>);
 impl XTL_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -499,7 +491,7 @@ impl XTL_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for XTL_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -528,7 +520,7 @@ impl<'a> XTL_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `PLL_FORCE_ISO` reader - analog configure"]
-pub struct PLL_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct PLL_FORCE_ISO_R(crate::FieldReader<bool>);
 impl PLL_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -536,7 +528,7 @@ impl PLL_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for PLL_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -565,7 +557,7 @@ impl<'a> PLL_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `ANALOG_FORCE_ISO` reader - analog configure"]
-pub struct ANALOG_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct ANALOG_FORCE_ISO_R(crate::FieldReader<bool>);
 impl ANALOG_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -573,7 +565,7 @@ impl ANALOG_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for ANALOG_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -602,7 +594,7 @@ impl<'a> ANALOG_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `XTL_FORCE_NOISO` reader - analog configure"]
-pub struct XTL_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct XTL_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl XTL_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -610,7 +602,7 @@ impl XTL_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for XTL_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -639,7 +631,7 @@ impl<'a> XTL_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `PLL_FORCE_NOISO` reader - analog configure"]
-pub struct PLL_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct PLL_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl PLL_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -647,7 +639,7 @@ impl PLL_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for PLL_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -676,7 +668,7 @@ impl<'a> PLL_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `ANALOG_FORCE_NOISO` reader - analog configure"]
-pub struct ANALOG_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct ANALOG_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl ANALOG_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -684,7 +676,7 @@ impl ANALOG_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for ANALOG_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -713,7 +705,7 @@ impl<'a> ANALOG_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_RST` reader - digital wrap force reset in deep sleep"]
-pub struct DG_WRAP_FORCE_RST_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_RST_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -721,7 +713,7 @@ impl DG_WRAP_FORCE_RST_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -750,7 +742,7 @@ impl<'a> DG_WRAP_FORCE_RST_W<'a> {
     }
 }
 #[doc = "Field `DG_WRAP_FORCE_NORST` reader - digital core force no reset in deep sleep"]
-pub struct DG_WRAP_FORCE_NORST_R(crate::FieldReader<bool, bool>);
+pub struct DG_WRAP_FORCE_NORST_R(crate::FieldReader<bool>);
 impl DG_WRAP_FORCE_NORST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -758,7 +750,7 @@ impl DG_WRAP_FORCE_NORST_R {
     }
 }
 impl core::ops::Deref for DG_WRAP_FORCE_NORST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -809,16 +801,12 @@ impl<'a> SW_SYS_RST_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:1 - {reg_sw_stall_appcpu_c1\\[5:0\\]
-, reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 0:1 - {reg_sw_stall_appcpu_c1\\[5:0\\], reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c0(&self) -> SW_STALL_APPCPU_C0_R {
         SW_STALL_APPCPU_C0_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bits 2:3 - {reg_sw_stall_procpu_c1\\[5:0\\]
-, reg_sw_stall_procpu_c0\\[1:0\\]
-} == 0x86 will stall PRO CPU"]
+    #[doc = "Bits 2:3 - {reg_sw_stall_procpu_c1\\[5:0\\], reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
     #[inline(always)]
     pub fn sw_stall_procpu_c0(&self) -> SW_STALL_PROCPU_C0_R {
         SW_STALL_PROCPU_C0_R::new(((self.bits >> 2) & 3) as u8)
@@ -915,16 +903,12 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:1 - {reg_sw_stall_appcpu_c1\\[5:0\\]
-, reg_sw_stall_appcpu_c0\\[1:0\\]
-} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 0:1 - {reg_sw_stall_appcpu_c1\\[5:0\\], reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c0(&mut self) -> SW_STALL_APPCPU_C0_W {
         SW_STALL_APPCPU_C0_W { w: self }
     }
-    #[doc = "Bits 2:3 - {reg_sw_stall_procpu_c1\\[5:0\\]
-, reg_sw_stall_procpu_c0\\[1:0\\]
-} == 0x86 will stall PRO CPU"]
+    #[doc = "Bits 2:3 - {reg_sw_stall_procpu_c1\\[5:0\\], reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
     #[inline(always)]
     pub fn sw_stall_procpu_c0(&mut self) -> SW_STALL_PROCPU_C0_W {
         SW_STALL_PROCPU_C0_W { w: self }
@@ -1041,25 +1025,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [options0]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [options0](index.html) module"]
 pub struct OPTIONS0_SPEC;
 impl crate::RegisterSpec for OPTIONS0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [options0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [options0::R](R) reader structure"]
 impl crate::Readable for OPTIONS0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [options0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [options0::W](W) writer structure"]
 impl crate::Writable for OPTIONS0_SPEC {
     type Writer = W;
 }

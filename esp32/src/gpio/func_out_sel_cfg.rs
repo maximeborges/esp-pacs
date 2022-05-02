@@ -35,7 +35,7 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_SEL` reader - select one of the 256 output to 4 GPIO"]
-pub struct OUT_SEL_R(crate::FieldReader<u16, u16>);
+pub struct OUT_SEL_R(crate::FieldReader<u16>);
 impl OUT_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl OUT_SEL_R {
     }
 }
 impl core::ops::Deref for OUT_SEL_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OUT_SEL_W<'a> {
     }
 }
 #[doc = "Field `INV_SEL` reader - invert the output value if you want to revert the output value setting the value to 1"]
-pub struct INV_SEL_R(crate::FieldReader<bool, bool>);
+pub struct INV_SEL_R(crate::FieldReader<bool>);
 impl INV_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl INV_SEL_R {
     }
 }
 impl core::ops::Deref for INV_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> INV_SEL_W<'a> {
     }
 }
 #[doc = "Field `OEN_SEL` reader - weather using the logical oen signal or not using the value setting by the register"]
-pub struct OEN_SEL_R(crate::FieldReader<bool, bool>);
+pub struct OEN_SEL_R(crate::FieldReader<bool>);
 impl OEN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl OEN_SEL_R {
     }
 }
 impl core::ops::Deref for OEN_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> OEN_SEL_W<'a> {
     }
 }
 #[doc = "Field `OEN_INV_SEL` reader - invert the output enable value if you want to revert the output enable value setting the value to 1"]
-pub struct OEN_INV_SEL_R(crate::FieldReader<bool, bool>);
+pub struct OEN_INV_SEL_R(crate::FieldReader<bool>);
 impl OEN_INV_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl OEN_INV_SEL_R {
     }
 }
 impl core::ops::Deref for OEN_INV_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -222,25 +222,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [func_out_sel_cfg]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [func_out_sel_cfg](index.html) module"]
 pub struct FUNC_OUT_SEL_CFG_SPEC;
 impl crate::RegisterSpec for FUNC_OUT_SEL_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [func_out_sel_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [func_out_sel_cfg::R](R) reader structure"]
 impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [func_out_sel_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [func_out_sel_cfg::W](W) writer structure"]
 impl crate::Writable for FUNC_OUT_SEL_CFG_SPEC {
     type Writer = W;
 }

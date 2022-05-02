@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "HMAC parameter configuration register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_purpose]
-(index.html) module"]
+#[doc = "HMAC parameter configuration register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_purpose](index.html) module"]
 pub struct SET_PARA_PURPOSE_SPEC;
 impl crate::RegisterSpec for SET_PARA_PURPOSE_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_para_purpose::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_para_purpose::W](W) writer structure"]
 impl crate::Writable for SET_PARA_PURPOSE_SPEC {
     type Writer = W;
 }

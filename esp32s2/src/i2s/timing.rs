@@ -35,7 +35,7 @@ impl From<crate::W<TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BCK_IN_DELAY` reader - Number of delay cycles for BCK signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct TX_BCK_IN_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct TX_BCK_IN_DELAY_R(crate::FieldReader<u8>);
 impl TX_BCK_IN_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TX_BCK_IN_DELAY_R {
     }
 }
 impl core::ops::Deref for TX_BCK_IN_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TX_BCK_IN_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_WS_IN_DELAY` reader - Number of delay cycles for WS signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct TX_WS_IN_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct TX_WS_IN_DELAY_R(crate::FieldReader<u8>);
 impl TX_WS_IN_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TX_WS_IN_DELAY_R {
     }
 }
 impl core::ops::Deref for TX_WS_IN_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TX_WS_IN_DELAY_W<'a> {
     }
 }
 #[doc = "Field `RX_BCK_IN_DELAY` reader - Number of delay cycles for BCK signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct RX_BCK_IN_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct RX_BCK_IN_DELAY_R(crate::FieldReader<u8>);
 impl RX_BCK_IN_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl RX_BCK_IN_DELAY_R {
     }
 }
 impl core::ops::Deref for RX_BCK_IN_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> RX_BCK_IN_DELAY_W<'a> {
     }
 }
 #[doc = "Field `RX_WS_IN_DELAY` reader - Number of delay cycles for WS signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct RX_WS_IN_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct RX_WS_IN_DELAY_R(crate::FieldReader<u8>);
 impl RX_WS_IN_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl RX_WS_IN_DELAY_R {
     }
 }
 impl core::ops::Deref for RX_WS_IN_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> RX_WS_IN_DELAY_W<'a> {
     }
 }
 #[doc = "Field `RX_SD_IN_DELAY` reader - Number of delay cycles for SD signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct RX_SD_IN_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct RX_SD_IN_DELAY_R(crate::FieldReader<u8>);
 impl RX_SD_IN_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl RX_SD_IN_DELAY_R {
     }
 }
 impl core::ops::Deref for RX_SD_IN_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> RX_SD_IN_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_BCK_OUT_DELAY` reader - Number of delay cycles for BCK signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
-pub struct TX_BCK_OUT_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct TX_BCK_OUT_DELAY_R(crate::FieldReader<u8>);
 impl TX_BCK_OUT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl TX_BCK_OUT_DELAY_R {
     }
 }
 impl core::ops::Deref for TX_BCK_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> TX_BCK_OUT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_WS_OUT_DELAY` reader - Number of delay cycles for WS signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
-pub struct TX_WS_OUT_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct TX_WS_OUT_DELAY_R(crate::FieldReader<u8>);
 impl TX_WS_OUT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl TX_WS_OUT_DELAY_R {
     }
 }
 impl core::ops::Deref for TX_WS_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> TX_WS_OUT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_SD_OUT_DELAY` reader - Number of delay cycles for SD signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
-pub struct TX_SD_OUT_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct TX_SD_OUT_DELAY_R(crate::FieldReader<u8>);
 impl TX_SD_OUT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl TX_SD_OUT_DELAY_R {
     }
 }
 impl core::ops::Deref for TX_SD_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> TX_SD_OUT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `RX_WS_OUT_DELAY` reader - Number of delay cycles for WS signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
-pub struct RX_WS_OUT_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct RX_WS_OUT_DELAY_R(crate::FieldReader<u8>);
 impl RX_WS_OUT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl RX_WS_OUT_DELAY_R {
     }
 }
 impl core::ops::Deref for RX_WS_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> RX_WS_OUT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `RX_BCK_OUT_DELAY` reader - Number of delay cycles for BCK signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
-pub struct RX_BCK_OUT_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct RX_BCK_OUT_DELAY_R(crate::FieldReader<u8>);
 impl RX_BCK_OUT_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl RX_BCK_OUT_DELAY_R {
     }
 }
 impl core::ops::Deref for RX_BCK_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> RX_BCK_OUT_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_DSYNC_SW` reader - Set this bit to synchronize signals into the transmitter by two flip-flop synchronizer. 0: the signals will be firstly clocked by rising clock edge , then clocked by falling clock edge. 1: the signals will be firstly clocked by falling clock edge, then clocked by rising clock edge."]
-pub struct TX_DSYNC_SW_R(crate::FieldReader<bool, bool>);
+pub struct TX_DSYNC_SW_R(crate::FieldReader<bool>);
 impl TX_DSYNC_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -313,7 +313,7 @@ impl TX_DSYNC_SW_R {
     }
 }
 impl core::ops::Deref for TX_DSYNC_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -342,7 +342,7 @@ impl<'a> TX_DSYNC_SW_W<'a> {
     }
 }
 #[doc = "Field `RX_DSYNC_SW` reader - Set this bit to synchronize signals into the receiver by two flip-flop synchronizer. 0: the signals will be clocked by rising clock edge firstly, then clocked by falling clock edge. 1: the signals will be clocked by falling clock edge firstly, then clocked by rising clock edge."]
-pub struct RX_DSYNC_SW_R(crate::FieldReader<bool, bool>);
+pub struct RX_DSYNC_SW_R(crate::FieldReader<bool>);
 impl RX_DSYNC_SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -350,7 +350,7 @@ impl RX_DSYNC_SW_R {
     }
 }
 impl core::ops::Deref for RX_DSYNC_SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -379,7 +379,7 @@ impl<'a> RX_DSYNC_SW_W<'a> {
     }
 }
 #[doc = "Field `DATA_ENABLE_DELAY` reader - Number of delay cycles for data valid flag based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
-pub struct DATA_ENABLE_DELAY_R(crate::FieldReader<u8, u8>);
+pub struct DATA_ENABLE_DELAY_R(crate::FieldReader<u8>);
 impl DATA_ENABLE_DELAY_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -387,7 +387,7 @@ impl DATA_ENABLE_DELAY_R {
     }
 }
 impl core::ops::Deref for DATA_ENABLE_DELAY_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -406,7 +406,7 @@ impl<'a> DATA_ENABLE_DELAY_W<'a> {
     }
 }
 #[doc = "Field `TX_BCK_IN_INV` reader - Set this bit to invert BCK signal input to the slave transmitter."]
-pub struct TX_BCK_IN_INV_R(crate::FieldReader<bool, bool>);
+pub struct TX_BCK_IN_INV_R(crate::FieldReader<bool>);
 impl TX_BCK_IN_INV_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -414,7 +414,7 @@ impl TX_BCK_IN_INV_R {
     }
 }
 impl core::ops::Deref for TX_BCK_IN_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -592,25 +592,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S timing register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timing]
-(index.html) module"]
+#[doc = "I2S timing register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timing](index.html) module"]
 pub struct TIMING_SPEC;
 impl crate::RegisterSpec for TIMING_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timing::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timing::R](R) reader structure"]
 impl crate::Readable for TIMING_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timing::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timing::W](W) writer structure"]
 impl crate::Writable for TIMING_SPEC {
     type Writer = W;
 }

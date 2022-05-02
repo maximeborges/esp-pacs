@@ -35,7 +35,7 @@ impl From<crate::W<TAG_FO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_TAG_FORCE_ON` reader - "]
-pub struct PRO_CACHE_TAG_FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct PRO_CACHE_TAG_FORCE_ON_R(crate::FieldReader<bool>);
 impl PRO_CACHE_TAG_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_CACHE_TAG_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for PRO_CACHE_TAG_FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_CACHE_TAG_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `PRO_CACHE_TAG_PD` reader - "]
-pub struct PRO_CACHE_TAG_PD_R(crate::FieldReader<bool, bool>);
+pub struct PRO_CACHE_TAG_PD_R(crate::FieldReader<bool>);
 impl PRO_CACHE_TAG_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRO_CACHE_TAG_PD_R {
     }
 }
 impl core::ops::Deref for PRO_CACHE_TAG_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PRO_CACHE_TAG_PD_W<'a> {
     }
 }
 #[doc = "Field `APP_CACHE_TAG_FORCE_ON` reader - "]
-pub struct APP_CACHE_TAG_FORCE_ON_R(crate::FieldReader<bool, bool>);
+pub struct APP_CACHE_TAG_FORCE_ON_R(crate::FieldReader<bool>);
 impl APP_CACHE_TAG_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl APP_CACHE_TAG_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for APP_CACHE_TAG_FORCE_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> APP_CACHE_TAG_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `APP_CACHE_TAG_PD` reader - "]
-pub struct APP_CACHE_TAG_PD_R(crate::FieldReader<bool, bool>);
+pub struct APP_CACHE_TAG_PD_R(crate::FieldReader<bool>);
 impl APP_CACHE_TAG_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl APP_CACHE_TAG_PD_R {
     }
 }
 impl core::ops::Deref for APP_CACHE_TAG_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tag_fo_ctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tag_fo_ctrl](index.html) module"]
 pub struct TAG_FO_CTRL_SPEC;
 impl crate::RegisterSpec for TAG_FO_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tag_fo_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tag_fo_ctrl::R](R) reader structure"]
 impl crate::Readable for TAG_FO_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tag_fo_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tag_fo_ctrl::W](W) writer structure"]
 impl crate::Writable for TAG_FO_CTRL_SPEC {
     type Writer = W;
 }

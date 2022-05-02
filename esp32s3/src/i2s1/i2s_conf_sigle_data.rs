@@ -35,7 +35,7 @@ impl From<crate::W<I2S_CONF_SIGLE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_SINGLE_DATA` reader - The configured constant channel data to be sent out."]
-pub struct I2S_SINGLE_DATA_R(crate::FieldReader<u32, u32>);
+pub struct I2S_SINGLE_DATA_R(crate::FieldReader<u32>);
 impl I2S_SINGLE_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl I2S_SINGLE_DATA_R {
     }
 }
 impl core::ops::Deref for I2S_SINGLE_DATA_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S signal data register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_conf_sigle_data]
-(index.html) module"]
+#[doc = "I2S signal data register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2s_conf_sigle_data](index.html) module"]
 pub struct I2S_CONF_SIGLE_DATA_SPEC;
 impl crate::RegisterSpec for I2S_CONF_SIGLE_DATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [i2s_conf_sigle_data::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [i2s_conf_sigle_data::R](R) reader structure"]
 impl crate::Readable for I2S_CONF_SIGLE_DATA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [i2s_conf_sigle_data::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [i2s_conf_sigle_data::W](W) writer structure"]
 impl crate::Writable for I2S_CONF_SIGLE_DATA_SPEC {
     type Writer = W;
 }

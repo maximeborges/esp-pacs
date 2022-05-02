@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_TAG_ACCESS_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_I_TAG_RD_ACS` reader - Set 1 to enable Icache read access tag memory."]
-pub struct PRO_I_TAG_RD_ACS_R(crate::FieldReader<bool, bool>);
+pub struct PRO_I_TAG_RD_ACS_R(crate::FieldReader<bool>);
 impl PRO_I_TAG_RD_ACS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PRO_I_TAG_RD_ACS_R {
     }
 }
 impl core::ops::Deref for PRO_I_TAG_RD_ACS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PRO_I_TAG_RD_ACS_W<'a> {
     }
 }
 #[doc = "Field `PRO_I_TAG_WR_ACS` reader - Set 1 to enable Icache wrtie access tag memory."]
-pub struct PRO_I_TAG_WR_ACS_R(crate::FieldReader<bool, bool>);
+pub struct PRO_I_TAG_WR_ACS_R(crate::FieldReader<bool>);
 impl PRO_I_TAG_WR_ACS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRO_I_TAG_WR_ACS_R {
     }
 }
 impl core::ops::Deref for PRO_I_TAG_WR_ACS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> PRO_I_TAG_WR_ACS_W<'a> {
     }
 }
 #[doc = "Field `PRO_D_TAG_RD_ACS` reader - Set 1 to enable Dcache read access tag memory."]
-pub struct PRO_D_TAG_RD_ACS_R(crate::FieldReader<bool, bool>);
+pub struct PRO_D_TAG_RD_ACS_R(crate::FieldReader<bool>);
 impl PRO_D_TAG_RD_ACS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PRO_D_TAG_RD_ACS_R {
     }
 }
 impl core::ops::Deref for PRO_D_TAG_RD_ACS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PRO_D_TAG_RD_ACS_W<'a> {
     }
 }
 #[doc = "Field `PRO_D_TAG_WR_ACS` reader - Set 1 to enable Dcache wrtie access tag memory."]
-pub struct PRO_D_TAG_WR_ACS_R(crate::FieldReader<bool, bool>);
+pub struct PRO_D_TAG_WR_ACS_R(crate::FieldReader<bool>);
 impl PRO_D_TAG_WR_ACS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PRO_D_TAG_WR_ACS_R {
     }
 }
 impl core::ops::Deref for PRO_D_TAG_WR_ACS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "Cache tag configuration register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_access_1]
-(index.html) module"]
+#[doc = "Cache tag configuration register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_access_1](index.html) module"]
 pub struct CACHE_TAG_ACCESS_1_SPEC;
 impl crate::RegisterSpec for CACHE_TAG_ACCESS_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_tag_access_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_tag_access_1::R](R) reader structure"]
 impl crate::Readable for CACHE_TAG_ACCESS_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_tag_access_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_tag_access_1::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_ACCESS_1_SPEC {
     type Writer = W;
 }

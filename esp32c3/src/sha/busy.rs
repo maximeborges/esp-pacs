@@ -14,7 +14,7 @@ impl From<crate::R<BUSY_SPEC>> for R {
     }
 }
 #[doc = "Field `STATE` reader - Sha busy state. 1'b0: idle. 1'b1: busy."]
-pub struct STATE_R(crate::FieldReader<bool, bool>);
+pub struct STATE_R(crate::FieldReader<bool>);
 impl STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl STATE_R {
     }
 }
 impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         STATE_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Busy register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [busy]
-(index.html) module"]
+#[doc = "Busy register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [busy](index.html) module"]
 pub struct BUSY_SPEC;
 impl crate::RegisterSpec for BUSY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [busy::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [busy::R](R) reader structure"]
 impl crate::Readable for BUSY_SPEC {
     type Reader = R;
 }

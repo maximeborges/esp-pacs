@@ -35,7 +35,7 @@ impl From<crate::W<PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN0_HOLD` reader - the hold configure of rtc gpio0"]
-pub struct RTC_GPIO_PIN0_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN0_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN0_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_GPIO_PIN0_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN0_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_GPIO_PIN0_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN1_HOLD` reader - the hold configure of rtc gpio1"]
-pub struct RTC_GPIO_PIN1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN1_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RTC_GPIO_PIN1_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RTC_GPIO_PIN1_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN2_HOLD` reader - the hold configure of rtc gpio2"]
-pub struct RTC_GPIO_PIN2_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN2_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN2_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RTC_GPIO_PIN2_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN2_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RTC_GPIO_PIN2_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN3_HOLD` reader - the hold configure of rtc gpio3"]
-pub struct RTC_GPIO_PIN3_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN3_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN3_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RTC_GPIO_PIN3_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN3_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RTC_GPIO_PIN3_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN4_HOLD` reader - the hold configure of rtc gpio4"]
-pub struct RTC_GPIO_PIN4_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN4_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN4_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RTC_GPIO_PIN4_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN4_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RTC_GPIO_PIN4_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN5_HOLD` reader - the hold configure of rtc gpio5"]
-pub struct RTC_GPIO_PIN5_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN5_HOLD_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN5_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RTC_GPIO_PIN5_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN5_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -326,25 +326,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_hold]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_hold](index.html) module"]
 pub struct PAD_HOLD_SPEC;
 impl crate::RegisterSpec for PAD_HOLD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pad_hold::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pad_hold::R](R) reader structure"]
 impl crate::Readable for PAD_HOLD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pad_hold::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pad_hold::W](W) writer structure"]
 impl crate::Writable for PAD_HOLD_SPEC {
     type Writer = W;
 }

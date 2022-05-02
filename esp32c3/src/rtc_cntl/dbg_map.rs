@@ -35,7 +35,7 @@ impl From<crate::W<DBG_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN5_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN5_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN5_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN5_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_GPIO_PIN5_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN5_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_GPIO_PIN5_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN4_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN4_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN4_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN4_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RTC_GPIO_PIN4_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN4_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RTC_GPIO_PIN4_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN3_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN3_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN3_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN3_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RTC_GPIO_PIN3_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN3_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RTC_GPIO_PIN3_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN2_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN2_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN2_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN2_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RTC_GPIO_PIN2_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RTC_GPIO_PIN2_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN1_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN1_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN1_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN1_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RTC_GPIO_PIN1_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RTC_GPIO_PIN1_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN0_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN0_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct RTC_GPIO_PIN0_MUX_SEL_R(crate::FieldReader<bool>);
 impl RTC_GPIO_PIN0_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RTC_GPIO_PIN0_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN0_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RTC_GPIO_PIN0_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN5_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN5_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN5_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN5_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -265,7 +265,7 @@ impl RTC_GPIO_PIN5_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN5_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> RTC_GPIO_PIN5_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN4_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN4_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN4_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN4_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl RTC_GPIO_PIN4_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN4_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> RTC_GPIO_PIN4_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN3_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN3_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN3_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN3_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -319,7 +319,7 @@ impl RTC_GPIO_PIN3_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN3_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -338,7 +338,7 @@ impl<'a> RTC_GPIO_PIN3_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN2_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN2_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN2_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN2_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -346,7 +346,7 @@ impl RTC_GPIO_PIN2_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> RTC_GPIO_PIN2_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN1_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN1_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN1_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN1_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -373,7 +373,7 @@ impl RTC_GPIO_PIN1_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -392,7 +392,7 @@ impl<'a> RTC_GPIO_PIN1_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN0_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN0_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct RTC_GPIO_PIN0_FUN_SEL_R(crate::FieldReader<u8>);
 impl RTC_GPIO_PIN0_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -400,7 +400,7 @@ impl RTC_GPIO_PIN0_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for RTC_GPIO_PIN0_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -548,25 +548,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbg_map]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbg_map](index.html) module"]
 pub struct DBG_MAP_SPEC;
 impl crate::RegisterSpec for DBG_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dbg_map::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dbg_map::R](R) reader structure"]
 impl crate::Readable for DBG_MAP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dbg_map::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dbg_map::W](W) writer structure"]
 impl crate::Writable for DBG_MAP_SPEC {
     type Writer = W;
 }

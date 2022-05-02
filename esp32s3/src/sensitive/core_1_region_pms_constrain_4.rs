@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_REGION_PMS_CONSTRAIN_4_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_REGION_PMS_CONSTRAIN_ADDR_1` reader - Region 0 end address and Region 1 start address for core1."]
-pub struct CORE_1_REGION_PMS_CONSTRAIN_ADDR_1_R(crate::FieldReader<u32, u32>);
+pub struct CORE_1_REGION_PMS_CONSTRAIN_ADDR_1_R(crate::FieldReader<u32>);
 impl CORE_1_REGION_PMS_CONSTRAIN_ADDR_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_REGION_PMS_CONSTRAIN_ADDR_1_R {
     }
 }
 impl core::ops::Deref for CORE_1_REGION_PMS_CONSTRAIN_ADDR_1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "core1 region permission register 4.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_region_pms_constrain_4]
-(index.html) module"]
+#[doc = "core1 region permission register 4.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_region_pms_constrain_4](index.html) module"]
 pub struct CORE_1_REGION_PMS_CONSTRAIN_4_SPEC;
 impl crate::RegisterSpec for CORE_1_REGION_PMS_CONSTRAIN_4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_region_pms_constrain_4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_region_pms_constrain_4::R](R) reader structure"]
 impl crate::Readable for CORE_1_REGION_PMS_CONSTRAIN_4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_region_pms_constrain_4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_region_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for CORE_1_REGION_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
 }

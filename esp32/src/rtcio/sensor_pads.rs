@@ -35,7 +35,7 @@ impl From<crate::W<SENSOR_PADS_SPEC>> for W {
     }
 }
 #[doc = "Field `SENSE4_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE4_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_FUN_IE_R(crate::FieldReader<bool>);
 impl SENSE4_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SENSE4_FUN_IE_R {
     }
 }
 impl core::ops::Deref for SENSE4_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SENSE4_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE4_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_SLP_IE_R(crate::FieldReader<bool>);
 impl SENSE4_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SENSE4_SLP_IE_R {
     }
 }
 impl core::ops::Deref for SENSE4_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SENSE4_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE4_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_SLP_SEL_R(crate::FieldReader<bool>);
 impl SENSE4_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SENSE4_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE4_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SENSE4_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE4_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SENSE4_FUN_SEL_R(crate::FieldReader<u8>);
 impl SENSE4_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl SENSE4_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE4_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> SENSE4_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE3_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_FUN_IE_R(crate::FieldReader<bool>);
 impl SENSE3_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl SENSE3_FUN_IE_R {
     }
 }
 impl core::ops::Deref for SENSE3_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> SENSE3_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE3_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_SLP_IE_R(crate::FieldReader<bool>);
 impl SENSE3_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl SENSE3_SLP_IE_R {
     }
 }
 impl core::ops::Deref for SENSE3_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> SENSE3_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE3_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_SLP_SEL_R(crate::FieldReader<bool>);
 impl SENSE3_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl SENSE3_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE3_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> SENSE3_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE3_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SENSE3_FUN_SEL_R(crate::FieldReader<u8>);
 impl SENSE3_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -292,7 +292,7 @@ impl SENSE3_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE3_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> SENSE3_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE2_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_FUN_IE_R(crate::FieldReader<bool>);
 impl SENSE2_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl SENSE2_FUN_IE_R {
     }
 }
 impl core::ops::Deref for SENSE2_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> SENSE2_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE2_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_SLP_IE_R(crate::FieldReader<bool>);
 impl SENSE2_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl SENSE2_SLP_IE_R {
     }
 }
 impl core::ops::Deref for SENSE2_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> SENSE2_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE2_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_SLP_SEL_R(crate::FieldReader<bool>);
 impl SENSE2_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl SENSE2_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE2_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> SENSE2_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE2_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SENSE2_FUN_SEL_R(crate::FieldReader<u8>);
 impl SENSE2_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -430,7 +430,7 @@ impl SENSE2_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -449,7 +449,7 @@ impl<'a> SENSE2_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE1_FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_FUN_IE_R(crate::FieldReader<bool>);
 impl SENSE1_FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -457,7 +457,7 @@ impl SENSE1_FUN_IE_R {
     }
 }
 impl core::ops::Deref for SENSE1_FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -486,7 +486,7 @@ impl<'a> SENSE1_FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE1_SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_SLP_IE_R(crate::FieldReader<bool>);
 impl SENSE1_SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -494,7 +494,7 @@ impl SENSE1_SLP_IE_R {
     }
 }
 impl core::ops::Deref for SENSE1_SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -523,7 +523,7 @@ impl<'a> SENSE1_SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE1_SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_SLP_SEL_R(crate::FieldReader<bool>);
 impl SENSE1_SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -531,7 +531,7 @@ impl SENSE1_SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -560,7 +560,7 @@ impl<'a> SENSE1_SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE1_FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SENSE1_FUN_SEL_R(crate::FieldReader<u8>);
 impl SENSE1_FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -568,7 +568,7 @@ impl SENSE1_FUN_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -587,7 +587,7 @@ impl<'a> SENSE1_FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE4_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_MUX_SEL_R(crate::FieldReader<bool>);
 impl SENSE4_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -595,7 +595,7 @@ impl SENSE4_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE4_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -624,7 +624,7 @@ impl<'a> SENSE4_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE3_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_MUX_SEL_R(crate::FieldReader<bool>);
 impl SENSE3_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -632,7 +632,7 @@ impl SENSE3_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE3_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -661,7 +661,7 @@ impl<'a> SENSE3_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE2_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_MUX_SEL_R(crate::FieldReader<bool>);
 impl SENSE2_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -669,7 +669,7 @@ impl SENSE2_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -698,7 +698,7 @@ impl<'a> SENSE2_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE1_MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_MUX_SEL_R(crate::FieldReader<bool>);
 impl SENSE1_MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -706,7 +706,7 @@ impl SENSE1_MUX_SEL_R {
     }
 }
 impl core::ops::Deref for SENSE1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -735,7 +735,7 @@ impl<'a> SENSE1_MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE4_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_HOLD_R(crate::FieldReader<bool>);
 impl SENSE4_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -743,7 +743,7 @@ impl SENSE4_HOLD_R {
     }
 }
 impl core::ops::Deref for SENSE4_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -772,7 +772,7 @@ impl<'a> SENSE4_HOLD_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE3_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_HOLD_R(crate::FieldReader<bool>);
 impl SENSE3_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -780,7 +780,7 @@ impl SENSE3_HOLD_R {
     }
 }
 impl core::ops::Deref for SENSE3_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -809,7 +809,7 @@ impl<'a> SENSE3_HOLD_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE2_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_HOLD_R(crate::FieldReader<bool>);
 impl SENSE2_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -817,7 +817,7 @@ impl SENSE2_HOLD_R {
     }
 }
 impl core::ops::Deref for SENSE2_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -846,7 +846,7 @@ impl<'a> SENSE2_HOLD_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_HOLD_R(crate::FieldReader<bool>);
 impl SENSE1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -854,7 +854,7 @@ impl SENSE1_HOLD_R {
     }
 }
 impl core::ops::Deref for SENSE1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1132,25 +1132,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sensor_pads]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sensor_pads](index.html) module"]
 pub struct SENSOR_PADS_SPEC;
 impl crate::RegisterSpec for SENSOR_PADS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sensor_pads::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sensor_pads::R](R) reader structure"]
 impl crate::Readable for SENSOR_PADS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sensor_pads::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sensor_pads::W](W) writer structure"]
 impl crate::Writable for SENSOR_PADS_SPEC {
     type Writer = W;
 }

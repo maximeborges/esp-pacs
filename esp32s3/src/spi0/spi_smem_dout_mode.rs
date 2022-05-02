@@ -35,7 +35,7 @@ impl From<crate::W<SPI_SMEM_DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT0_MODE` reader - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT0_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT0_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SPI_SMEM_DOUT0_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT0_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SPI_SMEM_DOUT0_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT1_MODE` reader - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT1_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT1_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT1_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SPI_SMEM_DOUT1_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT1_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SPI_SMEM_DOUT1_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT2_MODE` reader - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT2_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT2_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT2_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SPI_SMEM_DOUT2_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT2_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SPI_SMEM_DOUT2_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT3_MODE` reader - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT3_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT3_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT3_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SPI_SMEM_DOUT3_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT3_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SPI_SMEM_DOUT3_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT4_MODE` reader - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT4_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT4_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT4_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SPI_SMEM_DOUT4_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT4_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SPI_SMEM_DOUT4_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT5_MODE` reader - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT5_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT5_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT5_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SPI_SMEM_DOUT5_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT5_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SPI_SMEM_DOUT5_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT6_MODE` reader - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT6_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT6_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT6_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SPI_SMEM_DOUT6_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT6_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SPI_SMEM_DOUT6_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT7_MODE` reader - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUT7_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUT7_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUT7_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SPI_SMEM_DOUT7_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUT7_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SPI_SMEM_DOUT7_MODE_W<'a> {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUTS_MODE` reader - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub struct SPI_SMEM_DOUTS_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SMEM_DOUTS_MODE_R(crate::FieldReader<bool>);
 impl SPI_SMEM_DOUTS_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl SPI_SMEM_DOUTS_MODE_R {
     }
 }
 impl core::ops::Deref for SPI_SMEM_DOUTS_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -467,25 +467,16 @@ impl W {
         self
     }
 }
-#[doc = "MSPI output timing delay mode control register when accesses to Ext_RAM.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_dout_mode]
-(index.html) module"]
+#[doc = "MSPI output timing delay mode control register when accesses to Ext_RAM.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_dout_mode](index.html) module"]
 pub struct SPI_SMEM_DOUT_MODE_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_DOUT_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spi_smem_dout_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [spi_smem_dout_mode::R](R) reader structure"]
 impl crate::Readable for SPI_SMEM_DOUT_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [spi_smem_dout_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [spi_smem_dout_mode::W](W) writer structure"]
 impl crate::Writable for SPI_SMEM_DOUT_MODE_SPEC {
     type Writer = W;
 }

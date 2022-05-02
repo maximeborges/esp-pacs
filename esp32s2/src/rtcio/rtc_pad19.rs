@@ -35,7 +35,7 @@ impl From<crate::W<RTC_PAD19_SPEC>> for W {
     }
 }
 #[doc = "Field `FUN_IE` reader - Input enable in normal execution."]
-pub struct FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct FUN_IE_R(crate::FieldReader<bool>);
 impl FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FUN_IE_R {
     }
 }
 impl core::ops::Deref for FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `SLP_OE` reader - Output enable in sleep mode."]
-pub struct SLP_OE_R(crate::FieldReader<bool, bool>);
+pub struct SLP_OE_R(crate::FieldReader<bool>);
 impl SLP_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLP_OE_R {
     }
 }
 impl core::ops::Deref for SLP_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLP_OE_W<'a> {
     }
 }
 #[doc = "Field `SLP_IE` reader - Input enable in sleep mode."]
-pub struct SLP_IE_R(crate::FieldReader<bool, bool>);
+pub struct SLP_IE_R(crate::FieldReader<bool>);
 impl SLP_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SLP_IE_R {
     }
 }
 impl core::ops::Deref for SLP_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SLP_IE_W<'a> {
     }
 }
 #[doc = "Field `SLP_SEL` reader - 1: enable sleep mode. 0: no sleep mode"]
-pub struct SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLP_SEL_R(crate::FieldReader<bool>);
 impl SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `FUN_SEL` reader - Function selection."]
-pub struct FUN_SEL_R(crate::FieldReader<u8, u8>);
+pub struct FUN_SEL_R(crate::FieldReader<u8>);
 impl FUN_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl FUN_SEL_R {
     }
 }
 impl core::ops::Deref for FUN_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> FUN_SEL_W<'a> {
     }
 }
 #[doc = "Field `MUX_SEL` reader - 1: use RTC GPIO. 0: use digital GPIO."]
-pub struct MUX_SEL_R(crate::FieldReader<bool, bool>);
+pub struct MUX_SEL_R(crate::FieldReader<bool>);
 impl MUX_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl MUX_SEL_R {
     }
 }
 impl core::ops::Deref for MUX_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> MUX_SEL_W<'a> {
     }
 }
 #[doc = "Field `RUE` reader - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
-pub struct RUE_R(crate::FieldReader<bool, bool>);
+pub struct RUE_R(crate::FieldReader<bool>);
 impl RUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl RUE_R {
     }
 }
 impl core::ops::Deref for RUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> RUE_W<'a> {
     }
 }
 #[doc = "Field `RDE` reader - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
-pub struct RDE_R(crate::FieldReader<bool, bool>);
+pub struct RDE_R(crate::FieldReader<bool>);
 impl RDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl RDE_R {
     }
 }
 impl core::ops::Deref for RDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> RDE_W<'a> {
     }
 }
 #[doc = "Field `DRV` reader - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub struct DRV_R(crate::FieldReader<u8, u8>);
+pub struct DRV_R(crate::FieldReader<u8>);
 impl DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -329,7 +329,7 @@ impl DRV_R {
     }
 }
 impl core::ops::Deref for DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -447,25 +447,16 @@ impl W {
         self
     }
 }
-#[doc = "Touch pad 19 configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_pad19]
-(index.html) module"]
+#[doc = "Touch pad 19 configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_pad19](index.html) module"]
 pub struct RTC_PAD19_SPEC;
 impl crate::RegisterSpec for RTC_PAD19_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_pad19::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rtc_pad19::R](R) reader structure"]
 impl crate::Readable for RTC_PAD19_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rtc_pad19::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rtc_pad19::W](W) writer structure"]
 impl crate::Writable for RTC_PAD19_SPEC {
     type Writer = W;
 }

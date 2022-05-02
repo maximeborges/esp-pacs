@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_BUF_ST` reader - 1: The data in the RX buffer is not empty, with at least one received data packet."]
-pub struct RX_BUF_ST_R(crate::FieldReader<bool, bool>);
+pub struct RX_BUF_ST_R(crate::FieldReader<bool>);
 impl RX_BUF_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RX_BUF_ST_R {
     }
 }
 impl core::ops::Deref for RX_BUF_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OVERRUN_ST` reader - 1: The RX FIFO is full and data overrun has occurred."]
-pub struct OVERRUN_ST_R(crate::FieldReader<bool, bool>);
+pub struct OVERRUN_ST_R(crate::FieldReader<bool>);
 impl OVERRUN_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl OVERRUN_ST_R {
     }
 }
 impl core::ops::Deref for OVERRUN_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_BUF_ST` reader - 1: The TX buffer is empty, the CPU may write a message into it."]
-pub struct TX_BUF_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_BUF_ST_R(crate::FieldReader<bool>);
 impl TX_BUF_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl TX_BUF_ST_R {
     }
 }
 impl core::ops::Deref for TX_BUF_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_COMPLETE` reader - 1: The TWAI controller has successfully received a packet from the bus."]
-pub struct TX_COMPLETE_R(crate::FieldReader<bool, bool>);
+pub struct TX_COMPLETE_R(crate::FieldReader<bool>);
 impl TX_COMPLETE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl TX_COMPLETE_R {
     }
 }
 impl core::ops::Deref for TX_COMPLETE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RX_ST` reader - 1: The TWAI Controller is receiving a message from the bus."]
-pub struct RX_ST_R(crate::FieldReader<bool, bool>);
+pub struct RX_ST_R(crate::FieldReader<bool>);
 impl RX_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl RX_ST_R {
     }
 }
 impl core::ops::Deref for RX_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_ST` reader - 1: The TWAI Controller is transmitting a message to the bus."]
-pub struct TX_ST_R(crate::FieldReader<bool, bool>);
+pub struct TX_ST_R(crate::FieldReader<bool>);
 impl TX_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl TX_ST_R {
     }
 }
 impl core::ops::Deref for TX_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ERR_ST` reader - 1: At least one of the RX/TX error counter has reached or exceeded the value set in register TWAI_ERR_WARNING_LIMIT_REG."]
-pub struct ERR_ST_R(crate::FieldReader<bool, bool>);
+pub struct ERR_ST_R(crate::FieldReader<bool>);
 impl ERR_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl ERR_ST_R {
     }
 }
 impl core::ops::Deref for ERR_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BUS_OFF_ST` reader - 1: In bus-off status, the TWAI Controller is no longer involved in bus activities."]
-pub struct BUS_OFF_ST_R(crate::FieldReader<bool, bool>);
+pub struct BUS_OFF_ST_R(crate::FieldReader<bool>);
 impl BUS_OFF_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl BUS_OFF_ST_R {
     }
 }
 impl core::ops::Deref for BUS_OFF_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MISS_ST` reader - This bit reflects whether the data packet in the RX FIFO is complete. 1: The current packet is missing; 0: The current packet is complete"]
-pub struct MISS_ST_R(crate::FieldReader<bool, bool>);
+pub struct MISS_ST_R(crate::FieldReader<bool>);
 impl MISS_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,7 +142,7 @@ impl MISS_ST_R {
     }
 }
 impl core::ops::Deref for MISS_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -195,16 +195,12 @@ impl R {
         MISS_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
-#[doc = "Status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status]
-(index.html) module"]
+#[doc = "Status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [status::R](R) reader structure"]
 impl crate::Readable for STATUS_SPEC {
     type Reader = R;
 }

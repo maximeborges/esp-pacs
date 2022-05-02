@@ -35,7 +35,7 @@ impl From<crate::W<IRAM_DRAM_AHB_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `MASK_PRO_IRAM` reader - "]
-pub struct MASK_PRO_IRAM_R(crate::FieldReader<bool, bool>);
+pub struct MASK_PRO_IRAM_R(crate::FieldReader<bool>);
 impl MASK_PRO_IRAM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MASK_PRO_IRAM_R {
     }
 }
 impl core::ops::Deref for MASK_PRO_IRAM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MASK_PRO_IRAM_W<'a> {
     }
 }
 #[doc = "Field `MASK_APP_IRAM` reader - "]
-pub struct MASK_APP_IRAM_R(crate::FieldReader<bool, bool>);
+pub struct MASK_APP_IRAM_R(crate::FieldReader<bool>);
 impl MASK_APP_IRAM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MASK_APP_IRAM_R {
     }
 }
 impl core::ops::Deref for MASK_APP_IRAM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MASK_APP_IRAM_W<'a> {
     }
 }
 #[doc = "Field `MASK_PRO_DRAM` reader - "]
-pub struct MASK_PRO_DRAM_R(crate::FieldReader<bool, bool>);
+pub struct MASK_PRO_DRAM_R(crate::FieldReader<bool>);
 impl MASK_PRO_DRAM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MASK_PRO_DRAM_R {
     }
 }
 impl core::ops::Deref for MASK_PRO_DRAM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MASK_PRO_DRAM_W<'a> {
     }
 }
 #[doc = "Field `MASK_APP_DRAM` reader - "]
-pub struct MASK_APP_DRAM_R(crate::FieldReader<bool, bool>);
+pub struct MASK_APP_DRAM_R(crate::FieldReader<bool>);
 impl MASK_APP_DRAM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MASK_APP_DRAM_R {
     }
 }
 impl core::ops::Deref for MASK_APP_DRAM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MASK_APP_DRAM_W<'a> {
     }
 }
 #[doc = "Field `MASK_AHB` reader - "]
-pub struct MASK_AHB_R(crate::FieldReader<bool, bool>);
+pub struct MASK_AHB_R(crate::FieldReader<bool>);
 impl MASK_AHB_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MASK_AHB_R {
     }
 }
 impl core::ops::Deref for MASK_AHB_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> MASK_AHB_W<'a> {
     }
 }
 #[doc = "Field `MAC_DUMP_MODE` reader - "]
-pub struct MAC_DUMP_MODE_R(crate::FieldReader<u8, u8>);
+pub struct MAC_DUMP_MODE_R(crate::FieldReader<u8>);
 impl MAC_DUMP_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -228,7 +228,7 @@ impl MAC_DUMP_MODE_R {
     }
 }
 impl core::ops::Deref for MAC_DUMP_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iram_dram_ahb_sel]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iram_dram_ahb_sel](index.html) module"]
 pub struct IRAM_DRAM_AHB_SEL_SPEC;
 impl crate::RegisterSpec for IRAM_DRAM_AHB_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [iram_dram_ahb_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [iram_dram_ahb_sel::R](R) reader structure"]
 impl crate::Readable for IRAM_DRAM_AHB_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [iram_dram_ahb_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [iram_dram_ahb_sel::W](W) writer structure"]
 impl crate::Writable for IRAM_DRAM_AHB_SEL_SPEC {
     type Writer = W;
 }

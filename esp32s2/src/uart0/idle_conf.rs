@@ -35,7 +35,7 @@ impl From<crate::W<IDLE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_IDLE_THRHD` reader - A frame end signal is generated when the receiver takes more time to receive one byte data than this register's value, in the unit of bit time (the time it takes to transfer one bit)."]
-pub struct RX_IDLE_THRHD_R(crate::FieldReader<u16, u16>);
+pub struct RX_IDLE_THRHD_R(crate::FieldReader<u16>);
 impl RX_IDLE_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl RX_IDLE_THRHD_R {
     }
 }
 impl core::ops::Deref for RX_IDLE_THRHD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RX_IDLE_THRHD_W<'a> {
     }
 }
 #[doc = "Field `TX_IDLE_NUM` reader - This register is used to configure the duration time between transfers, in the unit of bit time (the time it takes to transfer one bit)."]
-pub struct TX_IDLE_NUM_R(crate::FieldReader<u16, u16>);
+pub struct TX_IDLE_NUM_R(crate::FieldReader<u16>);
 impl TX_IDLE_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl TX_IDLE_NUM_R {
     }
 }
 impl core::ops::Deref for TX_IDLE_NUM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TX_IDLE_NUM_W<'a> {
     }
 }
 #[doc = "Field `TX_BRK_NUM` reader - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when UART_TXD_BRK is set to 1."]
-pub struct TX_BRK_NUM_R(crate::FieldReader<u8, u8>);
+pub struct TX_BRK_NUM_R(crate::FieldReader<u8>);
 impl TX_BRK_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TX_BRK_NUM_R {
     }
 }
 impl core::ops::Deref for TX_BRK_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "Frame end idle time configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idle_conf]
-(index.html) module"]
+#[doc = "Frame end idle time configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idle_conf](index.html) module"]
 pub struct IDLE_CONF_SPEC;
 impl crate::RegisterSpec for IDLE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [idle_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [idle_conf::R](R) reader structure"]
 impl crate::Readable for IDLE_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [idle_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [idle_conf::W](W) writer structure"]
 impl crate::Writable for IDLE_CONF_SPEC {
     type Writer = W;
 }

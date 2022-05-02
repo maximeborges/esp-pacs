@@ -35,7 +35,7 @@ impl From<crate::W<TIMER3_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_WAIT_TIMER` reader - wifi power domain wakeup time"]
-pub struct WIFI_WAIT_TIMER_R(crate::FieldReader<u16, u16>);
+pub struct WIFI_WAIT_TIMER_R(crate::FieldReader<u16>);
 impl WIFI_WAIT_TIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl WIFI_WAIT_TIMER_R {
     }
 }
 impl core::ops::Deref for WIFI_WAIT_TIMER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> WIFI_WAIT_TIMER_W<'a> {
     }
 }
 #[doc = "Field `WIFI_POWERUP_TIMER` reader - wifi power domain power on time"]
-pub struct WIFI_POWERUP_TIMER_R(crate::FieldReader<u8, u8>);
+pub struct WIFI_POWERUP_TIMER_R(crate::FieldReader<u8>);
 impl WIFI_POWERUP_TIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl WIFI_POWERUP_TIMER_R {
     }
 }
 impl core::ops::Deref for WIFI_POWERUP_TIMER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> WIFI_POWERUP_TIMER_W<'a> {
     }
 }
 #[doc = "Field `BT_WAIT_TIMER` reader - bt power domain wakeup time"]
-pub struct BT_WAIT_TIMER_R(crate::FieldReader<u16, u16>);
+pub struct BT_WAIT_TIMER_R(crate::FieldReader<u16>);
 impl BT_WAIT_TIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl BT_WAIT_TIMER_R {
     }
 }
 impl core::ops::Deref for BT_WAIT_TIMER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> BT_WAIT_TIMER_W<'a> {
     }
 }
 #[doc = "Field `BT_POWERUP_TIMER` reader - bt power domain power on time"]
-pub struct BT_POWERUP_TIMER_R(crate::FieldReader<u8, u8>);
+pub struct BT_POWERUP_TIMER_R(crate::FieldReader<u8>);
 impl BT_POWERUP_TIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl BT_POWERUP_TIMER_R {
     }
 }
 impl core::ops::Deref for BT_POWERUP_TIMER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer3]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer3](index.html) module"]
 pub struct TIMER3_SPEC;
 impl crate::RegisterSpec for TIMER3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer3::R](R) reader structure"]
 impl crate::Readable for TIMER3_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer3::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer3::W](W) writer structure"]
 impl crate::Writable for TIMER3_SPEC {
     type Writer = W;
 }

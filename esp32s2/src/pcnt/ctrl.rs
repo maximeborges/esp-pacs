@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PULSE_CNT_RST_U0` reader - Set this bit to clear unit 0's counter."]
-pub struct PULSE_CNT_RST_U0_R(crate::FieldReader<bool, bool>);
+pub struct PULSE_CNT_RST_U0_R(crate::FieldReader<bool>);
 impl PULSE_CNT_RST_U0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PULSE_CNT_RST_U0_R {
     }
 }
 impl core::ops::Deref for PULSE_CNT_RST_U0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PULSE_CNT_RST_U0_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U0` reader - Set this bit to freeze unit 1's counter."]
-pub struct CNT_PAUSE_U0_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U0_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CNT_PAUSE_U0_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CNT_PAUSE_U0_W<'a> {
     }
 }
 #[doc = "Field `PULSE_CNT_RST_U1` reader - Set this bit to clear unit 2's counter."]
-pub struct PULSE_CNT_RST_U1_R(crate::FieldReader<bool, bool>);
+pub struct PULSE_CNT_RST_U1_R(crate::FieldReader<bool>);
 impl PULSE_CNT_RST_U1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PULSE_CNT_RST_U1_R {
     }
 }
 impl core::ops::Deref for PULSE_CNT_RST_U1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PULSE_CNT_RST_U1_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U1` reader - Set this bit to freeze unit 3's counter."]
-pub struct CNT_PAUSE_U1_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U1_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CNT_PAUSE_U1_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CNT_PAUSE_U1_W<'a> {
     }
 }
 #[doc = "Field `PULSE_CNT_RST_U2` reader - Set this bit to clear unit 4's counter."]
-pub struct PULSE_CNT_RST_U2_R(crate::FieldReader<bool, bool>);
+pub struct PULSE_CNT_RST_U2_R(crate::FieldReader<bool>);
 impl PULSE_CNT_RST_U2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl PULSE_CNT_RST_U2_R {
     }
 }
 impl core::ops::Deref for PULSE_CNT_RST_U2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> PULSE_CNT_RST_U2_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U2` reader - Set this bit to freeze unit 5's counter."]
-pub struct CNT_PAUSE_U2_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U2_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl CNT_PAUSE_U2_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> CNT_PAUSE_U2_W<'a> {
     }
 }
 #[doc = "Field `PULSE_CNT_RST_U3` reader - Set this bit to clear unit 6's counter."]
-pub struct PULSE_CNT_RST_U3_R(crate::FieldReader<bool, bool>);
+pub struct PULSE_CNT_RST_U3_R(crate::FieldReader<bool>);
 impl PULSE_CNT_RST_U3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl PULSE_CNT_RST_U3_R {
     }
 }
 impl core::ops::Deref for PULSE_CNT_RST_U3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> PULSE_CNT_RST_U3_W<'a> {
     }
 }
 #[doc = "Field `CNT_PAUSE_U3` reader - Set this bit to freeze unit 7's counter."]
-pub struct CNT_PAUSE_U3_R(crate::FieldReader<bool, bool>);
+pub struct CNT_PAUSE_U3_R(crate::FieldReader<bool>);
 impl CNT_PAUSE_U3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl CNT_PAUSE_U3_R {
     }
 }
 impl core::ops::Deref for CNT_PAUSE_U3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> CNT_PAUSE_U3_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -467,25 +467,16 @@ impl W {
         self
     }
 }
-#[doc = "Control register for all counters\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "Control register for all counters\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

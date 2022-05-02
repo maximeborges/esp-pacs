@@ -35,7 +35,7 @@ impl From<crate::W<GEN1_B_SPEC>> for W {
     }
 }
 #[doc = "Field `UTEZ` reader - Action on PWM1B triggered by event TEZ when timer increasing"]
-pub struct UTEZ_R(crate::FieldReader<u8, u8>);
+pub struct UTEZ_R(crate::FieldReader<u8>);
 impl UTEZ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl UTEZ_R {
     }
 }
 impl core::ops::Deref for UTEZ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> UTEZ_W<'a> {
     }
 }
 #[doc = "Field `UTEP` reader - Action on PWM1B triggered by event TEP when timer increasing"]
-pub struct UTEP_R(crate::FieldReader<u8, u8>);
+pub struct UTEP_R(crate::FieldReader<u8>);
 impl UTEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl UTEP_R {
     }
 }
 impl core::ops::Deref for UTEP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> UTEP_W<'a> {
     }
 }
 #[doc = "Field `UTEA` reader - Action on PWM1B triggered by event TEA when timer increasing"]
-pub struct UTEA_R(crate::FieldReader<u8, u8>);
+pub struct UTEA_R(crate::FieldReader<u8>);
 impl UTEA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl UTEA_R {
     }
 }
 impl core::ops::Deref for UTEA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> UTEA_W<'a> {
     }
 }
 #[doc = "Field `UTEB` reader - Action on PWM1B triggered by event TEB when timer increasing"]
-pub struct UTEB_R(crate::FieldReader<u8, u8>);
+pub struct UTEB_R(crate::FieldReader<u8>);
 impl UTEB_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl UTEB_R {
     }
 }
 impl core::ops::Deref for UTEB_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> UTEB_W<'a> {
     }
 }
 #[doc = "Field `UT0` reader - Action on PWM1B triggered by event_t0 when timer increasing"]
-pub struct UT0_R(crate::FieldReader<u8, u8>);
+pub struct UT0_R(crate::FieldReader<u8>);
 impl UT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl UT0_R {
     }
 }
 impl core::ops::Deref for UT0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> UT0_W<'a> {
     }
 }
 #[doc = "Field `UT1` reader - Action on PWM1B triggered by event_t1 when timer increasing"]
-pub struct UT1_R(crate::FieldReader<u8, u8>);
+pub struct UT1_R(crate::FieldReader<u8>);
 impl UT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl UT1_R {
     }
 }
 impl core::ops::Deref for UT1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> UT1_W<'a> {
     }
 }
 #[doc = "Field `DTEZ` reader - Action on PWM1B triggered by event TEZ when timer decreasing"]
-pub struct DTEZ_R(crate::FieldReader<u8, u8>);
+pub struct DTEZ_R(crate::FieldReader<u8>);
 impl DTEZ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DTEZ_R {
     }
 }
 impl core::ops::Deref for DTEZ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DTEZ_W<'a> {
     }
 }
 #[doc = "Field `DTEP` reader - Action on PWM1B triggered by event TEP when timer decreasing"]
-pub struct DTEP_R(crate::FieldReader<u8, u8>);
+pub struct DTEP_R(crate::FieldReader<u8>);
 impl DTEP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DTEP_R {
     }
 }
 impl core::ops::Deref for DTEP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> DTEP_W<'a> {
     }
 }
 #[doc = "Field `DTEA` reader - Action on PWM1B triggered by event TEA when timer decreasing"]
-pub struct DTEA_R(crate::FieldReader<u8, u8>);
+pub struct DTEA_R(crate::FieldReader<u8>);
 impl DTEA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl DTEA_R {
     }
 }
 impl core::ops::Deref for DTEA_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> DTEA_W<'a> {
     }
 }
 #[doc = "Field `DTEB` reader - Action on PWM1B triggered by event TEB when timer decreasing"]
-pub struct DTEB_R(crate::FieldReader<u8, u8>);
+pub struct DTEB_R(crate::FieldReader<u8>);
 impl DTEB_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl DTEB_R {
     }
 }
 impl core::ops::Deref for DTEB_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> DTEB_W<'a> {
     }
 }
 #[doc = "Field `DT0` reader - Action on PWM1B triggered by event_t0 when timer decreasing"]
-pub struct DT0_R(crate::FieldReader<u8, u8>);
+pub struct DT0_R(crate::FieldReader<u8>);
 impl DT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -313,7 +313,7 @@ impl DT0_R {
     }
 }
 impl core::ops::Deref for DT0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -332,7 +332,7 @@ impl<'a> DT0_W<'a> {
     }
 }
 #[doc = "Field `DT1` reader - Action on PWM1B triggered by event_t1 when timer decreasing. 0: no change, 1: low, 2: high, 3: toggle"]
-pub struct DT1_R(crate::FieldReader<u8, u8>);
+pub struct DT1_R(crate::FieldReader<u8>);
 impl DT1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -340,7 +340,7 @@ impl DT1_R {
     }
 }
 impl core::ops::Deref for DT1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -488,25 +488,16 @@ impl W {
         self
     }
 }
-#[doc = "Actions triggered by events on PWM1B\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_b]
-(index.html) module"]
+#[doc = "Actions triggered by events on PWM1B\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_b](index.html) module"]
 pub struct GEN1_B_SPEC;
 impl crate::RegisterSpec for GEN1_B_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gen1_b::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gen1_b::R](R) reader structure"]
 impl crate::Readable for GEN1_B_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gen1_b::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gen1_b::W](W) writer structure"]
 impl crate::Writable for GEN1_B_SPEC {
     type Writer = W;
 }

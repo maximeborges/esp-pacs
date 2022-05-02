@@ -35,7 +35,7 @@ impl From<crate::W<SAR_START_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR1_BIT_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct SAR1_BIT_WIDTH_R(crate::FieldReader<u8>);
 impl SAR1_BIT_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SAR1_BIT_WIDTH_R {
     }
 }
 impl core::ops::Deref for SAR1_BIT_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SAR1_BIT_WIDTH_W<'a> {
     }
 }
 #[doc = "Field `SAR2_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR2_BIT_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_BIT_WIDTH_R(crate::FieldReader<u8>);
 impl SAR2_BIT_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SAR2_BIT_WIDTH_R {
     }
 }
 impl core::ops::Deref for SAR2_BIT_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SAR2_BIT_WIDTH_W<'a> {
     }
 }
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub struct SAR2_EN_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_EN_TEST_R(crate::FieldReader<bool>);
 impl SAR2_EN_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SAR2_EN_TEST_R {
     }
 }
 impl core::ops::Deref for SAR2_EN_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SAR2_EN_TEST_W<'a> {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
 impl SAR2_PWDET_CCT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl SAR2_PWDET_CCT_R {
     }
 }
 impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> SAR2_PWDET_CCT_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub struct ULP_CP_FORCE_START_TOP_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_FORCE_START_TOP_R(crate::FieldReader<bool>);
 impl ULP_CP_FORCE_START_TOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl ULP_CP_FORCE_START_TOP_R {
     }
 }
 impl core::ops::Deref for ULP_CP_FORCE_START_TOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> ULP_CP_FORCE_START_TOP_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub struct ULP_CP_START_TOP_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_START_TOP_R(crate::FieldReader<bool>);
 impl ULP_CP_START_TOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl ULP_CP_START_TOP_R {
     }
 }
 impl core::ops::Deref for ULP_CP_START_TOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> ULP_CP_START_TOP_W<'a> {
     }
 }
 #[doc = "Field `SARCLK_EN` reader - "]
-pub struct SARCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SARCLK_EN_R(crate::FieldReader<bool>);
 impl SARCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl SARCLK_EN_R {
     }
 }
 impl core::ops::Deref for SARCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> SARCLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PC_INIT` reader - initialized PC for ULP-coprocessor"]
-pub struct PC_INIT_R(crate::FieldReader<u16, u16>);
+pub struct PC_INIT_R(crate::FieldReader<u16>);
 impl PC_INIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -272,7 +272,7 @@ impl PC_INIT_R {
     }
 }
 impl core::ops::Deref for PC_INIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> PC_INIT_W<'a> {
     }
 }
 #[doc = "Field `SAR2_STOP` reader - stop SAR ADC2 conversion"]
-pub struct SAR2_STOP_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_STOP_R(crate::FieldReader<bool>);
 impl SAR2_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -299,7 +299,7 @@ impl SAR2_STOP_R {
     }
 }
 impl core::ops::Deref for SAR2_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -328,7 +328,7 @@ impl<'a> SAR2_STOP_W<'a> {
     }
 }
 #[doc = "Field `SAR1_STOP` reader - stop SAR ADC1 conversion"]
-pub struct SAR1_STOP_R(crate::FieldReader<bool, bool>);
+pub struct SAR1_STOP_R(crate::FieldReader<bool>);
 impl SAR1_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -336,7 +336,7 @@ impl SAR1_STOP_R {
     }
 }
 impl core::ops::Deref for SAR1_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -365,7 +365,7 @@ impl<'a> SAR1_STOP_W<'a> {
     }
 }
 #[doc = "Field `SAR2_PWDET_EN` reader - N/A"]
-pub struct SAR2_PWDET_EN_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_PWDET_EN_R(crate::FieldReader<bool>);
 impl SAR2_PWDET_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -373,7 +373,7 @@ impl SAR2_PWDET_EN_R {
     }
 }
 impl core::ops::Deref for SAR2_PWDET_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -521,25 +521,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_start_force]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_start_force](index.html) module"]
 pub struct SAR_START_FORCE_SPEC;
 impl crate::RegisterSpec for SAR_START_FORCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_start_force::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_start_force::R](R) reader structure"]
 impl crate::Readable for SAR_START_FORCE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_start_force::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_start_force::W](W) writer structure"]
 impl crate::Writable for SAR_START_FORCE_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS1_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_SARADC_RESET` reader - SAR ADC software reset."]
-pub struct RTC_SARADC_RESET_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SARADC_RESET_R(crate::FieldReader<bool>);
 impl RTC_SARADC_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_SARADC_RESET_R {
     }
 }
 impl core::ops::Deref for RTC_SARADC_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_SARADC_RESET_W<'a> {
     }
 }
 #[doc = "Field `RTC_SARADC_CLKGATE_EN` reader - Enable bit of SAR ADC clock gate."]
-pub struct RTC_SARADC_CLKGATE_EN_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SARADC_CLKGATE_EN_R(crate::FieldReader<bool>);
 impl RTC_SARADC_CLKGATE_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RTC_SARADC_CLKGATE_EN_R {
     }
 }
 impl core::ops::Deref for RTC_SARADC_CLKGATE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RTC_SARADC_CLKGATE_EN_W<'a> {
     }
 }
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
-pub struct FORCE_XPD_AMP_R(crate::FieldReader<u8, u8>);
+pub struct FORCE_XPD_AMP_R(crate::FieldReader<u8>);
 impl FORCE_XPD_AMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl FORCE_XPD_AMP_R {
     }
 }
 impl core::ops::Deref for FORCE_XPD_AMP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> FORCE_XPD_AMP_W<'a> {
     }
 }
 #[doc = "Field `AMP_RST_FB_FORCE` reader - "]
-pub struct AMP_RST_FB_FORCE_R(crate::FieldReader<u8, u8>);
+pub struct AMP_RST_FB_FORCE_R(crate::FieldReader<u8>);
 impl AMP_RST_FB_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl AMP_RST_FB_FORCE_R {
     }
 }
 impl core::ops::Deref for AMP_RST_FB_FORCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> AMP_RST_FB_FORCE_W<'a> {
     }
 }
 #[doc = "Field `AMP_SHORT_REF_FORCE` reader - "]
-pub struct AMP_SHORT_REF_FORCE_R(crate::FieldReader<u8, u8>);
+pub struct AMP_SHORT_REF_FORCE_R(crate::FieldReader<u8>);
 impl AMP_SHORT_REF_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -171,7 +171,7 @@ impl AMP_SHORT_REF_FORCE_R {
     }
 }
 impl core::ops::Deref for AMP_SHORT_REF_FORCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> AMP_SHORT_REF_FORCE_W<'a> {
     }
 }
 #[doc = "Field `AMP_SHORT_REF_GND_FORCE` reader - "]
-pub struct AMP_SHORT_REF_GND_FORCE_R(crate::FieldReader<u8, u8>);
+pub struct AMP_SHORT_REF_GND_FORCE_R(crate::FieldReader<u8>);
 impl AMP_SHORT_REF_GND_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -198,7 +198,7 @@ impl AMP_SHORT_REF_GND_FORCE_R {
     }
 }
 impl core::ops::Deref for AMP_SHORT_REF_GND_FORCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -286,25 +286,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure RTC ADC1 controller\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas1_ctrl1]
-(index.html) module"]
+#[doc = "Configure RTC ADC1 controller\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas1_ctrl1](index.html) module"]
 pub struct SAR_MEAS1_CTRL1_SPEC;
 impl crate::RegisterSpec for SAR_MEAS1_CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_meas1_ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_meas1_ctrl1::R](R) reader structure"]
 impl crate::Readable for SAR_MEAS1_CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_meas1_ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_meas1_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS1_CTRL1_SPEC {
     type Writer = W;
 }

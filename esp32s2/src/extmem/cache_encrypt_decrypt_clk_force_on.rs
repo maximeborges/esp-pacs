@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_FORCE_ON_DB_ENCRYPT` reader - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_DB_ENCRYPT_R(crate::FieldReader<bool, bool>);
+pub struct CLK_FORCE_ON_DB_ENCRYPT_R(crate::FieldReader<bool>);
 impl CLK_FORCE_ON_DB_ENCRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_FORCE_ON_DB_ENCRYPT_R {
     }
 }
 impl core::ops::Deref for CLK_FORCE_ON_DB_ENCRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK_FORCE_ON_DB_ENCRYPT_W<'a> {
     }
 }
 #[doc = "Field `CLK_FORCE_ON_G0CB_DECRYPT` reader - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_G0CB_DECRYPT_R(crate::FieldReader<bool, bool>);
+pub struct CLK_FORCE_ON_G0CB_DECRYPT_R(crate::FieldReader<bool>);
 impl CLK_FORCE_ON_G0CB_DECRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CLK_FORCE_ON_G0CB_DECRYPT_R {
     }
 }
 impl core::ops::Deref for CLK_FORCE_ON_G0CB_DECRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CLK_FORCE_ON_G0CB_DECRYPT_W<'a> {
     }
 }
 #[doc = "Field `CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT` reader - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R(crate::FieldReader<bool, bool>);
+pub struct CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R(crate::FieldReader<bool>);
 impl CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R {
     }
 }
 impl core::ops::Deref for CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -189,25 +189,16 @@ impl W {
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_encrypt_decrypt_clk_force_on]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_encrypt_decrypt_clk_force_on](index.html) module"]
 pub struct CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC;
 impl crate::RegisterSpec for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_encrypt_decrypt_clk_force_on::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_encrypt_decrypt_clk_force_on::R](R) reader structure"]
 impl crate::Readable for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_encrypt_decrypt_clk_force_on::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_encrypt_decrypt_clk_force_on::W](W) writer structure"]
 impl crate::Writable for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
     type Writer = W;
 }

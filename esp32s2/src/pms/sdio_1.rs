@@ -35,7 +35,7 @@ impl From<crate::W<SDIO_1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_DISABLE` reader - Setting to 1 disables the SDIO function."]
-pub struct SDIO_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_DISABLE_R(crate::FieldReader<bool>);
 impl SDIO_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SDIO_DISABLE_R {
     }
 }
 impl core::ops::Deref for SDIO_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "SDIO permission control register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_1]
-(index.html) module"]
+#[doc = "SDIO permission control register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_1](index.html) module"]
 pub struct SDIO_1_SPEC;
 impl crate::RegisterSpec for SDIO_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sdio_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sdio_1::R](R) reader structure"]
 impl crate::Readable for SDIO_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sdio_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sdio_1::W](W) writer structure"]
 impl crate::Writable for SDIO_1_SPEC {
     type Writer = W;
 }

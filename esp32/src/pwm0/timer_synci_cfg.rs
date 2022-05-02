@@ -35,7 +35,7 @@ impl From<crate::W<TIMER_SYNCI_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_SYNCISEL` reader - "]
-pub struct TIMER0_SYNCISEL_R(crate::FieldReader<u8, u8>);
+pub struct TIMER0_SYNCISEL_R(crate::FieldReader<u8>);
 impl TIMER0_SYNCISEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIMER0_SYNCISEL_R {
     }
 }
 impl core::ops::Deref for TIMER0_SYNCISEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIMER0_SYNCISEL_W<'a> {
     }
 }
 #[doc = "Field `TIMER1_SYNCISEL` reader - "]
-pub struct TIMER1_SYNCISEL_R(crate::FieldReader<u8, u8>);
+pub struct TIMER1_SYNCISEL_R(crate::FieldReader<u8>);
 impl TIMER1_SYNCISEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TIMER1_SYNCISEL_R {
     }
 }
 impl core::ops::Deref for TIMER1_SYNCISEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TIMER1_SYNCISEL_W<'a> {
     }
 }
 #[doc = "Field `TIMER2_SYNCISEL` reader - "]
-pub struct TIMER2_SYNCISEL_R(crate::FieldReader<u8, u8>);
+pub struct TIMER2_SYNCISEL_R(crate::FieldReader<u8>);
 impl TIMER2_SYNCISEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TIMER2_SYNCISEL_R {
     }
 }
 impl core::ops::Deref for TIMER2_SYNCISEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TIMER2_SYNCISEL_W<'a> {
     }
 }
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` reader - "]
-pub struct EXTERNAL_SYNCI0_INVERT_R(crate::FieldReader<bool, bool>);
+pub struct EXTERNAL_SYNCI0_INVERT_R(crate::FieldReader<bool>);
 impl EXTERNAL_SYNCI0_INVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl EXTERNAL_SYNCI0_INVERT_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_SYNCI0_INVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> EXTERNAL_SYNCI0_INVERT_W<'a> {
     }
 }
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` reader - "]
-pub struct EXTERNAL_SYNCI1_INVERT_R(crate::FieldReader<bool, bool>);
+pub struct EXTERNAL_SYNCI1_INVERT_R(crate::FieldReader<bool>);
 impl EXTERNAL_SYNCI1_INVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl EXTERNAL_SYNCI1_INVERT_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_SYNCI1_INVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> EXTERNAL_SYNCI1_INVERT_W<'a> {
     }
 }
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` reader - "]
-pub struct EXTERNAL_SYNCI2_INVERT_R(crate::FieldReader<bool, bool>);
+pub struct EXTERNAL_SYNCI2_INVERT_R(crate::FieldReader<bool>);
 impl EXTERNAL_SYNCI2_INVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl EXTERNAL_SYNCI2_INVERT_R {
     }
 }
 impl core::ops::Deref for EXTERNAL_SYNCI2_INVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -296,25 +296,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer_synci_cfg]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer_synci_cfg](index.html) module"]
 pub struct TIMER_SYNCI_CFG_SPEC;
 impl crate::RegisterSpec for TIMER_SYNCI_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer_synci_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer_synci_cfg::R](R) reader structure"]
 impl crate::Readable for TIMER_SYNCI_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer_synci_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer_synci_cfg::W](W) writer structure"]
 impl crate::Writable for TIMER_SYNCI_CFG_SPEC {
     type Writer = W;
 }

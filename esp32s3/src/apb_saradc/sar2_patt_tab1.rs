@@ -35,7 +35,7 @@ impl From<crate::W<SAR2_PATT_TAB1_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_SAR2_PATT_TAB1` reader - item 0 ~ 3 for pattern table 2 (each item 6bit)"]
-pub struct SARADC_SAR2_PATT_TAB1_R(crate::FieldReader<u32, u32>);
+pub struct SARADC_SAR2_PATT_TAB1_R(crate::FieldReader<u32>);
 impl SARADC_SAR2_PATT_TAB1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SARADC_SAR2_PATT_TAB1_R {
     }
 }
 impl core::ops::Deref for SARADC_SAR2_PATT_TAB1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "configure apb saradc pattern table\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar2_patt_tab1]
-(index.html) module"]
+#[doc = "configure apb saradc pattern table\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar2_patt_tab1](index.html) module"]
 pub struct SAR2_PATT_TAB1_SPEC;
 impl crate::RegisterSpec for SAR2_PATT_TAB1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar2_patt_tab1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar2_patt_tab1::R](R) reader structure"]
 impl crate::Readable for SAR2_PATT_TAB1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar2_patt_tab1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar2_patt_tab1::W](W) writer structure"]
 impl crate::Writable for SAR2_PATT_TAB1_SPEC {
     type Writer = W;
 }

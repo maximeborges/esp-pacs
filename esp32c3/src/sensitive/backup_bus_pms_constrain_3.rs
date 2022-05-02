@@ -35,7 +35,7 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_2` reader - backup_bus_pms_constrain_spi_2"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL` reader - backup_bus_pms_constrain_apb_ctrl"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CAN` reader - backup_bus_pms_constrain_can"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_CAN_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_CAN_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_CAN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_CAN_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_CAN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2S1` reader - backup_bus_pms_constrain_i2s1"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_I2S1_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_I2S1_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_I2S1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_I2S1_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_I2S1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RWBT` reader - backup_bus_pms_constrain_rwbt"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RWBT_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_RWBT_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_RWBT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_RWBT_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RWBT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC` reader - backup_bus_pms_constrain_wifimac"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a> {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWR` reader - backup_bus_pms_constrain_pwr"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_PWR_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_PWR_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_CONSTRAIN_PWR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_PWR_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_PWR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -303,25 +303,16 @@ impl W {
         self
     }
 }
-#[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_3_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_3]
-(index.html) module"]
+#[doc = "SENSITIVE_BACKUP_BUS_PMS_CONSTRAIN_3_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_3](index.html) module"]
 pub struct BACKUP_BUS_PMS_CONSTRAIN_3_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [backup_bus_pms_constrain_3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [backup_bus_pms_constrain_3::R](R) reader structure"]
 impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_3::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_3::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
     type Writer = W;
 }

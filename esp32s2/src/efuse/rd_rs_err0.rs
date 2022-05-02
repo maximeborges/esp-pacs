@@ -14,7 +14,7 @@ impl From<crate::R<RD_RS_ERR0_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_SPI_8M_ERR_NUM` reader - The value of this signal means the number of error bytes in BLOCK1."]
-pub struct MAC_SPI_8M_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct MAC_SPI_8M_ERR_NUM_R(crate::FieldReader<u8>);
 impl MAC_SPI_8M_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl MAC_SPI_8M_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for MAC_SPI_8M_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MAC_SPI_8M_FAIL` reader - 0: Means no failure and that the data of BLOCK1 is reliable. 1: Means that programming BLOCK1 data failed and the number of error bytes is over 5."]
-pub struct MAC_SPI_8M_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct MAC_SPI_8M_FAIL_R(crate::FieldReader<bool>);
 impl MAC_SPI_8M_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl MAC_SPI_8M_FAIL_R {
     }
 }
 impl core::ops::Deref for MAC_SPI_8M_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SYS_PART1_NUM` reader - The value of this signal means the number of error bytes in BLOCK2."]
-pub struct SYS_PART1_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SYS_PART1_NUM_R(crate::FieldReader<u8>);
 impl SYS_PART1_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl SYS_PART1_NUM_R {
     }
 }
 impl core::ops::Deref for SYS_PART1_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SYS_PART1_FAIL` reader - 0: Means no failure and that the data of BLOCK2 is reliable. 1: Means that programming BLOCK2 data failed and the number of error bytes is over 5."]
-pub struct SYS_PART1_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct SYS_PART1_FAIL_R(crate::FieldReader<bool>);
 impl SYS_PART1_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl SYS_PART1_FAIL_R {
     }
 }
 impl core::ops::Deref for SYS_PART1_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `USR_DATA_ERR_NUM` reader - The value of this signal means the number of error bytes in BLOCK3."]
-pub struct USR_DATA_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct USR_DATA_ERR_NUM_R(crate::FieldReader<u8>);
 impl USR_DATA_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,14 +82,14 @@ impl USR_DATA_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for USR_DATA_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `USR_DATA_FAIL` reader - 0: Means no failure and that the data of BLOCK3 is reliable. 1: Means that programming BLOCK3 data failed and the number of error bytes is over 5."]
-pub struct USR_DATA_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct USR_DATA_FAIL_R(crate::FieldReader<bool>);
 impl USR_DATA_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl USR_DATA_FAIL_R {
     }
 }
 impl core::ops::Deref for USR_DATA_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY0_ERR_NUM` reader - The value of this signal means the number of error bytes in KEY0."]
-pub struct KEY0_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct KEY0_ERR_NUM_R(crate::FieldReader<u8>);
 impl KEY0_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,14 +112,14 @@ impl KEY0_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for KEY0_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY0_FAIL` reader - 0: Means no failure and that the data of KEY0 is reliable. 1: Means that programming KEY0 failed and the number of error bytes is over 5."]
-pub struct KEY0_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct KEY0_FAIL_R(crate::FieldReader<bool>);
 impl KEY0_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl KEY0_FAIL_R {
     }
 }
 impl core::ops::Deref for KEY0_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY1_ERR_NUM` reader - The value of this signal means the number of error bytes in KEY1."]
-pub struct KEY1_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct KEY1_ERR_NUM_R(crate::FieldReader<u8>);
 impl KEY1_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -142,14 +142,14 @@ impl KEY1_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for KEY1_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY1_FAIL` reader - 0: Means no failure and that the data of KEY1 is reliable. 1: Means that programming KEY1 failed and the number of error bytes is over 5."]
-pub struct KEY1_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct KEY1_FAIL_R(crate::FieldReader<bool>);
 impl KEY1_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl KEY1_FAIL_R {
     }
 }
 impl core::ops::Deref for KEY1_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY2_ERR_NUM` reader - The value of this signal means the number of error bytes in KEY2."]
-pub struct KEY2_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct KEY2_ERR_NUM_R(crate::FieldReader<u8>);
 impl KEY2_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -172,14 +172,14 @@ impl KEY2_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for KEY2_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY2_FAIL` reader - 0: Means no failure and that the data of KEY2 is reliable. 1: Means that programming KEY2 failed and the number of error bytes is over 5."]
-pub struct KEY2_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct KEY2_FAIL_R(crate::FieldReader<bool>);
 impl KEY2_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl KEY2_FAIL_R {
     }
 }
 impl core::ops::Deref for KEY2_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY3_ERR_NUM` reader - The value of this signal means the number of error bytes in KEY3."]
-pub struct KEY3_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct KEY3_ERR_NUM_R(crate::FieldReader<u8>);
 impl KEY3_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -202,14 +202,14 @@ impl KEY3_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for KEY3_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY3_FAIL` reader - 0: Means no failure and that the data of KEY3 is reliable. 1: Means that programming KEY3 failed and the number of error bytes is over 5."]
-pub struct KEY3_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct KEY3_FAIL_R(crate::FieldReader<bool>);
 impl KEY3_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl KEY3_FAIL_R {
     }
 }
 impl core::ops::Deref for KEY3_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY4_ERR_NUM` reader - The value of this signal means the number of error bytes in KEY4."]
-pub struct KEY4_ERR_NUM_R(crate::FieldReader<u8, u8>);
+pub struct KEY4_ERR_NUM_R(crate::FieldReader<u8>);
 impl KEY4_ERR_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,14 +232,14 @@ impl KEY4_ERR_NUM_R {
     }
 }
 impl core::ops::Deref for KEY4_ERR_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `KEY4_FAIL` reader - 0: Means no failure and that the data of KEY4 is reliable. 1: Means that programming KEY4 failed and the number of error bytes is over 5."]
-pub struct KEY4_FAIL_R(crate::FieldReader<bool, bool>);
+pub struct KEY4_FAIL_R(crate::FieldReader<bool>);
 impl KEY4_FAIL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,7 +247,7 @@ impl KEY4_FAIL_R {
     }
 }
 impl core::ops::Deref for KEY4_FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -335,16 +335,12 @@ impl R {
         KEY4_FAIL_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Programming error record register 0 of BLOCK1-10.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_rs_err0]
-(index.html) module"]
+#[doc = "Programming error record register 0 of BLOCK1-10.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_rs_err0](index.html) module"]
 pub struct RD_RS_ERR0_SPEC;
 impl crate::RegisterSpec for RD_RS_ERR0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_rs_err0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_rs_err0::R](R) reader structure"]
 impl crate::Readable for RD_RS_ERR0_SPEC {
     type Reader = R;
 }

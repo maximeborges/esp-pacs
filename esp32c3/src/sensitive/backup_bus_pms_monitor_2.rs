@@ -14,7 +14,7 @@ impl From<crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR` reader - backup_bus_pms_monitor_violate_intr"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool, bool>);
+pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
 impl BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS` reader - backup_bus_pms_monitor_violate_status_htrans"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE` reader - backup_bus_pms_monitor_violate_status_hsize"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8, u8>);
+pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8>);
 impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE` reader - backup_bus_pms_monitor_violate_status_hwrite"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool, bool>);
+pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool>);
 impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,7 +67,7 @@ impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,16 +101,12 @@ impl R {
         BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_2_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_monitor_2]
-(index.html) module"]
+#[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_2_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_monitor_2](index.html) module"]
 pub struct BACKUP_BUS_PMS_MONITOR_2_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_MONITOR_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [backup_bus_pms_monitor_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [backup_bus_pms_monitor_2::R](R) reader structure"]
 impl crate::Readable for BACKUP_BUS_PMS_MONITOR_2_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<OPERATOR_TIMERSEL_SPEC>> for W {
     }
 }
 #[doc = "Field `OPERATOR0_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator0, 0: timer0, 1: timer1, 2: timer2"]
-pub struct OPERATOR0_TIMERSEL_R(crate::FieldReader<u8, u8>);
+pub struct OPERATOR0_TIMERSEL_R(crate::FieldReader<u8>);
 impl OPERATOR0_TIMERSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl OPERATOR0_TIMERSEL_R {
     }
 }
 impl core::ops::Deref for OPERATOR0_TIMERSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OPERATOR0_TIMERSEL_W<'a> {
     }
 }
 #[doc = "Field `OPERATOR1_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator1, 0: timer0, 1: timer1, 2: timer2"]
-pub struct OPERATOR1_TIMERSEL_R(crate::FieldReader<u8, u8>);
+pub struct OPERATOR1_TIMERSEL_R(crate::FieldReader<u8>);
 impl OPERATOR1_TIMERSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl OPERATOR1_TIMERSEL_R {
     }
 }
 impl core::ops::Deref for OPERATOR1_TIMERSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> OPERATOR1_TIMERSEL_W<'a> {
     }
 }
 #[doc = "Field `OPERATOR2_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator2, 0: timer0, 1: timer1, 2: timer2"]
-pub struct OPERATOR2_TIMERSEL_R(crate::FieldReader<u8, u8>);
+pub struct OPERATOR2_TIMERSEL_R(crate::FieldReader<u8>);
 impl OPERATOR2_TIMERSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl OPERATOR2_TIMERSEL_R {
     }
 }
 impl core::ops::Deref for OPERATOR2_TIMERSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "Select specific timer for PWM operators.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [operator_timersel]
-(index.html) module"]
+#[doc = "Select specific timer for PWM operators.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [operator_timersel](index.html) module"]
 pub struct OPERATOR_TIMERSEL_SPEC;
 impl crate::RegisterSpec for OPERATOR_TIMERSEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [operator_timersel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [operator_timersel::R](R) reader structure"]
 impl crate::Readable for OPERATOR_TIMERSEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [operator_timersel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [operator_timersel::W](W) writer structure"]
 impl crate::Writable for OPERATOR_TIMERSEL_SPEC {
     type Writer = W;
 }

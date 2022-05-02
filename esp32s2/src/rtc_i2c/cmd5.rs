@@ -35,7 +35,7 @@ impl From<crate::W<CMD5_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND5` reader - Content of command 5. For more information, please refer to the register I2C_COMD5_REG in Chapter I²C Controller."]
-pub struct COMMAND5_R(crate::FieldReader<u16, u16>);
+pub struct COMMAND5_R(crate::FieldReader<u16>);
 impl COMMAND5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl COMMAND5_R {
     }
 }
 impl core::ops::Deref for COMMAND5_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> COMMAND5_W<'a> {
     }
 }
 #[doc = "Field `COMMAND5_DONE` reader - When command 5 is done, this bit changes to 1."]
-pub struct COMMAND5_DONE_R(crate::FieldReader<bool, bool>);
+pub struct COMMAND5_DONE_R(crate::FieldReader<bool>);
 impl COMMAND5_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl COMMAND5_DONE_R {
     }
 }
 impl core::ops::Deref for COMMAND5_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,25 +101,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC I2C Command 5\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd5]
-(index.html) module"]
+#[doc = "RTC I2C Command 5\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd5](index.html) module"]
 pub struct CMD5_SPEC;
 impl crate::RegisterSpec for CMD5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd5::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmd5::R](R) reader structure"]
 impl crate::Readable for CMD5_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmd5::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmd5::W](W) writer structure"]
 impl crate::Writable for CMD5_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<HOST_SLCHOST_FUNC2_0_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC_FUNC2_INT` reader - "]
-pub struct HOST_SLC_FUNC2_INT_R(crate::FieldReader<bool, bool>);
+pub struct HOST_SLC_FUNC2_INT_R(crate::FieldReader<bool>);
 impl HOST_SLC_FUNC2_INT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl HOST_SLC_FUNC2_INT_R {
     }
 }
 impl core::ops::Deref for HOST_SLC_FUNC2_INT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_func2_0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_func2_0](index.html) module"]
 pub struct HOST_SLCHOST_FUNC2_0_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_FUNC2_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slchost_func2_0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_slchost_func2_0::R](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_FUNC2_0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [host_slchost_func2_0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_slchost_func2_0::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_FUNC2_0_SPEC {
     type Writer = W;
 }

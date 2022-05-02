@@ -35,7 +35,7 @@ impl From<crate::W<DMA_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_ENABLE` reader - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
-pub struct DMA_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct DMA_ENABLE_R(crate::FieldReader<bool>);
 impl DMA_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_ENABLE_R {
     }
 }
 impl core::ops::Deref for DMA_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_enable]
-(index.html) module"]
+#[doc = "DMA enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_enable](index.html) module"]
 pub struct DMA_ENABLE_SPEC;
 impl crate::RegisterSpec for DMA_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_enable::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_enable::R](R) reader structure"]
 impl crate::Readable for DMA_ENABLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_enable::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_enable::W](W) writer structure"]
 impl crate::Writable for DMA_ENABLE_SPEC {
     type Writer = W;
 }

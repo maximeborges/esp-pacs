@@ -35,7 +35,7 @@ impl From<crate::W<COMB_PVT_NVT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `COMB_PATH_LEN_NVT` reader - reg_comb_path_len_nvt"]
-pub struct COMB_PATH_LEN_NVT_R(crate::FieldReader<u8, u8>);
+pub struct COMB_PATH_LEN_NVT_R(crate::FieldReader<u8>);
 impl COMB_PATH_LEN_NVT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl COMB_PATH_LEN_NVT_R {
     }
 }
 impl core::ops::Deref for COMB_PATH_LEN_NVT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -84,7 +84,7 @@ impl<'a> COMB_ERR_CNT_CLR_NVT_W<'a> {
     }
 }
 #[doc = "Field `COMB_PVT_MONITOR_EN_NVT` reader - reg_comb_pvt_monitor_en_nvt"]
-pub struct COMB_PVT_MONITOR_EN_NVT_R(crate::FieldReader<bool, bool>);
+pub struct COMB_PVT_MONITOR_EN_NVT_R(crate::FieldReader<bool>);
 impl COMB_PVT_MONITOR_EN_NVT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -92,7 +92,7 @@ impl COMB_PVT_MONITOR_EN_NVT_R {
     }
 }
 impl core::ops::Deref for COMB_PVT_MONITOR_EN_NVT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "mem pvt register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comb_pvt_nvt_conf]
-(index.html) module"]
+#[doc = "mem pvt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comb_pvt_nvt_conf](index.html) module"]
 pub struct COMB_PVT_NVT_CONF_SPEC;
 impl crate::RegisterSpec for COMB_PVT_NVT_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comb_pvt_nvt_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [comb_pvt_nvt_conf::R](R) reader structure"]
 impl crate::Readable for COMB_PVT_NVT_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [comb_pvt_nvt_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [comb_pvt_nvt_conf::W](W) writer structure"]
 impl crate::Writable for COMB_PVT_NVT_CONF_SPEC {
     type Writer = W;
 }

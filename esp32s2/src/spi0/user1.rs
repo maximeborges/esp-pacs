@@ -35,7 +35,7 @@ impl From<crate::W<USER1_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_DUMMY_CYCLELEN` reader - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub struct USR_DUMMY_CYCLELEN_R(crate::FieldReader<u8, u8>);
+pub struct USR_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
 impl USR_DUMMY_CYCLELEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl USR_DUMMY_CYCLELEN_R {
     }
 }
 impl core::ops::Deref for USR_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> USR_DUMMY_CYCLELEN_W<'a> {
     }
 }
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_ADDR_BITLEN_R(crate::FieldReader<u8, u8>);
+pub struct USR_ADDR_BITLEN_R(crate::FieldReader<u8>);
 impl USR_ADDR_BITLEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl USR_ADDR_BITLEN_R {
     }
 }
 impl core::ops::Deref for USR_ADDR_BITLEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI USER control register 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user1]
-(index.html) module"]
+#[doc = "SPI USER control register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [user1](index.html) module"]
 pub struct USER1_SPEC;
 impl crate::RegisterSpec for USER1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [user1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [user1::R](R) reader structure"]
 impl crate::Readable for USER1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [user1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [user1::W](W) writer structure"]
 impl crate::Writable for USER1_SPEC {
     type Writer = W;
 }

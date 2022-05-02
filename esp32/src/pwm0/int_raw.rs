@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER0_STOP_INT_RAW` reader - "]
-pub struct TIMER0_STOP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_STOP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER0_STOP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl TIMER0_STOP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER0_STOP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER1_STOP_INT_RAW` reader - "]
-pub struct TIMER1_STOP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_STOP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER1_STOP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TIMER1_STOP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER1_STOP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER2_STOP_INT_RAW` reader - "]
-pub struct TIMER2_STOP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER2_STOP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER2_STOP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl TIMER2_STOP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER2_STOP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER0_TEZ_INT_RAW` reader - "]
-pub struct TIMER0_TEZ_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_TEZ_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER0_TEZ_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl TIMER0_TEZ_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER0_TEZ_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER1_TEZ_INT_RAW` reader - "]
-pub struct TIMER1_TEZ_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_TEZ_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER1_TEZ_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl TIMER1_TEZ_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER1_TEZ_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER2_TEZ_INT_RAW` reader - "]
-pub struct TIMER2_TEZ_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER2_TEZ_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER2_TEZ_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl TIMER2_TEZ_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER2_TEZ_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER0_TEP_INT_RAW` reader - "]
-pub struct TIMER0_TEP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER0_TEP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER0_TEP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl TIMER0_TEP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER0_TEP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER1_TEP_INT_RAW` reader - "]
-pub struct TIMER1_TEP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_TEP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER1_TEP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl TIMER1_TEP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER1_TEP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TIMER2_TEP_INT_RAW` reader - "]
-pub struct TIMER2_TEP_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TIMER2_TEP_INT_RAW_R(crate::FieldReader<bool>);
 impl TIMER2_TEP_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl TIMER2_TEP_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TIMER2_TEP_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT0_INT_RAW` reader - "]
-pub struct FAULT0_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT0_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT0_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl FAULT0_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT0_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT1_INT_RAW` reader - "]
-pub struct FAULT1_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT1_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT1_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl FAULT1_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT1_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT2_INT_RAW` reader - "]
-pub struct FAULT2_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT2_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT2_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl FAULT2_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT2_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT0_CLR_INT_RAW` reader - "]
-pub struct FAULT0_CLR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT0_CLR_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT0_CLR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl FAULT0_CLR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT0_CLR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT1_CLR_INT_RAW` reader - "]
-pub struct FAULT1_CLR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT1_CLR_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT1_CLR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl FAULT1_CLR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT1_CLR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FAULT2_CLR_INT_RAW` reader - "]
-pub struct FAULT2_CLR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FAULT2_CLR_INT_RAW_R(crate::FieldReader<bool>);
 impl FAULT2_CLR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl FAULT2_CLR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FAULT2_CLR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP0_TEA_INT_RAW` reader - "]
-pub struct OP0_TEA_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP0_TEA_INT_RAW_R(crate::FieldReader<bool>);
 impl OP0_TEA_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl OP0_TEA_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP0_TEA_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP1_TEA_INT_RAW` reader - "]
-pub struct OP1_TEA_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP1_TEA_INT_RAW_R(crate::FieldReader<bool>);
 impl OP1_TEA_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl OP1_TEA_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP1_TEA_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP2_TEA_INT_RAW` reader - "]
-pub struct OP2_TEA_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP2_TEA_INT_RAW_R(crate::FieldReader<bool>);
 impl OP2_TEA_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl OP2_TEA_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP2_TEA_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP0_TEB_INT_RAW` reader - "]
-pub struct OP0_TEB_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP0_TEB_INT_RAW_R(crate::FieldReader<bool>);
 impl OP0_TEB_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,14 +292,14 @@ impl OP0_TEB_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP0_TEB_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP1_TEB_INT_RAW` reader - "]
-pub struct OP1_TEB_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP1_TEB_INT_RAW_R(crate::FieldReader<bool>);
 impl OP1_TEB_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -307,14 +307,14 @@ impl OP1_TEB_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP1_TEB_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `OP2_TEB_INT_RAW` reader - "]
-pub struct OP2_TEB_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct OP2_TEB_INT_RAW_R(crate::FieldReader<bool>);
 impl OP2_TEB_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -322,14 +322,14 @@ impl OP2_TEB_INT_RAW_R {
     }
 }
 impl core::ops::Deref for OP2_TEB_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH0_CBC_INT_RAW` reader - "]
-pub struct FH0_CBC_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH0_CBC_INT_RAW_R(crate::FieldReader<bool>);
 impl FH0_CBC_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -337,14 +337,14 @@ impl FH0_CBC_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH0_CBC_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH1_CBC_INT_RAW` reader - "]
-pub struct FH1_CBC_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH1_CBC_INT_RAW_R(crate::FieldReader<bool>);
 impl FH1_CBC_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -352,14 +352,14 @@ impl FH1_CBC_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH1_CBC_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH2_CBC_INT_RAW` reader - "]
-pub struct FH2_CBC_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH2_CBC_INT_RAW_R(crate::FieldReader<bool>);
 impl FH2_CBC_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -367,14 +367,14 @@ impl FH2_CBC_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH2_CBC_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH0_OST_INT_RAW` reader - "]
-pub struct FH0_OST_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH0_OST_INT_RAW_R(crate::FieldReader<bool>);
 impl FH0_OST_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -382,14 +382,14 @@ impl FH0_OST_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH0_OST_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH1_OST_INT_RAW` reader - "]
-pub struct FH1_OST_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH1_OST_INT_RAW_R(crate::FieldReader<bool>);
 impl FH1_OST_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -397,14 +397,14 @@ impl FH1_OST_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH1_OST_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FH2_OST_INT_RAW` reader - "]
-pub struct FH2_OST_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FH2_OST_INT_RAW_R(crate::FieldReader<bool>);
 impl FH2_OST_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -412,14 +412,14 @@ impl FH2_OST_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FH2_OST_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAP0_INT_RAW` reader - "]
-pub struct CAP0_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct CAP0_INT_RAW_R(crate::FieldReader<bool>);
 impl CAP0_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -427,14 +427,14 @@ impl CAP0_INT_RAW_R {
     }
 }
 impl core::ops::Deref for CAP0_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAP1_INT_RAW` reader - "]
-pub struct CAP1_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct CAP1_INT_RAW_R(crate::FieldReader<bool>);
 impl CAP1_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -442,14 +442,14 @@ impl CAP1_INT_RAW_R {
     }
 }
 impl core::ops::Deref for CAP1_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CAP2_INT_RAW` reader - "]
-pub struct CAP2_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct CAP2_INT_RAW_R(crate::FieldReader<bool>);
 impl CAP2_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -457,7 +457,7 @@ impl CAP2_INT_RAW_R {
     }
 }
 impl core::ops::Deref for CAP2_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -615,16 +615,12 @@ impl R {
         CAP2_INT_RAW_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
 }

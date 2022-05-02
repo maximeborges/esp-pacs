@@ -35,7 +35,7 @@ impl From<crate::W<OUT1_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT1_DATA_W1TS` reader - GPIO32~39 output value write 1 to set"]
-pub struct OUT1_DATA_W1TS_R(crate::FieldReader<u8, u8>);
+pub struct OUT1_DATA_W1TS_R(crate::FieldReader<u8>);
 impl OUT1_DATA_W1TS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl OUT1_DATA_W1TS_R {
     }
 }
 impl core::ops::Deref for OUT1_DATA_W1TS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out1_w1ts]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out1_w1ts](index.html) module"]
 pub struct OUT1_W1TS_SPEC;
 impl crate::RegisterSpec for OUT1_W1TS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out1_w1ts::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [out1_w1ts::R](R) reader structure"]
 impl crate::Readable for OUT1_W1TS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [out1_w1ts::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out1_w1ts::W](W) writer structure"]
 impl crate::Writable for OUT1_W1TS_SPEC {
     type Writer = W;
 }

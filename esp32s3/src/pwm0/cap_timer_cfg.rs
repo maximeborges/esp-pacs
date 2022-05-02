@@ -35,7 +35,7 @@ impl From<crate::W<CAP_TIMER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP_TIMER_EN` reader - When set, capture timer incrementing under APB_clk is enabled."]
-pub struct CAP_TIMER_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAP_TIMER_EN_R(crate::FieldReader<bool>);
 impl CAP_TIMER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CAP_TIMER_EN_R {
     }
 }
 impl core::ops::Deref for CAP_TIMER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CAP_TIMER_EN_W<'a> {
     }
 }
 #[doc = "Field `CAP_SYNCI_EN` reader - When set, capture timer sync is enabled."]
-pub struct CAP_SYNCI_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAP_SYNCI_EN_R(crate::FieldReader<bool>);
 impl CAP_SYNCI_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CAP_SYNCI_EN_R {
     }
 }
 impl core::ops::Deref for CAP_SYNCI_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CAP_SYNCI_EN_W<'a> {
     }
 }
 #[doc = "Field `CAP_SYNCI_SEL` reader - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
-pub struct CAP_SYNCI_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CAP_SYNCI_SEL_R(crate::FieldReader<u8>);
 impl CAP_SYNCI_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl CAP_SYNCI_SEL_R {
     }
 }
 impl core::ops::Deref for CAP_SYNCI_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure capture timer\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_timer_cfg]
-(index.html) module"]
+#[doc = "Configure capture timer\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cap_timer_cfg](index.html) module"]
 pub struct CAP_TIMER_CFG_SPEC;
 impl crate::RegisterSpec for CAP_TIMER_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cap_timer_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cap_timer_cfg::R](R) reader structure"]
 impl crate::Readable for CAP_TIMER_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cap_timer_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cap_timer_cfg::W](W) writer structure"]
 impl crate::Writable for CAP_TIMER_CFG_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_sclk_div_num"]
-pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8>);
 impl SCLK_DIV_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SCLK_DIV_NUM_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SCLK_DIV_NUM_W<'a> {
     }
 }
 #[doc = "Field `SCLK_DIV_A` reader - reg_sclk_div_a"]
-pub struct SCLK_DIV_A_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_A_R(crate::FieldReader<u8>);
 impl SCLK_DIV_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SCLK_DIV_A_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SCLK_DIV_A_W<'a> {
     }
 }
 #[doc = "Field `SCLK_DIV_B` reader - reg_sclk_div_b"]
-pub struct SCLK_DIV_B_R(crate::FieldReader<u8, u8>);
+pub struct SCLK_DIV_B_R(crate::FieldReader<u8>);
 impl SCLK_DIV_B_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SCLK_DIV_B_R {
     }
 }
 impl core::ops::Deref for SCLK_DIV_B_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> SCLK_DIV_B_W<'a> {
     }
 }
 #[doc = "Field `SCLK_SEL` reader - reg_sclk_sel"]
-pub struct SCLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SCLK_SEL_R(crate::FieldReader<bool>);
 impl SCLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl SCLK_SEL_R {
     }
 }
 impl core::ops::Deref for SCLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> SCLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `SCLK_ACTIVE` reader - reg_sclk_active"]
-pub struct SCLK_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct SCLK_ACTIVE_R(crate::FieldReader<bool>);
 impl SCLK_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -161,7 +161,7 @@ impl SCLK_ACTIVE_R {
     }
 }
 impl core::ops::Deref for SCLK_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -249,25 +249,16 @@ impl W {
         self
     }
 }
-#[doc = "I2C_CLK_CONF_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf]
-(index.html) module"]
+#[doc = "I2C_CLK_CONF_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_conf](index.html) module"]
 pub struct CLK_CONF_SPEC;
 impl crate::RegisterSpec for CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_conf::R](R) reader structure"]
 impl crate::Readable for CLK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
 }

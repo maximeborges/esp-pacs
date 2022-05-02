@@ -35,7 +35,7 @@ impl From<crate::W<DOUT_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT0_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT0_NUM_R(crate::FieldReader<u8>);
 impl DOUT0_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DOUT0_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT0_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DOUT0_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT1_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT1_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT1_NUM_R(crate::FieldReader<u8>);
 impl DOUT1_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DOUT1_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT1_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DOUT1_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT2_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT2_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT2_NUM_R(crate::FieldReader<u8>);
 impl DOUT2_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DOUT2_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT2_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DOUT2_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT3_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT3_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT3_NUM_R(crate::FieldReader<u8>);
 impl DOUT3_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DOUT3_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT3_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DOUT3_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT4_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT4_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT4_NUM_R(crate::FieldReader<u8>);
 impl DOUT4_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DOUT4_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT4_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DOUT4_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT5_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT5_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT5_NUM_R(crate::FieldReader<u8>);
 impl DOUT5_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DOUT5_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT5_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DOUT5_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT6_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT6_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT6_NUM_R(crate::FieldReader<u8>);
 impl DOUT6_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DOUT6_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT6_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DOUT6_NUM_W<'a> {
     }
 }
 #[doc = "Field `DOUT7_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct DOUT7_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DOUT7_NUM_R(crate::FieldReader<u8>);
 impl DOUT7_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DOUT7_NUM_R {
     }
 }
 impl core::ops::Deref for DOUT7_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -340,25 +340,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI output delay number configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_num]
-(index.html) module"]
+#[doc = "SPI output delay number configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dout_num](index.html) module"]
 pub struct DOUT_NUM_SPEC;
 impl crate::RegisterSpec for DOUT_NUM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dout_num::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dout_num::R](R) reader structure"]
 impl crate::Readable for DOUT_NUM_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dout_num::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dout_num::W](W) writer structure"]
 impl crate::Writable for DOUT_NUM_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD0_HOLD` reader - hold rtc pad0"]
-pub struct TOUCH_PAD0_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD0_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD0_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_PAD0_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD0_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TOUCH_PAD0_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD1_HOLD` reader - hold rtc pad-1"]
-pub struct TOUCH_PAD1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD1_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl TOUCH_PAD1_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> TOUCH_PAD1_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD2_HOLD` reader - hold rtc pad-2"]
-pub struct TOUCH_PAD2_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD2_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD2_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TOUCH_PAD2_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD2_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TOUCH_PAD2_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD3_HOLD` reader - hold rtc pad-3"]
-pub struct TOUCH_PAD3_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD3_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD3_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TOUCH_PAD3_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD3_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> TOUCH_PAD3_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD4_HOLD` reader - hold rtc pad-4"]
-pub struct TOUCH_PAD4_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD4_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD4_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TOUCH_PAD4_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD4_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TOUCH_PAD4_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD5_HOLD` reader - hold rtc pad-5"]
-pub struct TOUCH_PAD5_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD5_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD5_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl TOUCH_PAD5_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD5_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> TOUCH_PAD5_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD6_HOLD` reader - hold rtc pad-6"]
-pub struct TOUCH_PAD6_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD6_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD6_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl TOUCH_PAD6_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD6_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> TOUCH_PAD6_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD7_HOLD` reader - hold rtc pad-7"]
-pub struct TOUCH_PAD7_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD7_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD7_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl TOUCH_PAD7_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD7_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> TOUCH_PAD7_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD8_HOLD` reader - hold rtc pad-8"]
-pub struct TOUCH_PAD8_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD8_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD8_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl TOUCH_PAD8_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD8_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> TOUCH_PAD8_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD9_HOLD` reader - hold rtc pad-9"]
-pub struct TOUCH_PAD9_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD9_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD9_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl TOUCH_PAD9_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD9_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> TOUCH_PAD9_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD10_HOLD` reader - hold rtc pad-10"]
-pub struct TOUCH_PAD10_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD10_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD10_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl TOUCH_PAD10_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD10_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> TOUCH_PAD10_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD11_HOLD` reader - hold rtc pad-11"]
-pub struct TOUCH_PAD11_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD11_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD11_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TOUCH_PAD11_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD11_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TOUCH_PAD11_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD12_HOLD` reader - hold rtc pad-12"]
-pub struct TOUCH_PAD12_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD12_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD12_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TOUCH_PAD12_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD12_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TOUCH_PAD12_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD13_HOLD` reader - hold rtc pad-13"]
-pub struct TOUCH_PAD13_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD13_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD13_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TOUCH_PAD13_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD13_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TOUCH_PAD13_HOLD_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD14_HOLD` reader - hold rtc pad-14"]
-pub struct TOUCH_PAD14_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD14_HOLD_R(crate::FieldReader<bool>);
 impl TOUCH_PAD14_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl TOUCH_PAD14_HOLD_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD14_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> TOUCH_PAD14_HOLD_W<'a> {
     }
 }
 #[doc = "Field `X32P_HOLD` reader - hold rtc pad-15"]
-pub struct X32P_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct X32P_HOLD_R(crate::FieldReader<bool>);
 impl X32P_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl X32P_HOLD_R {
     }
 }
 impl core::ops::Deref for X32P_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> X32P_HOLD_W<'a> {
     }
 }
 #[doc = "Field `X32N_HOLD` reader - hold rtc pad-16"]
-pub struct X32N_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct X32N_HOLD_R(crate::FieldReader<bool>);
 impl X32N_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl X32N_HOLD_R {
     }
 }
 impl core::ops::Deref for X32N_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> X32N_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_HOLD` reader - hold rtc pad-17"]
-pub struct PDAC1_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_HOLD_R(crate::FieldReader<bool>);
 impl PDAC1_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl PDAC1_HOLD_R {
     }
 }
 impl core::ops::Deref for PDAC1_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> PDAC1_HOLD_W<'a> {
     }
 }
 #[doc = "Field `PDAC2_HOLD` reader - hold rtc pad-18"]
-pub struct PDAC2_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct PDAC2_HOLD_R(crate::FieldReader<bool>);
 impl PDAC2_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl PDAC2_HOLD_R {
     }
 }
 impl core::ops::Deref for PDAC2_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> PDAC2_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_PAD19_HOLD` reader - hold rtc pad-19"]
-pub struct RTC_PAD19_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PAD19_HOLD_R(crate::FieldReader<bool>);
 impl RTC_PAD19_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl RTC_PAD19_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_PAD19_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> RTC_PAD19_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_PAD20_HOLD` reader - hold rtc pad-20"]
-pub struct RTC_PAD20_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PAD20_HOLD_R(crate::FieldReader<bool>);
 impl RTC_PAD20_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl RTC_PAD20_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_PAD20_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> RTC_PAD20_HOLD_W<'a> {
     }
 }
 #[doc = "Field `RTC_PAD21_HOLD` reader - hold rtc pad-21"]
-pub struct RTC_PAD21_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PAD21_HOLD_R(crate::FieldReader<bool>);
 impl RTC_PAD21_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl RTC_PAD21_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_PAD21_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1078,25 +1078,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc pad hold configure\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_hold]
-(index.html) module"]
+#[doc = "rtc pad hold configure\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pad_hold](index.html) module"]
 pub struct PAD_HOLD_SPEC;
 impl crate::RegisterSpec for PAD_HOLD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pad_hold::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pad_hold::R](R) reader structure"]
 impl crate::Readable for PAD_HOLD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pad_hold::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pad_hold::W](W) writer structure"]
 impl crate::Writable for PAD_HOLD_SPEC {
     type Writer = W;
 }

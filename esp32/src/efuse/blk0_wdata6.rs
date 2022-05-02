@@ -35,7 +35,7 @@ impl From<crate::W<BLK0_WDATA6_SPEC>> for W {
     }
 }
 #[doc = "Field `CODING_SCHEME` reader - program for coding_scheme"]
-pub struct CODING_SCHEME_R(crate::FieldReader<u8, u8>);
+pub struct CODING_SCHEME_R(crate::FieldReader<u8>);
 impl CODING_SCHEME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CODING_SCHEME_R {
     }
 }
 impl core::ops::Deref for CODING_SCHEME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CODING_SCHEME_W<'a> {
     }
 }
 #[doc = "Field `CONSOLE_DEBUG_DISABLE` reader - program for console_debug_disable"]
-pub struct CONSOLE_DEBUG_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct CONSOLE_DEBUG_DISABLE_R(crate::FieldReader<bool>);
 impl CONSOLE_DEBUG_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl CONSOLE_DEBUG_DISABLE_R {
     }
 }
 impl core::ops::Deref for CONSOLE_DEBUG_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> CONSOLE_DEBUG_DISABLE_W<'a> {
     }
 }
 #[doc = "Field `DISABLE_SDIO_HOST` reader - "]
-pub struct DISABLE_SDIO_HOST_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_SDIO_HOST_R(crate::FieldReader<bool>);
 impl DISABLE_SDIO_HOST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl DISABLE_SDIO_HOST_R {
     }
 }
 impl core::ops::Deref for DISABLE_SDIO_HOST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> DISABLE_SDIO_HOST_W<'a> {
     }
 }
 #[doc = "Field `ABS_DONE_0` reader - program for abstract_done_0"]
-pub struct ABS_DONE_0_R(crate::FieldReader<bool, bool>);
+pub struct ABS_DONE_0_R(crate::FieldReader<bool>);
 impl ABS_DONE_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl ABS_DONE_0_R {
     }
 }
 impl core::ops::Deref for ABS_DONE_0_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ABS_DONE_0_W<'a> {
     }
 }
 #[doc = "Field `ABS_DONE_1` reader - program for abstract_done_1"]
-pub struct ABS_DONE_1_R(crate::FieldReader<bool, bool>);
+pub struct ABS_DONE_1_R(crate::FieldReader<bool>);
 impl ABS_DONE_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl ABS_DONE_1_R {
     }
 }
 impl core::ops::Deref for ABS_DONE_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> ABS_DONE_1_W<'a> {
     }
 }
 #[doc = "Field `DISABLE_JTAG` reader - program for JTAG_disable"]
-pub struct DISABLE_JTAG_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_JTAG_R(crate::FieldReader<bool>);
 impl DISABLE_JTAG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl DISABLE_JTAG_R {
     }
 }
 impl core::ops::Deref for DISABLE_JTAG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> DISABLE_JTAG_W<'a> {
     }
 }
 #[doc = "Field `DISABLE_DL_ENCRYPT` reader - program for download_dis_encrypt"]
-pub struct DISABLE_DL_ENCRYPT_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_DL_ENCRYPT_R(crate::FieldReader<bool>);
 impl DISABLE_DL_ENCRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl DISABLE_DL_ENCRYPT_R {
     }
 }
 impl core::ops::Deref for DISABLE_DL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> DISABLE_DL_ENCRYPT_W<'a> {
     }
 }
 #[doc = "Field `DISABLE_DL_DECRYPT` reader - program for download_dis_decrypt"]
-pub struct DISABLE_DL_DECRYPT_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_DL_DECRYPT_R(crate::FieldReader<bool>);
 impl DISABLE_DL_DECRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl DISABLE_DL_DECRYPT_R {
     }
 }
 impl core::ops::Deref for DISABLE_DL_DECRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> DISABLE_DL_DECRYPT_W<'a> {
     }
 }
 #[doc = "Field `DISABLE_DL_CACHE` reader - program for download_dis_cache"]
-pub struct DISABLE_DL_CACHE_R(crate::FieldReader<bool, bool>);
+pub struct DISABLE_DL_CACHE_R(crate::FieldReader<bool>);
 impl DISABLE_DL_CACHE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl DISABLE_DL_CACHE_R {
     }
 }
 impl core::ops::Deref for DISABLE_DL_CACHE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> DISABLE_DL_CACHE_W<'a> {
     }
 }
 #[doc = "Field `KEY_STATUS` reader - program for key_status"]
-pub struct KEY_STATUS_R(crate::FieldReader<bool, bool>);
+pub struct KEY_STATUS_R(crate::FieldReader<bool>);
 impl KEY_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl KEY_STATUS_R {
     }
 }
 impl core::ops::Deref for KEY_STATUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -504,25 +504,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata6]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata6](index.html) module"]
 pub struct BLK0_WDATA6_SPEC;
 impl crate::RegisterSpec for BLK0_WDATA6_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_wdata6::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_wdata6::R](R) reader structure"]
 impl crate::Readable for BLK0_WDATA6_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk0_wdata6::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk0_wdata6::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA6_SPEC {
     type Writer = W;
 }

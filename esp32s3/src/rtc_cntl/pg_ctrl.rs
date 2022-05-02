@@ -35,7 +35,7 @@ impl From<crate::W<PG_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `POWER_GLITCH_DSENSE` reader - GLITCH_DSENSE"]
-pub struct POWER_GLITCH_DSENSE_R(crate::FieldReader<u8, u8>);
+pub struct POWER_GLITCH_DSENSE_R(crate::FieldReader<u8>);
 impl POWER_GLITCH_DSENSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl POWER_GLITCH_DSENSE_R {
     }
 }
 impl core::ops::Deref for POWER_GLITCH_DSENSE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> POWER_GLITCH_DSENSE_W<'a> {
     }
 }
 #[doc = "Field `POWER_GLITCH_FORCE_PD` reader - force power glitch disable"]
-pub struct POWER_GLITCH_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct POWER_GLITCH_FORCE_PD_R(crate::FieldReader<bool>);
 impl POWER_GLITCH_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl POWER_GLITCH_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for POWER_GLITCH_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> POWER_GLITCH_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `POWER_GLITCH_FORCE_PU` reader - force power glitch enable"]
-pub struct POWER_GLITCH_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct POWER_GLITCH_FORCE_PU_R(crate::FieldReader<bool>);
 impl POWER_GLITCH_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl POWER_GLITCH_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for POWER_GLITCH_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> POWER_GLITCH_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` reader - select use analog fib signal"]
-pub struct POWER_GLITCH_EFUSE_SEL_R(crate::FieldReader<bool, bool>);
+pub struct POWER_GLITCH_EFUSE_SEL_R(crate::FieldReader<bool>);
 impl POWER_GLITCH_EFUSE_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl POWER_GLITCH_EFUSE_SEL_R {
     }
 }
 impl core::ops::Deref for POWER_GLITCH_EFUSE_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> POWER_GLITCH_EFUSE_SEL_W<'a> {
     }
 }
 #[doc = "Field `POWER_GLITCH_EN` reader - enable power glitch"]
-pub struct POWER_GLITCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct POWER_GLITCH_EN_R(crate::FieldReader<bool>);
 impl POWER_GLITCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl POWER_GLITCH_EN_R {
     }
 }
 impl core::ops::Deref for POWER_GLITCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -269,25 +269,16 @@ impl W {
         self
     }
 }
-#[doc = "configure power glitch\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pg_ctrl]
-(index.html) module"]
+#[doc = "configure power glitch\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pg_ctrl](index.html) module"]
 pub struct PG_CTRL_SPEC;
 impl crate::RegisterSpec for PG_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pg_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pg_ctrl::R](R) reader structure"]
 impl crate::Readable for PG_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pg_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pg_ctrl::W](W) writer structure"]
 impl crate::Writable for PG_CTRL_SPEC {
     type Writer = W;
 }

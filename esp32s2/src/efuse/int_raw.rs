@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `READ_DONE_INT_RAW` reader - The raw bit signal for read_done interrupt."]
-pub struct READ_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct READ_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl READ_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl READ_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for READ_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PGM_DONE_INT_RAW` reader - The raw bit signal for pgm_done interrupt."]
-pub struct PGM_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct PGM_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl PGM_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,7 +37,7 @@ impl PGM_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for PGM_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         PGM_DONE_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
-#[doc = "eFuse raw interrupt register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw]
-(index.html) module"]
+#[doc = "eFuse raw interrupt register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
 }

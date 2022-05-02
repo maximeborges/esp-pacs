@@ -35,7 +35,7 @@ impl From<crate::W<ECC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_ERR_INT_NUM` reader - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub struct ECC_ERR_INT_NUM_R(crate::FieldReader<u8, u8>);
+pub struct ECC_ERR_INT_NUM_R(crate::FieldReader<u8>);
 impl ECC_ERR_INT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ECC_ERR_INT_NUM_R {
     }
 }
 impl core::ops::Deref for ECC_ERR_INT_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ECC_ERR_INT_NUM_W<'a> {
     }
 }
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` reader - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub struct SPI_FMEM_ECC_ERR_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI_FMEM_ECC_ERR_INT_EN_R(crate::FieldReader<bool>);
 impl SPI_FMEM_ECC_ERR_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SPI_FMEM_ECC_ERR_INT_EN_R {
     }
 }
 impl core::ops::Deref for SPI_FMEM_ECC_ERR_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "MSPI ECC control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_ctrl]
-(index.html) module"]
+#[doc = "MSPI ECC control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_ctrl](index.html) module"]
 pub struct ECC_CTRL_SPEC;
 impl crate::RegisterSpec for ECC_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ecc_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ecc_ctrl::R](R) reader structure"]
 impl crate::Readable for ECC_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ecc_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ecc_ctrl::W](W) writer structure"]
 impl crate::Writable for ECC_CTRL_SPEC {
     type Writer = W;
 }

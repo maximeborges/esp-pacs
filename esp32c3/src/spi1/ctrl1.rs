@@ -35,7 +35,7 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
-pub struct CLK_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CLK_MODE_R(crate::FieldReader<u8>);
 impl CLK_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLK_MODE_R {
     }
 }
 impl core::ops::Deref for CLK_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -61,9 +61,8 @@ impl<'a> CLK_MODE_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 512) SPI_CLK cycles."]
-pub struct CS_HOLD_DLY_RES_R(crate::FieldReader<u16, u16>);
+#[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
+pub struct CS_HOLD_DLY_RES_R(crate::FieldReader<u16>);
 impl CS_HOLD_DLY_RES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -71,14 +70,13 @@ impl CS_HOLD_DLY_RES_R {
     }
 }
 impl core::ops::Deref for CS_HOLD_DLY_RES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 512) SPI_CLK cycles."]
+#[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
 pub struct CS_HOLD_DLY_RES_W<'a> {
     w: &'a mut W,
 }
@@ -96,8 +94,7 @@ impl R {
     pub fn clk_mode(&self) -> CLK_MODE_R {
         CLK_MODE_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bits 2:11 - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 512) SPI_CLK cycles."]
+    #[doc = "Bits 2:11 - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
     #[inline(always)]
     pub fn cs_hold_dly_res(&self) -> CS_HOLD_DLY_RES_R {
         CS_HOLD_DLY_RES_R::new(((self.bits >> 2) & 0x03ff) as u16)
@@ -109,8 +106,7 @@ impl W {
     pub fn clk_mode(&mut self) -> CLK_MODE_W {
         CLK_MODE_W { w: self }
     }
-    #[doc = "Bits 2:11 - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\]
- * 512) SPI_CLK cycles."]
+    #[doc = "Bits 2:11 - After RES/DP/HPM command is sent, SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 512) SPI_CLK cycles."]
     #[inline(always)]
     pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W {
         CS_HOLD_DLY_RES_W { w: self }
@@ -122,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 control1 register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1]
-(index.html) module"]
+#[doc = "SPI1 control1 register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl1](index.html) module"]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl1::R](R) reader structure"]
 impl crate::Readable for CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl1::W](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
 }

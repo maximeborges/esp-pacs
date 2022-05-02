@@ -35,7 +35,7 @@ impl From<crate::W<MISC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "USB_DEVICE_MISC_CONF_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc_conf]
-(index.html) module"]
+#[doc = "USB_DEVICE_MISC_CONF_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [misc_conf](index.html) module"]
 pub struct MISC_CONF_SPEC;
 impl crate::RegisterSpec for MISC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [misc_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [misc_conf::R](R) reader structure"]
 impl crate::Readable for MISC_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [misc_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [misc_conf::W](W) writer structure"]
 impl crate::Writable for MISC_CONF_SPEC {
     type Writer = W;
 }

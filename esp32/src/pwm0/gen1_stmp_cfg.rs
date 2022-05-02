@@ -35,7 +35,7 @@ impl From<crate::W<GEN1_STMP_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN1_A_UPMETHOD` reader - "]
-pub struct GEN1_A_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct GEN1_A_UPMETHOD_R(crate::FieldReader<u8>);
 impl GEN1_A_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl GEN1_A_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for GEN1_A_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> GEN1_A_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `GEN1_B_UPMETHOD` reader - "]
-pub struct GEN1_B_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct GEN1_B_UPMETHOD_R(crate::FieldReader<u8>);
 impl GEN1_B_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl GEN1_B_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for GEN1_B_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> GEN1_B_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `GEN1_A_SHDW_FULL` reader - "]
-pub struct GEN1_A_SHDW_FULL_R(crate::FieldReader<bool, bool>);
+pub struct GEN1_A_SHDW_FULL_R(crate::FieldReader<bool>);
 impl GEN1_A_SHDW_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl GEN1_A_SHDW_FULL_R {
     }
 }
 impl core::ops::Deref for GEN1_A_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> GEN1_A_SHDW_FULL_W<'a> {
     }
 }
 #[doc = "Field `GEN1_B_SHDW_FULL` reader - "]
-pub struct GEN1_B_SHDW_FULL_R(crate::FieldReader<bool, bool>);
+pub struct GEN1_B_SHDW_FULL_R(crate::FieldReader<bool>);
 impl GEN1_B_SHDW_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl GEN1_B_SHDW_FULL_R {
     }
 }
 impl core::ops::Deref for GEN1_B_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_stmp_cfg]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen1_stmp_cfg](index.html) module"]
 pub struct GEN1_STMP_CFG_SPEC;
 impl crate::RegisterSpec for GEN1_STMP_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gen1_stmp_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gen1_stmp_cfg::R](R) reader structure"]
 impl crate::Readable for GEN1_STMP_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gen1_stmp_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gen1_stmp_cfg::W](W) writer structure"]
 impl crate::Writable for GEN1_STMP_CFG_SPEC {
     type Writer = W;
 }

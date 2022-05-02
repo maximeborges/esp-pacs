@@ -35,7 +35,7 @@ impl From<crate::W<CORE_0_REGION_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0` reader - Region 0 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1` reader - Region 1 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2` reader - Region 2 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3` reader - Region 3 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4` reader - Region 4 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5` reader - Region 5 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6` reader - Region 6 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7` reader - Region 7 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8` reader - Region 8 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9` reader - Region 9 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_W<'a> {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10` reader - Region 10 permission in world 1 for core0."]
-pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_R(crate::FieldReader<u8>);
 impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -313,7 +313,7 @@ impl CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_R {
     }
 }
 impl core::ops::Deref for CORE_0_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -495,25 +495,16 @@ impl W {
         self
     }
 }
-#[doc = "Core0 region permission register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_region_pms_constrain_2]
-(index.html) module"]
+#[doc = "Core0 region permission register 2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_region_pms_constrain_2](index.html) module"]
 pub struct CORE_0_REGION_PMS_CONSTRAIN_2_SPEC;
 impl crate::RegisterSpec for CORE_0_REGION_PMS_CONSTRAIN_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_region_pms_constrain_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_region_pms_constrain_2::R](R) reader structure"]
 impl crate::Readable for CORE_0_REGION_PMS_CONSTRAIN_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_region_pms_constrain_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_region_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for CORE_0_REGION_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
 }

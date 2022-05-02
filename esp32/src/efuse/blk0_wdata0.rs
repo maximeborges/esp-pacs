@@ -35,7 +35,7 @@ impl From<crate::W<BLK0_WDATA0_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_DIS` reader - program for efuse_wr_disable"]
-pub struct WR_DIS_R(crate::FieldReader<u16, u16>);
+pub struct WR_DIS_R(crate::FieldReader<u16>);
 impl WR_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl WR_DIS_R {
     }
 }
 impl core::ops::Deref for WR_DIS_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> WR_DIS_W<'a> {
     }
 }
 #[doc = "Field `RD_DIS` reader - program for efuse_rd_disable"]
-pub struct RD_DIS_R(crate::FieldReader<u8, u8>);
+pub struct RD_DIS_R(crate::FieldReader<u8>);
 impl RD_DIS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RD_DIS_R {
     }
 }
 impl core::ops::Deref for RD_DIS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> RD_DIS_W<'a> {
     }
 }
 #[doc = "Field `FLASH_CRYPT_CNT` reader - program for flash_crypt_cnt"]
-pub struct FLASH_CRYPT_CNT_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_CRYPT_CNT_R(crate::FieldReader<u8>);
 impl FLASH_CRYPT_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl FLASH_CRYPT_CNT_R {
     }
 }
 impl core::ops::Deref for FLASH_CRYPT_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -155,25 +155,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_wdata0](index.html) module"]
 pub struct BLK0_WDATA0_SPEC;
 impl crate::RegisterSpec for BLK0_WDATA0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [blk0_wdata0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [blk0_wdata0::R](R) reader structure"]
 impl crate::Readable for BLK0_WDATA0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [blk0_wdata0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [blk0_wdata0::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA0_SPEC {
     type Writer = W;
 }

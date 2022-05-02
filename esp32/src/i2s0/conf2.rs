@@ -35,7 +35,7 @@ impl From<crate::W<CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CAMERA_EN` reader - "]
-pub struct CAMERA_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAMERA_EN_R(crate::FieldReader<bool>);
 impl CAMERA_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CAMERA_EN_R {
     }
 }
 impl core::ops::Deref for CAMERA_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CAMERA_EN_W<'a> {
     }
 }
 #[doc = "Field `LCD_TX_WRX2_EN` reader - "]
-pub struct LCD_TX_WRX2_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TX_WRX2_EN_R(crate::FieldReader<bool>);
 impl LCD_TX_WRX2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LCD_TX_WRX2_EN_R {
     }
 }
 impl core::ops::Deref for LCD_TX_WRX2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LCD_TX_WRX2_EN_W<'a> {
     }
 }
 #[doc = "Field `LCD_TX_SDX2_EN` reader - "]
-pub struct LCD_TX_SDX2_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_TX_SDX2_EN_R(crate::FieldReader<bool>);
 impl LCD_TX_SDX2_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl LCD_TX_SDX2_EN_R {
     }
 }
 impl core::ops::Deref for LCD_TX_SDX2_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> LCD_TX_SDX2_EN_W<'a> {
     }
 }
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - "]
-pub struct DATA_ENABLE_TEST_EN_R(crate::FieldReader<bool, bool>);
+pub struct DATA_ENABLE_TEST_EN_R(crate::FieldReader<bool>);
 impl DATA_ENABLE_TEST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DATA_ENABLE_TEST_EN_R {
     }
 }
 impl core::ops::Deref for DATA_ENABLE_TEST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DATA_ENABLE_TEST_EN_W<'a> {
     }
 }
 #[doc = "Field `DATA_ENABLE` reader - "]
-pub struct DATA_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct DATA_ENABLE_R(crate::FieldReader<bool>);
 impl DATA_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DATA_ENABLE_R {
     }
 }
 impl core::ops::Deref for DATA_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DATA_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `LCD_EN` reader - "]
-pub struct LCD_EN_R(crate::FieldReader<bool, bool>);
+pub struct LCD_EN_R(crate::FieldReader<bool>);
 impl LCD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl LCD_EN_R {
     }
 }
 impl core::ops::Deref for LCD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> LCD_EN_W<'a> {
     }
 }
 #[doc = "Field `EXT_ADC_START_EN` reader - "]
-pub struct EXT_ADC_START_EN_R(crate::FieldReader<bool, bool>);
+pub struct EXT_ADC_START_EN_R(crate::FieldReader<bool>);
 impl EXT_ADC_START_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl EXT_ADC_START_EN_R {
     }
 }
 impl core::ops::Deref for EXT_ADC_START_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> EXT_ADC_START_EN_W<'a> {
     }
 }
 #[doc = "Field `INTER_VALID_EN` reader - "]
-pub struct INTER_VALID_EN_R(crate::FieldReader<bool, bool>);
+pub struct INTER_VALID_EN_R(crate::FieldReader<bool>);
 impl INTER_VALID_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl INTER_VALID_EN_R {
     }
 }
 impl core::ops::Deref for INTER_VALID_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -420,25 +420,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf2](index.html) module"]
 pub struct CONF2_SPEC;
 impl crate::RegisterSpec for CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf2::R](R) reader structure"]
 impl crate::Readable for CONF2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf2::W](W) writer structure"]
 impl crate::Writable for CONF2_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKCNT_L` reader - It must equal to the value of SPI_MEM_CLKCNT_N."]
-pub struct CLKCNT_L_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_L_R(crate::FieldReader<u8>);
 impl CLKCNT_L_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CLKCNT_L_R {
     }
 }
 impl core::ops::Deref for CLKCNT_L_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CLKCNT_L_W<'a> {
     }
 }
 #[doc = "Field `CLKCNT_H` reader - It must be a floor value of ((SPI_MEM_CLKCNT_N+1)/2-1)."]
-pub struct CLKCNT_H_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_H_R(crate::FieldReader<u8>);
 impl CLKCNT_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CLKCNT_H_R {
     }
 }
 impl core::ops::Deref for CLKCNT_H_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CLKCNT_H_W<'a> {
     }
 }
 #[doc = "Field `CLKCNT_N` reader - When SPI1 accesses to flash or Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_CLKCNT_N+1)"]
-pub struct CLKCNT_N_R(crate::FieldReader<u8, u8>);
+pub struct CLKCNT_N_R(crate::FieldReader<u8>);
 impl CLKCNT_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CLKCNT_N_R {
     }
 }
 impl core::ops::Deref for CLKCNT_N_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CLKCNT_N_W<'a> {
     }
 }
 #[doc = "Field `CLK_EQU_SYSCLK` reader - When SPI1 access to flash or Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
-pub struct CLK_EQU_SYSCLK_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EQU_SYSCLK_R(crate::FieldReader<bool>);
 impl CLK_EQU_SYSCLK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl CLK_EQU_SYSCLK_R {
     }
 }
 impl core::ops::Deref for CLK_EQU_SYSCLK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI_CLK clock division register when SPI1 accesses to flash or Ext_RAM.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock]
-(index.html) module"]
+#[doc = "SPI_CLK clock division register when SPI1 accesses to flash or Ext_RAM.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock](index.html) module"]
 pub struct CLOCK_SPEC;
 impl crate::RegisterSpec for CLOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clock::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clock::R](R) reader structure"]
 impl crate::Readable for CLOCK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clock::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clock::W](W) writer structure"]
 impl crate::Writable for CLOCK_SPEC {
     type Writer = W;
 }

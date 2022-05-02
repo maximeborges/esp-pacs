@@ -35,7 +35,7 @@ impl From<crate::W<CORE_0_STATUSTABLE_CURRENT_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_STATUSTABLE_CURRENT` reader - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
-pub struct CORE_0_STATUSTABLE_CURRENT_R(crate::FieldReader<u16, u16>);
+pub struct CORE_0_STATUSTABLE_CURRENT_R(crate::FieldReader<u16>);
 impl CORE_0_STATUSTABLE_CURRENT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl CORE_0_STATUSTABLE_CURRENT_R {
     }
 }
 impl core::ops::Deref for CORE_0_STATUSTABLE_CURRENT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Status register of statustable current\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_statustable_current]
-(index.html) module"]
+#[doc = "Status register of statustable current\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_statustable_current](index.html) module"]
 pub struct CORE_0_STATUSTABLE_CURRENT_SPEC;
 impl crate::RegisterSpec for CORE_0_STATUSTABLE_CURRENT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_statustable_current::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_statustable_current::R](R) reader structure"]
 impl crate::Readable for CORE_0_STATUSTABLE_CURRENT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_0_statustable_current::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_0_statustable_current::W](W) writer structure"]
 impl crate::Writable for CORE_0_STATUSTABLE_CURRENT_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_CLK_ON` reader - Set 1 to enable icache clock"]
-pub struct ICACHE_CLK_ON_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_CLK_ON_R(crate::FieldReader<bool>);
 impl ICACHE_CLK_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_CLK_ON_R {
     }
 }
 impl core::ops::Deref for ICACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ICACHE_CLK_ON_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_RESET` reader - Set 1 to let icache reset"]
-pub struct ICACHE_RESET_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_RESET_R(crate::FieldReader<bool>);
 impl ICACHE_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ICACHE_RESET_R {
     }
 }
 impl core::ops::Deref for ICACHE_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ICACHE_RESET_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_CLK_ON` reader - Set 1 to enable dcache clock"]
-pub struct DCACHE_CLK_ON_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_CLK_ON_R(crate::FieldReader<bool>);
 impl DCACHE_CLK_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DCACHE_CLK_ON_R {
     }
 }
 impl core::ops::Deref for DCACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DCACHE_CLK_ON_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_RESET` reader - Set 1 to let dcache reset"]
-pub struct DCACHE_RESET_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_RESET_R(crate::FieldReader<bool>);
 impl DCACHE_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DCACHE_RESET_R {
     }
 }
 impl core::ops::Deref for DCACHE_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "Cache control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_control]
-(index.html) module"]
+#[doc = "Cache control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_control](index.html) module"]
 pub struct CACHE_CONTROL_SPEC;
 impl crate::RegisterSpec for CACHE_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_control::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_control::R](R) reader structure"]
 impl crate::Readable for CACHE_CONTROL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_control::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_control::W](W) writer structure"]
 impl crate::Writable for CACHE_CONTROL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS2_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_CNTL_STATE` reader - saradc2_cntl_fsm"]
-pub struct SAR2_CNTL_STATE_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_CNTL_STATE_R(crate::FieldReader<u8>);
 impl SAR2_CNTL_STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl SAR2_CNTL_STATE_R {
     }
 }
 impl core::ops::Deref for SAR2_CNTL_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SAR2_PWDET_CAL_EN` reader - rtc control pwdet enable"]
-pub struct SAR2_PWDET_CAL_EN_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_PWDET_CAL_EN_R(crate::FieldReader<bool>);
 impl SAR2_PWDET_CAL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,7 +58,7 @@ impl SAR2_PWDET_CAL_EN_R {
     }
 }
 impl core::ops::Deref for SAR2_PWDET_CAL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -87,7 +87,7 @@ impl<'a> SAR2_PWDET_CAL_EN_W<'a> {
     }
 }
 #[doc = "Field `SAR2_PKDET_CAL_EN` reader - rtc control pkdet enable"]
-pub struct SAR2_PKDET_CAL_EN_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_PKDET_CAL_EN_R(crate::FieldReader<bool>);
 impl SAR2_PKDET_CAL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -95,7 +95,7 @@ impl SAR2_PKDET_CAL_EN_R {
     }
 }
 impl core::ops::Deref for SAR2_PKDET_CAL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -124,7 +124,7 @@ impl<'a> SAR2_PKDET_CAL_EN_W<'a> {
     }
 }
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST"]
-pub struct SAR2_EN_TEST_R(crate::FieldReader<bool, bool>);
+pub struct SAR2_EN_TEST_R(crate::FieldReader<bool>);
 impl SAR2_EN_TEST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -132,7 +132,7 @@ impl SAR2_EN_TEST_R {
     }
 }
 impl core::ops::Deref for SAR2_EN_TEST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -161,7 +161,7 @@ impl<'a> SAR2_EN_TEST_W<'a> {
     }
 }
 #[doc = "Field `SAR2_RSTB_FORCE` reader - "]
-pub struct SAR2_RSTB_FORCE_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_RSTB_FORCE_R(crate::FieldReader<u8>);
 impl SAR2_RSTB_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -169,7 +169,7 @@ impl SAR2_RSTB_FORCE_R {
     }
 }
 impl core::ops::Deref for SAR2_RSTB_FORCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -188,7 +188,7 @@ impl<'a> SAR2_RSTB_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SAR2_STANDBY_WAIT` reader - "]
-pub struct SAR2_STANDBY_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_STANDBY_WAIT_R(crate::FieldReader<u8>);
 impl SAR2_STANDBY_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -196,7 +196,7 @@ impl SAR2_STANDBY_WAIT_R {
     }
 }
 impl core::ops::Deref for SAR2_STANDBY_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -215,7 +215,7 @@ impl<'a> SAR2_STANDBY_WAIT_W<'a> {
     }
 }
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8>);
 impl SAR2_RSTB_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -223,7 +223,7 @@ impl SAR2_RSTB_WAIT_R {
     }
 }
 impl core::ops::Deref for SAR2_RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -242,7 +242,7 @@ impl<'a> SAR2_RSTB_WAIT_W<'a> {
     }
 }
 #[doc = "Field `SAR2_XPD_WAIT` reader - "]
-pub struct SAR2_XPD_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct SAR2_XPD_WAIT_R(crate::FieldReader<u8>);
 impl SAR2_XPD_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -250,7 +250,7 @@ impl SAR2_XPD_WAIT_R {
     }
 }
 impl core::ops::Deref for SAR2_XPD_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,25 +353,16 @@ impl W {
         self
     }
 }
-#[doc = "configure rtc saradc2\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas2_ctrl1]
-(index.html) module"]
+#[doc = "configure rtc saradc2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_meas2_ctrl1](index.html) module"]
 pub struct SAR_MEAS2_CTRL1_SPEC;
 impl crate::RegisterSpec for SAR_MEAS2_CTRL1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_meas2_ctrl1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_meas2_ctrl1::R](R) reader structure"]
 impl crate::Readable for SAR_MEAS2_CTRL1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_meas2_ctrl1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_meas2_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_CTRL1_SPEC {
     type Writer = W;
 }

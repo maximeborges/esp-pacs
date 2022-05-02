@@ -35,7 +35,7 @@ impl From<crate::W<DCACHE_SYNC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub struct DCACHE_INVALIDATE_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_INVALIDATE_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_INVALIDATE_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DCACHE_INVALIDATE_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_INVALIDATE_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DCACHE_INVALIDATE_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_WRITEBACK_ENA` reader - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
-pub struct DCACHE_WRITEBACK_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_WRITEBACK_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_WRITEBACK_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DCACHE_WRITEBACK_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_WRITEBACK_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DCACHE_WRITEBACK_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub struct DCACHE_CLEAN_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_CLEAN_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_CLEAN_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DCACHE_CLEAN_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_CLEAN_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DCACHE_CLEAN_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_SYNC_DONE` reader - The bit is used to indicate clean/writeback/invalidate operation is finished."]
-pub struct DCACHE_SYNC_DONE_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_SYNC_DONE_R(crate::FieldReader<bool>);
 impl DCACHE_SYNC_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DCACHE_SYNC_DONE_R {
     }
 }
 impl core::ops::Deref for DCACHE_SYNC_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -205,25 +205,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_sync_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_sync_ctrl](index.html) module"]
 pub struct DCACHE_SYNC_CTRL_SPEC;
 impl crate::RegisterSpec for DCACHE_SYNC_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_sync_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dcache_sync_ctrl::R](R) reader structure"]
 impl crate::Readable for DCACHE_SYNC_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dcache_sync_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dcache_sync_ctrl::W](W) writer structure"]
 impl crate::Writable for DCACHE_SYNC_CTRL_SPEC {
     type Writer = W;
 }

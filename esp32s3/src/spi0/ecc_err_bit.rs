@@ -14,7 +14,7 @@ impl From<crate::R<ECC_ERR_BIT_SPEC>> for R {
     }
 }
 #[doc = "Field `ECC_DATA_ERR_BIT` reader - It records the first ECC data error bit number when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM. The value ranges from 0~127, corresponding to the bit number in 16 data bytes. It is cleared by SPI_MEM_ECC_ERR_INT_CLR bit."]
-pub struct ECC_DATA_ERR_BIT_R(crate::FieldReader<u8, u8>);
+pub struct ECC_DATA_ERR_BIT_R(crate::FieldReader<u8>);
 impl ECC_DATA_ERR_BIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl ECC_DATA_ERR_BIT_R {
     }
 }
 impl core::ops::Deref for ECC_DATA_ERR_BIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ECC_CHK_ERR_BIT` reader - When SPI_MEM_ECC_BYTE_ERR is set, these bits show the error bit number of ECC byte."]
-pub struct ECC_CHK_ERR_BIT_R(crate::FieldReader<u8, u8>);
+pub struct ECC_CHK_ERR_BIT_R(crate::FieldReader<u8>);
 impl ECC_CHK_ERR_BIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl ECC_CHK_ERR_BIT_R {
     }
 }
 impl core::ops::Deref for ECC_CHK_ERR_BIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ECC_BYTE_ERR` reader - It records the first ECC byte error when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM. It is cleared by SPI_MEM_ECC_ERR_INT_CLR bit."]
-pub struct ECC_BYTE_ERR_R(crate::FieldReader<bool, bool>);
+pub struct ECC_BYTE_ERR_R(crate::FieldReader<bool>);
 impl ECC_BYTE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl ECC_BYTE_ERR_R {
     }
 }
 impl core::ops::Deref for ECC_BYTE_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ECC_ERR_CNT` reader - This bits show the error times of MSPI ECC read, including ECC byte error and data byte error. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
-pub struct ECC_ERR_CNT_R(crate::FieldReader<u8, u8>);
+pub struct ECC_ERR_CNT_R(crate::FieldReader<u8>);
 impl ECC_ERR_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -67,7 +67,7 @@ impl ECC_ERR_CNT_R {
     }
 }
 impl core::ops::Deref for ECC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -95,16 +95,12 @@ impl R {
         ECC_ERR_CNT_R::new(((self.bits >> 17) & 0xff) as u8)
     }
 }
-#[doc = "MSPI ECC error bits register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_err_bit]
-(index.html) module"]
+#[doc = "MSPI ECC error bits register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_err_bit](index.html) module"]
 pub struct ECC_ERR_BIT_SPEC;
 impl crate::RegisterSpec for ECC_ERR_BIT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ecc_err_bit::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ecc_err_bit::R](R) reader structure"]
 impl crate::Readable for ECC_ERR_BIT_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<XTAL32K_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_RETURN_WAIT` reader - cycles to wait to return noral xtal 32k"]
-pub struct XTAL32K_RETURN_WAIT_R(crate::FieldReader<u8, u8>);
+pub struct XTAL32K_RETURN_WAIT_R(crate::FieldReader<u8>);
 impl XTAL32K_RETURN_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl XTAL32K_RETURN_WAIT_R {
     }
 }
 impl core::ops::Deref for XTAL32K_RETURN_WAIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> XTAL32K_RETURN_WAIT_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_RESTART_WAIT` reader - cycles to wait to repower on xtal 32k"]
-pub struct XTAL32K_RESTART_WAIT_R(crate::FieldReader<u16, u16>);
+pub struct XTAL32K_RESTART_WAIT_R(crate::FieldReader<u16>);
 impl XTAL32K_RESTART_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl XTAL32K_RESTART_WAIT_R {
     }
 }
 impl core::ops::Deref for XTAL32K_RESTART_WAIT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> XTAL32K_RESTART_WAIT_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_WDT_TIMEOUT` reader - If no clock detected for this amount of time 32k is regarded as dead"]
-pub struct XTAL32K_WDT_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct XTAL32K_WDT_TIMEOUT_R(crate::FieldReader<u8>);
 impl XTAL32K_WDT_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl XTAL32K_WDT_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for XTAL32K_WDT_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> XTAL32K_WDT_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_STABLE_THRES` reader - if restarted xtal32k period is smaller than this, it is regarded as stable"]
-pub struct XTAL32K_STABLE_THRES_R(crate::FieldReader<u8, u8>);
+pub struct XTAL32K_STABLE_THRES_R(crate::FieldReader<u8>);
 impl XTAL32K_STABLE_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl XTAL32K_STABLE_THRES_R {
     }
 }
 impl core::ops::Deref for XTAL32K_STABLE_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "configure xtal32k\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k_conf]
-(index.html) module"]
+#[doc = "configure xtal32k\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [xtal32k_conf](index.html) module"]
 pub struct XTAL32K_CONF_SPEC;
 impl crate::RegisterSpec for XTAL32K_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [xtal32k_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [xtal32k_conf::R](R) reader structure"]
 impl crate::Readable for XTAL32K_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [xtal32k_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [xtal32k_conf::W](W) writer structure"]
 impl crate::Writable for XTAL32K_CONF_SPEC {
     type Writer = W;
 }

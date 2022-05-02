@@ -35,7 +35,7 @@ impl From<crate::W<CLK_EDGE_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `CCLKIN_EDGE_DRV_SEL` reader - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
-pub struct CCLKIN_EDGE_DRV_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CCLKIN_EDGE_DRV_SEL_R(crate::FieldReader<u8>);
 impl CCLKIN_EDGE_DRV_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CCLKIN_EDGE_DRV_SEL_R {
     }
 }
 impl core::ops::Deref for CCLKIN_EDGE_DRV_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CCLKIN_EDGE_DRV_SEL_W<'a> {
     }
 }
 #[doc = "Field `CCLKIN_EDGE_SAM_SEL` reader - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
-pub struct CCLKIN_EDGE_SAM_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CCLKIN_EDGE_SAM_SEL_R(crate::FieldReader<u8>);
 impl CCLKIN_EDGE_SAM_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CCLKIN_EDGE_SAM_SEL_R {
     }
 }
 impl core::ops::Deref for CCLKIN_EDGE_SAM_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CCLKIN_EDGE_SAM_SEL_W<'a> {
     }
 }
 #[doc = "Field `CCLKIN_EDGE_SLF_SEL` reader - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
-pub struct CCLKIN_EDGE_SLF_SEL_R(crate::FieldReader<u8, u8>);
+pub struct CCLKIN_EDGE_SLF_SEL_R(crate::FieldReader<u8>);
 impl CCLKIN_EDGE_SLF_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CCLKIN_EDGE_SLF_SEL_R {
     }
 }
 impl core::ops::Deref for CCLKIN_EDGE_SLF_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CCLKIN_EDGE_SLF_SEL_W<'a> {
     }
 }
 #[doc = "Field `CCLLKIN_EDGE_H` reader - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
-pub struct CCLLKIN_EDGE_H_R(crate::FieldReader<u8, u8>);
+pub struct CCLLKIN_EDGE_H_R(crate::FieldReader<u8>);
 impl CCLLKIN_EDGE_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CCLLKIN_EDGE_H_R {
     }
 }
 impl core::ops::Deref for CCLLKIN_EDGE_H_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CCLLKIN_EDGE_H_W<'a> {
     }
 }
 #[doc = "Field `CCLLKIN_EDGE_L` reader - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
-pub struct CCLLKIN_EDGE_L_R(crate::FieldReader<u8, u8>);
+pub struct CCLLKIN_EDGE_L_R(crate::FieldReader<u8>);
 impl CCLLKIN_EDGE_L_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl CCLLKIN_EDGE_L_R {
     }
 }
 impl core::ops::Deref for CCLLKIN_EDGE_L_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> CCLLKIN_EDGE_L_W<'a> {
     }
 }
 #[doc = "Field `CCLLKIN_EDGE_N` reader - The value should be equal to CCLKIN_EDGE_L."]
-pub struct CCLLKIN_EDGE_N_R(crate::FieldReader<u8, u8>);
+pub struct CCLLKIN_EDGE_N_R(crate::FieldReader<u8>);
 impl CCLLKIN_EDGE_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl CCLLKIN_EDGE_N_R {
     }
 }
 impl core::ops::Deref for CCLLKIN_EDGE_N_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> CCLLKIN_EDGE_N_W<'a> {
     }
 }
 #[doc = "Field `ESDIO_MODE` reader - Enable esdio mode."]
-pub struct ESDIO_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ESDIO_MODE_R(crate::FieldReader<bool>);
 impl ESDIO_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -205,7 +205,7 @@ impl ESDIO_MODE_R {
     }
 }
 impl core::ops::Deref for ESDIO_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -234,7 +234,7 @@ impl<'a> ESDIO_MODE_W<'a> {
     }
 }
 #[doc = "Field `ESD_MODE` reader - Enable esd mode."]
-pub struct ESD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ESD_MODE_R(crate::FieldReader<bool>);
 impl ESD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -242,7 +242,7 @@ impl ESD_MODE_R {
     }
 }
 impl core::ops::Deref for ESD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -271,7 +271,7 @@ impl<'a> ESD_MODE_W<'a> {
     }
 }
 #[doc = "Field `CCLK_EN` reader - Sdio clock enable"]
-pub struct CCLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CCLK_EN_R(crate::FieldReader<bool>);
 impl CCLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -279,7 +279,7 @@ impl CCLK_EN_R {
     }
 }
 impl core::ops::Deref for CCLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -407,25 +407,16 @@ impl W {
         self
     }
 }
-#[doc = "SDIO control register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_edge_sel]
-(index.html) module"]
+#[doc = "SDIO control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_edge_sel](index.html) module"]
 pub struct CLK_EDGE_SEL_SPEC;
 impl crate::RegisterSpec for CLK_EDGE_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_edge_sel::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_edge_sel::R](R) reader structure"]
 impl crate::Readable for CLK_EDGE_SEL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_edge_sel::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_edge_sel::W](W) writer structure"]
 impl crate::Writable for CLK_EDGE_SEL_SPEC {
     type Writer = W;
 }

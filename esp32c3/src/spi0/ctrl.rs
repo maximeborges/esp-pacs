@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FDUMMY_OUT` reader - In the dummy phase the signal level of spi is output by the spi controller."]
-pub struct FDUMMY_OUT_R(crate::FieldReader<bool, bool>);
+pub struct FDUMMY_OUT_R(crate::FieldReader<bool>);
 impl FDUMMY_OUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FDUMMY_OUT_R {
     }
 }
 impl core::ops::Deref for FDUMMY_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FDUMMY_OUT_W<'a> {
     }
 }
 #[doc = "Field `FCMD_DUAL` reader - Apply 2 signals during command phase 1:enable 0: disable"]
-pub struct FCMD_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FCMD_DUAL_R(crate::FieldReader<bool>);
 impl FCMD_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FCMD_DUAL_R {
     }
 }
 impl core::ops::Deref for FCMD_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FCMD_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FCMD_QUAD` reader - Apply 4 signals during command phase 1:enable 0: disable"]
-pub struct FCMD_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FCMD_QUAD_R(crate::FieldReader<bool>);
 impl FCMD_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FCMD_QUAD_R {
     }
 }
 impl core::ops::Deref for FCMD_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FCMD_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FASTRD_MODE` reader - This bit enable the bits: spi_mem_fread_qio, spi_mem_fread_dio, spi_mem_fread_qout and spi_mem_fread_dout. 1: enable 0: disable."]
-pub struct FASTRD_MODE_R(crate::FieldReader<bool, bool>);
+pub struct FASTRD_MODE_R(crate::FieldReader<bool>);
 impl FASTRD_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FASTRD_MODE_R {
     }
 }
 impl core::ops::Deref for FASTRD_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FASTRD_MODE_W<'a> {
     }
 }
 #[doc = "Field `FREAD_DUAL` reader - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
-pub struct FREAD_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_DUAL_R(crate::FieldReader<bool>);
 impl FREAD_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FREAD_DUAL_R {
     }
 }
 impl core::ops::Deref for FREAD_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FREAD_DUAL_W<'a> {
     }
 }
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low"]
-pub struct Q_POL_R(crate::FieldReader<bool, bool>);
+pub struct Q_POL_R(crate::FieldReader<bool>);
 impl Q_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl Q_POL_R {
     }
 }
 impl core::ops::Deref for Q_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> Q_POL_W<'a> {
     }
 }
 #[doc = "Field `D_POL` reader - The bit is used to set MOSI line polarity, 1: high 0, low"]
-pub struct D_POL_R(crate::FieldReader<bool, bool>);
+pub struct D_POL_R(crate::FieldReader<bool>);
 impl D_POL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl D_POL_R {
     }
 }
 impl core::ops::Deref for D_POL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> D_POL_W<'a> {
     }
 }
 #[doc = "Field `FREAD_QUAD` reader - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
-pub struct FREAD_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_QUAD_R(crate::FieldReader<bool>);
 impl FREAD_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl FREAD_QUAD_R {
     }
 }
 impl core::ops::Deref for FREAD_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> FREAD_QUAD_W<'a> {
     }
 }
 #[doc = "Field `WP` reader - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
-pub struct WP_R(crate::FieldReader<bool, bool>);
+pub struct WP_R(crate::FieldReader<bool>);
 impl WP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl WP_R {
     }
 }
 impl core::ops::Deref for WP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> WP_W<'a> {
     }
 }
 #[doc = "Field `FREAD_DIO` reader - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
-pub struct FREAD_DIO_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_DIO_R(crate::FieldReader<bool>);
 impl FREAD_DIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl FREAD_DIO_R {
     }
 }
 impl core::ops::Deref for FREAD_DIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> FREAD_DIO_W<'a> {
     }
 }
 #[doc = "Field `FREAD_QIO` reader - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
-pub struct FREAD_QIO_R(crate::FieldReader<bool, bool>);
+pub struct FREAD_QIO_R(crate::FieldReader<bool>);
 impl FREAD_QIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl FREAD_QIO_R {
     }
 }
 impl core::ops::Deref for FREAD_QIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -561,25 +561,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI0 control register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "SPI0 control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

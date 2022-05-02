@@ -35,7 +35,7 @@ impl From<crate::W<FILTER_CTRL0_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_FILTER_CHANNEL1` reader - configure filter1 to adc channel"]
-pub struct APB_SARADC_FILTER_CHANNEL1_R(crate::FieldReader<u8, u8>);
+pub struct APB_SARADC_FILTER_CHANNEL1_R(crate::FieldReader<u8>);
 impl APB_SARADC_FILTER_CHANNEL1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl APB_SARADC_FILTER_CHANNEL1_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_FILTER_CHANNEL1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> APB_SARADC_FILTER_CHANNEL1_W<'a> {
     }
 }
 #[doc = "Field `APB_SARADC_FILTER_CHANNEL0` reader - configure filter0 to adc channel"]
-pub struct APB_SARADC_FILTER_CHANNEL0_R(crate::FieldReader<u8, u8>);
+pub struct APB_SARADC_FILTER_CHANNEL0_R(crate::FieldReader<u8>);
 impl APB_SARADC_FILTER_CHANNEL0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl APB_SARADC_FILTER_CHANNEL0_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_FILTER_CHANNEL0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> APB_SARADC_FILTER_CHANNEL0_W<'a> {
     }
 }
 #[doc = "Field `APB_SARADC_FILTER_RESET` reader - enable apb_adc1_filter"]
-pub struct APB_SARADC_FILTER_RESET_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_FILTER_RESET_R(crate::FieldReader<bool>);
 impl APB_SARADC_FILTER_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl APB_SARADC_FILTER_RESET_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_FILTER_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "digital saradc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [filter_ctrl0]
-(index.html) module"]
+#[doc = "digital saradc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [filter_ctrl0](index.html) module"]
 pub struct FILTER_CTRL0_SPEC;
 impl crate::RegisterSpec for FILTER_CTRL0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [filter_ctrl0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [filter_ctrl0::R](R) reader structure"]
 impl crate::Readable for FILTER_CTRL0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [filter_ctrl0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [filter_ctrl0::W](W) writer structure"]
 impl crate::Writable for FILTER_CTRL0_SPEC {
     type Writer = W;
 }

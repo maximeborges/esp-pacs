@@ -35,7 +35,7 @@ impl From<crate::W<HOST_SLCHOST_CONF_W11_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CONF44` reader - "]
-pub struct HOST_SLCHOST_CONF44_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_CONF44_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_CONF44_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl HOST_SLCHOST_CONF44_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_CONF44_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> HOST_SLCHOST_CONF44_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CONF45` reader - "]
-pub struct HOST_SLCHOST_CONF45_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_CONF45_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_CONF45_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl HOST_SLCHOST_CONF45_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_CONF45_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> HOST_SLCHOST_CONF45_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CONF46` reader - "]
-pub struct HOST_SLCHOST_CONF46_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_CONF46_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_CONF46_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl HOST_SLCHOST_CONF46_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_CONF46_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> HOST_SLCHOST_CONF46_W<'a> {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CONF47` reader - "]
-pub struct HOST_SLCHOST_CONF47_R(crate::FieldReader<u8, u8>);
+pub struct HOST_SLCHOST_CONF47_R(crate::FieldReader<u8>);
 impl HOST_SLCHOST_CONF47_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl HOST_SLCHOST_CONF47_R {
     }
 }
 impl core::ops::Deref for HOST_SLCHOST_CONF47_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_conf_w11]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_conf_w11](index.html) module"]
 pub struct HOST_SLCHOST_CONF_W11_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_CONF_W11_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [host_slchost_conf_w11::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [host_slchost_conf_w11::R](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_CONF_W11_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [host_slchost_conf_w11::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [host_slchost_conf_w11::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_W11_SPEC {
     type Writer = W;
 }

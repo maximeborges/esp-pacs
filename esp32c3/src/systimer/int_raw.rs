@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `TARGET0_INT_RAW` reader - interupt0 raw"]
-pub struct TARGET0_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TARGET0_INT_RAW_R(crate::FieldReader<bool>);
 impl TARGET0_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl TARGET0_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TARGET0_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TARGET1_INT_RAW` reader - interupt1 raw"]
-pub struct TARGET1_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TARGET1_INT_RAW_R(crate::FieldReader<bool>);
 impl TARGET1_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TARGET1_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TARGET1_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TARGET2_INT_RAW` reader - interupt2 raw"]
-pub struct TARGET2_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TARGET2_INT_RAW_R(crate::FieldReader<bool>);
 impl TARGET2_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl TARGET2_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TARGET2_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         TARGET2_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
-#[doc = "SYSTIMER_INT_RAW.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw]
-(index.html) module"]
+#[doc = "SYSTIMER_INT_RAW.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
 }

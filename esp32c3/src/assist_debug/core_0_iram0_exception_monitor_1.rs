@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_IRAM0_EXCEPTION_MONITOR_1_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_ADDR_1` reader - reg_core_0_iram0_recording_addr_1"]
-pub struct CORE_0_IRAM0_RECORDING_ADDR_1_R(crate::FieldReader<u32, u32>);
+pub struct CORE_0_IRAM0_RECORDING_ADDR_1_R(crate::FieldReader<u32>);
 impl CORE_0_IRAM0_RECORDING_ADDR_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl CORE_0_IRAM0_RECORDING_ADDR_1_R {
     }
 }
 impl core::ops::Deref for CORE_0_IRAM0_RECORDING_ADDR_1_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_WR_1` reader - reg_core_0_iram0_recording_wr_1"]
-pub struct CORE_0_IRAM0_RECORDING_WR_1_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_IRAM0_RECORDING_WR_1_R(crate::FieldReader<bool>);
 impl CORE_0_IRAM0_RECORDING_WR_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CORE_0_IRAM0_RECORDING_WR_1_R {
     }
 }
 impl core::ops::Deref for CORE_0_IRAM0_RECORDING_WR_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_LOADSTORE_1` reader - reg_core_0_iram0_recording_loadstore_1"]
-pub struct CORE_0_IRAM0_RECORDING_LOADSTORE_1_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_IRAM0_RECORDING_LOADSTORE_1_R(crate::FieldReader<bool>);
 impl CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,7 +52,7 @@ impl CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
     }
 }
 impl core::ops::Deref for CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         CORE_0_IRAM0_RECORDING_LOADSTORE_1_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
-#[doc = "ASSIST_DEBUG_CORE_0_IRAM0_EXCEPTION_MONITOR_1_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_iram0_exception_monitor_1]
-(index.html) module"]
+#[doc = "ASSIST_DEBUG_CORE_0_IRAM0_EXCEPTION_MONITOR_1_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_iram0_exception_monitor_1](index.html) module"]
 pub struct CORE_0_IRAM0_EXCEPTION_MONITOR_1_SPEC;
 impl crate::RegisterSpec for CORE_0_IRAM0_EXCEPTION_MONITOR_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_iram0_exception_monitor_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_iram0_exception_monitor_1::R](R) reader structure"]
 impl crate::Readable for CORE_0_IRAM0_EXCEPTION_MONITOR_1_SPEC {
     type Reader = R;
 }

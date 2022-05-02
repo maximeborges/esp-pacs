@@ -35,7 +35,7 @@ impl From<crate::W<SWFC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `XOFF_THRESHOLD` reader - When the number of data bytes in RX FIFO is more than this register's value with UART_SW_FLOW_CON_EN set to 1, the transmitter sends an XOFF character."]
-pub struct XOFF_THRESHOLD_R(crate::FieldReader<u16, u16>);
+pub struct XOFF_THRESHOLD_R(crate::FieldReader<u16>);
 impl XOFF_THRESHOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl XOFF_THRESHOLD_R {
     }
 }
 impl core::ops::Deref for XOFF_THRESHOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> XOFF_THRESHOLD_W<'a> {
     }
 }
 #[doc = "Field `XOFF_CHAR` reader - This register stores the XOFF flow control character."]
-pub struct XOFF_CHAR_R(crate::FieldReader<u8, u8>);
+pub struct XOFF_CHAR_R(crate::FieldReader<u8>);
 impl XOFF_CHAR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl XOFF_CHAR_R {
     }
 }
 impl core::ops::Deref for XOFF_CHAR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Software flow control character configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf0]
-(index.html) module"]
+#[doc = "Software flow control character configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swfc_conf0](index.html) module"]
 pub struct SWFC_CONF0_SPEC;
 impl crate::RegisterSpec for SWFC_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swfc_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [swfc_conf0::R](R) reader structure"]
 impl crate::Readable for SWFC_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [swfc_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [swfc_conf0::W](W) writer structure"]
 impl crate::Writable for SWFC_CONF0_SPEC {
     type Writer = W;
 }

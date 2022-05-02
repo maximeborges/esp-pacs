@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_CONF_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by preload operation."]
-pub struct CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R(crate::FieldReader<bool>);
 impl CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R {
     }
 }
 impl core::ops::Deref for CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a> {
     }
 }
 #[doc = "Field `CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by sync operation."]
-pub struct CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R(crate::FieldReader<bool>);
 impl CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R {
     }
 }
 impl core::ops::Deref for CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a> {
     }
 }
 #[doc = "Field `CACHE_TRACE_ENA` reader - The bit is used to enable cache trace function."]
-pub struct CACHE_TRACE_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_TRACE_ENA_R(crate::FieldReader<bool>);
 impl CACHE_TRACE_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CACHE_TRACE_ENA_R {
     }
 }
 impl core::ops::Deref for CACHE_TRACE_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -187,25 +187,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_conf_misc]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_conf_misc](index.html) module"]
 pub struct CACHE_CONF_MISC_SPEC;
 impl crate::RegisterSpec for CACHE_CONF_MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_conf_misc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_conf_misc::R](R) reader structure"]
 impl crate::Readable for CACHE_CONF_MISC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_conf_misc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_conf_misc::W](W) writer structure"]
 impl crate::Writable for CACHE_CONF_MISC_SPEC {
     type Writer = W;
 }

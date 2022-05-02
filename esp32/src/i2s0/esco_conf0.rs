@@ -35,7 +35,7 @@ impl From<crate::W<ESCO_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `ESCO_EN` reader - "]
-pub struct ESCO_EN_R(crate::FieldReader<bool, bool>);
+pub struct ESCO_EN_R(crate::FieldReader<bool>);
 impl ESCO_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ESCO_EN_R {
     }
 }
 impl core::ops::Deref for ESCO_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ESCO_EN_W<'a> {
     }
 }
 #[doc = "Field `ESCO_CHAN_MOD` reader - "]
-pub struct ESCO_CHAN_MOD_R(crate::FieldReader<bool, bool>);
+pub struct ESCO_CHAN_MOD_R(crate::FieldReader<bool>);
 impl ESCO_CHAN_MOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ESCO_CHAN_MOD_R {
     }
 }
 impl core::ops::Deref for ESCO_CHAN_MOD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ESCO_CHAN_MOD_W<'a> {
     }
 }
 #[doc = "Field `ESCO_CVSD_DEC_PACK_ERR` reader - "]
-pub struct ESCO_CVSD_DEC_PACK_ERR_R(crate::FieldReader<bool, bool>);
+pub struct ESCO_CVSD_DEC_PACK_ERR_R(crate::FieldReader<bool>);
 impl ESCO_CVSD_DEC_PACK_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ESCO_CVSD_DEC_PACK_ERR_R {
     }
 }
 impl core::ops::Deref for ESCO_CVSD_DEC_PACK_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ESCO_CVSD_DEC_PACK_ERR_W<'a> {
     }
 }
 #[doc = "Field `ESCO_CVSD_PACK_LEN_8K` reader - "]
-pub struct ESCO_CVSD_PACK_LEN_8K_R(crate::FieldReader<u8, u8>);
+pub struct ESCO_CVSD_PACK_LEN_8K_R(crate::FieldReader<u8>);
 impl ESCO_CVSD_PACK_LEN_8K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl ESCO_CVSD_PACK_LEN_8K_R {
     }
 }
 impl core::ops::Deref for ESCO_CVSD_PACK_LEN_8K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ESCO_CVSD_PACK_LEN_8K_W<'a> {
     }
 }
 #[doc = "Field `ESCO_CVSD_INF_EN` reader - "]
-pub struct ESCO_CVSD_INF_EN_R(crate::FieldReader<bool, bool>);
+pub struct ESCO_CVSD_INF_EN_R(crate::FieldReader<bool>);
 impl ESCO_CVSD_INF_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl ESCO_CVSD_INF_EN_R {
     }
 }
 impl core::ops::Deref for ESCO_CVSD_INF_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> ESCO_CVSD_INF_EN_W<'a> {
     }
 }
 #[doc = "Field `CVSD_DEC_START` reader - "]
-pub struct CVSD_DEC_START_R(crate::FieldReader<bool, bool>);
+pub struct CVSD_DEC_START_R(crate::FieldReader<bool>);
 impl CVSD_DEC_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl CVSD_DEC_START_R {
     }
 }
 impl core::ops::Deref for CVSD_DEC_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -247,7 +247,7 @@ impl<'a> CVSD_DEC_START_W<'a> {
     }
 }
 #[doc = "Field `CVSD_DEC_RESET` reader - "]
-pub struct CVSD_DEC_RESET_R(crate::FieldReader<bool, bool>);
+pub struct CVSD_DEC_RESET_R(crate::FieldReader<bool>);
 impl CVSD_DEC_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -255,7 +255,7 @@ impl CVSD_DEC_RESET_R {
     }
 }
 impl core::ops::Deref for CVSD_DEC_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -284,7 +284,7 @@ impl<'a> CVSD_DEC_RESET_W<'a> {
     }
 }
 #[doc = "Field `PLC_EN` reader - "]
-pub struct PLC_EN_R(crate::FieldReader<bool, bool>);
+pub struct PLC_EN_R(crate::FieldReader<bool>);
 impl PLC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl PLC_EN_R {
     }
 }
 impl core::ops::Deref for PLC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> PLC_EN_W<'a> {
     }
 }
 #[doc = "Field `PLC2DMA_EN` reader - "]
-pub struct PLC2DMA_EN_R(crate::FieldReader<bool, bool>);
+pub struct PLC2DMA_EN_R(crate::FieldReader<bool>);
 impl PLC2DMA_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl PLC2DMA_EN_R {
     }
 }
 impl core::ops::Deref for PLC2DMA_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -457,25 +457,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [esco_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [esco_conf0](index.html) module"]
 pub struct ESCO_CONF0_SPEC;
 impl crate::RegisterSpec for ESCO_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [esco_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [esco_conf0::R](R) reader structure"]
 impl crate::Readable for ESCO_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [esco_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [esco_conf0::W](W) writer structure"]
 impl crate::Writable for ESCO_CONF0_SPEC {
     type Writer = W;
 }

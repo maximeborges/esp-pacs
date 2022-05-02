@@ -35,7 +35,7 @@ impl From<crate::W<TIMER2_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - minimal cycles in slow_clk_rtc for CK8M in power down state"]
-pub struct MIN_TIME_CK8M_OFF_R(crate::FieldReader<u8, u8>);
+pub struct MIN_TIME_CK8M_OFF_R(crate::FieldReader<u8>);
 impl MIN_TIME_CK8M_OFF_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MIN_TIME_CK8M_OFF_R {
     }
 }
 impl core::ops::Deref for MIN_TIME_CK8M_OFF_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer2]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer2](index.html) module"]
 pub struct TIMER2_SPEC;
 impl crate::RegisterSpec for TIMER2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer2::R](R) reader structure"]
 impl crate::Readable for TIMER2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer2::W](W) writer structure"]
 impl crate::Writable for TIMER2_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<OUT_LINK_CH2_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR_CH2` reader - This register stores the 20 least significant bits of the first outlink descriptor's address."]
-pub struct OUTLINK_ADDR_CH2_R(crate::FieldReader<u32, u32>);
+pub struct OUTLINK_ADDR_CH2_R(crate::FieldReader<u32>);
 impl OUTLINK_ADDR_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl OUTLINK_ADDR_CH2_R {
     }
 }
 impl core::ops::Deref for OUTLINK_ADDR_CH2_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> OUTLINK_ADDR_CH2_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_STOP_CH2` reader - Set this bit to stop dealing with the outlink descriptors."]
-pub struct OUTLINK_STOP_CH2_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_STOP_CH2_R(crate::FieldReader<bool>);
 impl OUTLINK_STOP_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl OUTLINK_STOP_CH2_R {
     }
 }
 impl core::ops::Deref for OUTLINK_STOP_CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> OUTLINK_STOP_CH2_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_START_CH2` reader - Set this bit to start dealing with the outlink descriptors."]
-pub struct OUTLINK_START_CH2_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_START_CH2_R(crate::FieldReader<bool>);
 impl OUTLINK_START_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl OUTLINK_START_CH2_R {
     }
 }
 impl core::ops::Deref for OUTLINK_START_CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> OUTLINK_START_CH2_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_RESTART_CH2` reader - Set this bit to restart a new outlink from the last address."]
-pub struct OUTLINK_RESTART_CH2_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_RESTART_CH2_R(crate::FieldReader<bool>);
 impl OUTLINK_RESTART_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl OUTLINK_RESTART_CH2_R {
     }
 }
 impl core::ops::Deref for OUTLINK_RESTART_CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> OUTLINK_RESTART_CH2_W<'a> {
     }
 }
 #[doc = "Field `OUTLINK_PARK_CH2` reader - 1: the outlink descriptor's FSM is in idle state. 0: the outlink descriptor's FSM is working."]
-pub struct OUTLINK_PARK_CH2_R(crate::FieldReader<bool, bool>);
+pub struct OUTLINK_PARK_CH2_R(crate::FieldReader<bool>);
 impl OUTLINK_PARK_CH2_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl OUTLINK_PARK_CH2_R {
     }
 }
 impl core::ops::Deref for OUTLINK_PARK_CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -242,25 +242,16 @@ impl W {
         self
     }
 }
-#[doc = "DMA_OUT_LINK_CH2_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_link_ch2]
-(index.html) module"]
+#[doc = "DMA_OUT_LINK_CH2_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_link_ch2](index.html) module"]
 pub struct OUT_LINK_CH2_SPEC;
 impl crate::RegisterSpec for OUT_LINK_CH2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_link_ch2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [out_link_ch2::R](R) reader structure"]
 impl crate::Readable for OUT_LINK_CH2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [out_link_ch2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out_link_ch2::W](W) writer structure"]
 impl crate::Writable for OUT_LINK_CH2_SPEC {
     type Writer = W;
 }

@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "HMAC configuration completion register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_finish]
-(index.html) module"]
+#[doc = "HMAC configuration completion register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_finish](index.html) module"]
 pub struct SET_PARA_FINISH_SPEC;
 impl crate::RegisterSpec for SET_PARA_FINISH_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_para_finish::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_para_finish::W](W) writer structure"]
 impl crate::Writable for SET_PARA_FINISH_SPEC {
     type Writer = W;
 }

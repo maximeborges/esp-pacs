@@ -35,7 +35,7 @@ impl From<crate::W<RWBLE_IRQ_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `RWBLE_IRQ_MAP` reader - this register used to map rwble_irq interrupt to one of core1's external interrupt"]
-pub struct RWBLE_IRQ_MAP_R(crate::FieldReader<u8, u8>);
+pub struct RWBLE_IRQ_MAP_R(crate::FieldReader<u8>);
 impl RWBLE_IRQ_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RWBLE_IRQ_MAP_R {
     }
 }
 impl core::ops::Deref for RWBLE_IRQ_MAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "rwble_irq interrupt configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rwble_irq_map]
-(index.html) module"]
+#[doc = "rwble_irq interrupt configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rwble_irq_map](index.html) module"]
 pub struct RWBLE_IRQ_MAP_SPEC;
 impl crate::RegisterSpec for RWBLE_IRQ_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rwble_irq_map::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rwble_irq_map::R](R) reader structure"]
 impl crate::Readable for RWBLE_IRQ_MAP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rwble_irq_map::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [rwble_irq_map::W](W) writer structure"]
 impl crate::Writable for RWBLE_IRQ_MAP_SPEC {
     type Writer = W;
 }

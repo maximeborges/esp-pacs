@@ -35,7 +35,7 @@ impl From<crate::W<UHS_SPEC>> for W {
     }
 }
 #[doc = "Field `DDR` reader - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
-pub struct DDR_R(crate::FieldReader<u8, u8>);
+pub struct DDR_R(crate::FieldReader<u8>);
 impl DDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DDR_R {
     }
 }
 impl core::ops::Deref for DDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "UHS-1 register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uhs]
-(index.html) module"]
+#[doc = "UHS-1 register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uhs](index.html) module"]
 pub struct UHS_SPEC;
 impl crate::RegisterSpec for UHS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uhs::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [uhs::R](R) reader structure"]
 impl crate::Readable for UHS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [uhs::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [uhs::W](W) writer structure"]
 impl crate::Writable for UHS_SPEC {
     type Writer = W;
 }

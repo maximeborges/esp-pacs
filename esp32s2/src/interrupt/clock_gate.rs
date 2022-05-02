@@ -35,7 +35,7 @@ impl From<crate::W<CLOCK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PRO_NMI_MASK_HW` reader - This bit is used to disable all NMI interrupt signals to CPU."]
-pub struct PRO_NMI_MASK_HW_R(crate::FieldReader<bool, bool>);
+pub struct PRO_NMI_MASK_HW_R(crate::FieldReader<bool>);
 impl PRO_NMI_MASK_HW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl PRO_NMI_MASK_HW_R {
     }
 }
 impl core::ops::Deref for PRO_NMI_MASK_HW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "NMI interrupt signals mask register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock_gate]
-(index.html) module"]
+#[doc = "NMI interrupt signals mask register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clock_gate](index.html) module"]
 pub struct CLOCK_GATE_SPEC;
 impl crate::RegisterSpec for CLOCK_GATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clock_gate::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clock_gate::R](R) reader structure"]
 impl crate::Readable for CLOCK_GATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clock_gate::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clock_gate::W](W) writer structure"]
 impl crate::Writable for CLOCK_GATE_SPEC {
     type Writer = W;
 }

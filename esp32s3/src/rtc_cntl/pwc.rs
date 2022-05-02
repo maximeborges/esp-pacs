@@ -35,7 +35,7 @@ impl From<crate::W<PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_FASTMEM_FORCE_NOISO` reader - Fast RTC memory force no ISO"]
-pub struct RTC_FASTMEM_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FASTMEM_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl RTC_FASTMEM_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RTC_FASTMEM_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for RTC_FASTMEM_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RTC_FASTMEM_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_FASTMEM_FORCE_ISO` reader - Fast RTC memory force ISO"]
-pub struct RTC_FASTMEM_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FASTMEM_FORCE_ISO_R(crate::FieldReader<bool>);
 impl RTC_FASTMEM_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RTC_FASTMEM_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for RTC_FASTMEM_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RTC_FASTMEM_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_SLOWMEM_FORCE_NOISO` reader - RTC memory force no ISO"]
-pub struct RTC_SLOWMEM_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SLOWMEM_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl RTC_SLOWMEM_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl RTC_SLOWMEM_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for RTC_SLOWMEM_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> RTC_SLOWMEM_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_SLOWMEM_FORCE_ISO` reader - RTC memory force ISO"]
-pub struct RTC_SLOWMEM_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SLOWMEM_FORCE_ISO_R(crate::FieldReader<bool>);
 impl RTC_SLOWMEM_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RTC_SLOWMEM_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for RTC_SLOWMEM_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> RTC_SLOWMEM_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_FORCE_ISO` reader - rtc_peri force ISO"]
-pub struct RTC_FORCE_ISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FORCE_ISO_R(crate::FieldReader<bool>);
 impl RTC_FORCE_ISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl RTC_FORCE_ISO_R {
     }
 }
 impl core::ops::Deref for RTC_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> RTC_FORCE_ISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_FORCE_NOISO` reader - rtc_peri force no ISO"]
-pub struct RTC_FORCE_NOISO_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FORCE_NOISO_R(crate::FieldReader<bool>);
 impl RTC_FORCE_NOISO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl RTC_FORCE_NOISO_R {
     }
 }
 impl core::ops::Deref for RTC_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> RTC_FORCE_NOISO_W<'a> {
     }
 }
 #[doc = "Field `RTC_FASTMEM_FOLW_CPU` reader - 1: Fast RTC memory PD following CPU, 0: fast RTC memory PD following RTC state machine"]
-pub struct RTC_FASTMEM_FOLW_CPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FASTMEM_FOLW_CPU_R(crate::FieldReader<bool>);
 impl RTC_FASTMEM_FOLW_CPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl RTC_FASTMEM_FOLW_CPU_R {
     }
 }
 impl core::ops::Deref for RTC_FASTMEM_FOLW_CPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> RTC_FASTMEM_FOLW_CPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_FASTMEM_FORCE_LPD` reader - Fast RTC memory force PD"]
-pub struct RTC_FASTMEM_FORCE_LPD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FASTMEM_FORCE_LPD_R(crate::FieldReader<bool>);
 impl RTC_FASTMEM_FORCE_LPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RTC_FASTMEM_FORCE_LPD_R {
     }
 }
 impl core::ops::Deref for RTC_FASTMEM_FORCE_LPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPD_W<'a> {
     }
 }
 #[doc = "Field `RTC_FASTMEM_FORCE_LPU` reader - Fast RTC memory force no PD"]
-pub struct RTC_FASTMEM_FORCE_LPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FASTMEM_FORCE_LPU_R(crate::FieldReader<bool>);
 impl RTC_FASTMEM_FORCE_LPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl RTC_FASTMEM_FORCE_LPU_R {
     }
 }
 impl core::ops::Deref for RTC_FASTMEM_FORCE_LPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> RTC_FASTMEM_FORCE_LPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_SLOWMEM_FOLW_CPU` reader - 1: RTC memory PD following CPU, 0: RTC memory PD following RTC state machine"]
-pub struct RTC_SLOWMEM_FOLW_CPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SLOWMEM_FOLW_CPU_R(crate::FieldReader<bool>);
 impl RTC_SLOWMEM_FOLW_CPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl RTC_SLOWMEM_FOLW_CPU_R {
     }
 }
 impl core::ops::Deref for RTC_SLOWMEM_FOLW_CPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> RTC_SLOWMEM_FOLW_CPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_SLOWMEM_FORCE_LPD` reader - RTC memory force PD"]
-pub struct RTC_SLOWMEM_FORCE_LPD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SLOWMEM_FORCE_LPD_R(crate::FieldReader<bool>);
 impl RTC_SLOWMEM_FORCE_LPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl RTC_SLOWMEM_FORCE_LPD_R {
     }
 }
 impl core::ops::Deref for RTC_SLOWMEM_FORCE_LPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> RTC_SLOWMEM_FORCE_LPD_W<'a> {
     }
 }
 #[doc = "Field `RTC_SLOWMEM_FORCE_LPU` reader - RTC memory force no PD"]
-pub struct RTC_SLOWMEM_FORCE_LPU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_SLOWMEM_FORCE_LPU_R(crate::FieldReader<bool>);
 impl RTC_SLOWMEM_FORCE_LPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl RTC_SLOWMEM_FORCE_LPU_R {
     }
 }
 impl core::ops::Deref for RTC_SLOWMEM_FORCE_LPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> RTC_SLOWMEM_FORCE_LPU_W<'a> {
     }
 }
 #[doc = "Field `RTC_FORCE_PD` reader - rtc_peri force power down"]
-pub struct RTC_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FORCE_PD_R(crate::FieldReader<bool>);
 impl RTC_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl RTC_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for RTC_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> RTC_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `RTC_FORCE_PU` reader - rtc_peri force power up"]
-pub struct RTC_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct RTC_FORCE_PU_R(crate::FieldReader<bool>);
 impl RTC_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl RTC_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for RTC_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> RTC_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `RTC_PD_EN` reader - enable power down rtc_peri in sleep"]
-pub struct RTC_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PD_EN_R(crate::FieldReader<bool>);
 impl RTC_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl RTC_PD_EN_R {
     }
 }
 impl core::ops::Deref for RTC_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> RTC_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `RTC_PAD_FORCE_HOLD` reader - rtc pad force hold"]
-pub struct RTC_PAD_FORCE_HOLD_R(crate::FieldReader<bool, bool>);
+pub struct RTC_PAD_FORCE_HOLD_R(crate::FieldReader<bool>);
 impl RTC_PAD_FORCE_HOLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl RTC_PAD_FORCE_HOLD_R {
     }
 }
 impl core::ops::Deref for RTC_PAD_FORCE_HOLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -796,25 +796,16 @@ impl W {
         self
     }
 }
-#[doc = "configure rtc power\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwc]
-(index.html) module"]
+#[doc = "configure rtc power\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwc](index.html) module"]
 pub struct PWC_SPEC;
 impl crate::RegisterSpec for PWC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pwc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pwc::R](R) reader structure"]
 impl crate::Readable for PWC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pwc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pwc::W](W) writer structure"]
 impl crate::Writable for PWC_SPEC {
     type Writer = W;
 }

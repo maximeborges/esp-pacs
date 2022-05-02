@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_ILG_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_SYNC_OP_FAULT_INT_ENA` reader - The bit is used to enable interrupt by sync configurations fault."]
-pub struct ICACHE_SYNC_OP_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_SYNC_OP_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_SYNC_OP_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_SYNC_OP_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_SYNC_OP_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ICACHE_SYNC_OP_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_PRELOAD_OP_FAULT_INT_ENA` reader - The bit is used to enable interrupt by preload configurations fault."]
-pub struct ICACHE_PRELOAD_OP_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_PRELOAD_OP_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl ICACHE_PRELOAD_OP_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ICACHE_PRELOAD_OP_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ICACHE_PRELOAD_OP_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ICACHE_PRELOAD_OP_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `MMU_ENTRY_FAULT_INT_ENA` reader - The bit is used to enable interrupt by mmu entry fault."]
-pub struct MMU_ENTRY_FAULT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct MMU_ENTRY_FAULT_INT_ENA_R(crate::FieldReader<bool>);
 impl MMU_ENTRY_FAULT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MMU_ENTRY_FAULT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for MMU_ENTRY_FAULT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MMU_ENTRY_FAULT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `IBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by ibus counter overflow."]
-pub struct IBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct IBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl IBUS_CNT_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl IBUS_CNT_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for IBUS_CNT_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> IBUS_CNT_OVF_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `DBUS_CNT_OVF_INT_ENA` reader - The bit is used to enable interrupt by dbus counter overflow."]
-pub struct DBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DBUS_CNT_OVF_INT_ENA_R(crate::FieldReader<bool>);
 impl DBUS_CNT_OVF_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DBUS_CNT_OVF_INT_ENA_R {
     }
 }
 impl core::ops::Deref for DBUS_CNT_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_ilg_int_ena]
-(index.html) module"]
+#[doc = "This description will be updated in the near future.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_ilg_int_ena](index.html) module"]
 pub struct CACHE_ILG_INT_ENA_SPEC;
 impl crate::RegisterSpec for CACHE_ILG_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_ilg_int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_ilg_int_ena::R](R) reader structure"]
 impl crate::Readable for CACHE_ILG_INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_ilg_int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_ilg_int_ena::W](W) writer structure"]
 impl crate::Writable for CACHE_ILG_INT_ENA_SPEC {
     type Writer = W;
 }

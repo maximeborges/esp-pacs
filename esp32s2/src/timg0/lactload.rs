@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "Timer LACT load register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lactload]
-(index.html) module"]
+#[doc = "Timer LACT load register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lactload](index.html) module"]
 pub struct LACTLOAD_SPEC;
 impl crate::RegisterSpec for LACTLOAD_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [lactload::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lactload::W](W) writer structure"]
 impl crate::Writable for LACTLOAD_SPEC {
     type Writer = W;
 }

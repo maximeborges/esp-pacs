@@ -35,7 +35,7 @@ impl From<crate::W<WR_TIM_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TSUP_A` reader - Configures the setup time of programming operation."]
-pub struct TSUP_A_R(crate::FieldReader<u8, u8>);
+pub struct TSUP_A_R(crate::FieldReader<u8>);
 impl TSUP_A_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TSUP_A_R {
     }
 }
 impl core::ops::Deref for TSUP_A_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TSUP_A_W<'a> {
     }
 }
 #[doc = "Field `PWR_ON_NUM` reader - Configures the power up time for VDDQ."]
-pub struct PWR_ON_NUM_R(crate::FieldReader<u16, u16>);
+pub struct PWR_ON_NUM_R(crate::FieldReader<u16>);
 impl PWR_ON_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl PWR_ON_NUM_R {
     }
 }
 impl core::ops::Deref for PWR_ON_NUM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register 1 of eFuse programming timing parameters.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wr_tim_conf1]
-(index.html) module"]
+#[doc = "Configuration register 1 of eFuse programming timing parameters.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wr_tim_conf1](index.html) module"]
 pub struct WR_TIM_CONF1_SPEC;
 impl crate::RegisterSpec for WR_TIM_CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [wr_tim_conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [wr_tim_conf1::R](R) reader structure"]
 impl crate::Readable for WR_TIM_CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [wr_tim_conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [wr_tim_conf1::W](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF1_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<PERIP_CLK_EN0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMERS_CLK_EN` reader - Set this bit to enable clock of timers."]
-pub struct TIMERS_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMERS_CLK_EN_R(crate::FieldReader<bool>);
 impl TIMERS_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMERS_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TIMERS_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMERS_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI01_CLK_EN` reader - Set this bit to enable clock of SPI0 and SPI1."]
-pub struct SPI01_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI01_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI01_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SPI01_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI01_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SPI01_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART_CLK_EN` reader - Set this bit to enable clock of UART0."]
-pub struct UART_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART_CLK_EN_R(crate::FieldReader<bool>);
 impl UART_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl UART_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> UART_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `WDG_CLK_EN` reader - Set this bit to enable clock of WDG."]
-pub struct WDG_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct WDG_CLK_EN_R(crate::FieldReader<bool>);
 impl WDG_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl WDG_CLK_EN_R {
     }
 }
 impl core::ops::Deref for WDG_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> WDG_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S0_CLK_EN` reader - Set this bit to enable clock of I2S0."]
-pub struct I2S0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S0_CLK_EN_R(crate::FieldReader<bool>);
 impl I2S0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl I2S0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2S0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> I2S0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART1_CLK_EN` reader - Set this bit to enable clock of UART1."]
-pub struct UART1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART1_CLK_EN_R(crate::FieldReader<bool>);
 impl UART1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl UART1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> UART1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI2_CLK_EN` reader - Set this bit to enable clock of SPI2."]
-pub struct SPI2_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI2_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI2_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SPI2_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI2_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SPI2_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2C_EXT0_CLK_EN` reader - Set this bit to enable clock of I2C EXT0."]
-pub struct I2C_EXT0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2C_EXT0_CLK_EN_R(crate::FieldReader<bool>);
 impl I2C_EXT0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl I2C_EXT0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2C_EXT0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> I2C_EXT0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UHCI0_CLK_EN` reader - Set this bit to enable clock of UHCI0."]
-pub struct UHCI0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UHCI0_CLK_EN_R(crate::FieldReader<bool>);
 impl UHCI0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl UHCI0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UHCI0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> UHCI0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `RMT_CLK_EN` reader - Set this bit to enable clock of remote controller."]
-pub struct RMT_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct RMT_CLK_EN_R(crate::FieldReader<bool>);
 impl RMT_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl RMT_CLK_EN_R {
     }
 }
 impl core::ops::Deref for RMT_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> RMT_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PCNT_CLK_EN` reader - Set this bit to enable clock of pulse count."]
-pub struct PCNT_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PCNT_CLK_EN_R(crate::FieldReader<bool>);
 impl PCNT_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl PCNT_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PCNT_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> PCNT_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `LEDC_CLK_EN` reader - Set this bit to enable clock of LED PWM."]
-pub struct LEDC_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct LEDC_CLK_EN_R(crate::FieldReader<bool>);
 impl LEDC_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl LEDC_CLK_EN_R {
     }
 }
 impl core::ops::Deref for LEDC_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> LEDC_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UHCI1_CLK_EN` reader - Set this bit to enable clock of UHCI1."]
-pub struct UHCI1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UHCI1_CLK_EN_R(crate::FieldReader<bool>);
 impl UHCI1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl UHCI1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UHCI1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> UHCI1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP_CLK_EN` reader - Set this bit to enable clock of timer group0."]
-pub struct TIMERGROUP_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP_CLK_EN_R(crate::FieldReader<bool>);
 impl TIMERGROUP_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TIMERGROUP_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TIMERGROUP_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `EFUSE_CLK_EN` reader - Set this bit to enable clock of eFuse."]
-pub struct EFUSE_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct EFUSE_CLK_EN_R(crate::FieldReader<bool>);
 impl EFUSE_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl EFUSE_CLK_EN_R {
     }
 }
 impl core::ops::Deref for EFUSE_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> EFUSE_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP1_CLK_EN` reader - Set this bit to enable clock of timer group1."]
-pub struct TIMERGROUP1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP1_CLK_EN_R(crate::FieldReader<bool>);
 impl TIMERGROUP1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl TIMERGROUP1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> TIMERGROUP1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI3_CLK_EN` reader - Set this bit to enable clock of SPI3."]
-pub struct SPI3_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI3_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI3_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl SPI3_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI3_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> SPI3_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM0_CLK_EN` reader - Set this bit to enable clock of PWM0."]
-pub struct PWM0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM0_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl PWM0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> PWM0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2C_EXT1_CLK_EN` reader - Set this bit to enable clock of I2C EXT1."]
-pub struct I2C_EXT1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2C_EXT1_CLK_EN_R(crate::FieldReader<bool>);
 impl I2C_EXT1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl I2C_EXT1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2C_EXT1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> I2C_EXT1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `CAN_CLK_EN` reader - Set this bit to enable clock of CAN."]
-pub struct CAN_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CAN_CLK_EN_R(crate::FieldReader<bool>);
 impl CAN_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl CAN_CLK_EN_R {
     }
 }
 impl core::ops::Deref for CAN_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> CAN_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM1_CLK_EN` reader - Set this bit to enable clock of PWM1."]
-pub struct PWM1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM1_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl PWM1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> PWM1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S1_CLK_EN` reader - Set this bit to enable clock of I2S1."]
-pub struct I2S1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S1_CLK_EN_R(crate::FieldReader<bool>);
 impl I2S1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl I2S1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2S1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> I2S1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI2_DMA_CLK_EN` reader - Set this bit to enable clock of SPI2 DMA."]
-pub struct SPI2_DMA_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI2_DMA_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI2_DMA_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl SPI2_DMA_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI2_DMA_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -886,7 +886,7 @@ impl<'a> SPI2_DMA_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `USB_CLK_EN` reader - Set this bit to enable clock of USB."]
-pub struct USB_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct USB_CLK_EN_R(crate::FieldReader<bool>);
 impl USB_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -894,7 +894,7 @@ impl USB_CLK_EN_R {
     }
 }
 impl core::ops::Deref for USB_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -923,7 +923,7 @@ impl<'a> USB_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART_MEM_CLK_EN` reader - Set this bit to enable clock of UART memory."]
-pub struct UART_MEM_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART_MEM_CLK_EN_R(crate::FieldReader<bool>);
 impl UART_MEM_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -931,7 +931,7 @@ impl UART_MEM_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART_MEM_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -960,7 +960,7 @@ impl<'a> UART_MEM_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM2_CLK_EN` reader - Set this bit to enable clock of PWM2."]
-pub struct PWM2_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM2_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM2_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -968,7 +968,7 @@ impl PWM2_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM2_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -997,7 +997,7 @@ impl<'a> PWM2_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM3_CLK_EN` reader - Set this bit to enable clock of PWM3."]
-pub struct PWM3_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM3_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM3_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1005,7 +1005,7 @@ impl PWM3_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM3_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1034,7 +1034,7 @@ impl<'a> PWM3_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI3_DMA_CLK_EN` reader - Set this bit to enable clock of SPI3 DMA."]
-pub struct SPI3_DMA_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI3_DMA_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI3_DMA_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1042,7 +1042,7 @@ impl SPI3_DMA_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI3_DMA_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1071,7 +1071,7 @@ impl<'a> SPI3_DMA_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `APB_SARADC_CLK_EN` reader - Set this bit to enable clock of SAR ADC."]
-pub struct APB_SARADC_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_CLK_EN_R(crate::FieldReader<bool>);
 impl APB_SARADC_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1079,7 +1079,7 @@ impl APB_SARADC_CLK_EN_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1108,7 +1108,7 @@ impl<'a> APB_SARADC_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SYSTIMER_CLK_EN` reader - Set this bit to enable clock of system timer."]
-pub struct SYSTIMER_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SYSTIMER_CLK_EN_R(crate::FieldReader<bool>);
 impl SYSTIMER_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1116,7 +1116,7 @@ impl SYSTIMER_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SYSTIMER_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1145,7 +1145,7 @@ impl<'a> SYSTIMER_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `ADC2_ARB_CLK_EN` reader - Set this bit to enable clock of aribiter of ADC2."]
-pub struct ADC2_ARB_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_ARB_CLK_EN_R(crate::FieldReader<bool>);
 impl ADC2_ARB_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1153,7 +1153,7 @@ impl ADC2_ARB_CLK_EN_R {
     }
 }
 impl core::ops::Deref for ADC2_ARB_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1182,7 +1182,7 @@ impl<'a> ADC2_ARB_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI4_CLK_EN` reader - Set this bit to enable clock of SPI4."]
-pub struct SPI4_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI4_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI4_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -1190,7 +1190,7 @@ impl SPI4_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI4_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1548,25 +1548,16 @@ impl W {
         self
     }
 }
-#[doc = "System peripheral clock (for hardware accelerators) enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_clk_en0]
-(index.html) module"]
+#[doc = "System peripheral clock (for hardware accelerators) enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_clk_en0](index.html) module"]
 pub struct PERIP_CLK_EN0_SPEC;
 impl crate::RegisterSpec for PERIP_CLK_EN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [perip_clk_en0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [perip_clk_en0::R](R) reader structure"]
 impl crate::Readable for PERIP_CLK_EN0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [perip_clk_en0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [perip_clk_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN0_SPEC {
     type Writer = W;
 }

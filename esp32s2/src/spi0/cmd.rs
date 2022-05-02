@@ -35,7 +35,7 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CONF_BITLEN` reader - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
-pub struct CONF_BITLEN_R(crate::FieldReader<u32, u32>);
+pub struct CONF_BITLEN_R(crate::FieldReader<u32>);
 impl CONF_BITLEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CONF_BITLEN_R {
     }
 }
 impl core::ops::Deref for CONF_BITLEN_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CONF_BITLEN_W<'a> {
     }
 }
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
-pub struct USR_R(crate::FieldReader<bool, bool>);
+pub struct USR_R(crate::FieldReader<bool>);
 impl USR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl USR_R {
     }
 }
 impl core::ops::Deref for USR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Command control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd]
-(index.html) module"]
+#[doc = "Command control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd](index.html) module"]
 pub struct CMD_SPEC;
 impl crate::RegisterSpec for CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmd::R](R) reader structure"]
 impl crate::Readable for CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
 }

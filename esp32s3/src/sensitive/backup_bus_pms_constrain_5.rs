@@ -35,7 +35,7 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` reader - BackUp access rtcfast_spltaddr permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R(crate::FieldReader<u16, u16>);
+pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R(crate::FieldReader<u16>);
 impl BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
     }
 }
 impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -85,25 +85,16 @@ impl W {
         self
     }
 }
-#[doc = "BackUp access peripherals permission configuration register 5.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_5]
-(index.html) module"]
+#[doc = "BackUp access peripherals permission configuration register 5.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_constrain_5](index.html) module"]
 pub struct BACKUP_BUS_PMS_CONSTRAIN_5_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_CONSTRAIN_5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [backup_bus_pms_constrain_5::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [backup_bus_pms_constrain_5::R](R) reader structure"]
 impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_5_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_5::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_5::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_5_SPEC {
     type Writer = W;
 }

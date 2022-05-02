@@ -35,7 +35,7 @@ impl From<crate::W<RETENTION_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_ICACHE_SIZE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct RET_ICACHE_SIZE_R(crate::FieldReader<u8>);
 impl RET_ICACHE_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RET_ICACHE_SIZE_R {
     }
 }
 impl core::ops::Deref for RET_ICACHE_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RET_ICACHE_SIZE_W<'a> {
     }
 }
 #[doc = "Field `RET_ICACHE_VLD_SIZE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_VLD_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct RET_ICACHE_VLD_SIZE_R(crate::FieldReader<u8>);
 impl RET_ICACHE_VLD_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl RET_ICACHE_VLD_SIZE_R {
     }
 }
 impl core::ops::Deref for RET_ICACHE_VLD_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> RET_ICACHE_VLD_SIZE_W<'a> {
     }
 }
 #[doc = "Field `RET_ICACHE_START_POINT` reader - ******* Description ***********"]
-pub struct RET_ICACHE_START_POINT_R(crate::FieldReader<u8, u8>);
+pub struct RET_ICACHE_START_POINT_R(crate::FieldReader<u8>);
 impl RET_ICACHE_START_POINT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl RET_ICACHE_START_POINT_R {
     }
 }
 impl core::ops::Deref for RET_ICACHE_START_POINT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> RET_ICACHE_START_POINT_W<'a> {
     }
 }
 #[doc = "Field `RET_ICACHE_ENABLE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct RET_ICACHE_ENABLE_R(crate::FieldReader<bool>);
 impl RET_ICACHE_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl RET_ICACHE_ENABLE_R {
     }
 }
 impl core::ops::Deref for RET_ICACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -202,25 +202,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl2]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [retention_ctrl2](index.html) module"]
 pub struct RETENTION_CTRL2_SPEC;
 impl crate::RegisterSpec for RETENTION_CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [retention_ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [retention_ctrl2::R](R) reader structure"]
 impl crate::Readable for RETENTION_CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [retention_ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [retention_ctrl2::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL2_SPEC {
     type Writer = W;
 }

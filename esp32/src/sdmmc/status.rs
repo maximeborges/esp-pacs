@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFO_RX_WATERMARK` reader - FIFO reached Receive watermark level, not qualified with data transfer."]
-pub struct FIFO_RX_WATERMARK_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_RX_WATERMARK_R(crate::FieldReader<bool>);
 impl FIFO_RX_WATERMARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl FIFO_RX_WATERMARK_R {
     }
 }
 impl core::ops::Deref for FIFO_RX_WATERMARK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FIFO_TX_WATERMARK` reader - FIFO reached Transmit watermark level, not qualified with data transfer."]
-pub struct FIFO_TX_WATERMARK_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_TX_WATERMARK_R(crate::FieldReader<bool>);
 impl FIFO_TX_WATERMARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl FIFO_TX_WATERMARK_R {
     }
 }
 impl core::ops::Deref for FIFO_TX_WATERMARK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FIFO_EMPTY` reader - FIFO is empty status."]
-pub struct FIFO_EMPTY_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_EMPTY_R(crate::FieldReader<bool>);
 impl FIFO_EMPTY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl FIFO_EMPTY_R {
     }
 }
 impl core::ops::Deref for FIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FIFO_FULL` reader - FIFO is full status."]
-pub struct FIFO_FULL_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_FULL_R(crate::FieldReader<bool>);
 impl FIFO_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl FIFO_FULL_R {
     }
 }
 impl core::ops::Deref for FIFO_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COMMAND_FSM_STATES` reader - Command FSM states. 0: Idle; 1: Send init sequence; 2: Send cmd start bit; 3: Send cmd tx bit; 4: Send cmd index + arg; 5: Send cmd crc7; 6: Send cmd end bit; 7: Receive resp start bit; 8: Receive resp IRQ response; 9: Receive resp tx bit; 10: Receive resp cmd idx; 11: Receive resp data; 12: Receive resp crc7; 13: Receive resp end bit; 14: Cmd path wait NCC; 15: Wait, cmd-to-response turnaround."]
-pub struct COMMAND_FSM_STATES_R(crate::FieldReader<u8, u8>);
+pub struct COMMAND_FSM_STATES_R(crate::FieldReader<u8>);
 impl COMMAND_FSM_STATES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -82,15 +82,14 @@ impl COMMAND_FSM_STATES_R {
     }
 }
 impl core::ops::Deref for COMMAND_FSM_STATES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DATA_3_STATUS` reader - Raw selected sdhost_card_data\\[3\\]
-, checks whether card is present. 0: card not present; 1: card present."]
-pub struct DATA_3_STATUS_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `DATA_3_STATUS` reader - Raw selected sdhost_card_data\\[3\\], checks whether card is present. 0: card not present; 1: card present."]
+pub struct DATA_3_STATUS_R(crate::FieldReader<bool>);
 impl DATA_3_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -98,15 +97,14 @@ impl DATA_3_STATUS_R {
     }
 }
 impl core::ops::Deref for DATA_3_STATUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `DATA_BUSY` reader - Inverted version of raw selected sdhost_card_data\\[0\\]
-. 0: Card data not busy; 1: Card data busy."]
-pub struct DATA_BUSY_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `DATA_BUSY` reader - Inverted version of raw selected sdhost_card_data\\[0\\]. 0: Card data not busy; 1: Card data busy."]
+pub struct DATA_BUSY_R(crate::FieldReader<bool>);
 impl DATA_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -114,14 +112,14 @@ impl DATA_BUSY_R {
     }
 }
 impl core::ops::Deref for DATA_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DATA_STATE_MC_BUSY` reader - Data transmit or receive state-machine is busy."]
-pub struct DATA_STATE_MC_BUSY_R(crate::FieldReader<bool, bool>);
+pub struct DATA_STATE_MC_BUSY_R(crate::FieldReader<bool>);
 impl DATA_STATE_MC_BUSY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -129,14 +127,14 @@ impl DATA_STATE_MC_BUSY_R {
     }
 }
 impl core::ops::Deref for DATA_STATE_MC_BUSY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RESPONSE_INDEX` reader - Index of previous response, including any auto-stop sent by core."]
-pub struct RESPONSE_INDEX_R(crate::FieldReader<u8, u8>);
+pub struct RESPONSE_INDEX_R(crate::FieldReader<u8>);
 impl RESPONSE_INDEX_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,14 +142,14 @@ impl RESPONSE_INDEX_R {
     }
 }
 impl core::ops::Deref for RESPONSE_INDEX_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FIFO_COUNT` reader - FIFO count, number of filled locations in FIFO."]
-pub struct FIFO_COUNT_R(crate::FieldReader<u16, u16>);
+pub struct FIFO_COUNT_R(crate::FieldReader<u16>);
 impl FIFO_COUNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -159,7 +157,7 @@ impl FIFO_COUNT_R {
     }
 }
 impl core::ops::Deref for FIFO_COUNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -191,14 +189,12 @@ impl R {
     pub fn command_fsm_states(&self) -> COMMAND_FSM_STATES_R {
         COMMAND_FSM_STATES_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 8 - Raw selected sdhost_card_data\\[3\\]
-, checks whether card is present. 0: card not present; 1: card present."]
+    #[doc = "Bit 8 - Raw selected sdhost_card_data\\[3\\], checks whether card is present. 0: card not present; 1: card present."]
     #[inline(always)]
     pub fn data_3_status(&self) -> DATA_3_STATUS_R {
         DATA_3_STATUS_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - Inverted version of raw selected sdhost_card_data\\[0\\]
-. 0: Card data not busy; 1: Card data busy."]
+    #[doc = "Bit 9 - Inverted version of raw selected sdhost_card_data\\[0\\]. 0: Card data not busy; 1: Card data busy."]
     #[inline(always)]
     pub fn data_busy(&self) -> DATA_BUSY_R {
         DATA_BUSY_R::new(((self.bits >> 9) & 1) != 0)
@@ -219,16 +215,12 @@ impl R {
         FIFO_COUNT_R::new(((self.bits >> 17) & 0x1fff) as u16)
     }
 }
-#[doc = "SD/MMC status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status]
-(index.html) module"]
+#[doc = "SD/MMC status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [status::R](R) reader structure"]
 impl crate::Readable for STATUS_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core_x_dram0_pms_constrain_sram_world_0_pms_0"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core_x_dram0_pms_constrain_sram_world_0_pms_1"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core_x_dram0_pms_constrain_sram_world_0_pms_2"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core_x_dram0_pms_constrain_sram_world_0_pms_3"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - core_x_dram0_pms_constrain_sram_world_1_pms_0"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - core_x_dram0_pms_constrain_sram_world_1_pms_1"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - core_x_dram0_pms_constrain_sram_world_1_pms_2"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - core_x_dram0_pms_constrain_sram_world_1_pms_3"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core_x_dram0_pms_constrain_rom_world_0_pms"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` reader - core_x_dram0_pms_constrain_rom_world_1_pms"]
-pub struct CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R(crate::FieldReader<u8>);
 impl CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R {
     }
 }
 impl core::ops::Deref for CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -454,25 +454,16 @@ impl W {
         self
     }
 }
-#[doc = "SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_1_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_dram0_pms_constrain_1]
-(index.html) module"]
+#[doc = "SENSITIVE_CORE_X_DRAM0_PMS_CONSTRAIN_1_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_dram0_pms_constrain_1](index.html) module"]
 pub struct CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC;
 impl crate::RegisterSpec for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_x_dram0_pms_constrain_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_x_dram0_pms_constrain_1::R](R) reader structure"]
 impl crate::Readable for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_x_dram0_pms_constrain_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_x_dram0_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CLKENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CCLK_ENABLE` reader - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub struct CCLK_ENABLE_R(crate::FieldReader<u8, u8>);
+pub struct CCLK_ENABLE_R(crate::FieldReader<u8>);
 impl CCLK_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CCLK_ENABLE_R {
     }
 }
 impl core::ops::Deref for CCLK_ENABLE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CCLK_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `LP_ENABLE` reader - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub struct LP_ENABLE_R(crate::FieldReader<u8, u8>);
+pub struct LP_ENABLE_R(crate::FieldReader<u8>);
 impl LP_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl LP_ENABLE_R {
     }
 }
 impl core::ops::Deref for LP_ENABLE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Clock enable register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkena]
-(index.html) module"]
+#[doc = "Clock enable register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkena](index.html) module"]
 pub struct CLKENA_SPEC;
 impl crate::RegisterSpec for CLKENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clkena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clkena::R](R) reader structure"]
 impl crate::Readable for CLKENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clkena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clkena::W](W) writer structure"]
 impl crate::Writable for CLKENA_SPEC {
     type Writer = W;
 }

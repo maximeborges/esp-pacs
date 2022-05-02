@@ -35,7 +35,7 @@ impl From<crate::W<SHROM_MPU_TABLE19_SPEC>> for W {
     }
 }
 #[doc = "Field `SHROM_MPU_TABLE19` reader - "]
-pub struct SHROM_MPU_TABLE19_R(crate::FieldReader<u8, u8>);
+pub struct SHROM_MPU_TABLE19_R(crate::FieldReader<u8>);
 impl SHROM_MPU_TABLE19_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SHROM_MPU_TABLE19_R {
     }
 }
 impl core::ops::Deref for SHROM_MPU_TABLE19_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [shrom_mpu_table19]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [shrom_mpu_table19](index.html) module"]
 pub struct SHROM_MPU_TABLE19_SPEC;
 impl crate::RegisterSpec for SHROM_MPU_TABLE19_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [shrom_mpu_table19::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [shrom_mpu_table19::R](R) reader structure"]
 impl crate::Readable for SHROM_MPU_TABLE19_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [shrom_mpu_table19::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [shrom_mpu_table19::W](W) writer structure"]
 impl crate::Writable for SHROM_MPU_TABLE19_SPEC {
     type Writer = W;
 }

@@ -44,18 +44,12 @@ impl W {
         self
     }
 }
-#[doc = "HMAC key configuration register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_key]
-(index.html) module"]
+#[doc = "HMAC key configuration register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_para_key](index.html) module"]
 pub struct SET_PARA_KEY_SPEC;
 impl crate::RegisterSpec for SET_PARA_KEY_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [set_para_key::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [set_para_key::W](W) writer structure"]
 impl crate::Writable for SET_PARA_KEY_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<ICACHE_SYNC_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_SYNC_ADDR` reader - The bits are used to configure the start virtual address for clean operations. It should be combined with ICACHE_SYNC_SIZE_REG."]
-pub struct ICACHE_SYNC_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct ICACHE_SYNC_ADDR_R(crate::FieldReader<u32>);
 impl ICACHE_SYNC_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_SYNC_ADDR_R {
     }
 }
 impl core::ops::Deref for ICACHE_SYNC_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_sync_addr]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_sync_addr](index.html) module"]
 pub struct ICACHE_SYNC_ADDR_SPEC;
 impl crate::RegisterSpec for ICACHE_SYNC_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icache_sync_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [icache_sync_addr::R](R) reader structure"]
 impl crate::Readable for ICACHE_SYNC_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [icache_sync_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [icache_sync_addr::W](W) writer structure"]
 impl crate::Writable for ICACHE_SYNC_ADDR_SPEC {
     type Writer = W;
 }

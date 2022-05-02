@@ -35,7 +35,7 @@ impl From<crate::W<CMD2_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND2` reader - command2"]
-pub struct COMMAND2_R(crate::FieldReader<u16, u16>);
+pub struct COMMAND2_R(crate::FieldReader<u16>);
 impl COMMAND2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl COMMAND2_R {
     }
 }
 impl core::ops::Deref for COMMAND2_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> COMMAND2_W<'a> {
     }
 }
 #[doc = "Field `COMMAND2_DONE` reader - command2_done"]
-pub struct COMMAND2_DONE_R(crate::FieldReader<bool, bool>);
+pub struct COMMAND2_DONE_R(crate::FieldReader<bool>);
 impl COMMAND2_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl COMMAND2_DONE_R {
     }
 }
 impl core::ops::Deref for COMMAND2_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,25 +101,16 @@ impl W {
         self
     }
 }
-#[doc = "i2c commond2 register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd2]
-(index.html) module"]
+#[doc = "i2c commond2 register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd2](index.html) module"]
 pub struct CMD2_SPEC;
 impl crate::RegisterSpec for CMD2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmd2::R](R) reader structure"]
 impl crate::Readable for CMD2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmd2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmd2::W](W) writer structure"]
 impl crate::Writable for CMD2_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<SLV_RD_BIT_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_RDATA_BIT` reader - In the slave mode it is the bit length of read data. The value is the length - 1."]
-pub struct SLV_RDATA_BIT_R(crate::FieldReader<u32, u32>);
+pub struct SLV_RDATA_BIT_R(crate::FieldReader<u32>);
 impl SLV_RDATA_BIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SLV_RDATA_BIT_R {
     }
 }
 impl core::ops::Deref for SLV_RDATA_BIT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slv_rd_bit]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slv_rd_bit](index.html) module"]
 pub struct SLV_RD_BIT_SPEC;
 impl crate::RegisterSpec for SLV_RD_BIT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slv_rd_bit::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slv_rd_bit::R](R) reader structure"]
 impl crate::Readable for SLV_RD_BIT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slv_rd_bit::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slv_rd_bit::W](W) writer structure"]
 impl crate::Writable for SLV_RD_BIT_SPEC {
     type Writer = W;
 }

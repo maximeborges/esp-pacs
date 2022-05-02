@@ -596,18 +596,12 @@ impl W {
         self
     }
 }
-#[doc = "oneset rtc interrupt\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_rtc_w1ts]
-(index.html) module"]
+#[doc = "oneset rtc interrupt\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_rtc_w1ts](index.html) module"]
 pub struct INT_ENA_RTC_W1TS_SPEC;
 impl crate::RegisterSpec for INT_ENA_RTC_W1TS_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena_rtc_w1ts::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena_rtc_w1ts::W](W) writer structure"]
 impl crate::Writable for INT_ENA_RTC_W1TS_SPEC {
     type Writer = W;
 }

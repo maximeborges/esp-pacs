@@ -35,7 +35,7 @@ impl From<crate::W<PERIP_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI01_CLK_EN` reader - SPI0 and SPI1 module."]
-pub struct SPI01_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI01_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI01_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SPI01_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI01_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SPI01_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART_CLK_EN` reader - UART0 module."]
-pub struct UART_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART_CLK_EN_R(crate::FieldReader<bool>);
 impl UART_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl UART_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> UART_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S0_CLK_EN` reader - I2S0 module."]
-pub struct I2S0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S0_CLK_EN_R(crate::FieldReader<bool>);
 impl I2S0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl I2S0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2S0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> I2S0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART1_CLK_EN` reader - UART1 module."]
-pub struct UART1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART1_CLK_EN_R(crate::FieldReader<bool>);
 impl UART1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl UART1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> UART1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI2_CLK_EN` reader - SPI2 module."]
-pub struct SPI2_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI2_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI2_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SPI2_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI2_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SPI2_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2C0_EXT0_CLK_EN` reader - I2C0 module."]
-pub struct I2C0_EXT0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2C0_EXT0_CLK_EN_R(crate::FieldReader<bool>);
 impl I2C0_EXT0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl I2C0_EXT0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2C0_EXT0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> I2C0_EXT0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UHCI0_CLK_EN` reader - UDMA0 module."]
-pub struct UHCI0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UHCI0_CLK_EN_R(crate::FieldReader<bool>);
 impl UHCI0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl UHCI0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UHCI0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> UHCI0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `RMT_CLK_EN` reader - RMT module."]
-pub struct RMT_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct RMT_CLK_EN_R(crate::FieldReader<bool>);
 impl RMT_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl RMT_CLK_EN_R {
     }
 }
 impl core::ops::Deref for RMT_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> RMT_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PCNT_CLK_EN` reader - PCNT module."]
-pub struct PCNT_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PCNT_CLK_EN_R(crate::FieldReader<bool>);
 impl PCNT_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl PCNT_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PCNT_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> PCNT_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `LEDC_CLK_EN` reader - LEDC module."]
-pub struct LEDC_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct LEDC_CLK_EN_R(crate::FieldReader<bool>);
 impl LEDC_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl LEDC_CLK_EN_R {
     }
 }
 impl core::ops::Deref for LEDC_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> LEDC_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UHCI1_CLK_EN` reader - UDMA1 module."]
-pub struct UHCI1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UHCI1_CLK_EN_R(crate::FieldReader<bool>);
 impl UHCI1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl UHCI1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UHCI1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> UHCI1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP_CLK_EN` reader - TIMG0 module."]
-pub struct TIMERGROUP_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP_CLK_EN_R(crate::FieldReader<bool>);
 impl TIMERGROUP_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TIMERGROUP_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TIMERGROUP_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `EFUSE_CLK_EN` reader - eFuse module."]
-pub struct EFUSE_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct EFUSE_CLK_EN_R(crate::FieldReader<bool>);
 impl EFUSE_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl EFUSE_CLK_EN_R {
     }
 }
 impl core::ops::Deref for EFUSE_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> EFUSE_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TIMERGROUP1_CLK_EN` reader - TIMG1 module."]
-pub struct TIMERGROUP1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMERGROUP1_CLK_EN_R(crate::FieldReader<bool>);
 impl TIMERGROUP1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TIMERGROUP1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TIMERGROUP1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TIMERGROUP1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI3_CLK_EN` reader - SPI3 module."]
-pub struct SPI3_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI3_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI3_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl SPI3_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI3_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> SPI3_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM0_CLK_EN` reader - PWM0 module."]
-pub struct PWM0_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM0_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM0_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl PWM0_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM0_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> PWM0_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2C_EXT1_CLK_EN` reader - I2C1 module."]
-pub struct I2C_EXT1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2C_EXT1_CLK_EN_R(crate::FieldReader<bool>);
 impl I2C_EXT1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl I2C_EXT1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2C_EXT1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> I2C_EXT1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `TWAI_CLK_EN` reader - TWAI module."]
-pub struct TWAI_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct TWAI_CLK_EN_R(crate::FieldReader<bool>);
 impl TWAI_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl TWAI_CLK_EN_R {
     }
 }
 impl core::ops::Deref for TWAI_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> TWAI_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `PWM1_CLK_EN` reader - PWM1 module."]
-pub struct PWM1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct PWM1_CLK_EN_R(crate::FieldReader<bool>);
 impl PWM1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl PWM1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for PWM1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> PWM1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `I2S1_CLK_EN` reader - I2S1 module."]
-pub struct I2S1_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct I2S1_CLK_EN_R(crate::FieldReader<bool>);
 impl I2S1_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl I2S1_CLK_EN_R {
     }
 }
 impl core::ops::Deref for I2S1_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -775,7 +775,7 @@ impl<'a> I2S1_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI_DMA_CLK_EN` reader - SPI_DMA module."]
-pub struct SPI_DMA_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct SPI_DMA_CLK_EN_R(crate::FieldReader<bool>);
 impl SPI_DMA_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -783,7 +783,7 @@ impl SPI_DMA_CLK_EN_R {
     }
 }
 impl core::ops::Deref for SPI_DMA_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -812,7 +812,7 @@ impl<'a> SPI_DMA_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART2_CLK_EN` reader - UART2 module."]
-pub struct UART2_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART2_CLK_EN_R(crate::FieldReader<bool>);
 impl UART2_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -820,7 +820,7 @@ impl UART2_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART2_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -849,7 +849,7 @@ impl<'a> UART2_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `UART_MEM_CLK_EN` reader - Shared memory of UART0 ~ 2."]
-pub struct UART_MEM_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct UART_MEM_CLK_EN_R(crate::FieldReader<bool>);
 impl UART_MEM_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -857,7 +857,7 @@ impl UART_MEM_CLK_EN_R {
     }
 }
 impl core::ops::Deref for UART_MEM_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -1125,25 +1125,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_clk_en]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perip_clk_en](index.html) module"]
 pub struct PERIP_CLK_EN_SPEC;
 impl crate::RegisterSpec for PERIP_CLK_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [perip_clk_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [perip_clk_en::R](R) reader structure"]
 impl crate::Readable for PERIP_CLK_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [perip_clk_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [perip_clk_en::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DCACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct DCACHE_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_ENABLE_R(crate::FieldReader<bool>);
 impl DCACHE_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DCACHE_ENABLE_R {
     }
 }
 impl core::ops::Deref for DCACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DCACHE_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_SIZE_MODE` reader - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
-pub struct DCACHE_SIZE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_SIZE_MODE_R(crate::FieldReader<bool>);
 impl DCACHE_SIZE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DCACHE_SIZE_MODE_R {
     }
 }
 impl core::ops::Deref for DCACHE_SIZE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DCACHE_SIZE_MODE_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
-pub struct DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader<u8>);
 impl DCACHE_BLOCKSIZE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl DCACHE_BLOCKSIZE_MODE_R {
     }
 }
 impl core::ops::Deref for DCACHE_BLOCKSIZE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_ctrl](index.html) module"]
 pub struct DCACHE_CTRL_SPEC;
 impl crate::RegisterSpec for DCACHE_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dcache_ctrl::R](R) reader structure"]
 impl crate::Readable for DCACHE_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dcache_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dcache_ctrl::W](W) writer structure"]
 impl crate::Writable for DCACHE_CTRL_SPEC {
     type Writer = W;
 }

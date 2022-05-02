@@ -35,7 +35,7 @@ impl From<crate::W<CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `FLOW_ERR` reader - x"]
-pub struct FLOW_ERR_R(crate::FieldReader<u8, u8>);
+pub struct FLOW_ERR_R(crate::FieldReader<u8>);
 impl FLOW_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,14 +43,14 @@ impl FLOW_ERR_R {
     }
 }
 impl core::ops::Deref for FLOW_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ADDR_MAP_MODE` reader - x"]
-pub struct ADDR_MAP_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ADDR_MAP_MODE_R(crate::FieldReader<bool>);
 impl ADDR_MAP_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,7 +58,7 @@ impl ADDR_MAP_MODE_R {
     }
 }
 impl core::ops::Deref for ADDR_MAP_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -87,7 +87,7 @@ impl<'a> ADDR_MAP_MODE_W<'a> {
     }
 }
 #[doc = "Field `BURST_LIMIT` reader - x"]
-pub struct BURST_LIMIT_R(crate::FieldReader<u8, u8>);
+pub struct BURST_LIMIT_R(crate::FieldReader<u8>);
 impl BURST_LIMIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -95,7 +95,7 @@ impl BURST_LIMIT_R {
     }
 }
 impl core::ops::Deref for BURST_LIMIT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -114,7 +114,7 @@ impl<'a> BURST_LIMIT_W<'a> {
     }
 }
 #[doc = "Field `TOUT_THRES` reader - x"]
-pub struct TOUT_THRES_R(crate::FieldReader<u16, u16>);
+pub struct TOUT_THRES_R(crate::FieldReader<u16>);
 impl TOUT_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -122,7 +122,7 @@ impl TOUT_THRES_R {
     }
 }
 impl core::ops::Deref for TOUT_THRES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -141,7 +141,7 @@ impl<'a> TOUT_THRES_W<'a> {
     }
 }
 #[doc = "Field `SIZE` reader - x"]
-pub struct SIZE_R(crate::FieldReader<u16, u16>);
+pub struct SIZE_R(crate::FieldReader<u16>);
 impl SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -149,7 +149,7 @@ impl SIZE_R {
     }
 }
 impl core::ops::Deref for SIZE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -190,7 +190,7 @@ impl<'a> START_W<'a> {
     }
 }
 #[doc = "Field `TO_MEM` reader - x"]
-pub struct TO_MEM_R(crate::FieldReader<bool, bool>);
+pub struct TO_MEM_R(crate::FieldReader<bool>);
 impl TO_MEM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -198,7 +198,7 @@ impl TO_MEM_R {
     }
 }
 impl core::ops::Deref for TO_MEM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -227,7 +227,7 @@ impl<'a> TO_MEM_W<'a> {
     }
 }
 #[doc = "Field `ENA` reader - x"]
-pub struct ENA_R(crate::FieldReader<bool, bool>);
+pub struct ENA_R(crate::FieldReader<bool>);
 impl ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -235,7 +235,7 @@ impl ENA_R {
     }
 }
 impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -343,25 +343,16 @@ impl W {
         self
     }
 }
-#[doc = "x\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [config]
-(index.html) module"]
+#[doc = "x\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [config](index.html) module"]
 pub struct CONFIG_SPEC;
 impl crate::RegisterSpec for CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [config::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [config::R](R) reader structure"]
 impl crate::Readable for CONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [config::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [config::W](W) writer structure"]
 impl crate::Writable for CONFIG_SPEC {
     type Writer = W;
 }

@@ -57,7 +57,7 @@ impl<'a> COCPU_DBG_TRIGGER_W<'a> {
     }
 }
 #[doc = "Field `COCPU_CLK_EN` reader - Check ULP-RISCV whether clk on"]
-pub struct COCPU_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_CLK_EN_R(crate::FieldReader<bool>);
 impl COCPU_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -65,14 +65,14 @@ impl COCPU_CLK_EN_R {
     }
 }
 impl core::ops::Deref for COCPU_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_RESET_N` reader - Check ULP-RISCV whether in reset state"]
-pub struct COCPU_RESET_N_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_RESET_N_R(crate::FieldReader<bool>);
 impl COCPU_RESET_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,14 +80,14 @@ impl COCPU_RESET_N_R {
     }
 }
 impl core::ops::Deref for COCPU_RESET_N_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_EOI` reader - Check ULP-RISCV whether in interrupt state"]
-pub struct COCPU_EOI_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_EOI_R(crate::FieldReader<bool>);
 impl COCPU_EOI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -95,14 +95,14 @@ impl COCPU_EOI_R {
     }
 }
 impl core::ops::Deref for COCPU_EOI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_TRAP` reader - Check ULP-RISCV whether in trap state"]
-pub struct COCPU_TRAP_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_TRAP_R(crate::FieldReader<bool>);
 impl COCPU_TRAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -110,14 +110,14 @@ impl COCPU_TRAP_R {
     }
 }
 impl core::ops::Deref for COCPU_TRAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `COCPU_EBREAK` reader - Check ULP-RISCV whether in ebreak"]
-pub struct COCPU_EBREAK_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_EBREAK_R(crate::FieldReader<bool>);
 impl COCPU_EBREAK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -125,7 +125,7 @@ impl COCPU_EBREAK_R {
     }
 }
 impl core::ops::Deref for COCPU_EBREAK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -171,25 +171,16 @@ impl W {
         self
     }
 }
-#[doc = "ULP-RISCV status\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_state]
-(index.html) module"]
+#[doc = "ULP-RISCV status\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_state](index.html) module"]
 pub struct SAR_COCPU_STATE_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_cocpu_state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_cocpu_state::R](R) reader structure"]
 impl crate::Readable for SAR_COCPU_STATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sar_cocpu_state::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sar_cocpu_state::W](W) writer structure"]
 impl crate::Writable for SAR_COCPU_STATE_SPEC {
     type Writer = W;
 }

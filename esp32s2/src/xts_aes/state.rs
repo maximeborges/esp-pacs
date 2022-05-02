@@ -14,7 +14,7 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `STATE` reader - Indicates the status of the Manual Encryption block. 0x0 (XTS_AES_IDLE): idle. 0x1 (XTS_AES_BUSY): busy with encryption. 0x2 (XTS_AES_DONE): encryption is completed, but the encrypted result is not accessible to SPI. 0X3 (XTS_AES_RELEASE): encrypted result is accessible to SPI."]
-pub struct STATE_R(crate::FieldReader<u8, u8>);
+pub struct STATE_R(crate::FieldReader<u8>);
 impl STATE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,7 +22,7 @@ impl STATE_R {
     }
 }
 impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         STATE_R::new((self.bits & 3) as u8)
     }
 }
-#[doc = "Status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state]
-(index.html) module"]
+#[doc = "Status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state](index.html) module"]
 pub struct STATE_SPEC;
 impl crate::RegisterSpec for STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [state::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [state::R](R) reader structure"]
 impl crate::Readable for STATE_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DAC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_CLK_DIV` reader - Controls the division factor of the rising clock of the programming voltage."]
-pub struct DAC_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct DAC_CLK_DIV_R(crate::FieldReader<u8>);
 impl DAC_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DAC_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for DAC_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DAC_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - Don't care."]
-pub struct DAC_CLK_PAD_SEL_R(crate::FieldReader<bool, bool>);
+pub struct DAC_CLK_PAD_SEL_R(crate::FieldReader<bool>);
 impl DAC_CLK_PAD_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl DAC_CLK_PAD_SEL_R {
     }
 }
 impl core::ops::Deref for DAC_CLK_PAD_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> DAC_CLK_PAD_SEL_W<'a> {
     }
 }
 #[doc = "Field `DAC_NUM` reader - Controls the rising period of the programming voltage."]
-pub struct DAC_NUM_R(crate::FieldReader<u8, u8>);
+pub struct DAC_NUM_R(crate::FieldReader<u8>);
 impl DAC_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl DAC_NUM_R {
     }
 }
 impl core::ops::Deref for DAC_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> DAC_NUM_W<'a> {
     }
 }
 #[doc = "Field `OE_CLR` reader - Reduces the power supply of the programming voltage."]
-pub struct OE_CLR_R(crate::FieldReader<bool, bool>);
+pub struct OE_CLR_R(crate::FieldReader<bool>);
 impl OE_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl OE_CLR_R {
     }
 }
 impl core::ops::Deref for OE_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "Controls the eFuse programming voltage.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac_conf]
-(index.html) module"]
+#[doc = "Controls the eFuse programming voltage.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dac_conf](index.html) module"]
 pub struct DAC_CONF_SPEC;
 impl crate::RegisterSpec for DAC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dac_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dac_conf::R](R) reader structure"]
 impl crate::Readable for DAC_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dac_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dac_conf::W](W) writer structure"]
 impl crate::Writable for DAC_CONF_SPEC {
     type Writer = W;
 }

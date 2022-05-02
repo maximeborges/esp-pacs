@@ -113,7 +113,7 @@ impl<'a> SLC0_TOKEN0_INC_MORE_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TOKEN0` reader - "]
-pub struct SLC0_TOKEN0_R(crate::FieldReader<u16, u16>);
+pub struct SLC0_TOKEN0_R(crate::FieldReader<u16>);
 impl SLC0_TOKEN0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -121,7 +121,7 @@ impl SLC0_TOKEN0_R {
     }
 }
 impl core::ops::Deref for SLC0_TOKEN0_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -162,25 +162,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0token0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0token0](index.html) module"]
 pub struct _0TOKEN0_SPEC;
 impl crate::RegisterSpec for _0TOKEN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_0token0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [_0token0::R](R) reader structure"]
 impl crate::Readable for _0TOKEN0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [_0token0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [_0token0::W](W) writer structure"]
 impl crate::Writable for _0TOKEN0_SPEC {
     type Writer = W;
 }

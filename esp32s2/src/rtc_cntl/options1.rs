@@ -35,7 +35,7 @@ impl From<crate::W<OPTIONS1_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` reader - Set this bit to force the chip to boot from the download mode."]
-pub struct FORCE_DOWNLOAD_BOOT_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_DOWNLOAD_BOOT_R(crate::FieldReader<bool>);
 impl FORCE_DOWNLOAD_BOOT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FORCE_DOWNLOAD_BOOT_R {
     }
 }
 impl core::ops::Deref for FORCE_DOWNLOAD_BOOT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC option register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [options1]
-(index.html) module"]
+#[doc = "RTC option register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [options1](index.html) module"]
 pub struct OPTIONS1_SPEC;
 impl crate::RegisterSpec for OPTIONS1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [options1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [options1::R](R) reader structure"]
 impl crate::Readable for OPTIONS1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [options1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [options1::W](W) writer structure"]
 impl crate::Writable for OPTIONS1_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DCACHE_SYNC_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_SYNC_INT_MAP` reader - this register used to map dcache_sync interrupt to one of core0's external interrupt"]
-pub struct DCACHE_SYNC_INT_MAP_R(crate::FieldReader<u8, u8>);
+pub struct DCACHE_SYNC_INT_MAP_R(crate::FieldReader<u8>);
 impl DCACHE_SYNC_INT_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DCACHE_SYNC_INT_MAP_R {
     }
 }
 impl core::ops::Deref for DCACHE_SYNC_INT_MAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "dcache_sync interrupt configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_sync_int_map]
-(index.html) module"]
+#[doc = "dcache_sync interrupt configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_sync_int_map](index.html) module"]
 pub struct DCACHE_SYNC_INT_MAP_SPEC;
 impl crate::RegisterSpec for DCACHE_SYNC_INT_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_sync_int_map::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dcache_sync_int_map::R](R) reader structure"]
 impl crate::Readable for DCACHE_SYNC_INT_MAP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dcache_sync_int_map::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dcache_sync_int_map::W](W) writer structure"]
 impl crate::Writable for DCACHE_SYNC_INT_MAP_SPEC {
     type Writer = W;
 }

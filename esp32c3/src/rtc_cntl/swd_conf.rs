@@ -35,7 +35,7 @@ impl From<crate::W<SWD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SWD_RESET_FLAG` reader - swd reset flag"]
-pub struct SWD_RESET_FLAG_R(crate::FieldReader<bool, bool>);
+pub struct SWD_RESET_FLAG_R(crate::FieldReader<bool>);
 impl SWD_RESET_FLAG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,14 +43,14 @@ impl SWD_RESET_FLAG_R {
     }
 }
 impl core::ops::Deref for SWD_RESET_FLAG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SWD_FEED_INT` reader - swd interrupt for feeding"]
-pub struct SWD_FEED_INT_R(crate::FieldReader<bool, bool>);
+pub struct SWD_FEED_INT_R(crate::FieldReader<bool>);
 impl SWD_FEED_INT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,14 +58,14 @@ impl SWD_FEED_INT_R {
     }
 }
 impl core::ops::Deref for SWD_FEED_INT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SWD_BYPASS_RST` reader - Bypass swd rst"]
-pub struct SWD_BYPASS_RST_R(crate::FieldReader<bool, bool>);
+pub struct SWD_BYPASS_RST_R(crate::FieldReader<bool>);
 impl SWD_BYPASS_RST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -73,7 +73,7 @@ impl SWD_BYPASS_RST_R {
     }
 }
 impl core::ops::Deref for SWD_BYPASS_RST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -102,7 +102,7 @@ impl<'a> SWD_BYPASS_RST_W<'a> {
     }
 }
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - adjust signal width send to swd"]
-pub struct SWD_SIGNAL_WIDTH_R(crate::FieldReader<u16, u16>);
+pub struct SWD_SIGNAL_WIDTH_R(crate::FieldReader<u16>);
 impl SWD_SIGNAL_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -110,7 +110,7 @@ impl SWD_SIGNAL_WIDTH_R {
     }
 }
 impl core::ops::Deref for SWD_SIGNAL_WIDTH_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> SWD_FEED_W<'a> {
     }
 }
 #[doc = "Field `SWD_DISABLE` reader - disabel SWD"]
-pub struct SWD_DISABLE_R(crate::FieldReader<bool, bool>);
+pub struct SWD_DISABLE_R(crate::FieldReader<bool>);
 impl SWD_DISABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl SWD_DISABLE_R {
     }
 }
 impl core::ops::Deref for SWD_DISABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> SWD_DISABLE_W<'a> {
     }
 }
 #[doc = "Field `SWD_AUTO_FEED_EN` reader - automatically feed swd when int comes"]
-pub struct SWD_AUTO_FEED_EN_R(crate::FieldReader<bool, bool>);
+pub struct SWD_AUTO_FEED_EN_R(crate::FieldReader<bool>);
 impl SWD_AUTO_FEED_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl SWD_AUTO_FEED_EN_R {
     }
 }
 impl core::ops::Deref for SWD_AUTO_FEED_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "rtc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swd_conf]
-(index.html) module"]
+#[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swd_conf](index.html) module"]
 pub struct SWD_CONF_SPEC;
 impl crate::RegisterSpec for SWD_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swd_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [swd_conf::R](R) reader structure"]
 impl crate::Readable for SWD_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [swd_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [swd_conf::W](W) writer structure"]
 impl crate::Writable for SWD_CONF_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_DRAM0_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR` reader - core_0_dram0_pms_monitor_violate_intr"]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
 impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
     }
 }
 impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK` reader - core_0_dram0_pms_monitor_violate_status_lock"]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R(crate::FieldReader<bool, bool>);
+pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R(crate::FieldReader<bool>);
 impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
     }
 }
 impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - core_0_dram0_pms_monitor_violate_status_world"]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader<u8, u8>);
+pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader<u8>);
 impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,14 +52,14 @@ impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
     }
 }
 impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - core_0_dram0_pms_monitor_violate_status_addr"]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader<u32>);
 impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -67,7 +67,7 @@ impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
     }
 }
 impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -101,16 +101,12 @@ impl R {
         CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R::new(((self.bits >> 4) & 0x00ff_ffff) as u32)
     }
 }
-#[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_2_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_dram0_pms_monitor_2]
-(index.html) module"]
+#[doc = "SENSITIVE_CORE_0_DRAM0_PMS_MONITOR_2_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_dram0_pms_monitor_2](index.html) module"]
 pub struct CORE_0_DRAM0_PMS_MONITOR_2_SPEC;
 impl crate::RegisterSpec for CORE_0_DRAM0_PMS_MONITOR_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_0_dram0_pms_monitor_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_0_dram0_pms_monitor_2::R](R) reader structure"]
 impl crate::Readable for CORE_0_DRAM0_PMS_MONITOR_2_SPEC {
     type Reader = R;
 }

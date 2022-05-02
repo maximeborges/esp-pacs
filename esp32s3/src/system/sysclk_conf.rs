@@ -35,7 +35,7 @@ impl From<crate::W<SYSCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_DIV_CNT` reader - This field is used to set the count of prescaler of XTAL_CLK."]
-pub struct PRE_DIV_CNT_R(crate::FieldReader<u16, u16>);
+pub struct PRE_DIV_CNT_R(crate::FieldReader<u16>);
 impl PRE_DIV_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PRE_DIV_CNT_R {
     }
 }
 impl core::ops::Deref for PRE_DIV_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PRE_DIV_CNT_W<'a> {
     }
 }
 #[doc = "Field `SOC_CLK_SEL` reader - This field is used to select soc clock."]
-pub struct SOC_CLK_SEL_R(crate::FieldReader<u8, u8>);
+pub struct SOC_CLK_SEL_R(crate::FieldReader<u8>);
 impl SOC_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SOC_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for SOC_CLK_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SOC_CLK_SEL_W<'a> {
     }
 }
 #[doc = "Field `CLK_XTAL_FREQ` reader - This field is used to read xtal frequency in MHz."]
-pub struct CLK_XTAL_FREQ_R(crate::FieldReader<u8, u8>);
+pub struct CLK_XTAL_FREQ_R(crate::FieldReader<u8>);
 impl CLK_XTAL_FREQ_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,14 +97,14 @@ impl CLK_XTAL_FREQ_R {
     }
 }
 impl core::ops::Deref for CLK_XTAL_FREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CLK_DIV_EN` reader - Reserved."]
-pub struct CLK_DIV_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_DIV_EN_R(crate::FieldReader<bool>);
 impl CLK_DIV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,7 +112,7 @@ impl CLK_DIV_EN_R {
     }
 }
 impl core::ops::Deref for CLK_DIV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "System clock configuration register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sysclk_conf]
-(index.html) module"]
+#[doc = "System clock configuration register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sysclk_conf](index.html) module"]
 pub struct SYSCLK_CONF_SPEC;
 impl crate::RegisterSpec for SYSCLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sysclk_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sysclk_conf::R](R) reader structure"]
 impl crate::Readable for SYSCLK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sysclk_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sysclk_conf::W](W) writer structure"]
 impl crate::Writable for SYSCLK_CONF_SPEC {
     type Writer = W;
 }

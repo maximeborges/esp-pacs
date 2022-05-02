@@ -35,7 +35,7 @@ impl From<crate::W<MEM_PVT_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_PATH_LEN` reader - reg_mem_path_len"]
-pub struct MEM_PATH_LEN_R(crate::FieldReader<u8, u8>);
+pub struct MEM_PATH_LEN_R(crate::FieldReader<u8>);
 impl MEM_PATH_LEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl MEM_PATH_LEN_R {
     }
 }
 impl core::ops::Deref for MEM_PATH_LEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -84,7 +84,7 @@ impl<'a> MEM_ERR_CNT_CLR_W<'a> {
     }
 }
 #[doc = "Field `MONITOR_EN` reader - reg_mem_pvt_monitor_en"]
-pub struct MONITOR_EN_R(crate::FieldReader<bool, bool>);
+pub struct MONITOR_EN_R(crate::FieldReader<bool>);
 impl MONITOR_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -92,7 +92,7 @@ impl MONITOR_EN_R {
     }
 }
 impl core::ops::Deref for MONITOR_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -121,7 +121,7 @@ impl<'a> MONITOR_EN_W<'a> {
     }
 }
 #[doc = "Field `MEM_TIMING_ERR_CNT` reader - reg_mem_timing_err_cnt"]
-pub struct MEM_TIMING_ERR_CNT_R(crate::FieldReader<u16, u16>);
+pub struct MEM_TIMING_ERR_CNT_R(crate::FieldReader<u16>);
 impl MEM_TIMING_ERR_CNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -129,14 +129,14 @@ impl MEM_TIMING_ERR_CNT_R {
     }
 }
 impl core::ops::Deref for MEM_TIMING_ERR_CNT_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `MEM_VT_SEL` reader - reg_mem_vt_sel"]
-pub struct MEM_VT_SEL_R(crate::FieldReader<u8, u8>);
+pub struct MEM_VT_SEL_R(crate::FieldReader<u8>);
 impl MEM_VT_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl MEM_VT_SEL_R {
     }
 }
 impl core::ops::Deref for MEM_VT_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -212,25 +212,16 @@ impl W {
         self
     }
 }
-#[doc = "mem pvt register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_pvt]
-(index.html) module"]
+#[doc = "mem pvt register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_pvt](index.html) module"]
 pub struct MEM_PVT_SPEC;
 impl crate::RegisterSpec for MEM_PVT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_pvt::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mem_pvt::R](R) reader structure"]
 impl crate::Readable for MEM_PVT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mem_pvt::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mem_pvt::W](W) writer structure"]
 impl crate::Writable for MEM_PVT_SPEC {
     type Writer = W;
 }

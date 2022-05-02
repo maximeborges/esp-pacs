@@ -35,7 +35,7 @@ impl From<crate::W<FIFO_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_RD_BYTE` reader - UART 0 accesses FIFO via this register."]
-pub struct RXFIFO_RD_BYTE_R(crate::FieldReader<u8, u8>);
+pub struct RXFIFO_RD_BYTE_R(crate::FieldReader<u8>);
 impl RXFIFO_RD_BYTE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RXFIFO_RD_BYTE_R {
     }
 }
 impl core::ops::Deref for RXFIFO_RD_BYTE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "FIFO data register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo]
-(index.html) module"]
+#[doc = "FIFO data register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo](index.html) module"]
 pub struct FIFO_SPEC;
 impl crate::RegisterSpec for FIFO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [fifo::R](R) reader structure"]
 impl crate::Readable for FIFO_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [fifo::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [fifo::W](W) writer structure"]
 impl crate::Writable for FIFO_SPEC {
     type Writer = W;
 }

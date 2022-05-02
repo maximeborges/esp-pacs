@@ -35,7 +35,7 @@ impl From<crate::W<SLOW_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ANA_CLK_DIV_VLD` reader - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
-pub struct ANA_CLK_DIV_VLD_R(crate::FieldReader<bool, bool>);
+pub struct ANA_CLK_DIV_VLD_R(crate::FieldReader<bool>);
 impl ANA_CLK_DIV_VLD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ANA_CLK_DIV_VLD_R {
     }
 }
 impl core::ops::Deref for ANA_CLK_DIV_VLD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ANA_CLK_DIV_VLD_W<'a> {
     }
 }
 #[doc = "Field `ANA_CLK_DIV` reader - Set the rtc_clk divider."]
-pub struct ANA_CLK_DIV_R(crate::FieldReader<u8, u8>);
+pub struct ANA_CLK_DIV_R(crate::FieldReader<u8>);
 impl ANA_CLK_DIV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl ANA_CLK_DIV_R {
     }
 }
 impl core::ops::Deref for ANA_CLK_DIV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> ANA_CLK_DIV_W<'a> {
     }
 }
 #[doc = "Field `SLOW_CLK_NEXT_EDGE` reader - "]
-pub struct SLOW_CLK_NEXT_EDGE_R(crate::FieldReader<bool, bool>);
+pub struct SLOW_CLK_NEXT_EDGE_R(crate::FieldReader<bool>);
 impl SLOW_CLK_NEXT_EDGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl SLOW_CLK_NEXT_EDGE_R {
     }
 }
 impl core::ops::Deref for SLOW_CLK_NEXT_EDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC slow clock configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slow_clk_conf]
-(index.html) module"]
+#[doc = "RTC slow clock configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slow_clk_conf](index.html) module"]
 pub struct SLOW_CLK_CONF_SPEC;
 impl crate::RegisterSpec for SLOW_CLK_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slow_clk_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slow_clk_conf::R](R) reader structure"]
 impl crate::Readable for SLOW_CLK_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slow_clk_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slow_clk_conf::W](W) writer structure"]
 impl crate::Writable for SLOW_CLK_CONF_SPEC {
     type Writer = W;
 }

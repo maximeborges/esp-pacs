@@ -14,7 +14,7 @@ impl From<crate::R<U_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CNT_THR_ZERO_MODE_U` reader - The pulse counter status of PCNT_U%s corresponding to 0. 0: pulse counter decreases from positive to 0. 1: pulse counter increases from negative to 0. 2: pulse counter is negative. 3: pulse counter is positive."]
-pub struct CNT_THR_ZERO_MODE_U_R(crate::FieldReader<u8, u8>);
+pub struct CNT_THR_ZERO_MODE_U_R(crate::FieldReader<u8>);
 impl CNT_THR_ZERO_MODE_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl CNT_THR_ZERO_MODE_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_ZERO_MODE_U_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CNT_THR_THRES1_LAT_U` reader - The latched value of thres1 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres1 and thres1 event is valid. 0: others"]
-pub struct CNT_THR_THRES1_LAT_U_R(crate::FieldReader<bool, bool>);
+pub struct CNT_THR_THRES1_LAT_U_R(crate::FieldReader<bool>);
 impl CNT_THR_THRES1_LAT_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl CNT_THR_THRES1_LAT_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_THRES1_LAT_U_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CNT_THR_THRES0_LAT_U` reader - The latched value of thres0 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres0 and thres0 event is valid. 0: others"]
-pub struct CNT_THR_THRES0_LAT_U_R(crate::FieldReader<bool, bool>);
+pub struct CNT_THR_THRES0_LAT_U_R(crate::FieldReader<bool>);
 impl CNT_THR_THRES0_LAT_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl CNT_THR_THRES0_LAT_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_THRES0_LAT_U_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CNT_THR_L_LIM_LAT_U` reader - The latched value of low limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_l_lim and low limit event is valid. 0: others"]
-pub struct CNT_THR_L_LIM_LAT_U_R(crate::FieldReader<bool, bool>);
+pub struct CNT_THR_L_LIM_LAT_U_R(crate::FieldReader<bool>);
 impl CNT_THR_L_LIM_LAT_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl CNT_THR_L_LIM_LAT_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_L_LIM_LAT_U_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CNT_THR_H_LIM_LAT_U` reader - The latched value of high limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_h_lim and high limit event is valid. 0: others"]
-pub struct CNT_THR_H_LIM_LAT_U_R(crate::FieldReader<bool, bool>);
+pub struct CNT_THR_H_LIM_LAT_U_R(crate::FieldReader<bool>);
 impl CNT_THR_H_LIM_LAT_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl CNT_THR_H_LIM_LAT_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_H_LIM_LAT_U_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CNT_THR_ZERO_LAT_U` reader - The latched value of zero threshold event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to 0 and zero threshold event is valid. 0: others"]
-pub struct CNT_THR_ZERO_LAT_U_R(crate::FieldReader<bool, bool>);
+pub struct CNT_THR_ZERO_LAT_U_R(crate::FieldReader<bool>);
 impl CNT_THR_ZERO_LAT_U_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl CNT_THR_ZERO_LAT_U_R {
     }
 }
 impl core::ops::Deref for CNT_THR_ZERO_LAT_U_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -135,16 +135,12 @@ impl R {
         CNT_THR_ZERO_LAT_U_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "PNCT UNIT%s status register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_status]
-(index.html) module"]
+#[doc = "PNCT UNIT%s status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_status](index.html) module"]
 pub struct U_STATUS_SPEC;
 impl crate::RegisterSpec for U_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u_status::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [u_status::R](R) reader structure"]
 impl crate::Readable for U_STATUS_SPEC {
     type Reader = R;
 }

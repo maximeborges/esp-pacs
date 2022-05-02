@@ -35,7 +35,7 @@ impl From<crate::W<ONETIME_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_ONETIME_ATTEN` reader - configure onetime atten"]
-pub struct SARADC_ONETIME_ATTEN_R(crate::FieldReader<u8, u8>);
+pub struct SARADC_ONETIME_ATTEN_R(crate::FieldReader<u8>);
 impl SARADC_ONETIME_ATTEN_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SARADC_ONETIME_ATTEN_R {
     }
 }
 impl core::ops::Deref for SARADC_ONETIME_ATTEN_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SARADC_ONETIME_ATTEN_W<'a> {
     }
 }
 #[doc = "Field `SARADC_ONETIME_CHANNEL` reader - configure onetime channel"]
-pub struct SARADC_ONETIME_CHANNEL_R(crate::FieldReader<u8, u8>);
+pub struct SARADC_ONETIME_CHANNEL_R(crate::FieldReader<u8>);
 impl SARADC_ONETIME_CHANNEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SARADC_ONETIME_CHANNEL_R {
     }
 }
 impl core::ops::Deref for SARADC_ONETIME_CHANNEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SARADC_ONETIME_CHANNEL_W<'a> {
     }
 }
 #[doc = "Field `SARADC_ONETIME_START` reader - trigger adc onetime sample"]
-pub struct SARADC_ONETIME_START_R(crate::FieldReader<bool, bool>);
+pub struct SARADC_ONETIME_START_R(crate::FieldReader<bool>);
 impl SARADC_ONETIME_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl SARADC_ONETIME_START_R {
     }
 }
 impl core::ops::Deref for SARADC_ONETIME_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> SARADC_ONETIME_START_W<'a> {
     }
 }
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` reader - enable adc2 onetime sample"]
-pub struct SARADC2_ONETIME_SAMPLE_R(crate::FieldReader<bool, bool>);
+pub struct SARADC2_ONETIME_SAMPLE_R(crate::FieldReader<bool>);
 impl SARADC2_ONETIME_SAMPLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl SARADC2_ONETIME_SAMPLE_R {
     }
 }
 impl core::ops::Deref for SARADC2_ONETIME_SAMPLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> SARADC2_ONETIME_SAMPLE_W<'a> {
     }
 }
 #[doc = "Field `SARADC1_ONETIME_SAMPLE` reader - enable adc1 onetime sample"]
-pub struct SARADC1_ONETIME_SAMPLE_R(crate::FieldReader<bool, bool>);
+pub struct SARADC1_ONETIME_SAMPLE_R(crate::FieldReader<bool>);
 impl SARADC1_ONETIME_SAMPLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl SARADC1_ONETIME_SAMPLE_R {
     }
 }
 impl core::ops::Deref for SARADC1_ONETIME_SAMPLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -259,25 +259,16 @@ impl W {
         self
     }
 }
-#[doc = "digital saradc configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [onetime_sample]
-(index.html) module"]
+#[doc = "digital saradc configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [onetime_sample](index.html) module"]
 pub struct ONETIME_SAMPLE_SPEC;
 impl crate::RegisterSpec for ONETIME_SAMPLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [onetime_sample::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [onetime_sample::R](R) reader structure"]
 impl crate::Readable for ONETIME_SAMPLE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [onetime_sample::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [onetime_sample::W](W) writer structure"]
 impl crate::Writable for ONETIME_SAMPLE_SPEC {
     type Writer = W;
 }

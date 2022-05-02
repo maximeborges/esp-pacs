@@ -35,7 +35,7 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_PD` reader - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
-pub struct MEM_PD_R(crate::FieldReader<bool, bool>);
+pub struct MEM_PD_R(crate::FieldReader<bool>);
 impl MEM_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MEM_PD_R {
     }
 }
 impl core::ops::Deref for MEM_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MEM_PD_W<'a> {
     }
 }
 #[doc = "Field `RX_SIZE` reader - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
-pub struct RX_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct RX_SIZE_R(crate::FieldReader<u8>);
 impl RX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl RX_SIZE_R {
     }
 }
 impl core::ops::Deref for RX_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> RX_SIZE_W<'a> {
     }
 }
 #[doc = "Field `TX_SIZE` reader - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
-pub struct TX_SIZE_R(crate::FieldReader<u8, u8>);
+pub struct TX_SIZE_R(crate::FieldReader<u8>);
 impl TX_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -107,7 +107,7 @@ impl TX_SIZE_R {
     }
 }
 impl core::ops::Deref for TX_SIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> TX_SIZE_W<'a> {
     }
 }
 #[doc = "Field `RX_FLOW_THRHD_H3` reader - refer to the rx_flow_thrhd's describtion."]
-pub struct RX_FLOW_THRHD_H3_R(crate::FieldReader<u8, u8>);
+pub struct RX_FLOW_THRHD_H3_R(crate::FieldReader<u8>);
 impl RX_FLOW_THRHD_H3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -134,7 +134,7 @@ impl RX_FLOW_THRHD_H3_R {
     }
 }
 impl core::ops::Deref for RX_FLOW_THRHD_H3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> RX_FLOW_THRHD_H3_W<'a> {
     }
 }
 #[doc = "Field `RX_TOUT_THRHD_H3` reader - refer to the rx_tout_thrhd's describtion."]
-pub struct RX_TOUT_THRHD_H3_R(crate::FieldReader<u8, u8>);
+pub struct RX_TOUT_THRHD_H3_R(crate::FieldReader<u8>);
 impl RX_TOUT_THRHD_H3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl RX_TOUT_THRHD_H3_R {
     }
 }
 impl core::ops::Deref for RX_TOUT_THRHD_H3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> RX_TOUT_THRHD_H3_W<'a> {
     }
 }
 #[doc = "Field `XON_THRESHOLD_H2` reader - refer to the uart_xon_threshold's describtion."]
-pub struct XON_THRESHOLD_H2_R(crate::FieldReader<u8, u8>);
+pub struct XON_THRESHOLD_H2_R(crate::FieldReader<u8>);
 impl XON_THRESHOLD_H2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -188,7 +188,7 @@ impl XON_THRESHOLD_H2_R {
     }
 }
 impl core::ops::Deref for XON_THRESHOLD_H2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -207,7 +207,7 @@ impl<'a> XON_THRESHOLD_H2_W<'a> {
     }
 }
 #[doc = "Field `XOFF_THRESHOLD_H2` reader - refer to the uart_xoff_threshold's describtion."]
-pub struct XOFF_THRESHOLD_H2_R(crate::FieldReader<u8, u8>);
+pub struct XOFF_THRESHOLD_H2_R(crate::FieldReader<u8>);
 impl XOFF_THRESHOLD_H2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -215,7 +215,7 @@ impl XOFF_THRESHOLD_H2_R {
     }
 }
 impl core::ops::Deref for XOFF_THRESHOLD_H2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -234,7 +234,7 @@ impl<'a> XOFF_THRESHOLD_H2_W<'a> {
     }
 }
 #[doc = "Field `RX_MEM_FULL_THRHD` reader - refer to the rxfifo_full_thrhd's describtion."]
-pub struct RX_MEM_FULL_THRHD_R(crate::FieldReader<u8, u8>);
+pub struct RX_MEM_FULL_THRHD_R(crate::FieldReader<u8>);
 impl RX_MEM_FULL_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -242,7 +242,7 @@ impl RX_MEM_FULL_THRHD_R {
     }
 }
 impl core::ops::Deref for RX_MEM_FULL_THRHD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -261,7 +261,7 @@ impl<'a> RX_MEM_FULL_THRHD_W<'a> {
     }
 }
 #[doc = "Field `TX_MEM_EMPTY_THRHD` reader - refer to txfifo_empty_thrhd 's describtion."]
-pub struct TX_MEM_EMPTY_THRHD_R(crate::FieldReader<u8, u8>);
+pub struct TX_MEM_EMPTY_THRHD_R(crate::FieldReader<u8>);
 impl TX_MEM_EMPTY_THRHD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -269,7 +269,7 @@ impl TX_MEM_EMPTY_THRHD_R {
     }
 }
 impl core::ops::Deref for TX_MEM_EMPTY_THRHD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -387,25 +387,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_conf](index.html) module"]
 pub struct MEM_CONF_SPEC;
 impl crate::RegisterSpec for MEM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mem_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mem_conf::R](R) reader structure"]
 impl crate::Readable for MEM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mem_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<GPIO18_SPEC>> for W {
     }
 }
 #[doc = "Field `MCU_OE` reader - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
-pub struct MCU_OE_R(crate::FieldReader<bool, bool>);
+pub struct MCU_OE_R(crate::FieldReader<bool>);
 impl MCU_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl MCU_OE_R {
     }
 }
 impl core::ops::Deref for MCU_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> MCU_OE_W<'a> {
     }
 }
 #[doc = "Field `SLP_SEL` reader - Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode."]
-pub struct SLP_SEL_R(crate::FieldReader<bool, bool>);
+pub struct SLP_SEL_R(crate::FieldReader<bool>);
 impl SLP_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLP_SEL_R {
     }
 }
 impl core::ops::Deref for SLP_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLP_SEL_W<'a> {
     }
 }
 #[doc = "Field `MCU_WPD` reader - Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub struct MCU_WPD_R(crate::FieldReader<bool, bool>);
+pub struct MCU_WPD_R(crate::FieldReader<bool>);
 impl MCU_WPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MCU_WPD_R {
     }
 }
 impl core::ops::Deref for MCU_WPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MCU_WPD_W<'a> {
     }
 }
 #[doc = "Field `MCU_WPU` reader - Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub struct MCU_WPU_R(crate::FieldReader<bool, bool>);
+pub struct MCU_WPU_R(crate::FieldReader<bool>);
 impl MCU_WPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl MCU_WPU_R {
     }
 }
 impl core::ops::Deref for MCU_WPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> MCU_WPU_W<'a> {
     }
 }
 #[doc = "Field `MCU_IE` reader - Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled."]
-pub struct MCU_IE_R(crate::FieldReader<bool, bool>);
+pub struct MCU_IE_R(crate::FieldReader<bool>);
 impl MCU_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl MCU_IE_R {
     }
 }
 impl core::ops::Deref for MCU_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> MCU_IE_W<'a> {
     }
 }
 #[doc = "Field `FUN_WPD` reader - Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub struct FUN_WPD_R(crate::FieldReader<bool, bool>);
+pub struct FUN_WPD_R(crate::FieldReader<bool>);
 impl FUN_WPD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FUN_WPD_R {
     }
 }
 impl core::ops::Deref for FUN_WPD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> FUN_WPD_W<'a> {
     }
 }
 #[doc = "Field `FUN_WPU` reader - Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub struct FUN_WPU_R(crate::FieldReader<bool, bool>);
+pub struct FUN_WPU_R(crate::FieldReader<bool>);
 impl FUN_WPU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl FUN_WPU_R {
     }
 }
 impl core::ops::Deref for FUN_WPU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> FUN_WPU_W<'a> {
     }
 }
 #[doc = "Field `FUN_IE` reader - Input enable of the pin. 1: Input enabled. 0: Input disabled."]
-pub struct FUN_IE_R(crate::FieldReader<bool, bool>);
+pub struct FUN_IE_R(crate::FieldReader<bool>);
 impl FUN_IE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl FUN_IE_R {
     }
 }
 impl core::ops::Deref for FUN_IE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> FUN_IE_W<'a> {
     }
 }
 #[doc = "Field `FUN_DRV` reader - Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub struct FUN_DRV_R(crate::FieldReader<u8, u8>);
+pub struct FUN_DRV_R(crate::FieldReader<u8>);
 impl FUN_DRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -339,7 +339,7 @@ impl FUN_DRV_R {
     }
 }
 impl core::ops::Deref for FUN_DRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> FUN_DRV_W<'a> {
     }
 }
 #[doc = "Field `MCU_SEL` reader - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc."]
-pub struct MCU_SEL_R(crate::FieldReader<u8, u8>);
+pub struct MCU_SEL_R(crate::FieldReader<u8>);
 impl MCU_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -366,7 +366,7 @@ impl MCU_SEL_R {
     }
 }
 impl core::ops::Deref for MCU_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> MCU_SEL_W<'a> {
     }
 }
 #[doc = "Field `FILTER_EN` reader - Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled."]
-pub struct FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct FILTER_EN_R(crate::FieldReader<bool>);
 impl FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl FILTER_EN_R {
     }
 }
 impl core::ops::Deref for FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -541,25 +541,16 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register for pad GPIO18\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio18]
-(index.html) module"]
+#[doc = "Configuration register for pad GPIO18\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio18](index.html) module"]
 pub struct GPIO18_SPEC;
 impl crate::RegisterSpec for GPIO18_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio18::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gpio18::R](R) reader structure"]
 impl crate::Readable for GPIO18_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gpio18::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gpio18::W](W) writer structure"]
 impl crate::Writable for GPIO18_SPEC {
     type Writer = W;
 }

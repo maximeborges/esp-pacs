@@ -35,7 +35,7 @@ impl From<crate::W<CVSD_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_K` reader - "]
-pub struct CVSD_K_R(crate::FieldReader<u8, u8>);
+pub struct CVSD_K_R(crate::FieldReader<u8>);
 impl CVSD_K_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CVSD_K_R {
     }
 }
 impl core::ops::Deref for CVSD_K_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CVSD_K_W<'a> {
     }
 }
 #[doc = "Field `CVSD_J` reader - "]
-pub struct CVSD_J_R(crate::FieldReader<u8, u8>);
+pub struct CVSD_J_R(crate::FieldReader<u8>);
 impl CVSD_J_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CVSD_J_R {
     }
 }
 impl core::ops::Deref for CVSD_J_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CVSD_J_W<'a> {
     }
 }
 #[doc = "Field `CVSD_BETA` reader - "]
-pub struct CVSD_BETA_R(crate::FieldReader<u16, u16>);
+pub struct CVSD_BETA_R(crate::FieldReader<u16>);
 impl CVSD_BETA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -97,7 +97,7 @@ impl CVSD_BETA_R {
     }
 }
 impl core::ops::Deref for CVSD_BETA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CVSD_BETA_W<'a> {
     }
 }
 #[doc = "Field `CVSD_H` reader - "]
-pub struct CVSD_H_R(crate::FieldReader<u8, u8>);
+pub struct CVSD_H_R(crate::FieldReader<u8>);
 impl CVSD_H_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CVSD_H_R {
     }
 }
 impl core::ops::Deref for CVSD_H_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -192,25 +192,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cvsd_conf2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cvsd_conf2](index.html) module"]
 pub struct CVSD_CONF2_SPEC;
 impl crate::RegisterSpec for CVSD_CONF2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cvsd_conf2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cvsd_conf2::R](R) reader structure"]
 impl crate::Readable for CVSD_CONF2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cvsd_conf2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cvsd_conf2::W](W) writer structure"]
 impl crate::Writable for CVSD_CONF2_SPEC {
     type Writer = W;
 }

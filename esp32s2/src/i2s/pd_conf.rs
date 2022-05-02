@@ -35,7 +35,7 @@ impl From<crate::W<PD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_FORCE_PD` reader - Force FIFO power-down."]
-pub struct FIFO_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_FORCE_PD_R(crate::FieldReader<bool>);
 impl FIFO_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FIFO_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for FIFO_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FIFO_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `FIFO_FORCE_PU` reader - Force FIFO power-up."]
-pub struct FIFO_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_FORCE_PU_R(crate::FieldReader<bool>);
 impl FIFO_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FIFO_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for FIFO_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FIFO_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `PLC_MEM_FORCE_PD` reader - Force I2S memory power-down."]
-pub struct PLC_MEM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct PLC_MEM_FORCE_PD_R(crate::FieldReader<bool>);
 impl PLC_MEM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PLC_MEM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for PLC_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PLC_MEM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `PLC_MEM_FORCE_PU` reader - Force I2S memory power-up."]
-pub struct PLC_MEM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct PLC_MEM_FORCE_PU_R(crate::FieldReader<bool>);
 impl PLC_MEM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PLC_MEM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for PLC_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PLC_MEM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `DMA_RAM_FORCE_PD` reader - Force DMA FIFO power-down."]
-pub struct DMA_RAM_FORCE_PD_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RAM_FORCE_PD_R(crate::FieldReader<bool>);
 impl DMA_RAM_FORCE_PD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DMA_RAM_FORCE_PD_R {
     }
 }
 impl core::ops::Deref for DMA_RAM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DMA_RAM_FORCE_PD_W<'a> {
     }
 }
 #[doc = "Field `DMA_RAM_FORCE_PU` reader - Force DMA FIFO power-up."]
-pub struct DMA_RAM_FORCE_PU_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RAM_FORCE_PU_R(crate::FieldReader<bool>);
 impl DMA_RAM_FORCE_PU_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DMA_RAM_FORCE_PU_R {
     }
 }
 impl core::ops::Deref for DMA_RAM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DMA_RAM_FORCE_PU_W<'a> {
     }
 }
 #[doc = "Field `DMA_RAM_CLK_FO` reader - Set this bit to force on DMA RAM clock."]
-pub struct DMA_RAM_CLK_FO_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RAM_CLK_FO_R(crate::FieldReader<bool>);
 impl DMA_RAM_CLK_FO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DMA_RAM_CLK_FO_R {
     }
 }
 impl core::ops::Deref for DMA_RAM_CLK_FO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -373,25 +373,16 @@ impl W {
         self
     }
 }
-#[doc = "I2S power-down configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pd_conf]
-(index.html) module"]
+#[doc = "I2S power-down configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pd_conf](index.html) module"]
 pub struct PD_CONF_SPEC;
 impl crate::RegisterSpec for PD_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pd_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pd_conf::R](R) reader structure"]
 impl crate::Readable for PD_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pd_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pd_conf::W](W) writer structure"]
 impl crate::Writable for PD_CONF_SPEC {
     type Writer = W;
 }

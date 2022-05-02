@@ -35,7 +35,7 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `VAL` reader - Command content"]
-pub struct VAL_R(crate::FieldReader<u16, u16>);
+pub struct VAL_R(crate::FieldReader<u16>);
 impl VAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl VAL_R {
     }
 }
 impl core::ops::Deref for VAL_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> VAL_W<'a> {
     }
 }
 #[doc = "Field `DONE` reader - Bit is set by HW when command is done"]
-pub struct DONE_R(crate::FieldReader<bool, bool>);
+pub struct DONE_R(crate::FieldReader<bool>);
 impl DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl DONE_R {
     }
 }
 impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmd](index.html) module"]
 pub struct CMD_SPEC;
 impl crate::RegisterSpec for CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmd::R](R) reader structure"]
 impl crate::Readable for CMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
 }

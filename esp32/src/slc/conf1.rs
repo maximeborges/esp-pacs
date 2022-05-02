@@ -35,7 +35,7 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_CHECK_OWNER` reader - "]
-pub struct SLC0_CHECK_OWNER_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_CHECK_OWNER_R(crate::FieldReader<bool>);
 impl SLC0_CHECK_OWNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLC0_CHECK_OWNER_R {
     }
 }
 impl core::ops::Deref for SLC0_CHECK_OWNER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLC0_CHECK_OWNER_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` reader - "]
-pub struct SLC0_TX_CHECK_SUM_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
 impl SLC0_TX_CHECK_SUM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLC0_TX_CHECK_SUM_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_TX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLC0_TX_CHECK_SUM_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` reader - "]
-pub struct SLC0_RX_CHECK_SUM_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
 impl SLC0_RX_CHECK_SUM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SLC0_RX_CHECK_SUM_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SLC0_RX_CHECK_SUM_EN_W<'a> {
     }
 }
 #[doc = "Field `CMD_HOLD_EN` reader - "]
-pub struct CMD_HOLD_EN_R(crate::FieldReader<bool, bool>);
+pub struct CMD_HOLD_EN_R(crate::FieldReader<bool>);
 impl CMD_HOLD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CMD_HOLD_EN_R {
     }
 }
 impl core::ops::Deref for CMD_HOLD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CMD_HOLD_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_LEN_AUTO_CLR` reader - "]
-pub struct SLC0_LEN_AUTO_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_LEN_AUTO_CLR_R(crate::FieldReader<bool>);
 impl SLC0_LEN_AUTO_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SLC0_LEN_AUTO_CLR_R {
     }
 }
 impl core::ops::Deref for SLC0_LEN_AUTO_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SLC0_LEN_AUTO_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TX_STITCH_EN` reader - "]
-pub struct SLC0_TX_STITCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TX_STITCH_EN_R(crate::FieldReader<bool>);
 impl SLC0_TX_STITCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SLC0_TX_STITCH_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_TX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SLC0_TX_STITCH_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC0_RX_STITCH_EN` reader - "]
-pub struct SLC0_RX_STITCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_RX_STITCH_EN_R(crate::FieldReader<bool>);
 impl SLC0_RX_STITCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SLC0_RX_STITCH_EN_R {
     }
 }
 impl core::ops::Deref for SLC0_RX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SLC0_RX_STITCH_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_CHECK_OWNER` reader - "]
-pub struct SLC1_CHECK_OWNER_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_CHECK_OWNER_R(crate::FieldReader<bool>);
 impl SLC1_CHECK_OWNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SLC1_CHECK_OWNER_R {
     }
 }
 impl core::ops::Deref for SLC1_CHECK_OWNER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SLC1_CHECK_OWNER_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` reader - "]
-pub struct SLC1_TX_CHECK_SUM_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
 impl SLC1_TX_CHECK_SUM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl SLC1_TX_CHECK_SUM_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_TX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> SLC1_TX_CHECK_SUM_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` reader - "]
-pub struct SLC1_RX_CHECK_SUM_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
 impl SLC1_RX_CHECK_SUM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl SLC1_RX_CHECK_SUM_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> SLC1_RX_CHECK_SUM_EN_W<'a> {
     }
 }
 #[doc = "Field `HOST_INT_LEVEL_SEL` reader - "]
-pub struct HOST_INT_LEVEL_SEL_R(crate::FieldReader<bool, bool>);
+pub struct HOST_INT_LEVEL_SEL_R(crate::FieldReader<bool>);
 impl HOST_INT_LEVEL_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl HOST_INT_LEVEL_SEL_R {
     }
 }
 impl core::ops::Deref for HOST_INT_LEVEL_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> HOST_INT_LEVEL_SEL_W<'a> {
     }
 }
 #[doc = "Field `SLC1_TX_STITCH_EN` reader - "]
-pub struct SLC1_TX_STITCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_TX_STITCH_EN_R(crate::FieldReader<bool>);
 impl SLC1_TX_STITCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl SLC1_TX_STITCH_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_TX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> SLC1_TX_STITCH_EN_W<'a> {
     }
 }
 #[doc = "Field `SLC1_RX_STITCH_EN` reader - "]
-pub struct SLC1_RX_STITCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLC1_RX_STITCH_EN_R(crate::FieldReader<bool>);
 impl SLC1_RX_STITCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl SLC1_RX_STITCH_EN_R {
     }
 }
 impl core::ops::Deref for SLC1_RX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> SLC1_RX_STITCH_EN_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN` reader - "]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -702,25 +702,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf1](index.html) module"]
 pub struct CONF1_SPEC;
 impl crate::RegisterSpec for CONF1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf1::R](R) reader structure"]
 impl crate::Readable for CONF1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
 }

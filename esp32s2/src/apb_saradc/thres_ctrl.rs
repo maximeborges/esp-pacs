@@ -35,7 +35,7 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Clock gate enable."]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC2_THRES_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_THRES_MODE_R(crate::FieldReader<bool>);
 impl ADC2_THRES_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC2_THRES_MODE_R {
     }
 }
 impl core::ops::Deref for ADC2_THRES_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC2_THRES_MODE_W<'a> {
     }
 }
 #[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC1_THRES_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_THRES_MODE_R(crate::FieldReader<bool>);
 impl ADC1_THRES_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ADC1_THRES_MODE_R {
     }
 }
 impl core::ops::Deref for ADC1_THRES_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ADC1_THRES_MODE_W<'a> {
     }
 }
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
-pub struct ADC2_THRES_R(crate::FieldReader<u16, u16>);
+pub struct ADC2_THRES_R(crate::FieldReader<u16>);
 impl ADC2_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -154,7 +154,7 @@ impl ADC2_THRES_R {
     }
 }
 impl core::ops::Deref for ADC2_THRES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> ADC2_THRES_W<'a> {
     }
 }
 #[doc = "Field `ADC1_THRES` reader - ADC1 threshold."]
-pub struct ADC1_THRES_R(crate::FieldReader<u16, u16>);
+pub struct ADC1_THRES_R(crate::FieldReader<u16>);
 impl ADC1_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -181,7 +181,7 @@ impl ADC1_THRES_R {
     }
 }
 impl core::ops::Deref for ADC1_THRES_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> ADC1_THRES_W<'a> {
     }
 }
 #[doc = "Field `ADC2_THRES_EN` reader - Enable ADC2 threshold monitor."]
-pub struct ADC2_THRES_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_THRES_EN_R(crate::FieldReader<bool>);
 impl ADC2_THRES_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl ADC2_THRES_EN_R {
     }
 }
 impl core::ops::Deref for ADC2_THRES_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> ADC2_THRES_EN_W<'a> {
     }
 }
 #[doc = "Field `ADC1_THRES_EN` reader - Enable ADC1 threshold monitor."]
-pub struct ADC1_THRES_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_THRES_EN_R(crate::FieldReader<bool>);
 impl ADC1_THRES_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl ADC1_THRES_EN_R {
     }
 }
 impl core::ops::Deref for ADC1_THRES_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -353,25 +353,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure monitor threshold for DIG ADC2\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thres_ctrl]
-(index.html) module"]
+#[doc = "Configure monitor threshold for DIG ADC2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thres_ctrl](index.html) module"]
 pub struct THRES_CTRL_SPEC;
 impl crate::RegisterSpec for THRES_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [thres_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [thres_ctrl::R](R) reader structure"]
 impl crate::Readable for THRES_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [thres_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [thres_ctrl::W](W) writer structure"]
 impl crate::Writable for THRES_CTRL_SPEC {
     type Writer = W;
 }

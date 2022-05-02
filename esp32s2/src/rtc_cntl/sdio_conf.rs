@@ -35,7 +35,7 @@ impl From<crate::W<SDIO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_TIMER_TARGET` reader - timer count to apply reg_sdio_dcap after sdio power on"]
-pub struct SDIO_TIMER_TARGET_R(crate::FieldReader<u8, u8>);
+pub struct SDIO_TIMER_TARGET_R(crate::FieldReader<u8>);
 impl SDIO_TIMER_TARGET_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SDIO_TIMER_TARGET_R {
     }
 }
 impl core::ops::Deref for SDIO_TIMER_TARGET_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SDIO_TIMER_TARGET_W<'a> {
     }
 }
 #[doc = "Field `SDIO_DTHDRV` reader - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current set to 3 after several us."]
-pub struct SDIO_DTHDRV_R(crate::FieldReader<u8, u8>);
+pub struct SDIO_DTHDRV_R(crate::FieldReader<u8>);
 impl SDIO_DTHDRV_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SDIO_DTHDRV_R {
     }
 }
 impl core::ops::Deref for SDIO_DTHDRV_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> SDIO_DTHDRV_W<'a> {
     }
 }
 #[doc = "Field `SDIO_DCAP` reader - ability to prevent LDO from overshoot"]
-pub struct SDIO_DCAP_R(crate::FieldReader<u8, u8>);
+pub struct SDIO_DCAP_R(crate::FieldReader<u8>);
 impl SDIO_DCAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl SDIO_DCAP_R {
     }
 }
 impl core::ops::Deref for SDIO_DCAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> SDIO_DCAP_W<'a> {
     }
 }
 #[doc = "Field `SDIO_INITI` reader - add resistor from ldo output to ground. 0: no res 1: 6k 2: 4k 3: 2k"]
-pub struct SDIO_INITI_R(crate::FieldReader<u8, u8>);
+pub struct SDIO_INITI_R(crate::FieldReader<u8>);
 impl SDIO_INITI_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl SDIO_INITI_R {
     }
 }
 impl core::ops::Deref for SDIO_INITI_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -142,9 +142,8 @@ impl<'a> SDIO_INITI_W<'a> {
         self.w
     }
 }
-#[doc = "Field `SDIO_EN_INITI` reader - 0 to set init\\[1:0\\]
-=0"]
-pub struct SDIO_EN_INITI_R(crate::FieldReader<bool, bool>);
+#[doc = "Field `SDIO_EN_INITI` reader - 0 to set init\\[1:0\\]=0"]
+pub struct SDIO_EN_INITI_R(crate::FieldReader<bool>);
 impl SDIO_EN_INITI_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -152,14 +151,13 @@ impl SDIO_EN_INITI_R {
     }
 }
 impl core::ops::Deref for SDIO_EN_INITI_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `SDIO_EN_INITI` writer - 0 to set init\\[1:0\\]
-=0"]
+#[doc = "Field `SDIO_EN_INITI` writer - 0 to set init\\[1:0\\]=0"]
 pub struct SDIO_EN_INITI_W<'a> {
     w: &'a mut W,
 }
@@ -182,7 +180,7 @@ impl<'a> SDIO_EN_INITI_W<'a> {
     }
 }
 #[doc = "Field `SDIO_DCURLIM` reader - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
-pub struct SDIO_DCURLIM_R(crate::FieldReader<u8, u8>);
+pub struct SDIO_DCURLIM_R(crate::FieldReader<u8>);
 impl SDIO_DCURLIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -190,7 +188,7 @@ impl SDIO_DCURLIM_R {
     }
 }
 impl core::ops::Deref for SDIO_DCURLIM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -209,7 +207,7 @@ impl<'a> SDIO_DCURLIM_W<'a> {
     }
 }
 #[doc = "Field `SDIO_MODECURLIM` reader - select current limit mode"]
-pub struct SDIO_MODECURLIM_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_MODECURLIM_R(crate::FieldReader<bool>);
 impl SDIO_MODECURLIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,7 +215,7 @@ impl SDIO_MODECURLIM_R {
     }
 }
 impl core::ops::Deref for SDIO_MODECURLIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -246,7 +244,7 @@ impl<'a> SDIO_MODECURLIM_W<'a> {
     }
 }
 #[doc = "Field `SDIO_ENCURLIM` reader - enable current limit"]
-pub struct SDIO_ENCURLIM_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_ENCURLIM_R(crate::FieldReader<bool>);
 impl SDIO_ENCURLIM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -254,7 +252,7 @@ impl SDIO_ENCURLIM_R {
     }
 }
 impl core::ops::Deref for SDIO_ENCURLIM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -283,7 +281,7 @@ impl<'a> SDIO_ENCURLIM_W<'a> {
     }
 }
 #[doc = "Field `SDIO_REG_PD_EN` reader - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub struct SDIO_REG_PD_EN_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_REG_PD_EN_R(crate::FieldReader<bool>);
 impl SDIO_REG_PD_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -291,7 +289,7 @@ impl SDIO_REG_PD_EN_R {
     }
 }
 impl core::ops::Deref for SDIO_REG_PD_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -320,7 +318,7 @@ impl<'a> SDIO_REG_PD_EN_W<'a> {
     }
 }
 #[doc = "Field `SDIO_FORCE` reader - 1: use SW option to control SDIO_REG 0: use state machine"]
-pub struct SDIO_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_FORCE_R(crate::FieldReader<bool>);
 impl SDIO_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -328,7 +326,7 @@ impl SDIO_FORCE_R {
     }
 }
 impl core::ops::Deref for SDIO_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -357,7 +355,7 @@ impl<'a> SDIO_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SDIO_TIEH` reader - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub struct SDIO_TIEH_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_TIEH_R(crate::FieldReader<bool>);
 impl SDIO_TIEH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -365,7 +363,7 @@ impl SDIO_TIEH_R {
     }
 }
 impl core::ops::Deref for SDIO_TIEH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -394,7 +392,7 @@ impl<'a> SDIO_TIEH_W<'a> {
     }
 }
 #[doc = "Field `REG1P8_READY` reader - read only register for REG1P8_READY"]
-pub struct REG1P8_READY_R(crate::FieldReader<bool, bool>);
+pub struct REG1P8_READY_R(crate::FieldReader<bool>);
 impl REG1P8_READY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -402,14 +400,14 @@ impl REG1P8_READY_R {
     }
 }
 impl core::ops::Deref for REG1P8_READY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DREFL_SDIO` reader - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFL_SDIO_R(crate::FieldReader<u8, u8>);
+pub struct DREFL_SDIO_R(crate::FieldReader<u8>);
 impl DREFL_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -417,7 +415,7 @@ impl DREFL_SDIO_R {
     }
 }
 impl core::ops::Deref for DREFL_SDIO_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -436,7 +434,7 @@ impl<'a> DREFL_SDIO_W<'a> {
     }
 }
 #[doc = "Field `DREFM_SDIO` reader - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFM_SDIO_R(crate::FieldReader<u8, u8>);
+pub struct DREFM_SDIO_R(crate::FieldReader<u8>);
 impl DREFM_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -444,7 +442,7 @@ impl DREFM_SDIO_R {
     }
 }
 impl core::ops::Deref for DREFM_SDIO_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -463,7 +461,7 @@ impl<'a> DREFM_SDIO_W<'a> {
     }
 }
 #[doc = "Field `DREFH_SDIO` reader - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFH_SDIO_R(crate::FieldReader<u8, u8>);
+pub struct DREFH_SDIO_R(crate::FieldReader<u8>);
 impl DREFH_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -471,7 +469,7 @@ impl DREFH_SDIO_R {
     }
 }
 impl core::ops::Deref for DREFH_SDIO_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -490,7 +488,7 @@ impl<'a> DREFH_SDIO_W<'a> {
     }
 }
 #[doc = "Field `XPD_SDIO` reader - SW option for XPD_VOOSDIO. Only active when reg_sdio_force = 1"]
-pub struct XPD_SDIO_R(crate::FieldReader<bool, bool>);
+pub struct XPD_SDIO_R(crate::FieldReader<bool>);
 impl XPD_SDIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -498,7 +496,7 @@ impl XPD_SDIO_R {
     }
 }
 impl core::ops::Deref for XPD_SDIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -547,8 +545,7 @@ impl R {
     pub fn sdio_initi(&self) -> SDIO_INITI_R {
         SDIO_INITI_R::new(((self.bits >> 13) & 3) as u8)
     }
-    #[doc = "Bit 15 - 0 to set init\\[1:0\\]
-=0"]
+    #[doc = "Bit 15 - 0 to set init\\[1:0\\]=0"]
     #[inline(always)]
     pub fn sdio_en_initi(&self) -> SDIO_EN_INITI_R {
         SDIO_EN_INITI_R::new(((self.bits >> 15) & 1) != 0)
@@ -630,8 +627,7 @@ impl W {
     pub fn sdio_initi(&mut self) -> SDIO_INITI_W {
         SDIO_INITI_W { w: self }
     }
-    #[doc = "Bit 15 - 0 to set init\\[1:0\\]
-=0"]
+    #[doc = "Bit 15 - 0 to set init\\[1:0\\]=0"]
     #[inline(always)]
     pub fn sdio_en_initi(&mut self) -> SDIO_EN_INITI_W {
         SDIO_EN_INITI_W { w: self }
@@ -693,25 +689,16 @@ impl W {
         self
     }
 }
-#[doc = "configure vddsdio register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_conf]
-(index.html) module"]
+#[doc = "configure vddsdio register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_conf](index.html) module"]
 pub struct SDIO_CONF_SPEC;
 impl crate::RegisterSpec for SDIO_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sdio_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sdio_conf::R](R) reader structure"]
 impl crate::Readable for SDIO_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sdio_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sdio_conf::W](W) writer structure"]
 impl crate::Writable for SDIO_CONF_SPEC {
     type Writer = W;
 }

@@ -14,7 +14,7 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ST` reader - saradc thres1 low interrupt state"]
-pub struct APB_SARADC_THRES1_LOW_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_THRES1_LOW_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC_THRES1_LOW_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl APB_SARADC_THRES1_LOW_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_THRES1_LOW_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ST` reader - saradc thres0 low interrupt state"]
-pub struct APB_SARADC_THRES0_LOW_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_THRES0_LOW_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC_THRES0_LOW_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl APB_SARADC_THRES0_LOW_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_THRES0_LOW_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ST` reader - saradc thres1 high interrupt state"]
-pub struct APB_SARADC_THRES1_HIGH_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_THRES1_HIGH_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC_THRES1_HIGH_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl APB_SARADC_THRES1_HIGH_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_THRES1_HIGH_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ST` reader - saradc thres0 high interrupt state"]
-pub struct APB_SARADC_THRES0_HIGH_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC_THRES0_HIGH_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC_THRES0_HIGH_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl APB_SARADC_THRES0_HIGH_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC_THRES0_HIGH_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APB_SARADC2_DONE_INT_ST` reader - saradc2 done interrupt state"]
-pub struct APB_SARADC2_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC2_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC2_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl APB_SARADC2_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC2_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `APB_SARADC1_DONE_INT_ST` reader - saradc1 done interrupt state"]
-pub struct APB_SARADC1_DONE_INT_ST_R(crate::FieldReader<bool, bool>);
+pub struct APB_SARADC1_DONE_INT_ST_R(crate::FieldReader<bool>);
 impl APB_SARADC1_DONE_INT_ST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl APB_SARADC1_DONE_INT_ST_R {
     }
 }
 impl core::ops::Deref for APB_SARADC1_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -135,16 +135,12 @@ impl R {
         APB_SARADC1_DONE_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "digital saradc int register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st]
-(index.html) module"]
+#[doc = "digital saradc int register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_st::R](R) reader structure"]
 impl crate::Readable for INT_ST_SPEC {
     type Reader = R;
 }

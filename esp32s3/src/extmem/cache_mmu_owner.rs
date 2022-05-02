@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_MMU_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
-pub struct CACHE_MMU_OWNER_R(crate::FieldReader<u32, u32>);
+pub struct CACHE_MMU_OWNER_R(crate::FieldReader<u32>);
 impl CACHE_MMU_OWNER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_MMU_OWNER_R {
     }
 }
 impl core::ops::Deref for CACHE_MMU_OWNER_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_mmu_owner]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_mmu_owner](index.html) module"]
 pub struct CACHE_MMU_OWNER_SPEC;
 impl crate::RegisterSpec for CACHE_MMU_OWNER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_mmu_owner::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_mmu_owner::R](R) reader structure"]
 impl crate::Readable for CACHE_MMU_OWNER_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_mmu_owner::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_mmu_owner::W](W) writer structure"]
 impl crate::Writable for CACHE_MMU_OWNER_SPEC {
     type Writer = W;
 }

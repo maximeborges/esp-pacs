@@ -35,7 +35,7 @@ impl From<crate::W<DIN_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN0_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN0_MODE_R(crate::FieldReader<u8>);
 impl DIN0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DIN0_MODE_R {
     }
 }
 impl core::ops::Deref for DIN0_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DIN0_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN1_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN1_MODE_R(crate::FieldReader<u8>);
 impl DIN1_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DIN1_MODE_R {
     }
 }
 impl core::ops::Deref for DIN1_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DIN1_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN2_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN2_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN2_MODE_R(crate::FieldReader<u8>);
 impl DIN2_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DIN2_MODE_R {
     }
 }
 impl core::ops::Deref for DIN2_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DIN2_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN3_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN3_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN3_MODE_R(crate::FieldReader<u8>);
 impl DIN3_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DIN3_MODE_R {
     }
 }
 impl core::ops::Deref for DIN3_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DIN3_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN4_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN4_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN4_MODE_R(crate::FieldReader<u8>);
 impl DIN4_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DIN4_MODE_R {
     }
 }
 impl core::ops::Deref for DIN4_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DIN4_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN5_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN5_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN5_MODE_R(crate::FieldReader<u8>);
 impl DIN5_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DIN5_MODE_R {
     }
 }
 impl core::ops::Deref for DIN5_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DIN5_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN6_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN6_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN6_MODE_R(crate::FieldReader<u8>);
 impl DIN6_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DIN6_MODE_R {
     }
 }
 impl core::ops::Deref for DIN6_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DIN6_MODE_W<'a> {
     }
 }
 #[doc = "Field `DIN7_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
-pub struct DIN7_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DIN7_MODE_R(crate::FieldReader<u8>);
 impl DIN7_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DIN7_MODE_R {
     }
 }
 impl core::ops::Deref for DIN7_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> DIN7_MODE_W<'a> {
     }
 }
 #[doc = "Field `TIMING_CLK_ENA` reader - 1:enable hclk in spi_timing.v. 0: disable it. Can be configured in CONF state."]
-pub struct TIMING_CLK_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TIMING_CLK_ENA_R(crate::FieldReader<bool>);
 impl TIMING_CLK_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -259,7 +259,7 @@ impl TIMING_CLK_ENA_R {
     }
 }
 impl core::ops::Deref for TIMING_CLK_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -387,25 +387,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI input delay mode configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_mode]
-(index.html) module"]
+#[doc = "SPI input delay mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [din_mode](index.html) module"]
 pub struct DIN_MODE_SPEC;
 impl crate::RegisterSpec for DIN_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [din_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [din_mode::R](R) reader structure"]
 impl crate::Readable for DIN_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [din_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [din_mode::W](W) writer structure"]
 impl crate::Writable for DIN_MODE_SPEC {
     type Writer = W;
 }

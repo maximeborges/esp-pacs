@@ -14,7 +14,7 @@ impl From<crate::R<SAR_TOUCH_STATUS10_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_PAD10_DATA` reader - The data of touch pad 10, depending on the setting of SENS_TOUCH_DATA_SEL."]
-pub struct TOUCH_PAD10_DATA_R(crate::FieldReader<u32, u32>);
+pub struct TOUCH_PAD10_DATA_R(crate::FieldReader<u32>);
 impl TOUCH_PAD10_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,14 +22,14 @@ impl TOUCH_PAD10_DATA_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD10_DATA_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TOUCH_PAD10_DEBOUNCE` reader - Touch pad 10 debounce value."]
-pub struct TOUCH_PAD10_DEBOUNCE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_PAD10_DEBOUNCE_R(crate::FieldReader<u8>);
 impl TOUCH_PAD10_DEBOUNCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,7 +37,7 @@ impl TOUCH_PAD10_DEBOUNCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD10_DEBOUNCE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -55,16 +55,12 @@ impl R {
         TOUCH_PAD10_DEBOUNCE_R::new(((self.bits >> 29) & 7) as u8)
     }
 }
-#[doc = "Touch pad 10 status\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status10]
-(index.html) module"]
+#[doc = "Touch pad 10 status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status10](index.html) module"]
 pub struct SAR_TOUCH_STATUS10_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_STATUS10_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sar_touch_status10::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sar_touch_status10::R](R) reader structure"]
 impl crate::Readable for SAR_TOUCH_STATUS10_SPEC {
     type Reader = R;
 }

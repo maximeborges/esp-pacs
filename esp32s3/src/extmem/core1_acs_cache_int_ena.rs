@@ -35,7 +35,7 @@ impl From<crate::W<CORE1_ACS_CACHE_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE1_IBUS_ACS_MSK_IC_INT_ENA` reader - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
-pub struct CORE1_IBUS_ACS_MSK_IC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_IBUS_ACS_MSK_IC_INT_ENA_R(crate::FieldReader<bool>);
 impl CORE1_IBUS_ACS_MSK_IC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CORE1_IBUS_ACS_MSK_IC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CORE1_IBUS_ACS_MSK_IC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CORE1_IBUS_ACS_MSK_IC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE1_IBUS_WR_IC_INT_ENA` reader - The bit is used to enable interrupt by ibus trying to write icache"]
-pub struct CORE1_IBUS_WR_IC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_IBUS_WR_IC_INT_ENA_R(crate::FieldReader<bool>);
 impl CORE1_IBUS_WR_IC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CORE1_IBUS_WR_IC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CORE1_IBUS_WR_IC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> CORE1_IBUS_WR_IC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE1_IBUS_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
-pub struct CORE1_IBUS_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_IBUS_REJECT_INT_ENA_R(crate::FieldReader<bool>);
 impl CORE1_IBUS_REJECT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl CORE1_IBUS_REJECT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CORE1_IBUS_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> CORE1_IBUS_REJECT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE1_DBUS_ACS_MSK_DC_INT_ENA` reader - The bit is used to enable interrupt by cpu access dcache while the corresponding dbus is disabled which include speculative access."]
-pub struct CORE1_DBUS_ACS_MSK_DC_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_DBUS_ACS_MSK_DC_INT_ENA_R(crate::FieldReader<bool>);
 impl CORE1_DBUS_ACS_MSK_DC_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl CORE1_DBUS_ACS_MSK_DC_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CORE1_DBUS_ACS_MSK_DC_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> CORE1_DBUS_ACS_MSK_DC_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `CORE1_DBUS_REJECT_INT_ENA` reader - The bit is used to enable interrupt by authentication fail."]
-pub struct CORE1_DBUS_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct CORE1_DBUS_REJECT_INT_ENA_R(crate::FieldReader<bool>);
 impl CORE1_DBUS_REJECT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl CORE1_DBUS_REJECT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for CORE1_DBUS_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -279,25 +279,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core1_acs_cache_int_ena]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core1_acs_cache_int_ena](index.html) module"]
 pub struct CORE1_ACS_CACHE_INT_ENA_SPEC;
 impl crate::RegisterSpec for CORE1_ACS_CACHE_INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core1_acs_cache_int_ena::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core1_acs_cache_int_ena::R](R) reader structure"]
 impl crate::Readable for CORE1_ACS_CACHE_INT_ENA_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core1_acs_cache_int_ena::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core1_acs_cache_int_ena::W](W) writer structure"]
 impl crate::Writable for CORE1_ACS_CACHE_INT_ENA_SPEC {
     type Writer = W;
 }

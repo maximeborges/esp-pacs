@@ -35,7 +35,7 @@ impl From<crate::W<KEY_4_SPEC>> for W {
     }
 }
 #[doc = "Field `KEY_4` reader - This bits stores key_4 that is a part of key material."]
-pub struct KEY_4_R(crate::FieldReader<u32, u32>);
+pub struct KEY_4_R(crate::FieldReader<u32>);
 impl KEY_4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl KEY_4_R {
     }
 }
 impl core::ops::Deref for KEY_4_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Key material key_4 configure register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [key_4]
-(index.html) module"]
+#[doc = "Key material key_4 configure register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [key_4](index.html) module"]
 pub struct KEY_4_SPEC;
 impl crate::RegisterSpec for KEY_4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [key_4::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [key_4::R](R) reader structure"]
 impl crate::Readable for KEY_4_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [key_4::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [key_4::W](W) writer structure"]
 impl crate::Writable for KEY_4_SPEC {
     type Writer = W;
 }

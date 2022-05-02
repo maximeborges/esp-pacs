@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_PIF_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT` reader - Core1 access bt permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BT_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0` reader - Core1 access i2c_ext0 permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0` reader - Core1 access uhci0 permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST` reader - Core1 access slchost permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLCHOST_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT` reader - Core1 access rmt permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RMT_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT` reader - Core1 access pcnt permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PCNT_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC` reader - Core1 access slc permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SLC_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC` reader - Core1 access ledc permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP` reader - Core1 access backup permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BACKUP_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB` reader - Core1 access bb permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_BB_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0` reader - Core1 access pwm0 permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -313,7 +313,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -332,7 +332,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM0_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP` reader - Core1 access timergroup permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -340,7 +340,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -359,7 +359,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1` reader - Core1 access timergroup1 permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -367,7 +367,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -386,7 +386,7 @@ impl<'a> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_W<'a> {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER` reader - Core1 access systimer permission in world0."]
-pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -394,7 +394,7 @@ impl CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -600,25 +600,16 @@ impl W {
         self
     }
 }
-#[doc = "Core1 access peripherals permission configuration register 2.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_pif_pms_constrain_2]
-(index.html) module"]
+#[doc = "Core1 access peripherals permission configuration register 2.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_pif_pms_constrain_2](index.html) module"]
 pub struct CORE_1_PIF_PMS_CONSTRAIN_2_SPEC;
 impl crate::RegisterSpec for CORE_1_PIF_PMS_CONSTRAIN_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_pif_pms_constrain_2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_pif_pms_constrain_2::R](R) reader structure"]
 impl crate::Readable for CORE_1_PIF_PMS_CONSTRAIN_2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_pif_pms_constrain_2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_pif_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for CORE_1_PIF_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
 }

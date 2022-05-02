@@ -35,7 +35,7 @@ impl From<crate::W<BUS_TIMING_1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_SEG1` reader - The width of PBS1."]
-pub struct TIME_SEG1_R(crate::FieldReader<u8, u8>);
+pub struct TIME_SEG1_R(crate::FieldReader<u8>);
 impl TIME_SEG1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIME_SEG1_R {
     }
 }
 impl core::ops::Deref for TIME_SEG1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIME_SEG1_W<'a> {
     }
 }
 #[doc = "Field `TIME_SEG2` reader - The width of PBS2."]
-pub struct TIME_SEG2_R(crate::FieldReader<u8, u8>);
+pub struct TIME_SEG2_R(crate::FieldReader<u8>);
 impl TIME_SEG2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TIME_SEG2_R {
     }
 }
 impl core::ops::Deref for TIME_SEG2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TIME_SEG2_W<'a> {
     }
 }
 #[doc = "Field `TIME_SAMP` reader - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
-pub struct TIME_SAMP_R(crate::FieldReader<bool, bool>);
+pub struct TIME_SAMP_R(crate::FieldReader<bool>);
 impl TIME_SAMP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl TIME_SAMP_R {
     }
 }
 impl core::ops::Deref for TIME_SAMP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -165,25 +165,16 @@ impl W {
         self
     }
 }
-#[doc = "Bus Timing Register 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_timing_1]
-(index.html) module"]
+#[doc = "Bus Timing Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_timing_1](index.html) module"]
 pub struct BUS_TIMING_1_SPEC;
 impl crate::RegisterSpec for BUS_TIMING_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bus_timing_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bus_timing_1::R](R) reader structure"]
 impl crate::Readable for BUS_TIMING_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bus_timing_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bus_timing_1::W](W) writer structure"]
 impl crate::Writable for BUS_TIMING_1_SPEC {
     type Writer = W;
 }

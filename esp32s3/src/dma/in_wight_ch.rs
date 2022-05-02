@@ -35,7 +35,7 @@ impl From<crate::W<IN_WIGHT_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_WEIGHT_CH` reader - The weight of Rx channel 0."]
-pub struct RX_WEIGHT_CH_R(crate::FieldReader<u8, u8>);
+pub struct RX_WEIGHT_CH_R(crate::FieldReader<u8>);
 impl RX_WEIGHT_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RX_WEIGHT_CH_R {
     }
 }
 impl core::ops::Deref for RX_WEIGHT_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Weight register of Rx channel 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_wight_ch]
-(index.html) module"]
+#[doc = "Weight register of Rx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_wight_ch](index.html) module"]
 pub struct IN_WIGHT_CH_SPEC;
 impl crate::RegisterSpec for IN_WIGHT_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_wight_ch::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [in_wight_ch::R](R) reader structure"]
 impl crate::Readable for IN_WIGHT_CH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [in_wight_ch::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_wight_ch::W](W) writer structure"]
 impl crate::Writable for IN_WIGHT_CH_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<ICACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct ICACHE_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_ENABLE_R(crate::FieldReader<bool>);
 impl ICACHE_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_ENABLE_R {
     }
 }
 impl core::ops::Deref for ICACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ICACHE_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_WAY_MODE` reader - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
-pub struct ICACHE_WAY_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_WAY_MODE_R(crate::FieldReader<bool>);
 impl ICACHE_WAY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ICACHE_WAY_MODE_R {
     }
 }
 impl core::ops::Deref for ICACHE_WAY_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ICACHE_WAY_MODE_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_SIZE_MODE` reader - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
-pub struct ICACHE_SIZE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_SIZE_MODE_R(crate::FieldReader<bool>);
 impl ICACHE_SIZE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ICACHE_SIZE_MODE_R {
     }
 }
 impl core::ops::Deref for ICACHE_SIZE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ICACHE_SIZE_MODE_W<'a> {
     }
 }
 #[doc = "Field `ICACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub struct ICACHE_BLOCKSIZE_MODE_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_BLOCKSIZE_MODE_R(crate::FieldReader<bool>);
 impl ICACHE_BLOCKSIZE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ICACHE_BLOCKSIZE_MODE_R {
     }
 }
 impl core::ops::Deref for ICACHE_BLOCKSIZE_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icache_ctrl](index.html) module"]
 pub struct ICACHE_CTRL_SPEC;
 impl crate::RegisterSpec for ICACHE_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icache_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [icache_ctrl::R](R) reader structure"]
 impl crate::Readable for ICACHE_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [icache_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [icache_ctrl::W](W) writer structure"]
 impl crate::Writable for ICACHE_CTRL_SPEC {
     type Writer = W;
 }

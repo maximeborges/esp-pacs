@@ -35,7 +35,7 @@ impl From<crate::W<INT_ENA_RTC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ENA` reader - Enables interruption when the chip wakes up from sleep."]
-pub struct SLP_WAKEUP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SLP_WAKEUP_INT_ENA_R(crate::FieldReader<bool>);
 impl SLP_WAKEUP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLP_WAKEUP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SLP_WAKEUP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLP_WAKEUP_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SLP_REJECT_INT_ENA` reader - Enables interruption when the chip rejects to go to sleep."]
-pub struct SLP_REJECT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SLP_REJECT_INT_ENA_R(crate::FieldReader<bool>);
 impl SLP_REJECT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SLP_REJECT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SLP_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SLP_REJECT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SDIO_IDLE_INT_ENA` reader - Enables interruption when the SDIO idles."]
-pub struct SDIO_IDLE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SDIO_IDLE_INT_ENA_R(crate::FieldReader<bool>);
 impl SDIO_IDLE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SDIO_IDLE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SDIO_IDLE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SDIO_IDLE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `WDT_INT_ENA` reader - Enables the RTC watchdog interrupt."]
-pub struct WDT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct WDT_INT_ENA_R(crate::FieldReader<bool>);
 impl WDT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl WDT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for WDT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> WDT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` reader - Enables interruption upon the completion of a touch scanning."]
-pub struct TOUCH_SCAN_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_SCAN_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl TOUCH_SCAN_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl TOUCH_SCAN_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TOUCH_SCAN_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> TOUCH_SCAN_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `ULP_CP_INT_ENA` reader - Enables the ULP co-processor interrupt."]
-pub struct ULP_CP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct ULP_CP_INT_ENA_R(crate::FieldReader<bool>);
 impl ULP_CP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl ULP_CP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for ULP_CP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> ULP_CP_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DONE_INT_ENA` reader - Enables interruption upon the completion of a single touch."]
-pub struct TOUCH_DONE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_DONE_INT_ENA_R(crate::FieldReader<bool>);
 impl TOUCH_DONE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl TOUCH_DONE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TOUCH_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> TOUCH_DONE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_ACTIVE_INT_ENA` reader - Enables interruption when a touch is detected."]
-pub struct TOUCH_ACTIVE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_ACTIVE_INT_ENA_R(crate::FieldReader<bool>);
 impl TOUCH_ACTIVE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl TOUCH_ACTIVE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TOUCH_ACTIVE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> TOUCH_ACTIVE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_INACTIVE_INT_ENA` reader - Enables interruption when a touch is released."]
-pub struct TOUCH_INACTIVE_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_INACTIVE_INT_ENA_R(crate::FieldReader<bool>);
 impl TOUCH_INACTIVE_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl TOUCH_INACTIVE_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TOUCH_INACTIVE_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> TOUCH_INACTIVE_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `BROWN_OUT_INT_ENA` reader - Enables the brown out interrupt."]
-pub struct BROWN_OUT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct BROWN_OUT_INT_ENA_R(crate::FieldReader<bool>);
 impl BROWN_OUT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl BROWN_OUT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for BROWN_OUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> BROWN_OUT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `MAIN_TIMER_INT_ENA` reader - Enables the RTC main timer interrupt."]
-pub struct MAIN_TIMER_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct MAIN_TIMER_INT_ENA_R(crate::FieldReader<bool>);
 impl MAIN_TIMER_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl MAIN_TIMER_INT_ENA_R {
     }
 }
 impl core::ops::Deref for MAIN_TIMER_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> MAIN_TIMER_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SARADC1_INT_ENA` reader - Enables the SAR ADC 1 interrupt."]
-pub struct SARADC1_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SARADC1_INT_ENA_R(crate::FieldReader<bool>);
 impl SARADC1_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl SARADC1_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SARADC1_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> SARADC1_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TSENS_INT_ENA` reader - Enables the touch sensor interrupt."]
-pub struct TSENS_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TSENS_INT_ENA_R(crate::FieldReader<bool>);
 impl TSENS_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TSENS_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TSENS_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TSENS_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `COCPU_INT_ENA` reader - Enables the ULP-RISCV interrupt."]
-pub struct COCPU_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_INT_ENA_R(crate::FieldReader<bool>);
 impl COCPU_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl COCPU_INT_ENA_R {
     }
 }
 impl core::ops::Deref for COCPU_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> COCPU_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SARADC2_INT_ENA` reader - Enables the SAR ADC 2 interrupt."]
-pub struct SARADC2_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SARADC2_INT_ENA_R(crate::FieldReader<bool>);
 impl SARADC2_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl SARADC2_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SARADC2_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> SARADC2_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `SWD_INT_ENA` reader - Enables the super watchdog interrupt."]
-pub struct SWD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct SWD_INT_ENA_R(crate::FieldReader<bool>);
 impl SWD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl SWD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for SWD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> SWD_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `XTAL32K_DEAD_INT_ENA` reader - Enables interruption when the 32 kHz crystal is dead."]
-pub struct XTAL32K_DEAD_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct XTAL32K_DEAD_INT_ENA_R(crate::FieldReader<bool>);
 impl XTAL32K_DEAD_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl XTAL32K_DEAD_INT_ENA_R {
     }
 }
 impl core::ops::Deref for XTAL32K_DEAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> XTAL32K_DEAD_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `COCPU_TRAP_INT_ENA` reader - Enables interruption when the ULP-RISCV is trapped."]
-pub struct COCPU_TRAP_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct COCPU_TRAP_INT_ENA_R(crate::FieldReader<bool>);
 impl COCPU_TRAP_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl COCPU_TRAP_INT_ENA_R {
     }
 }
 impl core::ops::Deref for COCPU_TRAP_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -701,7 +701,7 @@ impl<'a> COCPU_TRAP_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_TIMEOUT_INT_ENA` reader - Enables interruption when touch sensor times out."]
-pub struct TOUCH_TIMEOUT_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_TIMEOUT_INT_ENA_R(crate::FieldReader<bool>);
 impl TOUCH_TIMEOUT_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -709,7 +709,7 @@ impl TOUCH_TIMEOUT_INT_ENA_R {
     }
 }
 impl core::ops::Deref for TOUCH_TIMEOUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -738,7 +738,7 @@ impl<'a> TOUCH_TIMEOUT_INT_ENA_W<'a> {
     }
 }
 #[doc = "Field `GLITCH_DET_INT_ENA` reader - Enables interruption when a glitch is detected."]
-pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool>);
 impl GLITCH_DET_INT_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -746,7 +746,7 @@ impl GLITCH_DET_INT_ENA_R {
     }
 }
 impl core::ops::Deref for GLITCH_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -984,25 +984,16 @@ impl W {
         self
     }
 }
-#[doc = "RTC interrupt enabling register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_rtc]
-(index.html) module"]
+#[doc = "RTC interrupt enabling register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ena_rtc](index.html) module"]
 pub struct INT_ENA_RTC_SPEC;
 impl crate::RegisterSpec for INT_ENA_RTC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_ena_rtc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_ena_rtc::R](R) reader structure"]
 impl crate::Readable for INT_ENA_RTC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_ena_rtc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_ena_rtc::W](W) writer structure"]
 impl crate::Writable for INT_ENA_RTC_SPEC {
     type Writer = W;
 }

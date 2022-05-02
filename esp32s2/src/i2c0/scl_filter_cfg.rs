@@ -35,7 +35,7 @@ impl From<crate::W<SCL_FILTER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_FILTER_THRES` reader - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub struct SCL_FILTER_THRES_R(crate::FieldReader<u8, u8>);
+pub struct SCL_FILTER_THRES_R(crate::FieldReader<u8>);
 impl SCL_FILTER_THRES_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SCL_FILTER_THRES_R {
     }
 }
 impl core::ops::Deref for SCL_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SCL_FILTER_THRES_W<'a> {
     }
 }
 #[doc = "Field `SCL_FILTER_EN` reader - This is the filter enable bit for SCL."]
-pub struct SCL_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct SCL_FILTER_EN_R(crate::FieldReader<bool>);
 impl SCL_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SCL_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for SCL_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "SCL filter configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_filter_cfg]
-(index.html) module"]
+#[doc = "SCL filter configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_filter_cfg](index.html) module"]
 pub struct SCL_FILTER_CFG_SPEC;
 impl crate::RegisterSpec for SCL_FILTER_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_filter_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_filter_cfg::R](R) reader structure"]
 impl crate::Readable for SCL_FILTER_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_filter_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_filter_cfg::W](W) writer structure"]
 impl crate::Writable for SCL_FILTER_CFG_SPEC {
     type Writer = W;
 }

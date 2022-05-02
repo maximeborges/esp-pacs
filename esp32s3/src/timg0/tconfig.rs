@@ -35,7 +35,7 @@ impl From<crate::W<TCONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_USE_XTAL` reader - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub struct T0_USE_XTAL_R(crate::FieldReader<bool, bool>);
+pub struct T0_USE_XTAL_R(crate::FieldReader<bool>);
 impl T0_USE_XTAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl T0_USE_XTAL_R {
     }
 }
 impl core::ops::Deref for T0_USE_XTAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> T0_USE_XTAL_W<'a> {
     }
 }
 #[doc = "Field `T0_ALARM_EN` reader - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub struct T0_ALARM_EN_R(crate::FieldReader<bool, bool>);
+pub struct T0_ALARM_EN_R(crate::FieldReader<bool>);
 impl T0_ALARM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl T0_ALARM_EN_R {
     }
 }
 impl core::ops::Deref for T0_ALARM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> T0_ALARM_EN_W<'a> {
     }
 }
 #[doc = "Field `T0_DIVIDER` reader - Timer %s clock (T%s_clk) prescaler value."]
-pub struct T0_DIVIDER_R(crate::FieldReader<u16, u16>);
+pub struct T0_DIVIDER_R(crate::FieldReader<u16>);
 impl T0_DIVIDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -117,7 +117,7 @@ impl T0_DIVIDER_R {
     }
 }
 impl core::ops::Deref for T0_DIVIDER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> T0_DIVIDER_W<'a> {
     }
 }
 #[doc = "Field `T0_AUTORELOAD` reader - When set, timer %s auto-reload at alarm is enabled."]
-pub struct T0_AUTORELOAD_R(crate::FieldReader<bool, bool>);
+pub struct T0_AUTORELOAD_R(crate::FieldReader<bool>);
 impl T0_AUTORELOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl T0_AUTORELOAD_R {
     }
 }
 impl core::ops::Deref for T0_AUTORELOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> T0_AUTORELOAD_W<'a> {
     }
 }
 #[doc = "Field `T0_INCREASE` reader - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub struct T0_INCREASE_R(crate::FieldReader<bool, bool>);
+pub struct T0_INCREASE_R(crate::FieldReader<bool>);
 impl T0_INCREASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl T0_INCREASE_R {
     }
 }
 impl core::ops::Deref for T0_INCREASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> T0_INCREASE_W<'a> {
     }
 }
 #[doc = "Field `T0_EN` reader - When set, the timer %s time-base counter is enabled."]
-pub struct T0_EN_R(crate::FieldReader<bool, bool>);
+pub struct T0_EN_R(crate::FieldReader<bool>);
 impl T0_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -218,7 +218,7 @@ impl T0_EN_R {
     }
 }
 impl core::ops::Deref for T0_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -316,25 +316,16 @@ impl W {
         self
     }
 }
-#[doc = "Timer %s configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tconfig]
-(index.html) module"]
+#[doc = "Timer %s configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tconfig](index.html) module"]
 pub struct TCONFIG_SPEC;
 impl crate::RegisterSpec for TCONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tconfig::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tconfig::R](R) reader structure"]
 impl crate::Readable for TCONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tconfig::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tconfig::W](W) writer structure"]
 impl crate::Writable for TCONFIG_SPEC {
     type Writer = W;
 }

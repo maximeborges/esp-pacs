@@ -35,7 +35,7 @@ impl From<crate::W<_0TX_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TXLINK_ADDR` reader - "]
-pub struct SLC0_TXLINK_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct SLC0_TXLINK_ADDR_R(crate::FieldReader<u32>);
 impl SLC0_TXLINK_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl SLC0_TXLINK_ADDR_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SLC0_TXLINK_ADDR_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXLINK_STOP` reader - "]
-pub struct SLC0_TXLINK_STOP_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXLINK_STOP_R(crate::FieldReader<bool>);
 impl SLC0_TXLINK_STOP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SLC0_TXLINK_STOP_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_STOP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SLC0_TXLINK_STOP_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXLINK_START` reader - "]
-pub struct SLC0_TXLINK_START_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXLINK_START_R(crate::FieldReader<bool>);
 impl SLC0_TXLINK_START_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl SLC0_TXLINK_START_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_START_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> SLC0_TXLINK_START_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXLINK_RESTART` reader - "]
-pub struct SLC0_TXLINK_RESTART_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXLINK_RESTART_R(crate::FieldReader<bool>);
 impl SLC0_TXLINK_RESTART_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -144,7 +144,7 @@ impl SLC0_TXLINK_RESTART_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_RESTART_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> SLC0_TXLINK_RESTART_W<'a> {
     }
 }
 #[doc = "Field `SLC0_TXLINK_PARK` reader - "]
-pub struct SLC0_TXLINK_PARK_R(crate::FieldReader<bool, bool>);
+pub struct SLC0_TXLINK_PARK_R(crate::FieldReader<bool>);
 impl SLC0_TXLINK_PARK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -181,7 +181,7 @@ impl SLC0_TXLINK_PARK_R {
     }
 }
 impl core::ops::Deref for SLC0_TXLINK_PARK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -242,25 +242,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0tx_link]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0tx_link](index.html) module"]
 pub struct _0TX_LINK_SPEC;
 impl crate::RegisterSpec for _0TX_LINK_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [_0tx_link::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [_0tx_link::R](R) reader structure"]
 impl crate::Readable for _0TX_LINK_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [_0tx_link::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [_0tx_link::W](W) writer structure"]
 impl crate::Writable for _0TX_LINK_SPEC {
     type Writer = W;
 }

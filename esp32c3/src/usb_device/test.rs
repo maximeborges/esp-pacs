@@ -35,7 +35,7 @@ impl From<crate::W<TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE` reader - Enable test of the USB pad"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_R(crate::FieldReader<bool>);
 impl ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENABLE_R {
     }
 }
 impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ENABLE_W<'a> {
     }
 }
 #[doc = "Field `USB_OE` reader - USB pad oen in test"]
-pub struct USB_OE_R(crate::FieldReader<bool, bool>);
+pub struct USB_OE_R(crate::FieldReader<bool>);
 impl USB_OE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl USB_OE_R {
     }
 }
 impl core::ops::Deref for USB_OE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> USB_OE_W<'a> {
     }
 }
 #[doc = "Field `TX_DP` reader - USB D+ tx value in test"]
-pub struct TX_DP_R(crate::FieldReader<bool, bool>);
+pub struct TX_DP_R(crate::FieldReader<bool>);
 impl TX_DP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl TX_DP_R {
     }
 }
 impl core::ops::Deref for TX_DP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> TX_DP_W<'a> {
     }
 }
 #[doc = "Field `TX_DM` reader - USB D- tx value in test"]
-pub struct TX_DM_R(crate::FieldReader<bool, bool>);
+pub struct TX_DM_R(crate::FieldReader<bool>);
 impl TX_DM_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TX_DM_R {
     }
 }
 impl core::ops::Deref for TX_DM_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "USB_DEVICE_TEST_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [test]
-(index.html) module"]
+#[doc = "USB_DEVICE_TEST_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [test](index.html) module"]
 pub struct TEST_SPEC;
 impl crate::RegisterSpec for TEST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [test::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [test::R](R) reader structure"]
 impl crate::Readable for TEST_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [test::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [test::W](W) writer structure"]
 impl crate::Writable for TEST_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - Set this bit to enable SPI1 transfer with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
-pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool, bool>);
+pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool>);
 impl CACHE_USR_CMD_4BYTE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CACHE_USR_CMD_4BYTE_R {
     }
 }
 impl core::ops::Deref for CACHE_USR_CMD_4BYTE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
     }
 }
 #[doc = "Field `FDIN_DUAL` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 2-bm in DIN phase."]
-pub struct FDIN_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FDIN_DUAL_R(crate::FieldReader<bool>);
 impl FDIN_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FDIN_DUAL_R {
     }
 }
 impl core::ops::Deref for FDIN_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FDIN_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FDOUT_DUAL` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
-pub struct FDOUT_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FDOUT_DUAL_R(crate::FieldReader<bool>);
 impl FDOUT_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl FDOUT_DUAL_R {
     }
 }
 impl core::ops::Deref for FDOUT_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> FDOUT_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FADDR_DUAL` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
-pub struct FADDR_DUAL_R(crate::FieldReader<bool, bool>);
+pub struct FADDR_DUAL_R(crate::FieldReader<bool>);
 impl FADDR_DUAL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl FADDR_DUAL_R {
     }
 }
 impl core::ops::Deref for FADDR_DUAL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> FADDR_DUAL_W<'a> {
     }
 }
 #[doc = "Field `FDIN_QUAD` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 4-bm in DIN phase."]
-pub struct FDIN_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FDIN_QUAD_R(crate::FieldReader<bool>);
 impl FDIN_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl FDIN_QUAD_R {
     }
 }
 impl core::ops::Deref for FDIN_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> FDIN_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FDOUT_QUAD` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
-pub struct FDOUT_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FDOUT_QUAD_R(crate::FieldReader<bool>);
 impl FDOUT_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl FDOUT_QUAD_R {
     }
 }
 impl core::ops::Deref for FDOUT_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> FDOUT_QUAD_W<'a> {
     }
 }
 #[doc = "Field `FADDR_QUAD` reader - When SPI1 accesses to flash or Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
-pub struct FADDR_QUAD_R(crate::FieldReader<bool, bool>);
+pub struct FADDR_QUAD_R(crate::FieldReader<bool>);
 impl FADDR_QUAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl FADDR_QUAD_R {
     }
 }
 impl core::ops::Deref for FADDR_QUAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -373,25 +373,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI1 bit mode control register.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_fctrl]
-(index.html) module"]
+#[doc = "SPI1 bit mode control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_fctrl](index.html) module"]
 pub struct CACHE_FCTRL_SPEC;
 impl crate::RegisterSpec for CACHE_FCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_fctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_fctrl::R](R) reader structure"]
 impl crate::Readable for CACHE_FCTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_fctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_fctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_FCTRL_SPEC {
     type Writer = W;
 }

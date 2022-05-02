@@ -35,7 +35,7 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_PRESC` reader - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub struct BAUD_PRESC_R(crate::FieldReader<u16, u16>);
+pub struct BAUD_PRESC_R(crate::FieldReader<u16>);
 impl BAUD_PRESC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl BAUD_PRESC_R {
     }
 }
 impl core::ops::Deref for BAUD_PRESC_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> BAUD_PRESC_W<'a> {
     }
 }
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
-pub struct SYNC_JUMP_WIDTH_R(crate::FieldReader<u8, u8>);
+pub struct SYNC_JUMP_WIDTH_R(crate::FieldReader<u8>);
 impl SYNC_JUMP_WIDTH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl SYNC_JUMP_WIDTH_R {
     }
 }
 impl core::ops::Deref for SYNC_JUMP_WIDTH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Bus Timing Register 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_timing_0]
-(index.html) module"]
+#[doc = "Bus Timing Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_timing_0](index.html) module"]
 pub struct BUS_TIMING_0_SPEC;
 impl crate::RegisterSpec for BUS_TIMING_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [bus_timing_0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [bus_timing_0::R](R) reader structure"]
 impl crate::Readable for BUS_TIMING_0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [bus_timing_0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [bus_timing_0::W](W) writer structure"]
 impl crate::Writable for BUS_TIMING_0_SPEC {
     type Writer = W;
 }

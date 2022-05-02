@@ -35,7 +35,7 @@ impl From<crate::W<DCACHE_LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub struct DCACHE_LOCK_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_LOCK_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_LOCK_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DCACHE_LOCK_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_LOCK_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DCACHE_LOCK_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub struct DCACHE_UNLOCK_ENA_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_UNLOCK_ENA_R(crate::FieldReader<bool>);
 impl DCACHE_UNLOCK_ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DCACHE_UNLOCK_ENA_R {
     }
 }
 impl core::ops::Deref for DCACHE_UNLOCK_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DCACHE_UNLOCK_ENA_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_LOCK_DONE` reader - The bit is used to indicate unlock/lock operation is finished."]
-pub struct DCACHE_LOCK_DONE_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_LOCK_DONE_R(crate::FieldReader<bool>);
 impl DCACHE_LOCK_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DCACHE_LOCK_DONE_R {
     }
 }
 impl core::ops::Deref for DCACHE_LOCK_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_lock_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_lock_ctrl](index.html) module"]
 pub struct DCACHE_LOCK_CTRL_SPEC;
 impl crate::RegisterSpec for DCACHE_LOCK_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_lock_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dcache_lock_ctrl::R](R) reader structure"]
 impl crate::Readable for DCACHE_LOCK_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dcache_lock_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dcache_lock_ctrl::W](W) writer structure"]
 impl crate::Writable for DCACHE_LOCK_CTRL_SPEC {
     type Writer = W;
 }

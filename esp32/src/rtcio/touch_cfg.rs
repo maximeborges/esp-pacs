@@ -35,7 +35,7 @@ impl From<crate::W<TOUCH_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DCUR` reader - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
-pub struct TOUCH_DCUR_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DCUR_R(crate::FieldReader<u8>);
 impl TOUCH_DCUR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TOUCH_DCUR_R {
     }
 }
 impl core::ops::Deref for TOUCH_DCUR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TOUCH_DCUR_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DRANGE` reader - touch sensor saw wave voltage range."]
-pub struct TOUCH_DRANGE_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DRANGE_R(crate::FieldReader<u8>);
 impl TOUCH_DRANGE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl TOUCH_DRANGE_R {
     }
 }
 impl core::ops::Deref for TOUCH_DRANGE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> TOUCH_DRANGE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DREFL` reader - touch sensor saw wave bottom voltage."]
-pub struct TOUCH_DREFL_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DREFL_R(crate::FieldReader<u8>);
 impl TOUCH_DREFL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl TOUCH_DREFL_R {
     }
 }
 impl core::ops::Deref for TOUCH_DREFL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> TOUCH_DREFL_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_DREFH` reader - touch sensor saw wave top voltage."]
-pub struct TOUCH_DREFH_R(crate::FieldReader<u8, u8>);
+pub struct TOUCH_DREFH_R(crate::FieldReader<u8>);
 impl TOUCH_DREFH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl TOUCH_DREFH_R {
     }
 }
 impl core::ops::Deref for TOUCH_DREFH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> TOUCH_DREFH_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_XPD_BIAS` reader - touch sensor bias power on."]
-pub struct TOUCH_XPD_BIAS_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_XPD_BIAS_R(crate::FieldReader<bool>);
 impl TOUCH_XPD_BIAS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -151,7 +151,7 @@ impl TOUCH_XPD_BIAS_R {
     }
 }
 impl core::ops::Deref for TOUCH_XPD_BIAS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -239,25 +239,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_cfg]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [touch_cfg](index.html) module"]
 pub struct TOUCH_CFG_SPEC;
 impl crate::RegisterSpec for TOUCH_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [touch_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [touch_cfg::R](R) reader structure"]
 impl crate::Readable for TOUCH_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [touch_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [touch_cfg::W](W) writer structure"]
 impl crate::Writable for TOUCH_CFG_SPEC {
     type Writer = W;
 }

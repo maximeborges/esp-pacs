@@ -35,7 +35,7 @@ impl From<crate::W<HSCH3_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL_HSCH3` reader - There are four high speed timers the two bits are used to select one of them for high speed channel3. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
-pub struct TIMER_SEL_HSCH3_R(crate::FieldReader<u8, u8>);
+pub struct TIMER_SEL_HSCH3_R(crate::FieldReader<u8>);
 impl TIMER_SEL_HSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl TIMER_SEL_HSCH3_R {
     }
 }
 impl core::ops::Deref for TIMER_SEL_HSCH3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> TIMER_SEL_HSCH3_W<'a> {
     }
 }
 #[doc = "Field `SIG_OUT_EN_HSCH3` reader - This is the output enable control bit for high speed channel3"]
-pub struct SIG_OUT_EN_HSCH3_R(crate::FieldReader<bool, bool>);
+pub struct SIG_OUT_EN_HSCH3_R(crate::FieldReader<bool>);
 impl SIG_OUT_EN_HSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SIG_OUT_EN_HSCH3_R {
     }
 }
 impl core::ops::Deref for SIG_OUT_EN_HSCH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -99,7 +99,7 @@ impl<'a> SIG_OUT_EN_HSCH3_W<'a> {
     }
 }
 #[doc = "Field `IDLE_LV_HSCH3` reader - This bit is used to control the output value when high speed channel3 is off."]
-pub struct IDLE_LV_HSCH3_R(crate::FieldReader<bool, bool>);
+pub struct IDLE_LV_HSCH3_R(crate::FieldReader<bool>);
 impl IDLE_LV_HSCH3_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -107,7 +107,7 @@ impl IDLE_LV_HSCH3_R {
     }
 }
 impl core::ops::Deref for IDLE_LV_HSCH3_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -175,25 +175,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hsch3_conf0]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hsch3_conf0](index.html) module"]
 pub struct HSCH3_CONF0_SPEC;
 impl crate::RegisterSpec for HSCH3_CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hsch3_conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [hsch3_conf0::R](R) reader structure"]
 impl crate::Readable for HSCH3_CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [hsch3_conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [hsch3_conf0::W](W) writer structure"]
 impl crate::Writable for HSCH3_CONF0_SPEC {
     type Writer = W;
 }

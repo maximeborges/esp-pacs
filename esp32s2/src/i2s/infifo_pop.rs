@@ -35,7 +35,7 @@ impl From<crate::W<INFIFO_POP_SPEC>> for W {
     }
 }
 #[doc = "Field `INFIFO_RDATA` reader - APB in FIFO read data."]
-pub struct INFIFO_RDATA_R(crate::FieldReader<u16, u16>);
+pub struct INFIFO_RDATA_R(crate::FieldReader<u16>);
 impl INFIFO_RDATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,14 +43,14 @@ impl INFIFO_RDATA_R {
     }
 }
 impl core::ops::Deref for INFIFO_RDATA_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_POP` reader - APB in FIFO pop."]
-pub struct INFIFO_POP_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_POP_R(crate::FieldReader<bool>);
 impl INFIFO_POP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -58,7 +58,7 @@ impl INFIFO_POP_R {
     }
 }
 impl core::ops::Deref for INFIFO_POP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -111,25 +111,16 @@ impl W {
         self
     }
 }
-#[doc = "APB in FIFO mode register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [infifo_pop]
-(index.html) module"]
+#[doc = "APB in FIFO mode register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [infifo_pop](index.html) module"]
 pub struct INFIFO_POP_SPEC;
 impl crate::RegisterSpec for INFIFO_POP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [infifo_pop::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [infifo_pop::R](R) reader structure"]
 impl crate::Readable for INFIFO_POP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [infifo_pop::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [infifo_pop::W](W) writer structure"]
 impl crate::Writable for INFIFO_POP_SPEC {
     type Writer = W;
 }

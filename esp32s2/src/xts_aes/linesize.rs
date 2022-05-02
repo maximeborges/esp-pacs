@@ -35,7 +35,7 @@ impl From<crate::W<LINESIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `LINESIZE` reader - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
-pub struct LINESIZE_R(crate::FieldReader<u8, u8>);
+pub struct LINESIZE_R(crate::FieldReader<u8>);
 impl LINESIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl LINESIZE_R {
     }
 }
 impl core::ops::Deref for LINESIZE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Configures the size of target memory space\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [linesize]
-(index.html) module"]
+#[doc = "Configures the size of target memory space\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [linesize](index.html) module"]
 pub struct LINESIZE_SPEC;
 impl crate::RegisterSpec for LINESIZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [linesize::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [linesize::R](R) reader structure"]
 impl crate::Readable for LINESIZE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [linesize::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [linesize::W](W) writer structure"]
 impl crate::Writable for LINESIZE_SPEC {
     type Writer = W;
 }

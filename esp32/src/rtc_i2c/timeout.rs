@@ -35,7 +35,7 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMEOUT` reader - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub struct TIMEOUT_R(crate::FieldReader<u32, u32>);
+pub struct TIMEOUT_R(crate::FieldReader<u32>);
 impl TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl TIMEOUT_R {
     }
 }
 impl core::ops::Deref for TIMEOUT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timeout]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timeout](index.html) module"]
 pub struct TIMEOUT_SPEC;
 impl crate::RegisterSpec for TIMEOUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timeout::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timeout::R](R) reader structure"]
 impl crate::Readable for TIMEOUT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timeout::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timeout::W](W) writer structure"]
 impl crate::Writable for TIMEOUT_SPEC {
     type Writer = W;
 }

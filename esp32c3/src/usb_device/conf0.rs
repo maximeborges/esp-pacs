@@ -35,7 +35,7 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `PHY_SEL` reader - Select internal/external PHY"]
-pub struct PHY_SEL_R(crate::FieldReader<bool, bool>);
+pub struct PHY_SEL_R(crate::FieldReader<bool>);
 impl PHY_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl PHY_SEL_R {
     }
 }
 impl core::ops::Deref for PHY_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> PHY_SEL_W<'a> {
     }
 }
 #[doc = "Field `EXCHG_PINS_OVERRIDE` reader - Enable software control USB D+ D- exchange"]
-pub struct EXCHG_PINS_OVERRIDE_R(crate::FieldReader<bool, bool>);
+pub struct EXCHG_PINS_OVERRIDE_R(crate::FieldReader<bool>);
 impl EXCHG_PINS_OVERRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl EXCHG_PINS_OVERRIDE_R {
     }
 }
 impl core::ops::Deref for EXCHG_PINS_OVERRIDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> EXCHG_PINS_OVERRIDE_W<'a> {
     }
 }
 #[doc = "Field `EXCHG_PINS` reader - USB D+ D- exchange"]
-pub struct EXCHG_PINS_R(crate::FieldReader<bool, bool>);
+pub struct EXCHG_PINS_R(crate::FieldReader<bool>);
 impl EXCHG_PINS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl EXCHG_PINS_R {
     }
 }
 impl core::ops::Deref for EXCHG_PINS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> EXCHG_PINS_W<'a> {
     }
 }
 #[doc = "Field `VREFH` reader - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub struct VREFH_R(crate::FieldReader<u8, u8>);
+pub struct VREFH_R(crate::FieldReader<u8>);
 impl VREFH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -154,7 +154,7 @@ impl VREFH_R {
     }
 }
 impl core::ops::Deref for VREFH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -173,7 +173,7 @@ impl<'a> VREFH_W<'a> {
     }
 }
 #[doc = "Field `VREFL` reader - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub struct VREFL_R(crate::FieldReader<u8, u8>);
+pub struct VREFL_R(crate::FieldReader<u8>);
 impl VREFL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -181,7 +181,7 @@ impl VREFL_R {
     }
 }
 impl core::ops::Deref for VREFL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> VREFL_W<'a> {
     }
 }
 #[doc = "Field `VREF_OVERRIDE` reader - Enable software control input threshold"]
-pub struct VREF_OVERRIDE_R(crate::FieldReader<bool, bool>);
+pub struct VREF_OVERRIDE_R(crate::FieldReader<bool>);
 impl VREF_OVERRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl VREF_OVERRIDE_R {
     }
 }
 impl core::ops::Deref for VREF_OVERRIDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> VREF_OVERRIDE_W<'a> {
     }
 }
 #[doc = "Field `PAD_PULL_OVERRIDE` reader - Enable software control USB D+ D- pullup pulldown"]
-pub struct PAD_PULL_OVERRIDE_R(crate::FieldReader<bool, bool>);
+pub struct PAD_PULL_OVERRIDE_R(crate::FieldReader<bool>);
 impl PAD_PULL_OVERRIDE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl PAD_PULL_OVERRIDE_R {
     }
 }
 impl core::ops::Deref for PAD_PULL_OVERRIDE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> PAD_PULL_OVERRIDE_W<'a> {
     }
 }
 #[doc = "Field `DP_PULLUP` reader - Control USB D+ pull up."]
-pub struct DP_PULLUP_R(crate::FieldReader<bool, bool>);
+pub struct DP_PULLUP_R(crate::FieldReader<bool>);
 impl DP_PULLUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl DP_PULLUP_R {
     }
 }
 impl core::ops::Deref for DP_PULLUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> DP_PULLUP_W<'a> {
     }
 }
 #[doc = "Field `DP_PULLDOWN` reader - Control USB D+ pull down."]
-pub struct DP_PULLDOWN_R(crate::FieldReader<bool, bool>);
+pub struct DP_PULLDOWN_R(crate::FieldReader<bool>);
 impl DP_PULLDOWN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl DP_PULLDOWN_R {
     }
 }
 impl core::ops::Deref for DP_PULLDOWN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> DP_PULLDOWN_W<'a> {
     }
 }
 #[doc = "Field `DM_PULLUP` reader - Control USB D- pull up."]
-pub struct DM_PULLUP_R(crate::FieldReader<bool, bool>);
+pub struct DM_PULLUP_R(crate::FieldReader<bool>);
 impl DM_PULLUP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl DM_PULLUP_R {
     }
 }
 impl core::ops::Deref for DM_PULLUP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> DM_PULLUP_W<'a> {
     }
 }
 #[doc = "Field `DM_PULLDOWN` reader - Control USB D- pull down."]
-pub struct DM_PULLDOWN_R(crate::FieldReader<bool, bool>);
+pub struct DM_PULLDOWN_R(crate::FieldReader<bool>);
 impl DM_PULLDOWN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl DM_PULLDOWN_R {
     }
 }
 impl core::ops::Deref for DM_PULLDOWN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> DM_PULLDOWN_W<'a> {
     }
 }
 #[doc = "Field `PULLUP_VALUE` reader - Control pull up value."]
-pub struct PULLUP_VALUE_R(crate::FieldReader<bool, bool>);
+pub struct PULLUP_VALUE_R(crate::FieldReader<bool>);
 impl PULLUP_VALUE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -430,7 +430,7 @@ impl PULLUP_VALUE_R {
     }
 }
 impl core::ops::Deref for PULLUP_VALUE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -459,7 +459,7 @@ impl<'a> PULLUP_VALUE_W<'a> {
     }
 }
 #[doc = "Field `USB_PAD_ENABLE` reader - Enable USB pad function."]
-pub struct USB_PAD_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct USB_PAD_ENABLE_R(crate::FieldReader<bool>);
 impl USB_PAD_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -467,7 +467,7 @@ impl USB_PAD_ENABLE_R {
     }
 }
 impl core::ops::Deref for USB_PAD_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -635,25 +635,16 @@ impl W {
         self
     }
 }
-#[doc = "USB_DEVICE_CONF0_REG.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0]
-(index.html) module"]
+#[doc = "USB_DEVICE_CONF0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0](index.html) module"]
 pub struct CONF0_SPEC;
 impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf0::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [conf0::R](R) reader structure"]
 impl crate::Readable for CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf0::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
 }

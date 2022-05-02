@@ -35,7 +35,7 @@ impl From<crate::W<OUT_CONF1_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_CHECK_OWNER_CH` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub struct OUT_CHECK_OWNER_CH_R(crate::FieldReader<bool, bool>);
+pub struct OUT_CHECK_OWNER_CH_R(crate::FieldReader<bool>);
 impl OUT_CHECK_OWNER_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl OUT_CHECK_OWNER_CH_R {
     }
 }
 impl core::ops::Deref for OUT_CHECK_OWNER_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> OUT_CHECK_OWNER_CH_W<'a> {
     }
 }
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE_CH` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub struct OUT_EXT_MEM_BK_SIZE_CH_R(crate::FieldReader<u8, u8>);
+pub struct OUT_EXT_MEM_BK_SIZE_CH_R(crate::FieldReader<u8>);
 impl OUT_EXT_MEM_BK_SIZE_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -80,7 +80,7 @@ impl OUT_EXT_MEM_BK_SIZE_CH_R {
     }
 }
 impl core::ops::Deref for OUT_EXT_MEM_BK_SIZE_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure 1 register of Tx channel 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_conf1_ch]
-(index.html) module"]
+#[doc = "Configure 1 register of Tx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_conf1_ch](index.html) module"]
 pub struct OUT_CONF1_CH_SPEC;
 impl crate::RegisterSpec for OUT_CONF1_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [out_conf1_ch::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [out_conf1_ch::R](R) reader structure"]
 impl crate::Readable for OUT_CONF1_CH_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [out_conf1_ch::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [out_conf1_ch::W](W) writer structure"]
 impl crate::Writable for OUT_CONF1_CH_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SETUP_TIME` reader - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
-pub struct SETUP_TIME_R(crate::FieldReader<u8, u8>);
+pub struct SETUP_TIME_R(crate::FieldReader<u8>);
 impl SETUP_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl SETUP_TIME_R {
     }
 }
 impl core::ops::Deref for SETUP_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SETUP_TIME_W<'a> {
     }
 }
 #[doc = "Field `HOLD_TIME` reader - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
-pub struct HOLD_TIME_R(crate::FieldReader<u8, u8>);
+pub struct HOLD_TIME_R(crate::FieldReader<u8>);
 impl HOLD_TIME_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl HOLD_TIME_R {
     }
 }
 impl core::ops::Deref for HOLD_TIME_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> HOLD_TIME_W<'a> {
     }
 }
 #[doc = "Field `CK_OUT_LOW_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
-pub struct CK_OUT_LOW_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CK_OUT_LOW_MODE_R(crate::FieldReader<u8>);
 impl CK_OUT_LOW_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CK_OUT_LOW_MODE_R {
     }
 }
 impl core::ops::Deref for CK_OUT_LOW_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CK_OUT_LOW_MODE_W<'a> {
     }
 }
 #[doc = "Field `CK_OUT_HIGH_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
-pub struct CK_OUT_HIGH_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CK_OUT_HIGH_MODE_R(crate::FieldReader<u8>);
 impl CK_OUT_HIGH_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CK_OUT_HIGH_MODE_R {
     }
 }
 impl core::ops::Deref for CK_OUT_HIGH_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CK_OUT_HIGH_MODE_W<'a> {
     }
 }
 #[doc = "Field `MISO_DELAY_MODE` reader - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub struct MISO_DELAY_MODE_R(crate::FieldReader<u8, u8>);
+pub struct MISO_DELAY_MODE_R(crate::FieldReader<u8>);
 impl MISO_DELAY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl MISO_DELAY_MODE_R {
     }
 }
 impl core::ops::Deref for MISO_DELAY_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> MISO_DELAY_MODE_W<'a> {
     }
 }
 #[doc = "Field `MISO_DELAY_NUM` reader - MISO signals are delayed by system clock cycles"]
-pub struct MISO_DELAY_NUM_R(crate::FieldReader<u8, u8>);
+pub struct MISO_DELAY_NUM_R(crate::FieldReader<u8>);
 impl MISO_DELAY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl MISO_DELAY_NUM_R {
     }
 }
 impl core::ops::Deref for MISO_DELAY_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> MISO_DELAY_NUM_W<'a> {
     }
 }
 #[doc = "Field `MOSI_DELAY_MODE` reader - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub struct MOSI_DELAY_MODE_R(crate::FieldReader<u8, u8>);
+pub struct MOSI_DELAY_MODE_R(crate::FieldReader<u8>);
 impl MOSI_DELAY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl MOSI_DELAY_MODE_R {
     }
 }
 impl core::ops::Deref for MOSI_DELAY_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> MOSI_DELAY_MODE_W<'a> {
     }
 }
 #[doc = "Field `MOSI_DELAY_NUM` reader - MOSI signals are delayed by system clock cycles"]
-pub struct MOSI_DELAY_NUM_R(crate::FieldReader<u8, u8>);
+pub struct MOSI_DELAY_NUM_R(crate::FieldReader<u8>);
 impl MOSI_DELAY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl MOSI_DELAY_NUM_R {
     }
 }
 impl core::ops::Deref for MOSI_DELAY_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> MOSI_DELAY_NUM_W<'a> {
     }
 }
 #[doc = "Field `CS_DELAY_MODE` reader - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub struct CS_DELAY_MODE_R(crate::FieldReader<u8, u8>);
+pub struct CS_DELAY_MODE_R(crate::FieldReader<u8>);
 impl CS_DELAY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl CS_DELAY_MODE_R {
     }
 }
 impl core::ops::Deref for CS_DELAY_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> CS_DELAY_MODE_W<'a> {
     }
 }
 #[doc = "Field `CS_DELAY_NUM` reader - spi_cs signal is delayed by system clock cycles"]
-pub struct CS_DELAY_NUM_R(crate::FieldReader<u8, u8>);
+pub struct CS_DELAY_NUM_R(crate::FieldReader<u8>);
 impl CS_DELAY_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl CS_DELAY_NUM_R {
     }
 }
 impl core::ops::Deref for CS_DELAY_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -414,25 +414,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl2]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl2](index.html) module"]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl2::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl2::R](R) reader structure"]
 impl crate::Readable for CTRL2_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl2::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl2::W](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Writer = W;
 }

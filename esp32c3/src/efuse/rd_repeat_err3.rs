@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_ERR3_SPEC>> for R {
     }
 }
 #[doc = "Field `DIS_DOWNLOAD_MODE_ERR` reader - If DIS_DOWNLOAD_MODE is 1, then it indicates a programming error."]
-pub struct DIS_DOWNLOAD_MODE_ERR_R(crate::FieldReader<bool, bool>);
+pub struct DIS_DOWNLOAD_MODE_ERR_R(crate::FieldReader<bool>);
 impl DIS_DOWNLOAD_MODE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl DIS_DOWNLOAD_MODE_ERR_R {
     }
 }
 impl core::ops::Deref for DIS_DOWNLOAD_MODE_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DIS_LEGACY_SPI_BOOT_ERR` reader - If DIS_LEGACY_SPI_BOOT is 1, then it indicates a programming error."]
-pub struct DIS_LEGACY_SPI_BOOT_ERR_R(crate::FieldReader<bool, bool>);
+pub struct DIS_LEGACY_SPI_BOOT_ERR_R(crate::FieldReader<bool>);
 impl DIS_LEGACY_SPI_BOOT_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl DIS_LEGACY_SPI_BOOT_ERR_R {
     }
 }
 impl core::ops::Deref for DIS_LEGACY_SPI_BOOT_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `UART_PRINT_CHANNEL_ERR` reader - If UART_PRINT_CHANNEL is 1, then it indicates a programming error."]
-pub struct UART_PRINT_CHANNEL_ERR_R(crate::FieldReader<bool, bool>);
+pub struct UART_PRINT_CHANNEL_ERR_R(crate::FieldReader<bool>);
 impl UART_PRINT_CHANNEL_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl UART_PRINT_CHANNEL_ERR_R {
     }
 }
 impl core::ops::Deref for UART_PRINT_CHANNEL_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_ECC_MODE_ERR` reader - If FLASH_ECC_MODE is 1, then it indicates a programming error."]
-pub struct FLASH_ECC_MODE_ERR_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_ECC_MODE_ERR_R(crate::FieldReader<bool>);
 impl FLASH_ECC_MODE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl FLASH_ECC_MODE_ERR_R {
     }
 }
 impl core::ops::Deref for FLASH_ECC_MODE_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DIS_USB_DOWNLOAD_MODE_ERR` reader - If DIS_USB_DOWNLOAD_MODE is 1, then it indicates a programming error."]
-pub struct DIS_USB_DOWNLOAD_MODE_ERR_R(crate::FieldReader<bool, bool>);
+pub struct DIS_USB_DOWNLOAD_MODE_ERR_R(crate::FieldReader<bool>);
 impl DIS_USB_DOWNLOAD_MODE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl DIS_USB_DOWNLOAD_MODE_ERR_R {
     }
 }
 impl core::ops::Deref for DIS_USB_DOWNLOAD_MODE_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD_ERR` reader - If ENABLE_SECURITY_DOWNLOAD is 1, then it indicates a programming error."]
-pub struct ENABLE_SECURITY_DOWNLOAD_ERR_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_SECURITY_DOWNLOAD_ERR_R(crate::FieldReader<bool>);
 impl ENABLE_SECURITY_DOWNLOAD_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl ENABLE_SECURITY_DOWNLOAD_ERR_R {
     }
 }
 impl core::ops::Deref for ENABLE_SECURITY_DOWNLOAD_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `UART_PRINT_CONTROL_ERR` reader - If any bit in UART_PRINT_CONTROL is 1, then it indicates a programming error."]
-pub struct UART_PRINT_CONTROL_ERR_R(crate::FieldReader<u8, u8>);
+pub struct UART_PRINT_CONTROL_ERR_R(crate::FieldReader<u8>);
 impl UART_PRINT_CONTROL_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,14 +112,14 @@ impl UART_PRINT_CONTROL_ERR_R {
     }
 }
 impl core::ops::Deref for UART_PRINT_CONTROL_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PIN_POWER_SELECTION_ERR` reader - If PIN_POWER_SELECTION is 1, then it indicates a programming error."]
-pub struct PIN_POWER_SELECTION_ERR_R(crate::FieldReader<bool, bool>);
+pub struct PIN_POWER_SELECTION_ERR_R(crate::FieldReader<bool>);
 impl PIN_POWER_SELECTION_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl PIN_POWER_SELECTION_ERR_R {
     }
 }
 impl core::ops::Deref for PIN_POWER_SELECTION_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_TYPE_ERR` reader - If FLASH_TYPE is 1, then it indicates a programming error."]
-pub struct FLASH_TYPE_ERR_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_TYPE_ERR_R(crate::FieldReader<bool>);
 impl FLASH_TYPE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl FLASH_TYPE_ERR_R {
     }
 }
 impl core::ops::Deref for FLASH_TYPE_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_PAGE_SIZE_ERR` reader - If any bits in FLASH_PAGE_SIZE is 1, then it indicates a programming error."]
-pub struct FLASH_PAGE_SIZE_ERR_R(crate::FieldReader<u8, u8>);
+pub struct FLASH_PAGE_SIZE_ERR_R(crate::FieldReader<u8>);
 impl FLASH_PAGE_SIZE_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -157,14 +157,14 @@ impl FLASH_PAGE_SIZE_ERR_R {
     }
 }
 impl core::ops::Deref for FLASH_PAGE_SIZE_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FLASH_ECC_EN_ERR` reader - If FLASH_ECC_EN_ERR is 1, then it indicates a programming error."]
-pub struct FLASH_ECC_EN_ERR_R(crate::FieldReader<bool, bool>);
+pub struct FLASH_ECC_EN_ERR_R(crate::FieldReader<bool>);
 impl FLASH_ECC_EN_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl FLASH_ECC_EN_ERR_R {
     }
 }
 impl core::ops::Deref for FLASH_ECC_EN_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - If FORCE_SEND_RESUME is 1, then it indicates a programming error."]
-pub struct FORCE_SEND_RESUME_ERR_R(crate::FieldReader<bool, bool>);
+pub struct FORCE_SEND_RESUME_ERR_R(crate::FieldReader<bool>);
 impl FORCE_SEND_RESUME_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl FORCE_SEND_RESUME_ERR_R {
     }
 }
 impl core::ops::Deref for FORCE_SEND_RESUME_ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SECURE_VERSION_ERR` reader - If any bit in SECURE_VERSION is 1, then it indicates a programming error."]
-pub struct SECURE_VERSION_ERR_R(crate::FieldReader<u16, u16>);
+pub struct SECURE_VERSION_ERR_R(crate::FieldReader<u16>);
 impl SECURE_VERSION_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -202,14 +202,14 @@ impl SECURE_VERSION_ERR_R {
     }
 }
 impl core::ops::Deref for SECURE_VERSION_ERR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RPT4_RESERVED1_ERR` reader - Reserved."]
-pub struct RPT4_RESERVED1_ERR_R(crate::FieldReader<u8, u8>);
+pub struct RPT4_RESERVED1_ERR_R(crate::FieldReader<u8>);
 impl RPT4_RESERVED1_ERR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -217,7 +217,7 @@ impl RPT4_RESERVED1_ERR_R {
     }
 }
 impl core::ops::Deref for RPT4_RESERVED1_ERR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -295,16 +295,12 @@ impl R {
         RPT4_RESERVED1_ERR_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
-#[doc = "Programming error record register 3 of BLOCK0.\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err3]
-(index.html) module"]
+#[doc = "Programming error record register 3 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err3](index.html) module"]
 pub struct RD_REPEAT_ERR3_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_ERR3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rd_repeat_err3::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [rd_repeat_err3::R](R) reader structure"]
 impl crate::Readable for RD_REPEAT_ERR3_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<DB1_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DB1_FED_UPMETHOD` reader - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub struct DB1_FED_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct DB1_FED_UPMETHOD_R(crate::FieldReader<u8>);
 impl DB1_FED_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DB1_FED_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for DB1_FED_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DB1_FED_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `DB1_RED_UPMETHOD` reader - Update method for RED (rising edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub struct DB1_RED_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct DB1_RED_UPMETHOD_R(crate::FieldReader<u8>);
 impl DB1_RED_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DB1_RED_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for DB1_RED_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DB1_RED_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `DB1_DEB_MODE` reader - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
-pub struct DB1_DEB_MODE_R(crate::FieldReader<bool, bool>);
+pub struct DB1_DEB_MODE_R(crate::FieldReader<bool>);
 impl DB1_DEB_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,7 +97,7 @@ impl DB1_DEB_MODE_R {
     }
 }
 impl core::ops::Deref for DB1_DEB_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -126,7 +126,7 @@ impl<'a> DB1_DEB_MODE_W<'a> {
     }
 }
 #[doc = "Field `DB1_A_OUTSWAP` reader - S6 in documentation"]
-pub struct DB1_A_OUTSWAP_R(crate::FieldReader<bool, bool>);
+pub struct DB1_A_OUTSWAP_R(crate::FieldReader<bool>);
 impl DB1_A_OUTSWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -134,7 +134,7 @@ impl DB1_A_OUTSWAP_R {
     }
 }
 impl core::ops::Deref for DB1_A_OUTSWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> DB1_A_OUTSWAP_W<'a> {
     }
 }
 #[doc = "Field `DB1_B_OUTSWAP` reader - S7 in documentation"]
-pub struct DB1_B_OUTSWAP_R(crate::FieldReader<bool, bool>);
+pub struct DB1_B_OUTSWAP_R(crate::FieldReader<bool>);
 impl DB1_B_OUTSWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl DB1_B_OUTSWAP_R {
     }
 }
 impl core::ops::Deref for DB1_B_OUTSWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> DB1_B_OUTSWAP_W<'a> {
     }
 }
 #[doc = "Field `DB1_RED_INSEL` reader - S4 in documentation"]
-pub struct DB1_RED_INSEL_R(crate::FieldReader<bool, bool>);
+pub struct DB1_RED_INSEL_R(crate::FieldReader<bool>);
 impl DB1_RED_INSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl DB1_RED_INSEL_R {
     }
 }
 impl core::ops::Deref for DB1_RED_INSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> DB1_RED_INSEL_W<'a> {
     }
 }
 #[doc = "Field `DB1_FED_INSEL` reader - S5 in documentation"]
-pub struct DB1_FED_INSEL_R(crate::FieldReader<bool, bool>);
+pub struct DB1_FED_INSEL_R(crate::FieldReader<bool>);
 impl DB1_FED_INSEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -245,7 +245,7 @@ impl DB1_FED_INSEL_R {
     }
 }
 impl core::ops::Deref for DB1_FED_INSEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -274,7 +274,7 @@ impl<'a> DB1_FED_INSEL_W<'a> {
     }
 }
 #[doc = "Field `DB1_RED_OUTINVERT` reader - S2 in documentation"]
-pub struct DB1_RED_OUTINVERT_R(crate::FieldReader<bool, bool>);
+pub struct DB1_RED_OUTINVERT_R(crate::FieldReader<bool>);
 impl DB1_RED_OUTINVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -282,7 +282,7 @@ impl DB1_RED_OUTINVERT_R {
     }
 }
 impl core::ops::Deref for DB1_RED_OUTINVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -311,7 +311,7 @@ impl<'a> DB1_RED_OUTINVERT_W<'a> {
     }
 }
 #[doc = "Field `DB1_FED_OUTINVERT` reader - S3 in documentation"]
-pub struct DB1_FED_OUTINVERT_R(crate::FieldReader<bool, bool>);
+pub struct DB1_FED_OUTINVERT_R(crate::FieldReader<bool>);
 impl DB1_FED_OUTINVERT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -319,7 +319,7 @@ impl DB1_FED_OUTINVERT_R {
     }
 }
 impl core::ops::Deref for DB1_FED_OUTINVERT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -348,7 +348,7 @@ impl<'a> DB1_FED_OUTINVERT_W<'a> {
     }
 }
 #[doc = "Field `DB1_A_OUTBYPASS` reader - S1 in documentation"]
-pub struct DB1_A_OUTBYPASS_R(crate::FieldReader<bool, bool>);
+pub struct DB1_A_OUTBYPASS_R(crate::FieldReader<bool>);
 impl DB1_A_OUTBYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -356,7 +356,7 @@ impl DB1_A_OUTBYPASS_R {
     }
 }
 impl core::ops::Deref for DB1_A_OUTBYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -385,7 +385,7 @@ impl<'a> DB1_A_OUTBYPASS_W<'a> {
     }
 }
 #[doc = "Field `DB1_B_OUTBYPASS` reader - S0 in documentation"]
-pub struct DB1_B_OUTBYPASS_R(crate::FieldReader<bool, bool>);
+pub struct DB1_B_OUTBYPASS_R(crate::FieldReader<bool>);
 impl DB1_B_OUTBYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -393,7 +393,7 @@ impl DB1_B_OUTBYPASS_R {
     }
 }
 impl core::ops::Deref for DB1_B_OUTBYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -422,7 +422,7 @@ impl<'a> DB1_B_OUTBYPASS_W<'a> {
     }
 }
 #[doc = "Field `DB1_CLK_SEL` reader - Dead time generator 1 clock selection. 0: PWM_clk, 1: PT_clk"]
-pub struct DB1_CLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct DB1_CLK_SEL_R(crate::FieldReader<bool>);
 impl DB1_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -430,7 +430,7 @@ impl DB1_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for DB1_CLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -588,25 +588,16 @@ impl W {
         self
     }
 }
-#[doc = "dead time type selection and configuration\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [db1_cfg]
-(index.html) module"]
+#[doc = "dead time type selection and configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [db1_cfg](index.html) module"]
 pub struct DB1_CFG_SPEC;
 impl crate::RegisterSpec for DB1_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [db1_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [db1_cfg::R](R) reader structure"]
 impl crate::Readable for DB1_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [db1_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [db1_cfg::W](W) writer structure"]
 impl crate::Writable for DB1_CFG_SPEC {
     type Writer = W;
 }

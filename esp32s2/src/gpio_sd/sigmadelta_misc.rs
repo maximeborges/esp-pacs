@@ -35,7 +35,7 @@ impl From<crate::W<SIGMADELTA_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `FUNCTION_CLK_EN` reader - Clock enable bit of sigma delta modulation."]
-pub struct FUNCTION_CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct FUNCTION_CLK_EN_R(crate::FieldReader<bool>);
 impl FUNCTION_CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl FUNCTION_CLK_EN_R {
     }
 }
 impl core::ops::Deref for FUNCTION_CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> FUNCTION_CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `SPI_SWAP` reader - Reserved."]
-pub struct SPI_SWAP_R(crate::FieldReader<bool, bool>);
+pub struct SPI_SWAP_R(crate::FieldReader<bool>);
 impl SPI_SWAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SPI_SWAP_R {
     }
 }
 impl core::ops::Deref for SPI_SWAP_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "MISC register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta_misc]
-(index.html) module"]
+#[doc = "MISC register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sigmadelta_misc](index.html) module"]
 pub struct SIGMADELTA_MISC_SPEC;
 impl crate::RegisterSpec for SIGMADELTA_MISC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sigmadelta_misc::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [sigmadelta_misc::R](R) reader structure"]
 impl crate::Readable for SIGMADELTA_MISC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [sigmadelta_misc::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [sigmadelta_misc::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA_MISC_SPEC {
     type Writer = W;
 }

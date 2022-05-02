@@ -35,7 +35,7 @@ impl From<crate::W<LACTCONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_USE_REFTICK` reader - Reserved."]
-pub struct LACT_USE_REFTICK_R(crate::FieldReader<bool, bool>);
+pub struct LACT_USE_REFTICK_R(crate::FieldReader<bool>);
 impl LACT_USE_REFTICK_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl LACT_USE_REFTICK_R {
     }
 }
 impl core::ops::Deref for LACT_USE_REFTICK_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> LACT_USE_REFTICK_W<'a> {
     }
 }
 #[doc = "Field `LACT_RTC_ONLY` reader - Reserved."]
-pub struct LACT_RTC_ONLY_R(crate::FieldReader<bool, bool>);
+pub struct LACT_RTC_ONLY_R(crate::FieldReader<bool>);
 impl LACT_RTC_ONLY_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LACT_RTC_ONLY_R {
     }
 }
 impl core::ops::Deref for LACT_RTC_ONLY_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LACT_RTC_ONLY_W<'a> {
     }
 }
 #[doc = "Field `LACT_CPST_EN` reader - Reserved."]
-pub struct LACT_CPST_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_CPST_EN_R(crate::FieldReader<bool>);
 impl LACT_CPST_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl LACT_CPST_EN_R {
     }
 }
 impl core::ops::Deref for LACT_CPST_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> LACT_CPST_EN_W<'a> {
     }
 }
 #[doc = "Field `LACT_LAC_EN` reader - Reserved."]
-pub struct LACT_LAC_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_LAC_EN_R(crate::FieldReader<bool>);
 impl LACT_LAC_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl LACT_LAC_EN_R {
     }
 }
 impl core::ops::Deref for LACT_LAC_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> LACT_LAC_EN_W<'a> {
     }
 }
 #[doc = "Field `LACT_ALARM_EN` reader - Reserved."]
-pub struct LACT_ALARM_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_ALARM_EN_R(crate::FieldReader<bool>);
 impl LACT_ALARM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl LACT_ALARM_EN_R {
     }
 }
 impl core::ops::Deref for LACT_ALARM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> LACT_ALARM_EN_W<'a> {
     }
 }
 #[doc = "Field `LACT_LEVEL_INT_EN` reader - Reserved."]
-pub struct LACT_LEVEL_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_LEVEL_INT_EN_R(crate::FieldReader<bool>);
 impl LACT_LEVEL_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl LACT_LEVEL_INT_EN_R {
     }
 }
 impl core::ops::Deref for LACT_LEVEL_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> LACT_LEVEL_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `LACT_EDGE_INT_EN` reader - Reserved."]
-pub struct LACT_EDGE_INT_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_EDGE_INT_EN_R(crate::FieldReader<bool>);
 impl LACT_EDGE_INT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl LACT_EDGE_INT_EN_R {
     }
 }
 impl core::ops::Deref for LACT_EDGE_INT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> LACT_EDGE_INT_EN_W<'a> {
     }
 }
 #[doc = "Field `LACT_DIVIDER` reader - Reserved."]
-pub struct LACT_DIVIDER_R(crate::FieldReader<u16, u16>);
+pub struct LACT_DIVIDER_R(crate::FieldReader<u16>);
 impl LACT_DIVIDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -302,7 +302,7 @@ impl LACT_DIVIDER_R {
     }
 }
 impl core::ops::Deref for LACT_DIVIDER_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -321,7 +321,7 @@ impl<'a> LACT_DIVIDER_W<'a> {
     }
 }
 #[doc = "Field `LACT_AUTORELOAD` reader - Reserved."]
-pub struct LACT_AUTORELOAD_R(crate::FieldReader<bool, bool>);
+pub struct LACT_AUTORELOAD_R(crate::FieldReader<bool>);
 impl LACT_AUTORELOAD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -329,7 +329,7 @@ impl LACT_AUTORELOAD_R {
     }
 }
 impl core::ops::Deref for LACT_AUTORELOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> LACT_AUTORELOAD_W<'a> {
     }
 }
 #[doc = "Field `LACT_INCREASE` reader - Reserved."]
-pub struct LACT_INCREASE_R(crate::FieldReader<bool, bool>);
+pub struct LACT_INCREASE_R(crate::FieldReader<bool>);
 impl LACT_INCREASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl LACT_INCREASE_R {
     }
 }
 impl core::ops::Deref for LACT_INCREASE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> LACT_INCREASE_W<'a> {
     }
 }
 #[doc = "Field `LACT_EN` reader - Reserved."]
-pub struct LACT_EN_R(crate::FieldReader<bool, bool>);
+pub struct LACT_EN_R(crate::FieldReader<bool>);
 impl LACT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl LACT_EN_R {
     }
 }
 impl core::ops::Deref for LACT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -551,25 +551,16 @@ impl W {
         self
     }
 }
-#[doc = "LACT configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lactconfig]
-(index.html) module"]
+#[doc = "LACT configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lactconfig](index.html) module"]
 pub struct LACTCONFIG_SPEC;
 impl crate::RegisterSpec for LACTCONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lactconfig::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lactconfig::R](R) reader structure"]
 impl crate::Readable for LACTCONFIG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lactconfig::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lactconfig::W](W) writer structure"]
 impl crate::Writable for LACTCONFIG_SPEC {
     type Writer = W;
 }

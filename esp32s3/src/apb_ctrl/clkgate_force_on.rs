@@ -35,7 +35,7 @@ impl From<crate::W<CLKGATE_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` reader - ******* Description ***********"]
-pub struct ROM_CLKGATE_FORCE_ON_R(crate::FieldReader<u8, u8>);
+pub struct ROM_CLKGATE_FORCE_ON_R(crate::FieldReader<u8>);
 impl ROM_CLKGATE_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl ROM_CLKGATE_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for ROM_CLKGATE_FORCE_ON_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> ROM_CLKGATE_FORCE_ON_W<'a> {
     }
 }
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - ******* Description ***********"]
-pub struct SRAM_CLKGATE_FORCE_ON_R(crate::FieldReader<u16, u16>);
+pub struct SRAM_CLKGATE_FORCE_ON_R(crate::FieldReader<u16>);
 impl SRAM_CLKGATE_FORCE_ON_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -70,7 +70,7 @@ impl SRAM_CLKGATE_FORCE_ON_R {
     }
 }
 impl core::ops::Deref for SRAM_CLKGATE_FORCE_ON_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkgate_force_on]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clkgate_force_on](index.html) module"]
 pub struct CLKGATE_FORCE_ON_SPEC;
 impl crate::RegisterSpec for CLKGATE_FORCE_ON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clkgate_force_on::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clkgate_force_on::R](R) reader structure"]
 impl crate::Readable for CLKGATE_FORCE_ON_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clkgate_force_on::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clkgate_force_on::W](W) writer structure"]
 impl crate::Writable for CLKGATE_FORCE_ON_SPEC {
     type Writer = W;
 }

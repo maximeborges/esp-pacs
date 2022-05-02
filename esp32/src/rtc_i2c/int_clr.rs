@@ -35,7 +35,7 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct SLAVE_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
 impl SLAVE_TRANS_COMPLETE_INT_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_TRANS_COMPLETE_INT_CLR_R {
     }
 }
 impl core::ops::Deref for SLAVE_TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> SLAVE_TRANS_COMPLETE_INT_CLR_W<'a> {
     }
 }
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` reader - "]
-pub struct ARBITRATION_LOST_INT_CLR_R(crate::FieldReader<bool, bool>);
+pub struct ARBITRATION_LOST_INT_CLR_R(crate::FieldReader<bool>);
 impl ARBITRATION_LOST_INT_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ARBITRATION_LOST_INT_CLR_R {
     }
 }
 impl core::ops::Deref for ARBITRATION_LOST_INT_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ARBITRATION_LOST_INT_CLR_W<'a> {
     }
 }
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct MASTER_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool, bool>);
+pub struct MASTER_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
 impl MASTER_TRANS_COMPLETE_INT_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MASTER_TRANS_COMPLETE_INT_CLR_R {
     }
 }
 impl core::ops::Deref for MASTER_TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> MASTER_TRANS_COMPLETE_INT_CLR_W<'a> {
     }
 }
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool, bool>);
+pub struct TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
 impl TRANS_COMPLETE_INT_CLR_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl TRANS_COMPLETE_INT_CLR_R {
     }
 }
 impl core::ops::Deref for TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -259,25 +259,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_clr]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_clr](index.html) module"]
 pub struct INT_CLR_SPEC;
 impl crate::RegisterSpec for INT_CLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_clr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_clr::R](R) reader structure"]
 impl crate::Readable for INT_CLR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [int_clr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
 }

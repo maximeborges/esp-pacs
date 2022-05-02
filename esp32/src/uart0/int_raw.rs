@@ -14,7 +14,7 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than (rx_flow_thrhd_h3 rx_flow_thrhd)."]
-pub struct RXFIFO_FULL_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_FULL_INT_RAW_R(crate::FieldReader<bool>);
 impl RXFIFO_FULL_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl RXFIFO_FULL_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RXFIFO_FULL_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TXFIFO_EMPTY_INT_RAW` reader - This interrupt raw bit turns to high level when the amount of data in transmitter's fifo is less than ((tx_mem_cnttxfifo_cnt) ."]
-pub struct TXFIFO_EMPTY_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TXFIFO_EMPTY_INT_RAW_R(crate::FieldReader<bool>);
 impl TXFIFO_EMPTY_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl TXFIFO_EMPTY_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TXFIFO_EMPTY_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the parity error of data."]
-pub struct PARITY_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct PARITY_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl PARITY_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl PARITY_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for PARITY_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects data's frame error ."]
-pub struct FRM_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct FRM_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl FRM_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl FRM_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for FRM_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_OVF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than the fifo can store."]
-pub struct RXFIFO_OVF_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_OVF_INT_RAW_R(crate::FieldReader<bool>);
 impl RXFIFO_OVF_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl RXFIFO_OVF_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RXFIFO_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `DSR_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of dsrn signal."]
-pub struct DSR_CHG_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct DSR_CHG_INT_RAW_R(crate::FieldReader<bool>);
 impl DSR_CHG_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl DSR_CHG_INT_RAW_R {
     }
 }
 impl core::ops::Deref for DSR_CHG_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CTS_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of ctsn signal."]
-pub struct CTS_CHG_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct CTS_CHG_INT_RAW_R(crate::FieldReader<bool>);
 impl CTS_CHG_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,14 +112,14 @@ impl CTS_CHG_INT_RAW_R {
     }
 }
 impl core::ops::Deref for CTS_CHG_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `BRK_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the 0 after the stop bit."]
-pub struct BRK_DET_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct BRK_DET_INT_RAW_R(crate::FieldReader<bool>);
 impl BRK_DET_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -127,14 +127,14 @@ impl BRK_DET_INT_RAW_R {
     }
 }
 impl core::ops::Deref for BRK_DET_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RXFIFO_TOUT_INT_RAW` reader - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
-pub struct RXFIFO_TOUT_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RXFIFO_TOUT_INT_RAW_R(crate::FieldReader<bool>);
 impl RXFIFO_TOUT_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -142,14 +142,14 @@ impl RXFIFO_TOUT_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RXFIFO_TOUT_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SW_XON_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives xoff char with uart_sw_flow_con_en is set to 1."]
-pub struct SW_XON_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SW_XON_INT_RAW_R(crate::FieldReader<bool>);
 impl SW_XON_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl SW_XON_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SW_XON_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `SW_XOFF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives xon char with uart_sw_flow_con_en is set to 1."]
-pub struct SW_XOFF_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct SW_XOFF_INT_RAW_R(crate::FieldReader<bool>);
 impl SW_XOFF_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl SW_XOFF_INT_RAW_R {
     }
 }
 impl core::ops::Deref for SW_XOFF_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `GLITCH_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the start bit."]
-pub struct GLITCH_DET_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct GLITCH_DET_INT_RAW_R(crate::FieldReader<bool>);
 impl GLITCH_DET_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl GLITCH_DET_INT_RAW_R {
     }
 }
 impl core::ops::Deref for GLITCH_DET_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_BRK_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter completes sendding 0 after all the datas in transmitter's fifo are send."]
-pub struct TX_BRK_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TX_BRK_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl TX_BRK_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TX_BRK_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after the last data has been send."]
-pub struct TX_BRK_IDLE_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TX_BRK_IDLE_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TX_BRK_IDLE_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,14 +217,14 @@ impl TX_BRK_IDLE_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TX_BRK_IDLE_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `TX_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has send all the data in fifo."]
-pub struct TX_DONE_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct TX_DONE_INT_RAW_R(crate::FieldReader<bool>);
 impl TX_DONE_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -232,14 +232,14 @@ impl TX_DONE_INT_RAW_R {
     }
 }
 impl core::ops::Deref for TX_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the parity error."]
-pub struct RS485_PARITY_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RS485_PARITY_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl RS485_PARITY_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -247,14 +247,14 @@ impl RS485_PARITY_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RS485_PARITY_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the data frame error."]
-pub struct RS485_FRM_ERR_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RS485_FRM_ERR_INT_RAW_R(crate::FieldReader<bool>);
 impl RS485_FRM_ERR_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -262,14 +262,14 @@ impl RS485_FRM_ERR_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RS485_FRM_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `RS485_CLASH_INT_RAW` reader - This interrupt raw bit turns to high level when rs485 detects the clash between transmitter and receiver."]
-pub struct RS485_CLASH_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct RS485_CLASH_INT_RAW_R(crate::FieldReader<bool>);
 impl RS485_CLASH_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -277,14 +277,14 @@ impl RS485_CLASH_INT_RAW_R {
     }
 }
 impl core::ops::Deref for RS485_CLASH_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `AT_CMD_CHAR_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the configured at_cmd chars."]
-pub struct AT_CMD_CHAR_DET_INT_RAW_R(crate::FieldReader<bool, bool>);
+pub struct AT_CMD_CHAR_DET_INT_RAW_R(crate::FieldReader<bool>);
 impl AT_CMD_CHAR_DET_INT_RAW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -292,7 +292,7 @@ impl AT_CMD_CHAR_DET_INT_RAW_R {
     }
 }
 impl core::ops::Deref for AT_CMD_CHAR_DET_INT_RAW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,16 +395,12 @@ impl R {
         AT_CMD_CHAR_DET_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [int_raw::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
 }

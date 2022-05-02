@@ -35,7 +35,7 @@ impl From<crate::W<DMA_TX_I_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_0_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 0."]
-pub struct DMA_TX_I_SRAM_0_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_0_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_0_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl DMA_TX_I_SRAM_0_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_0_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> DMA_TX_I_SRAM_0_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_0_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 0."]
-pub struct DMA_TX_I_SRAM_0_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_0_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_0_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DMA_TX_I_SRAM_0_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_0_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> DMA_TX_I_SRAM_0_W_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_1_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 1."]
-pub struct DMA_TX_I_SRAM_1_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_1_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_1_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DMA_TX_I_SRAM_1_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_1_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DMA_TX_I_SRAM_1_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_1_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 1."]
-pub struct DMA_TX_I_SRAM_1_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_1_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_1_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl DMA_TX_I_SRAM_1_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_1_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> DMA_TX_I_SRAM_1_W_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_2_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 2."]
-pub struct DMA_TX_I_SRAM_2_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_2_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_2_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl DMA_TX_I_SRAM_2_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_2_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> DMA_TX_I_SRAM_2_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_2_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 2."]
-pub struct DMA_TX_I_SRAM_2_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_2_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_2_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl DMA_TX_I_SRAM_2_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_2_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> DMA_TX_I_SRAM_2_W_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_3_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 3."]
-pub struct DMA_TX_I_SRAM_3_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_3_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_3_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl DMA_TX_I_SRAM_3_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_3_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> DMA_TX_I_SRAM_3_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_3_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 3."]
-pub struct DMA_TX_I_SRAM_3_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_3_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_3_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl DMA_TX_I_SRAM_3_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_3_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> DMA_TX_I_SRAM_3_W_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_4_SPLTADDR` reader - Configure the split address of SRAM Block 4-21 for TX Copy DMA access."]
-pub struct DMA_TX_I_SRAM_4_SPLTADDR_R(crate::FieldReader<u32, u32>);
+pub struct DMA_TX_I_SRAM_4_SPLTADDR_R(crate::FieldReader<u32>);
 impl DMA_TX_I_SRAM_4_SPLTADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -339,7 +339,7 @@ impl DMA_TX_I_SRAM_4_SPLTADDR_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_4_SPLTADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -358,7 +358,7 @@ impl<'a> DMA_TX_I_SRAM_4_SPLTADDR_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_4_L_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 low address region."]
-pub struct DMA_TX_I_SRAM_4_L_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_4_L_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_4_L_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -366,7 +366,7 @@ impl DMA_TX_I_SRAM_4_L_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_4_L_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -395,7 +395,7 @@ impl<'a> DMA_TX_I_SRAM_4_L_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_4_L_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 low address region."]
-pub struct DMA_TX_I_SRAM_4_L_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_4_L_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_4_L_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -403,7 +403,7 @@ impl DMA_TX_I_SRAM_4_L_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_4_L_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -432,7 +432,7 @@ impl<'a> DMA_TX_I_SRAM_4_L_W_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_4_H_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 high address region."]
-pub struct DMA_TX_I_SRAM_4_H_R_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_4_H_R_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_4_H_R_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -440,7 +440,7 @@ impl DMA_TX_I_SRAM_4_H_R_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_4_H_R_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -469,7 +469,7 @@ impl<'a> DMA_TX_I_SRAM_4_H_R_W<'a> {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_4_H_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 high address region."]
-pub struct DMA_TX_I_SRAM_4_H_W_R(crate::FieldReader<bool, bool>);
+pub struct DMA_TX_I_SRAM_4_H_W_R(crate::FieldReader<bool>);
 impl DMA_TX_I_SRAM_4_H_W_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -477,7 +477,7 @@ impl DMA_TX_I_SRAM_4_H_W_R {
     }
 }
 impl core::ops::Deref for DMA_TX_I_SRAM_4_H_W_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -645,25 +645,16 @@ impl W {
         self
     }
 }
-#[doc = "TX Copy DMA permission control register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_1]
-(index.html) module"]
+#[doc = "TX Copy DMA permission control register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_1](index.html) module"]
 pub struct DMA_TX_I_1_SPEC;
 impl crate::RegisterSpec for DMA_TX_I_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dma_tx_i_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dma_tx_i_1::R](R) reader structure"]
 impl crate::Readable for DMA_TX_I_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dma_tx_i_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dma_tx_i_1::W](W) writer structure"]
 impl crate::Writable for DMA_TX_I_1_SPEC {
     type Writer = W;
 }

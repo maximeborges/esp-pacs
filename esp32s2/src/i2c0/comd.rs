@@ -35,7 +35,7 @@ impl From<crate::W<COMD_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND` reader - This is the content of command . It consists of three parts: op_code is the command, : RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END. byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information."]
-pub struct COMMAND_R(crate::FieldReader<u16, u16>);
+pub struct COMMAND_R(crate::FieldReader<u16>);
 impl COMMAND_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl COMMAND_R {
     }
 }
 impl core::ops::Deref for COMMAND_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> COMMAND_W<'a> {
     }
 }
 #[doc = "Field `COMMAND_DONE` reader - When command is done in I2C Master mode, this bit changes to high level."]
-pub struct COMMAND_DONE_R(crate::FieldReader<bool, bool>);
+pub struct COMMAND_DONE_R(crate::FieldReader<bool>);
 impl COMMAND_DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl COMMAND_DONE_R {
     }
 }
 impl core::ops::Deref for COMMAND_DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "I2C command register %s\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comd]
-(index.html) module"]
+#[doc = "I2C command register %s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comd](index.html) module"]
 pub struct COMD_SPEC;
 impl crate::RegisterSpec for COMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [comd::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [comd::R](R) reader structure"]
 impl crate::Readable for COMD_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [comd::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [comd::W](W) writer structure"]
 impl crate::Writable for COMD_SPEC {
     type Writer = W;
 }

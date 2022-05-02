@@ -14,7 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_ATRR` reader - The reject accessing. Bit 0: if this bit is 1, the rejected accessing is READ. Bit 1: if this bit is 1, the rejected accessing is WRITE."]
-pub struct EXTMEM_REJECT_ATRR_R(crate::FieldReader<u8, u8>);
+pub struct EXTMEM_REJECT_ATRR_R(crate::FieldReader<u8>);
 impl EXTMEM_REJECT_ATRR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -22,14 +22,14 @@ impl EXTMEM_REJECT_ATRR_R {
     }
 }
 impl core::ops::Deref for EXTMEM_REJECT_ATRR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `EXTMEM_REJECT_CHANNEL_NUM` reader - The register indicate the reject accessing from which channel."]
-pub struct EXTMEM_REJECT_CHANNEL_NUM_R(crate::FieldReader<u8, u8>);
+pub struct EXTMEM_REJECT_CHANNEL_NUM_R(crate::FieldReader<u8>);
 impl EXTMEM_REJECT_CHANNEL_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -37,14 +37,14 @@ impl EXTMEM_REJECT_CHANNEL_NUM_R {
     }
 }
 impl core::ops::Deref for EXTMEM_REJECT_CHANNEL_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `EXTMEM_REJECT_PERI_NUM` reader - This register indicate reject accessing from which peripheral."]
-pub struct EXTMEM_REJECT_PERI_NUM_R(crate::FieldReader<u8, u8>);
+pub struct EXTMEM_REJECT_PERI_NUM_R(crate::FieldReader<u8>);
 impl EXTMEM_REJECT_PERI_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -52,7 +52,7 @@ impl EXTMEM_REJECT_PERI_NUM_R {
     }
 }
 impl core::ops::Deref for EXTMEM_REJECT_PERI_NUM_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -75,16 +75,12 @@ impl R {
         EXTMEM_REJECT_PERI_NUM_R::new(((self.bits >> 6) & 0x3f) as u8)
     }
 }
-#[doc = "Reject status accessing external RAM\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extmem_reject_st]
-(index.html) module"]
+#[doc = "Reject status accessing external RAM\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [extmem_reject_st](index.html) module"]
 pub struct EXTMEM_REJECT_ST_SPEC;
 impl crate::RegisterSpec for EXTMEM_REJECT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [extmem_reject_st::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [extmem_reject_st::R](R) reader structure"]
 impl crate::Readable for EXTMEM_REJECT_ST_SPEC {
     type Reader = R;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0` reader - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1` reader - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2` reader - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3` reader - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4` reader - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5` reader - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_W<'a> {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6` reader - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R(crate::FieldReader<u8, u8>);
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -223,9 +223,8 @@ impl<'a> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR` reader - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]
-bit of actual address"]
-pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R(crate::FieldReader<u8, u8>);
+#[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR` reader - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
+pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R(crate::FieldReader<u8>);
 impl CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -233,14 +232,13 @@ impl CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R {
     }
 }
 impl core::ops::Deref for CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR` writer - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]
-bit of actual address"]
+#[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR` writer - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
 pub struct CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W<'a> {
     w: &'a mut W,
 }
@@ -302,8 +300,7 @@ impl R {
     ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_R::new(((self.bits >> 12) & 3) as u8)
     }
-    #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]
-bit of actual address"]
+    #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_splitaddr(&self) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_R::new(((self.bits >> 14) & 0xff) as u8)
@@ -359,8 +356,7 @@ impl W {
     ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W { w: self }
     }
-    #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]
-bit of actual address"]
+    #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_splitaddr(
         &mut self,
@@ -374,25 +370,16 @@ bit of actual address"]
         self
     }
 }
-#[doc = "sram split line configuration register 1\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_iram0_dram0_dma_split_line_constrain_1]
-(index.html) module"]
+#[doc = "sram split line configuration register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_x_iram0_dram0_dma_split_line_constrain_1](index.html) module"]
 pub struct CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC;
 impl crate::RegisterSpec for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_x_iram0_dram0_dma_split_line_constrain_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_x_iram0_dram0_dma_split_line_constrain_1::R](R) reader structure"]
 impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_1::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC {
     type Writer = W;
 }

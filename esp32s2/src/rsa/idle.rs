@@ -14,7 +14,7 @@ impl From<crate::R<IDLE_SPEC>> for R {
     }
 }
 #[doc = "Field `IDLE` reader - The content of this bit is 1 when the RSA accelerator is idle."]
-pub struct IDLE_R(crate::FieldReader<bool, bool>);
+pub struct IDLE_R(crate::FieldReader<bool>);
 impl IDLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl IDLE_R {
     }
 }
 impl core::ops::Deref for IDLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         IDLE_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "RSA idle register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idle]
-(index.html) module"]
+#[doc = "RSA idle register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idle](index.html) module"]
 pub struct IDLE_SPEC;
 impl crate::RegisterSpec for IDLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [idle::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [idle::R](R) reader structure"]
 impl crate::Readable for IDLE_SPEC {
     type Reader = R;
 }

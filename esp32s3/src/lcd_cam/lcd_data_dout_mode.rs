@@ -35,7 +35,7 @@ impl From<crate::W<LCD_DATA_DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - The output data bit 0 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT0_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT0_MODE_R(crate::FieldReader<u8>);
 impl DOUT0_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl DOUT0_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT0_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> DOUT0_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT1_MODE` reader - The output data bit 2 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT1_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT1_MODE_R(crate::FieldReader<u8>);
 impl DOUT1_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl DOUT1_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT1_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> DOUT1_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT2_MODE` reader - The output data bit 4 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT2_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT2_MODE_R(crate::FieldReader<u8>);
 impl DOUT2_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl DOUT2_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT2_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> DOUT2_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT3_MODE` reader - The output data bit 6 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT3_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT3_MODE_R(crate::FieldReader<u8>);
 impl DOUT3_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -124,7 +124,7 @@ impl DOUT3_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT3_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -143,7 +143,7 @@ impl<'a> DOUT3_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT4_MODE` reader - The output data bit 8 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT4_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT4_MODE_R(crate::FieldReader<u8>);
 impl DOUT4_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -151,7 +151,7 @@ impl DOUT4_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT4_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -170,7 +170,7 @@ impl<'a> DOUT4_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT5_MODE` reader - The output data bit 10 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT5_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT5_MODE_R(crate::FieldReader<u8>);
 impl DOUT5_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -178,7 +178,7 @@ impl DOUT5_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT5_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -197,7 +197,7 @@ impl<'a> DOUT5_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT6_MODE` reader - The output data bit 12 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT6_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT6_MODE_R(crate::FieldReader<u8>);
 impl DOUT6_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -205,7 +205,7 @@ impl DOUT6_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT6_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -224,7 +224,7 @@ impl<'a> DOUT6_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT7_MODE` reader - The output data bit 14 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT7_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT7_MODE_R(crate::FieldReader<u8>);
 impl DOUT7_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -232,7 +232,7 @@ impl DOUT7_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT7_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -251,7 +251,7 @@ impl<'a> DOUT7_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT8_MODE` reader - The output data bit 16 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT8_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT8_MODE_R(crate::FieldReader<u8>);
 impl DOUT8_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -259,7 +259,7 @@ impl DOUT8_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT8_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -278,7 +278,7 @@ impl<'a> DOUT8_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT9_MODE` reader - The output data bit 18 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT9_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT9_MODE_R(crate::FieldReader<u8>);
 impl DOUT9_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -286,7 +286,7 @@ impl DOUT9_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT9_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -305,7 +305,7 @@ impl<'a> DOUT9_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT10_MODE` reader - The output data bit 20 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT10_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT10_MODE_R(crate::FieldReader<u8>);
 impl DOUT10_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -313,7 +313,7 @@ impl DOUT10_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT10_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -332,7 +332,7 @@ impl<'a> DOUT10_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT11_MODE` reader - The output data bit 22 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT11_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT11_MODE_R(crate::FieldReader<u8>);
 impl DOUT11_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -340,7 +340,7 @@ impl DOUT11_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT11_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -359,7 +359,7 @@ impl<'a> DOUT11_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT12_MODE` reader - The output data bit 24 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT12_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT12_MODE_R(crate::FieldReader<u8>);
 impl DOUT12_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -367,7 +367,7 @@ impl DOUT12_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT12_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -386,7 +386,7 @@ impl<'a> DOUT12_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT13_MODE` reader - The output data bit 26 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT13_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT13_MODE_R(crate::FieldReader<u8>);
 impl DOUT13_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -394,7 +394,7 @@ impl DOUT13_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT13_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -413,7 +413,7 @@ impl<'a> DOUT13_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT14_MODE` reader - The output data bit 28 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT14_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT14_MODE_R(crate::FieldReader<u8>);
 impl DOUT14_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -421,7 +421,7 @@ impl DOUT14_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT14_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -440,7 +440,7 @@ impl<'a> DOUT14_MODE_W<'a> {
     }
 }
 #[doc = "Field `DOUT15_MODE` reader - The output data bit 30 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct DOUT15_MODE_R(crate::FieldReader<u8, u8>);
+pub struct DOUT15_MODE_R(crate::FieldReader<u8>);
 impl DOUT15_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -448,7 +448,7 @@ impl DOUT15_MODE_R {
     }
 }
 impl core::ops::Deref for DOUT15_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -636,25 +636,16 @@ impl W {
         self
     }
 }
-#[doc = "LCD configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_data_dout_mode]
-(index.html) module"]
+#[doc = "LCD configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lcd_data_dout_mode](index.html) module"]
 pub struct LCD_DATA_DOUT_MODE_SPEC;
 impl crate::RegisterSpec for LCD_DATA_DOUT_MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [lcd_data_dout_mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [lcd_data_dout_mode::R](R) reader structure"]
 impl crate::Readable for LCD_DATA_DOUT_MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [lcd_data_dout_mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [lcd_data_dout_mode::W](W) writer structure"]
 impl crate::Writable for LCD_DATA_DOUT_MODE_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<HOLD_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC1_HOLD_FORCE` reader - "]
-pub struct ADC1_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl ADC1_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ADC1_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ADC1_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `ADC2_HOLD_FORCE` reader - "]
-pub struct ADC2_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl ADC2_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC2_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for ADC2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC2_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `PDAC1_HOLD_FORCE` reader - "]
-pub struct PDAC1_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC1_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl PDAC1_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PDAC1_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for PDAC1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PDAC1_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `PDAC2_HOLD_FORCE` reader - "]
-pub struct PDAC2_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct PDAC2_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl PDAC2_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PDAC2_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for PDAC2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PDAC2_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SENSE1_HOLD_FORCE` reader - "]
-pub struct SENSE1_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE1_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl SENSE1_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl SENSE1_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for SENSE1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> SENSE1_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SENSE2_HOLD_FORCE` reader - "]
-pub struct SENSE2_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE2_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl SENSE2_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SENSE2_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for SENSE2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SENSE2_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SENSE3_HOLD_FORCE` reader - "]
-pub struct SENSE3_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE3_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl SENSE3_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl SENSE3_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for SENSE3_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> SENSE3_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `SENSE4_HOLD_FORCE` reader - "]
-pub struct SENSE4_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct SENSE4_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl SENSE4_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SENSE4_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for SENSE4_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SENSE4_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD0_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD0_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD0_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD0_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl TOUCH_PAD0_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD0_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> TOUCH_PAD0_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD1_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD1_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD1_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD1_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl TOUCH_PAD1_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -405,7 +405,7 @@ impl<'a> TOUCH_PAD1_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD2_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD2_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD2_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD2_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -413,7 +413,7 @@ impl TOUCH_PAD2_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -442,7 +442,7 @@ impl<'a> TOUCH_PAD2_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD3_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD3_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD3_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD3_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -450,7 +450,7 @@ impl TOUCH_PAD3_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD3_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -479,7 +479,7 @@ impl<'a> TOUCH_PAD3_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD4_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD4_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD4_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD4_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -487,7 +487,7 @@ impl TOUCH_PAD4_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD4_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -516,7 +516,7 @@ impl<'a> TOUCH_PAD4_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD5_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD5_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD5_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD5_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -524,7 +524,7 @@ impl TOUCH_PAD5_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD5_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -553,7 +553,7 @@ impl<'a> TOUCH_PAD5_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD6_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD6_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD6_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD6_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -561,7 +561,7 @@ impl TOUCH_PAD6_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD6_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -590,7 +590,7 @@ impl<'a> TOUCH_PAD6_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `TOUCH_PAD7_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD7_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct TOUCH_PAD7_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl TOUCH_PAD7_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -598,7 +598,7 @@ impl TOUCH_PAD7_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for TOUCH_PAD7_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -627,7 +627,7 @@ impl<'a> TOUCH_PAD7_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `X32P_HOLD_FORCE` reader - "]
-pub struct X32P_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct X32P_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl X32P_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -635,7 +635,7 @@ impl X32P_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for X32P_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -664,7 +664,7 @@ impl<'a> X32P_HOLD_FORCE_W<'a> {
     }
 }
 #[doc = "Field `X32N_HOLD_FORCE` reader - "]
-pub struct X32N_HOLD_FORCE_R(crate::FieldReader<bool, bool>);
+pub struct X32N_HOLD_FORCE_R(crate::FieldReader<bool>);
 impl X32N_HOLD_FORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -672,7 +672,7 @@ impl X32N_HOLD_FORCE_R {
     }
 }
 impl core::ops::Deref for X32N_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -890,25 +890,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hold_force]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hold_force](index.html) module"]
 pub struct HOLD_FORCE_SPEC;
 impl crate::RegisterSpec for HOLD_FORCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hold_force::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [hold_force::R](R) reader structure"]
 impl crate::Readable for HOLD_FORCE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [hold_force::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [hold_force::W](W) writer structure"]
 impl crate::Writable for HOLD_FORCE_SPEC {
     type Writer = W;
 }

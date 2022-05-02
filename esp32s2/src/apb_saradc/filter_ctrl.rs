@@ -35,7 +35,7 @@ impl From<crate::W<FILTER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_FILTER_RESET` reader - Reset ADC2 filter."]
-pub struct ADC2_FILTER_RESET_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_FILTER_RESET_R(crate::FieldReader<bool>);
 impl ADC2_FILTER_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ADC2_FILTER_RESET_R {
     }
 }
 impl core::ops::Deref for ADC2_FILTER_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ADC2_FILTER_RESET_W<'a> {
     }
 }
 #[doc = "Field `ADC1_FILTER_RESET` reader - Reset ADC1 filter."]
-pub struct ADC1_FILTER_RESET_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_FILTER_RESET_R(crate::FieldReader<bool>);
 impl ADC1_FILTER_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ADC1_FILTER_RESET_R {
     }
 }
 impl core::ops::Deref for ADC1_FILTER_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ADC1_FILTER_RESET_W<'a> {
     }
 }
 #[doc = "Field `ADC2_FILTER_FACTOR` reader - Set filter factor for DIG ADC2 CRTL."]
-pub struct ADC2_FILTER_FACTOR_R(crate::FieldReader<u8, u8>);
+pub struct ADC2_FILTER_FACTOR_R(crate::FieldReader<u8>);
 impl ADC2_FILTER_FACTOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl ADC2_FILTER_FACTOR_R {
     }
 }
 impl core::ops::Deref for ADC2_FILTER_FACTOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> ADC2_FILTER_FACTOR_W<'a> {
     }
 }
 #[doc = "Field `ADC1_FILTER_FACTOR` reader - Set filter factor for DIG ADC1 CRTL."]
-pub struct ADC1_FILTER_FACTOR_R(crate::FieldReader<u8, u8>);
+pub struct ADC1_FILTER_FACTOR_R(crate::FieldReader<u8>);
 impl ADC1_FILTER_FACTOR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -144,7 +144,7 @@ impl ADC1_FILTER_FACTOR_R {
     }
 }
 impl core::ops::Deref for ADC1_FILTER_FACTOR_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> ADC1_FILTER_FACTOR_W<'a> {
     }
 }
 #[doc = "Field `ADC2_FILTER_EN` reader - Enable DIG ADC2 CRTL filter."]
-pub struct ADC2_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC2_FILTER_EN_R(crate::FieldReader<bool>);
 impl ADC2_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl ADC2_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for ADC2_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -200,7 +200,7 @@ impl<'a> ADC2_FILTER_EN_W<'a> {
     }
 }
 #[doc = "Field `ADC1_FILTER_EN` reader - Enable DIG ADC1 CRTL filter."]
-pub struct ADC1_FILTER_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADC1_FILTER_EN_R(crate::FieldReader<bool>);
 impl ADC1_FILTER_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -208,7 +208,7 @@ impl ADC1_FILTER_EN_R {
     }
 }
 impl core::ops::Deref for ADC1_FILTER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -306,25 +306,16 @@ impl W {
         self
     }
 }
-#[doc = "Configure the settings of DIG ADC2 filter\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [filter_ctrl]
-(index.html) module"]
+#[doc = "Configure the settings of DIG ADC2 filter\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [filter_ctrl](index.html) module"]
 pub struct FILTER_CTRL_SPEC;
 impl crate::RegisterSpec for FILTER_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [filter_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [filter_ctrl::R](R) reader structure"]
 impl crate::Readable for FILTER_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [filter_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [filter_ctrl::W](W) writer structure"]
 impl crate::Writable for FILTER_CTRL_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<IN_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_NEXT` reader - GPIO0~31 input value"]
-pub struct DATA_NEXT_R(crate::FieldReader<u32, u32>);
+pub struct DATA_NEXT_R(crate::FieldReader<u32>);
 impl DATA_NEXT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl DATA_NEXT_R {
     }
 }
 impl core::ops::Deref for DATA_NEXT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_](index.html) module"]
 pub struct IN_SPEC;
 impl crate::RegisterSpec for IN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [in_::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [in_::R](R) reader structure"]
 impl crate::Readable for IN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [in_::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [in_::W](W) writer structure"]
 impl crate::Writable for IN_SPEC {
     type Writer = W;
 }

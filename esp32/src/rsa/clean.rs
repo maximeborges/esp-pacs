@@ -14,7 +14,7 @@ impl From<crate::R<CLEAN_SPEC>> for R {
     }
 }
 #[doc = "Field `CLEAN` reader - This bit will read 1 once the memory initialization is completed."]
-pub struct CLEAN_R(crate::FieldReader<bool, bool>);
+pub struct CLEAN_R(crate::FieldReader<bool>);
 impl CLEAN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,7 +22,7 @@ impl CLEAN_R {
     }
 }
 impl core::ops::Deref for CLEAN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         CLEAN_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clean]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clean](index.html) module"]
 pub struct CLEAN_SPEC;
 impl crate::RegisterSpec for CLEAN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clean::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clean::R](R) reader structure"]
 impl crate::Readable for CLEAN_SPEC {
     type Reader = R;
 }

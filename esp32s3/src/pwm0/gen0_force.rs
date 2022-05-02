@@ -35,7 +35,7 @@ impl From<crate::W<GEN0_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` reader - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
-pub struct GEN0_CNTUFORCE_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct GEN0_CNTUFORCE_UPMETHOD_R(crate::FieldReader<u8>);
 impl GEN0_CNTUFORCE_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl GEN0_CNTUFORCE_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for GEN0_CNTUFORCE_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> GEN0_CNTUFORCE_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` reader - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN0_A_CNTUFORCE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct GEN0_A_CNTUFORCE_MODE_R(crate::FieldReader<u8>);
 impl GEN0_A_CNTUFORCE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl GEN0_A_CNTUFORCE_MODE_R {
     }
 }
 impl core::ops::Deref for GEN0_A_CNTUFORCE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> GEN0_A_CNTUFORCE_MODE_W<'a> {
     }
 }
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` reader - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN0_B_CNTUFORCE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct GEN0_B_CNTUFORCE_MODE_R(crate::FieldReader<u8>);
 impl GEN0_B_CNTUFORCE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -97,7 +97,7 @@ impl GEN0_B_CNTUFORCE_MODE_R {
     }
 }
 impl core::ops::Deref for GEN0_B_CNTUFORCE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -116,7 +116,7 @@ impl<'a> GEN0_B_CNTUFORCE_MODE_W<'a> {
     }
 }
 #[doc = "Field `GEN0_A_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
-pub struct GEN0_A_NCIFORCE_R(crate::FieldReader<bool, bool>);
+pub struct GEN0_A_NCIFORCE_R(crate::FieldReader<bool>);
 impl GEN0_A_NCIFORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -124,7 +124,7 @@ impl GEN0_A_NCIFORCE_R {
     }
 }
 impl core::ops::Deref for GEN0_A_NCIFORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -153,7 +153,7 @@ impl<'a> GEN0_A_NCIFORCE_W<'a> {
     }
 }
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN0_A_NCIFORCE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct GEN0_A_NCIFORCE_MODE_R(crate::FieldReader<u8>);
 impl GEN0_A_NCIFORCE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -161,7 +161,7 @@ impl GEN0_A_NCIFORCE_MODE_R {
     }
 }
 impl core::ops::Deref for GEN0_A_NCIFORCE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -180,7 +180,7 @@ impl<'a> GEN0_A_NCIFORCE_MODE_W<'a> {
     }
 }
 #[doc = "Field `GEN0_B_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
-pub struct GEN0_B_NCIFORCE_R(crate::FieldReader<bool, bool>);
+pub struct GEN0_B_NCIFORCE_R(crate::FieldReader<bool>);
 impl GEN0_B_NCIFORCE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -188,7 +188,7 @@ impl GEN0_B_NCIFORCE_R {
     }
 }
 impl core::ops::Deref for GEN0_B_NCIFORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -217,7 +217,7 @@ impl<'a> GEN0_B_NCIFORCE_W<'a> {
     }
 }
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN0_B_NCIFORCE_MODE_R(crate::FieldReader<u8, u8>);
+pub struct GEN0_B_NCIFORCE_MODE_R(crate::FieldReader<u8>);
 impl GEN0_B_NCIFORCE_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -225,7 +225,7 @@ impl GEN0_B_NCIFORCE_MODE_R {
     }
 }
 impl core::ops::Deref for GEN0_B_NCIFORCE_MODE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -323,25 +323,16 @@ impl W {
         self
     }
 }
-#[doc = "Permissives to force PWM0A and PWM0B outputs by software\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen0_force]
-(index.html) module"]
+#[doc = "Permissives to force PWM0A and PWM0B outputs by software\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gen0_force](index.html) module"]
 pub struct GEN0_FORCE_SPEC;
 impl crate::RegisterSpec for GEN0_FORCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gen0_force::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [gen0_force::R](R) reader structure"]
 impl crate::Readable for GEN0_FORCE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [gen0_force::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [gen0_force::W](W) writer structure"]
 impl crate::Writable for GEN0_FORCE_SPEC {
     type Writer = W;
 }

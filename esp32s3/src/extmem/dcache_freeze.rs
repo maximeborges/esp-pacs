@@ -35,7 +35,7 @@ impl From<crate::W<DCACHE_FREEZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ENA` reader - The bit is used to enable dcache freeze mode"]
-pub struct ENA_R(crate::FieldReader<bool, bool>);
+pub struct ENA_R(crate::FieldReader<bool>);
 impl ENA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENA_R {
     }
 }
 impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ENA_W<'a> {
     }
 }
 #[doc = "Field `MODE` reader - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub struct MODE_R(crate::FieldReader<bool, bool>);
+pub struct MODE_R(crate::FieldReader<bool>);
 impl MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MODE_R {
     }
 }
 impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MODE_W<'a> {
     }
 }
 #[doc = "Field `DONE` reader - The bit is used to indicate dcache freeze success"]
-pub struct DONE_R(crate::FieldReader<bool, bool>);
+pub struct DONE_R(crate::FieldReader<bool>);
 impl DONE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DONE_R {
     }
 }
 impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_freeze]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dcache_freeze](index.html) module"]
 pub struct DCACHE_FREEZE_SPEC;
 impl crate::RegisterSpec for DCACHE_FREEZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dcache_freeze::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [dcache_freeze::R](R) reader structure"]
 impl crate::Readable for DCACHE_FREEZE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dcache_freeze::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [dcache_freeze::W](W) writer structure"]
 impl crate::Writable for DCACHE_FREEZE_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CPU_PERI_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` reader - reg_clk_en_assist_debug"]
-pub struct CLK_EN_ASSIST_DEBUG_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_ASSIST_DEBUG_R(crate::FieldReader<bool>);
 impl CLK_EN_ASSIST_DEBUG_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_ASSIST_DEBUG_R {
     }
 }
 impl core::ops::Deref for CLK_EN_ASSIST_DEBUG_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK_EN_ASSIST_DEBUG_W<'a> {
     }
 }
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` reader - reg_clk_en_dedicated_gpio"]
-pub struct CLK_EN_DEDICATED_GPIO_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_DEDICATED_GPIO_R(crate::FieldReader<bool>);
 impl CLK_EN_DEDICATED_GPIO_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl CLK_EN_DEDICATED_GPIO_R {
     }
 }
 impl core::ops::Deref for CLK_EN_DEDICATED_GPIO_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "cpu_peripheral clock gating register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_peri_clk_en]
-(index.html) module"]
+#[doc = "cpu_peripheral clock gating register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpu_peri_clk_en](index.html) module"]
 pub struct CPU_PERI_CLK_EN_SPEC;
 impl crate::RegisterSpec for CPU_PERI_CLK_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cpu_peri_clk_en::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cpu_peri_clk_en::R](R) reader structure"]
 impl crate::Readable for CPU_PERI_CLK_EN_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cpu_peri_clk_en::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cpu_peri_clk_en::W](W) writer structure"]
 impl crate::Writable for CPU_PERI_CLK_EN_SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_SPI_MANUAL_ENCRYPT` reader - Set 1 to enable the SPI manual encrypt."]
-pub struct ENABLE_SPI_MANUAL_ENCRYPT_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_SPI_MANUAL_ENCRYPT_R(crate::FieldReader<bool>);
 impl ENABLE_SPI_MANUAL_ENCRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ENABLE_SPI_MANUAL_ENCRYPT_R {
     }
 }
 impl core::ops::Deref for ENABLE_SPI_MANUAL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ENABLE_SPI_MANUAL_ENCRYPT_W<'a> {
     }
 }
 #[doc = "Field `ENABLE_DOWNLOAD_DB_ENCRYPT` reader - Set 1 to enable download DB encrypt."]
-pub struct ENABLE_DOWNLOAD_DB_ENCRYPT_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_DOWNLOAD_DB_ENCRYPT_R(crate::FieldReader<bool>);
 impl ENABLE_DOWNLOAD_DB_ENCRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl ENABLE_DOWNLOAD_DB_ENCRYPT_R {
     }
 }
 impl core::ops::Deref for ENABLE_DOWNLOAD_DB_ENCRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> ENABLE_DOWNLOAD_DB_ENCRYPT_W<'a> {
     }
 }
 #[doc = "Field `ENABLE_DOWNLOAD_G0CB_DECRYPT` reader - Set 1 to enable download G0CB decrypt"]
-pub struct ENABLE_DOWNLOAD_G0CB_DECRYPT_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_DOWNLOAD_G0CB_DECRYPT_R(crate::FieldReader<bool>);
 impl ENABLE_DOWNLOAD_G0CB_DECRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl ENABLE_DOWNLOAD_G0CB_DECRYPT_R {
     }
 }
 impl core::ops::Deref for ENABLE_DOWNLOAD_G0CB_DECRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'a> {
     }
 }
 #[doc = "Field `ENABLE_DOWNLOAD_MANUAL_ENCRYPT` reader - Set 1 to enable download manual encrypt"]
-pub struct ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader<bool, bool>);
+pub struct ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader<bool>);
 impl ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
     }
 }
 impl core::ops::Deref for ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "External memory encrypt and decrypt control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [external_device_encrypt_decrypt_control]
-(index.html) module"]
+#[doc = "External memory encrypt and decrypt control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [external_device_encrypt_decrypt_control](index.html) module"]
 pub struct EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC;
 impl crate::RegisterSpec for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [external_device_encrypt_decrypt_control::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [external_device_encrypt_decrypt_control::R](R) reader structure"]
 impl crate::Readable for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [external_device_encrypt_decrypt_control::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [external_device_encrypt_decrypt_control::W](W) writer structure"]
 impl crate::Writable for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
     type Writer = W;
 }

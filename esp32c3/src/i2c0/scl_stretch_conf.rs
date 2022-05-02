@@ -35,7 +35,7 @@ impl From<crate::W<SCL_STRETCH_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `STRETCH_PROTECT_NUM` reader - reg_stretch_protect_num"]
-pub struct STRETCH_PROTECT_NUM_R(crate::FieldReader<u16, u16>);
+pub struct STRETCH_PROTECT_NUM_R(crate::FieldReader<u16>);
 impl STRETCH_PROTECT_NUM_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl STRETCH_PROTECT_NUM_R {
     }
 }
 impl core::ops::Deref for STRETCH_PROTECT_NUM_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> STRETCH_PROTECT_NUM_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - reg_slave_scl_stretch_en"]
-pub struct SLAVE_SCL_STRETCH_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_SCL_STRETCH_EN_R(crate::FieldReader<bool>);
 impl SLAVE_SCL_STRETCH_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl SLAVE_SCL_STRETCH_EN_R {
     }
 }
 impl core::ops::Deref for SLAVE_SCL_STRETCH_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -121,7 +121,7 @@ impl<'a> SLAVE_SCL_STRETCH_CLR_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` reader - reg_slave_byte_ack_ctl_en"]
-pub struct SLAVE_BYTE_ACK_CTL_EN_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_BYTE_ACK_CTL_EN_R(crate::FieldReader<bool>);
 impl SLAVE_BYTE_ACK_CTL_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -129,7 +129,7 @@ impl SLAVE_BYTE_ACK_CTL_EN_R {
     }
 }
 impl core::ops::Deref for SLAVE_BYTE_ACK_CTL_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,7 +158,7 @@ impl<'a> SLAVE_BYTE_ACK_CTL_EN_W<'a> {
     }
 }
 #[doc = "Field `SLAVE_BYTE_ACK_LVL` reader - reg_slave_byte_ack_lvl"]
-pub struct SLAVE_BYTE_ACK_LVL_R(crate::FieldReader<bool, bool>);
+pub struct SLAVE_BYTE_ACK_LVL_R(crate::FieldReader<bool>);
 impl SLAVE_BYTE_ACK_LVL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -166,7 +166,7 @@ impl SLAVE_BYTE_ACK_LVL_R {
     }
 }
 impl core::ops::Deref for SLAVE_BYTE_ACK_LVL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -249,25 +249,16 @@ impl W {
         self
     }
 }
-#[doc = "I2C_SCL_STRETCH_CONF_REG\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_stretch_conf]
-(index.html) module"]
+#[doc = "I2C_SCL_STRETCH_CONF_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scl_stretch_conf](index.html) module"]
 pub struct SCL_STRETCH_CONF_SPEC;
 impl crate::RegisterSpec for SCL_STRETCH_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [scl_stretch_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [scl_stretch_conf::R](R) reader structure"]
 impl crate::Readable for SCL_STRETCH_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [scl_stretch_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [scl_stretch_conf::W](W) writer structure"]
 impl crate::Writable for SCL_STRETCH_CONF_SPEC {
     type Writer = W;
 }

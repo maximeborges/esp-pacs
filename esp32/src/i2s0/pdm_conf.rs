@@ -35,7 +35,7 @@ impl From<crate::W<PDM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_EN` reader - "]
-pub struct TX_PDM_EN_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_EN_R(crate::FieldReader<bool>);
 impl TX_PDM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TX_PDM_EN_R {
     }
 }
 impl core::ops::Deref for TX_PDM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TX_PDM_EN_W<'a> {
     }
 }
 #[doc = "Field `RX_PDM_EN` reader - "]
-pub struct RX_PDM_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_PDM_EN_R(crate::FieldReader<bool>);
 impl RX_PDM_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl RX_PDM_EN_R {
     }
 }
 impl core::ops::Deref for RX_PDM_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> RX_PDM_EN_W<'a> {
     }
 }
 #[doc = "Field `PCM2PDM_CONV_EN` reader - "]
-pub struct PCM2PDM_CONV_EN_R(crate::FieldReader<bool, bool>);
+pub struct PCM2PDM_CONV_EN_R(crate::FieldReader<bool>);
 impl PCM2PDM_CONV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl PCM2PDM_CONV_EN_R {
     }
 }
 impl core::ops::Deref for PCM2PDM_CONV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> PCM2PDM_CONV_EN_W<'a> {
     }
 }
 #[doc = "Field `PDM2PCM_CONV_EN` reader - "]
-pub struct PDM2PCM_CONV_EN_R(crate::FieldReader<bool, bool>);
+pub struct PDM2PCM_CONV_EN_R(crate::FieldReader<bool>);
 impl PDM2PCM_CONV_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl PDM2PCM_CONV_EN_R {
     }
 }
 impl core::ops::Deref for PDM2PCM_CONV_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> PDM2PCM_CONV_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SINC_OSR2` reader - "]
-pub struct TX_PDM_SINC_OSR2_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SINC_OSR2_R(crate::FieldReader<u8>);
 impl TX_PDM_SINC_OSR2_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -191,7 +191,7 @@ impl TX_PDM_SINC_OSR2_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SINC_OSR2_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -210,7 +210,7 @@ impl<'a> TX_PDM_SINC_OSR2_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_PRESCALE` reader - "]
-pub struct TX_PDM_PRESCALE_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_PRESCALE_R(crate::FieldReader<u8>);
 impl TX_PDM_PRESCALE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -218,7 +218,7 @@ impl TX_PDM_PRESCALE_R {
     }
 }
 impl core::ops::Deref for TX_PDM_PRESCALE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -237,7 +237,7 @@ impl<'a> TX_PDM_PRESCALE_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` reader - "]
-pub struct TX_PDM_HP_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_HP_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_HP_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -245,7 +245,7 @@ impl TX_PDM_HP_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_HP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -264,7 +264,7 @@ impl<'a> TX_PDM_HP_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` reader - "]
-pub struct TX_PDM_LP_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_LP_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_LP_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -272,7 +272,7 @@ impl TX_PDM_LP_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_LP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -291,7 +291,7 @@ impl<'a> TX_PDM_LP_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` reader - "]
-pub struct TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_SINC_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -299,7 +299,7 @@ impl TX_PDM_SINC_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SINC_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -318,7 +318,7 @@ impl<'a> TX_PDM_SINC_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` reader - "]
-pub struct TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader<u8, u8>);
+pub struct TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader<u8>);
 impl TX_PDM_SIGMADELTA_IN_SHIFT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -326,7 +326,7 @@ impl TX_PDM_SIGMADELTA_IN_SHIFT_R {
     }
 }
 impl core::ops::Deref for TX_PDM_SIGMADELTA_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -345,7 +345,7 @@ impl<'a> TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
     }
 }
 #[doc = "Field `RX_PDM_SINC_DSR_16_EN` reader - "]
-pub struct RX_PDM_SINC_DSR_16_EN_R(crate::FieldReader<bool, bool>);
+pub struct RX_PDM_SINC_DSR_16_EN_R(crate::FieldReader<bool>);
 impl RX_PDM_SINC_DSR_16_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -353,7 +353,7 @@ impl RX_PDM_SINC_DSR_16_EN_R {
     }
 }
 impl core::ops::Deref for RX_PDM_SINC_DSR_16_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -382,7 +382,7 @@ impl<'a> RX_PDM_SINC_DSR_16_EN_W<'a> {
     }
 }
 #[doc = "Field `TX_PDM_HP_BYPASS` reader - "]
-pub struct TX_PDM_HP_BYPASS_R(crate::FieldReader<bool, bool>);
+pub struct TX_PDM_HP_BYPASS_R(crate::FieldReader<bool>);
 impl TX_PDM_HP_BYPASS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -390,7 +390,7 @@ impl TX_PDM_HP_BYPASS_R {
     }
 }
 impl core::ops::Deref for TX_PDM_HP_BYPASS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -548,25 +548,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pdm_conf]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pdm_conf](index.html) module"]
 pub struct PDM_CONF_SPEC;
 impl crate::RegisterSpec for PDM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pdm_conf::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pdm_conf::R](R) reader structure"]
 impl crate::Readable for PDM_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pdm_conf::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pdm_conf::W](W) writer structure"]
 impl crate::Writable for PDM_CONF_SPEC {
     type Writer = W;
 }

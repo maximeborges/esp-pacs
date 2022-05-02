@@ -35,7 +35,7 @@ impl From<crate::W<SLAVE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_ADDR` reader - when configured as i2c slave this register is used to configure slave's address."]
-pub struct SLAVE_ADDR_R(crate::FieldReader<u16, u16>);
+pub struct SLAVE_ADDR_R(crate::FieldReader<u16>);
 impl SLAVE_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl SLAVE_ADDR_R {
     }
 }
 impl core::ops::Deref for SLAVE_ADDR_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> SLAVE_ADDR_W<'a> {
     }
 }
 #[doc = "Field `ADDR_10BIT_EN` reader - This register is used to enable slave 10bit address mode."]
-pub struct ADDR_10BIT_EN_R(crate::FieldReader<bool, bool>);
+pub struct ADDR_10BIT_EN_R(crate::FieldReader<bool>);
 impl ADDR_10BIT_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl ADDR_10BIT_EN_R {
     }
 }
 impl core::ops::Deref for ADDR_10BIT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave_addr]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slave_addr](index.html) module"]
 pub struct SLAVE_ADDR_SPEC;
 impl crate::RegisterSpec for SLAVE_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [slave_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [slave_addr::R](R) reader structure"]
 impl crate::Readable for SLAVE_ADDR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [slave_addr::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [slave_addr::W](W) writer structure"]
 impl crate::Writable for SLAVE_ADDR_SPEC {
     type Writer = W;
 }

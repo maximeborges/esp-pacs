@@ -35,7 +35,7 @@ impl From<crate::W<CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP` reader - this register used to map core1_PIF_pms_monitor_violatile_size interrupt to one of core0's external interrupt"]
-pub struct CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_R(crate::FieldReader<u8, u8>);
+pub struct CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_R(crate::FieldReader<u8>);
 impl CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_R {
     }
 }
 impl core::ops::Deref for CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -85,25 +85,16 @@ impl W {
         self
     }
 }
-#[doc = "core1_PIF_pms_monitor_violatile_size interrupt configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_pif_pms_monitor_violate_size_intr_map]
-(index.html) module"]
+#[doc = "core1_PIF_pms_monitor_violatile_size interrupt configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_pif_pms_monitor_violate_size_intr_map](index.html) module"]
 pub struct CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC;
 impl crate::RegisterSpec for CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_pif_pms_monitor_violate_size_intr_map::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [core_1_pif_pms_monitor_violate_size_intr_map::R](R) reader structure"]
 impl crate::Readable for CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_pif_pms_monitor_violate_size_intr_map::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [core_1_pif_pms_monitor_violate_size_intr_map::W](W) writer structure"]
 impl crate::Writable for CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
     type Writer = W;
 }

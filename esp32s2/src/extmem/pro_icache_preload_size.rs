@@ -35,7 +35,7 @@ impl From<crate::W<PRO_ICACHE_PRELOAD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
-pub struct PRO_ICACHE_PRELOAD_SIZE_R(crate::FieldReader<u16, u16>);
+pub struct PRO_ICACHE_PRELOAD_SIZE_R(crate::FieldReader<u16>);
 impl PRO_ICACHE_PRELOAD_SIZE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -43,7 +43,7 @@ impl PRO_ICACHE_PRELOAD_SIZE_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_PRELOAD_SIZE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> PRO_ICACHE_PRELOAD_SIZE_W<'a> {
     }
 }
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` reader - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
-pub struct PRO_ICACHE_PRELOAD_ORDER_R(crate::FieldReader<bool, bool>);
+pub struct PRO_ICACHE_PRELOAD_ORDER_R(crate::FieldReader<bool>);
 impl PRO_ICACHE_PRELOAD_ORDER_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -70,7 +70,7 @@ impl PRO_ICACHE_PRELOAD_ORDER_R {
     }
 }
 impl core::ops::Deref for PRO_ICACHE_PRELOAD_ORDER_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -128,25 +128,16 @@ impl W {
         self
     }
 }
-#[doc = "register description\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_icache_preload_size]
-(index.html) module"]
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_icache_preload_size](index.html) module"]
 pub struct PRO_ICACHE_PRELOAD_SIZE_SPEC;
 impl crate::RegisterSpec for PRO_ICACHE_PRELOAD_SIZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [pro_icache_preload_size::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [pro_icache_preload_size::R](R) reader structure"]
 impl crate::Readable for PRO_ICACHE_PRELOAD_SIZE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [pro_icache_preload_size::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [pro_icache_preload_size::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_PRELOAD_SIZE_SPEC {
     type Writer = W;
 }

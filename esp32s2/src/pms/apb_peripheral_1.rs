@@ -35,7 +35,7 @@ impl From<crate::W<APB_PERIPHERAL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_PERIPHERAL_SPLIT_BURST` reader - Setting to 1 splits the data phase of the last access and the address phase of following access."]
-pub struct APB_PERIPHERAL_SPLIT_BURST_R(crate::FieldReader<bool, bool>);
+pub struct APB_PERIPHERAL_SPLIT_BURST_R(crate::FieldReader<bool>);
 impl APB_PERIPHERAL_SPLIT_BURST_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APB_PERIPHERAL_SPLIT_BURST_R {
     }
 }
 impl core::ops::Deref for APB_PERIPHERAL_SPLIT_BURST_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "Peripheral access permission control register 1.\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_peripheral_1]
-(index.html) module"]
+#[doc = "Peripheral access permission control register 1.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_peripheral_1](index.html) module"]
 pub struct APB_PERIPHERAL_1_SPEC;
 impl crate::RegisterSpec for APB_PERIPHERAL_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_peripheral_1::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [apb_peripheral_1::R](R) reader structure"]
 impl crate::Readable for APB_PERIPHERAL_1_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_peripheral_1::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [apb_peripheral_1::W](W) writer structure"]
 impl crate::Writable for APB_PERIPHERAL_1_SPEC {
     type Writer = W;
 }

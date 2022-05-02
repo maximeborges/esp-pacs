@@ -35,7 +35,7 @@ impl From<crate::W<TMOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RESPONSE_TIMEOUT` reader - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
-pub struct RESPONSE_TIMEOUT_R(crate::FieldReader<u8, u8>);
+pub struct RESPONSE_TIMEOUT_R(crate::FieldReader<u8>);
 impl RESPONSE_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl RESPONSE_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for RESPONSE_TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> RESPONSE_TIMEOUT_W<'a> {
     }
 }
 #[doc = "Field `DATA_TIMEOUT` reader - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
-pub struct DATA_TIMEOUT_R(crate::FieldReader<u32, u32>);
+pub struct DATA_TIMEOUT_R(crate::FieldReader<u32>);
 impl DATA_TIMEOUT_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -70,7 +70,7 @@ impl DATA_TIMEOUT_R {
     }
 }
 impl core::ops::Deref for DATA_TIMEOUT_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -118,25 +118,16 @@ impl W {
         self
     }
 }
-#[doc = "Data and response timeout configuration register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmout]
-(index.html) module"]
+#[doc = "Data and response timeout configuration register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tmout](index.html) module"]
 pub struct TMOUT_SPEC;
 impl crate::RegisterSpec for TMOUT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tmout::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [tmout::R](R) reader structure"]
 impl crate::Readable for TMOUT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tmout::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [tmout::W](W) writer structure"]
 impl crate::Writable for TMOUT_SPEC {
     type Writer = W;
 }

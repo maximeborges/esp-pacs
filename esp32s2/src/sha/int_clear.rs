@@ -54,18 +54,12 @@ impl W {
         self
     }
 }
-#[doc = "DMA-SHA interrupt clear register\n\nThis register you can [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_clear]
-(index.html) module"]
+#[doc = "DMA-SHA interrupt clear register\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_clear](index.html) module"]
 pub struct INT_CLEAR_SPEC;
 impl crate::RegisterSpec for INT_CLEAR_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [int_clear::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [int_clear::W](W) writer structure"]
 impl crate::Writable for INT_CLEAR_SPEC {
     type Writer = W;
 }

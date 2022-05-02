@@ -35,7 +35,7 @@ impl From<crate::W<W6_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF6` reader - 32 bits data buffer 6, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub struct BUF6_R(crate::FieldReader<u32, u32>);
+pub struct BUF6_R(crate::FieldReader<u32>);
 impl BUF6_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl BUF6_R {
     }
 }
 impl core::ops::Deref for BUF6_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Data buffer 6\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [w6]
-(index.html) module"]
+#[doc = "Data buffer 6\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [w6](index.html) module"]
 pub struct W6_SPEC;
 impl crate::RegisterSpec for W6_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [w6::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [w6::R](R) reader structure"]
 impl crate::Readable for W6_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [w6::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [w6::W](W) writer structure"]
 impl crate::Writable for W6_SPEC {
     type Writer = W;
 }

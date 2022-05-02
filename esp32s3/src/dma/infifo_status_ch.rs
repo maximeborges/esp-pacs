@@ -14,7 +14,7 @@ impl From<crate::R<INFIFO_STATUS_CH_SPEC>> for R {
     }
 }
 #[doc = "Field `INFIFO_FULL_L1_CH` reader - L1 Rx FIFO full signal for Rx channel 0."]
-pub struct INFIFO_FULL_L1_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_FULL_L1_CH_R(crate::FieldReader<bool>);
 impl INFIFO_FULL_L1_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -22,14 +22,14 @@ impl INFIFO_FULL_L1_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_FULL_L1_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_EMPTY_L1_CH` reader - L1 Rx FIFO empty signal for Rx channel 0."]
-pub struct INFIFO_EMPTY_L1_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_EMPTY_L1_CH_R(crate::FieldReader<bool>);
 impl INFIFO_EMPTY_L1_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -37,14 +37,14 @@ impl INFIFO_EMPTY_L1_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_EMPTY_L1_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_FULL_L2_CH` reader - L2 Rx FIFO full signal for Rx channel 0."]
-pub struct INFIFO_FULL_L2_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_FULL_L2_CH_R(crate::FieldReader<bool>);
 impl INFIFO_FULL_L2_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -52,14 +52,14 @@ impl INFIFO_FULL_L2_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_FULL_L2_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_EMPTY_L2_CH` reader - L2 Rx FIFO empty signal for Rx channel 0."]
-pub struct INFIFO_EMPTY_L2_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_EMPTY_L2_CH_R(crate::FieldReader<bool>);
 impl INFIFO_EMPTY_L2_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -67,14 +67,14 @@ impl INFIFO_EMPTY_L2_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_EMPTY_L2_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_FULL_L3_CH` reader - L3 Rx FIFO full signal for Rx channel 0."]
-pub struct INFIFO_FULL_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_FULL_L3_CH_R(crate::FieldReader<bool>);
 impl INFIFO_FULL_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -82,14 +82,14 @@ impl INFIFO_FULL_L3_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_FULL_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_EMPTY_L3_CH` reader - L3 Rx FIFO empty signal for Rx channel 0."]
-pub struct INFIFO_EMPTY_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct INFIFO_EMPTY_L3_CH_R(crate::FieldReader<bool>);
 impl INFIFO_EMPTY_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl INFIFO_EMPTY_L3_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_EMPTY_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_CNT_L1_CH` reader - The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0."]
-pub struct INFIFO_CNT_L1_CH_R(crate::FieldReader<u8, u8>);
+pub struct INFIFO_CNT_L1_CH_R(crate::FieldReader<u8>);
 impl INFIFO_CNT_L1_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -112,14 +112,14 @@ impl INFIFO_CNT_L1_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_CNT_L1_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_CNT_L2_CH` reader - The register stores the byte number of the data in L2 Rx FIFO for Rx channel 0."]
-pub struct INFIFO_CNT_L2_CH_R(crate::FieldReader<u8, u8>);
+pub struct INFIFO_CNT_L2_CH_R(crate::FieldReader<u8>);
 impl INFIFO_CNT_L2_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -127,14 +127,14 @@ impl INFIFO_CNT_L2_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_CNT_L2_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `INFIFO_CNT_L3_CH` reader - The register stores the byte number of the data in L3 Rx FIFO for Rx channel 0."]
-pub struct INFIFO_CNT_L3_CH_R(crate::FieldReader<u8, u8>);
+pub struct INFIFO_CNT_L3_CH_R(crate::FieldReader<u8>);
 impl INFIFO_CNT_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -142,14 +142,14 @@ impl INFIFO_CNT_L3_CH_R {
     }
 }
 impl core::ops::Deref for INFIFO_CNT_L3_CH_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_REMAIN_UNDER_1B_L3_CH` reader - reserved"]
-pub struct IN_REMAIN_UNDER_1B_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct IN_REMAIN_UNDER_1B_L3_CH_R(crate::FieldReader<bool>);
 impl IN_REMAIN_UNDER_1B_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -157,14 +157,14 @@ impl IN_REMAIN_UNDER_1B_L3_CH_R {
     }
 }
 impl core::ops::Deref for IN_REMAIN_UNDER_1B_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_REMAIN_UNDER_2B_L3_CH` reader - reserved"]
-pub struct IN_REMAIN_UNDER_2B_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct IN_REMAIN_UNDER_2B_L3_CH_R(crate::FieldReader<bool>);
 impl IN_REMAIN_UNDER_2B_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -172,14 +172,14 @@ impl IN_REMAIN_UNDER_2B_L3_CH_R {
     }
 }
 impl core::ops::Deref for IN_REMAIN_UNDER_2B_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_REMAIN_UNDER_3B_L3_CH` reader - reserved"]
-pub struct IN_REMAIN_UNDER_3B_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct IN_REMAIN_UNDER_3B_L3_CH_R(crate::FieldReader<bool>);
 impl IN_REMAIN_UNDER_3B_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -187,14 +187,14 @@ impl IN_REMAIN_UNDER_3B_L3_CH_R {
     }
 }
 impl core::ops::Deref for IN_REMAIN_UNDER_3B_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_REMAIN_UNDER_4B_L3_CH` reader - reserved"]
-pub struct IN_REMAIN_UNDER_4B_L3_CH_R(crate::FieldReader<bool, bool>);
+pub struct IN_REMAIN_UNDER_4B_L3_CH_R(crate::FieldReader<bool>);
 impl IN_REMAIN_UNDER_4B_L3_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -202,14 +202,14 @@ impl IN_REMAIN_UNDER_4B_L3_CH_R {
     }
 }
 impl core::ops::Deref for IN_REMAIN_UNDER_4B_L3_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `IN_BUF_HUNGRY_CH` reader - reserved"]
-pub struct IN_BUF_HUNGRY_CH_R(crate::FieldReader<bool, bool>);
+pub struct IN_BUF_HUNGRY_CH_R(crate::FieldReader<bool>);
 impl IN_BUF_HUNGRY_CH_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -217,7 +217,7 @@ impl IN_BUF_HUNGRY_CH_R {
     }
 }
 impl core::ops::Deref for IN_BUF_HUNGRY_CH_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -295,16 +295,12 @@ impl R {
         IN_BUF_HUNGRY_CH_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
-#[doc = "Receive FIFO status of Rx channel 0\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [infifo_status_ch]
-(index.html) module"]
+#[doc = "Receive FIFO status of Rx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [infifo_status_ch](index.html) module"]
 pub struct INFIFO_STATUS_CH_SPEC;
 impl crate::RegisterSpec for INFIFO_STATUS_CH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [infifo_status_ch::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [infifo_status_ch::R](R) reader structure"]
 impl crate::Readable for INFIFO_STATUS_CH_SPEC {
     type Reader = R;
 }

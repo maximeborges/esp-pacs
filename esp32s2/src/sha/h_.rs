@@ -35,7 +35,7 @@ impl From<crate::W<H__SPEC>> for W {
     }
 }
 #[doc = "Field `H_0` reader - Stores the %sth 32-bit piece of the Hash value."]
-pub struct H_0_R(crate::FieldReader<u32, u32>);
+pub struct H_0_R(crate::FieldReader<u32>);
 impl H_0_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -43,7 +43,7 @@ impl H_0_R {
     }
 }
 impl core::ops::Deref for H_0_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -81,25 +81,16 @@ impl W {
         self
     }
 }
-#[doc = "Hash value\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [h_]
-(index.html) module"]
+#[doc = "Hash value\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [h_](index.html) module"]
 pub struct H__SPEC;
 impl crate::RegisterSpec for H__SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [h_::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [h_::R](R) reader structure"]
 impl crate::Readable for H__SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [h_::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [h_::W](W) writer structure"]
 impl crate::Writable for H__SPEC {
     type Writer = W;
 }

@@ -35,7 +35,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROLLER_RESET` reader - To reset controller, firmware should set this bit. This bit is auto-cleared after two AHB and two sdhost_cclk_in clock cycles."]
-pub struct CONTROLLER_RESET_R(crate::FieldReader<bool, bool>);
+pub struct CONTROLLER_RESET_R(crate::FieldReader<bool>);
 impl CONTROLLER_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CONTROLLER_RESET_R {
     }
 }
 impl core::ops::Deref for CONTROLLER_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CONTROLLER_RESET_W<'a> {
     }
 }
 #[doc = "Field `FIFO_RESET` reader - To reset FIFO, firmware should set bit to 1. This bit is auto-cleared after completion of reset operation. Note: FIFO pointers will be out of reset after 2 cycles of system clocks in addition to synchronization delay (2 cycles of card clock), after the fifo_reset is cleared."]
-pub struct FIFO_RESET_R(crate::FieldReader<bool, bool>);
+pub struct FIFO_RESET_R(crate::FieldReader<bool>);
 impl FIFO_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl FIFO_RESET_R {
     }
 }
 impl core::ops::Deref for FIFO_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> FIFO_RESET_W<'a> {
     }
 }
 #[doc = "Field `DMA_RESET` reader - To reset DMA interface, firmware should set bit to 1. This bit is auto-cleared after two AHB clocks."]
-pub struct DMA_RESET_R(crate::FieldReader<bool, bool>);
+pub struct DMA_RESET_R(crate::FieldReader<bool>);
 impl DMA_RESET_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl DMA_RESET_R {
     }
 }
 impl core::ops::Deref for DMA_RESET_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> DMA_RESET_W<'a> {
     }
 }
 #[doc = "Field `INT_ENABLE` reader - Global interrupt enable/disable bit. 0: Disable; 1: Enable."]
-pub struct INT_ENABLE_R(crate::FieldReader<bool, bool>);
+pub struct INT_ENABLE_R(crate::FieldReader<bool>);
 impl INT_ENABLE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl INT_ENABLE_R {
     }
 }
 impl core::ops::Deref for INT_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -183,7 +183,7 @@ impl<'a> INT_ENABLE_W<'a> {
     }
 }
 #[doc = "Field `READ_WAIT` reader - For sending read-wait to SDIO cards."]
-pub struct READ_WAIT_R(crate::FieldReader<bool, bool>);
+pub struct READ_WAIT_R(crate::FieldReader<bool>);
 impl READ_WAIT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -191,7 +191,7 @@ impl READ_WAIT_R {
     }
 }
 impl core::ops::Deref for READ_WAIT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -220,7 +220,7 @@ impl<'a> READ_WAIT_W<'a> {
     }
 }
 #[doc = "Field `SEND_IRQ_RESPONSE` reader - Bit automatically clears once response is sent. To wait for MMC card interrupts, host issues CMD40 and waits for interrupt response from MMC card(s). In the meantime, if host wants SD/MMC to exit waiting for interrupt state, it can set this bit, at which time SD/MMC command state-machine sends CMD40 response on bus and returns to idle state."]
-pub struct SEND_IRQ_RESPONSE_R(crate::FieldReader<bool, bool>);
+pub struct SEND_IRQ_RESPONSE_R(crate::FieldReader<bool>);
 impl SEND_IRQ_RESPONSE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -228,7 +228,7 @@ impl SEND_IRQ_RESPONSE_R {
     }
 }
 impl core::ops::Deref for SEND_IRQ_RESPONSE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -257,7 +257,7 @@ impl<'a> SEND_IRQ_RESPONSE_W<'a> {
     }
 }
 #[doc = "Field `ABORT_READ_DATA` reader - After a suspend-command is issued during a read-operation, software polls the card to find when the suspend-event occurred. Once the suspend-event has occurred, software sets the bit which will reset the data state machine that is waiting for the next block of data. This bit is automatically cleared once the data state machine is reset to idle."]
-pub struct ABORT_READ_DATA_R(crate::FieldReader<bool, bool>);
+pub struct ABORT_READ_DATA_R(crate::FieldReader<bool>);
 impl ABORT_READ_DATA_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -265,7 +265,7 @@ impl ABORT_READ_DATA_R {
     }
 }
 impl core::ops::Deref for ABORT_READ_DATA_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -294,7 +294,7 @@ impl<'a> ABORT_READ_DATA_W<'a> {
     }
 }
 #[doc = "Field `SEND_CCSD` reader - When set, SD/MMC sends CCSD to the CE-ATA device. Software sets this bit only if the current command is expecting CCS (that is, RW_BLK), and if interrupts are enabled for the CE-ATA device. Once the CCSD pattern is sent to the device, SD/MMC automatically clears the SDHOST_SEND_CCSD bit. It also sets the Command Done (CD) bit in the SDHOST_RINTSTS_REG register, and generates an interrupt for the host, in case the Command Done interrupt is not masked. NOTE: Once the SDHOST_SEND_CCSD bit is set, it takes two card clock cycles to drive the CCSD on the CMD line. Due to this, within the boundary conditions the CCSD may be sent to the CE-ATA device, even if the device has signalled CCS."]
-pub struct SEND_CCSD_R(crate::FieldReader<bool, bool>);
+pub struct SEND_CCSD_R(crate::FieldReader<bool>);
 impl SEND_CCSD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -302,7 +302,7 @@ impl SEND_CCSD_R {
     }
 }
 impl core::ops::Deref for SEND_CCSD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -331,7 +331,7 @@ impl<'a> SEND_CCSD_W<'a> {
     }
 }
 #[doc = "Field `SEND_AUTO_STOP_CCSD` reader - Always Set SDHOST_SEND_AUTO_STOP_CCSD and SDHOST_SEND_CCSD bits together; SDHOST_SEND_AUTO_STOP_CCSD should not be set independently of send_ccsd. When set, SD/MMC automatically sends an internally-generated STOP command (CMD12) to the CE-ATA device. After sending this internally-generated STOP command, the Auto Command Done (ACD) bit in SDHOST_RINTSTS_REG is set and an interrupt is generated for the host, in case the ACD interrupt is not masked. After sending the Command Completion Signal Disable (CCSD), SD/MMC automatically clears the SDHOST_SEND_AUTO_STOP_CCSD bit."]
-pub struct SEND_AUTO_STOP_CCSD_R(crate::FieldReader<bool, bool>);
+pub struct SEND_AUTO_STOP_CCSD_R(crate::FieldReader<bool>);
 impl SEND_AUTO_STOP_CCSD_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -339,7 +339,7 @@ impl SEND_AUTO_STOP_CCSD_R {
     }
 }
 impl core::ops::Deref for SEND_AUTO_STOP_CCSD_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -368,7 +368,7 @@ impl<'a> SEND_AUTO_STOP_CCSD_W<'a> {
     }
 }
 #[doc = "Field `CEATA_DEVICE_INTERRUPT_STATUS` reader - Software should appropriately write to this bit after the power-on reset or any other reset to the CE-ATA device. After reset, the CE-ATA device's interrupt is usually disabled (nIEN = 1). If the host enables the CE-ATA device's interrupt, then software should set this bit."]
-pub struct CEATA_DEVICE_INTERRUPT_STATUS_R(crate::FieldReader<bool, bool>);
+pub struct CEATA_DEVICE_INTERRUPT_STATUS_R(crate::FieldReader<bool>);
 impl CEATA_DEVICE_INTERRUPT_STATUS_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -376,7 +376,7 @@ impl CEATA_DEVICE_INTERRUPT_STATUS_R {
     }
 }
 impl core::ops::Deref for CEATA_DEVICE_INTERRUPT_STATUS_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -514,25 +514,16 @@ impl W {
         self
     }
 }
-#[doc = "Control register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl]
-(index.html) module"]
+#[doc = "Control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](index.html) module"]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
 impl crate::Readable for CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
 }

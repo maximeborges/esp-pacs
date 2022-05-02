@@ -35,7 +35,7 @@ impl From<crate::W<CLK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
-pub struct CLK_EN_R(crate::FieldReader<bool, bool>);
+pub struct CLK_EN_R(crate::FieldReader<bool>);
 impl CLK_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl CLK_EN_R {
     }
 }
 impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> CLK_EN_W<'a> {
     }
 }
 #[doc = "Field `MST_CLK_ACTIVE` reader - Set this bit to power on the SPI module clock."]
-pub struct MST_CLK_ACTIVE_R(crate::FieldReader<bool, bool>);
+pub struct MST_CLK_ACTIVE_R(crate::FieldReader<bool>);
 impl MST_CLK_ACTIVE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl MST_CLK_ACTIVE_R {
     }
 }
 impl core::ops::Deref for MST_CLK_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> MST_CLK_ACTIVE_W<'a> {
     }
 }
 #[doc = "Field `MST_CLK_SEL` reader - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub struct MST_CLK_SEL_R(crate::FieldReader<bool, bool>);
+pub struct MST_CLK_SEL_R(crate::FieldReader<bool>);
 impl MST_CLK_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl MST_CLK_SEL_R {
     }
 }
 impl core::ops::Deref for MST_CLK_SEL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -185,25 +185,16 @@ impl W {
         self
     }
 }
-#[doc = "SPI module clock and register clock control\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_gate]
-(index.html) module"]
+#[doc = "SPI module clock and register clock control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_gate](index.html) module"]
 pub struct CLK_GATE_SPEC;
 impl crate::RegisterSpec for CLK_GATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_gate::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [clk_gate::R](R) reader structure"]
 impl crate::Readable for CLK_GATE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [clk_gate::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [clk_gate::W](W) writer structure"]
 impl crate::Writable for CLK_GATE_SPEC {
     type Writer = W;
 }

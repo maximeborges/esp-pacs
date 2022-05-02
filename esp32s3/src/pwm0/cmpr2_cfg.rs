@@ -35,7 +35,7 @@ impl From<crate::W<CMPR2_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CMPR2_A_UPMETHOD` reader - Update method for PWM generator 2 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR2_A_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct CMPR2_A_UPMETHOD_R(crate::FieldReader<u8>);
 impl CMPR2_A_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -43,7 +43,7 @@ impl CMPR2_A_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for CMPR2_A_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -62,7 +62,7 @@ impl<'a> CMPR2_A_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `CMPR2_B_UPMETHOD` reader - Update method for PWM generator 2 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR2_B_UPMETHOD_R(crate::FieldReader<u8, u8>);
+pub struct CMPR2_B_UPMETHOD_R(crate::FieldReader<u8>);
 impl CMPR2_B_UPMETHOD_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -70,7 +70,7 @@ impl CMPR2_B_UPMETHOD_R {
     }
 }
 impl core::ops::Deref for CMPR2_B_UPMETHOD_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -89,7 +89,7 @@ impl<'a> CMPR2_B_UPMETHOD_W<'a> {
     }
 }
 #[doc = "Field `CMPR2_A_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 2 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
-pub struct CMPR2_A_SHDW_FULL_R(crate::FieldReader<bool, bool>);
+pub struct CMPR2_A_SHDW_FULL_R(crate::FieldReader<bool>);
 impl CMPR2_A_SHDW_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -97,14 +97,14 @@ impl CMPR2_A_SHDW_FULL_R {
     }
 }
 impl core::ops::Deref for CMPR2_A_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
 #[doc = "Field `CMPR2_B_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 2 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
-pub struct CMPR2_B_SHDW_FULL_R(crate::FieldReader<bool, bool>);
+pub struct CMPR2_B_SHDW_FULL_R(crate::FieldReader<bool>);
 impl CMPR2_B_SHDW_FULL_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -112,7 +112,7 @@ impl CMPR2_B_SHDW_FULL_R {
     }
 }
 impl core::ops::Deref for CMPR2_B_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -158,25 +158,16 @@ impl W {
         self
     }
 }
-#[doc = "Transfer status and update method for time stamp registers A and B\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmpr2_cfg]
-(index.html) module"]
+#[doc = "Transfer status and update method for time stamp registers A and B\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cmpr2_cfg](index.html) module"]
 pub struct CMPR2_CFG_SPEC;
 impl crate::RegisterSpec for CMPR2_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cmpr2_cfg::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cmpr2_cfg::R](R) reader structure"]
 impl crate::Readable for CMPR2_CFG_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cmpr2_cfg::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cmpr2_cfg::W](W) writer structure"]
 impl crate::Writable for CMPR2_CFG_SPEC {
     type Writer = W;
 }

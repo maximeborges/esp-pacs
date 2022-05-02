@@ -35,7 +35,7 @@ impl From<crate::W<APP_INTRUSION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_INTRUSION_RECORD_RESET_N` reader - "]
-pub struct APP_INTRUSION_RECORD_RESET_N_R(crate::FieldReader<bool, bool>);
+pub struct APP_INTRUSION_RECORD_RESET_N_R(crate::FieldReader<bool>);
 impl APP_INTRUSION_RECORD_RESET_N_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl APP_INTRUSION_RECORD_RESET_N_R {
     }
 }
 impl core::ops::Deref for APP_INTRUSION_RECORD_RESET_N_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -91,25 +91,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_intrusion_ctrl]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_intrusion_ctrl](index.html) module"]
 pub struct APP_INTRUSION_CTRL_SPEC;
 impl crate::RegisterSpec for APP_INTRUSION_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [app_intrusion_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [app_intrusion_ctrl::R](R) reader structure"]
 impl crate::Readable for APP_INTRUSION_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [app_intrusion_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [app_intrusion_ctrl::W](W) writer structure"]
 impl crate::Writable for APP_INTRUSION_CTRL_SPEC {
     type Writer = W;
 }

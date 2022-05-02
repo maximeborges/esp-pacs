@@ -35,7 +35,7 @@ impl From<crate::W<CACHE_TAG_OBJECT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_TAG_OBJECT` reader - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub struct ICACHE_TAG_OBJECT_R(crate::FieldReader<bool, bool>);
+pub struct ICACHE_TAG_OBJECT_R(crate::FieldReader<bool>);
 impl ICACHE_TAG_OBJECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl ICACHE_TAG_OBJECT_R {
     }
 }
 impl core::ops::Deref for ICACHE_TAG_OBJECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> ICACHE_TAG_OBJECT_W<'a> {
     }
 }
 #[doc = "Field `DCACHE_TAG_OBJECT` reader - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub struct DCACHE_TAG_OBJECT_R(crate::FieldReader<bool, bool>);
+pub struct DCACHE_TAG_OBJECT_R(crate::FieldReader<bool>);
 impl DCACHE_TAG_OBJECT_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl DCACHE_TAG_OBJECT_R {
     }
 }
 impl core::ops::Deref for DCACHE_TAG_OBJECT_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -138,25 +138,16 @@ impl W {
         self
     }
 }
-#[doc = "******* Description ***********\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_object_ctrl]
-(index.html) module"]
+#[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_tag_object_ctrl](index.html) module"]
 pub struct CACHE_TAG_OBJECT_CTRL_SPEC;
 impl crate::RegisterSpec for CACHE_TAG_OBJECT_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cache_tag_object_ctrl::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [cache_tag_object_ctrl::R](R) reader structure"]
 impl crate::Readable for CACHE_TAG_OBJECT_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [cache_tag_object_ctrl::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [cache_tag_object_ctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_OBJECT_CTRL_SPEC {
     type Writer = W;
 }

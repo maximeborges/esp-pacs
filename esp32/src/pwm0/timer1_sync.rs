@@ -35,7 +35,7 @@ impl From<crate::W<TIMER1_SYNC_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER1_SYNCI_EN` reader - "]
-pub struct TIMER1_SYNCI_EN_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_SYNCI_EN_R(crate::FieldReader<bool>);
 impl TIMER1_SYNCI_EN_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl TIMER1_SYNCI_EN_R {
     }
 }
 impl core::ops::Deref for TIMER1_SYNCI_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> TIMER1_SYNCI_EN_W<'a> {
     }
 }
 #[doc = "Field `SW` reader - "]
-pub struct SW_R(crate::FieldReader<bool, bool>);
+pub struct SW_R(crate::FieldReader<bool>);
 impl SW_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl SW_R {
     }
 }
 impl core::ops::Deref for SW_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> SW_W<'a> {
     }
 }
 #[doc = "Field `TIMER1_SYNCO_SEL` reader - "]
-pub struct TIMER1_SYNCO_SEL_R(crate::FieldReader<u8, u8>);
+pub struct TIMER1_SYNCO_SEL_R(crate::FieldReader<u8>);
 impl TIMER1_SYNCO_SEL_R {
     #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
@@ -117,7 +117,7 @@ impl TIMER1_SYNCO_SEL_R {
     }
 }
 impl core::ops::Deref for TIMER1_SYNCO_SEL_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -136,7 +136,7 @@ impl<'a> TIMER1_SYNCO_SEL_W<'a> {
     }
 }
 #[doc = "Field `TIMER1_PHASE` reader - "]
-pub struct TIMER1_PHASE_R(crate::FieldReader<u16, u16>);
+pub struct TIMER1_PHASE_R(crate::FieldReader<u16>);
 impl TIMER1_PHASE_R {
     #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
@@ -144,7 +144,7 @@ impl TIMER1_PHASE_R {
     }
 }
 impl core::ops::Deref for TIMER1_PHASE_R {
-    type Target = crate::FieldReader<u16, u16>;
+    type Target = crate::FieldReader<u16>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -163,7 +163,7 @@ impl<'a> TIMER1_PHASE_W<'a> {
     }
 }
 #[doc = "Field `TIMER1_PHASE_DIRECTION` reader - "]
-pub struct TIMER1_PHASE_DIRECTION_R(crate::FieldReader<bool, bool>);
+pub struct TIMER1_PHASE_DIRECTION_R(crate::FieldReader<bool>);
 impl TIMER1_PHASE_DIRECTION_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -171,7 +171,7 @@ impl TIMER1_PHASE_DIRECTION_R {
     }
 }
 impl core::ops::Deref for TIMER1_PHASE_DIRECTION_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -259,25 +259,16 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer1_sync]
-(index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer1_sync](index.html) module"]
 pub struct TIMER1_SYNC_SPEC;
 impl crate::RegisterSpec for TIMER1_SYNC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [timer1_sync::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [timer1_sync::R](R) reader structure"]
 impl crate::Readable for TIMER1_SYNC_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [timer1_sync::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [timer1_sync::W](W) writer structure"]
 impl crate::Writable for TIMER1_SYNC_SPEC {
     type Writer = W;
 }

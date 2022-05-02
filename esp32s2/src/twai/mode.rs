@@ -35,7 +35,7 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_MODE` reader - This bit is used to configure the operating mode of the TWAI Controller. 1: Reset mode; 0: Operating mode."]
-pub struct RESET_MODE_R(crate::FieldReader<bool, bool>);
+pub struct RESET_MODE_R(crate::FieldReader<bool>);
 impl RESET_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -43,7 +43,7 @@ impl RESET_MODE_R {
     }
 }
 impl core::ops::Deref for RESET_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -72,7 +72,7 @@ impl<'a> RESET_MODE_W<'a> {
     }
 }
 #[doc = "Field `LISTEN_ONLY_MODE` reader - 1: Listen only mode. In this mode the nodes will only receive messages from the bus, without generating the acknowledge signal nor updating the RX error counter."]
-pub struct LISTEN_ONLY_MODE_R(crate::FieldReader<bool, bool>);
+pub struct LISTEN_ONLY_MODE_R(crate::FieldReader<bool>);
 impl LISTEN_ONLY_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -80,7 +80,7 @@ impl LISTEN_ONLY_MODE_R {
     }
 }
 impl core::ops::Deref for LISTEN_ONLY_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -109,7 +109,7 @@ impl<'a> LISTEN_ONLY_MODE_W<'a> {
     }
 }
 #[doc = "Field `SELF_TEST_MODE` reader - 1: Self test mode. In this mode the TX nodes can perform a successful transmission without receiving the acknowledge signal. This mode is often used to test a single node with the self reception request command."]
-pub struct SELF_TEST_MODE_R(crate::FieldReader<bool, bool>);
+pub struct SELF_TEST_MODE_R(crate::FieldReader<bool>);
 impl SELF_TEST_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -117,7 +117,7 @@ impl SELF_TEST_MODE_R {
     }
 }
 impl core::ops::Deref for SELF_TEST_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -146,7 +146,7 @@ impl<'a> SELF_TEST_MODE_W<'a> {
     }
 }
 #[doc = "Field `RX_FILTER_MODE` reader - This bit is used to configure the filter mode. 0: Dual filter mode; 1: Single filter mode."]
-pub struct RX_FILTER_MODE_R(crate::FieldReader<bool, bool>);
+pub struct RX_FILTER_MODE_R(crate::FieldReader<bool>);
 impl RX_FILTER_MODE_R {
     #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
@@ -154,7 +154,7 @@ impl RX_FILTER_MODE_R {
     }
 }
 impl core::ops::Deref for RX_FILTER_MODE_R {
-    type Target = crate::FieldReader<bool, bool>;
+    type Target = crate::FieldReader<bool>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -232,25 +232,16 @@ impl W {
         self
     }
 }
-#[doc = "Mode Register\n\nThis register you can [`read`]
-(crate::generic::Reg::read), [`write_with_zero`]
-(crate::generic::Reg::write_with_zero), [`reset`]
-(crate::generic::Reg::reset), [`write`]
-(crate::generic::Reg::write), [`modify`]
-(crate::generic::Reg::modify). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mode]
-(index.html) module"]
+#[doc = "Mode Register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mode](index.html) module"]
 pub struct MODE_SPEC;
 impl crate::RegisterSpec for MODE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mode::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [mode::R](R) reader structure"]
 impl crate::Readable for MODE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [mode::W]
-(W) writer structure"]
+#[doc = "`write(|w| ..)` method takes [mode::W](W) writer structure"]
 impl crate::Writable for MODE_SPEC {
     type Writer = W;
 }

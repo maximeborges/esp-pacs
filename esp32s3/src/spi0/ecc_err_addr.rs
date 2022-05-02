@@ -14,7 +14,7 @@ impl From<crate::R<ECC_ERR_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `ECC_ERR_ADDR` reader - These bits show the first MSPI ECC error address when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM, including ECC byte error and data error. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
-pub struct ECC_ERR_ADDR_R(crate::FieldReader<u32, u32>);
+pub struct ECC_ERR_ADDR_R(crate::FieldReader<u32>);
 impl ECC_ERR_ADDR_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
@@ -22,7 +22,7 @@ impl ECC_ERR_ADDR_R {
     }
 }
 impl core::ops::Deref for ECC_ERR_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
+    type Target = crate::FieldReader<u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -35,16 +35,12 @@ impl R {
         ECC_ERR_ADDR_R::new(self.bits)
     }
 }
-#[doc = "MSPI ECC error address register\n\nThis register you can [`read`]
-(crate::generic::Reg::read). See [API]
-(https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_err_addr]
-(index.html) module"]
+#[doc = "MSPI ECC error address register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ecc_err_addr](index.html) module"]
 pub struct ECC_ERR_ADDR_SPEC;
 impl crate::RegisterSpec for ECC_ERR_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ecc_err_addr::R]
-(R) reader structure"]
+#[doc = "`read()` method returns [ecc_err_addr::R](R) reader structure"]
 impl crate::Readable for ECC_ERR_ADDR_SPEC {
     type Reader = R;
 }
