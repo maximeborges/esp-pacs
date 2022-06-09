@@ -14,20 +14,7 @@ impl From<crate::R<REAL_TARGET0_LO_SPEC>> for R {
     }
 }
 #[doc = "Field `TARGET0_LO_RO` reader - actual target value value low 32bits"]
-pub struct TARGET0_LO_RO_R(crate::FieldReader<u32>);
-impl TARGET0_LO_RO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TARGET0_LO_RO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET0_LO_RO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET0_LO_RO_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - actual target value value low 32bits"]
     #[inline(always)]
