@@ -54,6 +54,10 @@ extern "C" {
     fn RSA();
     fn AES();
     fn SHA();
+    fn SW_INTR_0();
+    fn SW_INTR_1();
+    fn SW_INTR_2();
+    fn SW_INTR_3();
     fn ASSIST_DEBUG();
 }
 #[doc(hidden)]
@@ -131,10 +135,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector { _handler: RSA },
     Vector { _handler: AES },
     Vector { _handler: SHA },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SW_INTR_0,
+    },
+    Vector {
+        _handler: SW_INTR_1,
+    },
+    Vector {
+        _handler: SW_INTR_2,
+    },
+    Vector {
+        _handler: SW_INTR_3,
+    },
     Vector {
         _handler: ASSIST_DEBUG,
     },

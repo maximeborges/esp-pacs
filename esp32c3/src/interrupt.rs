@@ -56,6 +56,14 @@ pub enum Interrupt {
     AES = 48,
     #[doc = "49 - SHA"]
     SHA = 49,
+    #[doc = "50 - SW_INTR_0"]
+    SW_INTR_0 = 50,
+    #[doc = "51 - SW_INTR_1"]
+    SW_INTR_1 = 51,
+    #[doc = "52 - SW_INTR_2"]
+    SW_INTR_2 = 52,
+    #[doc = "53 - SW_INTR_3"]
+    SW_INTR_3 = 53,
     #[doc = "54 - ASSIST_DEBUG"]
     ASSIST_DEBUG = 54,
 }
@@ -94,6 +102,10 @@ impl Interrupt {
             47 => Ok(Interrupt::RSA),
             48 => Ok(Interrupt::AES),
             49 => Ok(Interrupt::SHA),
+            50 => Ok(Interrupt::SW_INTR_0),
+            51 => Ok(Interrupt::SW_INTR_1),
+            52 => Ok(Interrupt::SW_INTR_2),
+            53 => Ok(Interrupt::SW_INTR_3),
             54 => Ok(Interrupt::ASSIST_DEBUG),
             _ => Err(TryFromInterruptError(())),
         }
